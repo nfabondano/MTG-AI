@@ -95,10 +95,36 @@ class CardEntry:
     roles: list[str] = field(default_factory=list)
     set_code: str = ""
     rarity: str = ""
+    layout: str = ""
 
     @property
     def is_land(self) -> bool:
         return "Land" in self.type_line
+
+    @property
+    def is_modal_land(self) -> bool:
+        """A modal double-faced spell whose other side is a land.
+
+        These play as a spell *or* a land, so they are neither purely one nor
+        the other. They matter because their land face produces mana, which
+        would otherwise make the spell face look like a ramp spell.
+        """
+        return (
+            self.layout == "modal_dfc"
+            and not self.is_land
+            and bool(self.mana_production)
+        )
+
+    def role_text(self) -> str:
+        """The text that decides what job this card does.
+
+        For a modal double-faced card you cast one side or the other, so only
+        the front face describes the spell. Including the land back's
+        "{T}: Add {G}" would classify a protection instant as ramp.
+        """
+        if self.layout == "modal_dfc":
+            return (self.oracle_text or "").split("\n//\n")[0]
+        return self.oracle_text or ""
 
     @property
     def is_basic_land(self) -> bool:
@@ -161,6 +187,7 @@ class CardEntry:
             "roles": self.roles,
             "set_code": self.set_code,
             "rarity": self.rarity,
+            "layout": self.layout,
         }
         return data
 

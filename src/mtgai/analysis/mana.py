@@ -130,13 +130,28 @@ def analyse(deck: Deck, avg_mv: float) -> dict:
             )
 
     land_count = sum(c.quantity for c in deck.lands)
+
+    # Modal double-faced spells with a land back can be played as a land when a
+    # hand needs one. They are not lands, but a deck running several of them
+    # genuinely functions on a lower land count, so judging the land count
+    # without them badly understates the mana base.
+    modal_lands = [c for c in deck.cards if c.is_modal_land]
+    modal_count = sum(c.quantity for c in modal_lands)
+    effective_lands = land_count + modal_count
+
     recommended = recommended_land_count(deck, avg_mv)
     land_finding = None
-    if land_count < recommended - 2:
+    if effective_lands < recommended - 2:
         land_finding = (
             f"{land_count} lands against a curve suggesting about {recommended}. "
             "Expect stumbling draws."
         )
+        if modal_count:
+            land_finding = (
+                f"{land_count} lands plus {modal_count} modal spell-lands "
+                f"({effective_lands} effective) against a curve suggesting about "
+                f"{recommended}. Still on the low side."
+            )
     elif land_count > recommended + 3:
         land_finding = (
             f"{land_count} lands against a curve suggesting about {recommended}. "
@@ -147,6 +162,8 @@ def analyse(deck: Deck, avg_mv: float) -> dict:
         "identity": identity,
         "colors": colors,
         "land_count": land_count,
+        "modal_lands": modal_count,
+        "effective_lands": effective_lands,
         "recommended_lands": recommended,
         "land_finding": land_finding,
         "findings": findings,

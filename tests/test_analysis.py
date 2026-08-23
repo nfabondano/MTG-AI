@@ -163,6 +163,37 @@ class TestRoleClassification:
         modal = deck.find("Modal Front // Modal Back")
         assert modal.roles == ["land"]
 
+    def test_modal_spell_land_is_judged_on_its_front_face(self):
+        """A spell // land MDFC is not ramp just because its back taps for mana.
+
+        Reading both faces classified Malakir Rebirth — a protection instant —
+        as ramp, because its land half says "{T}: Add {B}". You cast one side
+        or the other, so only the front face describes the spell.
+        """
+        card = CardEntry(
+            name="Malakir Rebirth // Malakir Mire",
+            type_line="Instant",
+            layout="modal_dfc",
+            mana_production={"B": 1},
+            oracle_text=(
+                "Choose target creature. You lose 2 life. Until end of turn, that "
+                'creature gains "When this creature dies, return it to the battlefield."'
+                "\n//\n"
+                "This land enters tapped.\n{T}: Add {B}."
+            ),
+        )
+        assert "ramp" not in roles.classify(card)
+
+    def test_transform_cards_still_read_both_faces(self):
+        # A transforming permanent is one object, so both halves count.
+        card = CardEntry(
+            name="Front // Back",
+            type_line="Creature",
+            layout="transform",
+            oracle_text="Vanilla.\n//\nDestroy all creatures.",
+        )
+        assert "wipe" in roles.classify(card)
+
     def test_overrides_win_over_patterns(self):
         card = CardEntry(name="Sol Ring", type_line="Artifact", oracle_text="{T}: Add {C}{C}.")
         assert roles.classify(card) == ["ramp"]

@@ -195,6 +195,7 @@ def normalise(payload: dict[str, Any], slug: str, *, enrich: bool = True) -> Dec
                 is_extra_turns=bool(oracle.get("extraTurns")),
                 is_mass_land_denial=bool(oracle.get("massLandDenial")),
                 set_code=(card.get("edition") or {}).get("editioncode", ""),
+                layout=oracle.get("layout") or "",
             )
         )
 

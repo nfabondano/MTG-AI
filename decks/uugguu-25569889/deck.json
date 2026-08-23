@@ -1,0 +1,3727 @@
+{
+ "slug": "uugguu-25569889",
+ "name": "Uugguu",
+ "archidekt_id": 25569889,
+ "deck_format": 3,
+ "format_name": "Commander",
+ "owner": "Hugo0111",
+ "url": "https://archidekt.com/decks/25569889",
+ "updated_at": "2026-08-23T16:39:01.924066Z",
+ "archidekt_bracket": null,
+ "imported_at": "2026-08-23T18:35:29+00:00",
+ "color_identity": [
+  "U",
+  "B",
+  "G"
+ ],
+ "total_cards": 104,
+ "commanders": [
+  "Uugguu, the Omniplasm"
+ ],
+ "cards": [
+  {
+   "name": "Biowaste Blob",
+   "quantity": 1,
+   "scryfall_id": "8bbf476f-ccc8-42ac-8d01-64bb85552acd",
+   "oracle_id": "7fa8647a-7668-4db9-a77d-87e004b160e1",
+   "mana_cost": "{2}{G}{G}",
+   "mana_value": 4.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Creature — Ooze",
+   "oracle_text": "Oozes you control get +1/+1.\nAt the beginning of your upkeep, if you control a commander, create a token that's a copy of this creature.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 6664,
+   "salt": 0.39,
+   "price_usd": 0.45,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "cmr",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Biogenic Ooze",
+   "quantity": 1,
+   "scryfall_id": "0e850205-d010-49af-b68b-262360751b70",
+   "oracle_id": "d2d84ba5-0d20-4ce3-8f1f-93cd9ef94f5f",
+   "mana_cost": "{3}{G}{G}",
+   "mana_value": 5.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Creature — Ooze",
+   "oracle_text": "When this creature enters, create a 2/2 green Ooze creature token.\nAt the beginning of your end step, put a +1/+1 counter on each Ooze you control.\n{1}{G}{G}{G}: Create a 2/2 green Ooze creature token.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 7704,
+   "salt": 0.33,
+   "price_usd": 0.33,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "tmc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Uchuulon",
+   "quantity": 1,
+   "scryfall_id": "ecef5fca-72ec-4aee-af6e-ee5d6f6bc567",
+   "oracle_id": "1f266fa4-6667-49db-9d24-dfbabf1449ca",
+   "mana_cost": "{3}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Ooze Crab Horror",
+   "oracle_text": "Uchuulon's power is equal to the number of Crabs, Oozes, and/or Horrors you control.\nHorrific Symbiosis — At the beginning of your end step, exile up to one target creature card from an opponent's graveyard. If you do, create a token that's a copy of this creature.",
+   "mana_production": {},
+   "keywords": [
+    "Horrific Symbiosis"
+   ],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 5111,
+   "salt": 0.5,
+   "price_usd": 5.11,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "clb",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Acidic Slime",
+   "quantity": 1,
+   "scryfall_id": "932d48fb-42b5-4aaa-a91c-d35cdb5e41a3",
+   "oracle_id": "21f45043-5419-4019-8b6c-e5294bd5f549",
+   "mana_cost": "{3}{G}{G}",
+   "mana_value": 5.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Creature — Ooze",
+   "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nWhen this creature enters, destroy target artifact, enchantment, or land.",
+   "mana_production": {},
+   "keywords": [
+    "Deathtouch"
+   ],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 1481,
+   "salt": 0.3,
+   "price_usd": 0.27,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "removal"
+   ],
+   "set_code": "cmm",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Umori, the Collector",
+   "quantity": 1,
+   "scryfall_id": "75ac31e0-ac70-4ee6-b2b1-cc445ffa1da9",
+   "oracle_id": "913383a1-9c0d-40a1-8c5a-b0a8a95c09a6",
+   "mana_cost": "{2}{B/G}{B/G}",
+   "mana_value": 4.0,
+   "colors": [
+    "B",
+    "G"
+   ],
+   "color_identity": [
+    "B",
+    "G"
+   ],
+   "type_line": "Legendary Creature — Ooze",
+   "oracle_text": "Companion — Each nonland card in your starting deck shares a card type. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)\nAs Umori enters, choose a card type.\nSpells you cast of the chosen type cost {1} less to cast.",
+   "mana_production": {},
+   "keywords": [
+    "Companion"
+   ],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 11093,
+   "salt": 0.29,
+   "price_usd": 0.26,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "iko",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Omni-Changeling",
+   "quantity": 1,
+   "scryfall_id": "f29ce8f9-42a3-43fa-8197-666cc26e2c76",
+   "oracle_id": "66d4370e-19b9-4680-9b1e-a192537bc002",
+   "mana_cost": "{3}{U}{U}",
+   "mana_value": 5.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Shapeshifter",
+   "oracle_text": "Changeling (This card is every creature type.)\nConvoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nYou may have this creature enter as a copy of any creature on the battlefield, except it has changeling.",
+   "mana_production": {},
+   "keywords": [
+    "Changeling",
+    "Convoke"
+   ],
+   "categories": [
+    "Clones",
+    "Creature"
+   ],
+   "edhrec_rank": 6043,
+   "salt": null,
+   "price_usd": 0.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "ecl",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Prime Speaker Vannifar",
+   "quantity": 1,
+   "scryfall_id": "84abfc59-10a7-4cb5-9cdd-81797116c810",
+   "oracle_id": "b543bfa2-0174-4dd8-9ee6-09b92fb44934",
+   "mana_cost": "{2}{G}{U}",
+   "mana_value": 4.0,
+   "colors": [
+    "U",
+    "G"
+   ],
+   "color_identity": [
+    "U",
+    "G"
+   ],
+   "type_line": "Legendary Creature — Wizard Ooze Elf",
+   "oracle_text": "{T}, Sacrifice another creature: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. Activate only as a sorcery.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tutor"
+   ],
+   "edhrec_rank": 8064,
+   "salt": 0.5,
+   "price_usd": 11.77,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "tutor"
+   ],
+   "set_code": "rna",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Aeve, Progenitor Ooze",
+   "quantity": 1,
+   "scryfall_id": "dfe9b1b8-dffe-427d-be1e-2c6b8395bd54",
+   "oracle_id": "44600a74-9584-488b-a342-2fccd8fa7599",
+   "mana_cost": "{2}{G}{G}{G}",
+   "mana_value": 5.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Legendary Creature — Ooze",
+   "oracle_text": "Storm (When you cast this spell, copy it for each spell cast before it this turn. Copies become tokens.)\nAeve isn't legendary if it's a token.\nAeve enters with a +1/+1 counter on it for each other Ooze you control.",
+   "mana_production": {},
+   "keywords": [
+    "Storm"
+   ],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 7617,
+   "salt": 0.39,
+   "price_usd": 0.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "mh2",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Green Slime",
+   "quantity": 1,
+   "scryfall_id": "b1beaaae-9406-4beb-8e74-d278822434c7",
+   "oracle_id": "0ec5a688-a884-410c-adee-ab784789d6e8",
+   "mana_cost": "{2}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Creature — Ooze",
+   "oracle_text": "Flash\nWhen this creature enters, counter target activated or triggered ability from an artifact or enchantment source. If a permanent's ability is countered this way, destroy that permanent.\nForetell {G} (During your turn, you may pay {2} and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)",
+   "mana_production": {},
+   "keywords": [
+    "Flash",
+    "Foretell"
+   ],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 5647,
+   "salt": 0.27,
+   "price_usd": 1.96,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "counterspell"
+   ],
+   "set_code": "clb",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Mutable Explorer",
+   "quantity": 1,
+   "scryfall_id": "8f35d95a-caea-4d5e-b98e-55da1ba7c92d",
+   "oracle_id": "34b93a66-de1e-4133-a479-e0d90ba94a3a",
+   "mana_cost": "{2}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Creature — Shapeshifter",
+   "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, create a tapped Mutavault token. (It's a land with \"{T}: Add {C}\" and \"{1}: This token becomes a 2/2 creature with all creature types until end of turn. It's still a land.\")",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [
+    "Changeling"
+   ],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 4382,
+   "salt": null,
+   "price_usd": 1.62,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "ecl",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Phyrexian Metamorph",
+   "quantity": 1,
+   "scryfall_id": "a564c2e8-f49f-4ed7-850f-7c8bc92e4926",
+   "oracle_id": "340bbe8b-e987-4c3e-ab4e-9dee63e57d4f",
+   "mana_cost": "{3}{U/P}",
+   "mana_value": 4.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature Artifact — Shapeshifter Phyrexian",
+   "oracle_text": "({U/P} can be paid with either {U} or 2 life.)\nYou may have this creature enter as a copy of any artifact or creature on the battlefield, except it's an artifact in addition to its other types.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Clones"
+   ],
+   "edhrec_rank": 310,
+   "salt": 0.43,
+   "price_usd": 2.52,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "eoc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Glasspool Mimic // Glasspool Shore",
+   "quantity": 1,
+   "scryfall_id": "5adcb500-8c77-4925-8e2c-1243502827d1",
+   "oracle_id": "c178953c-3888-4edd-9d0c-265bd82b1d24",
+   "mana_cost": "{2}{U}",
+   "mana_value": 3.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Rogue Shapeshifter",
+   "oracle_text": "You may have this creature enter as a copy of a creature you control, except it's a Shapeshifter Rogue in addition to its other types.\n//\nThis land enters tapped.\n{T}: Add {U}.",
+   "mana_production": {
+    "U": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Clones"
+   ],
+   "edhrec_rank": 1169,
+   "salt": 0.21,
+   "price_usd": 5.73,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "znr",
+   "rarity": "rare",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Roaming Throne",
+   "quantity": 1,
+   "scryfall_id": "32fd8b7c-baf3-4d3d-be6f-044a917b11a0",
+   "oracle_id": "3640c29b-1534-4952-b297-619ade948431",
+   "mana_cost": "{4}",
+   "mana_value": 4.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Creature Artifact — Golem",
+   "oracle_text": "Ward {2}\nAs this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nIf a triggered ability of another creature you control of the chosen type triggers, it triggers an additional time.",
+   "mana_production": {},
+   "keywords": [
+    "Ward"
+   ],
+   "categories": [
+    "Copy"
+   ],
+   "edhrec_rank": 132,
+   "salt": 1.45,
+   "price_usd": 48.17,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "lci",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Phantasmal Image",
+   "quantity": 1,
+   "scryfall_id": "c1c080cf-a5e8-4d9d-af49-f78588971e87",
+   "oracle_id": "bde94af8-faea-41ff-8eed-ba642eac9968",
+   "mana_cost": "{1}{U}",
+   "mana_value": 2.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Illusion",
+   "oracle_text": "You may have this creature enter as a copy of any creature on the battlefield, except it's an Illusion in addition to its other types and it has \"When this creature becomes the target of a spell or ability, sacrifice it.\"",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Clones"
+   ],
+   "edhrec_rank": 1465,
+   "salt": 0.3,
+   "price_usd": 3.77,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "afc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Titan of Littjara",
+   "quantity": 1,
+   "scryfall_id": "6ac8eb8a-01b8-41b2-b725-01a1fc17fcb7",
+   "oracle_id": "f62250c6-0832-46c8-a800-806589504f5f",
+   "mana_cost": "{4}{U}{U}",
+   "mana_value": 6.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Illusion",
+   "oracle_text": "As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nWhenever this creature enters or attacks, you may draw a card for each other creature you control that shares a creature type with it. If you do, discard a card.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 4985,
+   "salt": 0.25,
+   "price_usd": 4.93,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "msc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Cephalid Facetaker",
+   "quantity": 1,
+   "scryfall_id": "a77d91f7-f7c9-47e4-b5c5-46c921335e42",
+   "oracle_id": "cfb41a2b-4d8b-47e3-a074-95a1bd502227",
+   "mana_cost": "{2}{U}",
+   "mana_value": 3.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Rogue Octopus",
+   "oracle_text": "This creature can't be blocked.\nAt the beginning of combat on your turn, you may have this creature become a copy of another target creature until end of turn, except it's 1/4 and has \"This creature can't be blocked.\"",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Clones",
+    "Evasion"
+   ],
+   "edhrec_rank": 6800,
+   "salt": 0.33,
+   "price_usd": 5.07,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "ncc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Chomping Changeling",
+   "quantity": 1,
+   "scryfall_id": "e187dcc6-19ad-4cf6-94b4-daf07f5144e5",
+   "oracle_id": "d740dbd9-8e90-4121-8d53-c6ddf5178d58",
+   "mana_cost": "{2}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Creature — Shapeshifter",
+   "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, destroy up to one target artifact or enchantment.",
+   "mana_production": {},
+   "keywords": [
+    "Changeling"
+   ],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 2975,
+   "salt": null,
+   "price_usd": 1.82,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "ecl",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Copycrook",
+   "quantity": 1,
+   "scryfall_id": "52ea5e71-d0a3-4065-918b-9b2af98589ba",
+   "oracle_id": "ce184565-71fb-4e23-b45b-8786727d21f7",
+   "mana_cost": "{2}{U}{U}",
+   "mana_value": 4.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Rogue Shapeshifter",
+   "oracle_text": "You may have this creature enter as a copy of any creature on the battlefield, except it has \"Whenever this creature attacks, it connives.\" (Draw a card, then discard a card. If you discarded a nonland card, put a +1/+1 counter on this creature.)",
+   "mana_production": {},
+   "keywords": [
+    "Connive"
+   ],
+   "categories": [
+    "Clones"
+   ],
+   "edhrec_rank": 6111,
+   "salt": 0.27,
+   "price_usd": 0.24,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "mh3",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Graveshifter",
+   "quantity": 1,
+   "scryfall_id": "dadb02b9-d3a0-4b51-bbc3-53b2316cd70d",
+   "oracle_id": "1eebc02a-9a64-49b0-8322-c5ce671457ce",
+   "mana_cost": "{3}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Shapeshifter",
+   "oracle_text": "Changeling (This card is every creature type.)\nWhen this creature enters, you may return target creature card from your graveyard to your hand.",
+   "mana_production": {},
+   "keywords": [
+    "Changeling"
+   ],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 2845,
+   "salt": 0.1,
+   "price_usd": 0.25,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "recursion"
+   ],
+   "set_code": "ecl",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Pirated Copy",
+   "quantity": 1,
+   "scryfall_id": "8a0567fb-2b4f-4fa9-8dfe-df4e665a4c5c",
+   "oracle_id": "09ea5508-78fd-4bbc-8395-38ec13202d9a",
+   "mana_cost": "{4}{U}",
+   "mana_value": 5.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Shapeshifter Pirate",
+   "oracle_text": "You may have this creature enter as a copy of any creature on the battlefield, except it's a Pirate in addition to its other types and it has \"Whenever this creature or another creature with the same name deals combat damage to a player, you draw a card.\"",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Clones",
+    "Copy"
+   ],
+   "edhrec_rank": 8102,
+   "salt": 0.36,
+   "price_usd": 7.56,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "j22",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Warren Soultrader",
+   "quantity": 1,
+   "scryfall_id": "b334e4c6-d316-4141-8889-f95afcc04701",
+   "oracle_id": "ace86e56-efde-4eb7-8815-71456a4c3abe",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Wizard Goblin Zombie",
+   "oracle_text": "Pay 1 life, Sacrifice another creature: Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 417,
+   "salt": 0.77,
+   "price_usd": 16.02,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "mh3",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Ayara, First of Locthwain",
+   "quantity": 1,
+   "scryfall_id": "ed0ace28-9a33-4f0d-b8c8-f5517f20ccf1",
+   "oracle_id": "388168b3-ec68-4af2-b88c-6a5ec88c15f6",
+   "mana_cost": "{B}{B}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Elf Noble",
+   "oracle_text": "Whenever Ayara or another black creature you control enters, each opponent loses 1 life and you gain 1 life.\n{T}, Sacrifice another black creature: Draw a card.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 844,
+   "salt": 0.41,
+   "price_usd": 7.79,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "eld",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Species Specialist",
+   "quantity": 1,
+   "scryfall_id": "bb2cbf12-7f35-4162-b1a0-89a1632728c7",
+   "oracle_id": "51feda69-0ae8-4df3-bb50-a4bb9deb965d",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Human Warrior",
+   "oracle_text": "As this creature enters, choose a creature type.\nWhenever a creature of the chosen type dies, you may draw a card.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 3433,
+   "salt": 0.28,
+   "price_usd": 10.22,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "c20",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Mockingbird",
+   "quantity": 1,
+   "scryfall_id": "ade32396-8841-4ba4-8852-d11146607f21",
+   "oracle_id": "b9df2cdf-397c-458d-89cf-911568737ffa",
+   "mana_cost": "{X}{U}",
+   "mana_value": 1.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Bird Bard",
+   "oracle_text": "Flying\nYou may have this creature enter as a copy of any creature on the battlefield with mana value less than or equal to the amount of mana spent to cast this creature, except it's a Bird in addition to its other types and it has flying.",
+   "mana_production": {},
+   "keywords": [
+    "Flying"
+   ],
+   "categories": [
+    "Clones",
+    "Copy"
+   ],
+   "edhrec_rank": 731,
+   "salt": 0.36,
+   "price_usd": 3.8,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "blb",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel",
+   "quantity": 1,
+   "scryfall_id": "85eaf5e7-77dc-4842-a70c-ce4ac7f724df",
+   "oracle_id": "70113003-be5e-406a-9aec-cb480468c36d",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Soldier Avatar",
+   "oracle_text": "Whenever Sephiroth enters or attacks, you may sacrifice another creature. If you do, draw a card.\nWhenever another creature dies, target opponent loses 1 life and you gain 1 life. If this is the fourth time this ability has resolved this turn, transform Sephiroth.\n//\nFlying\nSuper Nova — As this creature transforms into Sephiroth, One-Winged Angel, you get an emblem with \"Whenever a creature dies, target opponent loses 1 life and you gain 1 life.\"\nWhenever Sephiroth attacks, you may sacrifice any number of other creatures. If you do, draw that many cards.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Transform",
+    "Super Nova"
+   ],
+   "categories": [
+    "Drain"
+   ],
+   "edhrec_rank": 1304,
+   "salt": 1.43,
+   "price_usd": 31.86,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "fin",
+   "rarity": "mythic",
+   "layout": "transform"
+  },
+  {
+   "name": "Yawgmoth, Thran Physician",
+   "quantity": 1,
+   "scryfall_id": "b5a79f5d-d0df-4799-ac3a-84305e3af0c9",
+   "oracle_id": "a1e232c0-dc38-47be-a5a0-f68bc1d86a29",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Cleric",
+   "oracle_text": "Protection from Humans\nPay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.\n{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+   "mana_production": {},
+   "keywords": [
+    "Protection",
+    "Proliferate"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 828,
+   "salt": 1.15,
+   "price_usd": 31.42,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "dmr",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Birds of Paradise",
+   "quantity": 1,
+   "scryfall_id": "492c2f9a-51e7-4e0f-9899-23bf43ea988b",
+   "oracle_id": "d3a0b660-358c-41bd-9cd2-41fbf3491b1a",
+   "mana_cost": "{G}",
+   "mana_value": 1.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Creature — Bird",
+   "oracle_text": "Flying\n{T}: Add one mana of any color.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Flying"
+   ],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 34,
+   "salt": 0.31,
+   "price_usd": 9.74,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "msc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Pitiless Plunderer",
+   "quantity": 1,
+   "scryfall_id": "8ba8b02a-8a05-40cd-8b83-51fd0cc0a7a5",
+   "oracle_id": "a784481f-eccb-4112-bb38-04a659319660",
+   "mana_cost": "{3}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Human Pirate",
+   "oracle_text": "Whenever another creature you control dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 226,
+   "salt": 0.71,
+   "price_usd": 4.33,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "fic",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Gelatinous Cube",
+   "quantity": 1,
+   "scryfall_id": "1c472e70-300c-4881-86e7-c5ca690ab9b6",
+   "oracle_id": "3c2e2e69-cd44-458f-a5b0-8591baa24e65",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Ooze",
+   "oracle_text": "Engulf — When this creature enters, exile target non-Ooze creature an opponent controls until this creature leaves the battlefield.\nDissolve — {X}{B}: Put target creature card with mana value X exiled with this creature into its owner's graveyard.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 14893,
+   "salt": 0.11,
+   "price_usd": 0.33,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "afr",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Cyclonic Rift",
+   "quantity": 1,
+   "scryfall_id": "dfb7c4b9-f2f4-4d4e-baf2-86551c8150fe",
+   "oracle_id": "d75b9c82-1b49-4c3e-a1b5-aeef57d6644b",
+   "mana_cost": "{1}{U}",
+   "mana_value": 2.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Return target nonland permanent you don't control to its owner's hand.\nOverload {6}{U} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+   "mana_production": {},
+   "keywords": [
+    "Overload"
+   ],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 53,
+   "salt": 2.36,
+   "price_usd": 38.89,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "removal",
+    "wipe"
+   ],
+   "set_code": "rvr",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Malakir Rebirth // Malakir Mire",
+   "quantity": 1,
+   "scryfall_id": "609d3ecf-f88d-4268-a8d3-4bf2bcf5df60",
+   "oracle_id": "a731e87b-8d99-4b64-8ee3-8e540d652366",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Choose target creature. You lose 2 life. Until end of turn, that creature gains \"When this creature dies, return it to the battlefield tapped under its owner's control.\"\n//\nThis land enters tapped.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 241,
+   "salt": 0.21,
+   "price_usd": 12.72,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "znr",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Harmonized Crescendo",
+   "quantity": 1,
+   "scryfall_id": "2715e0c0-9913-4bea-9a42-ad1164f6130a",
+   "oracle_id": "b93cd38a-1d0c-40e6-aaf1-621a2c88bf46",
+   "mana_cost": "{4}{U}{U}",
+   "mana_value": 6.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nChoose a creature type. Draw a card for each permanent you control of that type.",
+   "mana_production": {},
+   "keywords": [
+    "Convoke"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 3019,
+   "salt": null,
+   "price_usd": 1.61,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "ecl",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Feign Death",
+   "quantity": 1,
+   "scryfall_id": "32af7061-fca6-4a06-be3c-01881e6b96f7",
+   "oracle_id": "f718e507-296b-4f22-842b-5fb91322069b",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Until end of turn, target creature gains \"When this creature dies, return it to the battlefield tapped under its owner's control with a +1/+1 counter on it.\"",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 1478,
+   "salt": 0.16,
+   "price_usd": 1.2,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "afr",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Deadly Dispute",
+   "quantity": 1,
+   "scryfall_id": "d86fa72c-25c1-43ef-9cb0-fe76f7568ed3",
+   "oracle_id": "457af74a-02b3-4659-846d-63e482667f34",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDraw two cards and create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 130,
+   "salt": 0.16,
+   "price_usd": 0.33,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp",
+    "draw"
+   ],
+   "set_code": "msc",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Village Rites",
+   "quantity": 1,
+   "scryfall_id": "42ed35e9-51cd-468a-86a9-9412553cf50d",
+   "oracle_id": "365548fb-5acc-4a8a-b20b-26d28b7d029f",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 200,
+   "salt": 0.09,
+   "price_usd": 0.37,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "inr",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Heroic Intervention",
+   "quantity": 1,
+   "scryfall_id": "e32c67d1-187f-40df-b3b3-6036f5c92834",
+   "oracle_id": "24882fa2-3fe9-4c1b-aa3d-0e6488b9db27",
+   "mana_cost": "{1}{G}",
+   "mana_value": 2.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Permanents you control gain hexproof and indestructible until end of turn.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 31,
+   "salt": 0.9,
+   "price_usd": 15.82,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "protection"
+   ],
+   "set_code": "cmm",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Sink into Stupor // Soporific Springs",
+   "quantity": 1,
+   "scryfall_id": "5358b87a-1a29-426d-b165-40c97da2c14d",
+   "oracle_id": "bcc6eece-75ea-494c-b33a-d4477d504e0b",
+   "mana_cost": "{1}{U}{U}",
+   "mana_value": 3.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Return target spell or nonland permanent an opponent controls to its owner's hand.\n//\nAs this land enters, you may pay 3 life. If you don't, it enters tapped.\n{T}: Add {U}.",
+   "mana_production": {
+    "U": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 172,
+   "salt": 0.52,
+   "price_usd": 6.72,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "mh3",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Assassin's Trophy",
+   "quantity": 1,
+   "scryfall_id": "aaf258fc-3ba4-4b83-bdbf-10a07e0b6c03",
+   "oracle_id": "ac10d218-f9a6-4058-9cda-a15ca1b0b7b5",
+   "mana_cost": "{B}{G}",
+   "mana_value": 2.0,
+   "colors": [
+    "B",
+    "G"
+   ],
+   "color_identity": [
+    "B",
+    "G"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Destroy target permanent an opponent controls. Its controller may search their library for a basic land card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 122,
+   "salt": 0.31,
+   "price_usd": 0.97,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "removal"
+   ],
+   "set_code": "soc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Fell the Profane // Fell Mire",
+   "quantity": 1,
+   "scryfall_id": "a3cb782d-c459-468d-9779-9b5669abc337",
+   "oracle_id": "053a69d8-2b5e-4f14-8b02-ca405891dc4a",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Destroy target creature or planeswalker.\n//\nAs this land enters, you may pay 3 life. If you don't, it enters tapped.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 202,
+   "salt": 0.18,
+   "price_usd": 4.36,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "removal"
+   ],
+   "set_code": "mh3",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Not Dead After All",
+   "quantity": 1,
+   "scryfall_id": "d01a2b68-efe6-4027-846d-db7b19d9eef6",
+   "oracle_id": "380c367f-73ea-485f-a37b-5af0ba160893",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Until end of turn, target creature you control gains \"When this creature dies, return it to the battlefield tapped under its owner's control, then create a Wicked Role token attached to it.\" (Enchanted creature gets +1/+1. When this token is put into a graveyard, each opponent loses 1 life.)",
+   "mana_production": {},
+   "keywords": [
+    "Role token"
+   ],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 1095,
+   "salt": 0.2,
+   "price_usd": 2.07,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "woe",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Mana Drain",
+   "quantity": 1,
+   "scryfall_id": "3c429c40-2389-41e5-8681-4bb274e25eba",
+   "oracle_id": "74d3277a-38e5-4732-afed-084a56148f20",
+   "mana_cost": "{U}{U}",
+   "mana_value": 2.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 117,
+   "salt": 1.89,
+   "price_usd": 57.59,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "counterspell"
+   ],
+   "set_code": "2x2",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Beast Within",
+   "quantity": 1,
+   "scryfall_id": "400b43aa-c1d2-4435-b863-061f43889422",
+   "oracle_id": "7735eeba-693b-47e2-bd51-414379cf1016",
+   "mana_cost": "{2}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 25,
+   "salt": 0.32,
+   "price_usd": 0.59,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "removal"
+   ],
+   "set_code": "msc",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Hecteyes",
+   "quantity": 1,
+   "scryfall_id": "8680d052-c07b-4d9b-bda9-b5f69f44f424",
+   "oracle_id": "7a11b4ed-430d-4ef8-b0c1-6a022f12448c",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Ooze Horror",
+   "oracle_text": "When this creature enters, each opponent discards a card.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Discard"
+   ],
+   "edhrec_rank": 7832,
+   "salt": 0.13,
+   "price_usd": 0.26,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "fin",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Mirror Image",
+   "quantity": 1,
+   "scryfall_id": "5b3ffc69-f21b-410e-8993-8c1b4669fc19",
+   "oracle_id": "7275fb8c-571a-4c4c-889a-829419332e51",
+   "mana_cost": "{2}{U}",
+   "mana_value": 3.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Shapeshifter",
+   "oracle_text": "You may have this creature enter as a copy of a creature you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Clones"
+   ],
+   "edhrec_rank": 5464,
+   "salt": 0.19,
+   "price_usd": 0.48,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "m19",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "The Mimeoplasm",
+   "quantity": 1,
+   "scryfall_id": "998b86f3-e53f-4ebb-b111-6f14577fded1",
+   "oracle_id": "55123455-d435-46d4-b0cd-0c1614343be2",
+   "mana_cost": "{2}{B}{G}{U}",
+   "mana_value": 5.0,
+   "colors": [
+    "U",
+    "B",
+    "G"
+   ],
+   "color_identity": [
+    "U",
+    "B",
+    "G"
+   ],
+   "type_line": "Legendary Creature — Ooze",
+   "oracle_text": "As The Mimeoplasm enters, you may exile two creature cards from graveyards. If you do, it enters as a copy of one of those cards with a number of additional +1/+1 counters on it equal to the power of the other card.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 7532,
+   "salt": 0.75,
+   "price_usd": 0.28,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "otc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Evendo, Waking Haven",
+   "quantity": 1,
+   "scryfall_id": "2fa09104-acbe-4410-b101-2fe6ac28efde",
+   "oracle_id": "83161d59-2520-4741-9328-e2a4a8b5d5bc",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Land — Planet",
+   "oracle_text": "This land enters tapped.\n{T}: Add {G}.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\n12+ | {G}, {T}: Add {G} for each creature you control.",
+   "mana_production": {
+    "G": 2
+   },
+   "keywords": [
+    "Station"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 1015,
+   "salt": 0.58,
+   "price_usd": 17.83,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "eoe",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Nature's Lore",
+   "quantity": 1,
+   "scryfall_id": "7afc4a15-5ff8-457a-aa62-803b2d78d912",
+   "oracle_id": "78826359-fe63-44ad-adc4-a17ffcd710e4",
+   "mana_cost": "{1}{G}",
+   "mana_value": 2.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 27,
+   "salt": 0.24,
+   "price_usd": 2.91,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "msc",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Farseek",
+   "quantity": 1,
+   "scryfall_id": "c1aac0f5-1d01-4673-b8d3-878d9a1d423c",
+   "oracle_id": "495e52e6-4c2b-4574-9474-eadbdcc8b4ac",
+   "mana_cost": "{1}{G}",
+   "mana_value": 2.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Search your library for a Plains, Island, Swamp, or Mountain card, put it onto the battlefield tapped, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 23,
+   "salt": 0.18,
+   "price_usd": 0.42,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "msc",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Distant Melody",
+   "quantity": 1,
+   "scryfall_id": "f1d7e8c9-0936-47eb-8996-309e7a7edcad",
+   "oracle_id": "ac6c5852-71c7-4f19-8c87-ccb345052862",
+   "mana_cost": "{3}{U}",
+   "mana_value": 4.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Choose a creature type. Draw a card for each permanent you control of that type.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 645,
+   "salt": 0.27,
+   "price_usd": 0.35,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "ecc",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Demonic Tutor",
+   "quantity": 1,
+   "scryfall_id": "a24b4cb6-cebb-428b-8654-74347a6a8d63",
+   "oracle_id": "82004860-e589-4e38-8d61-8c0210e4ea39",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Search your library for a card, put that card into your hand, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tutor"
+   ],
+   "edhrec_rank": 62,
+   "salt": 1.58,
+   "price_usd": 62.08,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "tutor"
+   ],
+   "set_code": "cmm",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Victimize",
+   "quantity": 1,
+   "scryfall_id": "ee008d81-df28-49a8-917d-44f66527e469",
+   "oracle_id": "240e85d3-e495-4877-8609-4b4056c402f7",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Choose two target creature cards in your graveyard. Sacrifice a creature. If you do, return the chosen cards to the battlefield tapped.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 128,
+   "salt": 0.32,
+   "price_usd": 1.64,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "tdc",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Bala Ged Recovery // Bala Ged Sanctuary",
+   "quantity": 1,
+   "scryfall_id": "c5cb3052-358d-44a7-8cfd-cd31b236494a",
+   "oracle_id": "d2075f58-b0e9-4e85-b7e6-0523a27a1d5b",
+   "mana_cost": "{2}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Return target card from your graveyard to your hand.\n//\nThis land enters tapped.\n{T}: Add {G}.",
+   "mana_production": {
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 320,
+   "salt": 0.2,
+   "price_usd": 6.65,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "recursion"
+   ],
+   "set_code": "znr",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Three Visits",
+   "quantity": 1,
+   "scryfall_id": "99bf792f-963e-4509-8d3c-7db129c6a77f",
+   "oracle_id": "1b882a0e-0ede-4d1a-bd1a-9b7cffbcde8e",
+   "mana_cost": "{1}{G}",
+   "mana_value": 2.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Search your library for a Forest card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 41,
+   "salt": 0.22,
+   "price_usd": 5.01,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "msc",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Reanimate",
+   "quantity": 1,
+   "scryfall_id": "368b6903-5fc4-43e7-bd44-46b8107c8bb4",
+   "oracle_id": "a044474a-cd72-4e9d-bd8d-a08f2de9cdc0",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Put target creature card from a graveyard onto the battlefield under your control. You lose life equal to that card's mana value.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 56,
+   "salt": 0.79,
+   "price_usd": 9.42,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "dsc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Kindred Dominance",
+   "quantity": 1,
+   "scryfall_id": "f6cd7c08-f5d4-4bdc-a254-809d900b0fc3",
+   "oracle_id": "ccaa44f2-96be-44e2-884f-c31baa3908d5",
+   "mana_cost": "{5}{B}{B}",
+   "mana_value": 7.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Choose a creature type. Destroy all creatures that aren't of the chosen type.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 709,
+   "salt": 0.64,
+   "price_usd": 4.14,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "wipe"
+   ],
+   "set_code": "msc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Flare of Cultivation",
+   "quantity": 1,
+   "scryfall_id": "bda2fa87-81c0-41ac-8831-556ce392c058",
+   "oracle_id": "1766f1f4-0924-4436-8379-94030adcccc5",
+   "mana_cost": "{1}{G}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "You may sacrifice a nontoken green creature rather than pay this spell's mana cost.\nSearch your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 2152,
+   "salt": 0.19,
+   "price_usd": 0.59,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "mh3",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Living Death",
+   "quantity": 1,
+   "scryfall_id": "4ac29c46-f8ee-42ba-a98c-d785ba65485e",
+   "oracle_id": "9e6a3df4-67a3-452e-a6ef-f04dbadb21ef",
+   "mana_cost": "{3}{B}{B}",
+   "mana_value": 5.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Each player exiles all creature cards from their graveyard, then sacrifices all creatures they control, then puts all cards they exiled this way onto the battlefield.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 462,
+   "salt": 0.73,
+   "price_usd": 3.54,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "tdc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Raise the Palisade",
+   "quantity": 1,
+   "scryfall_id": "7966eb7a-0ef7-470f-9769-0d5f45f0395b",
+   "oracle_id": "f55a3781-fe33-4301-9bb5-6a54b9c13c4f",
+   "mana_cost": "{4}{U}",
+   "mana_value": 5.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Choose a creature type. Return all creatures that aren't of the chosen type to their owners' hands.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 950,
+   "salt": 0.83,
+   "price_usd": 10.77,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "wipe"
+   ],
+   "set_code": "ltc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Pact of the Serpent",
+   "quantity": 1,
+   "scryfall_id": "481d268a-848c-4ccd-95ff-eed77dc20776",
+   "oracle_id": "f275039e-3dba-49b0-92aa-92721b1c7f95",
+   "mana_cost": "{1}{B}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Choose a creature type. Target player draws X cards and loses X life, where X is the number of creatures they control of the chosen type.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 2192,
+   "salt": 0.2,
+   "price_usd": 0.52,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "lcc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Diabolic Intent",
+   "quantity": 1,
+   "scryfall_id": "d72ab698-de67-4ca8-8e42-b05346bf52fa",
+   "oracle_id": "038519b9-bca8-4b27-b5ac-2409595469d0",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a card, put that card into your hand, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tutor"
+   ],
+   "edhrec_rank": 268,
+   "salt": 0.74,
+   "price_usd": 16.48,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "tutor"
+   ],
+   "set_code": "bro",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Animate Dead",
+   "quantity": 1,
+   "scryfall_id": "cc0c2bab-4392-4e7b-9d14-2901f4ffbae8",
+   "oracle_id": "c0d8fef4-65f4-4769-982d-b397d2b7e977",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Enchantment — Aura",
+   "oracle_text": "Enchant creature card in a graveyard\nWhen this Aura enters, if it's on the battlefield, it loses \"enchant creature card in a graveyard\" and gains \"enchant creature put onto the battlefield with this Aura.\" Return enchanted creature card to the battlefield under your control and attach this Aura to it. When this Aura leaves the battlefield, that creature's controller sacrifices it.\nEnchanted creature gets -1/-0.",
+   "mana_production": {},
+   "keywords": [
+    "Enchant"
+   ],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 223,
+   "salt": 0.55,
+   "price_usd": 7.75,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "soc",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "The Meathook Massacre",
+   "quantity": 1,
+   "scryfall_id": "70d0540f-93c6-4af5-ab2d-65e6c03001c7",
+   "oracle_id": "127de52b-df75-4342-95a0-20d84c5bf916",
+   "mana_cost": "{X}{B}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Enchantment",
+   "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 509,
+   "salt": 0.99,
+   "price_usd": 27.15,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "inr",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Sol Ring",
+   "quantity": 1,
+   "scryfall_id": "91fdb56b-54d5-4272-8319-505ff987fe9b",
+   "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+   "mana_cost": "{1}",
+   "mana_value": 1.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "{T}: Add {C}{C}.",
+   "mana_production": {
+    "C": 2
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 1,
+   "salt": 1.46,
+   "price_usd": 1.56,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "msc",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Cauldron of Essence",
+   "quantity": 1,
+   "scryfall_id": "b7091740-e70c-4cf2-8d3d-b8e1ac1fbbdd",
+   "oracle_id": "a2f8cde8-bf7b-4234-89f0-a95f9dc937e3",
+   "mana_cost": "{1}{B}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "B",
+    "G"
+   ],
+   "color_identity": [
+    "B",
+    "G"
+   ],
+   "type_line": "Artifact",
+   "oracle_text": "Whenever a creature you control dies, each opponent loses 1 life and you gain 1 life.\n{1}{B}{G}, {T}, Sacrifice a creature: Return target creature card from your graveyard to the battlefield. Activate only as a sorcery.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Drain",
+    "Artifact"
+   ],
+   "edhrec_rank": 2608,
+   "salt": null,
+   "price_usd": 2.71,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "protection",
+    "recursion"
+   ],
+   "set_code": "sos",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Arcane Signet",
+   "quantity": 1,
+   "scryfall_id": "1cad1bd2-7c56-4ce0-99a6-b2a49c1288dd",
+   "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+   "mana_cost": "{2}",
+   "mana_value": 2.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 3,
+   "salt": 0.24,
+   "price_usd": 0.5,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "msc",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Ashnod's Altar",
+   "quantity": 1,
+   "scryfall_id": "3c0f7157-a375-499c-92c7-d47d2e95dbad",
+   "oracle_id": "4d18bcba-a346-445e-a182-6cc30b7e066d",
+   "mana_cost": "{3}",
+   "mana_value": 3.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "Sacrifice a creature: Add {C}{C}.",
+   "mana_production": {
+    "C": 2
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 133,
+   "salt": 1.12,
+   "price_usd": 14.69,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "cmm",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Phyrexian Altar",
+   "quantity": 1,
+   "scryfall_id": "95d9f93c-50a8-41a9-be98-d1900bf1c12f",
+   "oracle_id": "8d02b297-97c4-4379-9862-0a462400f66f",
+   "mana_cost": "{3}",
+   "mana_value": 3.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "Sacrifice a creature: Add one mana of any color.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 309,
+   "salt": 1.26,
+   "price_usd": 55.54,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "2x2",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "March of the World Ooze",
+   "quantity": 1,
+   "scryfall_id": "b1964ec5-0dd1-4b54-917c-cbeab05aba79",
+   "oracle_id": "a04696c4-4138-47e2-8da4-81d61748519f",
+   "mana_cost": "{3}{G}{G}{G}",
+   "mana_value": 6.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Creatures you control have base power and toughness 6/6 and are Oozes in addition to their other types.\nWhenever an opponent casts a spell, if it's not their turn, you create a 3/3 green Elephant creature token.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 4380,
+   "salt": 0.31,
+   "price_usd": 2.25,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "dft",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Birthing Pod",
+   "quantity": 1,
+   "scryfall_id": "b768efa2-e56b-4a7e-ace8-d673f10e0714",
+   "oracle_id": "f8b9dd54-0837-47f4-ad14-7a0322d46d5f",
+   "mana_cost": "{3}{G/P}",
+   "mana_value": 4.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Artifact",
+   "oracle_text": "({G/P} can be paid with either {G} or 2 life.)\n{1}{G/P}, {T}, Sacrifice a creature: Search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put that card onto the battlefield, then shuffle. Activate only as a sorcery.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tutor"
+   ],
+   "edhrec_rank": 2025,
+   "salt": 1.03,
+   "price_usd": 12.08,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "tutor"
+   ],
+   "set_code": "nph",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Insidious Roots",
+   "quantity": 1,
+   "scryfall_id": "0bb91a22-2040-4a37-85f8-5f22de8c5907",
+   "oracle_id": "d75b2b8e-05c9-47da-b359-a867256d78ea",
+   "mana_cost": "{B}{G}",
+   "mana_value": 2.0,
+   "colors": [
+    "B",
+    "G"
+   ],
+   "color_identity": [
+    "B",
+    "G"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Creature tokens you control have \"{T}: Add one mana of any color.\"\nWhenever one or more creature cards leave your graveyard, create a 0/1 green Plant creature token, then put a +1/+1 counter on each Plant you control.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 1427,
+   "salt": 0.36,
+   "price_usd": 1.29,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "mkm",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Rhystic Study",
+   "quantity": 1,
+   "scryfall_id": "9f37c5b6-a59c-45cd-9a99-e9357fe9ea1b",
+   "oracle_id": "53236dd7-845a-444c-96d5-f41ed7325d8f",
+   "mana_cost": "{2}{U}",
+   "mana_value": 3.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 44,
+   "salt": 2.73,
+   "price_usd": 70.17,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "j22",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Kindred Discovery",
+   "quantity": 1,
+   "scryfall_id": "19bdedb2-768b-4adf-8193-917a10c8f729",
+   "oracle_id": "005ee549-1bf5-478f-bc3f-3e791bd7eecf",
+   "mana_cost": "{3}{U}{U}",
+   "mana_value": 5.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "As this enchantment enters, choose a creature type.\nWhenever a creature you control of the chosen type enters or attacks, draw a card.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 341,
+   "salt": 0.44,
+   "price_usd": 5.9,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "msc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Greater Good",
+   "quantity": 1,
+   "scryfall_id": "9dd8b16f-3dfd-4e04-a2e9-ec87d0e007c9",
+   "oracle_id": "dc0593c2-ccb4-4648-a592-c5bcd121dc72",
+   "mana_cost": "{2}{G}{G}",
+   "mana_value": 4.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Sacrifice a creature: Draw cards equal to the sacrificed creature's power, then discard three cards.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 643,
+   "salt": 0.6,
+   "price_usd": 1.24,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "set_code": "msc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Command Tower",
+   "quantity": 1,
+   "scryfall_id": "0548fb60-c843-4f8f-a029-6f10efc63a41",
+   "oracle_id": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 2,
+   "salt": 0.38,
+   "price_usd": 0.3,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "msc",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Three Tree City",
+   "quantity": 1,
+   "scryfall_id": "56f88a48-cced-4a9d-8c19-e4f105f0d8a2",
+   "oracle_id": "da3b17a2-e1e1-44e9-b9b1-ae54a92037db",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Legendary Land",
+   "oracle_text": "As Three Tree City enters, choose a creature type.\n{T}: Add {C}.\n{2}, {T}: Choose a color. Add an amount of mana of that color equal to the number of creatures you control of the chosen type.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 176,
+   "salt": 0.48,
+   "price_usd": 28.21,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "blb",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Mutavault",
+   "quantity": 1,
+   "scryfall_id": "52cc2f10-142d-4e6a-984e-b25f566cc960",
+   "oracle_id": "6b3cc59a-7ea5-4eb5-9bf9-5a9c07f80e2b",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{1}: This land becomes a 2/2 creature with all creature types until end of turn. It's still a land.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 1903,
+   "salt": 0.21,
+   "price_usd": 3.96,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "clb",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Forest",
+   "quantity": 2,
+   "scryfall_id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+   "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Basic Land — Forest",
+   "oracle_text": "({T}: Add {G}.)",
+   "mana_production": {
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": null,
+   "salt": 0.7,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "trk",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Susur Secundi, Void Altar",
+   "quantity": 1,
+   "scryfall_id": "aefb8c0d-2bc6-4bec-851e-0137b4abfb22",
+   "oracle_id": "50d6cadc-07e4-479e-90f4-e3a20f769bab",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Land — Planet",
+   "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\n12+ | {1}{B}, {T}, Pay 2 life, Sacrifice a creature: Draw cards equal to the sacrificed creature's power. Activate only as a sorcery.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [
+    "Station"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 1936,
+   "salt": 0.19,
+   "price_usd": 4.77,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "eoe",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Swamp",
+   "quantity": 2,
+   "scryfall_id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+   "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Basic Land — Swamp",
+   "oracle_text": "({T}: Add {B}.)",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": null,
+   "salt": 0.33,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "trk",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "High Market",
+   "quantity": 1,
+   "scryfall_id": "894aa6b6-0d08-4c43-8734-9cb7b31359c6",
+   "oracle_id": "86fb3749-37d6-48a6-8524-71e996850307",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice a creature: You gain 1 life.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 440,
+   "salt": 0.14,
+   "price_usd": 0.5,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "soc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Phyrexian Tower",
+   "quantity": 1,
+   "scryfall_id": "0b47f6d2-9f65-47a4-bfc4-15619befe53d",
+   "oracle_id": "1861e642-21d5-4232-89f3-b5557f2946c1",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice a creature: Add {B}{B}.",
+   "mana_production": {
+    "B": 2,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 198,
+   "salt": 0.41,
+   "price_usd": 28.55,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "mh3",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Bojuka Bog",
+   "quantity": 1,
+   "scryfall_id": "55b5b094-9d2d-4d96-b90c-78fecdae725a",
+   "oracle_id": "04b7362d-0490-4cb0-b5d7-2a7732f659ce",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped.\nWhen this land enters, exile target player's graveyard.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 24,
+   "salt": 0.45,
+   "price_usd": 1.88,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "soc",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Urborg, Tomb of Yawgmoth",
+   "quantity": 1,
+   "scryfall_id": "9e1a9e38-6ffc-490f-b0be-23ba4e8204c6",
+   "oracle_id": "db6174d7-211d-4817-b8e4-8384594c83f9",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Legendary Land",
+   "oracle_text": "Each land is a Swamp in addition to its other land types.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 73,
+   "salt": 0.49,
+   "price_usd": 54.84,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "tsr",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Yavimaya, Cradle of Growth",
+   "quantity": 1,
+   "scryfall_id": "4e4b6e22-93b2-4896-bba5-0ceaa5d8ea3c",
+   "oracle_id": "8dd5f5af-d2d8-4356-8617-8381081b930c",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Legendary Land",
+   "oracle_text": "Each land is a Forest in addition to its other land types.",
+   "mana_production": {
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 78,
+   "salt": 0.29,
+   "price_usd": 15.67,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "mh2",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Boseiju, Who Endures",
+   "quantity": 1,
+   "scryfall_id": "2135ac5a-187b-4dc9-8f82-34e8d1603416",
+   "oracle_id": "bf1341dd-41a3-49f6-87ec-63170dde4324",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {G}.\nChannel — {1}{G}, Discard this card: Destroy target artifact, enchantment, or nonbasic land an opponent controls. That player may search their library for a land card with a basic land type, put it onto the battlefield, then shuffle. This ability costs {1} less to activate for each legendary creature you control.",
+   "mana_production": {
+    "G": 1
+   },
+   "keywords": [
+    "Channel"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 77,
+   "salt": 0.88,
+   "price_usd": 51.15,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "neo",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Misty Rainforest",
+   "quantity": 1,
+   "scryfall_id": "88231c0d-0cc8-44ec-bf95-81d1710ac141",
+   "oracle_id": "09dd85aa-47bc-4713-a9b9-8b52ff2285ed",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for a Forest or Island card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 42,
+   "salt": 0.42,
+   "price_usd": 36.71,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "mh2",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Otawara, Soaring City",
+   "quantity": 1,
+   "scryfall_id": "486d7edc-d983-41f0-8b78-c99aecd72996",
+   "oracle_id": "e9b6a394-691c-425a-9307-76d8edc7375e",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {U}.\nChannel — {3}{U}, Discard this card: Return target artifact, creature, enchantment, or planeswalker to its owner's hand. This ability costs {1} less to activate for each legendary creature you control.",
+   "mana_production": {
+    "U": 1
+   },
+   "keywords": [
+    "Channel"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 88,
+   "salt": 0.63,
+   "price_usd": 28.12,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "neo",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Takenuma, Abandoned Mire",
+   "quantity": 1,
+   "scryfall_id": "499037cc-a577-41cb-8ca2-5e117945634f",
+   "oracle_id": "ac2dd694-d2f1-4025-8400-12332bdc882a",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {B}.\nChannel — {3}{B}, Discard this card: Mill three cards, then return a creature or planeswalker card from your graveyard to your hand. This ability costs {1} less to activate for each legendary creature you control.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [
+    "Channel",
+    "Mill"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 247,
+   "salt": 0.22,
+   "price_usd": 10.41,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "neo",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Island",
+   "quantity": 2,
+   "scryfall_id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+   "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Basic Land — Island",
+   "oracle_text": "({T}: Add {U}.)",
+   "mana_production": {
+    "U": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": null,
+   "salt": 0.92,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "trk",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Breeding Pool",
+   "quantity": 1,
+   "scryfall_id": "63e4dc07-c742-41bd-8301-861637908fd1",
+   "oracle_id": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "U",
+    "G"
+   ],
+   "type_line": "Land — Island Forest",
+   "oracle_text": "({T}: Add {G} or {U}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+   "mana_production": {
+    "U": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 59,
+   "salt": 0.23,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "trk",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Overgrown Tomb",
+   "quantity": 1,
+   "scryfall_id": "ad7e18e2-c033-4b6c-86e8-d0e5cc824cfd",
+   "oracle_id": "975ec9a3-6f20-4177-8211-82526e092538",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B",
+    "G"
+   ],
+   "type_line": "Land — Swamp Forest",
+   "oracle_text": "({T}: Add {B} or {G}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+   "mana_production": {
+    "B": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 71,
+   "salt": 0.19,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "trk",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Watery Grave",
+   "quantity": 1,
+   "scryfall_id": "5525d6a6-e532-4047-9da4-bfae7927fecc",
+   "oracle_id": "fc9ec820-4245-4a96-b009-5308a818ca58",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "U",
+    "B"
+   ],
+   "type_line": "Land — Island Swamp",
+   "oracle_text": "({T}: Add {U} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+   "mana_production": {
+    "U": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 51,
+   "salt": 0.31,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "trk",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Zagoth Triome",
+   "quantity": 1,
+   "scryfall_id": "cc520518-2063-4b57-a0d4-10cf62a7175e",
+   "oracle_id": "fdd46004-eaba-4024-8687-39b23dc6a58c",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "U",
+    "B",
+    "G"
+   ],
+   "type_line": "Land — Island Swamp Forest",
+   "oracle_text": "({T}: Add {B}, {G}, or {U}.)\nThis land enters tapped.\nCycling {3} ({3}, Discard this card: Draw a card.)",
+   "mana_production": {
+    "U": 1,
+    "B": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Cycling"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 403,
+   "salt": 0.16,
+   "price_usd": 22.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "iko",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Exotic Orchard",
+   "quantity": 1,
+   "scryfall_id": "d11c5fe0-1528-4c94-a8cc-42bcab9d7487",
+   "oracle_id": "27b047e3-0d41-45e2-98e9-9391d7923a1e",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 9,
+   "salt": 0.14,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "mbc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Verdant Catacombs",
+   "quantity": 1,
+   "scryfall_id": "94c229ea-90da-4aa0-bfda-b162fb3b5b8b",
+   "oracle_id": "67d60b24-d429-4ded-90d9-06e49f28c396",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for a Swamp or Forest card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 47,
+   "salt": 0.21,
+   "price_usd": 28.38,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "mh2",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Polluted Delta",
+   "quantity": 1,
+   "scryfall_id": "6e288374-2b71-4ace-b1d2-a19fee6cb4af",
+   "oracle_id": "ef86989d-ce80-4e55-aece-7d11710eeffa",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for an Island or Swamp card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 36,
+   "salt": 0.29,
+   "price_usd": 20.62,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "mh3",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Cavern of Souls",
+   "quantity": 1,
+   "scryfall_id": "3aad15a2-8a1b-4460-9b06-e85863081878",
+   "oracle_id": "89ca686a-7c72-4d8f-9290-e89635624a83",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "As this land enters, choose a creature type.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 113,
+   "salt": 0.67,
+   "price_usd": 50.19,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "lci",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Fabled Passage",
+   "quantity": 1,
+   "scryfall_id": "62ef854d-ec9e-443d-a4ba-4b2875ed3fe7",
+   "oracle_id": "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Then if you control four or more lands, untap that land.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 48,
+   "salt": 0.1,
+   "price_usd": 1.14,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "set_code": "msc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Springleaf Parade",
+   "quantity": 1,
+   "scryfall_id": "44265489-645a-43b0-bc1f-726905b06876",
+   "oracle_id": "b1305916-53cc-4021-897e-bbefc65dce78",
+   "mana_cost": "{X}{G}{G}",
+   "mana_value": 2.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "When this enchantment enters, create X 1/1 colorless Shapeshifter creature tokens with changeling. (They're every creature type.)\nCreature tokens you control have \"{T}: Add one mana of any color.\"",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp",
+    "Enchantment"
+   ],
+   "edhrec_rank": 2072,
+   "salt": null,
+   "price_usd": 9.76,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "set_code": "ecc",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Clever Impersonator",
+   "quantity": 1,
+   "scryfall_id": "c0516453-3e6a-4b7f-8df6-72a6e207169a",
+   "oracle_id": "d4ec0df9-a4a3-48cf-a0aa-b1aea5c49142",
+   "mana_cost": "{2}{U}{U}",
+   "mana_value": 4.0,
+   "colors": [
+    "U"
+   ],
+   "color_identity": [
+    "U"
+   ],
+   "type_line": "Creature — Shapeshifter",
+   "oracle_text": "You may have this creature enter as a copy of any nonland permanent on the battlefield.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Clones"
+   ],
+   "edhrec_rank": 1257,
+   "salt": 0.3,
+   "price_usd": 4.12,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "c19",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Uugguu, the Omniplasm",
+   "quantity": 1,
+   "scryfall_id": "caa3e9e4-e1d9-4896-9a66-493e7446aca0",
+   "oracle_id": "df9bb1fc-135d-4efb-b143-81950fc95a27",
+   "mana_cost": "{B}{G}{U}",
+   "mana_value": 3.0,
+   "colors": [
+    "U",
+    "B",
+    "G"
+   ],
+   "color_identity": [
+    "U",
+    "B",
+    "G"
+   ],
+   "type_line": "Legendary Creature — Ooze",
+   "oracle_text": "Whenever another nontoken Ooze creature you control dies, create two tokens that are copies of that creature, except they're 2/2 and they aren't legendary.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Commander"
+   ],
+   "edhrec_rank": 20111,
+   "salt": null,
+   "price_usd": null,
+   "commander_legal": false,
+   "is_commander": true,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "set_code": "mbc",
+   "rarity": "rare",
+   "layout": "normal"
+  }
+ ],
+ "excluded": []
+}

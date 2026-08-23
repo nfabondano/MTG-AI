@@ -86,7 +86,13 @@ def _legality_section(data: dict[str, Any]) -> str:
 
 def _mana_section(data: dict[str, Any]) -> str:
     out = ["## Mana", ""]
-    out.append(f"**Lands:** {data['land_count']} · suggested ~{data['recommended_lands']}")
+    lands = f"**Lands:** {data['land_count']}"
+    if data.get("modal_lands"):
+        lands += (
+            f" (+{data['modal_lands']} modal spell-lands = "
+            f"{data['effective_lands']} effective)"
+        )
+    out.append(f"{lands} · suggested ~{data['recommended_lands']}")
     out.append("")
     if data.get("land_finding"):
         out.append(f"> {data['land_finding']}")

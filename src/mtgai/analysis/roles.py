@@ -184,7 +184,7 @@ def classify(card: CardEntry) -> list[str]:
         # land as ramp would drown the ramp count in what is really just mana.
         return [LAND]
 
-    text = card.oracle_text or ""
+    text = card.role_text()
     roles = [role for role, patterns in _COMPILED if any(p.search(text) for p in patterns)]
 
     # A board wipe is a strictly stronger statement than spot removal; keeping
