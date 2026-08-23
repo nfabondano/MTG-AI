@@ -13,7 +13,6 @@
 1 Sol Ring
 1 Acidic Slime
 1 Aeve, Progenitor Ooze
-1 Ayara, First of Locthwain
 1 Biogenic Ooze
 1 Biowaste Blob
 1 Birds of Paradise
@@ -33,12 +32,10 @@
 1 Phantasmal Image
 1 Phyrexian Metamorph
 1 Pirated Copy
-1 Pitiless Plunderer
 1 Prime Speaker Vannifar
 1 Roaming Throne
 1 Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel
 1 Species Specialist
-1 The Mimeoplasm
 1 Titan of Littjara
 1 Uchuulon
 1 Umori, the Collector
@@ -97,7 +94,6 @@
 1 Distant Melody
 1 Farseek
 1 Flare of Cultivation
-1 Kindred Dominance
 1 Living Death
 1 Nature's Lore
 1 Pact of the Serpent

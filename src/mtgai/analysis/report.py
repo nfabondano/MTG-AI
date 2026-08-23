@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Any
 
 from ..model import COLOR_NAMES, Deck
+from . import engine as engine_mod
 from . import roles as roles_mod
 
 BAR = "█"
@@ -45,6 +46,7 @@ def render_analysis(result: dict[str, Any]) -> str:
         out.append("- Nothing structural to flag. The deck's shape looks sound.")
     out.append("")
 
+    out.append(_engine_section(result.get("engine") or {}))
     out.append(_legality_section(result["legality"]))
     out.append(_mana_section(result["mana"]))
     out.append(_curve_section(result["curve"]))
@@ -61,6 +63,47 @@ def render_analysis(result: dict[str, Any]) -> str:
         "agree with in Archidekt yourself._"
     )
     return "\n".join(out) + "\n"
+
+
+def _engine_section(data: dict[str, Any]) -> str:
+    """What the deck is built around — read this before judging any card."""
+    if not data:
+        return ""
+    out = ["## What this deck does", ""]
+    out.append(f"**{data.get('archetype', 'no dominant theme')}**")
+    out.append("")
+
+    clusters = data.get("clusters") or {}
+    if clusters:
+        wants = set(data.get("commander_wants") or [])
+        parts = []
+        for name, count in list(clusters.items())[:8]:
+            parts.append(f"{name} {count}{'*' if name in wants else ''}")
+        out.append(" · ".join(parts))
+        out.append("")
+        out.append("_\* the commander's own text asks for this._")
+        out.append("")
+
+    strain = data.get("castability") or []
+    if strain:
+        out.append("**Hardest to cast:**")
+        out.append("")
+        for entry in strain[:4]:
+            note = " — sole reason that requirement is high" if entry.get("sole_driver") else ""
+            out.append(f"- {entry['name']} `{entry['mana_cost']}` — {entry['reasons'][0]}{note}")
+        out.append("")
+
+    over = data.get("oversupplied") or []
+    if over:
+        out.append(
+            "**Oversupplied:** "
+            + ", ".join(f"{e['category']} {e['count']} (want ~{e['target_high']})" for e in over[:4])
+        )
+        out.append("")
+
+    out.append(f"_{data.get('note', '')}_")
+    out.append("")
+    return "\n".join(out)
 
 
 def _legality_section(data: dict[str, Any]) -> str:
@@ -300,7 +343,13 @@ def _price_section(data: dict[str, Any]) -> str:
 # --- suggestions ----------------------------------------------------------
 
 
-def render_suggestions(deck: Deck, result: dict[str, Any], *, budget: float | None = None) -> str:
+def render_suggestions(
+    deck: Deck,
+    result: dict[str, Any],
+    *,
+    budget: float | None = None,
+    loose: bool = False,
+) -> str:
     """Turn the analysis into concrete adds and cuts.
 
     Adds are driven by what the deck lacks, so the same missing staple is a
@@ -316,7 +365,7 @@ def render_suggestions(deck: Deck, result: dict[str, Any], *, budget: float | No
     out.append("")
 
     adds = _build_adds(deck, result, budget=budget)
-    cuts = _build_cuts(deck, result)
+    cuts = _build_cuts(deck, result, loose=loose)
 
     if budget is not None:
         out.append(f"Filtered to cards at or under ${budget:,.2f}.")
@@ -337,9 +386,15 @@ def render_suggestions(deck: Deck, result: dict[str, Any], *, budget: float | No
     out.append("")
     if cuts:
         for entry in cuts:
-            out.append(f"- **{entry['name']}** — {entry['why']}")
+            out.append(f"- **{entry['name']}** — {entry['why']}  ")
+            out.append(f"  _({entry['evidence']})_")
     else:
-        out.append("- No obvious cuts. Any change here is a preference call.")
+        out.append(
+            "- No confident cuts. Nothing in the deck fails on castability, sits in "
+            "an oversupplied cluster, or falls outside what the deck is built around."
+        )
+        if not loose:
+            out.append("- Run with `--loose` to see weaker candidates.")
     out.append("")
 
     if adds and cuts:
@@ -430,47 +485,180 @@ def _build_adds(
     return adds
 
 
-def _build_cuts(deck: Deck, result: dict[str, Any]) -> list[dict[str, str]]:
-    cuts: list[dict[str, str]] = []
-    seen: set[str] = set()
+def _build_cuts(
+    deck: Deck, result: dict[str, Any], *, loose: bool = False
+) -> list[dict[str, Any]]:
+    """Cut candidates, each backed by deck-internal evidence.
 
-    # Cards outside the commander's identity are not a suggestion, they are a
-    # requirement — the deck is illegal until they go.
+    Popularity is deliberately not evidence. The tool once proposed cutting an
+    entire aristocrats engine because those cards sat outside a truncated
+    EDHREC list, so a card's absence from other people's decks can no longer
+    justify anything on its own.
+
+    What does justify a cut, in order of how much it tells you:
+
+    1. **Castability** — the card asks for more coloured mana than the deck
+       makes. A card that is the sole reason a colour requirement is high is the
+       strongest candidate there is: cutting it relaxes the whole mana base.
+    2. **Oversupply** — the card sits in a cluster holding far more than the
+       deck needs.
+    3. **Curve** — a top-of-curve card in a deck that is already top-heavy.
+    4. **No engine participation** — it does nothing the deck is built around.
+
+    A card outside the colour identity is not a candidate but a requirement.
+    """
+    cuts: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    eng = result.get("engine") or {}
+
+    def add(name: str, why: str, evidence: str, score: int) -> None:
+        key = name.lower()
+        if key in seen:
+            return
+        seen.add(key)
+        cuts.append({"name": name, "why": why, "evidence": evidence, "score": score})
+
+    # Illegal cards are not suggestions.
     identity = set(deck.color_identity())
     for card in deck.cards:
         if card.is_commander:
             continue
         outside = set(card.color_identity) - identity
         if outside:
-            seen.add(card.name.lower())
-            cuts.append(
-                {
-                    "name": card.name,
-                    "why": f"illegal — {'/'.join(sorted(outside))} is outside your colour identity",
-                }
+            add(
+                card.name,
+                f"illegal — {'/'.join(sorted(outside))} is outside your colour identity",
+                "colour identity",
+                1000,
             )
 
-    for entry in result["edhrec"].get("off_meta") or []:
-        if entry["name"].lower() in seen:
-            continue
-        seen.add(entry["name"].lower())
-        cuts.append({"name": entry["name"], "why": entry["reason"]})
-        if len(cuts) >= 15:
-            break
+    protected = _combo_cards(result)
 
-    # If the deck is over-weighted in a role, say which cards make up the excess.
-    for finding in result["roles"].get("findings", []):
-        if finding["verdict"] != "high":
+    # 1. Castability.
+    for entry in (eng.get("castability_cuts") or [])[:6]:
+        if entry["name"] in protected:
             continue
-        role = finding["role"]
-        members = result["roles"]["by_role"].get(role) or []
-        for name in members:
-            if name.lower() in seen:
+        why = "; ".join(entry["reasons"])
+        if entry.get("sole_driver"):
+            why += " — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base"
+        add(entry["name"], why, "castability", 100 + entry.get("severity", 0))
+
+    # 2. Oversupply — name the specific cards making up the excess, cheapest
+    #    contribution first so the engine's best pieces are not the ones offered.
+    for over in (eng.get("oversupplied") or [])[:3]:
+        category = over["category"]
+        members = engine_mod.cards_in_category(deck, category)
+        members.sort(key=lambda c: (-(c.mana_value or 0), c.name))
+        for card in members[: over["excess"]]:
+            if card.is_commander or card.name in protected:
                 continue
-            seen.add(name.lower())
-            cuts.append(
-                {"name": name, "why": f"deck runs {finding['count']} {role}, above the usual range"}
+            add(
+                card.name,
+                f"{over['count']} cards do {category} work; a deck wants about "
+                f"{over['target_high']}",
+                f"oversupplied: {category}",
+                60,
             )
-            break
+            break  # one representative per cluster, not a purge
 
+    # 3. Curve.
+    curve = result.get("curve") or {}
+    if curve.get("expensive_spells", 0) > 12:
+        top = sorted(
+            (c for c in deck.cards if not c.is_land and not c.is_commander),
+            key=lambda c: -(c.mana_value or 0),
+        )
+        for card in top[:2]:
+            if card.name in protected:
+                continue
+            add(
+                card.name,
+                f"{card.mana_value:.0f} mana in a deck already carrying "
+                f"{curve['expensive_spells']} spells at 5+",
+                "curve",
+                50,
+            )
+
+    # 4. Does nothing the deck is built around.
+    for name in (eng.get("orphans") or [])[:5]:
+        if name in protected:
+            continue
+        add(
+            name,
+            f"outside every cluster this deck is built on ({eng.get('archetype', 'its theme')})",
+            "no engine participation",
+            30,
+        )
+
+    # 5. Measured-low inclusion, and only ever as corroboration.
+    if loose:
+        for entry in result["edhrec"].get("off_meta") or []:
+            if entry["name"] in protected:
+                continue
+            add(entry["name"], entry["reason"], "low inclusion (weak signal)", 10)
+
+    cuts.sort(key=lambda c: -c["score"])
     return cuts
+
+
+def _combo_cards(result: dict[str, Any]) -> set[str]:
+    """Cards that assemble a combo the deck already has — never offer these."""
+    protected: set[str] = set()
+    for combo in result.get("combos", {}).get("complete") or []:
+        protected.update(combo.get("cards") or [])
+    return protected
+
+
+def render_engine(result: dict[str, Any]) -> str:
+    """The deck's engine as a standalone, editable document.
+
+    If the inference is wrong, correcting this file makes the correction stick:
+    the tool will not overwrite a version a person has edited.
+    """
+    data = result.get("engine") or {}
+    deck = result.get("deck") or {}
+    out = [f"# What {deck.get('name', 'this deck')} is doing", ""]
+    out.append(
+        "_Inferred from functional card tags. **Edit this file if it's wrong** — "
+        "your version wins, and re-analysis will leave it alone._"
+    )
+    out.append("")
+    out.append(f"## Archetype\n\n{data.get('archetype', 'unknown')}")
+    out.append("")
+
+    wants = data.get("commander_wants") or []
+    if wants:
+        commander = ", ".join(data.get("commander") or []) or "The commander"
+        out.append(f"## What {commander} asks for\n")
+        out.append(", ".join(wants))
+        out.append("")
+
+    clusters = data.get("clusters") or {}
+    if clusters:
+        out.append("## Clusters\n")
+        for name, count in clusters.items():
+            marker = " *(commander wants this)*" if name in set(wants) else ""
+            out.append(f"- **{name}** — {count} cards{marker}")
+        out.append("")
+
+    strain = data.get("castability") or []
+    if strain:
+        out.append("## Hardest to cast\n")
+        for entry in strain[:6]:
+            note = " — **sole reason that requirement is high**" if entry.get("sole_driver") else ""
+            out.append(f"- {entry['name']} `{entry['mana_cost']}`{note}")
+            for why in entry["reasons"]:
+                out.append(f"  - {why}")
+        out.append("")
+
+    orphans = data.get("orphans") or []
+    if orphans:
+        out.append("## Outside every cluster\n")
+        out.append(
+            "Not automatically bad — the tags may simply not name what these do.\n"
+        )
+        for name in orphans[:12]:
+            out.append(f"- {name}")
+        out.append("")
+
+    return "\n".join(out) + "\n"

@@ -2,12 +2,12 @@
  "id": 25569889,
  "name": "Uugguu",
  "createdAt": "2026-08-20T21:44:32.650399Z",
- "updatedAt": "2026-08-23T16:39:01.924066Z",
+ "updatedAt": "2026-08-23T22:06:42.270983Z",
  "deckFormat": 3,
  "edhBracket": null,
  "game": null,
  "description": "",
- "viewCount": 81,
+ "viewCount": 90,
  "featured": "https://storage.googleapis.com/archidekt-card-images/mbc/caa3e9e4-e1d9-4896-9a66-493e7446aca0_art_crop.jpg",
  "customFeatured": "",
  "hasPrimer": false,
@@ -268,7 +268,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 6664,
+     "edhrecRank": 6660,
      "faces": [],
      "layout": "normal",
      "uid": "7fa8647a-7668-4db9-a77d-87e004b160e1",
@@ -628,7 +628,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 5111,
+     "edhrecRank": 5103,
      "faces": [],
      "layout": "normal",
      "uid": "1f266fa4-6667-49db-9d24-dfbabf1449ca",
@@ -817,7 +817,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 1481,
+     "edhrecRank": 1482,
      "faces": [],
      "layout": "normal",
      "uid": "21f45043-5419-4019-8b6c-e5294bd5f549",
@@ -992,7 +992,7 @@
       "Green",
       "Black"
      ],
-     "edhrecRank": 11093,
+     "edhrecRank": 11089,
      "faces": [],
      "layout": "normal",
      "uid": "913383a1-9c0d-40a1-8c5a-b0a8a95c09a6",
@@ -1162,7 +1162,7 @@
      "colors": [
       "Blue"
      ],
-     "edhrecRank": 6043,
+     "edhrecRank": 6025,
      "faces": [],
      "layout": "normal",
      "uid": "66d4370e-19b9-4680-9b1e-a192537bc002",
@@ -1527,7 +1527,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 7617,
+     "edhrecRank": 7620,
      "faces": [],
      "layout": "normal",
      "uid": "44600a74-9584-488b-a342-2fccd8fa7599",
@@ -1705,7 +1705,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 5647,
+     "edhrecRank": 5643,
      "faces": [],
      "layout": "normal",
      "uid": "0ec5a688-a884-410c-adee-ab784789d6e8",
@@ -1892,7 +1892,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 4382,
+     "edhrecRank": 4357,
      "faces": [],
      "layout": "normal",
      "uid": "34b93a66-de1e-4133-a479-e0d90ba94a3a",
@@ -2198,6 +2198,189 @@
      "cardTrader": 2.08,
      "cardTraderFoil": 0.0,
      "cardTraderMinimum": 2.08
+    },
+    "rarity": "rare",
+    "globalCategories": []
+   }
+  },
+  {
+   "id": 3396787681,
+   "categories": [
+    "Clones"
+   ],
+   "companion": false,
+   "flippedDefault": false,
+   "label": ",#656565",
+   "modifier": "Normal",
+   "quantity": 1,
+   "customCmc": null,
+   "removedCategories": null,
+   "createdAt": "2026-08-23T04:08:44.838492Z",
+   "updatedAt": "2026-08-23T04:08:44.838513Z",
+   "deletedAt": null,
+   "notes": null,
+   "card": {
+    "id": 96004,
+    "artist": "Nils Hamm",
+    "tcgProductId": 243926,
+    "ckFoilId": 0,
+    "ckNormalId": 249311,
+    "cmEd": "",
+    "scgSku": "SGL-MTG-AFC-089-ENN",
+    "scgFoilSku": null,
+    "cardTraderSku": "160605",
+    "collectorNumber": "89",
+    "multiverseid": 532476,
+    "mtgoFoilId": 0,
+    "mtgoNormalId": 0,
+    "uid": "c1c080cf-a5e8-4d9d-af49-f78588971e87",
+    "displayName": null,
+    "releasedAt": "2021-07-23",
+    "contentWarning": false,
+    "edition": {
+     "editioncode": "afc",
+     "editionname": "Forgotten Realms Commander",
+     "editiondate": "2021-07-23",
+     "editiontype": "commander",
+     "mtgoCode": null
+    },
+    "flavor": "",
+    "games": [],
+    "options": [
+     "Normal"
+    ],
+    "scryfallImageHash": "1783926223",
+    "oracleCard": {
+     "id": 12050,
+     "cmc": 2,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 1465,
+     "faces": [],
+     "layout": "normal",
+     "uid": "bde94af8-faea-41ff-8eed-ba642eac9968",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "not_legal",
+      "penny": "legal",
+      "pioneer": "not_legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "not_legal",
+      "future": "not_legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{1}{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Phantasmal Image",
+     "power": "0",
+     "salt": 0.3,
+     "subTypes": [
+      "Illusion"
+     ],
+     "superTypes": [],
+     "keywords": [],
+     "oTags": [
+      "clone",
+      "copy-creature",
+      "cycle-m12-phantasmal",
+      "illusion ability",
+      "triggered ability"
+     ],
+     "inheritedTags": [
+      "copy",
+      "cycle",
+      "drawback"
+     ],
+     "text": "You may have this creature enter as a copy of any creature on the battlefield, except it's an Illusion in addition to its other types and it has \"When this creature becomes the target of a spell or ability, sacrifice it.\"",
+     "tokens": [],
+     "toughness": "0",
+     "types": [
+      "Creature"
+     ],
+     "loyalty": null,
+     "canlanderPoints": null,
+     "isPDHCommander": false,
+     "defaultCategory": "Clones",
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false,
+     "twoCardComboSingelton": false,
+     "twoCardComboIds": [
+      "14608",
+      "10489",
+      "1528",
+      "3399"
+     ],
+     "atomicCombos": [
+      "11828",
+      "14608",
+      "1528",
+      "46370",
+      "3399"
+     ],
+     "potentialCombos": [
+      "10489",
+      "47474",
+      "18951"
+     ],
+     "lang": "en"
+    },
+    "owned": 0,
+    "pinnedStatus": 0,
+    "prices": {
+     "ck": 6.49,
+     "ckfoil": 0.0,
+     "ckMinimum": 6.49,
+     "cm": 2.69,
+     "cmfoil": 3.5,
+     "cmMinimum": 2.69,
+     "mtgo": 0.0,
+     "mtgofoil": 0.0,
+     "mtgoMinimum": 0.02,
+     "tcg": 4.05,
+     "tcgfoil": 0.0,
+     "tcgMinimum": 4.05,
+     "scg": 5.35,
+     "scgfoil": 0.0,
+     "scgMinimum": 5.35,
+     "mp": 2.6,
+     "mpfoil": 0.0,
+     "mpMinimum": 2.6,
+     "tcgLand": 142.0,
+     "tcgLandFoil": 0.0,
+     "tcgLandMinimum": 142.0,
+     "cardTrader": 5.56,
+     "cardTraderFoil": 0.0,
+     "cardTraderMinimum": 5.18
     },
     "rarity": "rare",
     "globalCategories": []
@@ -2595,189 +2778,6 @@
      "cardTrader": 54.62,
      "cardTraderFoil": 54.64,
      "cardTraderMinimum": 52.67
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
-   "id": 3396787681,
-   "categories": [
-    "Clones"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-08-23T04:08:44.838492Z",
-   "updatedAt": "2026-08-23T04:08:44.838513Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 96004,
-    "artist": "Nils Hamm",
-    "tcgProductId": 243926,
-    "ckFoilId": 0,
-    "ckNormalId": 249311,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-AFC-089-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "160605",
-    "collectorNumber": "89",
-    "multiverseid": 532476,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 0,
-    "uid": "c1c080cf-a5e8-4d9d-af49-f78588971e87",
-    "displayName": null,
-    "releasedAt": "2021-07-23",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "afc",
-     "editionname": "Forgotten Realms Commander",
-     "editiondate": "2021-07-23",
-     "editiontype": "commander",
-     "mtgoCode": null
-    },
-    "flavor": "",
-    "games": [],
-    "options": [
-     "Normal"
-    ],
-    "scryfallImageHash": "1783926223",
-    "oracleCard": {
-     "id": 12050,
-     "cmc": 2,
-     "colorIdentity": [
-      "Blue"
-     ],
-     "colors": [
-      "Blue"
-     ],
-     "edhrecRank": 1465,
-     "faces": [],
-     "layout": "normal",
-     "uid": "bde94af8-faea-41ff-8eed-ba642eac9968",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal"
-     },
-     "manaCost": "{1}{U}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Phantasmal Image",
-     "power": "0",
-     "salt": 0.3,
-     "subTypes": [
-      "Illusion"
-     ],
-     "superTypes": [],
-     "keywords": [],
-     "oTags": [
-      "clone",
-      "copy-creature",
-      "cycle-m12-phantasmal",
-      "illusion ability",
-      "triggered ability"
-     ],
-     "inheritedTags": [
-      "copy",
-      "cycle",
-      "drawback"
-     ],
-     "text": "You may have this creature enter as a copy of any creature on the battlefield, except it's an Illusion in addition to its other types and it has \"When this creature becomes the target of a spell or ability, sacrifice it.\"",
-     "tokens": [],
-     "toughness": "0",
-     "types": [
-      "Creature"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Clones",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [
-      "14608",
-      "10489",
-      "1528",
-      "3399"
-     ],
-     "atomicCombos": [
-      "11828",
-      "14608",
-      "1528",
-      "46370",
-      "3399"
-     ],
-     "potentialCombos": [
-      "10489",
-      "47474",
-      "18951"
-     ],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 6.49,
-     "ckfoil": 0.0,
-     "ckMinimum": 6.49,
-     "cm": 2.69,
-     "cmfoil": 3.5,
-     "cmMinimum": 2.69,
-     "mtgo": 0.0,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 4.05,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 4.05,
-     "scg": 5.35,
-     "scgfoil": 0.0,
-     "scgMinimum": 5.35,
-     "mp": 2.6,
-     "mpfoil": 0.0,
-     "mpMinimum": 2.6,
-     "tcgLand": 142.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 142.0,
-     "cardTrader": 5.56,
-     "cardTraderFoil": 0.0,
-     "cardTraderMinimum": 5.18
     },
     "rarity": "rare",
     "globalCategories": []
@@ -3563,7 +3563,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 2845,
+     "edhrecRank": 2843,
      "faces": [],
      "layout": "normal",
      "uid": "1eebc02a-9a64-49b0-8322-c5ce671457ce",
@@ -3739,7 +3739,7 @@
      "colors": [
       "Blue"
      ],
-     "edhrecRank": 8102,
+     "edhrecRank": 8096,
      "faces": [],
      "layout": "normal",
      "uid": "09ea5508-78fd-4bbc-8395-38ec13202d9a",
@@ -4051,194 +4051,6 @@
    }
   },
   {
-   "id": 3396813434,
-   "categories": [
-    "Draw"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-08-23T04:19:45.091642Z",
-   "updatedAt": "2026-08-23T04:19:45.091672Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 79912,
-    "artist": "Ryan Pancoast",
-    "tcgProductId": 198909,
-    "ckFoilId": 227806,
-    "ckNormalId": 227405,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-ELD-075-ENN",
-    "scgFoilSku": "SGL-MTG-ELD-075-ENF",
-    "cardTraderSku": "59804",
-    "collectorNumber": "75",
-    "multiverseid": 473037,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 78262,
-    "uid": "ed0ace28-9a33-4f0d-b8c8-f5517f20ccf1",
-    "displayName": null,
-    "releasedAt": "2019-10-04",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "eld",
-     "editionname": "Throne of Eldraine",
-     "editiondate": "2019-10-04",
-     "editiontype": "expansion",
-     "mtgoCode": "eld"
-    },
-    "flavor": "Mourning shifts seamlessly to celebration as she chooses her next suitor.",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1783932644",
-    "oracleCard": {
-     "id": 20278,
-     "cmc": 3,
-     "colorIdentity": [
-      "Black"
-     ],
-     "colors": [
-      "Black"
-     ],
-     "edhrecRank": 844,
-     "faces": [],
-     "layout": "normal",
-     "uid": "388168b3-ec68-4af2-b88c-6a5ec88c15f6",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "legal",
-      "pioneer": "legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal"
-     },
-     "manaCost": "{B}{B}{B}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Ayara, First of Locthwain",
-     "power": "2",
-     "salt": 0.41,
-     "subTypes": [
-      "Elf",
-      "Noble"
-     ],
-     "superTypes": [
-      "Legendary"
-     ],
-     "keywords": [],
-     "oTags": [
-      "activated ability",
-      "cycle-eld-court-leader",
-      "drain life",
-      "draw engine",
-      "group slug",
-      "impact effect",
-      "opponent loses life",
-      "repeatable lifegain",
-      "repeatable plunder",
-      "sacrifice outlet-creature",
-      "synergy-black",
-      "triggered ability"
-     ],
-     "inheritedTags": [
-      "card advantage",
-      "creaturefall",
-      "cycle",
-      "draw",
-      "inverted effects",
-      "lifegain",
-      "plunder",
-      "repeatable card advantage",
-      "repeatable draw",
-      "repeatable sacrifice outlet",
-      "sacrifice outlet",
-      "thingfall"
-     ],
-     "text": "Whenever Ayara or another black creature you control enters, each opponent loses 1 life and you gain 1 life.\n{T}, Sacrifice another black creature: Draw a card.",
-     "tokens": [],
-     "toughness": "3",
-     "types": [
-      "Creature"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Draw",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 10.99,
-     "ckfoil": 12.99,
-     "ckMinimum": 10.99,
-     "cm": 4.35,
-     "cmfoil": 6.0,
-     "cmMinimum": 4.35,
-     "mtgo": 0.02,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 8.4,
-     "tcgfoil": 10.93,
-     "tcgMinimum": 8.4,
-     "scg": 10.99,
-     "scgfoil": 10.39,
-     "scgMinimum": 10.39,
-     "mp": 4.42,
-     "mpfoil": 9.55,
-     "mpMinimum": 4.42,
-     "tcgLand": 339.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 324.0,
-     "cardTrader": 10.32,
-     "cardTraderFoil": 9.65,
-     "cardTraderMinimum": 9.65
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3396825303,
    "categories": [
     "Draw"
@@ -4294,7 +4106,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 3433,
+     "edhrecRank": 3436,
      "faces": [],
      "layout": "normal",
      "uid": "51feda69-0ae8-4df3-bb50-a4bb9deb965d",
@@ -4654,7 +4466,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 1304,
+     "edhrecRank": 1303,
      "faces": [
       {
        "colors": [
@@ -5221,188 +5033,6 @@
    }
   },
   {
-   "id": 3396833157,
-   "categories": [
-    "Ramp"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-08-23T04:27:32.560593Z",
-   "updatedAt": "2026-08-23T04:27:32.560618Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 144387,
-    "artist": "Lorenzo Mastroianni",
-    "tcgProductId": 631511,
-    "ckFoilId": 314726,
-    "ckNormalId": 314627,
-    "cmEd": null,
-    "scgSku": "SGL-MTG-FIC-281-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "332680",
-    "collectorNumber": "281",
-    "multiverseid": 0,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 140303,
-    "uid": "8ba8b02a-8a05-40cd-8b83-51fd0cc0a7a5",
-    "displayName": null,
-    "releasedAt": "2025-06-13",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "fic",
-     "editionname": "Final Fantasy Commander",
-     "editiondate": "2025-06-13",
-     "editiontype": "commander",
-     "mtgoCode": null
-    },
-    "flavor": "\"We're gonna go into the castle through a secret cave that nobody else knows about!\"",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1783906270",
-    "oracleCard": {
-     "id": 12219,
-     "cmc": 4,
-     "colorIdentity": [
-      "Black"
-     ],
-     "colors": [
-      "Black"
-     ],
-     "edhrecRank": 226,
-     "faces": [],
-     "layout": "normal",
-     "uid": "a784481f-eccb-4112-bb38-04a659319660",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "not_legal",
-      "pioneer": "legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal"
-     },
-     "manaCost": "{3}{B}",
-     "manaProduction": {
-      "W": 1,
-      "U": 1,
-      "B": 1,
-      "R": 1,
-      "G": 1,
-      "C": null
-     },
-     "name": "Pitiless Plunderer",
-     "power": "1",
-     "salt": 0.71,
-     "subTypes": [
-      "Human",
-      "Pirate"
-     ],
-     "superTypes": [],
-     "keywords": [
-      "Treasure"
-     ],
-     "oTags": [
-      "alliteration",
-      "death trigger",
-      "ramp",
-      "repeatable treasures"
-     ],
-     "inheritedTags": [
-      "card names",
-      "repeatable artifact tokens",
-      "repeatable noncreature tokens",
-      "repeatable token generator",
-      "triggered ability"
-     ],
-     "text": "Whenever another creature you control dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
-     "tokens": [
-      "17448"
-     ],
-     "toughness": "4",
-     "types": [
-      "Creature"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": true,
-     "defaultCategory": "Ramp",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [
-      "15524"
-     ],
-     "atomicCombos": [
-      "23500",
-      "9988",
-      "15524",
-      "17221"
-     ],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 5.99,
-     "ckfoil": 7.99,
-     "ckMinimum": 4.99,
-     "cm": 3.13,
-     "cmfoil": 0.0,
-     "cmMinimum": 2.5,
-     "mtgo": 0.06,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 4.88,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 3.02,
-     "scg": 4.49,
-     "scgfoil": 0.0,
-     "scgMinimum": 4.49,
-     "mp": 3.28,
-     "mpfoil": 10.42,
-     "mpMinimum": 3.17,
-     "tcgLand": 101.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 101.0,
-     "cardTrader": 3.07,
-     "cardTraderFoil": 4.16,
-     "cardTraderMinimum": 3.07
-    },
-    "rarity": "uncommon",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3396842234,
    "categories": [
     "Removal"
@@ -5459,7 +5089,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 14893,
+     "edhrecRank": 14880,
      "faces": [],
      "layout": "normal",
      "uid": "3c2e2e69-cd44-458f-a5b0-8591baa24e65",
@@ -7482,7 +7112,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 1095,
+     "edhrecRank": 1094,
      "faces": [],
      "layout": "normal",
      "uid": "380c367f-73ea-485f-a37b-5af0ba160893",
@@ -8009,7 +7639,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 7832,
+     "edhrecRank": 7811,
      "faces": [],
      "layout": "normal",
      "uid": "7a11b4ed-430d-4ef8-b0c1-6a022f12448c",
@@ -8178,7 +7808,7 @@
      "colors": [
       "Blue"
      ],
-     "edhrecRank": 5464,
+     "edhrecRank": 5462,
      "faces": [],
      "layout": "normal",
      "uid": "7275fb8c-571a-4c4c-889a-829419332e51",
@@ -8301,188 +7931,6 @@
    }
   },
   {
-   "id": 3396820646,
-   "categories": [
-    "Recursion"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-08-23T04:22:00.216574Z",
-   "updatedAt": "2026-08-23T04:22:00.216600Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 131715,
-    "artist": "Svetlin Velinov",
-    "tcgProductId": 545194,
-    "ckFoilId": 184974,
-    "ckNormalId": 295223,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-OTC-234-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "284127",
-    "collectorNumber": "234",
-    "multiverseid": 658678,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 124931,
-    "uid": "998b86f3-e53f-4ebb-b111-6f14577fded1",
-    "displayName": null,
-    "releasedAt": "2024-04-19",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "otc",
-     "editionname": "Outlaws of Thunder Junction Commander",
-     "editiondate": "2024-04-19",
-     "editiontype": "commander",
-     "mtgoCode": null
-    },
-    "flavor": "",
-    "games": [],
-    "options": [
-     "Normal"
-    ],
-    "scryfallImageHash": "1783911897",
-    "oracleCard": {
-     "id": 16907,
-     "cmc": 5,
-     "colorIdentity": [
-      "Blue",
-      "Black",
-      "Green"
-     ],
-     "colors": [
-      "Green",
-      "Black",
-      "Blue"
-     ],
-     "edhrecRank": 7532,
-     "faces": [],
-     "layout": "normal",
-     "uid": "55123455-d435-46d4-b0cd-0c1614343be2",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "not_legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "not_legal",
-      "competitivebrawl": "not_legal",
-      "premodern": "not_legal",
-      "historic": "not_legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "not_legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "not_legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "not_legal",
-      "canlander": "legal"
-     },
-     "manaCost": "{2}{B}{G}{U}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "The Mimeoplasm",
-     "power": "0",
-     "salt": 0.75,
-     "subTypes": [
-      "Ooze"
-     ],
-     "superTypes": [
-      "Legendary"
-     ],
-     "keywords": [],
-     "oTags": [
-      "clone graveyard",
-      "copy-creature",
-      "cycle-cmd-face-commander",
-      "gains pp counters",
-      "graveyard fuel-creature",
-      "hate-graveyard",
-      "scales with power"
-     ],
-     "inheritedTags": [
-      "clone",
-      "copy",
-      "copy from graveyard",
-      "cycle",
-      "face-commander",
-      "graveyard fuel",
-      "hate",
-      "power matters",
-      "recursion"
-     ],
-     "text": "As The Mimeoplasm enters, you may exile two creature cards from graveyards. If you do, it enters as a copy of one of those cards with a number of additional +1/+1 counters on it equal to the power of the other card.",
-     "tokens": [],
-     "toughness": "0",
-     "types": [
-      "Creature"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Recursion",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 0.49,
-     "ckfoil": 0.0,
-     "ckMinimum": 0.49,
-     "cm": 0.17,
-     "cmfoil": 0.0,
-     "cmMinimum": 0.17,
-     "mtgo": 0.08,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.03,
-     "tcg": 0.28,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 0.28,
-     "scg": 0.44,
-     "scgfoil": 0.0,
-     "scgMinimum": 0.44,
-     "mp": 0.26,
-     "mpfoil": 0.0,
-     "mpMinimum": 0.23,
-     "tcgLand": 15.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 15.0,
-     "cardTrader": 0.27,
-     "cardTraderFoil": 0.0,
-     "cardTraderMinimum": 0.24
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3396905865,
    "categories": [
     "Land"
@@ -8537,7 +7985,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 1015,
+     "edhrecRank": 1013,
      "faces": [],
      "layout": "normal",
      "uid": "83161d59-2520-4741-9328-e2a4a8b5d5bc",
@@ -10044,178 +9492,6 @@
    }
   },
   {
-   "id": 3396872186,
-   "categories": [
-    "Removal"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-08-23T04:44:58.538698Z",
-   "updatedAt": "2026-08-23T04:44:58.538722Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 153308,
-    "artist": "Lordigan",
-    "tcgProductId": 698010,
-    "ckFoilId": 0,
-    "ckNormalId": 0,
-    "cmEd": null,
-    "scgSku": "SGL-MTG-MSC-156-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": null,
-    "collectorNumber": "156",
-    "multiverseid": 0,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 150781,
-    "uid": "f6cd7c08-f5d4-4bdc-a254-809d900b0fc3",
-    "displayName": null,
-    "releasedAt": "2026-06-26",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "msc",
-     "editionname": "Marvel Super Heroes Commander",
-     "editiondate": "2026-06-26",
-     "editiontype": "commander",
-     "mtgoCode": null
-    },
-    "flavor": "When the screams subsided, only the dry slither of scales and the hiss of cold breath remained.",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1783903243",
-    "oracleCard": {
-     "id": 8883,
-     "cmc": 7,
-     "colorIdentity": [
-      "Black"
-     ],
-     "colors": [
-      "Black"
-     ],
-     "edhrecRank": 709,
-     "faces": [],
-     "layout": "normal",
-     "uid": "ccaa44f2-96be-44e2-884f-c31baa3908d5",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "not_legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "not_legal",
-      "competitivebrawl": "not_legal",
-      "premodern": "not_legal",
-      "historic": "not_legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "not_legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "not_legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "not_legal",
-      "canlander": "legal"
-     },
-     "manaCost": "{5}{B}{B}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Kindred Dominance",
-     "power": "",
-     "salt": 0.64,
-     "subTypes": [],
-     "superTypes": [],
-     "keywords": [],
-     "oTags": [
-      "cycle-c17-kindred-spell",
-      "hate-typal-non-choose",
-      "removal-creature",
-      "removal-destroy",
-      "sweeper-one-sided",
-      "typal-choose"
-     ],
-     "inheritedTags": [
-      "cycle",
-      "hate",
-      "hate-typal",
-      "removal",
-      "sweeper",
-      "typal",
-      "typal-creature"
-     ],
-     "text": "Choose a creature type. Destroy all creatures that aren't of the chosen type.",
-     "tokens": [],
-     "toughness": "",
-     "types": [
-      "Sorcery"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Removal",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 5.49,
-     "ckfoil": 7.99,
-     "ckMinimum": 5.49,
-     "cm": 4.26,
-     "cmfoil": 0.0,
-     "cmMinimum": 0.04,
-     "mtgo": 0.1,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.07,
-     "tcg": 3.6,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 3.6,
-     "scg": 4.49,
-     "scgfoil": 0.0,
-     "scgMinimum": 4.49,
-     "mp": 3.75,
-     "mpfoil": 5.18,
-     "mpMinimum": 3.75,
-     "tcgLand": 0.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 558.0,
-     "cardTrader": 0.0,
-     "cardTraderFoil": 0.0,
-     "cardTraderMinimum": 5.03
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3396871818,
    "categories": [
     "Ramp"
@@ -10272,7 +9548,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 2152,
+     "edhrecRank": 2153,
      "faces": [],
      "layout": "normal",
      "uid": "1766f1f4-0924-4436-8379-94030adcccc5",
@@ -11314,7 +10590,7 @@
      "colors": [
       "Black"
      ],
-     "edhrecRank": 509,
+     "edhrecRank": 510,
      "faces": [],
      "layout": "normal",
      "uid": "127de52b-df75-4342-95a0-20d84c5bf916",
@@ -13755,7 +13031,7 @@
      "cmc": 0,
      "colorIdentity": [],
      "colors": [],
-     "edhrecRank": 1903,
+     "edhrecRank": 1901,
      "faces": [],
      "layout": "normal",
      "uid": "6b3cc59a-7ea5-4eb5-9bf9-5a9c07f80e2b",
@@ -14090,7 +13366,7 @@
       "Black"
      ],
      "colors": [],
-     "edhrecRank": 1936,
+     "edhrecRank": 1926,
      "faces": [],
      "layout": "normal",
      "uid": "50d6cadc-07e4-479e-90f4-e3a20f769bab",
@@ -14452,7 +13728,7 @@
      "cmc": 0,
      "colorIdentity": [],
      "colors": [],
-     "edhrecRank": 440,
+     "edhrecRank": 438,
      "faces": [],
      "layout": "normal",
      "uid": "86fb3749-37d6-48a6-8524-71e996850307",

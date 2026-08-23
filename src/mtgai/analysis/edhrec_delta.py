@@ -59,43 +59,45 @@ def analyse(deck: Deck, *, limit: int = 15) -> dict:
     missing_staples.sort(key=lambda e: -e["inclusion"])
     missing_synergy.sort(key=lambda e: -e["synergy"])
 
-    # Cards in the deck that the wider meta rarely plays.
+    # Cards the wider meta measurably rarely plays.
+    #
+    # Absence from EDHREC's lists is NOT evidence and must never appear here.
+    # The page returns a few hundred cards; a 100-card deck will always have
+    # entries outside that. Treating absence as a signal is what made the tool
+    # flag an entire aristocrats engine — Ayara, Yawgmoth, Pitiless Plunderer,
+    # Species Specialist — as "unusual inclusions". Only a *measured* inclusion
+    # rate counts, and only when EDHREC actually returned data for the card.
     off_meta = []
+    covered = 0
     for card in deck.cards:
         if card.is_commander or card.is_basic_land:
             continue
-        # Lands are skipped entirely. EDHREC's commander page lists roughly 150
-        # spells and does not enumerate mana bases, so every dual and utility
-        # land reads as "unusual" — which would have this tool advising you to
-        # cut Plateau.
+        # Lands are skipped: EDHREC does not enumerate mana bases, so every dual
+        # would read as unusual and the tool would advise cutting Plateau.
         if card.is_land:
             continue
         key = card.name.split("//")[0].strip().lower()
         rec = recommendations.get(key)
         if rec is None:
-            # Absent from every list EDHREC returned — it did not make the cut
-            # anywhere, which is a weaker signal than a measured low inclusion.
-            off_meta.append(
-                {
-                    "name": card.name,
-                    "inclusion": None,
-                    "mana_value": card.mana_value,
-                    "reason": "not on any EDHREC list for this commander",
-                }
-            )
-        elif rec.inclusion < OFF_META_INCLUSION:
+            continue
+        covered += 1
+        if rec.inclusion < OFF_META_INCLUSION:
             off_meta.append(
                 {
                     "name": card.name,
                     "inclusion": round(rec.inclusion, 4),
                     "mana_value": card.mana_value,
-                    "reason": f"played in {rec.inclusion:.1%} of decks",
+                    "reason": f"played in {rec.inclusion:.1%} of decks with this commander",
                 }
             )
 
-    # Surface the priciest unusual cards first — those are the ones where a
-    # swap actually changes something.
-    off_meta.sort(key=lambda e: -(e["mana_value"] or 0))
+    off_meta.sort(key=lambda e: e["inclusion"])
+
+    # With thin coverage the comparison says more about EDHREC than the deck.
+    spells = sum(1 for c in deck.cards if not c.is_land and not c.is_basic_land)
+    coverage = covered / spells if spells else 0.0
+    if coverage < 0.25:
+        off_meta = []
 
     return {
         "available": True,
@@ -108,4 +110,6 @@ def analyse(deck: Deck, *, limit: int = 15) -> dict:
         "missing_staples": missing_staples[:limit],
         "missing_synergy": missing_synergy[:limit],
         "off_meta": off_meta[:limit],
+        "covered_cards": covered,
+        "coverage": round(coverage, 3),
     }

@@ -39,7 +39,8 @@ uv run mtg deck show <ref>            # slim summary
 uv run mtg deck cards <ref> --role ramp   # filter by role or --type
 uv run mtg deck refresh <ref>         # re-pull from Archidekt
 uv run mtg deck analyze <ref>         # regenerate analysis.md
-uv run mtg deck suggest <ref> [--budget N]
+uv run mtg deck suggest <ref> [--budget N] [--loose]
+uv run mtg deck engine <ref>          # what the deck is built around
 uv run mtg card "<name>"              # Scryfall lookup
 uv run mtg edhrec "<commander>"       # EDHREC recommendations
 uv run mtg combos "<card>"            # Commander Spellbook
@@ -57,7 +58,9 @@ decks/<slug>/
   deck.json        normalised + enriched list; grep it, don't read it whole
   deck.txt         plain list, pasteable back into Archidekt
   analysis.md      the generated report — read this
-  suggestions.md   generated cut/add candidates
+  engine.md        what the deck is built around; Nicolas may edit it, and
+                   his version wins — never overwrite an edited one
+  suggestions.md   generated cut/add candidates, each with its evidence
   notes.md         Nicolas's own notes — never overwrite this file
 ```
 
@@ -84,12 +87,36 @@ per colour, land count vs. curve), curve, role counts (ramp/draw/removal/wipes/
 tutors/protection) against normal EDH ranges, EDHREC comparison, combos present
 and one card away, an estimated Commander bracket, and price.
 
+## Before you judge any card, read the engine
+
+`decks/<slug>/engine.md` says what the deck is built around. Read it first.
+Nicolas can edit it, and if he has, his version is authoritative — the tool
+will not overwrite it.
+
+These four rules exist because the tool once advised cutting an entire
+aristocrats engine, and the reasoning behind it was nonsense:
+
+- **Absence from an EDHREC list is not evidence.** The page returns a few
+  hundred cards; a 100-card deck will always have entries outside it. Only a
+  *measured* low inclusion means anything, and even then it is weak.
+- **Never recommend a cut on popularity alone.** A cut needs a deck-internal
+  reason: it is hard to cast, it sits in an oversupplied cluster, it is at the
+  top of an already top-heavy curve, or it does nothing the deck is built
+  around. If you cannot say which, do not suggest it.
+- **Copy effects take on the copied card's characteristics.** A blue clone of a
+  black commander *is a black creature*. Judge clones, changelings and tokens by
+  what they become in this deck, never by what is printed on them. Reading the
+  printed colour is exactly the mistake that produced the bad advice.
+- **Check what the commander asks for.** A commander with a death trigger makes
+  sacrifice outlets core, not filler. `mtg deck engine <ref>` spells this out.
+
 ## Judgement, not recitation
 
 The analysis produces numbers. The useful part is what you make of them.
 
 - **Role counts are heuristics.** They come from oracle-text pattern matching.
-  If a card is miscategorised, say so rather than defending the number.
+  Functional tags (`tags` on each card) are better — prefer them. If a card is
+  miscategorised, say so rather than defending the number.
 - **EDHREC describes the average deck, not a correct one.** A card almost
   nobody plays is often a deliberate choice — a pet card, a budget call, a local
   metagame. Flag it as worth discussing, never as an error.
@@ -123,6 +150,10 @@ caches every request; keep it that way.
 - `src/mtgai/service.py` holds the operations. The CLI and MCP server both call
   it — add new capability there, not in one front end.
 - `uv run pytest` runs offline against recorded fixtures in `tests/fixtures/`.
+- Functional tags come from Archidekt's `oTags` (free, in the payload) and the
+  Scryfall Tagger bulk file (`mtg cache refresh`), which also supplies the tag
+  hierarchy — `sacrifice-outlet` has 12 cards directly but 1,540 once children
+  roll up, so never query a parent tag without the rollup.
 - Two Archidekt quirks are load-bearing and covered by tests: a card is out of
   the deck when **any** of its categories is flagged `includedInDeck: false`
   (maybeboard cards also carry their type category), and `card.uid` is the

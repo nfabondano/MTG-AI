@@ -8,6 +8,7 @@ and it is easy to introduce one by accident while editing on Archidekt.
 from __future__ import annotations
 
 from collections import Counter
+from datetime import date
 
 from ..model import COLOR_NAMES, Deck
 
@@ -63,9 +64,26 @@ def analyse(deck: Deck) -> dict:
     if offenders:
         errors.append("Colour identity violations: " + "; ".join(sorted(offenders)))
 
-    illegal = [c.name for c in deck.cards if not c.commander_legal]
+    # A card from a set that has not come out yet is reported as not legal in
+    # every format, Vintage included. That is a release date, not a ban, and
+    # calling it an error sends you hunting for a problem you do not have.
+    illegal, unreleased = [], []
+    today = date.today().isoformat()
+    for card in deck.cards:
+        if card.commander_legal:
+            continue
+        if card.released_at and card.released_at[:10] > today:
+            unreleased.append(f"{card.name} ({card.set_code.upper()} releases {card.released_at[:10]})")
+        else:
+            illegal.append(card.name)
+
     if illegal:
         errors.append("Not legal in Commander: " + ", ".join(sorted(illegal)))
+    if unreleased:
+        warnings.append(
+            "Not legal yet only because the set is unreleased: "
+            + ", ".join(sorted(unreleased))
+        )
 
     if commanders:
         for commander in commanders:

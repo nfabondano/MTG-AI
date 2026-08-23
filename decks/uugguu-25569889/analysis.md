@@ -1,27 +1,41 @@
 # Uugguu
 
 **Commander:** Uugguu, the Omniplasm  
-**Identity:** U/B/G · **Cards:** 104 · **Format:** Commander  
+**Identity:** U/B/G · **Cards:** 100 · **Format:** Commander  
 **Source:** https://archidekt.com/decks/25569889
 
 ## What stands out
 
-- Illegal: Deck has 104 cards; Commander requires exactly 100.
-- Illegal: Not legal in Commander: Uugguu, the Omniplasm
-- Blue: 19 sources for cards needing 2 U pips — around 20 is the usual target.
-- Green: 20 sources for cards needing 3 G pips — around 23 is the usual target.
-- 14 ramp — more than the usual 8-12.
-- 15 draw — more than the usual 8-12.
+- Blue: 18 sources for cards needing 2 U pips — around 20 is the usual target.
+- Green: 19 sources for cards needing 3 G pips — around 23 is the usual target.
+- 13 ramp — more than the usual 8-12.
+- 14 draw — more than the usual 8-12.
 - 5 removal — typical decks run 6-10.
-- 13 spells at 5+ mana is top-heavy for a 100-card deck.
 - 2 combos one card away — see the combo section.
+
+## What this deck does
+
+**typal + copy + sacrifice**
+
+ramp 16 · draw 16 · typal 15* · copy 14* · sacrifice 14* · removal 12 · protection 9 · tutor 8
+
+_\* the commander's own text asks for this._
+
+**Hardest to cast:**
+
+- Aeve, Progenitor Ooze `{2}{G}{G}{G}` — 3 Green pips wants ~23 sources, deck has 19
+- March of the World Ooze `{3}{G}{G}{G}` — 3 Green pips wants ~23 sources, deck has 19
+- Omni-Changeling `{3}{U}{U}` — 2 Blue pips wants ~20 sources, deck has 18
+- Titan of Littjara `{4}{U}{U}` — 2 Blue pips wants ~20 sources, deck has 18
+
+**Oversupplied:** sacrifice 14 (want ~8), ramp 16 (want ~12), draw 16 (want ~12), tutor 8 (want ~4)
+
+_Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
 ## Legality
 
-**This deck is not legal as built.**
-
-- Deck has 104 cards; Commander requires exactly 100.
-- Not legal in Commander: Uugguu, the Omniplasm
+Legal: 100 cards, singleton, colour identity clean.
+- Note: Not legal yet only because the set is unreleased: Uugguu, the Omniplasm (MBC releases 2026-11-09)
 
 ## Mana
 
@@ -29,52 +43,50 @@
 
 | Colour | Pips | Heaviest | Sources | Lands | Need |
 |---|---:|---:|---:|---:|---:|
-| Blue | 30 | 2 | 19 | 9 | 20 |
-| Black | 42 | 3 | 23 | 13 | 23 |
-| Green | 37 | 3 | 20 | 11 | 23 |
+| Blue | 29 | 2 | 18 | 9 | 20 |
+| Black | 35 | 2 | 22 | 13 | 20 |
+| Green | 36 | 3 | 19 | 11 | 23 |
 
 _Heaviest is the most pips of that colour any single card asks for; Need is how many sources that card wants to be castable on curve._
 
-- Blue: 19 sources for cards needing 2 U pips — around 20 is the usual target.
-- Green: 20 sources for cards needing 3 G pips — around 23 is the usual target.
+- Blue: 18 sources for cards needing 2 U pips — around 20 is the usual target.
+- Green: 19 sources for cards needing 3 G pips — around 23 is the usual target.
 
 _Sources count lands plus anything that taps for mana, restricted to the deck's colour identity._
 
 ## Curve
 
-**Average mana value:** 3.2 (nonland)
+**Average mana value:** 3.11 (nonland)
 
 ```
  0 |                      0
  1 | ████████             8
- 2 | █████████████████    17
- 3 | ████████████████████ 20
- 4 | █████████████████    17
- 5 | █████████            9
+ 2 | ██████████████████   17
+ 3 | ████████████████████ 19
+ 4 | █████████████████    16
+ 5 | ████████             8
  6 | ███                  3
-7+ | █                    1
+7+ |                      0
 ```
 
-Creature 34 · Land 29 · Sorcery 14 · Instant 13 · Enchantment 8 · Artifact 6
-
-- 13 spells at 5+ mana is top-heavy for a 100-card deck.
+Creature 31 · Land 29 · Instant 13 · Sorcery 13 · Enchantment 8 · Artifact 6
 
 ## Roles
 
 | Role | Count | Typical |
 |---|---:|---:|
-| Ramp | 14 | 8–12 |
-| Draw | 15 | 8–12 |
+| Ramp | 13 | 8–12 |
+| Draw | 14 | 8–12 |
 | Removal | 5 | 6–10 |
-| Wipe | 3 | 2–4 |
+| Wipe | 2 | 2–4 |
 | Counterspell | 2 | — |
 | Protection | 2 | 2–6 |
 | Tutor | 4 | — |
 | Recursion | 3 | — |
 | Graveyard Hate | 0 | — |
 
-- 14 ramp — more than the usual 8-12.
-- 15 draw — more than the usual 8-12.
+- 13 ramp — more than the usual 8-12.
+- 14 draw — more than the usual 8-12.
 - 5 removal — typical decks run 6-10.
 
 _Roles come from oracle-text matching, so treat the edges as approximate._
@@ -93,13 +105,13 @@ Compared against ~2,065 decks with this commander.
 - Woodland Cemetery — in 49% of decks
 - Undergrowth Stadium — in 48% of decks
 - Oran-Rief Ooze — in 46% of decks
+- The Mimeoplasm — in 43% of decks
 - Opulent Palace — in 43% of decks
 - Scavenging Ooze — in 43% of decks
 - Path of Ancestry — in 42% of decks
 - Slurrk, All-Ingesting — in 42% of decks
 - Dreamroot Cascade — in 41% of decks
 - Saw in Half — in 40% of decks
-- Necrotic Ooze — in 40% of decks
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
@@ -108,6 +120,7 @@ Compared against ~2,065 decks with this commander.
 - Predator Ooze — synergy +0.47
 - Oran-Rief Ooze — synergy +0.45
 - Slurrk, All-Ingesting — synergy +0.41
+- The Mimeoplasm — synergy +0.41
 - Scavenging Ooze — synergy +0.40
 - Necrotic Ooze — synergy +0.38
 - Saw in Half — synergy +0.38
@@ -117,17 +130,6 @@ Compared against ~2,065 decks with this commander.
 - Ochre Jelly — synergy +0.34
 - Bloodline Bidding — synergy +0.33
 - Clone — synergy +0.33
-- Naga Fleshcrafter — synergy +0.33
-
-**Unusual inclusions** — worth a second look, not automatic cuts:
-
-- Titan of Littjara — not on any EDHREC list for this commander
-- Species Specialist — not on any EDHREC list for this commander
-- Yawgmoth, Thran Physician — not on any EDHREC list for this commander
-- Pitiless Plunderer — not on any EDHREC list for this commander
-- Cephalid Facetaker — not on any EDHREC list for this commander
-- Ayara, First of Locthwain — not on any EDHREC list for this commander
-- Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel — not on any EDHREC list for this commander
 
 ## Combos
 
@@ -152,7 +154,7 @@ _An estimate from what the deck can do on paper. How it actually plays, and what
 
 ## Price
 
-**Deck total:** $1,109.08 · 8 cards without a price
+**Deck total:** $1,092.54 · 8 cards without a price
 
 Most expensive:
 

@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Any
 
 from ..model import Deck
-from . import bracket, combos, curve, edhrec_delta, legality, mana, roles
+from . import bracket, combos, curve, edhrec_delta, engine, legality, mana, roles
 
 
 def price_summary(deck: Deck, *, top: int = 10) -> dict[str, Any]:
@@ -32,6 +32,7 @@ def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
     """Run the full analysis. Roles are tagged first; everything else uses them."""
     roles.tag_deck(deck)
 
+    engine_result = engine.analyse(deck)
     curve_result = curve.analyse(deck)
     result: dict[str, Any] = {
         "deck": {
@@ -44,6 +45,7 @@ def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
             "color_identity": deck.color_identity(),
             "updated_at": deck.updated_at,
         },
+        "engine": engine_result,
         "legality": legality.analyse(deck),
         "curve": curve_result,
         "mana": mana.analyse(deck, curve_result["average_mana_value"]),
@@ -80,6 +82,14 @@ def _headline(result: dict[str, Any]) -> list[str]:
         lines.append(result["mana"]["land_finding"])
     for finding in result["mana"].get("findings", []):
         lines.append(finding["message"])
+
+    eng = result.get("engine") or {}
+    for entry in (eng.get("castability") or [])[:2]:
+        if entry.get("sole_driver"):
+            lines.append(
+                f"{entry['name']} `{entry['mana_cost']}` is the only card holding your "
+                f"colour requirement that high — {entry['reasons'][0]}."
+            )
 
     for finding in result["roles"].get("findings", []):
         lines.append(finding["message"])

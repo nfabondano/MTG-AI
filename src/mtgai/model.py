@@ -93,7 +93,15 @@ class CardEntry:
     is_extra_turns: bool = False
     is_mass_land_denial: bool = False
     roles: list[str] = field(default_factory=list)
+    # Human-curated functional tags (Scryfall Tagger vocabulary, served by
+    # both Archidekt and Scryfall). These say what a card *does* —
+    # "sacrifice-outlet-creature", "clone" — where oracle-text regexes only
+    # see the words.
+    tags: list[str] = field(default_factory=list)
+    # Which of the deck's engine clusters this card belongs to.
+    engine_participation: list[str] = field(default_factory=list)
     set_code: str = ""
+    released_at: str = ""
     rarity: str = ""
     layout: str = ""
 
@@ -185,7 +193,10 @@ class CardEntry:
             "is_extra_turns": self.is_extra_turns,
             "is_mass_land_denial": self.is_mass_land_denial,
             "roles": self.roles,
+            "tags": self.tags,
+            "engine_participation": self.engine_participation,
             "set_code": self.set_code,
+            "released_at": self.released_at,
             "rarity": self.rarity,
             "layout": self.layout,
         }

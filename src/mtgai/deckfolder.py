@@ -26,6 +26,7 @@ DECK = "deck.json"
 DECKLIST = "deck.txt"
 ANALYSIS = "analysis.md"
 SUGGESTIONS = "suggestions.md"
+ENGINE = "engine.md"
 NOTES = "notes.md"
 
 NOTES_TEMPLATE = """# Notes
@@ -71,6 +72,10 @@ class DeckFolder:
         return self.path / SUGGESTIONS
 
     @property
+    def engine_path(self) -> Path:
+        return self.path / ENGINE
+
+    @property
     def notes_path(self) -> Path:
         return self.path / NOTES
 
@@ -109,6 +114,29 @@ class DeckFolder:
     def write_suggestions(self, markdown: str) -> None:
         self.ensure()
         self.suggestions_path.write_text(markdown)
+
+    # The generated marker's absence means a person has edited this file.
+    ENGINE_MARKER = "<!-- generated -->"
+
+    def write_engine(self, markdown: str) -> None:
+        """Write the inferred engine, unless it has been corrected by hand.
+
+        The inference is a starting point. Once Nicolas edits `engine.md` the
+        correction is authoritative and re-analysis must not clobber it — the
+        tool's guess is worth less than someone who knows what the deck does.
+        """
+        self.ensure()
+        if self.engine_path.exists():
+            existing = self.engine_path.read_text()
+            if self.ENGINE_MARKER not in existing:
+                return
+        self.engine_path.write_text(f"{self.ENGINE_MARKER}\n{markdown}")
+
+    def engine_is_user_edited(self) -> bool:
+        return (
+            self.engine_path.exists()
+            and self.ENGINE_MARKER not in self.engine_path.read_text()
+        )
 
 
 def render_decklist(deck: Deck) -> str:

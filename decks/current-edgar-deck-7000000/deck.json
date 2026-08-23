@@ -8,7 +8,7 @@
  "url": "https://archidekt.com/decks/7000000",
  "updated_at": "2024-08-21T12:37:31.550964Z",
  "archidekt_bracket": null,
- "imported_at": "2026-08-23T18:07:36+00:00",
+ "imported_at": "2026-08-23T23:56:08+00:00",
  "color_identity": [
   "W",
   "B",
@@ -42,7 +42,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 3508,
+   "edhrec_rank": 3511,
    "salt": 0.31,
    "price_usd": 4.56,
    "commander_legal": true,
@@ -52,8 +52,34 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "drain life",
+    "evasion",
+    "group slug",
+    "hate-white",
+    "noncreature typal",
+    "opponent loses life",
+    "per-player",
+    "triggered ability",
+    "typal-vampire",
+    "virtual french vanilla",
+    "flavors of vanilla",
+    "hate",
+    "hate-color",
+    "inverted effects",
+    "lifegain",
+    "multiplayer",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "drain",
+    "typal"
+   ],
    "set_code": "voc",
-   "rarity": "rare"
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Twilight Prophet",
@@ -88,8 +114,31 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "cycle-rix-m-monocolor",
+    "drain life",
+    "evasion",
+    "group slug",
+    "intervening if clause",
+    "opponent loses life",
+    "repeatable card advantage",
+    "repeatable lifegain",
+    "scales with mana value",
+    "card advantage",
+    "cycle",
+    "inverted effects",
+    "lifegain",
+    "mana value matters",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "drain",
+    "draw"
+   ],
    "set_code": "plst",
-   "rarity": "mythic"
+   "released_at": "2020-09-26",
+   "rarity": "mythic",
+   "layout": "normal"
   },
   {
    "name": "Blightstep Pathway // Searstep Pathway",
@@ -125,8 +174,20 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-khm-pathway",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-pathway",
+    "dual land"
+   ],
+   "engine_participation": [],
    "set_code": "khm",
-   "rarity": "rare"
+   "released_at": "2021-02-05",
+   "rarity": "rare",
+   "layout": "modal_dfc"
   },
   {
    "name": "Badlands",
@@ -162,8 +223,22 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-abu-dual-land",
+    "nonbasic-basic-land-type",
+    "single english word name",
+    "card names",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land"
+   ],
+   "engine_participation": [],
    "set_code": "3ed",
-   "rarity": "rare"
+   "released_at": "1994-04-11",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Reconnaissance",
@@ -185,7 +260,7 @@
    "categories": [
     "Enchantment"
    ],
-   "edhrec_rank": 907,
+   "edhrec_rank": 908,
    "salt": 0.65,
    "price_usd": 6.24,
    "commander_legal": true,
@@ -195,8 +270,20 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "activated ability",
+    "attacking matters",
+    "remove from combat",
+    "single english word name",
+    "untapper-creature",
+    "card names",
+    "untapper"
+   ],
+   "engine_participation": [],
    "set_code": "exo",
-   "rarity": "uncommon"
+   "released_at": "1998-06-15",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Rodolf Duskbringer",
@@ -223,7 +310,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 5980,
+   "edhrec_rank": 5983,
    "salt": 0.5,
    "price_usd": 3.59,
    "commander_legal": true,
@@ -236,8 +323,31 @@
     "protection",
     "recursion"
    ],
+   "tags": [
+    "cycle-j22-hybrid-legend",
+    "evasion",
+    "gains indestructible",
+    "lifegain matters",
+    "low mana value matters",
+    "offcolor ability",
+    "reanimate-creature",
+    "reflexive trigger",
+    "repeatable lifegain",
+    "unnoted tracked information",
+    "cycle",
+    "cycle-jumpstart-hybrid-legend",
+    "lifegain",
+    "mana value matters",
+    "reanimate",
+    "recursion",
+    "recursion-creature",
+    "triggered ability"
+   ],
+   "engine_participation": [],
    "set_code": "j22",
-   "rarity": "rare"
+   "released_at": "2022-12-02",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Village Rites",
@@ -271,8 +381,21 @@
    "roles": [
     "draw"
    ],
+   "tags": [
+    "plunder",
+    "sacrifice outlet-creature",
+    "card advantage",
+    "draw",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "draw",
+    "sacrifice"
+   ],
    "set_code": "sta",
-   "rarity": "common"
+   "released_at": "2021-04-23",
+   "rarity": "common",
+   "layout": "normal"
   },
   {
    "name": "Chromatic Lantern",
@@ -308,8 +431,25 @@
    "roles": [
     "ramp"
    ],
+   "tags": [
+    "activated ability",
+    "chromatic lantern",
+    "gives mana ability",
+    "gives tap ability",
+    "mana rock",
+    "mini refund",
+    "mana producer",
+    "ramp",
+    "refund",
+    "tap outlet"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
    "set_code": "plst",
-   "rarity": "rare"
+   "released_at": "2020-09-26",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Merciless Eviction",
@@ -333,7 +473,7 @@
    "categories": [
     "Sorcery"
    ],
-   "edhrec_rank": 3069,
+   "edhrec_rank": 3071,
    "salt": 0.67,
    "price_usd": 0.66,
    "commander_legal": true,
@@ -345,8 +485,26 @@
    "roles": [
     "wipe"
    ],
+   "tags": [
+    "cycle-2xm-r-two-color",
+    "modal",
+    "removal-artifact",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-exile",
+    "removal-planeswalker",
+    "sweeper",
+    "cycle",
+    "removal"
+   ],
+   "engine_participation": [
+    "removal",
+    "sweeper"
+   ],
    "set_code": "gtc",
-   "rarity": "rare"
+   "released_at": "2013-02-01",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Lightning Greaves",
@@ -378,8 +536,19 @@
    "roles": [
     "protection"
    ],
+   "tags": [
+    "activated ability",
+    "french vanilla equipment",
+    "gives haste",
+    "gives shroud",
+    "protects-creature",
+    "protection"
+   ],
+   "engine_participation": [],
    "set_code": "sld",
-   "rarity": "uncommon"
+   "released_at": "2019-12-02",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Falkenrath Noble",
@@ -403,7 +572,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 1965,
+   "edhrec_rank": 1967,
    "salt": 0.22,
    "price_usd": 0.24,
    "commander_legal": true,
@@ -413,8 +582,29 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "blood artist ability",
+    "evasion",
+    "opponent loses life",
+    "repeatable crime",
+    "type addition noble",
+    "death trigger",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "repeatable lifegain",
+    "triggered ability",
+    "type errata",
+    "type errata addition"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain"
+   ],
    "set_code": "voc",
-   "rarity": "common"
+   "released_at": "2021-11-19",
+   "rarity": "common",
+   "layout": "normal"
   },
   {
    "name": "Phyrexian Arena",
@@ -448,8 +638,31 @@
    "roles": [
     "draw"
    ],
+   "tags": [
+    "cycle-apc-phyrexian-vertical",
+    "deal with the devil",
+    "draw engine",
+    "life for cards",
+    "repeatable pure draw",
+    "triggered ability",
+    "black effect",
+    "card advantage",
+    "cycle",
+    "draw",
+    "drawback",
+    "life payment",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "vertical-cycle"
+   ],
+   "engine_participation": [
+    "draw"
+   ],
    "set_code": "cn2",
-   "rarity": "rare"
+   "released_at": "2016-08-26",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Exquisite Blood",
@@ -471,7 +684,7 @@
    "categories": [
     "Enchantment"
    ],
-   "edhrec_rank": 511,
+   "edhrec_rank": 512,
    "salt": 1.59,
    "price_usd": 38.76,
    "commander_legal": true,
@@ -481,8 +694,17 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "life loss matters",
+    "repeatable lifegain",
+    "triggered ability",
+    "lifegain"
+   ],
+   "engine_participation": [],
    "set_code": "sld",
-   "rarity": "rare"
+   "released_at": "2019-12-02",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Sol Ring",
@@ -514,8 +736,22 @@
    "roles": [
     "ramp"
    ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "full refund",
+    "mana rock",
+    "mana producer",
+    "ramp",
+    "refund"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
    "set_code": "3ed",
-   "rarity": "uncommon"
+   "released_at": "1994-04-11",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Sacred Foundry",
@@ -551,41 +787,23 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-rav-shockland",
+    "nonbasic-basic-land-type",
+    "conditional tapland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "life payment",
+    "shockland"
+   ],
+   "engine_participation": [],
    "set_code": "unf",
-   "rarity": "rare"
-  },
-  {
-   "name": "Oathsworn Vampire",
-   "quantity": 1,
-   "scryfall_id": "405f82d6-2991-4958-a563-572f0d298346",
-   "oracle_id": "e1fb696f-1df8-4571-9710-0d79001326d3",
-   "mana_cost": "{1}{B}",
-   "mana_value": 2.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Knight Vampire",
-   "oracle_text": "This creature enters tapped.\nYou may cast this card from your graveyard if you gained life this turn.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 6132,
-   "salt": 0.23,
-   "price_usd": 0.25,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "rix",
-   "rarity": "uncommon"
+   "released_at": "2022-10-07",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Phyrexian Tower",
@@ -620,8 +838,72 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "cycle-usg-legendary-land",
+    "ramp",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet-creature",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [],
    "set_code": "sld",
-   "rarity": "mythic"
+   "released_at": "2019-12-02",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Oathsworn Vampire",
+   "quantity": 1,
+   "scryfall_id": "405f82d6-2991-4958-a563-572f0d298346",
+   "oracle_id": "e1fb696f-1df8-4571-9710-0d79001326d3",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Knight Vampire",
+   "oracle_text": "This creature enters tapped.\nYou may cast this card from your graveyard if you gained life this turn.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 6132,
+   "salt": 0.23,
+   "price_usd": 0.25,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "castable from graveyard",
+    "infusion",
+    "reanimate-cast",
+    "reanimate-self",
+    "virtual vanilla",
+    "castable from nonhand",
+    "flavors of vanilla",
+    "lifegain matters",
+    "reanimate",
+    "recursion",
+    "recursion-self"
+   ],
+   "engine_participation": [],
+   "set_code": "rix",
+   "released_at": "2018-01-19",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Smothering Tithe",
@@ -663,72 +945,27 @@
    "roles": [
     "ramp"
    ],
+   "tags": [
+    "draw hate",
+    "meme",
+    "ramp",
+    "repeatable treasures",
+    "rhystic",
+    "triggered ability",
+    "hate",
+    "repeatable artifact tokens",
+    "repeatable noncreature tokens",
+    "repeatable token generator",
+    "tax"
+   ],
+   "engine_participation": [
+    "ramp",
+    "tokens"
+   ],
    "set_code": "p22",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Volrath's Stronghold",
-   "quantity": 1,
-   "scryfall_id": "43bf015b-152e-4d67-b773-e75fb2487a32",
-   "oracle_id": "73b8cf90-3c71-4f8b-a29f-61894b7f27c9",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Legendary Land",
-   "oracle_text": "{T}: Add {C}.\n{1}{B}, {T}: Put target creature card from your graveyard on top of your library.",
-   "mana_production": {
-    "C": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 2815,
-   "salt": 0.43,
-   "price_usd": null,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "sth",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Herald's Horn",
-   "quantity": 1,
-   "scryfall_id": "d6fa81d5-2ae1-433a-812b-9cf8ecb89a09",
-   "oracle_id": "c02c5547-b9c9-4b2d-9d12-e87bfba8f2d2",
-   "mana_cost": "{3}",
-   "mana_value": 3.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Artifact",
-   "oracle_text": "As this artifact enters, choose a creature type.\nCreature spells you cast of the chosen type cost {1} less to cast.\nAt the beginning of your upkeep, look at the top card of your library. If it's a creature card of the chosen type, you may reveal it and put it into your hand.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Artifact"
-   ],
-   "edhrec_rank": 148,
-   "salt": 0.21,
-   "price_usd": 5.05,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "plst",
-   "rarity": "uncommon"
+   "released_at": "2022-01-01",
+   "rarity": "mythic",
+   "layout": "normal"
   },
   {
    "name": "Vault of Champions",
@@ -764,8 +1001,127 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-cmr-bond-land",
+    "conditional tapland",
+    "cycle",
+    "cycle-bondland",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "multiplayer"
+   ],
+   "engine_participation": [],
    "set_code": "cmm",
-   "rarity": "rare"
+   "released_at": "2023-08-04",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Volrath's Stronghold",
+   "quantity": 1,
+   "scryfall_id": "43bf015b-152e-4d67-b773-e75fb2487a32",
+   "oracle_id": "73b8cf90-3c71-4f8b-a29f-61894b7f27c9",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {C}.\n{1}{B}, {T}: Put target creature card from your graveyard on top of your library.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 2815,
+   "salt": 0.43,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-restock-legendary-land",
+    "namesake spell",
+    "restock-creature",
+    "restock-to-top",
+    "supercycle-legendary-land",
+    "utility land",
+    "card names",
+    "cycle",
+    "cycle-colorless-land",
+    "cycle-land",
+    "library manipulation",
+    "recursion",
+    "recursion-creature",
+    "restock",
+    "top deck manipulation"
+   ],
+   "engine_participation": [],
+   "set_code": "sth",
+   "released_at": "1998-03-02",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Herald's Horn",
+   "quantity": 1,
+   "scryfall_id": "d6fa81d5-2ae1-433a-812b-9cf8ecb89a09",
+   "oracle_id": "c02c5547-b9c9-4b2d-9d12-e87bfba8f2d2",
+   "mana_cost": "{3}",
+   "mana_value": 3.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "As this artifact enters, choose a creature type.\nCreature spells you cast of the chosen type cost {1} less to cast.\nAt the beginning of your upkeep, look at the top card of your library. If it's a creature card of the chosen type, you may reveal it and put it into your hand.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Artifact"
+   ],
+   "edhrec_rank": 148,
+   "salt": 0.21,
+   "price_usd": 5.05,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "cost-reducer-creature",
+    "peek-library",
+    "repeatable card advantage",
+    "triggered ability",
+    "typal-choose",
+    "card advantage",
+    "card names",
+    "cost reducer",
+    "peek",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "draw",
+    "typal"
+   ],
+   "set_code": "plst",
+   "released_at": "2020-09-26",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Bloodstained Mire",
@@ -795,45 +1151,29 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-ons-fetchland",
+    "life payment",
+    "tutor-land-mountain",
+    "tutor-land-swamp",
+    "cycle",
+    "cycle-fetchland",
+    "cycle-land",
+    "cycle-nonmana-land",
+    "fetchland",
+    "sacrifice self",
+    "tutor",
+    "tutor-land",
+    "tutor-land-to-battlefield",
+    "tutor-to",
+    "tutor-to-battlefield"
+   ],
+   "engine_participation": [],
    "set_code": "zne",
-   "rarity": "rare"
-  },
-  {
-   "name": "Plateau",
-   "quantity": 1,
-   "scryfall_id": "c6ae9cff-8646-4069-8761-df734e067beb",
-   "oracle_id": "c7a15ca4-085f-4d92-8387-c3711c04c8fa",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "W",
-    "R"
-   ],
-   "type_line": "Land — Plains Mountain",
-   "oracle_text": "({T}: Add {R} or {W}.)",
-   "mana_production": {
-    "W": 1,
-    "R": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 449,
-   "salt": 0.93,
-   "price_usd": null,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "3ed",
-   "rarity": "rare"
+   "released_at": "2020-09-25",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Elenda, the Dusk Rose",
@@ -869,8 +1209,78 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "gains pp counters",
+    "power matters-self",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "scales with power",
+    "splits on death",
+    "death trigger",
+    "death trigger-self",
+    "leaves body behind",
+    "lifegain",
+    "power matters",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger"
+   ],
    "set_code": "2x2",
-   "rarity": "mythic"
+   "released_at": "2022-07-08",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Plateau",
+   "quantity": 1,
+   "scryfall_id": "c6ae9cff-8646-4069-8761-df734e067beb",
+   "oracle_id": "c7a15ca4-085f-4d92-8387-c3711c04c8fa",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "R"
+   ],
+   "type_line": "Land — Plains Mountain",
+   "oracle_text": "({T}: Add {R} or {W}.)",
+   "mana_production": {
+    "W": 1,
+    "R": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 449,
+   "salt": 0.93,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-abu-dual-land",
+    "nonbasic-basic-land-type",
+    "single english word name",
+    "card names",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "3ed",
+   "released_at": "1994-04-11",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Edgar Markov",
@@ -900,7 +1310,7 @@
    "categories": [
     "Commander"
    ],
-   "edhrec_rank": 3135,
+   "edhrec_rank": 3137,
    "salt": 2.05,
    "price_usd": 42.88,
    "commander_legal": true,
@@ -910,8 +1320,39 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "attack trigger",
+    "attacking matters-self",
+    "cast trigger-you",
+    "cycle-c17-eminence-commander",
+    "eminence",
+    "gains pp counters",
+    "gives pp counters to all",
+    "intervening if clause",
+    "noncreature typal",
+    "repeatable creature tokens",
+    "repeatable pp counters",
+    "typal-vampire",
+    "cast trigger",
+    "cycle",
+    "face-commander",
+    "gives pp counters",
+    "power boost to all",
+    "repeatable token generator",
+    "toughness boost to all",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "counters",
+    "tokens",
+    "typal"
+   ],
    "set_code": "pj21",
-   "rarity": "mythic"
+   "released_at": "2021-01-01",
+   "rarity": "mythic",
+   "layout": "normal"
   },
   {
    "name": "Crackling Doom",
@@ -949,8 +1390,25 @@
    "roles": [
     "removal"
    ],
+   "tags": [
+    "burn player",
+    "group slug",
+    "multi removal",
+    "power matters",
+    "removal-creature",
+    "removal-sacrifice",
+    "spot removal",
+    "burn",
+    "removal"
+   ],
+   "engine_participation": [
+    "drain",
+    "removal"
+   ],
    "set_code": "2x2",
-   "rarity": "uncommon"
+   "released_at": "2022-07-08",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Swords to Plowshares",
@@ -984,8 +1442,24 @@
    "roles": [
     "removal"
    ],
+   "tags": [
+    "bible reference",
+    "drawback",
+    "lifegain",
+    "opponent lifegain",
+    "removal-creature",
+    "removal-exile",
+    "single target instant/sorcery",
+    "spot removal",
+    "removal"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
    "set_code": "sta",
-   "rarity": "uncommon"
+   "released_at": "2021-04-23",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Spectator Seating",
@@ -1021,8 +1495,24 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cycle-cmr-bond-land",
+    "card names",
+    "conditional tapland",
+    "cycle",
+    "cycle-bondland",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "multiplayer"
+   ],
+   "engine_participation": [],
    "set_code": "cmm",
-   "rarity": "rare"
+   "released_at": "2023-08-04",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Mavren Fein, Dusk Apostle",
@@ -1044,7 +1534,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 3768,
+   "edhrec_rank": 3769,
    "salt": 0.23,
    "price_usd": 0.32,
    "commander_legal": true,
@@ -1054,8 +1544,26 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "attack trigger",
+    "attacking matters",
+    "repeatable creature tokens",
+    "repeatable lifegain",
+    "typal-vampire",
+    "lifegain",
+    "repeatable token generator",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "tokens",
+    "typal"
+   ],
    "set_code": "xln",
-   "rarity": "rare"
+   "released_at": "2017-09-29",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Blade of the Bloodchief",
@@ -1075,7 +1583,7 @@
    "categories": [
     "Artifact"
    ],
-   "edhrec_rank": 2439,
+   "edhrec_rank": 2438,
    "salt": 0.2,
    "price_usd": 6.08,
    "commander_legal": true,
@@ -1085,8 +1593,28 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "death trigger",
+    "gives pp counters",
+    "repeatable pp counters",
+    "self-replacement effect",
+    "typal-vampire",
+    "card names",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "typal"
+   ],
    "set_code": "zen",
-   "rarity": "rare"
+   "released_at": "2009-10-02",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Stromkirk Captain",
@@ -1112,7 +1640,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 3007,
+   "edhrec_rank": 3011,
    "salt": 0.16,
    "price_usd": 1.64,
    "commander_legal": true,
@@ -1122,8 +1650,27 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "anthem",
+    "cycle-dka-monster-lord",
+    "gives first strike",
+    "keyword anthem",
+    "power boost to all",
+    "toughness boost to all",
+    "typal-vampire",
+    "cycle",
+    "cycle-dka-draft-signpost",
+    "draft signpost",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "dka",
-   "rarity": "uncommon"
+   "released_at": "2012-02-03",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Patron of the Vein",
@@ -1159,8 +1706,36 @@
    "roles": [
     "removal"
    ],
+   "tags": [
+    "death trigger opponent",
+    "evasion",
+    "gains pp counters",
+    "gives pp counters",
+    "graveyard seal",
+    "noncreature typal",
+    "removal-creature",
+    "removal-destroy",
+    "repeatable pp counters",
+    "spot removal",
+    "typal-vampire",
+    "death trigger",
+    "hate",
+    "hate-graveyard",
+    "removal",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "removal",
+    "typal"
+   ],
    "set_code": "voc",
-   "rarity": "rare"
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Butcher of Malakir",
@@ -1196,8 +1771,26 @@
    "roles": [
     "removal"
    ],
+   "tags": [
+    "death trigger",
+    "evasion",
+    "grave pact",
+    "multi removal",
+    "removal-creature",
+    "removal-sacrifice",
+    "repeatable removal",
+    "spot removal",
+    "removal",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "removal"
+   ],
    "set_code": "ddp",
-   "rarity": "rare"
+   "released_at": "2015-08-28",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Swamp",
@@ -1231,8 +1824,22 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-lea-basic-land",
+    "eponymous",
+    "single english word name",
+    "unique type line",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land"
+   ],
+   "engine_participation": [],
    "set_code": "sld",
-   "rarity": "common"
+   "released_at": "2019-12-02",
+   "rarity": "common",
+   "layout": "normal"
   },
   {
    "name": "Luxury Suite",
@@ -1268,8 +1875,22 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-bbd-bond-land",
+    "conditional tapland",
+    "cycle",
+    "cycle-bondland",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "multiplayer"
+   ],
+   "engine_participation": [],
    "set_code": "clb",
-   "rarity": "rare"
+   "released_at": "2022-06-10",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Orzhov Basilica",
@@ -1305,8 +1926,27 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-rav-bounceland",
+    "drawback",
+    "triggered ability",
+    "adds multiple mana",
+    "bounce",
+    "bounceland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "rescue",
+    "rescue-land",
+    "tapland"
+   ],
+   "engine_participation": [],
    "set_code": "2x2",
-   "rarity": "uncommon"
+   "released_at": "2022-07-08",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "New Blood",
@@ -1328,7 +1968,7 @@
    "categories": [
     "Sorcery"
    ],
-   "edhrec_rank": 4385,
+   "edhrec_rank": 4387,
    "salt": 0.42,
    "price_usd": 0.29,
    "commander_legal": true,
@@ -1338,8 +1978,29 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "noncreature typal",
+    "single target instant/sorcery",
+    "tap fuel-creature",
+    "text change",
+    "theft-creature",
+    "typal-vampire",
+    "type change",
+    "untracked indefinite effect",
+    "control changing effects",
+    "indefinite effect",
+    "tap outlet",
+    "theft",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "c17",
-   "rarity": "rare"
+   "released_at": "2017-08-25",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Cordial Vampire",
@@ -1371,8 +2032,26 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "death trigger",
+    "gains pp counters",
+    "gives pp counters",
+    "noncreature typal",
+    "repeatable pp counters",
+    "typal-vampire",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "typal"
+   ],
    "set_code": "mh1",
-   "rarity": "rare"
+   "released_at": "2019-06-14",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Edgar, Charmed Groom // Edgar Markov's Coffin",
@@ -1398,7 +2077,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 3553,
+   "edhrec_rank": 3558,
    "salt": 0.15,
    "price_usd": 3.65,
    "commander_legal": true,
@@ -1408,8 +2087,38 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "aesthetic counter",
+    "anthem",
+    "cheat death-self",
+    "cycle-vow-r-two-color-legend",
+    "death trigger-self",
+    "namesake spell",
+    "power boost to all",
+    "repeatable creature tokens",
+    "repeatable lifegain",
+    "toughness boost to all",
+    "typal-vampire",
+    "unique counter",
+    "card names",
+    "cheat death",
+    "cycle",
+    "death trigger",
+    "lifegain",
+    "repeatable token generator",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "tokens",
+    "typal"
+   ],
    "set_code": "vow",
-   "rarity": "rare"
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "transform"
   },
   {
    "name": "Hall of Heliod's Generosity",
@@ -1443,109 +2152,30 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cycle-restock-legendary-land",
+    "namesake spell",
+    "restock-enchantment",
+    "restock-to-top",
+    "synergy-enchantment",
+    "utility land",
+    "card names",
+    "cycle",
+    "cycle-colorless-land",
+    "cycle-land",
+    "library manipulation",
+    "recursion",
+    "recursion-enchantment",
+    "restock",
+    "top deck manipulation"
+   ],
+   "engine_participation": [],
    "set_code": "prm",
-   "rarity": "rare"
-  },
-  {
-   "name": "Sanguine Bond",
-   "quantity": 1,
-   "scryfall_id": "ad4de9f1-7a39-45af-828e-c59234d9e9b9",
-   "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
-   "mana_cost": "{3}{B}{B}",
-   "mana_value": 5.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Enchantment",
-   "oracle_text": "Whenever you gain life, target opponent loses that much life.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Enchantment"
-   ],
-   "edhrec_rank": 502,
-   "salt": 1.34,
-   "price_usd": 6.61,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "c21",
-   "rarity": "rare"
-  },
-  {
-   "name": "Teferi's Protection",
-   "quantity": 1,
-   "scryfall_id": "aab08707-1599-4b3f-9be1-363dfe4ecdbe",
-   "oracle_id": "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
-   "mana_cost": "{2}{W}",
-   "mana_value": 3.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Instant",
-   "oracle_text": "Until your next turn, your life total can't change and you gain protection from everything. All permanents you control phase out. (While they're phased out, they're treated as though they don't exist. They phase in before you untap during your untap step.)\nExile Teferi's Protection.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Instant"
-   ],
-   "edhrec_rank": 109,
-   "salt": 2.13,
-   "price_usd": 47.92,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": true,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "protection"
-   ],
-   "set_code": "2x2",
-   "rarity": "rare"
-  },
-  {
-   "name": "Sanctum Seeker",
-   "quantity": 1,
-   "scryfall_id": "28da9211-13f4-4500-98f9-58c260c01e18",
-   "oracle_id": "afb71560-0fc9-4ea5-9d52-d93c17d72519",
-   "mana_cost": "{2}{B}{B}",
-   "mana_value": 4.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Knight Vampire",
-   "oracle_text": "Whenever a Vampire you control attacks, each opponent loses 1 life and you gain 1 life.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 2312,
-   "salt": 0.28,
-   "price_usd": 0.32,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "voc",
-   "rarity": "rare"
+   "released_at": "2002-06-24",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Command Tower",
@@ -1581,8 +2211,22 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "commander identity matters",
+    "rainbow land",
+    "synergy-color-share",
+    "synergy-commander",
+    "tutored by name",
+    "virtual legendary",
+    "card names",
+    "commander matters"
+   ],
+   "engine_participation": [],
    "set_code": "cmm",
-   "rarity": "common"
+   "released_at": "2023-08-04",
+   "rarity": "common",
+   "layout": "normal"
   },
   {
    "name": "Damn",
@@ -1619,8 +2263,225 @@
    "roles": [
     "wipe"
    ],
+   "tags": [
+    "hate-regenerate",
+    "more expensive than mv",
+    "removal-creature",
+    "removal-destroy",
+    "single english word name",
+    "single target instant/sorcery",
+    "spot removal",
+    "sweeper",
+    "card names",
+    "hate",
+    "removal"
+   ],
+   "engine_participation": [
+    "removal",
+    "sweeper"
+   ],
    "set_code": "mh2",
-   "rarity": "rare"
+   "released_at": "2021-06-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Sanguine Bond",
+   "quantity": 1,
+   "scryfall_id": "ad4de9f1-7a39-45af-828e-c59234d9e9b9",
+   "oracle_id": "73089a39-a2f6-4aa2-a058-e6551475153d",
+   "mana_cost": "{3}{B}{B}",
+   "mana_value": 5.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Whenever you gain life, target opponent loses that much life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Enchantment"
+   ],
+   "edhrec_rank": 502,
+   "salt": 1.34,
+   "price_usd": 6.61,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "lifegain to damage",
+    "opponent loses life",
+    "repeatable crime",
+    "triggered ability",
+    "lifegain matters"
+   ],
+   "engine_participation": [
+    "drain"
+   ],
+   "set_code": "c21",
+   "released_at": "2021-04-23",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Teferi's Protection",
+   "quantity": 1,
+   "scryfall_id": "aab08707-1599-4b3f-9be1-363dfe4ecdbe",
+   "oracle_id": "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Until your next turn, your life total can't change and you gain protection from everything. All permanents you control phase out. (While they're phased out, they're treated as though they don't exist. They phase in before you untap during your untap step.)\nExile Teferi's Protection.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Instant"
+   ],
+   "edhrec_rank": 109,
+   "salt": 2.13,
+   "price_usd": 47.92,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "protection"
+   ],
+   "tags": [
+    "damage prevention-you",
+    "exile on resolution",
+    "fog-selective",
+    "gives player protection",
+    "namesake spell",
+    "phasing",
+    "protects-all",
+    "protects-artifact",
+    "protects-creature",
+    "protects-enchantment",
+    "protects-land",
+    "protects-planeswalker",
+    "card names",
+    "damage prevention",
+    "exile-self",
+    "fog",
+    "gives player ability",
+    "protection"
+   ],
+   "engine_participation": [],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Sanctum Seeker",
+   "quantity": 1,
+   "scryfall_id": "28da9211-13f4-4500-98f9-58c260c01e18",
+   "oracle_id": "afb71560-0fc9-4ea5-9d52-d93c17d72519",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Knight Vampire",
+   "oracle_text": "Whenever a Vampire you control attacks, each opponent loses 1 life and you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 2312,
+   "salt": 0.28,
+   "price_usd": 0.32,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "attack trigger",
+    "drain life",
+    "group slug",
+    "opponent loses life",
+    "repeatable lifegain",
+    "typal-vampire",
+    "card names",
+    "inverted effects",
+    "lifegain",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "drain",
+    "typal"
+   ],
+   "set_code": "voc",
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Reliquary Tower",
+   "quantity": 1,
+   "scryfall_id": "d27b6a46-f9be-437a-a13c-ad8077ac0127",
+   "oracle_id": "c23e5b80-08d2-4e24-9908-fe2aa4f30f6f",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "You have no maximum hand size.\n{T}: Add {C}.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 10,
+   "salt": 0.2,
+   "price_usd": 3.54,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "hand size increase",
+    "utility land"
+   ],
+   "engine_participation": [],
+   "set_code": "plg20",
+   "released_at": "2020-05-18",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Plains",
@@ -1654,8 +2515,22 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-lea-basic-land",
+    "eponymous",
+    "single english word name",
+    "unique type line",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land"
+   ],
+   "engine_participation": [],
    "set_code": "sld",
-   "rarity": "common"
+   "released_at": "2019-12-02",
+   "rarity": "common",
+   "layout": "normal"
   },
   {
    "name": "Florian, Voldaren Scion",
@@ -1691,41 +2566,27 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "cycle-mid-r-two-color-legend",
+    "life loss matters",
+    "repeatable impulsive draw",
+    "triggered ability",
+    "unnoted tracked information",
+    "card advantage",
+    "cycle",
+    "gives castable from exile",
+    "gives castable from nonhand",
+    "impulsive draw",
+    "red effect",
+    "repeatable card advantage"
+   ],
+   "engine_participation": [
+    "draw"
+   ],
    "set_code": "mid",
-   "rarity": "rare"
-  },
-  {
-   "name": "Reliquary Tower",
-   "quantity": 1,
-   "scryfall_id": "d27b6a46-f9be-437a-a13c-ad8077ac0127",
-   "oracle_id": "c23e5b80-08d2-4e24-9908-fe2aa4f30f6f",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Land",
-   "oracle_text": "You have no maximum hand size.\n{T}: Add {C}.",
-   "mana_production": {
-    "C": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 10,
-   "salt": 0.2,
-   "price_usd": 3.54,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "plg20",
-   "rarity": "uncommon"
+   "released_at": "2021-09-24",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Kalitas, Traitor of Ghet",
@@ -1759,44 +2620,39 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "activated ability",
+    "death trigger",
+    "gains pp counters",
+    "graveyard seal",
+    "noncreature typal",
+    "repeatable creature tokens",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet-creature",
+    "typal coupling",
+    "typal-vampire",
+    "typal-zombie",
+    "hate",
+    "hate-graveyard",
+    "lifegain",
+    "repeatable token generator",
+    "sacrifice outlet",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "sacrifice",
+    "tokens",
+    "typal"
+   ],
    "set_code": "ogw",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Farewell",
-   "quantity": 1,
-   "scryfall_id": "98c664bc-9585-47a7-9514-b3e30a4e1b59",
-   "oracle_id": "4eb813fd-2d5a-4b02-8193-662681ef4e7d",
-   "mana_cost": "{4}{W}{W}",
-   "mana_value": 6.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Sorcery",
-   "oracle_text": "Choose one or more —\n• Exile all artifacts.\n• Exile all creatures.\n• Exile all enchantments.\n• Exile all graveyards.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Sorcery"
-   ],
-   "edhrec_rank": 168,
-   "salt": 2.13,
-   "price_usd": 5.98,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": true,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "wipe",
-    "graveyard hate"
-   ],
-   "set_code": "neo",
-   "rarity": "rare"
+   "released_at": "2016-01-22",
+   "rarity": "mythic",
+   "layout": "normal"
   },
   {
    "name": "Dragonskull Summit",
@@ -1832,8 +2688,80 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-m10-checkland",
+    "synergy-mountain",
+    "synergy-swamp",
+    "conditional tapland",
+    "cycle",
+    "cycle-checkland",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land"
+   ],
+   "engine_participation": [],
    "set_code": "m13",
-   "rarity": "rare"
+   "released_at": "2012-07-13",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Farewell",
+   "quantity": 1,
+   "scryfall_id": "98c664bc-9585-47a7-9514-b3e30a4e1b59",
+   "oracle_id": "4eb813fd-2d5a-4b02-8193-662681ef4e7d",
+   "mana_cost": "{4}{W}{W}",
+   "mana_value": 6.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Choose one or more —\n• Exile all artifacts.\n• Exile all creatures.\n• Exile all enchantments.\n• Exile all graveyards.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Sorcery"
+   ],
+   "edhrec_rank": 168,
+   "salt": 2.13,
+   "price_usd": 5.98,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "wipe",
+    "graveyard hate"
+   ],
+   "tags": [
+    "modal",
+    "removal-artifact",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-exile",
+    "single english word name",
+    "sweeper",
+    "sweeper-graveyard",
+    "symmetrical",
+    "card names",
+    "hate",
+    "hate-graveyard",
+    "removal"
+   ],
+   "engine_participation": [
+    "removal",
+    "sweeper"
+   ],
+   "set_code": "neo",
+   "released_at": "2022-02-18",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Cabal Coffers",
@@ -1867,1179 +2795,22 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "alliteration",
+    "filterland",
+    "ramp",
+    "synergy-swamp",
+    "virtual legendary",
+    "card names",
+    "mana filter"
+   ],
+   "engine_participation": [],
    "set_code": "mh2",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Marsh Flats",
-   "quantity": 1,
-   "scryfall_id": "4e8397e6-d13a-4996-8fde-b8a9895de287",
-   "oracle_id": "dab520d0-20b4-4273-ba6b-eb07f85ea433",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Land",
-   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 52,
-   "salt": 0.33,
-   "price_usd": 30.85,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "mh2",
-   "rarity": "rare"
-  },
-  {
-   "name": "Blood Artist",
-   "quantity": 1,
-   "scryfall_id": "5587191b-b56a-452d-8a18-1622df83c267",
-   "oracle_id": "310f141c-7f37-4729-aed6-dd9c09db448d",
-   "mana_cost": "{1}{B}",
-   "mana_value": 2.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Vampire",
-   "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 138,
-   "salt": 0.56,
-   "price_usd": 3.45,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "2x2",
-   "rarity": "uncommon"
-  },
-  {
-   "name": "Cruel Celebrant",
-   "quantity": 1,
-   "scryfall_id": "87ead6ac-b1c5-4852-8413-7fa43c6cfc57",
-   "oracle_id": "3ee78cfc-0e9e-4737-a7e2-b42f94228040",
-   "mana_cost": "{W}{B}",
-   "mana_value": 2.0,
-   "colors": [
-    "W",
-    "B"
-   ],
-   "color_identity": [
-    "W",
-    "B"
-   ],
-   "type_line": "Creature — Vampire",
-   "oracle_text": "Whenever this creature or another creature or planeswalker you control dies, each opponent loses 1 life and you gain 1 life.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 943,
-   "salt": 0.32,
-   "price_usd": 1.45,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "war",
-   "rarity": "uncommon"
-  },
-  {
-   "name": "Vito, Thorn of the Dusk Rose",
-   "quantity": 1,
-   "scryfall_id": "0fe79ee4-c3f3-4a6b-a967-203ca3b70ee5",
-   "oracle_id": "7336a541-3ae9-4ab2-acb8-f574c0a5b3a9",
-   "mana_cost": "{2}{B}",
-   "mana_value": 3.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Legendary Creature — Vampire Cleric",
-   "oracle_text": "Whenever you gain life, target opponent loses that much life.\n{3}{B}{B}: Creatures you control gain lifelink until end of turn.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 493,
-   "salt": 0.95,
-   "price_usd": 10.89,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "m21",
-   "rarity": "rare"
-  },
-  {
-   "name": "Needleverge Pathway // Pillarverge Pathway",
-   "quantity": 1,
-   "scryfall_id": "ae420b3f-2f5b-4a4a-8d3a-8e6a3288c35a",
-   "oracle_id": "a9b8d020-4d72-4934-8942-df29ef19fc1d",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "W",
-    "R"
-   ],
-   "type_line": "Land",
-   "oracle_text": "{T}: Add {R}.\n//\n{T}: Add {W}.",
-   "mana_production": {
-    "W": 1,
-    "R": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 858,
-   "salt": 0.13,
-   "price_usd": 3.99,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "znr",
-   "rarity": "rare"
-  },
-  {
-   "name": "Anointed Procession",
-   "quantity": 1,
-   "scryfall_id": "9a52c265-6920-4929-ba0a-70da08df01f1",
-   "oracle_id": "7246d45b-2185-4cdd-981b-5419b7d52bce",
-   "mana_cost": "{3}{W}",
-   "mana_value": 4.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Enchantment",
-   "oracle_text": "If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Enchantment"
-   ],
-   "edhrec_rank": 366,
-   "salt": 0.96,
-   "price_usd": 58.02,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "akh",
-   "rarity": "rare"
-  },
-  {
-   "name": "Drana and Linvala",
-   "quantity": 1,
-   "scryfall_id": "29a5fe67-beaa-4ee3-b22c-0b8aed6f6f4d",
-   "oracle_id": "7abc2a1b-b758-480b-9415-f8f5369ab52f",
-   "mana_cost": "{1}{W}{W}{B}",
-   "mana_value": 4.0,
-   "colors": [
-    "W",
-    "B"
-   ],
-   "color_identity": [
-    "W",
-    "B"
-   ],
-   "type_line": "Legendary Creature — Vampire Angel",
-   "oracle_text": "Flying, vigilance\nActivated abilities of creatures your opponents control can't be activated.\nDrana and Linvala has all activated abilities of all creatures your opponents control. You may spend mana as though it were mana of any color to activate those abilities.",
-   "mana_production": {},
-   "keywords": [
-    "Flying",
-    "Vigilance"
-   ],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 1884,
-   "salt": 0.98,
-   "price_usd": 7.09,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "mom",
-   "rarity": "rare"
-  },
-  {
-   "name": "Rakdos Carnarium",
-   "quantity": 1,
-   "scryfall_id": "e197d420-fc69-4672-90f0-2264f35d1c61",
-   "oracle_id": "0a023964-2905-4928-9c3e-dc63e6ebd218",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "B",
-    "R"
-   ],
-   "type_line": "Land",
-   "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {B}{R}.",
-   "mana_production": {
-    "B": 1,
-    "R": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 495,
-   "salt": 0.04,
-   "price_usd": 0.36,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "2x2",
-   "rarity": "uncommon"
-  },
-  {
-   "name": "Brightclimb Pathway // Grimclimb Pathway",
-   "quantity": 1,
-   "scryfall_id": "1dce4e5a-08ab-4f52-bdfb-6d2dafbb055f",
-   "oracle_id": "1c633e02-95ef-445e-b4e0-fbfbc5ed9cc9",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "W",
-    "B"
-   ],
-   "type_line": "Land",
-   "oracle_text": "{T}: Add {W}.\n//\n{T}: Add {B}.",
-   "mana_production": {
-    "W": 1,
-    "B": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 800,
-   "salt": 0.14,
-   "price_usd": 4.56,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "slu",
-   "rarity": "rare"
-  },
-  {
-   "name": "Phyrexian Altar",
-   "quantity": 1,
-   "scryfall_id": "95d9f93c-50a8-41a9-be98-d1900bf1c12f",
-   "oracle_id": "8d02b297-97c4-4379-9862-0a462400f66f",
-   "mana_cost": "{3}",
-   "mana_value": 3.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Artifact",
-   "oracle_text": "Sacrifice a creature: Add one mana of any color.",
-   "mana_production": {
-    "W": 1,
-    "U": 1,
-    "B": 1,
-    "R": 1,
-    "G": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Artifact"
-   ],
-   "edhrec_rank": 309,
-   "salt": 1.26,
-   "price_usd": 55.54,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "ramp"
-   ],
-   "set_code": "2x2",
-   "rarity": "rare"
-  },
-  {
-   "name": "Bojuka Bog",
-   "quantity": 1,
-   "scryfall_id": "f8f1c157-cebc-45fe-9caa-1ea4b305ccfc",
-   "oracle_id": "04b7362d-0490-4cb0-b5d7-2a7732f659ce",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Land",
-   "oracle_text": "This land enters tapped.\nWhen this land enters, exile target player's graveyard.\n{T}: Add {B}.",
-   "mana_production": {
-    "B": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 24,
-   "salt": 0.45,
-   "price_usd": 1.88,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "clb",
-   "rarity": "common"
-  },
-  {
-   "name": "Damnation",
-   "quantity": 1,
-   "scryfall_id": "7fc1d7db-11a3-4ff9-8d27-1fe401053080",
-   "oracle_id": "d57a8f0b-7989-4db5-8756-6f2690097252",
-   "mana_cost": "{2}{B}{B}",
-   "mana_value": 4.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Sorcery",
-   "oracle_text": "Destroy all creatures. They can't be regenerated.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Sorcery"
-   ],
-   "edhrec_rank": 382,
-   "salt": 0.57,
-   "price_usd": 21.21,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "wipe"
-   ],
-   "set_code": "sld",
-   "rarity": "rare"
-  },
-  {
-   "name": "Welcoming Vampire",
-   "quantity": 1,
-   "scryfall_id": "fd60ee8d-fb50-41df-89a8-aed5a53d755f",
-   "oracle_id": "605c1ee0-5e8a-4e0a-a99b-42a38873f822",
-   "mana_cost": "{2}{W}",
-   "mana_value": 3.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Creature — Vampire",
-   "oracle_text": "Flying\nWhenever one or more other creatures you control with power 2 or less enter, draw a card. This ability triggers only once each turn.",
-   "mana_production": {},
-   "keywords": [
-    "Flying"
-   ],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 425,
-   "salt": 0.22,
-   "price_usd": 4.31,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "draw"
-   ],
-   "set_code": "vow",
-   "rarity": "rare"
-  },
-  {
-   "name": "Crossway Troublemakers",
-   "quantity": 1,
-   "scryfall_id": "431711c5-c04f-4d34-97c9-5199cfbf9da9",
-   "oracle_id": "1a362e4d-6c02-4b67-ab63-c6622e505195",
-   "mana_cost": "{5}{B}",
-   "mana_value": 6.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Vampire",
-   "oracle_text": "Attacking Vampires you control have deathtouch and lifelink. (Any amount of damage they deal to a creature is enough to destroy it. Damage dealt by those creatures also causes their controller to gain that much life.)\nWhenever a Vampire you control dies, you may pay 2 life. If you do, draw a card.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 3593,
-   "salt": 0.27,
-   "price_usd": 0.29,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "draw"
-   ],
-   "set_code": "voc",
-   "rarity": "rare"
-  },
-  {
-   "name": "Urborg, Tomb of Yawgmoth",
-   "quantity": 1,
-   "scryfall_id": "ff92804a-0c62-4eb8-bbba-f1ca6f426b6e",
-   "oracle_id": "db6174d7-211d-4817-b8e4-8384594c83f9",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Legendary Land",
-   "oracle_text": "Each land is a Swamp in addition to its other land types.",
-   "mana_production": {
-    "B": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 73,
-   "salt": 0.49,
-   "price_usd": 54.84,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "puma",
-   "rarity": "rare"
-  },
-  {
-   "name": "Bloodline Keeper // Lord of Lineage",
-   "quantity": 1,
-   "scryfall_id": "13896468-e3d0-4bcb-b09e-b5c187aecb03",
-   "oracle_id": "434e82b5-abd4-41ac-a5b1-2dd01c667374",
-   "mana_cost": "{2}{B}{B}",
-   "mana_value": 4.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Vampire",
-   "oracle_text": "Flying\n{T}: Create a 2/2 black Vampire creature token with flying.\n{B}: Transform this creature. Activate only if you control five or more Vampires.\n//\nFlying\nOther Vampire creatures you control get +2/+2.\n{T}: Create a 2/2 black Vampire creature token with flying.",
-   "mana_production": {},
-   "keywords": [
-    "Flying",
-    "Transform"
-   ],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 2526,
-   "salt": 0.28,
-   "price_usd": 8.48,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "isd",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Yahenni, Undying Partisan",
-   "quantity": 1,
-   "scryfall_id": "da4f8f35-5860-4416-b7bb-9ba56540a28c",
-   "oracle_id": "fdba89eb-1cf5-46e6-9d09-1adb9bc40fcd",
-   "mana_cost": "{2}{B}",
-   "mana_value": 3.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Legendary Creature — Vampire Aetherborn",
-   "oracle_text": "Haste\nWhenever a creature an opponent controls dies, put a +1/+1 counter on Yahenni.\nSacrifice another creature: Yahenni gains indestructible until end of turn.",
-   "mana_production": {},
-   "keywords": [
-    "Haste"
-   ],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 1026,
-   "salt": 0.24,
-   "price_usd": 0.38,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "protection"
-   ],
-   "set_code": "2x2",
-   "rarity": "rare"
-  },
-  {
-   "name": "Isolated Chapel",
-   "quantity": 1,
-   "scryfall_id": "d359281b-b509-41be-a820-c7ac9f36f27f",
-   "oracle_id": "7e5d9efe-48a9-434b-bb09-056e0e09cc9a",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "W",
-    "B"
-   ],
-   "type_line": "Land",
-   "oracle_text": "This land enters tapped unless you control a Plains or a Swamp.\n{T}: Add {W} or {B}.",
-   "mana_production": {
-    "W": 1,
-    "B": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 94,
-   "salt": 0.17,
-   "price_usd": 0.41,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "dmr",
-   "rarity": "rare"
-  },
-  {
-   "name": "Path to Exile",
-   "quantity": 1,
-   "scryfall_id": "ccd50bd0-95a3-4480-8afb-ada8c4e806c9",
-   "oracle_id": "d683d985-9888-4d21-8b5f-69e69ce4a03b",
-   "mana_cost": "{W}",
-   "mana_value": 1.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Instant",
-   "oracle_text": "Exile target creature. Its controller may search their library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Instant"
-   ],
-   "edhrec_rank": 15,
-   "salt": 0.44,
-   "price_usd": 1.4,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "removal"
-   ],
-   "set_code": "f15",
-   "rarity": "uncommon"
-  },
-  {
-   "name": "Captivating Vampire",
-   "quantity": 1,
-   "scryfall_id": "1b825bd1-9cbc-45a8-bfbe-fc3e8fdc575e",
-   "oracle_id": "acd382ee-94fb-4a29-b14e-c2a3c6dde7e0",
-   "mana_cost": "{1}{B}{B}",
-   "mana_value": 3.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Vampire",
-   "oracle_text": "Other Vampire creatures you control get +1/+1.\nTap five untapped Vampires you control: Gain control of target creature. It becomes a Vampire in addition to its other types.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 2479,
-   "salt": 0.82,
-   "price_usd": 3.6,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "c17",
-   "rarity": "rare"
-  },
-  {
-   "name": "Blood Crypt",
-   "quantity": 1,
-   "scryfall_id": "0f1cebcb-0e3f-4dce-81ff-44bc8c0b9ad7",
-   "oracle_id": "43985bbc-a0f6-4812-984e-392bc8562633",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "B",
-    "R"
-   ],
-   "type_line": "Land — Swamp Mountain",
-   "oracle_text": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
-   "mana_production": {
-    "B": 1,
-    "R": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 68,
-   "salt": 0.22,
-   "price_usd": null,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "unf",
-   "rarity": "rare"
-  },
-  {
-   "name": "The Meathook Massacre",
-   "quantity": 1,
-   "scryfall_id": "52593d64-182f-45ff-82c6-fb7649d36736",
-   "oracle_id": "127de52b-df75-4342-95a0-20d84c5bf916",
-   "mana_cost": "{X}{B}{B}",
-   "mana_value": 2.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Legendary Enchantment",
-   "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Enchantment"
-   ],
-   "edhrec_rank": 509,
-   "salt": 0.99,
-   "price_usd": 27.15,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "mid",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Foreboding Ruins",
-   "quantity": 1,
-   "scryfall_id": "7a9d947c-e4c7-409b-886e-affb1c68264d",
-   "oracle_id": "5c87e2fa-77f1-4978-b25f-f14d227301d1",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "B",
-    "R"
-   ],
-   "type_line": "Land",
-   "oracle_text": "As this land enters, you may reveal a Swamp or Mountain card from your hand. If you don't, this land enters tapped.\n{T}: Add {B} or {R}.",
-   "mana_production": {
-    "B": 1,
-    "R": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 324,
-   "salt": 0.04,
-   "price_usd": 0.29,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "who",
-   "rarity": "rare"
-  },
-  {
-   "name": "Arid Mesa",
-   "quantity": 1,
-   "scryfall_id": "54ced5cf-b51a-4dab-97f7-50fb18e5c463",
-   "oracle_id": "c5acf2a5-40f4-433d-a74d-1cb56c521464",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Land",
-   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for a Mountain or Plains card, put it onto the battlefield, then shuffle.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 57,
-   "salt": 0.2,
-   "price_usd": 29.88,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "mh2",
-   "rarity": "rare"
-  },
-  {
-   "name": "Mountain",
-   "quantity": 1,
-   "scryfall_id": "96549393-9607-43c8-91de-905462cbcb19",
-   "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "R"
-   ],
-   "type_line": "Basic Land — Mountain",
-   "oracle_text": "({T}: Add {R}.)",
-   "mana_production": {
-    "R": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": null,
-   "salt": 0.32,
-   "price_usd": null,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "sld",
-   "rarity": "common"
-  },
-  {
-   "name": "Cavern of Souls",
-   "quantity": 1,
-   "scryfall_id": "bea9f6e9-69ae-4c49-9682-ad09e787c01e",
-   "oracle_id": "89ca686a-7c72-4d8f-9290-e89635624a83",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Land",
-   "oracle_text": "As this land enters, choose a creature type.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.",
-   "mana_production": {
-    "W": 1,
-    "U": 1,
-    "B": 1,
-    "R": 1,
-    "G": 1,
-    "C": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 113,
-   "salt": 0.67,
-   "price_usd": 50.19,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "puma",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Viscera Seer",
-   "quantity": 1,
-   "scryfall_id": "d2e1c1c3-641a-4cd5-b46d-e03e5e529cc7",
-   "oracle_id": "f82a4e85-526d-4456-b700-7760043a31be",
-   "mana_cost": "{B}",
-   "mana_value": 1.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Wizard Vampire",
-   "oracle_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
-   "mana_production": {},
-   "keywords": [
-    "Scry"
-   ],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 255,
-   "salt": 0.4,
-   "price_usd": 0.44,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "cmr",
-   "rarity": "common"
-  },
-  {
-   "name": "Arcane Signet",
-   "quantity": 1,
-   "scryfall_id": "1836b8a6-c616-4793-933b-b38296d70e72",
-   "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
-   "mana_cost": "{2}",
-   "mana_value": 2.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Artifact",
-   "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
-   "mana_production": {
-    "W": 1,
-    "U": 1,
-    "B": 1,
-    "R": 1,
-    "G": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Artifact"
-   ],
-   "edhrec_rank": 3,
-   "salt": 0.24,
-   "price_usd": 0.5,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "ramp"
-   ],
-   "set_code": "cmm",
-   "rarity": "uncommon"
-  },
-  {
-   "name": "Path of Ancestry",
-   "quantity": 1,
-   "scryfall_id": "7f3d574a-72b5-43be-b4b5-87865bbc7b5c",
-   "oracle_id": "b473e293-59e3-4e04-acf2-622604aeb25f",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Land",
-   "oracle_text": "This land enters tapped.\n{T}: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
-   "mana_production": {
-    "W": 1,
-    "U": 1,
-    "B": 1,
-    "R": 1,
-    "G": 1
-   },
-   "keywords": [
-    "Scry"
-   ],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 14,
-   "salt": 0.13,
-   "price_usd": null,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "cmm",
-   "rarity": "common"
-  },
-  {
-   "name": "Scrubland",
-   "quantity": 1,
-   "scryfall_id": "472034a2-0ba9-4876-ab7a-aa7013d603bb",
-   "oracle_id": "c8d95ca8-7d12-4072-aeaf-e20f248c7e39",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "W",
-    "B"
-   ],
-   "type_line": "Land — Plains Swamp",
-   "oracle_text": "({T}: Add {W} or {B}.)",
-   "mana_production": {
-    "W": 1,
-    "B": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 388,
-   "salt": 0.83,
-   "price_usd": null,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "land"
-   ],
-   "set_code": "3ed",
-   "rarity": "rare"
-  },
-  {
-   "name": "Vampire Nighthawk",
-   "quantity": 1,
-   "scryfall_id": "301ff69c-2590-45af-893b-7ac0285e450b",
-   "oracle_id": "feb244f8-bcb1-44cf-9940-2719221a7309",
-   "mana_cost": "{1}{B}{B}",
-   "mana_value": 3.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Vampire Shaman",
-   "oracle_text": "Flying\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
-   "mana_production": {},
-   "keywords": [
-    "Flying",
-    "Lifelink",
-    "Deathtouch"
-   ],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 1741,
-   "salt": 0.2,
-   "price_usd": 0.2,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "voc",
-   "rarity": "uncommon"
-  },
-  {
-   "name": "Demonic Tutor",
-   "quantity": 1,
-   "scryfall_id": "fdbe0cf7-38e2-4b2e-8fcb-c08f160caf19",
-   "oracle_id": "82004860-e589-4e38-8d61-8c0210e4ea39",
-   "mana_cost": "{1}{B}",
-   "mana_value": 2.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Sorcery",
-   "oracle_text": "Search your library for a card, put that card into your hand, then shuffle.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Sorcery"
-   ],
-   "edhrec_rank": 62,
-   "salt": 1.58,
-   "price_usd": 62.08,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": true,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [
-    "tutor"
-   ],
-   "set_code": "j20",
-   "rarity": "mythic"
-  },
-  {
-   "name": "Vampire of the Dire Moon",
-   "quantity": 1,
-   "scryfall_id": "b3c185b9-5d97-4a5a-af0b-8b9c44dcd235",
-   "oracle_id": "5a938371-8428-48e3-85ed-6a84a39b29c6",
-   "mana_cost": "{B}",
-   "mana_value": 1.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Creature — Vampire",
-   "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
-   "mana_production": {},
-   "keywords": [
-    "Lifelink",
-    "Deathtouch"
-   ],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 3311,
-   "salt": 0.12,
-   "price_usd": 0.82,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "roles": [],
-   "set_code": "m20",
-   "rarity": "uncommon"
+   "released_at": "2021-06-18",
+   "rarity": "mythic",
+   "layout": "normal"
   },
   {
    "name": "Champion of Dusk",
@@ -3061,7 +2832,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 3541,
+   "edhrec_rank": 3545,
    "salt": 0.22,
    "price_usd": 0.28,
    "commander_legal": true,
@@ -3073,8 +2844,30 @@
    "roles": [
     "draw"
    ],
+   "tags": [
+    "burst draw",
+    "life for cards",
+    "noncreature typal",
+    "pure draw",
+    "triggered ability",
+    "typal-vampire",
+    "virtual vanilla",
+    "black effect",
+    "card advantage",
+    "draw",
+    "flavors of vanilla",
+    "life payment",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "draw",
+    "typal"
+   ],
    "set_code": "voc",
-   "rarity": "rare"
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Vampiric Tutor",
@@ -3108,8 +2901,24 @@
    "roles": [
     "tutor"
    ],
+   "tags": [
+    "cycle-1mv-tutor",
+    "cycle-ema-tutor",
+    "life payment",
+    "tutor-card",
+    "tutor-to-top",
+    "black effect",
+    "cycle",
+    "library manipulation",
+    "top deck manipulation",
+    "tutor",
+    "tutor-to"
+   ],
+   "engine_participation": [],
    "set_code": "g00",
-   "rarity": "mythic"
+   "released_at": "2000-01-01",
+   "rarity": "mythic",
+   "layout": "normal"
   },
   {
    "name": "Skullclamp",
@@ -3141,8 +2950,27 @@
    "roles": [
     "draw"
    ],
+   "tags": [
+    "activated ability",
+    "death trigger",
+    "draw engine",
+    "flowstone",
+    "repeatable pure draw",
+    "card advantage",
+    "draw",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "draw"
+   ],
    "set_code": "c16",
-   "rarity": "rare"
+   "released_at": "2016-11-11",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Savai Triome",
@@ -3170,7 +2998,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 499,
+   "edhrec_rank": 497,
    "salt": 0.27,
    "price_usd": 20.26,
    "commander_legal": true,
@@ -3182,8 +3010,32 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activate from hand",
+    "cycle-iko-triome",
+    "nonbasic-basic-land-type",
+    "pure draw",
+    "tapland with set's mechanic",
+    "unique type line",
+    "utility land",
+    "activated ability",
+    "card advantage",
+    "cycle",
+    "cycle-cycling-land",
+    "cycle-land",
+    "cycle-triland",
+    "draw",
+    "staple with set's mechanic",
+    "tapland",
+    "tricycle-land",
+    "triland",
+    "wedgeland"
+   ],
+   "engine_participation": [],
    "set_code": "iko",
-   "rarity": "rare"
+   "released_at": "2020-04-24",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Vindicate",
@@ -3207,7 +3059,7 @@
    "categories": [
     "Sorcery"
    ],
-   "edhrec_rank": 1154,
+   "edhrec_rank": 1156,
    "salt": 0.27,
    "price_usd": 0.7,
    "commander_legal": true,
@@ -3219,8 +3071,37 @@
    "roles": [
     "removal"
    ],
+   "tags": [
+    "cycle-a25-r-two-color",
+    "cycle-apc-r-two-color",
+    "cycle-ema-r-two-color",
+    "meme",
+    "removal-destroy",
+    "removal-permanent",
+    "single english word name",
+    "single target instant/sorcery",
+    "spot removal",
+    "card names",
+    "cycle",
+    "removal",
+    "removal-artifact",
+    "removal-aura",
+    "removal-battle",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-equipment",
+    "removal-land",
+    "removal-planeswalker",
+    "removal-spacecraft",
+    "removal-vehicle"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
    "set_code": "g07",
-   "rarity": "rare"
+   "released_at": "2007-01-01",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Ashnod's Altar",
@@ -3252,8 +3133,30 @@
    "roles": [
     "ramp"
    ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "alliteration",
+    "free sacrifice outlet",
+    "mana rock",
+    "namesake spell",
+    "refund",
+    "sacrifice outlet-creature",
+    "virtual legendary",
+    "card names",
+    "mana producer",
+    "ramp",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "ramp",
+    "sacrifice"
+   ],
    "set_code": "brr",
-   "rarity": "uncommon"
+   "released_at": "2022-11-18",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Vanquisher's Banner",
@@ -3283,8 +3186,32 @@
    "roles": [
     "draw"
    ],
+   "tags": [
+    "anthem",
+    "cast trigger-you",
+    "draw engine",
+    "power boost to all",
+    "repeatable pure draw",
+    "toughness boost to all",
+    "typal-choose",
+    "card advantage",
+    "cast trigger",
+    "draw",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "draw",
+    "typal"
+   ],
    "set_code": "xln",
-   "rarity": "rare"
+   "released_at": "2017-09-29",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Godless Shrine",
@@ -3320,8 +3247,23 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-rav-shockland",
+    "nonbasic-basic-land-type",
+    "conditional tapland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "life payment",
+    "shockland"
+   ],
+   "engine_participation": [],
    "set_code": "unf",
-   "rarity": "rare"
+   "released_at": "2022-10-07",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Sundown Pass",
@@ -3357,8 +3299,22 @@
    "roles": [
     "land"
    ],
+   "tags": [
+    "activated ability",
+    "cycle-vow-slowland",
+    "conditional tapland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-slowland",
+    "dual land",
+    "lands matter"
+   ],
+   "engine_participation": [],
    "set_code": "vow",
-   "rarity": "rare"
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Ruinous Ultimatum",
@@ -3396,8 +3352,33 @@
    "roles": [
     "wipe"
    ],
+   "tags": [
+    "cycle-iko-ultimatum",
+    "removal-destroy",
+    "removal-nonland",
+    "sweeper-one-sided",
+    "unique mana cost",
+    "cycle",
+    "removal",
+    "removal-artifact",
+    "removal-aura",
+    "removal-battle",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-equipment",
+    "removal-planeswalker",
+    "removal-spacecraft",
+    "removal-vehicle",
+    "sweeper"
+   ],
+   "engine_participation": [
+    "removal",
+    "sweeper"
+   ],
    "set_code": "iko",
-   "rarity": "rare"
+   "released_at": "2020-04-24",
+   "rarity": "rare",
+   "layout": "normal"
   },
   {
    "name": "Olivia, Crimson Bride",
@@ -3424,7 +3405,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 4978,
+   "edhrec_rank": 4980,
    "salt": 0.39,
    "price_usd": 8.59,
    "commander_legal": true,
@@ -3436,8 +3417,29 @@
    "roles": [
     "recursion"
    ],
+   "tags": [
+    "attack trigger",
+    "attacking matters-self",
+    "evasion",
+    "noncreature typal",
+    "reanimate-creature",
+    "state trigger",
+    "synergy-legendary",
+    "typal-vampire",
+    "reanimate",
+    "recursion",
+    "recursion-creature",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "vow",
-   "rarity": "mythic"
+   "released_at": "2021-11-19",
+   "rarity": "mythic",
+   "layout": "normal"
   },
   {
    "name": "Legion Lieutenant",
@@ -3461,7 +3463,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 3020,
+   "edhrec_rank": 3019,
    "salt": 0.11,
    "price_usd": 0.34,
    "commander_legal": true,
@@ -3471,8 +3473,26 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "alliteration",
+    "anthem",
+    "cycle-rix-draft-signpost",
+    "power boost to all",
+    "toughness boost to all",
+    "typal-vampire",
+    "card names",
+    "cycle",
+    "draft signpost",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "rix",
-   "rarity": "uncommon"
+   "released_at": "2018-01-19",
+   "rarity": "uncommon",
+   "layout": "normal"
   },
   {
    "name": "Sorin the Mirthless",
@@ -3504,8 +3524,1808 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "roles": [],
+   "tags": [
+    "activated ability",
+    "burn any",
+    "drain creature",
+    "drain life",
+    "evasion",
+    "repeatable card advantage",
+    "repeatable creature tokens",
+    "repeatable crime",
+    "repeatable lifegain",
+    "repeatable removal",
+    "scales with mana value",
+    "spot removal",
+    "wannabe dark confidant",
+    "black effect",
+    "burn",
+    "burn battle",
+    "burn creature",
+    "burn planeswalker",
+    "burn player",
+    "card advantage",
+    "inverted effects",
+    "life for cards",
+    "life payment",
+    "lifegain",
+    "mana value matters",
+    "removal",
+    "removal-burn",
+    "removal-creature",
+    "removal-planeswalker",
+    "repeatable token generator"
+   ],
+   "engine_participation": [
+    "drain",
+    "draw",
+    "removal",
+    "tokens"
+   ],
    "set_code": "vow",
-   "rarity": "mythic"
+   "released_at": "2021-11-19",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Marsh Flats",
+   "quantity": 1,
+   "scryfall_id": "4e8397e6-d13a-4996-8fde-b8a9895de287",
+   "oracle_id": "dab520d0-20b4-4273-ba6b-eb07f85ea433",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 52,
+   "salt": 0.33,
+   "price_usd": 30.85,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-zen-fetchland",
+    "life payment",
+    "tutor-land-plains",
+    "tutor-land-swamp",
+    "cycle",
+    "cycle-fetchland",
+    "cycle-land",
+    "cycle-nonmana-land",
+    "fetchland",
+    "sacrifice self",
+    "tutor",
+    "tutor-land",
+    "tutor-land-to-battlefield",
+    "tutor-to",
+    "tutor-to-battlefield"
+   ],
+   "engine_participation": [],
+   "set_code": "mh2",
+   "released_at": "2021-06-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Blood Artist",
+   "quantity": 1,
+   "scryfall_id": "5587191b-b56a-452d-8a18-1622df83c267",
+   "oracle_id": "310f141c-7f37-4729-aed6-dd9c09db448d",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 138,
+   "salt": 0.56,
+   "price_usd": 3.45,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "blood artist ability",
+    "inscryption achievement",
+    "opponent loses life",
+    "repeatable crime",
+    "card names",
+    "death trigger",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "repeatable lifegain",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain"
+   ],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Cruel Celebrant",
+   "quantity": 1,
+   "scryfall_id": "87ead6ac-b1c5-4852-8413-7fa43c6cfc57",
+   "oracle_id": "3ee78cfc-0e9e-4737-a7e2-b42f94228040",
+   "mana_cost": "{W}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Whenever this creature or another creature or planeswalker you control dies, each opponent loses 1 life and you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 944,
+   "salt": 0.32,
+   "price_usd": 1.45,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "blood artist ability",
+    "cycle-war-draft-signpost",
+    "group slug",
+    "opponent loses life",
+    "synergy-planeswalker",
+    "card names",
+    "cycle",
+    "death trigger",
+    "draft signpost",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "repeatable lifegain",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain"
+   ],
+   "set_code": "war",
+   "released_at": "2019-05-03",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Vito, Thorn of the Dusk Rose",
+   "quantity": 1,
+   "scryfall_id": "0fe79ee4-c3f3-4a6b-a967-203ca3b70ee5",
+   "oracle_id": "7336a541-3ae9-4ab2-acb8-f574c0a5b3a9",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Vampire Cleric",
+   "oracle_text": "Whenever you gain life, target opponent loses that much life.\n{3}{B}{B}: Creatures you control gain lifelink until end of turn.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 493,
+   "salt": 0.95,
+   "price_usd": 10.89,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "gives lifelink",
+    "lifegain to damage",
+    "mana sink",
+    "opponent loses life",
+    "repeatable crime",
+    "repeatable lifegain",
+    "triggered ability",
+    "lifegain",
+    "lifegain matters"
+   ],
+   "engine_participation": [
+    "drain"
+   ],
+   "set_code": "m21",
+   "released_at": "2020-07-03",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Needleverge Pathway // Pillarverge Pathway",
+   "quantity": 1,
+   "scryfall_id": "ae420b3f-2f5b-4a4a-8d3a-8e6a3288c35a",
+   "oracle_id": "a9b8d020-4d72-4934-8942-df29ef19fc1d",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "R"
+   ],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {R}.\n//\n{T}: Add {W}.",
+   "mana_production": {
+    "W": 1,
+    "R": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 858,
+   "salt": 0.13,
+   "price_usd": 3.99,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cycle-znr-pathway",
+    "card names",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-pathway",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "znr",
+   "released_at": "2020-09-25",
+   "rarity": "rare",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Anointed Procession",
+   "quantity": 1,
+   "scryfall_id": "9a52c265-6920-4929-ba0a-70da08df01f1",
+   "oracle_id": "7246d45b-2185-4cdd-981b-5419b7d52bce",
+   "mana_cost": "{3}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Enchantment"
+   ],
+   "edhrec_rank": 366,
+   "salt": 0.96,
+   "price_usd": 58.02,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "synergy-token",
+    "token doubler",
+    "token increaser"
+   ],
+   "engine_participation": [],
+   "set_code": "akh",
+   "released_at": "2017-04-28",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Drana and Linvala",
+   "quantity": 1,
+   "scryfall_id": "29a5fe67-beaa-4ee3-b22c-0b8aed6f6f4d",
+   "oracle_id": "7abc2a1b-b758-480b-9415-f8f5369ab52f",
+   "mana_cost": "{1}{W}{W}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Vampire Angel",
+   "oracle_text": "Flying, vigilance\nActivated abilities of creatures your opponents control can't be activated.\nDrana and Linvala has all activated abilities of all creatures your opponents control. You may spend mana as though it were mana of any color to activate those abilities.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Vigilance"
+   ],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 1885,
+   "salt": 0.98,
+   "price_usd": 7.09,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "cycle-mom-two-color-team-up",
+    "evasion",
+    "hate-activation",
+    "legendary team-up",
+    "mimic",
+    "multiple species types",
+    "prevent activation",
+    "hate",
+    "multi character card"
+   ],
+   "engine_participation": [],
+   "set_code": "mom",
+   "released_at": "2023-04-21",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Rakdos Carnarium",
+   "quantity": 1,
+   "scryfall_id": "e197d420-fc69-4672-90f0-2264f35d1c61",
+   "oracle_id": "0a023964-2905-4928-9c3e-dc63e6ebd218",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B",
+    "R"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped.\nWhen this land enters, return a land you control to its owner's hand.\n{T}: Add {B}{R}.",
+   "mana_production": {
+    "B": 1,
+    "R": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 498,
+   "salt": 0.04,
+   "price_usd": 0.36,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-rav-bounceland",
+    "drawback",
+    "triggered ability",
+    "adds multiple mana",
+    "bounce",
+    "bounceland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "rescue",
+    "rescue-land",
+    "tapland"
+   ],
+   "engine_participation": [],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Brightclimb Pathway // Grimclimb Pathway",
+   "quantity": 1,
+   "scryfall_id": "1dce4e5a-08ab-4f52-bdfb-6d2dafbb055f",
+   "oracle_id": "1c633e02-95ef-445e-b4e0-fbfbc5ed9cc9",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {W}.\n//\n{T}: Add {B}.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 800,
+   "salt": 0.14,
+   "price_usd": 4.56,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-znr-pathway",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-pathway",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "slu",
+   "released_at": "2020-05-29",
+   "rarity": "rare",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Phyrexian Altar",
+   "quantity": 1,
+   "scryfall_id": "95d9f93c-50a8-41a9-be98-d1900bf1c12f",
+   "oracle_id": "8d02b297-97c4-4379-9862-0a462400f66f",
+   "mana_cost": "{3}",
+   "mana_value": 3.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "Sacrifice a creature: Add one mana of any color.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Artifact"
+   ],
+   "edhrec_rank": 309,
+   "salt": 1.26,
+   "price_usd": 55.54,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "free sacrifice outlet",
+    "mana rock",
+    "sacrifice outlet-creature",
+    "mana producer",
+    "ramp",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "ramp",
+    "sacrifice"
+   ],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Bojuka Bog",
+   "quantity": 1,
+   "scryfall_id": "f8f1c157-cebc-45fe-9caa-1ea4b305ccfc",
+   "oracle_id": "04b7362d-0490-4cb0-b5d7-2a7732f659ce",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped.\nWhen this land enters, exile target player's graveyard.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 24,
+   "salt": 0.45,
+   "price_usd": 1.88,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cycle-wwk-utilityland",
+    "sweeper-graveyard",
+    "triggered ability",
+    "utility land",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "hate",
+    "hate-graveyard",
+    "tapland"
+   ],
+   "engine_participation": [],
+   "set_code": "clb",
+   "released_at": "2022-06-10",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Damnation",
+   "quantity": 1,
+   "scryfall_id": "7fc1d7db-11a3-4ff9-8d27-1fe401053080",
+   "oracle_id": "d57a8f0b-7989-4db5-8756-6f2690097252",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Destroy all creatures. They can't be regenerated.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Sorcery"
+   ],
+   "edhrec_rank": 382,
+   "salt": 0.57,
+   "price_usd": 21.21,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "wipe"
+   ],
+   "tags": [
+    "hate-regenerate",
+    "removal-creature",
+    "removal-destroy",
+    "single english word name",
+    "sweeper",
+    "symmetrical",
+    "card names",
+    "hate",
+    "removal"
+   ],
+   "engine_participation": [
+    "removal",
+    "sweeper"
+   ],
+   "set_code": "sld",
+   "released_at": "2019-12-02",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Welcoming Vampire",
+   "quantity": 1,
+   "scryfall_id": "fd60ee8d-fb50-41df-89a8-aed5a53d755f",
+   "oracle_id": "605c1ee0-5e8a-4e0a-a99b-42a38873f822",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Flying\nWhenever one or more other creatures you control with power 2 or less enter, draw a card. This ability triggers only once each turn.",
+   "mana_production": {},
+   "keywords": [
+    "Flying"
+   ],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 425,
+   "salt": 0.22,
+   "price_usd": 4.31,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "creaturefall",
+    "draw engine",
+    "evasion",
+    "repeatable pure draw",
+    "synergy-low-power",
+    "triggered ability",
+    "card advantage",
+    "draw",
+    "power matters",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "thingfall"
+   ],
+   "engine_participation": [
+    "draw"
+   ],
+   "set_code": "vow",
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Crossway Troublemakers",
+   "quantity": 1,
+   "scryfall_id": "431711c5-c04f-4d34-97c9-5199cfbf9da9",
+   "oracle_id": "1a362e4d-6c02-4b67-ab63-c6622e505195",
+   "mana_cost": "{5}{B}",
+   "mana_value": 6.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Attacking Vampires you control have deathtouch and lifelink. (Any amount of damage they deal to a creature is enough to destroy it. Damage dealt by those creatures also causes their controller to gain that much life.)\nWhenever a Vampire you control dies, you may pay 2 life. If you do, draw a card.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 3602,
+   "salt": 0.27,
+   "price_usd": 0.29,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "attacking matters",
+    "death trigger",
+    "draw engine",
+    "gives deathtouch",
+    "gives lifelink",
+    "keyword anthem",
+    "life for cards",
+    "noncreature typal",
+    "repeatable lifegain",
+    "repeatable pure draw",
+    "sneaky-self-trigger",
+    "typal-vampire",
+    "black effect",
+    "card advantage",
+    "draw",
+    "life payment",
+    "lifegain",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "draw",
+    "typal"
+   ],
+   "set_code": "voc",
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Urborg, Tomb of Yawgmoth",
+   "quantity": 1,
+   "scryfall_id": "ff92804a-0c62-4eb8-bbba-f1ca6f426b6e",
+   "oracle_id": "db6174d7-211d-4817-b8e4-8384594c83f9",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Legendary Land",
+   "oracle_text": "Each land is a Swamp in addition to its other land types.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 73,
+   "salt": 0.49,
+   "price_usd": 54.84,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "chromatic lantern",
+    "land conversion",
+    "namesake spell",
+    "symmetrical",
+    "universal type change",
+    "card names",
+    "type change"
+   ],
+   "engine_participation": [],
+   "set_code": "puma",
+   "released_at": "2018-12-07",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Bloodline Keeper // Lord of Lineage",
+   "quantity": 1,
+   "scryfall_id": "13896468-e3d0-4bcb-b09e-b5c187aecb03",
+   "oracle_id": "434e82b5-abd4-41ac-a5b1-2dd01c667374",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Flying\n{T}: Create a 2/2 black Vampire creature token with flying.\n{B}: Transform this creature. Activate only if you control five or more Vampires.\n//\nFlying\nOther Vampire creatures you control get +2/+2.\n{T}: Create a 2/2 black Vampire creature token with flying.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Transform"
+   ],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 2527,
+   "salt": 0.28,
+   "price_usd": 8.48,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "anthem",
+    "evasion",
+    "noncreature typal",
+    "power boost to all",
+    "repeatable creature tokens",
+    "toughness boost to all",
+    "transform-improvement",
+    "typal-vampire",
+    "card names",
+    "repeatable token generator",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "tokens",
+    "typal"
+   ],
+   "set_code": "isd",
+   "released_at": "2011-09-30",
+   "rarity": "mythic",
+   "layout": "transform"
+  },
+  {
+   "name": "Yahenni, Undying Partisan",
+   "quantity": 1,
+   "scryfall_id": "da4f8f35-5860-4416-b7bb-9ba56540a28c",
+   "oracle_id": "fdba89eb-1cf5-46e6-9d09-1adb9bc40fcd",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Vampire Aetherborn",
+   "oracle_text": "Haste\nWhenever a creature an opponent controls dies, put a +1/+1 counter on Yahenni.\nSacrifice another creature: Yahenni gains indestructible until end of turn.",
+   "mana_production": {},
+   "keywords": [
+    "Haste"
+   ],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 1026,
+   "salt": 0.24,
+   "price_usd": 0.38,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "protection"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-aer-legend",
+    "death trigger opponent",
+    "free sacrifice outlet",
+    "gains indestructible",
+    "gains pp counters",
+    "repeatable pp counters",
+    "sacrifice outlet-creature",
+    "unique type line",
+    "cycle",
+    "death trigger",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "sacrifice"
+   ],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Isolated Chapel",
+   "quantity": 1,
+   "scryfall_id": "d359281b-b509-41be-a820-c7ac9f36f27f",
+   "oracle_id": "7e5d9efe-48a9-434b-bb09-056e0e09cc9a",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped unless you control a Plains or a Swamp.\n{T}: Add {W} or {B}.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 94,
+   "salt": 0.17,
+   "price_usd": 0.41,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-isd-checkland",
+    "synergy-plains",
+    "synergy-swamp",
+    "conditional tapland",
+    "cycle",
+    "cycle-checkland",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "dmr",
+   "released_at": "2023-01-13",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Path to Exile",
+   "quantity": 1,
+   "scryfall_id": "ccd50bd0-95a3-4480-8afb-ada8c4e806c9",
+   "oracle_id": "d683d985-9888-4d21-8b5f-69e69ce4a03b",
+   "mana_cost": "{W}",
+   "mana_value": 1.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Exile target creature. Its controller may search their library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Instant"
+   ],
+   "edhrec_rank": 15,
+   "salt": 0.44,
+   "price_usd": 1.4,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "donate rampant growth",
+    "drawback",
+    "land ramp",
+    "removal-creature",
+    "removal-exile",
+    "single target instant/sorcery",
+    "spot removal",
+    "swap removal",
+    "tutor-land-basic",
+    "tutor-land-to-battlefield",
+    "ramp",
+    "removal",
+    "tutor",
+    "tutor-land",
+    "tutor-to",
+    "tutor-to-battlefield"
+   ],
+   "engine_participation": [
+    "ramp",
+    "removal"
+   ],
+   "set_code": "f15",
+   "released_at": "2015-01-01",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Captivating Vampire",
+   "quantity": 1,
+   "scryfall_id": "1b825bd1-9cbc-45a8-bfbe-fc3e8fdc575e",
+   "oracle_id": "acd382ee-94fb-4a29-b14e-c2a3c6dde7e0",
+   "mana_cost": "{1}{B}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Other Vampire creatures you control get +1/+1.\nTap five untapped Vampires you control: Gain control of target creature. It becomes a Vampire in addition to its other types.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 2479,
+   "salt": 0.82,
+   "price_usd": 3.6,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "anthem",
+    "cycle-m11-typal-lord",
+    "noncreature typal",
+    "power boost to all",
+    "repeatable crime",
+    "tap fuel-creature",
+    "theft-creature",
+    "toughness boost to all",
+    "typal-vampire",
+    "type change",
+    "untracked indefinite effect",
+    "control changing effects",
+    "cycle",
+    "indefinite effect",
+    "tap outlet",
+    "theft",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "typal"
+   ],
+   "set_code": "c17",
+   "released_at": "2017-08-25",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Blood Crypt",
+   "quantity": 1,
+   "scryfall_id": "0f1cebcb-0e3f-4dce-81ff-44bc8c0b9ad7",
+   "oracle_id": "43985bbc-a0f6-4812-984e-392bc8562633",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B",
+    "R"
+   ],
+   "type_line": "Land — Swamp Mountain",
+   "oracle_text": "({T}: Add {B} or {R}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+   "mana_production": {
+    "B": 1,
+    "R": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 68,
+   "salt": 0.22,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-rav-shockland",
+    "nonbasic-basic-land-type",
+    "conditional tapland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "life payment",
+    "shockland"
+   ],
+   "engine_participation": [],
+   "set_code": "unf",
+   "released_at": "2022-10-07",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "The Meathook Massacre",
+   "quantity": 1,
+   "scryfall_id": "52593d64-182f-45ff-82c6-fb7649d36736",
+   "oracle_id": "127de52b-df75-4342-95a0-20d84c5bf916",
+   "mana_cost": "{X}{B}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Enchantment",
+   "oracle_text": "When The Meathook Massacre enters, each creature gets -X/-X until end of turn.\nWhenever a creature you control dies, each opponent loses 1 life.\nWhenever a creature an opponent controls dies, you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Enchantment"
+   ],
+   "edhrec_rank": 510,
+   "salt": 0.99,
+   "price_usd": 27.15,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "blood artist ability",
+    "death trigger opponent",
+    "fun ruling",
+    "group slug",
+    "opponent loses life",
+    "removal-toughness",
+    "sweeper",
+    "card names",
+    "death trigger",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "removal",
+    "removal-creature",
+    "repeatable lifegain",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain",
+    "removal",
+    "sweeper"
+   ],
+   "set_code": "mid",
+   "released_at": "2021-09-24",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Foreboding Ruins",
+   "quantity": 1,
+   "scryfall_id": "7a9d947c-e4c7-409b-886e-affb1c68264d",
+   "oracle_id": "5c87e2fa-77f1-4978-b25f-f14d227301d1",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B",
+    "R"
+   ],
+   "type_line": "Land",
+   "oracle_text": "As this land enters, you may reveal a Swamp or Mountain card from your hand. If you don't, this land enters tapped.\n{T}: Add {B} or {R}.",
+   "mana_production": {
+    "B": 1,
+    "R": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 323,
+   "salt": 0.04,
+   "price_usd": 0.29,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-soi-reveal-land",
+    "synergy-mountain",
+    "synergy-swamp",
+    "conditional tapland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-reveal-land",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "who",
+   "released_at": "2023-10-13",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Arid Mesa",
+   "quantity": 1,
+   "scryfall_id": "54ced5cf-b51a-4dab-97f7-50fb18e5c463",
+   "oracle_id": "c5acf2a5-40f4-433d-a74d-1cb56c521464",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for a Mountain or Plains card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 57,
+   "salt": 0.2,
+   "price_usd": 29.88,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-zen-fetchland",
+    "life payment",
+    "tutor-land-mountain",
+    "tutor-land-plains",
+    "cycle",
+    "cycle-fetchland",
+    "cycle-land",
+    "cycle-nonmana-land",
+    "fetchland",
+    "sacrifice self",
+    "tutor",
+    "tutor-land",
+    "tutor-land-to-battlefield",
+    "tutor-to",
+    "tutor-to-battlefield"
+   ],
+   "engine_participation": [],
+   "set_code": "mh2",
+   "released_at": "2021-06-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Mountain",
+   "quantity": 1,
+   "scryfall_id": "96549393-9607-43c8-91de-905462cbcb19",
+   "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "R"
+   ],
+   "type_line": "Basic Land — Mountain",
+   "oracle_text": "({T}: Add {R}.)",
+   "mana_production": {
+    "R": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": null,
+   "salt": 0.32,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-lea-basic-land",
+    "eponymous",
+    "single english word name",
+    "unique type line",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land"
+   ],
+   "engine_participation": [],
+   "set_code": "sld",
+   "released_at": "2019-12-02",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Cavern of Souls",
+   "quantity": 1,
+   "scryfall_id": "bea9f6e9-69ae-4c49-9682-ad09e787c01e",
+   "oracle_id": "89ca686a-7c72-4d8f-9290-e89635624a83",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "As this land enters, choose a creature type.\n{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 113,
+   "salt": 0.67,
+   "price_usd": 50.19,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "buff mana",
+    "gives uncounterable",
+    "rainbow land",
+    "restricted mana",
+    "typal-choose",
+    "utility land",
+    "hate",
+    "hate-counterspell",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [],
+   "set_code": "puma",
+   "released_at": "2018-12-07",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Viscera Seer",
+   "quantity": 1,
+   "scryfall_id": "d2e1c1c3-641a-4cd5-b46d-e03e5e529cc7",
+   "oracle_id": "f82a4e85-526d-4456-b700-7760043a31be",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Wizard Vampire",
+   "oracle_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+   "mana_production": {},
+   "keywords": [
+    "Scry"
+   ],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 255,
+   "salt": 0.4,
+   "price_usd": 0.44,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "free sacrifice outlet",
+    "martyr",
+    "sacrifice outlet-creature",
+    "scry",
+    "bottom deck manipulation",
+    "library manipulation",
+    "peek",
+    "peek-library",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet",
+    "sacrifice self",
+    "top deck manipulation"
+   ],
+   "engine_participation": [
+    "sacrifice"
+   ],
+   "set_code": "cmr",
+   "released_at": "2020-11-20",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Arcane Signet",
+   "quantity": 1,
+   "scryfall_id": "1836b8a6-c616-4793-933b-b38296d70e72",
+   "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+   "mana_cost": "{2}",
+   "mana_value": 2.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Artifact"
+   ],
+   "edhrec_rank": 3,
+   "salt": 0.24,
+   "price_usd": 0.5,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "commander identity matters",
+    "mana rock with set's mechanic",
+    "mini refund",
+    "synergy-commander",
+    "commander matters",
+    "mana producer",
+    "mana rock",
+    "ramp",
+    "refund",
+    "staple with set's mechanic"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Path of Ancestry",
+   "quantity": 1,
+   "scryfall_id": "7f3d574a-72b5-43be-b4b5-87865bbc7b5c",
+   "oracle_id": "b473e293-59e3-4e04-acf2-622604aeb25f",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped.\n{T}: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Scry"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 14,
+   "salt": 0.13,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "buff mana",
+    "cast trigger-you",
+    "commander identity matters",
+    "delayed trigger",
+    "rainbow land",
+    "scry",
+    "synergy-color-share",
+    "synergy-commander",
+    "tapland with set's mechanic",
+    "typal-share",
+    "utility land",
+    "bottom deck manipulation",
+    "cast trigger",
+    "commander matters",
+    "library manipulation",
+    "peek",
+    "peek-library",
+    "staple with set's mechanic",
+    "tapland",
+    "top deck manipulation",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Scrubland",
+   "quantity": 1,
+   "scryfall_id": "472034a2-0ba9-4876-ab7a-aa7013d603bb",
+   "oracle_id": "c8d95ca8-7d12-4072-aeaf-e20f248c7e39",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land — Plains Swamp",
+   "oracle_text": "({T}: Add {W} or {B}.)",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 388,
+   "salt": 0.83,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-abu-dual-land",
+    "nonbasic-basic-land-type",
+    "single english word name",
+    "card names",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "3ed",
+   "released_at": "1994-04-11",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Vampire Nighthawk",
+   "quantity": 1,
+   "scryfall_id": "301ff69c-2590-45af-893b-7ac0285e450b",
+   "oracle_id": "feb244f8-bcb1-44cf-9940-2719221a7309",
+   "mana_cost": "{1}{B}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Vampire Shaman",
+   "oracle_text": "Flying\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Lifelink",
+    "Deathtouch"
+   ],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 1741,
+   "salt": 0.2,
+   "price_usd": 0.2,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "evasion",
+    "french vanilla",
+    "repeatable lifegain",
+    "flavors of vanilla",
+    "lifegain"
+   ],
+   "engine_participation": [],
+   "set_code": "voc",
+   "released_at": "2021-11-19",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Demonic Tutor",
+   "quantity": 1,
+   "scryfall_id": "fdbe0cf7-38e2-4b2e-8fcb-c08f160caf19",
+   "oracle_id": "82004860-e589-4e38-8d61-8c0210e4ea39",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Search your library for a card, put that card into your hand, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Sorcery"
+   ],
+   "edhrec_rank": 62,
+   "salt": 1.58,
+   "price_usd": 62.08,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [
+    "tutor"
+   ],
+   "tags": [
+    "tutor-card",
+    "tutor-to-hand",
+    "black effect",
+    "tutor",
+    "tutor-to"
+   ],
+   "engine_participation": [],
+   "set_code": "j20",
+   "released_at": "2020-01-01",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Vampire of the Dire Moon",
+   "quantity": 1,
+   "scryfall_id": "b3c185b9-5d97-4a5a-af0b-8b9c44dcd235",
+   "oracle_id": "5a938371-8428-48e3-85ed-6a84a39b29c6",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+   "mana_production": {},
+   "keywords": [
+    "Lifelink",
+    "Deathtouch"
+   ],
+   "categories": [
+    "Creature"
+   ],
+   "edhrec_rank": 3311,
+   "salt": 0.12,
+   "price_usd": 0.82,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "roles": [],
+   "tags": [
+    "french vanilla",
+    "repeatable lifegain",
+    "flavors of vanilla",
+    "lifegain"
+   ],
+   "engine_participation": [],
+   "set_code": "m20",
+   "released_at": "2019-07-12",
+   "rarity": "uncommon",
+   "layout": "normal"
   }
  ],
  "excluded": []

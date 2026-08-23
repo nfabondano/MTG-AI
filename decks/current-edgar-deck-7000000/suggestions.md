@@ -4,15 +4,48 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 ## Consider adding
 
+- **Approach of the Second Sun** ($6.83) — completes a combo with Demonic Tutor → Win the game
+- **Monk Gyatso** ($7.57) — completes a combo with Lightning Greaves → Infinite creature LTB, Infinite creature ETB
+- **Ad Nauseam** ($11.05) — completes a combo with Teferi's Protection → Infinite card draw
+- **Serra Avatar** ($0.55) — completes a combo with Swords to Plowshares + Sanguine Bond → Near-infinite lifegain, Near-infinite lifeloss for target opponent
+- **Obliterate** ($3.52) — completes a combo with Teferi's Protection → Mass Land Denial, Destroy all lands, creatures, and artifacts your opponents control
 - **More draw, ramp** — the role counts above are below the usual range — prioritise these slots
+- **Indulgent Aristocrat** ($0.25) — played in 73% of decks with this commander
+- **Master of Dark Rites** ($3.41) — played in 61% of decks with this commander
+- **Voldaren Estate** — played in 58% of decks with this commander
+- **Charismatic Conqueror** ($23.50) — played in 57% of decks with this commander
+- **Olivia's Wrath** ($0.42) — played in 56% of decks with this commander
+- **Drana, Liberator of Malakir** ($0.80) — played in 54% of decks with this commander
+- **Clavileño, First of the Blessed** ($0.65) — played in 52% of decks with this commander
+- **Bloodthirsty Conqueror** ($34.41) — played in 50% of decks with this commander
+- **Markov Baron** ($0.35) — played in 49% of decks with this commander
 
 ## Consider cutting
 
-- **Merciless Eviction** — deck runs 5 wipe, above the usual range
+- **Ruinous Ultimatum** — 3 White pips wants ~23 sources, deck has 21; needs 3 different colours in one cost — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base  
+  _(castability)_
+- **Crackling Doom** — needs 3 different colours in one cost  
+  _(castability)_
+- **Butcher of Malakir** — 13 cards do removal work; a deck wants about 10  
+  _(oversupplied: removal)_
+- **Reconnaissance** — outside every cluster this deck is built on (typal + drain + tokens)  
+  _(no engine participation)_
+- **Rodolf Duskbringer** — outside every cluster this deck is built on (typal + drain + tokens)  
+  _(no engine participation)_
+- **Lightning Greaves** — outside every cluster this deck is built on (typal + drain + tokens)  
+  _(no engine participation)_
+- **Exquisite Blood** — outside every cluster this deck is built on (typal + drain + tokens)  
+  _(no engine participation)_
 
 ## Paired swaps
 
-- Merciless Eviction → More draw, ramp
+- Ruinous Ultimatum → Approach of the Second Sun
+- Crackling Doom → Monk Gyatso
+- Butcher of Malakir → Ad Nauseam
+- Reconnaissance → Serra Avatar
+- Rodolf Duskbringer → Obliterate
+- Lightning Greaves → More draw, ramp
+- Exquisite Blood → Indulgent Aristocrat
 
 ---
 

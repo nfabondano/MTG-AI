@@ -15,33 +15,37 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 - **Woodland Cemetery** ($0.95) — played in 49% of decks with this commander
 - **Undergrowth Stadium** — played in 48% of decks with this commander
 - **Oran-Rief Ooze** ($0.28) — played in 46% of decks with this commander
+- **The Mimeoplasm** ($0.28) — played in 43% of decks with this commander
 - **Opulent Palace** ($0.37) — played in 43% of decks with this commander
 - **Scavenging Ooze** ($0.33) — played in 43% of decks with this commander
 - **Path of Ancestry** — played in 42% of decks with this commander
-- **Slurrk, All-Ingesting** ($0.31) — played in 42% of decks with this commander
 
 ## Consider cutting
 
-- **Titan of Littjara** — not on any EDHREC list for this commander
-- **Species Specialist** — not on any EDHREC list for this commander
-- **Yawgmoth, Thran Physician** — not on any EDHREC list for this commander
-- **Pitiless Plunderer** — not on any EDHREC list for this commander
-- **Cephalid Facetaker** — not on any EDHREC list for this commander
-- **Ayara, First of Locthwain** — not on any EDHREC list for this commander
-- **Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel** — not on any EDHREC list for this commander
-- **Mutable Explorer** — deck runs 14 ramp, above the usual range
-- **Copycrook** — deck runs 15 draw, above the usual range
+- **Aeve, Progenitor Ooze** — 3 Green pips wants ~23 sources, deck has 19  
+  _(castability)_
+- **March of the World Ooze** — 3 Green pips wants ~23 sources, deck has 19  
+  _(castability)_
+- **Birthing Pod** — 14 cards do sacrifice work; a deck wants about 8  
+  _(oversupplied: sacrifice)_
+- **Ashnod's Altar** — 16 cards do ramp work; a deck wants about 12  
+  _(oversupplied: ramp)_
+- **Harmonized Crescendo** — 16 cards do draw work; a deck wants about 12  
+  _(oversupplied: draw)_
+- **Umori, the Collector** — outside every cluster this deck is built on (typal + copy + sacrifice)  
+  _(no engine participation)_
+- **Hecteyes** — outside every cluster this deck is built on (typal + copy + sacrifice)  
+  _(no engine participation)_
 
 ## Paired swaps
 
-- Titan of Littjara → Hullbreaker Horror
-- Species Specialist → Tidespout Tyrant
-- Yawgmoth, Thran Physician → More removal
-- Pitiless Plunderer → Mitotic Slime
-- Cephalid Facetaker → Rejuvenating Springs
-- Ayara, First of Locthwain → Ravenous Slime
-- Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel → Hinterland Harbor
-- Mutable Explorer → Predator Ooze
+- Aeve, Progenitor Ooze → Hullbreaker Horror
+- March of the World Ooze → Tidespout Tyrant
+- Birthing Pod → More removal
+- Ashnod's Altar → Mitotic Slime
+- Harmonized Crescendo → Rejuvenating Springs
+- Umori, the Collector → Ravenous Slime
+- Hecteyes → Hinterland Harbor
 
 ---
 

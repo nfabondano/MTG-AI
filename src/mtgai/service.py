@@ -13,7 +13,7 @@ from typing import Any
 from . import analysis, deckfolder
 from .analysis import report
 from .model import Deck
-from .sources import archidekt, edhrec, scryfall, spellbook
+from .sources import archidekt, edhrec, scryfall, spellbook, tagger
 
 
 def add_deck(reference: str, *, offline: bool = False, refresh: bool = False) -> dict[str, Any]:
@@ -59,14 +59,21 @@ def _analyse_and_write(
     folder.write_deck(deck)
     folder.write_analysis(report.render_analysis(result))
     folder.write_suggestions(report.render_suggestions(deck, result))
+    folder.write_engine(report.render_engine(result))
     return result
 
 
-def suggest(reference: str, *, budget: float | None = None, offline: bool = False) -> str:
+def suggest(
+    reference: str,
+    *,
+    budget: float | None = None,
+    offline: bool = False,
+    loose: bool = False,
+) -> str:
     folder = deckfolder.resolve(reference)
     deck = folder.read_deck()
     result = analysis.analyse(deck, offline=offline)
-    markdown = report.render_suggestions(deck, result, budget=budget)
+    markdown = report.render_suggestions(deck, result, budget=budget, loose=loose)
     folder.write_suggestions(markdown)
     return markdown
 
@@ -92,6 +99,9 @@ def show_deck(reference: str) -> dict[str, Any]:
         "notes": str(folder.notes_path),
     }
     summary["roles"] = analysis.roles.analyse(deck)["counts"]
+    eng = analysis.engine.analyse(deck)
+    summary["archetype"] = eng["archetype"]
+    summary["clusters"] = eng["clusters"]
     return summary
 
 
@@ -162,4 +172,19 @@ def cache_refresh(*, force: bool = False) -> dict[str, Any]:
 
 
 def cache_status() -> dict[str, Any]:
-    return scryfall.cache_status()
+    status = scryfall.cache_status()
+    status["tags"] = tagger.status()
+    return status
+
+
+def tags_refresh(*, force: bool = False) -> dict[str, Any]:
+    return tagger.refresh(force=force)
+
+
+def deck_engine(reference: str) -> dict[str, Any]:
+    """What the deck is built around, and what strains it."""
+    folder = deckfolder.resolve(reference)
+    deck = folder.read_deck()
+    result = analysis.engine.analyse(deck)
+    result["user_edited"] = folder.engine_is_user_edited()
+    return result

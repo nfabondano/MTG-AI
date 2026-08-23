@@ -112,10 +112,13 @@ def deck_suggest(
     reference: str = typer.Argument(..., help="Deck slug, id or name fragment."),
     budget: float = typer.Option(None, "--budget", help="Ignore suggestions above this USD price."),
     offline: bool = typer.Option(False, "--offline"),
+    loose: bool = typer.Option(
+        False, "--loose", help="Also show weak candidates the tool cannot ground."
+    ),
 ) -> None:
     """Regenerate suggestions.md."""
     try:
-        markdown = service.suggest(reference, budget=budget, offline=offline)
+        markdown = service.suggest(reference, budget=budget, offline=offline, loose=loose)
     except (SourceError, ValueError, FileNotFoundError) as exc:
         _fail(str(exc))
         return
@@ -171,10 +174,60 @@ def deck_show(
     console.print(f"  cards     {summary['total_cards']} ({summary['lands']} lands)")
     console.print(f"  archidekt {summary['url']}")
     console.print()
+    console.print(f"  does      {summary.get('archetype', '—')}")
+    console.print()
     roles = summary.get("roles") or {}
     console.print("  " + " · ".join(f"{k} {v}" for k, v in roles.items() if v))
     console.print()
     console.print(f"  analysis  {summary['files']['analysis']}")
+
+
+@deck_app.command("engine")
+def deck_engine(
+    reference: str = typer.Argument(..., help="Deck slug, id or name fragment."),
+    json_out: bool = typer.Option(False, "--json"),
+) -> None:
+    """Show what a deck is built around — read this before judging any card."""
+    try:
+        data = service.deck_engine(reference)
+    except (ValueError, FileNotFoundError) as exc:
+        _fail(str(exc))
+        return
+
+    if json_out:
+        _emit(data)
+        return
+
+    console.print(f"[bold]{data['archetype']}[/bold]")
+    if data.get("user_edited"):
+        console.print("[dim](engine.md has been edited by hand — that version wins)[/dim]")
+    console.print()
+
+    wants = set(data.get("commander_wants") or [])
+    clusters = data.get("clusters") or {}
+    if clusters:
+        console.print("  clusters")
+        for name, count in list(clusters.items())[:8]:
+            mark = " *" if name in wants else ""
+            console.print(f"    {name:<16} {count}{mark}")
+        console.print("    [dim]* the commander's own text asks for this[/dim]")
+        console.print()
+
+    strain = data.get("castability_cuts") or []
+    if strain:
+        console.print("  hardest to cast")
+        for entry in strain[:5]:
+            note = " (sole reason that requirement is high)" if entry["sole_driver"] else ""
+            console.print(f"    {entry['name']} {entry['mana_cost']}{note}")
+            console.print(f"      [dim]{entry['reasons'][0]}[/dim]")
+        console.print()
+
+    over = data.get("oversupplied") or []
+    if over:
+        console.print(
+            "  oversupplied  "
+            + ", ".join(f"{e['category']} {e['count']}/{e['target_high']}" for e in over[:4])
+        )
 
 
 @deck_app.command("cards")
@@ -292,6 +345,19 @@ def cache_refresh(
         console.print(f"[green]Cached {result['cards']:,} cards[/green] ({result['updated_at']})")
     else:
         console.print(f"Already current: {result['cards']:,} cards ({result['updated_at']})")
+
+    # Functional tags are what let the tool see what a card does rather than
+    # what its text says, so they refresh alongside the cards.
+    console.print("Refreshing functional tags…")
+    try:
+        tags_result = service.tags_refresh(force=force)
+    except SourceError as exc:
+        console.print(f"[yellow]Tags unavailable:[/yellow] {exc}")
+        return
+    console.print(
+        f"[green]{tags_result['taggings']:,} taggings[/green] across "
+        f"{tags_result['tags']:,} tags"
+    )
 
 
 @cache_app.command("status")

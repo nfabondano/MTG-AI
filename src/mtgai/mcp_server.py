@@ -71,12 +71,16 @@ def deck_analyze(reference: str, offline: bool = False) -> dict[str, Any]:
 
 
 @mcp.tool()
-def deck_suggest(reference: str, budget: float | None = None) -> str:
+def deck_suggest(
+    reference: str, budget: float | None = None, loose: bool = False
+) -> str:
     """Generate cut and add suggestions for a deck, as markdown.
 
-    budget caps suggested cards at that USD price.
+    Every cut is backed by deck-internal evidence: castability, cluster
+    oversupply, curve, or doing nothing the deck is built around. budget caps
+    suggested cards at that USD price; loose also surfaces weak candidates.
     """
-    return service.suggest(reference, budget=budget)
+    return service.suggest(reference, budget=budget, loose=loose)
 
 
 @mcp.tool()
@@ -87,6 +91,18 @@ def deck_cards(reference: str, role: str = "", card_type: str = "") -> list[dict
     recursion, land. card_type matches against the type line, e.g. "Creature".
     """
     return service.deck_cards(reference, role=role, card_type=card_type)
+
+
+@mcp.tool()
+def deck_engine(reference: str) -> dict[str, Any]:
+    """What a deck is actually built around — read this before judging any card.
+
+    Returns the archetype, the functional clusters the deck invests in, what the
+    commander's own text asks for, which cards are hardest to cast, and which
+    clusters are oversupplied. A card's absence from EDHREC lists is never
+    evidence of anything; these deck-internal signals are.
+    """
+    return service.deck_engine(reference)
 
 
 @mcp.tool()

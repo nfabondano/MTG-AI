@@ -123,6 +123,20 @@ def _oracle_text(oracle: dict[str, Any]) -> str:
     return text
 
 
+def _tags(oracle: dict[str, Any]) -> list[str]:
+    """Functional tags Archidekt ships in the payload we already download.
+
+    These are Scryfall Tagger's vocabulary, at full coverage on deck cards and
+    at no extra request cost. `inheritedTags` carries tags a card picks up from
+    its cycle or reprint family, which are weaker but still useful.
+    """
+    tags = list(oracle.get("oTags") or [])
+    for tag in oracle.get("inheritedTags") or []:
+        if tag not in tags:
+            tags.append(tag)
+    return tags
+
+
 def _mana_cost(oracle: dict[str, Any]) -> str:
     """Mana cost, falling back to the faces for split and modal cards."""
     cost = oracle.get("manaCost") or ""
@@ -194,7 +208,10 @@ def normalise(payload: dict[str, Any], slug: str, *, enrich: bool = True) -> Dec
                 is_tutor=bool(oracle.get("tutor")),
                 is_extra_turns=bool(oracle.get("extraTurns")),
                 is_mass_land_denial=bool(oracle.get("massLandDenial")),
+                tags=_tags(oracle),
                 set_code=(card.get("edition") or {}).get("editioncode", ""),
+                released_at=(card.get("edition") or {}).get("editiondate", "")
+                or card.get("releasedAt", ""),
                 layout=oracle.get("layout") or "",
             )
         )
