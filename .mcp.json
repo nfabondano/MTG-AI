@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "mtg-ai": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${CLAUDE_PROJECT_DIR:-.}",
+        "python",
+        "-m",
+        "mtgai.mcp_server"
+      ],
+      "env": {
+        "MTGAI_ROOT": "${CLAUDE_PROJECT_DIR:-.}"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+---
+description: Get cut and add suggestions for a deck
+argument-hint: <deck slug> [--budget N]
+allowed-tools: Bash(uv run mtg:*), Read
+---
+
+Generate suggestions for `$ARGUMENTS`:
+
+```bash
+uv run mtg deck suggest $ARGUMENTS
+```
+
+(If I passed a `--budget` value, keep it on the command.)
+
+Then talk me through the results rather than dumping them:
+
+- Which adds you'd actually make, and what you'd cut for each
+- Which suggestions you'd ignore, and why — EDHREC's statistics don't know what
+  my deck is trying to do, and an unusual card is often a deliberate choice
+- Anything the suggestions miss that you noticed yourself
+
+Every card you suggest must be inside the deck's colour identity. Say so if you
+spot one that isn't — that's a bug worth reporting.
+
+I apply changes in Archidekt by hand, so give me names I can search for.

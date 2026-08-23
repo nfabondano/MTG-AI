@@ -1,0 +1,263 @@
+{
+ "id": 999001,
+ "name": "Synthetic Test Deck",
+ "deckFormat": 3,
+ "edhBracket": null,
+ "owner": {"username": "tester"},
+ "updatedAt": "2026-01-01T00:00:00Z",
+ "categories": [
+  {"name": "Commander", "includedInDeck": true},
+  {"name": "Creature", "includedInDeck": true},
+  {"name": "Land", "includedInDeck": true},
+  {"name": "Artifact", "includedInDeck": true},
+  {"name": "Sorcery", "includedInDeck": true},
+  {"name": "Maybeboard", "includedInDeck": false},
+  {"name": "Sideboard", "includedInDeck": false}
+ ],
+ "cards": [
+  {
+   "id": 1,
+   "categories": ["Commander", "Creature"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-commander",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-commander",
+     "name": "Test Commander",
+     "cmc": 4,
+     "manaCost": "{2}{W}{B}",
+     "colors": ["White", "Black"],
+     "colorIdentity": ["White", "Black"],
+     "superTypes": ["Legendary"],
+     "types": ["Creature"],
+     "subTypes": ["Vampire"],
+     "text": "Whenever this creature attacks, draw a card.",
+     "manaProduction": {"W": null, "U": null, "B": null, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 2,
+   "categories": ["Maybeboard", "Artifact"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-maybe",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-maybe",
+     "name": "Maybeboard Artifact",
+     "cmc": 2,
+     "manaCost": "{2}",
+     "colors": [],
+     "colorIdentity": [],
+     "superTypes": [],
+     "types": ["Artifact"],
+     "subTypes": [],
+     "text": "Do nothing.",
+     "manaProduction": {"W": null, "U": null, "B": null, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 3,
+   "categories": ["Sideboard"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-side",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-side",
+     "name": "Sideboard Card",
+     "cmc": 1,
+     "manaCost": "{W}",
+     "colors": ["White"],
+     "colorIdentity": ["White"],
+     "superTypes": [],
+     "types": ["Sorcery"],
+     "subTypes": [],
+     "text": "Do nothing.",
+     "manaProduction": {"W": null, "U": null, "B": null, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 4,
+   "categories": ["Land"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-anyland",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-anyland",
+     "name": "Any Colour Land",
+     "cmc": 0,
+     "manaCost": "",
+     "colors": [],
+     "colorIdentity": [],
+     "superTypes": [],
+     "types": ["Land"],
+     "subTypes": [],
+     "text": "{T}: Add one mana of any colour.",
+     "manaProduction": {"W": 1, "U": 1, "B": 1, "R": 1, "G": 1, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 5,
+   "categories": ["Creature"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-offcolour",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-offcolour",
+     "name": "Off Colour Intruder",
+     "cmc": 3,
+     "manaCost": "{2}{G}",
+     "colors": ["Green"],
+     "colorIdentity": ["Green"],
+     "superTypes": [],
+     "types": ["Creature"],
+     "subTypes": ["Elf"],
+     "text": "Trample.",
+     "manaProduction": {"W": null, "U": null, "B": null, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 6,
+   "categories": ["Land"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-modal",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-modal",
+     "name": "Modal Front // Modal Back",
+     "cmc": 0,
+     "manaCost": "",
+     "colors": [],
+     "colorIdentity": ["Black"],
+     "superTypes": [],
+     "types": ["Land"],
+     "subTypes": [],
+     "layout": "modal_dfc",
+     "text": "",
+     "manaProduction": {"W": null, "U": null, "B": 1, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": [
+      {"name": "Modal Front", "text": "{T}: Add {B}.", "manaCost": "", "types": ["Land"]},
+      {"name": "Modal Back", "text": "Search your library for a land card.", "manaCost": "", "types": ["Land"]}
+     ]
+    }
+   }
+  },
+  {
+   "id": 7,
+   "categories": ["Artifact"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-prosemana",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-prosemana",
+     "name": "Prose Mana Altar",
+     "cmc": 3,
+     "manaCost": "{3}",
+     "colors": [],
+     "colorIdentity": [],
+     "superTypes": [],
+     "types": ["Artifact"],
+     "subTypes": [],
+     "text": "Sacrifice a creature: Add one mana of any colour.",
+     "manaProduction": {"W": 1, "U": 1, "B": 1, "R": 1, "G": 1, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 8,
+   "categories": ["Sorcery"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-edict",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-edict",
+     "name": "Test Edict",
+     "cmc": 3,
+     "manaCost": "{2}{B}",
+     "colors": ["Black"],
+     "colorIdentity": ["Black"],
+     "superTypes": [],
+     "types": ["Sorcery"],
+     "subTypes": [],
+     "text": "Each opponent sacrifices a creature.",
+     "manaProduction": {"W": null, "U": null, "B": null, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 9,
+   "categories": ["Sorcery"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-wrath",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-wrath",
+     "name": "Test Wrath",
+     "cmc": 4,
+     "manaCost": "{2}{W}{W}",
+     "colors": ["White"],
+     "colorIdentity": ["White"],
+     "superTypes": [],
+     "types": ["Sorcery"],
+     "subTypes": [],
+     "text": "Destroy all creatures.",
+     "manaProduction": {"W": null, "U": null, "B": null, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "legal"},
+     "faces": []
+    }
+   }
+  },
+  {
+   "id": 10,
+   "categories": ["Sorcery"],
+   "quantity": 1,
+   "card": {
+    "uid": "printing-id-banned",
+    "edition": {"editioncode": "tst"},
+    "oracleCard": {
+     "uid": "oracle-id-banned",
+     "name": "Banned Spell",
+     "cmc": 1,
+     "manaCost": "{B}",
+     "colors": ["Black"],
+     "colorIdentity": ["Black"],
+     "superTypes": [],
+     "types": ["Sorcery"],
+     "subTypes": [],
+     "text": "Win the game.",
+     "manaProduction": {"W": null, "U": null, "B": null, "R": null, "G": null, "C": null},
+     "legalities": {"commander": "banned"},
+     "faces": []
+    }
+   }
+  }
+ ]
+}

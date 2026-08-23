@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Test / tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# The Scryfall bulk cache lives in ~/.cache/mtgai by default and is
+# regenerable, but keep any stray local copy out of the repo.
+*.sqlite
+*.jsonl.gz

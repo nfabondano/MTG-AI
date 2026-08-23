@@ -1,0 +1,1103 @@
+{
+ "id": 6000000,
+ "name": "Block Izzet discard tempo",
+ "deckFormat": 1,
+ "edhBracket": null,
+ "owner": {
+  "id": 121451,
+  "username": "Amrytioa",
+  "avatar": "https://storage.googleapis.com/topdekt-user/avatars/default/avatar_colorless.svg",
+  "frame": null,
+  "ckAffiliate": "",
+  "tcgAffiliate": "",
+  "referrerEnum": null
+ },
+ "updatedAt": "2023-12-01T22:13:22.508789Z",
+ "categories": [
+  {
+   "id": 54596917,
+   "name": "Maybeboard",
+   "isPremier": false,
+   "includedInDeck": false,
+   "includedInPrice": false
+  },
+  {
+   "id": 54596543,
+   "name": "Land",
+   "isPremier": false,
+   "includedInDeck": true,
+   "includedInPrice": true
+  },
+  {
+   "id": 54593507,
+   "name": "Instant",
+   "isPremier": false,
+   "includedInDeck": true,
+   "includedInPrice": true
+  },
+  {
+   "id": 54593354,
+   "name": "Enchantment",
+   "isPremier": false,
+   "includedInDeck": true,
+   "includedInPrice": true
+  },
+  {
+   "id": 54592903,
+   "name": "Artifact",
+   "isPremier": false,
+   "includedInDeck": true,
+   "includedInPrice": true
+  },
+  {
+   "id": 54592840,
+   "name": "Sorcery",
+   "isPremier": false,
+   "includedInDeck": true,
+   "includedInPrice": true
+  },
+  {
+   "id": 54592684,
+   "name": "Creature",
+   "isPremier": false,
+   "includedInDeck": true,
+   "includedInPrice": true
+  }
+ ],
+ "cards": [
+  {
+   "id": 1533893682,
+   "categories": [
+    "Maybeboard",
+    "Artifact"
+   ],
+   "quantity": 2,
+   "card": {
+    "uid": "9d11e3d4-769d-47aa-8d3a-ce1ac60b68b8",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 2,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 14222,
+     "faces": [],
+     "layout": "normal",
+     "uid": "b9080653-87cb-4443-a4a3-36637d5ad165",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{1}{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Pirate Hat",
+     "salt": 0.27,
+     "subTypes": [
+      "Equipment"
+     ],
+     "superTypes": [],
+     "keywords": [
+      "Equip"
+     ],
+     "text": "Equipped creature gets +1/+1 and has \"Whenever this creature attacks, draw a card, then discard a card.\"\nEquip Pirate {1}\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+     "types": [
+      "Artifact"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533894361,
+   "categories": [
+    "Sorcery"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "0685afcb-06f6-4d18-b8c2-510764558dc1",
+    "edition": {
+     "editioncode": "woe"
+    },
+    "oracleCard": {
+     "cmc": 2,
+     "colorIdentity": [
+      "Red"
+     ],
+     "colors": [
+      "Red"
+     ],
+     "edhrecRank": 4143,
+     "faces": [],
+     "layout": "normal",
+     "uid": "00807825-88e5-4b88-8527-a49f553a91be",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "not_legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{1}{R}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Witch's Mark",
+     "salt": 0.11,
+     "subTypes": [],
+     "superTypes": [],
+     "keywords": [
+      "Role token"
+     ],
+     "text": "You may discard a card. If you do, draw two cards.\nCreate a Wicked Role token attached to up to one target creature you control. (If you control another Role on it, put that one into the graveyard. Enchanted creature gets +1/+1. When this token is put into a graveyard, each opponent loses 1 life.)",
+     "types": [
+      "Sorcery"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533892476,
+   "categories": [
+    "Maybeboard",
+    "Sorcery"
+   ],
+   "quantity": 2,
+   "card": {
+    "uid": "625690d3-7131-45de-adea-9c927241e661",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 4,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 12237,
+     "faces": [],
+     "layout": "normal",
+     "uid": "dbfa2743-34ff-40e3-81f7-740fc08cd18a",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "not_legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{3}{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Ancestral Reminiscence",
+     "salt": 0.0,
+     "subTypes": [],
+     "superTypes": [],
+     "keywords": [],
+     "text": "Draw three cards, then discard a card.",
+     "types": [
+      "Sorcery"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533892908,
+   "categories": [
+    "Artifact"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "d61d8895-7f2e-4c77-951f-4f1a49e96f57",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 3,
+     "colorIdentity": [
+      "Red"
+     ],
+     "colors": [
+      "Red"
+     ],
+     "edhrecRank": 1560,
+     "faces": [
+      {
+       "colors": [
+        "Red"
+       ],
+       "flavor": "",
+       "manaCost": "{2}{R}",
+       "name": "Brass's Tunnel-Grinder",
+       "power": "",
+       "subTypes": [],
+       "superTypes": [
+        "Legendary"
+       ],
+       "text": "When Brass's Tunnel-Grinder enters, discard any number of cards, then draw that many cards plus one.\nAt the beginning of your end step, if you descended this turn, put a bore counter on Brass's Tunnel-Grinder. Then if there are three or more bore counters on it, remove those counters and transform it. (You descended if a permanent card was put into your graveyard from anywhere.)",
+       "toughness": "",
+       "types": [
+        "Artifact"
+       ],
+       "loyalty": null
+      },
+      {
+       "colors": [],
+       "flavor": "",
+       "manaCost": "",
+       "name": "Tecutlan, the Searing Rift",
+       "power": "",
+       "subTypes": [
+        "Cave"
+       ],
+       "superTypes": [
+        "Legendary"
+       ],
+       "text": "(Transforms from Brass's Tunnel-Grinder.)\n{T}: Add {R}.\nWhenever you cast a permanent spell using mana produced by Tecutlan, discover X, where X is that spell's mana value.",
+       "toughness": "",
+       "types": [
+        "Land"
+       ],
+       "loyalty": null
+      }
+     ],
+     "layout": "transform",
+     "uid": "af1553eb-4f9f-4335-9078-56649bd8d8fc",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": 1,
+      "G": null,
+      "C": null
+     },
+     "name": "Brass's Tunnel-Grinder // Tecutlan, the Searing Rift",
+     "salt": 0.2,
+     "subTypes": [],
+     "superTypes": [
+      "Legendary"
+     ],
+     "keywords": [
+      "Discover",
+      "Transform"
+     ],
+     "text": "",
+     "types": [
+      "Artifact"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533893360,
+   "categories": [
+    "Creature"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "edc035ca-f0a3-4814-9405-d6dc6f048315",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 6,
+     "colorIdentity": [
+      "Red"
+     ],
+     "colors": [
+      "Red"
+     ],
+     "edhrecRank": 1629,
+     "faces": [],
+     "layout": "normal",
+     "uid": "f2ef8bda-373d-4387-900d-0f1b6ccf72e9",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{4}{R}{R}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Trumpeting Carnosaur",
+     "salt": 0.32,
+     "subTypes": [
+      "Dinosaur"
+     ],
+     "superTypes": [],
+     "keywords": [
+      "Trample",
+      "Discover"
+     ],
+     "text": "Trample\nWhen this creature enters, discover 5.\n{2}{R}, Discard this card: It deals 3 damage to target creature or planeswalker.",
+     "types": [
+      "Creature"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533891935,
+   "categories": [
+    "Creature"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "19d6834d-afa3-4747-a62d-0654f4d9729f",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 2,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 1551,
+     "faces": [],
+     "layout": "normal",
+     "uid": "3bba3b36-f8d7-4fd6-892a-797226210b6e",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{1}{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Malcolm, Alluring Scoundrel",
+     "salt": 0.33,
+     "subTypes": [
+      "Pirate",
+      "Siren"
+     ],
+     "superTypes": [
+      "Legendary"
+     ],
+     "keywords": [
+      "Flying",
+      "Flash"
+     ],
+     "text": "Flash\nFlying\nWhenever Malcolm deals combat damage to a player, put a chorus counter on it. Draw a card, then discard a card. If there are four or more chorus counters on Malcolm, you may cast the discarded card without paying its mana cost.",
+     "types": [
+      "Creature"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533897632,
+   "categories": [
+    "Creature"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "41e54343-95e5-4dc4-9f18-e4a415fe5e0a",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 1,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 7543,
+     "faces": [],
+     "layout": "normal",
+     "uid": "4ec9d9eb-14e2-47ea-88a2-d2394e363784",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "not_legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Spyglass Siren",
+     "salt": 0.62,
+     "subTypes": [
+      "Pirate",
+      "Siren"
+     ],
+     "superTypes": [],
+     "keywords": [
+      "Flying",
+      "Explore"
+     ],
+     "text": "Flying\nWhen this creature enters, create a Map token. (It's an artifact with \"{1}, {T}, Sacrifice this token: Target creature you control explores. Activate only as a sorcery.\")",
+     "types": [
+      "Creature"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533897298,
+   "categories": [
+    "Maybeboard",
+    "Instant"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "24447e36-a42f-40a9-ad44-e904b6f9b276",
+    "edition": {
+     "editioncode": "woe"
+    },
+    "oracleCard": {
+     "cmc": 2,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 4018,
+     "faces": [],
+     "layout": "normal",
+     "uid": "f9bf996e-ae14-40a3-a8d8-f5725ddaa270",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "not_legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{1}{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Spell Stutter",
+     "salt": 0.35,
+     "subTypes": [],
+     "superTypes": [],
+     "keywords": [],
+     "text": "Counter target spell unless its controller pays {2} plus an additional {1} for each Faerie you control.",
+     "types": [
+      "Instant"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533893472,
+   "categories": [
+    "Maybeboard",
+    "Artifact"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "0bdc79c6-1193-46bd-931d-2c2a0381e420",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 2,
+     "colorIdentity": [
+      "Red"
+     ],
+     "colors": [
+      "Red"
+     ],
+     "edhrecRank": 14866,
+     "faces": [
+      {
+       "colors": [
+        "Red"
+       ],
+       "flavor": "",
+       "manaCost": "{1}{R}",
+       "name": "Saheeli's Lattice",
+       "power": "",
+       "subTypes": [],
+       "superTypes": [],
+       "text": "When this artifact enters, you may discard a card. If you do, draw two cards.\nCraft with one or more Dinosaurs {4}{R} ({4}{R}, Exile this artifact, Exile one or more Dinosaurs you control and/or Dinosaur cards from your graveyard: Return this card transformed under its owner's control. Craft only as a sorcery.)",
+       "toughness": "",
+       "types": [
+        "Artifact"
+       ],
+       "loyalty": null
+      },
+      {
+       "colors": [
+        "Red"
+       ],
+       "flavor": "While Huatli ventured underground, Saheeli used her unique expertise to bolster the Sun Empire's defenses.",
+       "manaCost": "",
+       "name": "Mastercraft Raptor",
+       "power": "*",
+       "subTypes": [
+        "Dinosaur"
+       ],
+       "superTypes": [],
+       "text": "Mastercraft Raptor's power is equal to the total power of the exiled cards used to craft it.",
+       "toughness": "4",
+       "types": [
+        "Creature",
+        "Artifact"
+       ],
+       "loyalty": null
+      }
+     ],
+     "layout": "transform",
+     "uid": "ef8df503-6160-4e40-a689-49e97fd56cd0",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "not_legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Saheeli's Lattice // Mastercraft Raptor",
+     "salt": 0.19,
+     "subTypes": [],
+     "superTypes": [],
+     "keywords": [
+      "Transform",
+      "Craft"
+     ],
+     "text": "",
+     "types": [
+      "Artifact"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533894149,
+   "categories": [
+    "Maybeboard",
+    "Creature"
+   ],
+   "quantity": 2,
+   "card": {
+    "uid": "c8090bcf-e17a-4110-a518-77ccd045b18f",
+    "edition": {
+     "editioncode": "woe"
+    },
+    "oracleCard": {
+     "cmc": 2,
+     "colorIdentity": [
+      "Red"
+     ],
+     "colors": [
+      "Red"
+     ],
+     "edhrecRank": 3441,
+     "faces": [],
+     "layout": "normal",
+     "uid": "9eec304d-ffcb-4287-b877-280ac1e4f496",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{1}{R}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Charming Scoundrel",
+     "salt": 0.12,
+     "subTypes": [
+      "Human",
+      "Rogue"
+     ],
+     "superTypes": [],
+     "keywords": [
+      "Treasure",
+      "Role token",
+      "Haste"
+     ],
+     "text": "Haste\nWhen this creature enters, choose one \u2014\n\u2022 Discard a card, then draw a card.\n\u2022 Create a Treasure token.\n\u2022 Create a Wicked Role token attached to target creature you control.",
+     "types": [
+      "Creature"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533898878,
+   "categories": [
+    "Maybeboard",
+    "Creature"
+   ],
+   "quantity": 2,
+   "card": {
+    "uid": "907b3d1d-8c85-4707-80b5-c4d832df9846",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 3,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 2742,
+     "faces": [],
+     "layout": "normal",
+     "uid": "2993dc7d-723d-4a9b-94bd-4bb02a9f7243",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "not_legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{2}{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Tishana's Tidebinder",
+     "salt": 0.52,
+     "subTypes": [
+      "Wizard",
+      "Merfolk"
+     ],
+     "superTypes": [],
+     "keywords": [
+      "Flash"
+     ],
+     "text": "Flash\nWhen this creature enters, counter up to one target activated or triggered ability. If an ability of an artifact, creature, or planeswalker is countered this way, that permanent loses all abilities for as long as this creature remains on the battlefield. (Mana abilities can't be targeted.)",
+     "types": [
+      "Creature"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  },
+  {
+   "id": 1533896013,
+   "categories": [
+    "Maybeboard",
+    "Enchantment"
+   ],
+   "quantity": 4,
+   "card": {
+    "uid": "b0c504ef-2382-4174-9b1d-5f38e12a28fc",
+    "edition": {
+     "editioncode": "lci"
+    },
+    "oracleCard": {
+     "cmc": 2,
+     "colorIdentity": [
+      "Blue"
+     ],
+     "colors": [
+      "Blue"
+     ],
+     "edhrecRank": 3781,
+     "faces": [],
+     "layout": "normal",
+     "uid": "c37eae65-1afe-4242-b677-24dd40e6f401",
+     "legalities": {
+      "alchemy": "legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "legal",
+      "penny": "not_legal",
+      "pioneer": "legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "legal",
+      "future": "legal",
+      "predh": "not_legal",
+      "timeless": "legal",
+      "canlander": "legal"
+     },
+     "manaCost": "{1}{U}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Eaten by Piranhas",
+     "salt": 0.41,
+     "subTypes": [
+      "Aura"
+     ],
+     "superTypes": [],
+     "keywords": [
+      "Enchant",
+      "Flash"
+     ],
+     "text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature loses all abilities and is a black Skeleton creature with base power and toughness 1/1. (It loses all other colors, card types, and creature types.)",
+     "types": [
+      "Enchantment"
+     ],
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false
+    }
+   }
+  }
+ ]
+}
