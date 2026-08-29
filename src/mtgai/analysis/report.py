@@ -65,6 +65,30 @@ def render_analysis(result: dict[str, Any]) -> str:
     return "\n".join(out) + "\n"
 
 
+def _sorted_clusters(data: dict[str, Any]) -> list[tuple[str, int]]:
+    """Commander-wanted clusters first, then by size — the plan before the plumbing."""
+    clusters = data.get("clusters") or {}
+    wants = set(data.get("commander_wants") or [])
+    return sorted(
+        clusters.items(), key=lambda kv: (kv[0] not in wants, -kv[1], kv[0])
+    )
+
+
+def _tribe_line(data: dict[str, Any]) -> str | None:
+    census = data.get("tribe_census") or {}
+    if not census:
+        return None
+    parts = [f"{census['true_type']} true {census['tribe']}s"]
+    if census.get("changelings"):
+        parts.append(f"{census['changelings']} changelings")
+    if census.get("conditional_copies"):
+        parts.append(
+            f"{census['conditional_copies']} copy effects that become "
+            f"{census['tribe']}s when they copy one"
+        )
+    return f"**Tribe:** {' + '.join(parts)}"
+
+
 def _engine_section(data: dict[str, Any]) -> str:
     """What the deck is built around — read this before judging any card."""
     if not data:
@@ -73,11 +97,16 @@ def _engine_section(data: dict[str, Any]) -> str:
     out.append(f"**{data.get('archetype', 'no dominant theme')}**")
     out.append("")
 
-    clusters = data.get("clusters") or {}
+    tribe_line = _tribe_line(data)
+    if tribe_line:
+        out.append(tribe_line)
+        out.append("")
+
+    clusters = _sorted_clusters(data)
     if clusters:
         wants = set(data.get("commander_wants") or [])
         parts = []
-        for name, count in list(clusters.items())[:8]:
+        for name, count in clusters[:8]:
             parts.append(f"{name} {count}{'*' if name in wants else ''}")
         out.append(" · ".join(parts))
         out.append("")
@@ -95,10 +124,12 @@ def _engine_section(data: dict[str, Any]) -> str:
 
     over = data.get("oversupplied") or []
     if over:
-        out.append(
-            "**Oversupplied:** "
-            + ", ".join(f"{e['category']} {e['count']} (want ~{e['target_high']})" for e in over[:4])
-        )
+        parts = []
+        for e in over[:4]:
+            label = f"{e['category']} {e['count']} (want ~{e['target_high']}"
+            label += ", even doubled for the commander)" if e.get("commander_core") else ")"
+            parts.append(label)
+        out.append("**Oversupplied:** " + ", ".join(parts))
         out.append("")
 
     out.append(f"_{data.get('note', '')}_")
@@ -196,13 +227,22 @@ def _curve_section(data: dict[str, Any]) -> str:
 
 def _roles_section(data: dict[str, Any]) -> str:
     out = ["## Roles", ""]
-    out.append("| Role | Count | Typical |")
-    out.append("|---|---:|---:|")
+    tag_counts = data.get("tag_counts") or {}
+    if tag_counts:
+        out.append("| Role | Tags | Oracle text | Typical |")
+        out.append("|---|---:|---:|---:|")
+    else:
+        out.append("| Role | Count | Typical |")
+        out.append("|---|---:|---:|")
     targets = data.get("targets") or {}
     for role, count in data["counts"].items():
         target = targets.get(role)
         target_text = f"{target[0]}–{target[1]}" if target else "—"
-        out.append(f"| {role.title()} | {count} | {target_text} |")
+        if tag_counts:
+            tag_text = tag_counts.get(role, "—")
+            out.append(f"| {role.title()} | {tag_text} | {count} | {target_text} |")
+        else:
+            out.append(f"| {role.title()} | {count} | {target_text} |")
     out.append("")
 
     for finding in data.get("findings", []):
@@ -210,9 +250,15 @@ def _roles_section(data: dict[str, Any]) -> str:
     if data.get("findings"):
         out.append("")
 
-    out.append(
-        "_Roles come from oracle-text matching, so treat the edges as approximate._"
-    )
+    if tag_counts:
+        out.append(
+            "_Measured two ways — human-curated tags and oracle-text matching. "
+            "Where they disagree, the tags are the better signal._"
+        )
+    else:
+        out.append(
+            "_Roles come from oracle-text matching, so treat the edges as approximate._"
+        )
     out.append("")
     return "\n".join(out)
 
@@ -369,6 +415,29 @@ def render_suggestions(
 
     if budget is not None:
         out.append(f"Filtered to cards at or under ${budget:,.2f}.")
+        out.append("")
+
+    fixes = (result.get("engine") or {}).get("mana_fixes") or []
+    if fixes:
+        out.append("## Fix the mana first")
+        out.append("")
+        out.append(
+            "These cards strain the mana base, but they are part of what the deck "
+            "is built around — the fix is sources, not cuts."
+        )
+        out.append("")
+        for fix in fixes:
+            line = (
+                f"- **+{fix['delta']} {fix['color_name']} source"
+                f"{'s' if fix['delta'] > 1 else ''}** — "
+                f"{', '.join(fix['driven_by'])} want ~{fix['needed']}, deck has {fix['have']}"
+            )
+            out.append(line)
+            if fix.get("swap_candidates"):
+                out.append(
+                    f"  - lands producing no {fix['color_name']} worth revisiting: "
+                    + ", ".join(fix["swap_candidates"])
+                )
         out.append("")
 
     out.append("## Consider adding")
@@ -541,16 +610,26 @@ def _build_cuts(
         why = "; ".join(entry["reasons"])
         if entry.get("sole_driver"):
             why += " — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base"
+        if entry.get("alternative"):
+            why += f" (or {entry['alternative']})"
         add(entry["name"], why, "castability", 100 + entry.get("severity", 0))
 
-    # 2. Oversupply — name the specific cards making up the excess, cheapest
-    #    contribution first so the engine's best pieces are not the ones offered.
+    # 2. Oversupply — name the specific cards making up the excess. The
+    #    representative must not be one of the engine's own pieces: a card that
+    #    also serves a core cluster, or is the tribe, is doing double duty and
+    #    offering it would repeat the Ashnod's Altar mistake.
+    core = set(eng.get("core") or [])
+    tribe = eng.get("tribe")
     for over in (eng.get("oversupplied") or [])[:3]:
         category = over["category"]
         members = engine_mod.cards_in_category(deck, category)
         members.sort(key=lambda c: (-(c.mana_value or 0), c.name))
-        for card in members[: over["excess"]]:
+        for card in members:
             if card.is_commander or card.name in protected:
+                continue
+            if set(card.engine_participation) & core:
+                continue
+            if engine_mod.is_tribe_member(card, tribe):
                 continue
             add(
                 card.name,
@@ -626,6 +705,11 @@ def render_engine(result: dict[str, Any]) -> str:
     out.append(f"## Archetype\n\n{data.get('archetype', 'unknown')}")
     out.append("")
 
+    tribe_line = _tribe_line(data)
+    if tribe_line:
+        out.append(tribe_line)
+        out.append("")
+
     wants = data.get("commander_wants") or []
     if wants:
         commander = ", ".join(data.get("commander") or []) or "The commander"
@@ -633,12 +717,23 @@ def render_engine(result: dict[str, Any]) -> str:
         out.append(", ".join(wants))
         out.append("")
 
-    clusters = data.get("clusters") or {}
+    clusters = _sorted_clusters(data)
     if clusters:
         out.append("## Clusters\n")
-        for name, count in clusters.items():
+        for name, count in clusters:
             marker = " *(commander wants this)*" if name in set(wants) else ""
             out.append(f"- **{name}** — {count} cards{marker}")
+        out.append("")
+
+    fixes = data.get("mana_fixes") or []
+    if fixes:
+        out.append("## Mana-base fixes before cuts\n")
+        for fix in fixes:
+            out.append(
+                f"- +{fix['delta']} {fix['color_name']} source"
+                f"{'s' if fix['delta'] > 1 else ''} — "
+                f"{', '.join(fix['driven_by'])} want ~{fix['needed']}, deck has {fix['have']}"
+            )
         out.append("")
 
     strain = data.get("castability") or []

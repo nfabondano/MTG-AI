@@ -28,12 +28,53 @@ def price_summary(deck: Deck, *, top: int = 10) -> dict[str, Any]:
     }
 
 
+# Engine tag categories that measure the same job as an oracle-text role.
+CATEGORY_TO_ROLE = {
+    "ramp": "ramp",
+    "draw": "draw",
+    "removal": "removal",
+    "sweeper": "wipe",
+    "tutor": "tutor",
+    "protection": "protection",
+    "recursion": "recursion",
+}
+
+
+def _reconcile_roles(roles_result: dict[str, Any], engine_result: dict[str, Any]) -> None:
+    """Two counting systems must not contradict each other in one report.
+
+    Oracle-text regexes and curated tags measure the same jobs; where the tags
+    say a role is adequately covered, a regex-derived "too few" finding is
+    noise, not signal — the tags are the better instrument, so it is dropped.
+    """
+    clusters = engine_result.get("clusters") or {}
+    tag_counts = {
+        role: clusters[cat] for cat, role in CATEGORY_TO_ROLE.items() if cat in clusters
+    }
+    roles_result["tag_counts"] = tag_counts
+
+    kept = []
+    for finding in roles_result.get("findings", []):
+        tag_count = tag_counts.get(finding["role"])
+        if tag_count is not None:
+            low, high = finding["target"]
+            if finding["verdict"] == "low" and tag_count >= low:
+                continue  # tags say this job is covered
+            if finding["verdict"] == "high" and tag_count <= high:
+                continue
+            finding["message"] += f" (tags count {tag_count})"
+        kept.append(finding)
+    roles_result["findings"] = kept
+
+
 def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
     """Run the full analysis. Roles are tagged first; everything else uses them."""
     roles.tag_deck(deck)
 
     engine_result = engine.analyse(deck)
     curve_result = curve.analyse(deck)
+    roles_result = roles.analyse(deck)
+    _reconcile_roles(roles_result, engine_result)
     result: dict[str, Any] = {
         "deck": {
             "slug": deck.slug,
@@ -49,7 +90,7 @@ def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
         "legality": legality.analyse(deck),
         "curve": curve_result,
         "mana": mana.analyse(deck, curve_result["average_mana_value"]),
-        "roles": roles.analyse(deck),
+        "roles": roles_result,
         "price": price_summary(deck),
     }
 
@@ -84,6 +125,12 @@ def _headline(result: dict[str, Any]) -> list[str]:
         lines.append(finding["message"])
 
     eng = result.get("engine") or {}
+    for fix in (eng.get("mana_fixes") or [])[:2]:
+        plural = "s" if fix["delta"] > 1 else ""
+        lines.append(
+            f"Fix the mana first: +{fix['delta']} {fix['color_name']} source{plural} — "
+            f"{', '.join(fix['driven_by'][:3])} want ~{fix['needed']}, deck has {fix['have']}."
+        )
     for entry in (eng.get("castability") or [])[:2]:
         if entry.get("sole_driver"):
             lines.append(

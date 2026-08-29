@@ -139,6 +139,25 @@ class CardEntry:
         return self.name in BASIC_LANDS or "Basic" in self.type_line
 
     @property
+    def subtypes(self) -> set[str]:
+        """Subtypes of the front face — "Creature — Ooze Horror" → {"Ooze", "Horror"}.
+
+        Only the front face: a modal card is an Ooze in the deck only when the
+        creature half is the one on the battlefield.
+        """
+        front = self.type_line.split("//")[0]
+        if "—" not in front:
+            return set()
+        return {word for word in front.split("—", 1)[1].split() if word}
+
+    @property
+    def is_changeling(self) -> bool:
+        """Changelings are every creature type at once, tribe included."""
+        if any(k.strip().lower() == "changeling" for k in self.keywords or []):
+            return True
+        return any(str(t).strip().lower() == "changeling" for t in self.tags or [])
+
+    @property
     def primary_type(self) -> str:
         """The face type used for grouping, ignoring supertypes."""
         front = self.type_line.split("//")[0]
