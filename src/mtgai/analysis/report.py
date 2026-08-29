@@ -46,6 +46,7 @@ def render_analysis(result: dict[str, Any]) -> str:
         out.append("- Nothing structural to flag. The deck's shape looks sound.")
     out.append("")
 
+    out.append(_intent_section(result.get("intent") or {}))
     out.append(_engine_section(result.get("engine") or {}))
     out.append(_legality_section(result["legality"]))
     out.append(_mana_section(result["mana"]))
@@ -63,6 +64,42 @@ def render_analysis(result: dict[str, Any]) -> str:
         "agree with in Archidekt yourself._"
     )
     return "\n".join(out) + "\n"
+
+
+def _intent_section(data: dict[str, Any]) -> str:
+    """What Nicolas has declared the deck to be — printed so every judgement
+    below can be checked against it."""
+    if not data:
+        return ""
+    out = ["## Intent (declared)", ""]
+    if data.get("archetype"):
+        out.append(f"**{data['archetype']}**")
+        out.append("")
+    line_bits = []
+    if data.get("tribe"):
+        line_bits.append(f"tribe: {data['tribe']}")
+    if data.get("commander_role"):
+        line_bits.append(f"commander is the {', '.join(data['commander_role'])}")
+    if data.get("power_bracket"):
+        line_bits.append(f"target bracket {data['power_bracket']}")
+    if data.get("budget_per_card") is not None:
+        line_bits.append(f"budget ${data['budget_per_card']:g}/card")
+    if line_bits:
+        out.append(" · ".join(line_bits))
+        out.append("")
+    if data.get("win_conditions"):
+        out.append("Wins by: " + "; ".join(data["win_conditions"]))
+        out.append("")
+    if data.get("core_cards"):
+        out.append(
+            f"Untouchable: {', '.join(data['core_cards'])} — the tool will not "
+            "suggest cutting these."
+        )
+        out.append("")
+    if data.get("meta_notes"):
+        out.append(f"Table notes: {data['meta_notes']}")
+        out.append("")
+    return "\n".join(out)
 
 
 def _sorted_clusters(data: dict[str, Any]) -> list[tuple[str, int]]:
@@ -110,7 +147,7 @@ def _engine_section(data: dict[str, Any]) -> str:
             parts.append(f"{name} {count}{'*' if name in wants else ''}")
         out.append(" · ".join(parts))
         out.append("")
-        out.append("_\* the commander's own text asks for this._")
+        out.append("_\\* the commander's own text asks for this._")
         out.append("")
 
     strain = data.get("castability") or []
@@ -579,10 +616,23 @@ def _build_cuts(
     cuts: list[dict[str, Any]] = []
     seen: set[str] = set()
     eng = result.get("engine") or {}
+    intent_data = result.get("intent") or {}
+    sacred = {
+        name.split("//")[0].strip().lower()
+        for name in intent_data.get("core_cards") or []
+    }
+    flexible = {
+        name.split("//")[0].strip().lower()
+        for name in intent_data.get("flexible_cards") or []
+    }
 
     def add(name: str, why: str, evidence: str, score: int) -> None:
-        key = name.lower()
+        key = name.split("//")[0].strip().lower()
         if key in seen:
+            return
+        # Declared untouchable. Colour-identity violations are the one
+        # exception: an illegal card is a fact, not a suggestion.
+        if key in sacred and evidence != "colour identity":
             return
         seen.add(key)
         cuts.append({"name": name, "why": why, "evidence": evidence, "score": score})
@@ -623,7 +673,13 @@ def _build_cuts(
     for over in (eng.get("oversupplied") or [])[:3]:
         category = over["category"]
         members = engine_mod.cards_in_category(deck, category)
-        members.sort(key=lambda c: (-(c.mana_value or 0), c.name))
+        members.sort(
+            key=lambda c: (
+                c.name.split("//")[0].strip().lower() not in flexible,
+                -(c.mana_value or 0),
+                c.name,
+            )
+        )
         for card in members:
             if card.is_commander or card.name in protected:
                 continue

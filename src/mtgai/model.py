@@ -241,6 +241,9 @@ class Deck:
     updated_at: str = ""
     archidekt_bracket: int | None = None
     imported_at: str = ""
+    # The owner's own words on Archidekt — free intent signal when present.
+    description: str = ""
+    deck_tags: list[str] = field(default_factory=list)
     cards: list[CardEntry] = field(default_factory=list)
     excluded: list[dict[str, Any]] = field(default_factory=list)
 
@@ -310,6 +313,8 @@ class Deck:
             "updated_at": self.updated_at,
             "archidekt_bracket": self.archidekt_bracket,
             "imported_at": self.imported_at,
+            "description": self.description,
+            "deck_tags": self.deck_tags,
             "color_identity": self.color_identity(),
             "total_cards": self.total_cards,
             "commanders": [c.name for c in self.commanders],
@@ -330,6 +335,8 @@ class Deck:
             updated_at=data.get("updated_at", ""),
             archidekt_bracket=data.get("archidekt_bracket"),
             imported_at=data.get("imported_at", ""),
+            description=data.get("description", ""),
+            deck_tags=data.get("deck_tags", []),
             cards=[CardEntry.from_dict(c) for c in data.get("cards", [])],
             excluded=data.get("excluded", []),
         )

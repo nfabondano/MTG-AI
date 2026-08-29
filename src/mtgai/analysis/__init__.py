@@ -67,11 +67,15 @@ def _reconcile_roles(roles_result: dict[str, Any], engine_result: dict[str, Any]
     roles_result["findings"] = kept
 
 
-def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
-    """Run the full analysis. Roles are tagged first; everything else uses them."""
+def analyse(deck: Deck, *, offline: bool = False, intent=None) -> dict[str, Any]:
+    """Run the full analysis. Roles are tagged first; everything else uses them.
+
+    `intent` is the declared deck intent (`mtgai.intent.DeckIntent`) when
+    intent.md exists — it outranks inference wherever the two overlap.
+    """
     roles.tag_deck(deck)
 
-    engine_result = engine.analyse(deck)
+    engine_result = engine.analyse(deck, intent)
     curve_result = curve.analyse(deck)
     roles_result = roles.analyse(deck)
     _reconcile_roles(roles_result, engine_result)
@@ -93,6 +97,8 @@ def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
         "roles": roles_result,
         "price": price_summary(deck),
     }
+    if intent is not None:
+        result["intent"] = intent.to_dict()
 
     if offline:
         result["edhrec"] = {"available": False, "reason": "offline mode"}

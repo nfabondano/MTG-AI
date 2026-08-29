@@ -100,6 +100,56 @@ def commander_wants(deck: Deck) -> list[str]:
     return sorted(wants)
 
 
+# Commander design roles, after JoeyDH's framing: is the commander the setup
+# or the payoff? A force multiplier, or one of a kind? The answer says what
+# the 99 must supply — a payoff commander needs the 99 to provide the fuel and
+# the triggers; an enabler needs payoffs; a standalone threat needs protection.
+_ROLE_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (re.compile(r"whenever (another|a|one or more|you)\b.*\b(dies|die|enters|attacks?|cast|sacrifice|gain|lose|draw)", re.I | re.S), "payoff"),
+    (re.compile(r"\{t\}[^:]*:.*\b(add|create|draw|search|return)\b", re.I | re.S), "enabler"),
+    (re.compile(r"sacrifice (a|another|an) [^:]*:", re.I), "enabler"),
+    (re.compile(r"\bcop(y|ies)\b|\bdouble\b|\btwice\b|\badditional\b", re.I), "force-multiplier"),
+    (re.compile(r"creatures? you control (get|have)\s*\+", re.I), "force-multiplier"),
+    (re.compile(r"(flying|menace|trample|can't be blocked|double strike).*(deals? combat damage|whenever [^.]* attacks)", re.I | re.S), "wincon"),
+    (re.compile(r"(hexproof|ward|indestructible|protection from)", re.I), "standalone"),
+)
+
+
+def classify_commander(deck: Deck) -> dict:
+    """The commander's design role(s) and what the 99 must therefore supply."""
+    roles: list[str] = []
+    for commander in deck.commanders:
+        text = commander.role_text()
+        for pattern, role in _ROLE_PATTERNS:
+            if role not in roles and pattern.search(text):
+                roles.append(role)
+    if not roles:
+        roles = ["glue"]
+
+    wants = set(commander_wants(deck))
+    tribe = commander_tribe(deck)
+    supplies: list[str] = []
+    if "payoff" in roles:
+        if "death-trigger" in wants or "sacrifice" in wants:
+            fuel = f"nontoken {tribe}s worth copying" if tribe else "creatures the trigger counts"
+            supplies.append(f"fuel: {fuel}")
+            supplies.append("triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms")
+            supplies.append("conversion: drain, draw and token payoffs that turn deaths into wins")
+        else:
+            supplies.append("fuel: cards that cause what the commander rewards")
+            supplies.append("conversion: payoffs that turn the reward into wins")
+    if "enabler" in roles:
+        supplies.append("payoffs: cards that want what the commander produces")
+    if "force-multiplier" in roles and "payoff" not in roles:
+        supplies.append("things worth multiplying")
+    if "standalone" in roles or "wincon" in roles:
+        supplies.append("protection: the deck leans on the commander surviving")
+    if roles == ["glue"]:
+        supplies.append("a plan of its own — the commander supports rather than defines it")
+
+    return {"roles": roles, "supplies": supplies, "tribe": tribe}
+
+
 def commander_tribe(deck: Deck) -> str | None:
     """The tribe the commander cares about, if the deck actually plays it.
 
@@ -350,21 +400,32 @@ def castability(deck: Deck) -> list[dict]:
     return findings
 
 
-def oversupplied(deck: Deck, wants: set[str] | None = None) -> list[dict]:
+def oversupplied(
+    deck: Deck,
+    wants: set[str] | None = None,
+    overrides: dict[str, int] | None = None,
+) -> list[dict]:
     """Clusters holding more cards than a deck normally needs.
 
     A category the commander's own text asks for is judged against a doubled
     bound: it is the deck's engine, and the generic target would flag the deck
     for doing the thing it is built to do. If even the doubled bound is passed,
     the finding says so honestly instead of pretending the engine is filler.
+
+    A declared intent overrides both: `core_categories: {ramp: 20}` means
+    Nicolas wants twenty, and twenty is the bound.
     """
     if wants is None:
         wants = set(commander_wants(deck))
+    overrides = overrides or {}
     profile = tagmod.deck_profile(deck)
     out = []
     for category, (_, high) in CATEGORY_TARGETS.items():
         core = category in wants
         bound = high * CORE_TARGET_MULTIPLIER if core else high
+        if category in overrides:
+            bound = overrides[category]
+            core = True
         count = profile.get(category, 0)
         if count > bound:
             out.append(
@@ -435,16 +496,23 @@ def mana_fixes(deck: Deck, demoted: list[dict]) -> list[dict]:
     return fixes
 
 
-def analyse(deck: Deck) -> dict:
-    """The deck's engine: what it is built around, and what strains it."""
+def analyse(deck: Deck, intent=None) -> dict:
+    """The deck's engine: what it is built around, and what strains it.
+
+    A declared intent (`intent.md`) outranks inference wherever the two speak
+    to the same thing: the tribe, the archetype's name, and how deep a cluster
+    is allowed to run.
+    """
     tagmod.ensure_tags(deck)
-    tribe = commander_tribe(deck)
+    tribe = (getattr(intent, "tribe", "") or None) or commander_tribe(deck)
     tag_participation(deck, tribe)
 
     found = clusters(deck)
     wants = commander_wants(deck)
+    overrides: dict[str, int] = dict(getattr(intent, "core_categories", None) or {})
+    wants = sorted(set(wants) | set(overrides))
     strain = castability(deck)
-    excess = oversupplied(deck, set(wants))
+    excess = oversupplied(deck, set(wants), overrides)
 
     # Name the archetype from the biggest clusters the commander cares about.
     # Every deck has a dozen incidental overlaps; the archetype is the top few.
@@ -491,15 +559,22 @@ def analyse(deck: Deck) -> dict:
     archetype_parts = list(core)
     if tribe and "typal" in archetype_parts:
         archetype_parts[archetype_parts.index("typal")] = f"{tribe} typal"
+    inferred = " + ".join(archetype_parts) if archetype_parts else "no dominant theme"
+    declared = getattr(intent, "archetype", "") or ""
+    if declared and declared != inferred:
+        archetype = f"{declared} (inferred: {inferred})"
+    else:
+        archetype = declared or inferred
 
     return {
         "commander": [c.name for c in deck.commanders],
         "commander_wants": wants,
+        "commander_role": classify_commander(deck),
         "tribe": tribe,
         "tribe_census": tribe_census(deck, tribe),
         "clusters": found,
         "core": core,
-        "archetype": " + ".join(archetype_parts) if archetype_parts else "no dominant theme",
+        "archetype": archetype,
         "castability": strain,
         "castability_cuts": cuts,
         "mana_fixes": mana_fixes(deck, demoted),

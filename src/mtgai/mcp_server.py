@@ -106,6 +106,30 @@ def deck_engine(reference: str) -> dict[str, Any]:
 
 
 @mcp.tool()
+def deck_intent(reference: str) -> dict[str, Any]:
+    """What this deck is declared to be about (intent.md), beside the inference.
+
+    Use this to run the intent interview: `inferred` holds the tool's guess
+    (archetype, tribe, commander role, what the 99 must supply) to pre-fill
+    questions; `intent` holds what Nicolas has declared, which analysis obeys.
+    """
+    return service.deck_intent_show(reference)
+
+
+@mcp.tool()
+def deck_intent_set(reference: str, assignments: dict[str, str]) -> dict[str, Any]:
+    """Write interview answers into intent.md, creating it on first use.
+
+    assignments maps field to value: archetype, tribe, win_conditions,
+    core_cards (sacred — never suggested as cuts; '+Name' adds, '-Name'
+    removes), flexible_cards, core_categories ('ramp=20, draw=15'),
+    budget_per_card, power_bracket, meta_notes, prose. Analysis and
+    suggestions obey the result immediately.
+    """
+    return service.deck_intent_set(reference, assignments)
+
+
+@mcp.tool()
 def card_lookup(name: str) -> dict[str, Any]:
     """Look up a Magic card on Scryfall by exact name."""
     return service.card_lookup(name)
