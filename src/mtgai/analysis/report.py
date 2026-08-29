@@ -307,9 +307,28 @@ def _edhrec_section(data: dict[str, Any]) -> str:
         out.append("")
         return "\n".join(out)
 
+    if data.get("basis_label"):
+        out.append(f"**Basis:** {data['basis_label']}.")
+        out.append("")
     sample = data.get("sample_size") or 0
-    if sample:
+    if sample and data.get("basis") != "theme":
         out.append(f"Compared against ~{sample:,} decks with this commander.")
+        out.append("")
+    if data.get("small_sample"):
+        out.append(
+            f"> Small sample ({sample} decks) — every number below is weak evidence."
+        )
+        out.append("")
+
+    themes = data.get("themes") or []
+    if themes:
+        parts = [f"{t['name']} ({t['count']})" for t in themes[:6]]
+        out.append(f"Build variants EDHREC tracks: {', '.join(parts)}.")
+        out.append("")
+
+    similar = data.get("similar") or []
+    if similar:
+        out.append(f"Closest established commanders: {', '.join(similar[:6])}.")
         out.append("")
 
     staples = data.get("missing_staples") or []
@@ -318,6 +337,12 @@ def _edhrec_section(data: dict[str, Any]) -> str:
         out.append("")
         for entry in staples:
             out.append(f"- {entry['name']} — in {entry['inclusion']:.0%} of decks")
+        out.append("")
+
+    mana_staples = data.get("missing_mana_staples") or []
+    if mana_staples:
+        names = ", ".join(e["name"] for e in mana_staples[:8])
+        out.append(f"_Mana-base staples missing (separate on purpose): {names}._")
         out.append("")
 
     synergy = data.get("missing_synergy") or []

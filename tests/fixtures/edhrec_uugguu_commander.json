@@ -1,0 +1,414 @@
+{
+ "container": {
+  "json_dict": {
+   "card": {
+    "name": "Uugguu, the Omniplasm",
+    "num_decks": 2589
+   },
+   "cardlists": [
+    {
+     "header": "New Cards",
+     "cardviews": [
+      {
+       "name": "Tom, Bert, and William",
+       "synergy": 0.06491101000698815,
+       "num_decks": 180,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Orcrist, Goblin-cleaver",
+       "synergy": 0.030817428131804478,
+       "num_decks": 108,
+       "potential_decks": 2589
+      },
+      {
+       "name": "My Precious",
+       "synergy": 0.0013699618116336677,
+       "num_decks": 25,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Radagast of Rhosgobel",
+       "synergy": -0.009913717772696415,
+       "num_decks": 21,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Hobbit Hole",
+       "synergy": -0.00799529790299976,
+       "num_decks": 16,
+       "potential_decks": 2589
+      }
+     ]
+    },
+    {
+     "header": "High Synergy Cards",
+     "cardviews": [
+      {
+       "name": "Biowaste Blob",
+       "synergy": 0.7493993848734809,
+       "num_decks": 1974,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Biogenic Ooze",
+       "synergy": 0.6848051630738878,
+       "num_decks": 1802,
+       "potential_decks": 2589
+      },
+      {
+       "name": "March of the World Ooze",
+       "synergy": 0.648030581795738,
+       "num_decks": 1714,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Acidic Slime",
+       "synergy": 0.6313517771908861,
+       "num_decks": 1728,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Mitotic Slime",
+       "synergy": 0.6090025068673759,
+       "num_decks": 1600,
+       "potential_decks": 2589
+      }
+     ]
+    },
+    {
+     "header": "Top Cards",
+     "cardviews": [
+      {
+       "name": "Victimize",
+       "synergy": 0.42456135144859297,
+       "num_decks": 1538,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Mutable Explorer",
+       "synergy": 0.5121533325596367,
+       "num_decks": 1403,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Phyrexian Metamorph",
+       "synergy": 0.48457298323371323,
+       "num_decks": 1365,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Predator Ooze",
+       "synergy": 0.5014447738180313,
+       "num_decks": 1350,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Green Slime",
+       "synergy": 0.5114594569962986,
+       "num_decks": 1349,
+       "potential_decks": 2589
+      }
+     ]
+    },
+    {
+     "header": "Lands",
+     "cardviews": [
+      {
+       "name": "Forest",
+       "synergy": 0.039032814207850874,
+       "num_decks": 2472,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Island",
+       "synergy": 0.03067859423206143,
+       "num_decks": 2434,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Swamp",
+       "synergy": 0.032975679576953465,
+       "num_decks": 2424,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Command Tower",
+       "synergy": 0.021853393149290468,
+       "num_decks": 2394,
+       "potential_decks": 2589
+      },
+      {
+       "name": "Breeding Pool",
+       "synergy": 0.200964292364693,
+       "num_decks": 1761,
+       "potential_decks": 2589
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "panels": {
+  "taglinks": [
+   {
+    "count": 130,
+    "slug": "tokens",
+    "value": "Tokens"
+   },
+   {
+    "count": 115,
+    "slug": "clones",
+    "value": "Clones"
+   },
+   {
+    "count": 86,
+    "slug": "oozes",
+    "value": "Oozes"
+   },
+   {
+    "count": 58,
+    "slug": "plus-1-plus-1-counters",
+    "value": "+1/+1 Counters"
+   },
+   {
+    "count": 31,
+    "slug": "reanimator",
+    "value": "Reanimator"
+   },
+   {
+    "count": 25,
+    "slug": "aristocrats",
+    "value": "Aristocrats"
+   },
+   {
+    "count": 21,
+    "slug": "slime-against-humanity",
+    "value": "Slime Against Humanity"
+   },
+   {
+    "count": 18,
+    "slug": "birthing-pod",
+    "value": "Birthing Pod"
+   },
+   {
+    "count": 17,
+    "slug": "sacrifice",
+    "value": "Sacrifice"
+   },
+   {
+    "count": 17,
+    "slug": "shapeshifters",
+    "value": "Shapeshifters"
+   },
+   {
+    "count": 12,
+    "slug": "combo",
+    "value": "Combo"
+   },
+   {
+    "count": 11,
+    "slug": "populate",
+    "value": "Populate"
+   },
+   {
+    "count": 8,
+    "slug": "midrange",
+    "value": "Midrange"
+   },
+   {
+    "count": 7,
+    "slug": "graveyard",
+    "value": "Graveyard"
+   },
+   {
+    "count": 6,
+    "slug": "etb",
+    "value": "ETB"
+   },
+   {
+    "count": 5,
+    "slug": "legends",
+    "value": "Legends"
+   },
+   {
+    "count": 4,
+    "slug": "mutate",
+    "value": "Mutate"
+   },
+   {
+    "count": 4,
+    "slug": "ramp",
+    "value": "Ramp"
+   },
+   {
+    "count": 4,
+    "slug": "type-hack",
+    "value": "Type Hack"
+   },
+   {
+    "count": 3,
+    "slug": "aggro",
+    "value": "Aggro"
+   },
+   {
+    "count": 3,
+    "slug": "toolbox",
+    "value": "Toolbox"
+   },
+   {
+    "count": 3,
+    "slug": "x-spells",
+    "value": "X Spells"
+   },
+   {
+    "count": 2,
+    "slug": "commander-matters",
+    "value": "Commander Matters"
+   },
+   {
+    "count": 2,
+    "slug": "good-stuff",
+    "value": "Good Stuff"
+   },
+   {
+    "count": 2,
+    "slug": "self-mill",
+    "value": "Self-Mill"
+   },
+   {
+    "count": 2,
+    "slug": "theft",
+    "value": "Theft"
+   },
+   {
+    "count": 1,
+    "slug": "minus-1-minus-1-counters",
+    "value": "-1/-1 Counters"
+   },
+   {
+    "count": 1,
+    "slug": "activated-abilities",
+    "value": "Activated Abilities"
+   },
+   {
+    "count": 1,
+    "slug": "aikido",
+    "value": "Aikido"
+   },
+   {
+    "count": 1,
+    "slug": "card-draw",
+    "value": "Card Draw"
+   },
+   {
+    "count": 1,
+    "slug": "chaos",
+    "value": "Chaos"
+   },
+   {
+    "count": 1,
+    "slug": "convoke",
+    "value": "Convoke"
+   },
+   {
+    "count": 1,
+    "slug": "counters-matter",
+    "value": "Counters Matter"
+   },
+   {
+    "count": 1,
+    "slug": "cycling",
+    "value": "Cycling"
+   },
+   {
+    "count": 1,
+    "slug": "defenders",
+    "value": "Defenders"
+   },
+   {
+    "count": 1,
+    "slug": "devotion",
+    "value": "Devotion"
+   },
+   {
+    "count": 1,
+    "slug": "dredge",
+    "value": "Dredge"
+   },
+   {
+    "count": 1,
+    "slug": "flashback",
+    "value": "Flashback"
+   },
+   {
+    "count": 1,
+    "slug": "flying",
+    "value": "Flying"
+   },
+   {
+    "count": 1,
+    "slug": "forced-combat",
+    "value": "Forced Combat"
+   },
+   {
+    "count": 1,
+    "slug": "glass-cannon",
+    "value": "Glass Cannon"
+   },
+   {
+    "count": 1,
+    "slug": "horrors",
+    "value": "Horrors"
+   },
+   {
+    "count": 1,
+    "slug": "lifedrain",
+    "value": "Lifedrain"
+   },
+   {
+    "count": 1,
+    "slug": "ltb-effects",
+    "value": "LTB Effects"
+   },
+   {
+    "count": 1,
+    "slug": "mill",
+    "value": "Mill"
+   },
+   {
+    "count": 1,
+    "slug": "myr",
+    "value": "Myr"
+   },
+   {
+    "count": 1,
+    "slug": "spellslinger",
+    "value": "Spellslinger"
+   },
+   {
+    "count": 1,
+    "slug": "tempo",
+    "value": "Tempo"
+   },
+   {
+    "count": 1,
+    "slug": "triggered-abilities",
+    "value": "Triggered Abilities"
+   },
+   {
+    "count": 1,
+    "slug": "zoo",
+    "value": "Zoo"
+   }
+  ]
+ },
+ "similar": [
+  "The Mimeoplasm",
+  "Ratadrabik of Urborg",
+  "Hofri Ghostforge",
+  "Aeve, Progenitor Ooze",
+  "Myrkul, Lord of Bones",
+  "Experiment Kraj"
+ ]
+}

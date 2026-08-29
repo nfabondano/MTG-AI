@@ -166,8 +166,15 @@ def card_lookup(name: str) -> dict[str, Any]:
     }
 
 
-def edhrec_commander(name: str, *, limit: int = 25) -> dict[str, Any]:
+def edhrec_commander(name: str, *, limit: int = 25, theme: str = "") -> dict[str, Any]:
     data = edhrec.commander_for([name])
+    if data.found and theme:
+        themed = edhrec.theme(data.slug, theme)
+        if themed.found:
+            themed.themes, themed.similar = data.themes, data.similar
+            data = themed
+        else:
+            return {"found": False, "commander": name, "theme": theme, "reason": themed.error}
     if not data.found:
         return {"found": False, "commander": name, "reason": data.error}
     top = sorted(data.recommendations, key=lambda r: -r.synergy)[:limit]
@@ -175,6 +182,9 @@ def edhrec_commander(name: str, *, limit: int = 25) -> dict[str, Any]:
         "found": True,
         "commander": name,
         "slug": data.slug,
+        "num_decks": data.num_decks,
+        "themes": data.themes,
+        "similar": data.similar,
         "recommendations": [r.to_dict() for r in top],
     }
 

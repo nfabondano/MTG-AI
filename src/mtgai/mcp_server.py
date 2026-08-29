@@ -136,9 +136,14 @@ def card_lookup(name: str) -> dict[str, Any]:
 
 
 @mcp.tool()
-def edhrec_commander(commander: str, limit: int = 25) -> dict[str, Any]:
-    """EDHREC's highest-synergy cards for a commander, with inclusion rates."""
-    return service.edhrec_commander(commander, limit=limit)
+def edhrec_commander(commander: str, limit: int = 25, theme: str = "") -> dict[str, Any]:
+    """EDHREC's highest-synergy cards for a commander, with inclusion rates.
+
+    Also returns the commander's build variants (themes, with deck counts) and
+    the closest similar commanders. Pass theme (a slug from `themes`, e.g.
+    "clones") to read that variant's page instead of the all-builds average.
+    """
+    return service.edhrec_commander(commander, limit=limit, theme=theme)
 
 
 @mcp.tool()

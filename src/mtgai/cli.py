@@ -374,16 +374,26 @@ def card(
 def edhrec_cmd(
     commander: str = typer.Argument(..., help="Commander name."),
     limit: int = typer.Option(25, "--limit"),
+    theme: str = typer.Option(
+        "", "--theme", help="Restrict to one build variant's page, e.g. 'clones'."
+    ),
     json_out: bool = typer.Option(False, "--json"),
 ) -> None:
     """Show EDHREC's top recommendations for a commander."""
-    data = service.edhrec_commander(commander, limit=limit)
+    data = service.edhrec_commander(commander, limit=limit, theme=theme)
     if json_out:
         _emit(data)
         return
     if not data["found"]:
         _fail(data.get("reason") or "no EDHREC data")
         return
+    if data.get("num_decks"):
+        console.print(f"[dim]{data['num_decks']:,} decks on this page[/dim]")
+    if data.get("themes"):
+        parts = ", ".join(f"{t['name']} ({t['count']})" for t in data["themes"][:6])
+        console.print(f"[dim]build variants: {parts} — --theme <slug> to view one[/dim]")
+    if data.get("similar"):
+        console.print(f"[dim]similar commanders: {', '.join(data['similar'][:6])}[/dim]")
     table = Table(show_header=True, header_style="bold")
     table.add_column("Card")
     table.add_column("Synergy", justify="right")

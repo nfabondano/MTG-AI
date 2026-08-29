@@ -104,7 +104,7 @@ def analyse(deck: Deck, *, offline: bool = False, intent=None) -> dict[str, Any]
         result["edhrec"] = {"available": False, "reason": "offline mode"}
         result["combos"] = {"available": False, "complete": [], "near_miss": []}
     else:
-        result["edhrec"] = edhrec_delta.analyse(deck)
+        result["edhrec"] = edhrec_delta.analyse(deck, intent=intent)
         result["combos"] = combos.analyse(deck)
 
     combo_count = len(result["combos"].get("complete") or [])
