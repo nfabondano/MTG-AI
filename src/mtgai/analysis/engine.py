@@ -128,10 +128,16 @@ def classify_commander(deck: Deck) -> dict:
 
     wants = set(commander_wants(deck))
     tribe = commander_tribe(deck)
+    # "worth copying" only when the commander itself copies — not when copy
+    # merely arrives through the typal expansion.
+    copies = any("copy" in tagmod.card_categories(c) for c in deck.commanders)
     supplies: list[str] = []
     if "payoff" in roles:
         if "death-trigger" in wants or "sacrifice" in wants:
-            fuel = f"nontoken {tribe}s worth copying" if tribe else "creatures the trigger counts"
+            if tribe:
+                fuel = f"nontoken {tribe}s" + (" worth copying" if copies else " the trigger counts")
+            else:
+                fuel = "creatures the trigger counts"
             supplies.append(f"fuel: {fuel}")
             supplies.append("triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms")
             supplies.append("conversion: drain, draw and token payoffs that turn deaths into wins")

@@ -5,7 +5,17 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 ## Archetype
 
-typal + drain + tokens
+Vampire typal + drain + tokens
+
+**Tribe:** 31 true Vampires
+
+## Edgar Markov's role
+
+**payoff** — so the 99 must supply:
+
+- fuel: nontoken Vampires the trigger counts
+- triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms
+- conversion: drain, draw and token payoffs that turn deaths into wins
 
 ## What Edgar Markov asks for
 
@@ -14,13 +24,13 @@ copy, counters, drain, sacrifice, tokens, typal
 ## Clusters
 
 - **typal** — 19 cards *(commander wants this)*
-- **death-trigger** — 14 cards
-- **removal** — 13 cards
 - **drain** — 11 cards *(commander wants this)*
-- **draw** — 11 cards
-- **ramp** — 7 cards
 - **tokens** — 7 cards *(commander wants this)*
 - **sacrifice** — 6 cards *(commander wants this)*
+- **death-trigger** — 14 cards
+- **removal** — 13 cards
+- **draw** — 12 cards
+- **ramp** — 7 cards
 - **sweeper** — 6 cards
 
 ## Hardest to cast
@@ -31,20 +41,28 @@ copy, counters, drain, sacrifice, tokens, typal
 - Crackling Doom `{R}{W}{B}`
   - needs 3 different colours in one cost
 
+## How it ends games
+
+- Edgar Markov + Oathsworn Vampire + Phyrexian Altar → Infinite creature ETB, Infinite creature LTB
+
+## Quadrant coverage
+
+_Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
+
+- **Developing (ramp, draw)** — 19 cards (ramp 7 + draw 12)
+- **Breaking parity (removal, sweepers)** — 19 cards (removal 13 + sweeper 6)
+- **Winning (closers, going wide)** — 7 cards (tokens 7)
+- **Behind (protection, recursion)** — 7 cards (protection 4 + recursion 3)
+
 ## Outside every cluster
 
 Not automatically bad — the tags may simply not name what these do.
 
 - Reconnaissance
-- Rodolf Duskbringer
 - Lightning Greaves
 - Exquisite Blood
-- Oathsworn Vampire
 - Teferi's Protection
 - Vampiric Tutor
 - Anointed Procession
-- Drana and Linvala
-- Vampire Nighthawk
 - Demonic Tutor
-- Vampire of the Dire Moon
 

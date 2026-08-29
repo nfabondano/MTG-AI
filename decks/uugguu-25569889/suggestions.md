@@ -2,50 +2,41 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
+## Fix the mana first
+
+These cards strain the mana base, but they are part of what the deck is built around — the fix is sources, not cuts.
+
+- **+4 Green sources** — Aeve, Progenitor Ooze, March of the World Ooze want ~23, deck has 19
+  - lands producing no Green worth revisiting: High Market, Mutavault, Three Tree City
+
 ## Consider adding
 
-- **Hullbreaker Horror** ($6.04) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count
-- **Tidespout Tyrant** ($2.36) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count
-- **More removal** — the role counts above are below the usual range — prioritise these slots
-- **Mitotic Slime** ($0.36) — played in 61% of decks with this commander
-- **Rejuvenating Springs** — played in 50% of decks with this commander
-- **Ravenous Slime** ($2.48) — played in 50% of decks with this commander
-- **Hinterland Harbor** ($0.36) — played in 50% of decks with this commander
-- **Predator Ooze** ($0.23) — played in 49% of decks with this commander
-- **Woodland Cemetery** ($0.95) — played in 49% of decks with this commander
-- **Undergrowth Stadium** — played in 48% of decks with this commander
-- **Oran-Rief Ooze** ($0.28) — played in 46% of decks with this commander
-- **The Mimeoplasm** ($0.28) — played in 43% of decks with this commander
-- **Opulent Palace** ($0.37) — played in 43% of decks with this commander
-- **Scavenging Ooze** ($0.33) — played in 43% of decks with this commander
-- **Path of Ancestry** — played in 42% of decks with this commander
+### Strengthens the plan
+
+- **Hullbreaker Horror** ($6.38) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count
+- **Tidespout Tyrant** ($2.32) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count
+- **Stunt Double** ($4.29) — synergy +0.50 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Mitotic Slime** ($0.37) — synergy +0.46 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Naga Fleshcrafter** ($0.37) — synergy +0.46 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Flesh Duplicate** ($8.71) — synergy +0.45 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Clone** ($0.59) — synergy +0.44 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Gigantoplasm** ($0.70) — synergy +0.40 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Mirrorhall Mimic** ($1.60) — synergy +0.37 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Vizier of Many Faces** ($0.21) — synergy +0.35 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Saw in Half** ($5.73) — synergy +0.32 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Waxen Shapethief** ($0.33) — synergy +0.31 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Ravenous Slime** ($2.56) — synergy +0.30 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Maskwood Nexus** ($2.40) — synergy +0.30 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Predator Ooze** ($0.20) — synergy +0.30 measured vs 115 Clones builds of Uugguu, the Omniplasm
 
 ## Consider cutting
 
-- **Aeve, Progenitor Ooze** — 3 Green pips wants ~23 sources, deck has 19  
-  _(castability)_
-- **March of the World Ooze** — 3 Green pips wants ~23 sources, deck has 19  
-  _(castability)_
-- **Birthing Pod** — 14 cards do sacrifice work; a deck wants about 8  
-  _(oversupplied: sacrifice)_
-- **Ashnod's Altar** — 16 cards do ramp work; a deck wants about 12  
-  _(oversupplied: ramp)_
-- **Harmonized Crescendo** — 16 cards do draw work; a deck wants about 12  
+- **Bala Ged Recovery // Bala Ged Sanctuary** — 16 cards do draw work; a deck wants about 12  
   _(oversupplied: draw)_
-- **Umori, the Collector** — outside every cluster this deck is built on (typal + copy + sacrifice)  
-  _(no engine participation)_
-- **Hecteyes** — outside every cluster this deck is built on (typal + copy + sacrifice)  
-  _(no engine participation)_
-
-## Paired swaps
-
-- Aeve, Progenitor Ooze → Hullbreaker Horror
-- March of the World Ooze → Tidespout Tyrant
-- Birthing Pod → More removal
-- Ashnod's Altar → Mitotic Slime
-- Harmonized Crescendo → Rejuvenating Springs
-- Umori, the Collector → Ravenous Slime
-- Hecteyes → Hinterland Harbor
+- **Demonic Tutor** — 8 cards do tutor work; a deck wants about 4  
+  _(oversupplied: tutor)_
+- **Arcane Signet** — 15 cards do ramp work; a deck wants about 12  
+  _(oversupplied: ramp)_
 
 ---
 

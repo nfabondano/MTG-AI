@@ -245,7 +245,7 @@ def build_adds(
     # labelled with the population it was measured against. Raw inclusion is
     # popularity and stays meta-optional.
     edh = result.get("edhrec") or {}
-    basis = edh.get("basis_label") or "all builds of this commander"
+    basis = edh.get("basis_label") or "vs all builds of this commander"
     for entry in edh.get("missing_synergy") or []:
         price = _price_of(entry["name"])
         if budget is not None and price is not None and price > budget:
@@ -257,7 +257,7 @@ def build_adds(
                 "group": GROUP_PLAN,
                 "source": "edhrec-synergy",
                 "category": None,
-                "why": f"synergy +{entry.get('synergy', 0):.2f} measured against {basis}",
+                "why": f"synergy +{entry.get('synergy', 0):.2f} measured {basis}",
                 "evidence": "EDHREC synergy",
             }
         )
