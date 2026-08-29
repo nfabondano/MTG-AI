@@ -55,6 +55,7 @@ CATEGORIES: dict[str, tuple[str, ...]] = {
     "typal": ("typal", "tribal"),
     "counters": ("plus-one-counters", "proliferate", "gives-pp-counters"),
     "untap": ("untapper", "untap-permanent"),
+    "wincon": ("win-the-game", "alternate-win", "overrun", "extra-combat"),
 }
 
 # A tag matching both is the narrower thing: mass-removal is a sweeper, and

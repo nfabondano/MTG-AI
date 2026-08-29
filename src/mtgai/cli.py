@@ -113,16 +113,20 @@ def deck_suggest(
     budget: float = typer.Option(None, "--budget", help="Ignore suggestions above this USD price."),
     offline: bool = typer.Option(False, "--offline"),
     loose: bool = typer.Option(
-        False, "--loose", help="Also show weak candidates the tool cannot ground."
+        False, "--loose", help="Also show popularity-only ideas and weak candidates."
     ),
+    json_out: bool = typer.Option(False, "--json", help="Emit the structured suggestions."),
 ) -> None:
     """Regenerate suggestions.md."""
     try:
-        markdown = service.suggest(reference, budget=budget, offline=offline, loose=loose)
+        result = service.suggest(reference, budget=budget, offline=offline, loose=loose)
     except (SourceError, ValueError, FileNotFoundError) as exc:
         _fail(str(exc))
         return
-    console.print(markdown)
+    if json_out:
+        _emit(result["suggestions"])
+        return
+    console.print(result["markdown"])
 
 
 @deck_app.command("list")

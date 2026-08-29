@@ -73,14 +73,32 @@ def deck_analyze(reference: str, offline: bool = False) -> dict[str, Any]:
 @mcp.tool()
 def deck_suggest(
     reference: str, budget: float | None = None, loose: bool = False
-) -> str:
-    """Generate cut and add suggestions for a deck, as markdown.
+) -> dict[str, Any]:
+    """Generate cut and add suggestions for a deck, structured and slim.
 
-    Every cut is backed by deck-internal evidence: castability, cluster
-    oversupply, curve, or doing nothing the deck is built around. budget caps
-    suggested cards at that USD price; loose also surfaces weak candidates.
+    Adds are grouped: strengthens-plan and fixes-weakness carry deck-internal
+    reasons; meta-optional is popularity only and appears when loose=True.
+    Cuts carry deck-internal evidence (castability, oversupply, curve, no
+    engine participation), mana_fixes say when the answer is sources rather
+    than cuts, and swaps pair cards doing the same job. The full markdown is
+    written to the deck's suggestions.md.
     """
-    return service.suggest(reference, budget=budget, loose=loose)
+    result = service.suggest(reference, budget=budget, loose=loose)
+    built = result["suggestions"]
+    slim_adds = [
+        {k: a.get(k) for k in ("name", "group", "why", "price")}
+        for a in built["adds"]
+        if loose or a["group"] != "meta-optional"
+    ][:12]
+    return {
+        "mana_fixes": built["mana_fixes"],
+        "adds": slim_adds,
+        "cuts": [
+            {k: c.get(k) for k in ("name", "why", "evidence")} for c in built["cuts"][:8]
+        ],
+        "swaps": built["swaps"][:8],
+        "hidden_meta": built["hidden_meta"],
+    }
 
 
 @mcp.tool()

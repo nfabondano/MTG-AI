@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Any
 
 from ..model import Deck
-from . import bracket, combos, curve, edhrec_delta, engine, legality, mana, roles
+from . import bracket, combos, curve, edhrec_delta, engine, legality, mana, roles, suggest
 
 
 def price_summary(deck: Deck, *, top: int = 10) -> dict[str, Any]:
@@ -125,18 +125,24 @@ def _headline(result: dict[str, Any]) -> list[str]:
     for error in result["legality"].get("errors", []):
         lines.append(f"Illegal: {error}")
 
-    if result["mana"].get("land_finding"):
-        lines.append(result["mana"]["land_finding"])
-    for finding in result["mana"].get("findings", []):
-        lines.append(finding["message"])
-
     eng = result.get("engine") or {}
-    for fix in (eng.get("mana_fixes") or [])[:2]:
+    fixes = eng.get("mana_fixes") or []
+    for fix in fixes[:2]:
         plural = "s" if fix["delta"] > 1 else ""
         lines.append(
             f"Fix the mana first: +{fix['delta']} {fix['color_name']} source{plural} — "
             f"{', '.join(fix['driven_by'][:3])} want ~{fix['needed']}, deck has {fix['have']}."
         )
+
+    if result["mana"].get("land_finding"):
+        lines.append(result["mana"]["land_finding"])
+    # A colour the fix line already covers does not need its generic twin.
+    fixed_colors = {f["color_name"] for f in fixes}
+    for finding in result["mana"].get("findings", []):
+        if any(finding["message"].startswith(f"{c}:") for c in fixed_colors):
+            continue
+        lines.append(finding["message"])
+
     for entry in (eng.get("castability") or [])[:2]:
         if entry.get("sole_driver"):
             lines.append(

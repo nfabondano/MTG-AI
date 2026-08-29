@@ -455,6 +455,56 @@ def cards_in_category(deck: Deck, category: str) -> list[CardEntry]:
 CUT_SEVERITY = 6
 
 
+# Cards that end games say so in a few recognisable ways.
+_WINCON_RE = re.compile(
+    r"wins? the game|you win the game|loses the game|can't lose the game|"
+    r"deals damage equal to|combat damage to a player, .* loses",
+    re.I,
+)
+
+
+def win_condition_inventory(deck: Deck) -> list[dict]:
+    """How this deck actually ends games — or the honest news that it doesn't.
+
+    Three signals, strongest first: the card says so outright, the curated
+    tags call it a finisher effect, or Nicolas's own Archidekt category does.
+    """
+    found: list[dict] = []
+    for card in deck.cards:
+        if card.is_land:
+            continue
+        why = ""
+        if _WINCON_RE.search(card.role_text()):
+            why = "says so in its text"
+        elif "wincon" in tagmod.card_categories(card):
+            why = "finisher effect"
+        elif "wincon" in owner_categories(card):
+            why = "your own category marks it the finisher"
+        if why:
+            found.append({"name": card.name, "why": why})
+    return found
+
+
+# EDHREC Quadrant Theory: a deck is measured in four game states. Which tag
+# categories serve which state.
+_QUADRANTS = {
+    "developing": ("ramp", "draw"),
+    "parity": ("removal", "sweeper"),
+    "winning": ("wincon", "tokens"),
+    "losing": ("protection", "recursion"),
+}
+
+
+def quadrant_coverage(deck: Deck) -> dict[str, dict]:
+    """Card counts per game state, so a gap is visible before a game shows it."""
+    profile = tagmod.deck_profile(deck)
+    out: dict[str, dict] = {}
+    for quadrant, categories in _QUADRANTS.items():
+        counts = {c: profile.get(c, 0) for c in categories if profile.get(c, 0)}
+        out[quadrant] = {"total": sum(counts.values()), "from": counts}
+    return out
+
+
 def mana_fixes(deck: Deck, demoted: list[dict]) -> list[dict]:
     """Turn castability strain on engine cards into mana-base advice.
 
@@ -481,6 +531,7 @@ def mana_fixes(deck: Deck, demoted: list[dict]) -> list[dict]:
             entry["driven_by"].append(finding["name"])
 
     fixes = []
+    fetches = re.compile(r"search your library", re.I)
     for entry in by_color.values():
         swaps = [
             land.name
@@ -488,7 +539,10 @@ def mana_fixes(deck: Deck, demoted: list[dict]) -> list[dict]:
                 deck.lands,
                 key=lambda l: (bool(l.produces()), len(l.produces()), l.name),
             )
-            if entry["color"] not in land.produces() and not land.is_basic_land
+            if entry["color"] not in land.produces()
+            and not land.is_basic_land
+            # A fetch produces nothing itself but finds the colour just fine.
+            and not fetches.search(land.oracle_text or "")
         ]
         entry["swap_candidates"] = swaps[:3]
         fixes.append(entry)
@@ -580,6 +634,8 @@ def analyse(deck: Deck, intent=None) -> dict:
         "mana_fixes": mana_fixes(deck, demoted),
         "oversupplied": excess,
         "orphans": orphans,
+        "win_conditions": win_condition_inventory(deck),
+        "quadrants": quadrant_coverage(deck),
         "tag_counts": dict(tagmod.tag_counts(deck).most_common(20)),
         "note": (
             "Clusters come from human-curated functional tags, not oracle-text "

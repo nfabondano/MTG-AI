@@ -78,16 +78,22 @@ def suggest(
     budget: float | None = None,
     offline: bool = False,
     loose: bool = False,
-) -> str:
+) -> dict[str, Any]:
+    """Suggestions both ways: rendered markdown and the structured build."""
     folder = deckfolder.resolve(reference)
     deck = folder.read_deck()
     intent = _load_intent(folder)
     result = analysis.analyse(deck, offline=offline, intent=intent)
     if budget is None and intent is not None and intent.budget_per_card is not None:
         budget = intent.budget_per_card
-    markdown = report.render_suggestions(deck, result, budget=budget, loose=loose)
+    built = analysis.suggest.build(
+        deck, result, budget=budget, loose=loose, offline=offline
+    )
+    markdown = report.render_suggestions(
+        deck, result, built, budget=budget, loose=loose
+    )
     folder.write_suggestions(markdown)
-    return markdown
+    return {"markdown": markdown, "suggestions": built}
 
 
 def list_decks() -> list[dict[str, Any]]:
