@@ -1,0 +1,124 @@
+// Deadpool
+// https://archidekt.com/decks/14760902
+
+// Commander
+1 Deadpool, Trading Card
+
+// Deck
+1 Arcane Signet
+1 Blade of Selves
+1 Conjurer's Closet
+1 Cursed Mirror
+1 Golden Argosy
+1 Helm of the Host
+1 Loki's Scepter
+1 Mirror Box
+1 Phyrexian Altar
+1 Rakdos Signet
+1 Sol Ring
+1 Sword of Hearth and Home
+1 Talisman of Indulgence
+1 Alexios, Deimos of Kosmos
+1 Dalek Squadron
+1 Delina, Wild Mage
+1 Elturel Survivors
+1 Florian, Voldaren Scion
+1 Gix, Yawgmoth Praetor
+1 Jaxis, the Troublemaker
+1 Kardur, Doomscourge
+1 Mayhem Devil
+1 Mirage Phalanx
+1 Morbid Opportunist
+1 Orthion, Hero of Lavabrink
+1 Pinnacle Monk // Mystic Peak
+1 Pitiless Plunderer
+1 Professional Face-Breaker
+1 Rionya, Fire Dancer
+1 Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel
+1 Solemn Simulacrum
+1 Terror of the Peaks
+1 The Master, Multiplied
+1 Valgavoth, Harrower of Souls
+1 Xantcha, Sleeper Agent
+1 Animate Dead
+1 Black Market
+1 Black Market Connections
+1 Determined Iteration
+1 Echoing Assault
+1 Kaya's Ghostform
+1 Rakdos Joins Up
+1 Splinter Twin
+1 Chaos Warp
+1 Dark Ritual
+1 Deadly Dispute
+1 Deadly Rollick
+1 Deflecting Swat
+1 Fake Your Own Death
+1 Feign Death
+1 Fell the Profane // Fell Mire
+1 Malakir Rebirth // Malakir Mire
+1 Not Dead After All
+1 Saw in Half
+1 Supernatural Stamina
+1 Undying Malice
+1 Valakut Awakening // Valakut Stoneforge
+1 Village Rites
+1 Arena of Glory
+1 Blazemire Verge
+1 Blightstep Pathway // Searstep Pathway
+1 Blood Crypt
+1 Bloodstained Mire
+1 Bojuka Bog
+1 Command Beacon
+1 Command Tower
+1 Dragonskull Summit
+1 Exotic Orchard
+1 Fabled Passage
+1 Foreboding Ruins
+1 Graven Cairns
+1 Haunted Ridge
+1 High Market
+1 Luxury Suite
+3 Mountain
+1 Phyrexian Tower
+1 Raucous Theater
+1 Sanctum of Eternity
+1 Smoldering Marsh
+1 Sulfurous Springs
+2 Swamp
+1 Tainted Peak
+1 Takenuma, Abandoned Mire
+1 Urborg, Tomb of Yawgmoth
+1 Blasphemous Act
+1 Bloodsoaked Insight // Sanguine Morass
+1 Electroduplicate
+1 Faithless Looting
+1 Feed the Swarm
+1 Molten Duplication
+1 Reanimate
+1 Sign in Blood
+1 Sundering Eruption // Volcanic Fissure
+1 Toxic Deluge
+1 Twinflame
+1 Vandalblast
+
+// Maybeboard (not counted in the deck)
+1 Dualcaster Mage
+1 Garna, Bloodfist of Keld
+1 Goldlust Triad
+1 Gray Merchant of Asphodel
+1 Harmless Offering
+1 Imp's Mischief
+1 Resurrection Orb
+1 Tibalt's Trickery
+1 Warren Soultrader
+1 The Fire Crystal
+1 Orcish Bowmasters
+1 Vampiric Tutor
+1 Ancient Tomb
+1 Jeska's Will
+1 Demonic Tutor
+1 Redoubled Stormsinger
+1 Éomer, Marshal of Rohan
+1 The One Ring
+1 Guff Rewrites History
