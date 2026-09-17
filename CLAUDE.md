@@ -39,7 +39,7 @@ uv run mtg deck show <ref>            # slim summary
 uv run mtg deck cards <ref> --role ramp   # filter by role or --type
 uv run mtg deck refresh <ref>         # re-pull from Archidekt
 uv run mtg deck analyze <ref>         # regenerate analysis.md
-uv run mtg deck suggest <ref> [--budget N] [--loose]
+uv run mtg deck suggest <ref> [--budget N] [--loose] [--max-bracket N]
 uv run mtg deck engine <ref>          # what the deck is built around
 uv run mtg card "<name>"              # Scryfall lookup
 uv run mtg edhrec "<commander>"       # EDHREC recommendations

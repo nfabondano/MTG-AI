@@ -175,11 +175,18 @@ def normalise(payload: dict[str, Any], slug: str, *, enrich: bool = True) -> Dec
         # Any category flagged includedInDeck=false takes the card out of the
         # deck, even though it still carries its normal type category.
         if any(c in excluded_cats for c in categories):
+            # Keep the bracket flags: a maybeboard full of Game Changers is
+            # exactly the thing a bracket-2 player needs warning about.
             deck.excluded.append(
                 {
                     "name": name,
                     "quantity": entry.get("quantity", 1),
                     "categories": categories,
+                    "color_identity": _colors_from_archidekt(oracle.get("colorIdentity")),
+                    "is_game_changer": bool(oracle.get("gameChanger")),
+                    "is_tutor": bool(oracle.get("tutor")),
+                    "is_extra_turns": bool(oracle.get("extraTurns")),
+                    "is_mass_land_denial": bool(oracle.get("massLandDenial")),
                 }
             )
             continue
@@ -208,6 +215,9 @@ def normalise(payload: dict[str, Any], slug: str, *, enrich: bool = True) -> Dec
                 is_tutor=bool(oracle.get("tutor")),
                 is_extra_turns=bool(oracle.get("extraTurns")),
                 is_mass_land_denial=bool(oracle.get("massLandDenial")),
+                combo_flagged=bool(
+                    oracle.get("potentialCombos") or oracle.get("twoCardComboSingelton")
+                ),
                 tags=_tags(oracle),
                 set_code=(card.get("edition") or {}).get("editioncode", ""),
                 released_at=(card.get("edition") or {}).get("editiondate", "")

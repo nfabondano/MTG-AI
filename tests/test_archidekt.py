@@ -62,6 +62,14 @@ class TestMaybeboardExclusion:
         deck = normalise(synthetic_payload)
         assert "Test Wrath" in {c.name for c in deck.cards}
 
+    def test_excluded_cards_keep_their_bracket_flags(self, synthetic_payload):
+        # The bracket estimate needs to know what the maybeboard would do.
+        deck = normalise(synthetic_payload)
+        entry = next(e for e in deck.excluded if e["name"] == "Maybeboard Artifact")
+        for key in ("is_game_changer", "is_tutor", "is_extra_turns", "is_mass_land_denial"):
+            assert entry[key] is False
+        assert entry["color_identity"] == []
+
     def test_real_deck_with_maybeboard(self, maybeboard_payload):
         deck = normalise(maybeboard_payload)
         assert len(deck.excluded) == 7

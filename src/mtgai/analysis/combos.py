@@ -19,9 +19,14 @@ def _probe_order(deck: Deck, limit: int) -> list[str]:
     commanders = [c for c in deck.cards if c.is_commander]
     others = [c for c in deck.cards if not c.is_commander and not c.is_basic_land]
 
-    # A low EDHREC rank means a widely played card, which is where the
-    # catalogued combos live.
-    others.sort(key=lambda c: (c.edhrec_rank is None, c.edhrec_rank or 10**9))
+    # Archidekt marks cards that appear in catalogued combos; those go first.
+    # Then a low EDHREC rank means a widely played card, which is where the
+    # rest of the catalogued combos live. Ordering by rank alone once left
+    # Terror of the Peaks and its two partners outside the probe window and
+    # reported a deck as combo-free that was not.
+    others.sort(
+        key=lambda c: (not c.combo_flagged, c.edhrec_rank is None, c.edhrec_rank or 10**9)
+    )
 
     ordered = [c.name for c in commanders] + [c.name for c in others]
     return ordered[:limit]

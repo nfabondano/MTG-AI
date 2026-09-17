@@ -60,8 +60,7 @@ def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
         result["edhrec"] = edhrec_delta.analyse(deck)
         result["combos"] = combos.analyse(deck)
 
-    combo_count = len(result["combos"].get("complete") or [])
-    result["bracket"] = bracket.analyse(deck, combo_count=combo_count)
+    result["bracket"] = bracket.analyse(deck, combos=result["combos"].get("complete") or [])
 
     result["headline"] = _headline(result)
     return result
@@ -104,5 +103,11 @@ def _headline(result: dict[str, Any]) -> list[str]:
 
     if result["bracket"].get("mismatch"):
         lines.append(result["bracket"]["mismatch"])
+
+    # A bracket-2 player keeping Game Changers in the maybeboard should hear
+    # about it before they get tempted.
+    maybe = result["bracket"].get("maybeboard") or {}
+    if maybe.get("warnings") and (result["bracket"].get("declared") or 2) <= 2:
+        lines.append(f"Maybeboard: {maybe['warnings'][0]}.")
 
     return lines

@@ -72,15 +72,20 @@ def deck_analyze(reference: str, offline: bool = False) -> dict[str, Any]:
 
 @mcp.tool()
 def deck_suggest(
-    reference: str, budget: float | None = None, loose: bool = False
+    reference: str,
+    budget: float | None = None,
+    loose: bool = False,
+    max_bracket: int | None = None,
 ) -> str:
     """Generate cut and add suggestions for a deck, as markdown.
 
     Every cut is backed by deck-internal evidence: castability, cluster
     oversupply, curve, or doing nothing the deck is built around. budget caps
     suggested cards at that USD price; loose also surfaces weak candidates.
+    max_bracket sets aside adds that would push the deck past that Commander
+    bracket (Game Changers, combo completers) into a separate section.
     """
-    return service.suggest(reference, budget=budget, loose=loose)
+    return service.suggest(reference, budget=budget, loose=loose, max_bracket=max_bracket)
 
 
 @mcp.tool()

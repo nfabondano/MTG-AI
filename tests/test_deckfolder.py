@@ -144,3 +144,41 @@ class TestReportRendering:
         assert "Consider adding" in markdown
         # The off-identity card is a required cut, not a suggestion.
         assert "Off Colour Intruder" in markdown
+
+    def test_max_bracket_sets_combo_pieces_aside(self, synthetic_payload):
+        from mtgai import analysis
+
+        deck = build(synthetic_payload)
+        result = analysis.analyse(deck, offline=True)
+        result["combos"]["near_miss"] = [
+            {
+                "cards": ["Test Commander", "Kiki-Jiki, Mirror Breaker"],
+                "missing": "Kiki-Jiki, Mirror Breaker",
+                "produces": ["Infinite creature tokens with haste"],
+            },
+            {
+                "cards": ["Test Wrath", "Mycosynth Lattice"],
+                "missing": "Mycosynth Lattice",
+                "produces": ["Destroy all permanents", "Mass Land Denial"],
+            },
+        ]
+
+        unconstrained = report.render_suggestions(deck, result)
+        adding = unconstrained.split("## Consider cutting")[0]
+        assert "Kiki-Jiki, Mirror Breaker" in adding
+        assert "**bracket 3**" in adding
+        assert "**bracket 4**" in adding
+
+        capped = report.render_suggestions(deck, result, max_bracket=2)
+        adding, rest = capped.split("## Would raise the bracket")
+        assert "Kiki-Jiki, Mirror Breaker" not in adding
+        assert "Mycosynth Lattice" not in adding
+        assert "Kiki-Jiki, Mirror Breaker" in rest
+        assert "Mycosynth Lattice" in rest
+        assert "Keeping the deck at bracket 2 or below." in capped
+
+        # Bracket 3 tolerates a two-card combo but not mass land denial.
+        looser = report.render_suggestions(deck, result, max_bracket=3)
+        adding, rest = looser.split("## Would raise the bracket")
+        assert "Kiki-Jiki, Mirror Breaker" in adding
+        assert "Mycosynth Lattice" in rest

@@ -92,6 +92,8 @@ class CardEntry:
     is_tutor: bool = False
     is_extra_turns: bool = False
     is_mass_land_denial: bool = False
+    # Archidekt says this card appears in a catalogued combo; it is probed first.
+    combo_flagged: bool = False
     roles: list[str] = field(default_factory=list)
     # Human-curated functional tags (Scryfall Tagger vocabulary, served by
     # both Archidekt and Scryfall). These say what a card *does* —
@@ -192,6 +194,7 @@ class CardEntry:
             "is_tutor": self.is_tutor,
             "is_extra_turns": self.is_extra_turns,
             "is_mass_land_denial": self.is_mass_land_denial,
+            "combo_flagged": self.combo_flagged,
             "roles": self.roles,
             "tags": self.tags,
             "engine_participation": self.engine_participation,

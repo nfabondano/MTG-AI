@@ -115,10 +115,17 @@ def deck_suggest(
     loose: bool = typer.Option(
         False, "--loose", help="Also show weak candidates the tool cannot ground."
     ),
+    max_bracket: int = typer.Option(
+        None,
+        "--max-bracket",
+        help="Set aside adds (Game Changers, combo pieces) that would push the deck past this bracket.",
+    ),
 ) -> None:
     """Regenerate suggestions.md."""
     try:
-        markdown = service.suggest(reference, budget=budget, offline=offline, loose=loose)
+        markdown = service.suggest(
+            reference, budget=budget, offline=offline, loose=loose, max_bracket=max_bracket
+        )
     except (SourceError, ValueError, FileNotFoundError) as exc:
         _fail(str(exc))
         return

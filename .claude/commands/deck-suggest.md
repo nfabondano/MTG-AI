@@ -1,6 +1,6 @@
 ---
 description: Get cut and add suggestions for a deck
-argument-hint: <deck slug> [--budget N]
+argument-hint: <deck slug> [--budget N] [--max-bracket N]
 allowed-tools: Bash(uv run mtg:*), Read
 ---
 
@@ -10,7 +10,9 @@ Generate suggestions for `$ARGUMENTS`:
 uv run mtg deck suggest $ARGUMENTS
 ```
 
-(If I passed a `--budget` value, keep it on the command.)
+(If I passed a `--budget` or `--max-bracket` value, keep it on the command. When
+I say the deck must stay at a bracket, use `--max-bracket N`: anything that
+would raise it ends up under "Would raise the bracket" instead of as a swap.)
 
 Then talk me through the results rather than dumping them:
 

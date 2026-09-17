@@ -267,3 +267,69 @@ class TestBracket:
         ]
         d = make_deck(cards, archidekt_bracket=2)
         assert bracket.analyse(d)["mismatch"] is not None
+
+    def test_one_extra_turn_is_still_a_core_deck(self):
+        # Brackets 1-3 forbid *chaining* extra turns; a single Time Warp is fine.
+        cards = [
+            CardEntry(name="Time Warp", type_line="Sorcery", is_extra_turns=True),
+            CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures."),
+        ]
+        assert bracket.analyse(make_deck(cards))["estimate"] == 2
+
+    def test_two_extra_turns_is_chaining(self):
+        cards = [
+            CardEntry(name=f"Warp{i}", type_line="Sorcery", is_extra_turns=True)
+            for i in range(2)
+        ]
+        assert bracket.analyse(make_deck(cards))["estimate"] == 4
+
+    def test_maybeboard_game_changers_are_flagged_not_counted(self):
+        cards = [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
+        d = make_deck(cards, archidekt_bracket=2)
+        d.excluded = [
+            {"name": f"GC{i}", "categories": ["Maybeboard"], "is_game_changer": True}
+            for i in range(4)
+        ] + [{"name": "Armageddon", "categories": ["Maybeboard"], "is_mass_land_denial": True}]
+        result = bracket.analyse(d)
+        assert result["estimate"] == 2, "the maybeboard must not move the estimate"
+        maybe = result["maybeboard"]
+        assert len(maybe["game_changers"]) == 4
+        assert any("bracket 3" in w for w in maybe["warnings"])
+        assert any("bracket 4" in w and "more than 3" in w for w in maybe["warnings"])
+        assert any("Armageddon" in w for w in maybe["warnings"])
+
+    def test_empty_maybeboard_has_no_warnings(self):
+        cards = [CardEntry(name="Bear", type_line="Creature")]
+        assert bracket.analyse(make_deck(cards))["maybeboard"]["warnings"] == []
+
+
+class TestComboBracket:
+    def test_casual_combos_do_not_raise_the_bracket(self):
+        cards = [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
+        casual = {"cards": ["Orthion, Hero of Lavabrink", "Terror of the Peaks"], "bracket_tag": "C"}
+        result = bracket.analyse(make_deck(cards), combos=[casual])
+        assert result["estimate"] == 2
+        assert result["casual_combos"] == [casual["cards"]]
+        assert any("not counted" in r for r in result["reasons"])
+
+    def test_rated_or_unrated_combos_raise_to_three(self):
+        cards = [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
+        for tag in ("R", "S", "P", "O", ""):
+            combo = {"cards": ["A", "B"], "bracket_tag": tag}
+            result = bracket.analyse(make_deck(cards), combos=[combo])
+            assert result["estimate"] == 3, tag
+            assert result["combos"] == [["A", "B"]]
+
+
+class TestComboProbeOrder:
+    def test_archidekt_combo_flags_beat_edhrec_rank(self):
+        from mtgai.analysis import combos
+
+        cards = [
+            CardEntry(name="Commander", type_line="Creature", is_commander=True),
+            CardEntry(name="Popular Filler", type_line="Artifact", edhrec_rank=10),
+            CardEntry(name="Obscure Combo Piece", type_line="Creature", edhrec_rank=9000, combo_flagged=True),
+            CardEntry(name="Swamp", type_line="Basic Land — Swamp"),
+        ]
+        order = combos._probe_order(make_deck(cards), 10)
+        assert order == ["Commander", "Obscure Combo Piece", "Popular Filler"]

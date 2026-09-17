@@ -69,11 +69,14 @@ def suggest(
     budget: float | None = None,
     offline: bool = False,
     loose: bool = False,
+    max_bracket: int | None = None,
 ) -> str:
     folder = deckfolder.resolve(reference)
     deck = folder.read_deck()
     result = analysis.analyse(deck, offline=offline)
-    markdown = report.render_suggestions(deck, result, budget=budget, loose=loose)
+    markdown = report.render_suggestions(
+        deck, result, budget=budget, loose=loose, max_bracket=max_bracket
+    )
     folder.write_suggestions(markdown)
     return markdown
 
@@ -144,6 +147,9 @@ def card_lookup(name: str) -> dict[str, Any]:
         "oracle_text": data.get("oracle_text"),
         "color_identity": data.get("color_identity"),
         "legalities": {"commander": (data.get("legalities") or {}).get("commander")},
+        # On the Game Changer list: one of these takes a deck to bracket 3,
+        # more than three to bracket 4.
+        "game_changer": bool(data.get("game_changer")),
         "edhrec_rank": data.get("edhrec_rank"),
         "price_usd": (data.get("prices") or {}).get("usd"),
         "scryfall_uri": data.get("scryfall_uri"),

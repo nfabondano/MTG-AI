@@ -220,3 +220,16 @@ def search(query: str, *, max_pages: int = 10) -> list[dict[str, Any]]:
 def game_changers() -> set[str]:
     """The Game Changer list, which drives Commander bracket estimation."""
     return {_normalise(c["name"]) for c in search("is:gamechanger")}
+
+
+def is_game_changer(name: str) -> bool | None:
+    """Whether a card is on the Game Changer list, from the local cache only.
+
+    Scryfall's card objects carry `game_changer`, so the answer is free when the
+    bulk cache is present. None means "unknown" — no cache, or the card is not
+    in it — which callers must not read as "no".
+    """
+    data = by_name(name)
+    if data is None:
+        return None
+    return bool(data.get("game_changer"))
