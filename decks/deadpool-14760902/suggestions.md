@@ -2,60 +2,55 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
-Keeping the deck at bracket 2 or below.
-
 ## Consider adding
 
-- **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
-- **More protection, wipe** — the role counts above are below the usual range — prioritise these slots
-- **Rakdos Charm** ($0.32) — played in 43% of decks with this commander
-- **Fellwar Stone** — played in 37% of decks with this commander
-- **Phyrexian Arena** — played in 36% of decks with this commander
-- **Terminate** ($0.35) — played in 36% of decks with this commander
-- **Blood Artist** ($3.59) — played in 35% of decks with this commander
-- **Shadowblood Ridge** ($0.38) — played in 35% of decks with this commander
-- **Heat Shimmer** ($6.90) — played in 34% of decks with this commander
-- **Harmless Offering** ($0.18) — played in 32% of decks with this commander
-- **Flameshadow Conjuring** ($3.87) — played in 31% of decks with this commander
-
-## Would raise the bracket
-
-These came up as adds but would take the deck past bracket 2, so they are listed rather than recommended.
+### Strengthens the plan
 
 - **Gravecrawler** ($1.43) — completes a combo with Phyrexian Altar → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
 - **Dualcaster Mage** ($4.61) — completes a combo with Twinflame → Infinite creature LTB, Infinite creature ETB — **bracket 3**: completes a two-card combo
 - **Mikaeus, the Unhallowed** ($22.41) — completes a combo with Phyrexian Altar → Infinite colored mana, Infinite creature ETB — **bracket 3**: completes a two-card combo
 - **Reassembling Skeleton** ($0.29) — completes a combo with Pitiless Plunderer + Phyrexian Altar → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
+- **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
+- **Heat Shimmer** ($6.90) — synergy +0.39 measured vs 713 Clones builds of Deadpool, Trading Card
+- **Flameshadow Conjuring** ($3.87) — synergy +0.35 measured vs 713 Clones builds of Deadpool, Trading Card
+- **Harmless Offering** ($0.18) — synergy +0.28 measured vs 713 Clones builds of Deadpool, Trading Card
+- **Mirror March** ($2.33) — synergy +0.27 measured vs 713 Clones builds of Deadpool, Trading Card
+- **The Fire Crystal** ($6.09) — synergy +0.27 measured vs 713 Clones builds of Deadpool, Trading Card
+- **Devastating Onslaught** ($2.72) — synergy +0.25 measured vs 713 Clones builds of Deadpool, Trading Card
+- **Flamerush Rider** ($0.23) — synergy +0.23 measured vs 713 Clones builds of Deadpool, Trading Card
+
+### Fixes a weakness
+
+- **Chandra's Ignition** ($8.76) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+- **Massacre Wurm** ($1.70) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chain Reaction** ($0.31) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+
+_4 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **Pinnacle Monk // Mystic Peak** — 17 cards do draw work; a deck wants about 12  
-  _(oversupplied: draw)_
-- **Black Market** — 16 cards do ramp work; a deck wants about 12  
+- **Cursed Mirror** — 16 cards do ramp work; a deck wants about 12  
   _(oversupplied: ramp)_
-- **Valgavoth, Harrower of Souls** — 10 cards do protection work; a deck wants about 6  
+- **Sword of Hearth and Home** — 10 cards do protection work; a deck wants about 6  
   _(oversupplied: protection)_
+- **Blasphemous Act** — 11 cards do removal work; a deck wants about 10  
+  _(oversupplied: removal)_
 - **Animate Dead** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
-  _(no engine participation)_
-- **Blasphemous Act** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
-  _(no engine participation)_
-- **Bloodsoaked Insight // Sanguine Morass** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
   _(no engine participation)_
 - **Conjurer's Closet** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
   _(no engine participation)_
-- **Deflecting Swat** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
+- **Reanimate** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
+  _(no engine participation)_
+- **Alexios, Deimos of Kosmos** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
+  _(no engine participation)_
+- **Golden Argosy** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
   _(no engine participation)_
 
 ## Paired swaps
 
-- Pinnacle Monk // Mystic Peak → Repercussion
-- Black Market → More protection, wipe
-- Valgavoth, Harrower of Souls → Rakdos Charm
-- Animate Dead → Fellwar Stone
-- Blasphemous Act → Phyrexian Arena
-- Bloodsoaked Insight // Sanguine Morass → Terminate
-- Conjurer's Closet → Blood Artist
-- Deflecting Swat → Shadowblood Ridge
+_Each pair does the same job — nothing is matched by position._
+
+- Blasphemous Act → Chandra's Ignition (sweeper)
 
 ---
 

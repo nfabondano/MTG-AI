@@ -9,6 +9,8 @@
  "updated_at": "2026-09-21T19:19:18.232731Z",
  "archidekt_bracket": null,
  "imported_at": "2026-09-22T15:37:52+00:00",
+ "description": "",
+ "deck_tags": [],
  "color_identity": [
   "R",
   "G"
@@ -67,6 +69,7 @@
    ],
    "engine_participation": [
     "protection",
+    "ramp",
     "typal"
    ],
    "set_code": "c13",
@@ -120,7 +123,7 @@
     "power boost to all"
    ],
    "engine_participation": [
-    "ramp"
+    "typal"
    ],
    "set_code": "dsc",
    "released_at": "2024-09-27",
@@ -179,7 +182,8 @@
     "thingfall"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "typal"
    ],
    "set_code": "c19",
    "released_at": "2019-08-23",
@@ -229,7 +233,8 @@
     "thingfall"
    ],
    "engine_participation": [
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "eoc",
    "released_at": "2025-08-01",
@@ -287,7 +292,8 @@
     "scales with damage dealt"
    ],
    "engine_participation": [
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -352,7 +358,8 @@
    ],
    "engine_participation": [
     "draw",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "m21",
    "released_at": "2020-07-03",
@@ -531,7 +538,9 @@
     "mana value matters",
     "triggered ability"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "clu",
    "released_at": "2024-02-23",
    "rarity": "rare",
@@ -594,7 +603,8 @@
     "removal-planeswalker"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "eld",
    "released_at": "2019-10-04",
@@ -659,8 +669,7 @@
     "vertical-cycle"
    ],
    "engine_participation": [
-    "draw",
-    "ramp"
+    "draw"
    ],
    "set_code": "ecc",
    "released_at": "2026-01-23",
@@ -770,7 +779,8 @@
     "tapper"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "akh",
    "released_at": "2017-04-28",
@@ -885,7 +895,8 @@
     "protection"
    ],
    "engine_participation": [
-    "protection"
+    "protection",
+    "typal"
    ],
    "set_code": "nec",
    "released_at": "2022-02-18",
@@ -931,7 +942,8 @@
     "repeatable token generator"
    ],
    "engine_participation": [
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "mh2",
    "released_at": "2021-06-18",
@@ -984,7 +996,8 @@
     "protection"
    ],
    "engine_participation": [
-    "protection"
+    "protection",
+    "typal"
    ],
    "set_code": "cmr",
    "released_at": "2020-11-20",
@@ -1036,7 +1049,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "ramp"
+    "ramp",
+    "typal"
    ],
    "set_code": "dsk",
    "released_at": "2024-09-27",
@@ -1087,7 +1101,8 @@
     "hate-counterspell"
    ],
    "engine_participation": [
-    "protection"
+    "protection",
+    "typal"
    ],
    "set_code": "eoe",
    "released_at": "2025-08-01",
@@ -1144,7 +1159,11 @@
     "multiplayer",
     "triggered ability"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "copy",
+    "tokens",
+    "typal"
+   ],
    "set_code": "cma",
    "released_at": "2017-06-09",
    "rarity": "uncommon",
@@ -1189,7 +1208,9 @@
     "gives unstoppable",
     "unstoppable"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "cma",
    "released_at": "2017-06-09",
    "rarity": "rare",
@@ -1239,7 +1260,8 @@
     "power matters-individual"
    ],
    "engine_participation": [
-    "protection"
+    "protection",
+    "typal"
    ],
    "set_code": "c13",
    "released_at": "2013-11-01",
@@ -1293,7 +1315,7 @@
     "power boost to all"
    ],
    "engine_participation": [
-    "ramp"
+    "typal"
    ],
    "set_code": "vow",
    "released_at": "2021-11-19",
@@ -1356,7 +1378,8 @@
    ],
    "engine_participation": [
     "draw",
-    "ramp"
+    "ramp",
+    "typal"
    ],
    "set_code": "fdn",
    "released_at": "2024-11-15",
@@ -1413,7 +1436,8 @@
     "thingfall"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "gtc",
    "released_at": "2013-02-01",
@@ -1465,7 +1489,7 @@
     "power boost to all"
    ],
    "engine_participation": [
-    "ramp"
+    "typal"
    ],
    "set_code": "tdm",
    "released_at": "2025-04-11",
@@ -1532,6 +1556,7 @@
     "ramp"
    ],
    "engine_participation": [
+    "copy",
     "ramp"
    ],
    "set_code": "mh3",
@@ -1583,7 +1608,8 @@
     "poison mechanics"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "typal"
    ],
    "set_code": "one",
    "released_at": "2023-02-10",
@@ -1638,7 +1664,8 @@
     "repeatable card advantage"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "typal"
    ],
    "set_code": "w17",
    "released_at": "2017-04-15",
@@ -1685,7 +1712,7 @@
     "card names"
    ],
    "engine_participation": [
-    "ramp"
+    "typal"
    ],
    "set_code": "thb",
    "released_at": "2020-01-24",
@@ -1733,7 +1760,9 @@
     "gives evasion",
     "green effect"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "clu",
    "released_at": "2024-02-23",
    "rarity": "uncommon",
@@ -2154,6 +2183,7 @@
    ],
    "engine_participation": [
     "draw",
+    "ramp",
     "typal"
    ],
    "set_code": "lcc",
@@ -2276,6 +2306,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "ramp",
     "typal"
    ],
    "set_code": "mh3",
@@ -2316,7 +2347,9 @@
     "synergy-green",
     "cycle"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "ramp"
+   ],
    "set_code": "mh3",
    "released_at": "2024-06-14",
    "rarity": "rare",
@@ -2534,8 +2567,7 @@
     "saboteur"
    ],
    "engine_participation": [
-    "counters",
-    "ramp"
+    "counters"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -2870,7 +2902,9 @@
     "cycle",
     "potentially free"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "protection"
+   ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
    "rarity": "rare",
@@ -3071,7 +3105,6 @@
    ],
    "engine_participation": [
     "draw",
-    "ramp",
     "tokens"
    ],
    "set_code": "iko",
@@ -3128,7 +3161,9 @@
     "removal-creature",
     "sweeper"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "removal"
+   ],
    "set_code": "dsc",
    "released_at": "2024-09-27",
    "rarity": "rare",
@@ -4927,7 +4962,8 @@
     "vertical-cycle"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "typal"
    ],
    "set_code": "m21",
    "released_at": "2020-07-03",
@@ -5036,7 +5072,8 @@
     "thingfall"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "typal"
    ],
    "set_code": "con",
    "released_at": "2009-02-06",
@@ -5138,7 +5175,9 @@
     "hate",
     "triggered ability"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "ramp"
+   ],
    "set_code": "40k",
    "released_at": "2022-10-07",
    "rarity": "rare",
@@ -5186,7 +5225,9 @@
     "power matters",
     "power matters-individual"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "protection"
+   ],
    "set_code": "tle",
    "released_at": "2025-11-21",
    "rarity": "uncommon",
@@ -5239,7 +5280,9 @@
     "removal-burn",
     "removal-creature"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "removal"
+   ],
    "set_code": "msc",
    "released_at": "2026-06-26",
    "rarity": "rare",

@@ -7,22 +7,26 @@
 ## What stands out
 
 - Illegal: Deck has 102 cards; Commander requires exactly 100.
-- 17 ramp — more than the usual 8-12.
-- 14 draw — more than the usual 8-12.
-- 4 removal — typical decks run 6-10.
+- 17 ramp — more than the usual 8-12. (tags count 26)
+- 14 draw — more than the usual 8-12. (tags count 18)
 - 0 wipe — typical decks run 2-4.
 - 14 spells at 5+ mana is top-heavy for a 100-card deck.
 - 15 combos one card away — see the combo section.
 
+
 ## What this deck does
 
-**ramp + untap**
+**ramp + untap + Human typal**
 
-ramp 30* · draw 18 · untap 9* · tutor 9 · removal 8 · protection 7 · typal 5 · counters 5
+**Tribe:** 4 true Humans + 1 copy effects that become Humans when they copy one
+
+**Commander role:** payoff — the 99 must supply: fuel; conversion.
+
+ramp 26* · untap 9* · typal 5* · draw 18 · removal 10 · tutor 9 · counters 5
 
 _\* the commander's own text asks for this._
 
-**Oversupplied:** ramp 30 (want ~12), draw 18 (want ~12), tutor 9 (want ~4), protection 7 (want ~6)
+**Oversupplied:** draw 18 (want ~12), tutor 9 (want ~4), ramp 26 (want ~24, even doubled for the commander)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -66,63 +70,65 @@ Creature 35 · Land 29 · Sorcery 13 · Instant 12 · Enchantment 7 · Artifact 
 
 ## Roles
 
-| Role | Count | Typical |
-|---|---:|---:|
-| Ramp | 17 | 8–12 |
-| Draw | 14 | 8–12 |
-| Removal | 4 | 6–10 |
-| Wipe | 0 | 2–4 |
-| Counterspell | 1 | — |
-| Protection | 5 | 2–6 |
-| Tutor | 9 | — |
-| Recursion | 1 | — |
-| Graveyard Hate | 0 | — |
+| Role | Tags | Oracle text | Typical |
+|---|---:|---:|---:|
+| Ramp | 26 | 17 | 8–12 |
+| Draw | 18 | 14 | 8–12 |
+| Removal | 10 | 4 | 6–10 |
+| Wipe | — | 0 | 2–4 |
+| Counterspell | — | 1 | — |
+| Protection | — | 5 | 2–6 |
+| Tutor | 9 | 9 | — |
+| Recursion | — | 1 | — |
+| Graveyard Hate | — | 0 | — |
 
-- 17 ramp — more than the usual 8-12.
-- 14 draw — more than the usual 8-12.
-- 4 removal — typical decks run 6-10.
+- 17 ramp — more than the usual 8-12. (tags count 26)
+- 14 draw — more than the usual 8-12. (tags count 18)
 - 0 wipe — typical decks run 2-4.
 
-_Roles come from oracle-text matching, so treat the edges as approximate._
+_Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
 
 ## Against the EDHREC meta
 
-Compared against ~8,969 decks with this commander.
+**Basis:** vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss.
+
+Build variants EDHREC tracks: Ramp (393), Aggro (338), Big Mana (217), Combo (177), X Spells (141), Elves (86).
+
+Closest established commanders: Nikya of the Old Ways, Grand Warlord Radha, Radha, Heart of Keld, Svella, Ice Shaper, Xenagos, God of Revels, Surrak and Goreclaw.
 
 **Staples you're missing** — most decks play these:
 
-- Ruby, Daring Tracker — in 67% of decks
-- Cinder Glade — in 64% of decks
-- Radha, Heir to Keld — in 55% of decks
-- Paradise Druid — in 50% of decks
-- Zhur-Taa Druid — in 45% of decks
-- Ornithopter of Paradise — in 44% of decks
-- Game Trail — in 44% of decks
-- Garruk's Uprising — in 43% of decks
-- Llanowar Loamspeaker — in 40% of decks
-- Tender Wildguide — in 38% of decks
-- Fires of Yavimaya — in 38% of decks
-- Llanowar Tribe — in 37% of decks
-- Spider Manifestation — in 36% of decks
-- Llanowar Visionary — in 35% of decks
+- Ruby, Daring Tracker — in 58% of decks
+- Samut, Hazoret's Champion — in 50% of decks
+- Llanowar Loamspeaker — in 47% of decks
+- Radha, Heir to Keld — in 47% of decks
+- Garruk's Uprising — in 47% of decks
+- Paradise Druid — in 46% of decks
+- Rishkar, Peema Renegade — in 42% of decks
+- Incubation Druid — in 41% of decks
+- Ornithopter of Paradise — in 39% of decks
+- Llanowar Tribe — in 36% of decks
+- Fires of Yavimaya — in 36% of decks
+
+_Mana-base staples missing (separate on purpose): Cinder Glade, Game Trail._
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
-- Ruby, Daring Tracker — synergy +0.56
-- Radha, Heir to Keld — synergy +0.51
-- Paradise Druid — synergy +0.47
-- Ornithopter of Paradise — synergy +0.42
-- Zhur-Taa Druid — synergy +0.40
-- Llanowar Loamspeaker — synergy +0.37
-- Tender Wildguide — synergy +0.36
-- Llanowar Tribe — synergy +0.35
-- Llanowar Visionary — synergy +0.34
-- Poison Dart Frog — synergy +0.33
-- Devoted Druid — synergy +0.31
-- Fires of Yavimaya — synergy +0.31
-- Spider Manifestation — synergy +0.30
-- Nightshade Dryad — synergy +0.30
-- Karametra's Acolyte — synergy +0.28
+- Samut, Hazoret's Champion — synergy +0.49
+- Ruby, Daring Tracker — synergy +0.47
+- Llanowar Loamspeaker — synergy +0.44
+- Radha, Heir to Keld — synergy +0.44
+- Paradise Druid — synergy +0.44
+- Rishkar, Peema Renegade — synergy +0.38
+- Ornithopter of Paradise — synergy +0.37
+- Incubation Druid — synergy +0.37
+- Llanowar Tribe — synergy +0.34
+- Fires of Yavimaya — synergy +0.29
+- Elven Chorus — synergy +0.29
+- Poison Dart Frog — synergy +0.27
+- Enduring Vitality — synergy +0.27
+- Cryptolith Rite — synergy +0.27
+- Bitter Work — synergy +0.25
 
 ## Combos
 
@@ -133,8 +139,8 @@ Compared against ~8,969 decks with this commander.
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Marwyn, the Nurturer → Infinite blinking of some creatures, Infinite creature ETB, Infinite green mana
 - Raggadragga, Goreguts Boss + Selvala, Heart of the Wilds + Fanning the Flames → Infinite colored mana, Infinite damage, Infinitely large creatures you control until end of turn
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Viridian Joiner → Infinite blinking of some creatures, Infinite creature ETB, Infinite green mana
-- Raggadragga, Goreguts Boss + Heronblade Elite + Fanning the Flames → Infinite colored mana, Infinite damage, Infinitely large creatures you control until end of turn
 - Raggadragga, Goreguts Boss + Selvala, Heart of the Wilds + Wurmcalling → Infinite colored mana, Infinite creature tokens, Infinite creature ETB
+- Raggadragga, Goreguts Boss + Heronblade Elite + Fanning the Flames → Infinite colored mana, Infinite damage, Infinitely large creatures you control until end of turn
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Selvala, Heart of the Wilds → Infinite colored mana, Infinite creature ETB, Infinite creature LTB
 - Raggadragga, Goreguts Boss + Heronblade Elite + Wurmcalling → Infinite colored mana, Infinite creature tokens, Infinite creature ETB
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Heronblade Elite → Infinite colored mana, Infinite creature ETB, Infinite creature LTB
@@ -164,7 +170,7 @@ _Checked the 25 most combo-likely cards, not all 100, and kept only combos insid
 **Estimate: 4 — Optimized**
 
 - 3 Game Changers
-- 10 two-card combos available
+- 10 two-card combos in the deck: Raggadragga, Goreguts Boss + Viridian Joiner + Wurmcalling (unrated); Raggadragga, Goreguts Boss + Marwyn, the Nurturer + Wurmcalling (unrated); Raggadragga, Goreguts Boss + Temur Sabertooth + Marwyn, the Nurturer (unrated); Raggadragga, Goreguts Boss + Selvala, Heart of the Wilds + Fanning the Flames (unrated); Raggadragga, Goreguts Boss + Temur Sabertooth + Viridian Joiner (unrated); Raggadragga, Goreguts Boss + Selvala, Heart of the Wilds + Wurmcalling (unrated); Raggadragga, Goreguts Boss + Heronblade Elite + Fanning the Flames (unrated); Raggadragga, Goreguts Boss + Temur Sabertooth + Selvala, Heart of the Wilds (unrated); Raggadragga, Goreguts Boss + Heronblade Elite + Wurmcalling (unrated); Raggadragga, Goreguts Boss + Temur Sabertooth + Heronblade Elite (unrated)
 - 9 tutors — consistent enough to find combos reliably
 
 Game Changers: Gamble, Worldly Tutor, Natural Order

@@ -95,26 +95,26 @@ _Measured two ways — human-curated tags and oracle-text matching. Where they d
 
 ## Against the EDHREC meta
 
-**Basis:** vs 6635 Vampires builds of Edgar Markov.
+**Basis:** vs 6120 Vampires builds of Edgar Markov.
 
-Build variants EDHREC tracks: Vampires (6635), Lifegain (3484), Tokens (2081), Aggro (1553), Aristocrats (1458), +1/+1 Counters (1411).
+Build variants EDHREC tracks: Vampires (6120), Lifegain (3270), Tokens (2134), Aggro (1578), Aristocrats (1490), +1/+1 Counters (1449).
 
 Closest established commanders: Strefan, Maurer Progenitor, Olivia Voldaren, Elenda, the Dusk Rose, Olivia, Crimson Bride, Drana, Liberator of Malakir, Jirina Kudro.
 
 **Staples you're missing** — most decks play these:
 
 - Indulgent Aristocrat — in 72% of decks
-- Master of Dark Rites — in 65% of decks
-- Charismatic Conqueror — in 62% of decks
-- Drana, Liberator of Malakir — in 59% of decks
+- Master of Dark Rites — in 64% of decks
+- Charismatic Conqueror — in 61% of decks
+- Drana, Liberator of Malakir — in 58% of decks
 - Olivia's Wrath — in 56% of decks
-- Clavileño, First of the Blessed — in 55% of decks
+- Clavileño, First of the Blessed — in 54% of decks
 - Markov Baron — in 51% of decks
 - Bloodthirsty Conqueror — in 50% of decks
-- Anguished Unmaking — in 48% of decks
-- Vampire Socialite — in 46% of decks
+- Anguished Unmaking — in 47% of decks
+- Sorin, Imperious Bloodlord — in 46% of decks
+- Vampire Socialite — in 45% of decks
 - Bloodletter of Aclazotz — in 45% of decks
-- Sorin, Imperious Bloodlord — in 45% of decks
 - Forerunner of the Legion — in 37% of decks
 - Shared Animosity — in 37% of decks
 
@@ -123,17 +123,17 @@ _Mana-base staples missing (separate on purpose): Voldaren Estate, Nomad Outpost
 **High-synergy cards you're missing** — unusually good with this commander:
 
 - Indulgent Aristocrat — synergy +0.62
-- Master of Dark Rites — synergy +0.57
-- Charismatic Conqueror — synergy +0.51
-- Drana, Liberator of Malakir — synergy +0.50
-- Olivia's Wrath — synergy +0.49
-- Clavileño, First of the Blessed — synergy +0.48
-- Markov Baron — synergy +0.45
+- Master of Dark Rites — synergy +0.56
+- Charismatic Conqueror — synergy +0.50
+- Drana, Liberator of Malakir — synergy +0.49
+- Olivia's Wrath — synergy +0.48
+- Clavileño, First of the Blessed — synergy +0.47
+- Markov Baron — synergy +0.44
 - Bloodthirsty Conqueror — synergy +0.42
-- Vampire Socialite — synergy +0.41
-- Sorin, Imperious Bloodlord — synergy +0.39
-- Bloodletter of Aclazotz — synergy +0.37
-- Forerunner of the Legion — synergy +0.33
+- Vampire Socialite — synergy +0.40
+- Sorin, Imperious Bloodlord — synergy +0.40
+- Bloodletter of Aclazotz — synergy +0.36
+- Forerunner of the Legion — synergy +0.32
 - Rakish Heir — synergy +0.31
 - Shared Animosity — synergy +0.29
 - Knight of the Ebon Legion — synergy +0.29
@@ -169,7 +169,7 @@ _Checked the 25 most combo-likely cards, not all 100, and kept only combos insid
 **Estimate: 4 — Optimized**
 
 - 5 Game Changers (bracket 3 allows up to 3)
-- 1 two-card combo available
+- 1 two-card combo in the deck: Edgar Markov + Oathsworn Vampire + Phyrexian Altar (unrated)
 
 Game Changers: Smothering Tithe, Teferi's Protection, Farewell, Vampiric Tutor, Demonic Tutor
 

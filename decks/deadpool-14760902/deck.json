@@ -9,6 +9,8 @@
  "updated_at": "2026-09-17T01:47:38.111407Z",
  "archidekt_bracket": 2,
  "imported_at": "2026-09-17T02:12:16+00:00",
+ "description": "",
+ "deck_tags": [],
  "color_identity": [
   "B",
   "R"
@@ -64,7 +66,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "copy"
+    "copy",
+    "tokens"
    ],
    "set_code": "sld",
    "released_at": "2019-12-02",
@@ -406,7 +409,9 @@
     "removal-burn",
     "removal-creature"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "removal"
+   ],
    "set_code": "sld",
    "released_at": "2019-12-02",
    "rarity": "rare",
@@ -628,7 +633,9 @@
     "tapland",
     "theft"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "draw"
+   ],
    "set_code": "mh3",
    "released_at": "2024-06-14",
    "rarity": "uncommon",
@@ -1153,7 +1160,9 @@
     "cycle",
     "potentially free"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "protection"
+   ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
    "rarity": "rare",
@@ -1258,6 +1267,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "copy",
     "tokens"
    ],
    "set_code": "ncc",
@@ -2105,7 +2115,8 @@
    ],
    "engine_participation": [
     "death-trigger",
-    "drain"
+    "drain",
+    "protection"
    ],
    "set_code": "dsc",
    "released_at": "2024-09-27",
@@ -2369,7 +2380,9 @@
     "weaker in singleton formats",
     "synergy-legendary"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "copy"
+   ],
    "set_code": "neo",
    "released_at": "2022-02-18",
    "rarity": "rare",
@@ -3979,6 +3992,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "copy",
     "tokens"
    ],
    "set_code": "who",
@@ -4423,7 +4437,10 @@
     "multiplayer",
     "triggered ability"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "copy",
+    "tokens"
+   ],
    "set_code": "who",
    "released_at": "2023-10-13",
    "rarity": "uncommon",
@@ -4878,7 +4895,10 @@
     "multiplayer",
     "triggered ability"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "copy",
+    "tokens"
+   ],
    "set_code": "clb",
    "released_at": "2022-06-10",
    "rarity": "rare",

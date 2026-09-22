@@ -7,22 +7,25 @@
 ## What stands out
 
 - Illegal: Deck has 104 cards; Commander requires exactly 100.
+- Fix the mana first: +3 Red sources — Quartzwood Crasher, Collective Inferno want ~20, deck has 17.
 - 30 lands plus 5 modal spell-lands (35 effective) against a curve suggesting about 38. Still on the low side.
-- Red: 17 sources for cards needing 2 R pips — around 20 is the usual target.
-- 15 draw — more than the usual 8-12.
-- 4 removal — typical decks run 6-10.
+- 15 draw — more than the usual 8-12. (tags count 23)
 - 0 wipe — typical decks run 2-4.
-- 7 protection — more than the usual 2-6.
 - Average mana value 4.04 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
 - 27 spells at 5+ mana is top-heavy for a 100-card deck.
 - 15 combos one card away — see the combo section.
 
+
 ## What this deck does
 
-**typal + removal + counters**
+**removal + Beast typal + counters**
 
-draw 23 · ramp 21 · typal 10* · removal 10* · protection 8 · tokens 7 · counters 7*
+**Tribe:** 29 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
+
+**Commander role:** force-multiplier — the 99 must supply: things worth multiplying.
+
+removal 12* · typal 10* · counters 7* · draw 23 · ramp 14 · tokens 7 · protection 5
 
 _\* the commander's own text asks for this._
 
@@ -31,7 +34,7 @@ _\* the commander's own text asks for this._
 - Quartzwood Crasher `{2}{R}{R}{G}` — 2 Red pips wants ~20 sources, deck has 17
 - Collective Inferno `{3}{R}{R}` — 2 Red pips wants ~20 sources, deck has 17
 
-**Oversupplied:** draw 23 (want ~12), ramp 21 (want ~12), protection 8 (want ~6)
+**Oversupplied:** draw 23 (want ~12), ramp 14 (want ~12)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -81,64 +84,66 @@ Creature 38 · Land 30 · Instant 10 · Sorcery 9 · Enchantment 8 · Artifact 7
 
 ## Roles
 
-| Role | Count | Typical |
-|---|---:|---:|
-| Ramp | 11 | 8–12 |
-| Draw | 15 | 8–12 |
-| Removal | 4 | 6–10 |
-| Wipe | 0 | 2–4 |
-| Counterspell | 0 | — |
-| Protection | 7 | 2–6 |
-| Tutor | 1 | — |
-| Recursion | 2 | — |
-| Graveyard Hate | 0 | — |
+| Role | Tags | Oracle text | Typical |
+|---|---:|---:|---:|
+| Ramp | 14 | 11 | 8–12 |
+| Draw | 23 | 15 | 8–12 |
+| Removal | 12 | 4 | 6–10 |
+| Wipe | — | 0 | 2–4 |
+| Counterspell | — | 0 | — |
+| Protection | 5 | 7 | 2–6 |
+| Tutor | — | 1 | — |
+| Recursion | — | 2 | — |
+| Graveyard Hate | — | 0 | — |
 
-- 15 draw — more than the usual 8-12.
-- 4 removal — typical decks run 6-10.
+- 15 draw — more than the usual 8-12. (tags count 23)
 - 0 wipe — typical decks run 2-4.
-- 7 protection — more than the usual 2-6.
 
-_Roles come from oracle-text matching, so treat the edges as approximate._
+_Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
 
 ## Against the EDHREC meta
 
-Compared against ~7,447 decks with this commander.
+**Basis:** vs 1114 Beasts builds of Slinza, the Spiked Stampede.
+
+Build variants EDHREC tracks: Beasts (1114), +1/+1 Counters (351), Aggro (194), Fight (132), Ramp (82), Stompy (59).
+
+Closest established commanders: Goreclaw, Terror of Qal Sisma, Neyith of the Dire Hunt, Surrak and Goreclaw, Gargos, Vicious Watcher, Kogla, the Titan Ape, Zilortha, Strength Incarnate.
 
 **Staples you're missing** — most decks play these:
 
-- Cultivate — in 67% of decks
-- Goreclaw, Terror of Qal Sisma — in 60% of decks
+- Cultivate — in 69% of decks
+- Goreclaw, Terror of Qal Sisma — in 58% of decks
 - Rampant Growth — in 56% of decks
-- Rockfall Vale — in 55% of decks
-- Kodama's Reach — in 52% of decks
-- Game Trail — in 47% of decks
-- Armored Scrapgorger — in 46% of decks
+- Kodama's Reach — in 53% of decks
+- Armored Scrapgorger — in 47% of decks
+- Beast Whisperer — in 46% of decks
 - Goblin Anarchomancer — in 45% of decks
-- Beast Whisperer — in 43% of decks
-- Unnatural Growth — in 39% of decks
-- Karplusan Forest — in 38% of decks
-- Farseek — in 38% of decks
-- Aether Charge — in 37% of decks
+- Fangren Firstborn — in 41% of decks
+- Aether Charge — in 40% of decks
+- Farseek — in 39% of decks
+- Ravenous Baloth — in 38% of decks
+- Unnatural Growth — in 37% of decks
 - Hardened Scales — in 37% of decks
-- Fangren Firstborn — in 36% of decks
+
+_Mana-base staples missing (separate on purpose): Rockfall Vale, Game Trail, Gruul Turf._
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
-- Goreclaw, Terror of Qal Sisma — synergy +0.45
-- Armored Scrapgorger — synergy +0.44
-- Aether Charge — synergy +0.37
-- Fangren Firstborn — synergy +0.35
-- Ravenous Baloth — synergy +0.32
-- Giant Cindermaw — synergy +0.30
-- Beast Whisperer — synergy +0.28
-- Arboreal Grazer — synergy +0.27
+- Armored Scrapgorger — synergy +0.45
+- Goreclaw, Terror of Qal Sisma — synergy +0.42
+- Fangren Firstborn — synergy +0.40
+- Aether Charge — synergy +0.39
+- Ravenous Baloth — synergy +0.38
+- Axebane Ferox — synergy +0.32
+- Beast Whisperer — synergy +0.30
+- Woodland Bellower — synergy +0.28
+- Arboreal Grazer — synergy +0.28
+- Giant Cindermaw — synergy +0.27
+- Thragtusk — synergy +0.27
 - Gnarlid Colony — synergy +0.27
-- Axebane Ferox — synergy +0.27
-- Cultivator Colossus — synergy +0.26
-- Patchwork Banner — synergy +0.26
-- Woodland Bellower — synergy +0.25
+- Renegade Krasis — synergy +0.25
 - Overwhelming Stampede — synergy +0.25
-- Thragtusk — synergy +0.25
+- Red XIII, Proud Warrior — synergy +0.25
 
 ## Combos
 

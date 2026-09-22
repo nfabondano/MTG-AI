@@ -5,7 +5,15 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 ## Archetype
 
-typal + removal + counters
+removal + Beast typal + counters
+
+**Tribe:** 29 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
+
+## Slinza, the Spiked Stampede's role
+
+**force-multiplier** — so the 99 must supply:
+
+- things worth multiplying
 
 ## What Slinza, the Spiked Stampede asks for
 
@@ -13,13 +21,17 @@ copy, counters, removal, typal
 
 ## Clusters
 
-- **draw** — 23 cards
-- **ramp** — 21 cards
+- **removal** — 12 cards *(commander wants this)*
 - **typal** — 10 cards *(commander wants this)*
-- **removal** — 10 cards *(commander wants this)*
-- **protection** — 8 cards
-- **tokens** — 7 cards
 - **counters** — 7 cards *(commander wants this)*
+- **draw** — 23 cards
+- **ramp** — 14 cards
+- **tokens** — 7 cards
+- **protection** — 5 cards
+
+## Mana-base fixes before cuts
+
+- +3 Red sources — Quartzwood Crasher, Collective Inferno want ~20, deck has 17
 
 ## Hardest to cast
 
@@ -28,18 +40,23 @@ copy, counters, removal, typal
 - Collective Inferno `{3}{R}{R}`
   - 2 Red pips wants ~20 sources, deck has 17
 
-## Outside every cluster
+## How it ends games
 
-Not automatically bad — the tags may simply not name what these do.
+- Thunderfoot Baloth — finisher effect
+- Herald of Ilharg — says so in its text
+- Ulvenwald Oddity // Ulvenwald Behemoth — finisher effect
+- Craterhoof Behemoth — finisher effect
+- Khalni Ambush // Khalni Territory — says so in its text
+- Stump Stomp // Burnwillow Clearing — says so in its text
+- Bridgeworks Battle // Tanglespan Bridgeworks — says so in its text
+- Shaleskin Bruiser — your own category marks it the finisher
 
-- Herald of Ilharg
-- Caller of the Pack
-- Siege Behemoth
-- Battlefront Krushok
-- Emerald Medallion
-- Deflecting Swat
-- Ezuri's Predation
-- Shadow in the Warp
-- Bolt Bend
-- Blasphemous Act
+## Quadrant coverage
+
+_Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
+
+- **Developing (ramp, draw)** — 37 cards (ramp 14 + draw 23)
+- **Breaking parity (removal, sweepers)** — 14 cards (removal 12 + sweeper 2)
+- **Winning (closers, going wide)** — 10 cards (wincon 3 + tokens 7)
+- **Behind (protection, recursion)** — 8 cards (protection 5 + recursion 3)
 

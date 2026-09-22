@@ -53,6 +53,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "drain life",
@@ -115,6 +116,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "cycle-rix-m-monocolor",
@@ -174,6 +176,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -223,6 +226,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -272,6 +276,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -322,6 +327,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "protection",
     "recursion"
@@ -383,6 +389,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "draw"
    ],
@@ -433,6 +440,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "ramp"
    ],
@@ -487,6 +495,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "wipe"
    ],
@@ -538,6 +547,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "protection"
    ],
@@ -586,6 +596,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "blood artist ability",
@@ -641,6 +652,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "draw"
    ],
@@ -699,6 +711,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "life loss matters",
@@ -739,6 +752,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "ramp"
    ],
@@ -790,6 +804,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -841,6 +856,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -891,6 +907,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "castable from graveyard",
@@ -950,6 +967,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "ramp"
    ],
@@ -1007,6 +1025,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1056,6 +1075,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1108,6 +1128,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "alliteration",
@@ -1157,6 +1178,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1217,6 +1239,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "gains pp counters",
@@ -1272,6 +1295,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1329,6 +1353,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "attack trigger",
@@ -1397,6 +1422,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "removal"
    ],
@@ -1449,6 +1475,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "removal"
    ],
@@ -1502,6 +1529,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1553,6 +1581,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "attack trigger",
@@ -1602,6 +1631,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -1659,6 +1689,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "anthem",
@@ -1713,6 +1744,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "removal"
    ],
@@ -1778,6 +1810,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "removal"
    ],
@@ -1832,6 +1865,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1883,6 +1917,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1934,6 +1969,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -1988,6 +2024,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "noncreature typal",
@@ -2042,6 +2079,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "death trigger",
@@ -2097,6 +2135,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "aesthetic counter",
@@ -2160,6 +2199,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -2219,6 +2259,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -2271,6 +2312,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "wipe"
    ],
@@ -2325,6 +2367,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "lifegain to damage",
@@ -2370,6 +2413,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "protection"
    ],
@@ -2428,6 +2472,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "alliteration",
@@ -2480,6 +2525,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -2523,6 +2569,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -2576,6 +2623,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "cycle-mid-r-two-color-legend",
@@ -2631,6 +2679,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -2697,6 +2746,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -2747,6 +2797,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "wipe",
     "graveyard hate"
@@ -2804,6 +2855,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -2853,6 +2905,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "draw"
    ],
@@ -2910,6 +2963,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "tutor"
    ],
@@ -2959,6 +3013,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "draw"
    ],
@@ -3019,6 +3074,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -3080,6 +3136,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "removal"
    ],
@@ -3142,6 +3199,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "ramp"
    ],
@@ -3195,6 +3253,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "draw"
    ],
@@ -3256,6 +3315,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -3308,6 +3368,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -3361,6 +3422,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "wipe"
    ],
@@ -3426,6 +3488,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "recursion"
    ],
@@ -3484,6 +3547,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "alliteration",
@@ -3535,6 +3599,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -3604,6 +3669,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -3660,6 +3726,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "blood artist ability",
@@ -3715,6 +3782,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "alliteration",
@@ -3772,6 +3840,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -3825,6 +3894,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -3874,6 +3944,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "synergy-token",
@@ -3920,6 +3991,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "cycle-mom-two-color-team-up",
@@ -3971,6 +4043,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4027,6 +4100,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4076,6 +4150,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "ramp"
    ],
@@ -4127,6 +4202,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4180,6 +4256,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "wipe"
    ],
@@ -4234,6 +4311,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "draw"
    ],
@@ -4290,6 +4368,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "draw"
    ],
@@ -4355,6 +4434,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4405,6 +4485,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -4462,6 +4543,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "protection"
    ],
@@ -4522,6 +4604,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4572,6 +4655,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "removal"
    ],
@@ -4631,6 +4715,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -4692,6 +4777,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4742,6 +4828,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "alliteration",
@@ -4804,6 +4891,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4850,6 +4938,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4906,6 +4995,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -4958,6 +5048,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -5011,6 +5102,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "activated ability",
@@ -5067,6 +5159,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "ramp"
    ],
@@ -5124,6 +5217,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -5190,6 +5284,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "land"
    ],
@@ -5243,6 +5338,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "evasion",
@@ -5288,6 +5384,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [
     "tutor"
    ],
@@ -5336,6 +5433,7 @@
    "is_tutor": false,
    "is_extra_turns": false,
    "is_mass_land_denial": false,
+   "combo_flagged": false,
    "roles": [],
    "tags": [
     "french vanilla",

@@ -13,21 +13,21 @@ These cards strain the mana base, but they are part of what the deck is built ar
 
 ### Strengthens the plan
 
-- **Hullbreaker Horror** ($6.38) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count
-- **Tidespout Tyrant** ($2.32) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count
-- **Stunt Double** ($4.29) — synergy +0.50 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Mitotic Slime** ($0.37) — synergy +0.46 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Naga Fleshcrafter** ($0.37) — synergy +0.46 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Flesh Duplicate** ($8.71) — synergy +0.45 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Clone** ($0.59) — synergy +0.44 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Gigantoplasm** ($0.70) — synergy +0.40 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Mirrorhall Mimic** ($1.60) — synergy +0.37 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Vizier of Many Faces** ($0.21) — synergy +0.35 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Saw in Half** ($5.73) — synergy +0.32 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Waxen Shapethief** ($0.33) — synergy +0.31 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Ravenous Slime** ($2.56) — synergy +0.30 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Maskwood Nexus** ($2.40) — synergy +0.30 measured vs 115 Clones builds of Uugguu, the Omniplasm
-- **Predator Ooze** ($0.20) — synergy +0.30 measured vs 115 Clones builds of Uugguu, the Omniplasm
+- **Hullbreaker Horror** ($6.44) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
+- **Tidespout Tyrant** ($2.44) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
+- **Stunt Double** ($4.52) — synergy +0.53 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Naga Fleshcrafter** ($0.38) — synergy +0.50 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Clone** ($0.61) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Mitotic Slime** ($0.36) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Flesh Duplicate** ($9.21) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Gigantoplasm** ($0.72) — synergy +0.40 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Mirrorhall Mimic** ($2.46) — synergy +0.36 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Vizier of Many Faces** ($0.28) — synergy +0.34 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Visage Bandit** ($0.14) — synergy +0.32 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Arcane Adaptation** ($3.28) — synergy +0.31 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Saw in Half** ($5.91) — synergy +0.30 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Ravenous Slime** ($2.32) — synergy +0.29 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Waxen Shapethief** ($0.39) — synergy +0.29 measured vs 166 Clones builds of Uugguu, the Omniplasm
 
 ## Consider cutting
 

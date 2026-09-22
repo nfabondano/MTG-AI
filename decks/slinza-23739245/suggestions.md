@@ -2,57 +2,54 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
+## Fix the mana first
+
+These cards strain the mana base, but they are part of what the deck is built around — the fix is sources, not cuts.
+
+- **+3 Red sources** — Quartzwood Crasher, Collective Inferno want ~20, deck has 17
+  - lands producing no Red worth revisiting: Bonders' Enclave, Contested Cliffs, Kessig Wolf Run
+
 ## Consider adding
+
+### Strengthens the plan
 
 - **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
 - **Staff of Domination** — completes a combo with Selvala, Heart of the Wilds → Infinite card draw, Infinite colored mana — **bracket 3**: completes a two-card combo
 - **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
 - **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
 - **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **More removal, wipe** — the role counts above are below the usual range — prioritise these slots
-- **Cultivate** — played in 67% of decks with this commander
-- **Goreclaw, Terror of Qal Sisma** ($6.39) — played in 60% of decks with this commander
-- **Rampant Growth** ($0.63) — played in 56% of decks with this commander
-- **Rockfall Vale** — played in 55% of decks with this commander
-- **Kodama's Reach** ($2.21) — played in 52% of decks with this commander
-- **Game Trail** ($0.27) — played in 47% of decks with this commander
-- **Armored Scrapgorger** ($0.30) — played in 46% of decks with this commander
-- **Goblin Anarchomancer** ($1.20) — played in 45% of decks with this commander
-- **Beast Whisperer** ($8.74) — played in 43% of decks with this commander
+- **Armored Scrapgorger** ($0.30) — synergy +0.45 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+- **Goreclaw, Terror of Qal Sisma** ($6.39) — synergy +0.42 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+- **Fangren Firstborn** ($2.26) — synergy +0.40 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+- **Aether Charge** ($0.22) — synergy +0.39 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+- **Ravenous Baloth** ($0.28) — synergy +0.38 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+- **Axebane Ferox** ($0.24) — synergy +0.32 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+- **Beast Whisperer** ($8.74) — synergy +0.30 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+
+### Fixes a weakness
+
+- **Vandalblast** ($1.41) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chandra's Ignition** ($8.76) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chain Reaction** ($0.31) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+
+_5 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **Quartzwood Crasher** — 2 Red pips wants ~20 sources, deck has 17  
-  _(castability)_
-- **Collective Inferno** — 2 Red pips wants ~20 sources, deck has 17  
-  _(castability)_
-- **The Great Henge** — 23 cards do draw work; a deck wants about 12  
+- **Rishkar's Expertise** — 23 cards do draw work; a deck wants about 12  
   _(oversupplied: draw)_
-- **Spearbreaker Behemoth** — 8 cards do protection work; a deck wants about 6  
-  _(oversupplied: protection)_
+- **Radagast of Rhosgobel** — 14 cards do ramp work; a deck wants about 12  
+  _(oversupplied: ramp)_
+- **The Great Henge** — 9 mana in a deck already carrying 27 spells at 5+  
+  _(curve)_
 - **Blasphemous Act** — 9 mana in a deck already carrying 27 spells at 5+  
   _(curve)_
-- **Herald of Ilharg** — outside every cluster this deck is built on (typal + removal + counters)  
-  _(no engine participation)_
-- **Caller of the Pack** — outside every cluster this deck is built on (typal + removal + counters)  
-  _(no engine participation)_
-- **Siege Behemoth** — outside every cluster this deck is built on (typal + removal + counters)  
-  _(no engine participation)_
-- **Battlefront Krushok** — outside every cluster this deck is built on (typal + removal + counters)  
-  _(no engine participation)_
-- **Emerald Medallion** — outside every cluster this deck is built on (typal + removal + counters)  
-  _(no engine participation)_
 
 ## Paired swaps
 
-- Quartzwood Crasher → Repercussion
-- Collective Inferno → Staff of Domination
-- The Great Henge → Toralf, God of Fury // Toralf's Hammer
-- Spearbreaker Behemoth → Ashnod's Altar
-- Blasphemous Act → Goblin Bombardment
-- Herald of Ilharg → More removal, wipe
-- Caller of the Pack → Cultivate
-- Siege Behemoth → Goreclaw, Terror of Qal Sisma
+_Each pair does the same job — nothing is matched by position._
+
+- Blasphemous Act → Vandalblast (sweeper)
 
 ---
 

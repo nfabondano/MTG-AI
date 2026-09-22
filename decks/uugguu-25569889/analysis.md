@@ -96,42 +96,41 @@ _Measured two ways — human-curated tags and oracle-text matching. Where they d
 
 ## Against the EDHREC meta
 
-**Basis:** vs 115 Clones builds of Uugguu, the Omniplasm.
+**Basis:** vs 166 Clones builds of Uugguu, the Omniplasm.
 
-Build variants EDHREC tracks: Tokens (130), Clones (115), Oozes (86), +1/+1 Counters (58), Reanimator (31), Aristocrats (25).
+Build variants EDHREC tracks: Tokens (171), Clones (166), Oozes (118), +1/+1 Counters (77), Reanimator (46), Aristocrats (35).
 
 Closest established commanders: The Mimeoplasm, Ratadrabik of Urborg, Hofri Ghostforge, Aeve, Progenitor Ooze, Myrkul, Lord of Bones, Experiment Kraj.
 
 **Staples you're missing** — most decks play these:
 
-- Stunt Double — in 51% of decks
-- Naga Fleshcrafter — in 48% of decks
-- Mitotic Slime — in 47% of decks
+- Stunt Double — in 54% of decks
+- Naga Fleshcrafter — in 52% of decks
+- Clone — in 46% of decks
 - Flesh Duplicate — in 46% of decks
-- Clone — in 45% of decks
-- Gigantoplasm — in 41% of decks
+- Mitotic Slime — in 46% of decks
+- Gigantoplasm — in 40% of decks
 - Mirrorhall Mimic — in 37% of decks
-- Vizier of Many Faces — in 36% of decks
 
-_Mana-base staples missing (separate on purpose): Rejuvenating Springs, Undergrowth Stadium, Path of Ancestry, Morphic Pool, Yavimaya Coast, Woodland Cemetery, Dreamroot Cascade, Opulent Palace._
+_Mana-base staples missing (separate on purpose): Rejuvenating Springs, Undergrowth Stadium, Morphic Pool, Woodland Cemetery, Hinterland Harbor, Yavimaya Coast, Path of Ancestry, Dreamroot Cascade._
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
-- Stunt Double — synergy +0.50
-- Mitotic Slime — synergy +0.46
-- Naga Fleshcrafter — synergy +0.46
+- Stunt Double — synergy +0.53
+- Naga Fleshcrafter — synergy +0.50
+- Clone — synergy +0.45
+- Mitotic Slime — synergy +0.45
 - Flesh Duplicate — synergy +0.45
-- Clone — synergy +0.44
 - Gigantoplasm — synergy +0.40
-- Mirrorhall Mimic — synergy +0.37
-- Vizier of Many Faces — synergy +0.35
-- Saw in Half — synergy +0.32
-- Waxen Shapethief — synergy +0.31
-- Ravenous Slime — synergy +0.30
-- Maskwood Nexus — synergy +0.30
-- Predator Ooze — synergy +0.30
-- Visage Bandit — synergy +0.30
-- Arcane Adaptation — synergy +0.30
+- Mirrorhall Mimic — synergy +0.36
+- Vizier of Many Faces — synergy +0.34
+- Visage Bandit — synergy +0.32
+- Arcane Adaptation — synergy +0.31
+- Saw in Half — synergy +0.30
+- Ravenous Slime — synergy +0.29
+- Waxen Shapethief — synergy +0.29
+- Oran-Rief Ooze — synergy +0.28
+- Maskwood Nexus — synergy +0.28
 
 ## Combos
 

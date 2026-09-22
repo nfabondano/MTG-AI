@@ -4,42 +4,51 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 ## Consider adding
 
+### Strengthens the plan
+
 - **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
-- **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage
-- **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB
-- **Goblin Bombardment** ($3.70) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB
-- **Fall of Cair Andros** ($0.39) — completes a combo with Blasphemous Act → Infinite +1/+1 counters on a creature, Near-infinite damage to creatures
-- **More removal, wipe** — the role counts above are below the usual range — prioritise these slots
-- **Ruby, Daring Tracker** ($0.27) — played in 67% of decks with this commander
-- **Cinder Glade** ($0.32) — played in 64% of decks with this commander
-- **Radha, Heir to Keld** ($0.16) — played in 55% of decks with this commander
-- **Paradise Druid** ($0.22) — played in 50% of decks with this commander
-- **Zhur-Taa Druid** ($0.18) — played in 45% of decks with this commander
-- **Ornithopter of Paradise** ($2.26) — played in 44% of decks with this commander
-- **Game Trail** ($0.27) — played in 44% of decks with this commander
-- **Garruk's Uprising** ($0.56) — played in 43% of decks with this commander
-- **Llanowar Loamspeaker** ($0.31) — played in 40% of decks with this commander
+- **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
+- **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
+- **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
+- **Fall of Cair Andros** ($0.39) — completes a combo with Blasphemous Act → Infinite +1/+1 counters on a creature, Near-infinite damage to creatures — **bracket 3**: completes a two-card combo
+- **Azusa, Lost but Seeking** ($13.95) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
+- **Champion of Lambholt** ($4.60) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
+- **Augur of Autumn** ($0.34) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
+- **Samut, Hazoret's Champion** ($9.96) — synergy +0.49 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Ruby, Daring Tracker** ($0.25) — synergy +0.47 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Llanowar Loamspeaker** ($0.30) — synergy +0.44 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Radha, Heir to Keld** ($0.19) — synergy +0.44 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+
+### Fixes a weakness
+
+- **Vandalblast** ($1.41) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chandra's Ignition** ($8.76) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chain Reaction** ($0.31) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+
+_5 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **The Great Henge** — 30 cards do ramp work; a deck wants about 12  
-  _(oversupplied: ramp)_
+- **Regal Force** — 18 cards do draw work; a deck wants about 12  
+  _(oversupplied: draw)_
 - **Natural Order** — 9 cards do tutor work; a deck wants about 4  
   _(oversupplied: tutor)_
 - **Blasphemous Act** — 9 mana in a deck already carrying 14 spells at 5+  
   _(curve)_
-- **Concordant Crossroads** — outside every cluster this deck is built on (ramp + untap)  
+- **The Great Henge** — 9 mana in a deck already carrying 14 spells at 5+  
+  _(curve)_
+- **Craterhoof Behemoth** — outside every cluster this deck is built on (ramp + untap + Human typal)  
   _(no engine participation)_
-- **Deflecting Swat** — outside every cluster this deck is built on (ramp + untap)  
+- **End-Raze Forerunners** — outside every cluster this deck is built on (ramp + untap + Human typal)  
+  _(no engine participation)_
+- **Concordant Crossroads** — outside every cluster this deck is built on (ramp + untap + Human typal)  
   _(no engine participation)_
 
 ## Paired swaps
 
-- The Great Henge → Repercussion
-- Natural Order → Toralf, God of Fury // Toralf's Hammer
-- Blasphemous Act → Ashnod's Altar
-- Concordant Crossroads → Goblin Bombardment
-- Deflecting Swat → Fall of Cair Andros
+_Each pair does the same job — nothing is matched by position._
+
+- Blasphemous Act → Vandalblast (sweeper)
 
 ---
 

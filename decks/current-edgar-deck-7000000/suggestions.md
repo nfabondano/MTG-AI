@@ -6,24 +6,24 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 ### Strengthens the plan
 
-- **Approach of the Second Sun** ($7.44) — completes a combo with Demonic Tutor → Win the game
-- **Monk Gyatso** ($7.51) — completes a combo with Lightning Greaves → Infinite creature LTB, Infinite creature ETB
-- **Ad Nauseam** ($10.69) — completes a combo with Teferi's Protection → Infinite card draw
-- **Gleaming Splendor** ($53.62) — completes a combo with Smothering Tithe + Anointed Procession → Infinite card draw for any number of players, Infinite draw triggers for any number of players
-- **Serra Avatar** ($0.55) — completes a combo with Swords to Plowshares + Sanguine Bond → Near-infinite lifegain, Near-infinite lifeloss for target opponent
-- **Indulgent Aristocrat** ($0.29) — synergy +0.62 measured vs 6635 Vampires builds of Edgar Markov
-- **Master of Dark Rites** ($2.99) — synergy +0.57 measured vs 6635 Vampires builds of Edgar Markov
-- **Charismatic Conqueror** ($23.80) — synergy +0.51 measured vs 6635 Vampires builds of Edgar Markov
-- **Drana, Liberator of Malakir** ($0.84) — synergy +0.50 measured vs 6635 Vampires builds of Edgar Markov
-- **Olivia's Wrath** ($0.41) — synergy +0.49 measured vs 6635 Vampires builds of Edgar Markov
-- **Clavileño, First of the Blessed** ($0.68) — synergy +0.48 measured vs 6635 Vampires builds of Edgar Markov
-- **Markov Baron** ($0.36) — synergy +0.45 measured vs 6635 Vampires builds of Edgar Markov
+- **Approach of the Second Sun** ($7.35) — completes a combo with Demonic Tutor → Win the game — **bracket 3**: completes a two-card combo
+- **Monk Gyatso** ($7.38) — completes a combo with Lightning Greaves → Infinite creature LTB, Infinite creature ETB — **bracket 3**: completes a two-card combo
+- **Ad Nauseam** ($10.85) — completes a combo with Teferi's Protection → Infinite card draw — **bracket 3**: completes a two-card combo
+- **Gleaming Splendor** ($35.00) — completes a combo with Smothering Tithe + Anointed Procession → Infinite card draw for any number of players, Infinite draw triggers for any number of players — **bracket 3**: completes a two-card combo
+- **Serra Avatar** ($0.64) — completes a combo with Swords to Plowshares + Sanguine Bond → Near-infinite lifegain, Near-infinite lifeloss for target opponent — **bracket 3**: completes a two-card combo
+- **Indulgent Aristocrat** ($0.35) — synergy +0.62 measured vs 6120 Vampires builds of Edgar Markov
+- **Master of Dark Rites** ($4.11) — synergy +0.56 measured vs 6120 Vampires builds of Edgar Markov
+- **Charismatic Conqueror** ($22.57) — synergy +0.50 measured vs 6120 Vampires builds of Edgar Markov
+- **Drana, Liberator of Malakir** ($0.89) — synergy +0.49 measured vs 6120 Vampires builds of Edgar Markov
+- **Olivia's Wrath** ($0.43) — synergy +0.48 measured vs 6120 Vampires builds of Edgar Markov
+- **Clavileño, First of the Blessed** ($0.70) — synergy +0.47 measured vs 6120 Vampires builds of Edgar Markov
+- **Markov Baron** ($0.36) — synergy +0.44 measured vs 6120 Vampires builds of Edgar Markov
 
 ### Fixes a weakness
 
-- **Ancient Tomb** ($132.95) — 6 ramp against a usual 8-12 — both counting systems agree it is short
-- **Temple of the False God** ($0.25) — 6 ramp against a usual 8-12 — both counting systems agree it is short
-- **Deadly Dispute** ($0.26) — 6 ramp against a usual 8-12 — both counting systems agree it is short
+- **Ancient Tomb** ($131.49) — 6 ramp against a usual 8-12 — both counting systems agree it is short — **bracket 3**: a Game Changer
+- **Temple of the False God** ($0.32) — 6 ramp against a usual 8-12 — both counting systems agree it is short
+- **Deadly Dispute** ($0.33) — 6 ramp against a usual 8-12 — both counting systems agree it is short
 
 _5 popularity-only ideas hidden — `--loose` shows them._
 
