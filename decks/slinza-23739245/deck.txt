@@ -1,0 +1,103 @@
+// Slinza
+// https://archidekt.com/decks/23739245
+
+// Commander
+1 Slinza, the Spiked Stampede
+
+// Deck
+1 Arcane Signet
+1 Emerald Medallion
+1 Herald's Horn
+1 Herd Heirloom
+1 Sol Ring
+1 The Great Henge
+1 Urza's Incubator
+1 Anara, Wolvid Familiar
+1 Battlefront Krushok
+1 Birds of Paradise
+1 Bloated Contaminator
+1 Caller of the Pack
+1 Craterhoof Behemoth
+1 Elder Gargaroth
+1 Fanatic of Rhonas
+1 Frenzied Baloth
+1 Garruk's Harbinger
+1 Garruk's Horde
+1 Garruk's Packleader
+1 Gruul Ragebeast
+1 Herald of Ilharg
+1 Herd Baloth
+1 Kona, Rescue Beastie
+1 Krosan Warchief
+1 Llanowar Elves
+1 Loot, Exuberant Explorer
+1 Manglehorn
+1 Neyith of the Dire Hunt
+1 Nylea's Forerunner
+1 Paleoloth
+1 Quartzwood Crasher
+1 Questing Beast
+1 Radagast of Rhosgobel
+1 Rampaging Baloths
+1 Realmwalker
+1 Selvala, Heart of the Wilds
+1 Shaleskin Bruiser
+1 Siege Behemoth
+1 Spearbreaker Behemoth
+1 Spellbreaker Behemoth
+1 Thunderfoot Baloth
+1 Ulvenwald Oddity // Ulvenwald Behemoth
+1 Wirewood Savage
+1 Woodland Liege
+1 Collective Inferno
+1 Elemental Bond
+1 Garruk's Uprising
+1 Primeval Bounty
+1 Rhythm of the Wild
+1 Shadow in the Warp
+1 Sphere Grid
+1 Uncivil Unrest
+1 Beast Within
+1 Bolt Bend
+1 Chaos Warp
+1 Deflecting Swat
+1 Entish Restoration
+1 Heroic Intervention
+1 Inspiring Call
+1 Khalni Ambush // Khalni Territory
+1 Return of the Wildspeaker
+1 Valakut Awakening // Valakut Stoneforge
+1 Arena of Glory
+1 Bonders' Enclave
+1 Boseiju, Who Endures
+1 Castle Garenbrig
+1 Cavern of Souls
+1 Cinder Glade
+1 Command Tower
+1 Contested Cliffs
+1 Evendo, Waking Haven
+7 Forest
+1 Kessig Wolf Run
+1 Mosswort Bridge
+2 Mountain
+1 Nykthos, Shrine to Nyx
+1 Path of Ancestry
+1 Rootbound Crag
+1 Skarrg, the Rage Pits
+1 Spire Garden
+1 Stomping Ground
+1 Thornspire Verge
+1 Three Tree City
+1 Wooded Foothills
+1 Yavimaya, Cradle of Growth
+1 Garruk, Primal Hunter
+1 Vivien, Monsters' Advocate
+1 Bala Ged Recovery // Bala Ged Sanctuary
+1 Blasphemous Act
+1 Bridgeworks Battle // Tanglespan Bridgeworks
+1 Ezuri's Predation
+1 Hull Breach
+1 Nature's Lore
+1 Rishkar's Expertise
+1 Stump Stomp // Burnwillow Clearing
+1 Three Visits
