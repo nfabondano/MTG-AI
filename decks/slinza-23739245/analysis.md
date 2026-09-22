@@ -1,19 +1,19 @@
 # Slinza
 
 **Commander:** Slinza, the Spiked Stampede  
-**Identity:** R/G · **Cards:** 104 · **Format:** Commander  
+**Identity:** R/G · **Cards:** 103 · **Format:** Commander  
 **Source:** https://archidekt.com/decks/23739245
 
 ## What stands out
 
-- Illegal: Deck has 104 cards; Commander requires exactly 100.
+- Illegal: Deck has 103 cards; Commander requires exactly 100.
 - Fix the mana first: +3 Red sources — Quartzwood Crasher, Collective Inferno want ~20, deck has 17.
 - 30 lands plus 5 modal spell-lands (35 effective) against a curve suggesting about 38. Still on the low side.
 - 15 draw — more than the usual 8-12. (tags count 23)
 - 0 wipe — typical decks run 2-4.
-- Average mana value 4.04 is high; hands can be slow to get going.
+- Average mana value 4.0 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
-- 27 spells at 5+ mana is top-heavy for a 100-card deck.
+- 26 spells at 5+ mana is top-heavy for a 100-card deck.
 - 15 combos one card away — see the combo section.
 
 
@@ -21,11 +21,11 @@
 
 **removal + Beast typal + counters**
 
-**Tribe:** 29 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
+**Tribe:** 28 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
 
 **Commander role:** force-multiplier — the 99 must supply: things worth multiplying.
 
-removal 12* · typal 10* · counters 7* · draw 23 · ramp 14 · tokens 7 · protection 5
+removal 12* · typal 9* · counters 7* · draw 23 · ramp 14 · tokens 7 · protection 5
 
 _\* the commander's own text asks for this._
 
@@ -42,7 +42,7 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 **This deck is not legal as built.**
 
-- Deck has 104 cards; Commander requires exactly 100.
+- Deck has 103 cards; Commander requires exactly 100.
 
 ## Mana
 
@@ -52,7 +52,7 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 | Colour | Pips | Heaviest | Sources | Lands | Need |
 |---|---:|---:|---:|---:|---:|
-| Red | 18 | 2 | 17 | 11 | 20 |
+| Red | 17 | 2 | 17 | 11 | 20 |
 | Green | 87 | 3 | 31 | 20 | 23 |
 
 _Heaviest is the most pips of that colour any single card asks for; Need is how many sources that card wants to be castable on curve._
@@ -63,7 +63,7 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
 
 ## Curve
 
-**Average mana value:** 4.04 (nonland)
+**Average mana value:** 4.0 (nonland)
 
 ```
  0 |                      0
@@ -73,14 +73,14 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
  4 | ████████             9
  5 | ██████████           12
  6 | ████                 5
-7+ | ████████             10
+7+ | ████████             9
 ```
 
-Creature 38 · Land 30 · Instant 10 · Sorcery 9 · Enchantment 8 · Artifact 7 · Planeswalker 2
+Creature 37 · Land 30 · Instant 10 · Sorcery 9 · Enchantment 8 · Artifact 7 · Planeswalker 2
 
-- Average mana value 4.04 is high; hands can be slow to get going.
+- Average mana value 4.0 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
-- 27 spells at 5+ mana is top-heavy for a 100-card deck.
+- 26 spells at 5+ mana is top-heavy for a 100-card deck.
 
 ## Roles
 
@@ -179,7 +179,7 @@ _An estimate from what the deck can do on paper. How it actually plays, and what
 
 ## Price
 
-**Deck total:** $710.08 · 8 cards without a price
+**Deck total:** $709.91 · 8 cards without a price
 
 Most expensive:
 

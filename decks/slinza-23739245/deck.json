@@ -6,16 +6,16 @@
  "format_name": "Commander",
  "owner": "Hugo0111",
  "url": "https://archidekt.com/decks/23739245",
- "updated_at": "2026-09-21T19:19:18.232731Z",
+ "updated_at": "2026-09-22T15:50:53.547255Z",
  "archidekt_bracket": null,
- "imported_at": "2026-09-22T15:37:52+00:00",
+ "imported_at": "2026-09-22T16:03:08+00:00",
  "description": "",
  "deck_tags": [],
  "color_identity": [
   "R",
   "G"
  ],
- "total_cards": 104,
+ "total_cards": 103,
  "commanders": [
   "Slinza, the Spiked Stampede"
  ],
@@ -5078,56 +5078,6 @@
    "set_code": "con",
    "released_at": "2009-02-06",
    "rarity": "rare",
-   "layout": "normal"
-  },
-  {
-   "name": "Shaleskin Bruiser",
-   "quantity": 1,
-   "scryfall_id": "fc2de8a4-0d84-4f7c-bbe4-3a31172186ab",
-   "oracle_id": "b90e370a-5080-485e-a957-93d5f60e6cdb",
-   "mana_cost": "{6}{R}",
-   "mana_value": 7.0,
-   "colors": [
-    "R"
-   ],
-   "color_identity": [
-    "R"
-   ],
-   "type_line": "Creature — Beast",
-   "oracle_text": "Trample\nWhenever this creature attacks, it gets +3/+0 until end of turn for each other attacking Beast.",
-   "mana_production": {},
-   "keywords": [
-    "Trample"
-   ],
-   "categories": [
-    "Finisher"
-   ],
-   "edhrec_rank": 22717,
-   "salt": 0.27,
-   "price_usd": 0.17,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "attack trigger",
-    "attacking matters",
-    "attacking matters-self",
-    "typal-beast",
-    "triggered ability",
-    "typal",
-    "typal-creature"
-   ],
-   "engine_participation": [
-    "typal"
-   ],
-   "set_code": "ons",
-   "released_at": "2002-10-07",
-   "rarity": "uncommon",
    "layout": "normal"
   },
   {

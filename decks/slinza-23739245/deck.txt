@@ -41,7 +41,6 @@
 1 Rampaging Baloths
 1 Realmwalker
 1 Selvala, Heart of the Wilds
-1 Shaleskin Bruiser
 1 Siege Behemoth
 1 Spearbreaker Behemoth
 1 Spellbreaker Behemoth

@@ -2,6 +2,8 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
+Keeping the deck at bracket 2 or below.
+
 ## Fix the mana first
 
 These cards strain the mana base, but they are part of what the deck is built around — the fix is sources, not cuts.
@@ -14,10 +16,6 @@ These cards strain the mana base, but they are part of what the deck is built ar
 ### Strengthens the plan
 
 - **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
-- **Staff of Domination** — completes a combo with Selvala, Heart of the Wilds → Infinite card draw, Infinite colored mana — **bracket 3**: completes a two-card combo
-- **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
-- **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
 - **Armored Scrapgorger** ($0.30) — synergy +0.45 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
 - **Goreclaw, Terror of Qal Sisma** ($6.39) — synergy +0.42 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
 - **Fangren Firstborn** ($2.26) — synergy +0.40 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
@@ -34,15 +32,24 @@ These cards strain the mana base, but they are part of what the deck is built ar
 
 _5 popularity-only ideas hidden — `--loose` shows them._
 
+## Would raise the bracket
+
+These came up as adds but would take the deck past bracket 2, so they are listed rather than recommended.
+
+- **Staff of Domination** — completes a combo with Selvala, Heart of the Wilds → Infinite card draw, Infinite colored mana — **bracket 3**: completes a two-card combo
+- **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
+- **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
+- **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
+
 ## Consider cutting
 
 - **Rishkar's Expertise** — 23 cards do draw work; a deck wants about 12  
   _(oversupplied: draw)_
 - **Radagast of Rhosgobel** — 14 cards do ramp work; a deck wants about 12  
   _(oversupplied: ramp)_
-- **The Great Henge** — 9 mana in a deck already carrying 27 spells at 5+  
+- **The Great Henge** — 9 mana in a deck already carrying 26 spells at 5+  
   _(curve)_
-- **Blasphemous Act** — 9 mana in a deck already carrying 27 spells at 5+  
+- **Blasphemous Act** — 9 mana in a deck already carrying 26 spells at 5+  
   _(curve)_
 
 ## Paired swaps

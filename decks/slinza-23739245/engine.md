@@ -7,7 +7,7 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 removal + Beast typal + counters
 
-**Tribe:** 29 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
+**Tribe:** 28 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
 
 ## Slinza, the Spiked Stampede's role
 
@@ -22,7 +22,7 @@ copy, counters, removal, typal
 ## Clusters
 
 - **removal** — 12 cards *(commander wants this)*
-- **typal** — 10 cards *(commander wants this)*
+- **typal** — 9 cards *(commander wants this)*
 - **counters** — 7 cards *(commander wants this)*
 - **draw** — 23 cards
 - **ramp** — 14 cards
@@ -49,7 +49,6 @@ copy, counters, removal, typal
 - Khalni Ambush // Khalni Territory — says so in its text
 - Stump Stomp // Burnwillow Clearing — says so in its text
 - Bridgeworks Battle // Tanglespan Bridgeworks — says so in its text
-- Shaleskin Bruiser — your own category marks it the finisher
 
 ## Quadrant coverage
 
