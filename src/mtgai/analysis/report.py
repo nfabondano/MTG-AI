@@ -12,6 +12,7 @@ from typing import Any
 from ..model import COLOR_NAMES, Deck
 from . import engine as engine_mod
 from . import roles as roles_mod
+from . import suggest as suggest_mod
 
 BAR = "█"
 
@@ -46,6 +47,7 @@ def render_analysis(result: dict[str, Any]) -> str:
         out.append("- Nothing structural to flag. The deck's shape looks sound.")
     out.append("")
 
+    out.append(_intent_section(result.get("intent") or {}))
     out.append(_engine_section(result.get("engine") or {}))
     out.append(_legality_section(result["legality"]))
     out.append(_mana_section(result["mana"]))
@@ -65,6 +67,66 @@ def render_analysis(result: dict[str, Any]) -> str:
     return "\n".join(out) + "\n"
 
 
+def _intent_section(data: dict[str, Any]) -> str:
+    """What Nicolas has declared the deck to be — printed so every judgement
+    below can be checked against it."""
+    if not data:
+        return ""
+    out = ["## Intent (declared)", ""]
+    if data.get("archetype"):
+        out.append(f"**{data['archetype']}**")
+        out.append("")
+    line_bits = []
+    if data.get("tribe"):
+        line_bits.append(f"tribe: {data['tribe']}")
+    if data.get("commander_role"):
+        line_bits.append(f"commander is the {', '.join(data['commander_role'])}")
+    if data.get("power_bracket"):
+        line_bits.append(f"target bracket {data['power_bracket']}")
+    if data.get("budget_per_card") is not None:
+        line_bits.append(f"budget ${data['budget_per_card']:g}/card")
+    if line_bits:
+        out.append(" · ".join(line_bits))
+        out.append("")
+    if data.get("win_conditions"):
+        out.append("Wins by: " + "; ".join(data["win_conditions"]))
+        out.append("")
+    if data.get("core_cards"):
+        out.append(
+            f"Untouchable: {', '.join(data['core_cards'])} — the tool will not "
+            "suggest cutting these."
+        )
+        out.append("")
+    if data.get("meta_notes"):
+        out.append(f"Table notes: {data['meta_notes']}")
+        out.append("")
+    return "\n".join(out)
+
+
+def _sorted_clusters(data: dict[str, Any]) -> list[tuple[str, int]]:
+    """Commander-wanted clusters first, then by size — the plan before the plumbing."""
+    clusters = data.get("clusters") or {}
+    wants = set(data.get("commander_wants") or [])
+    return sorted(
+        clusters.items(), key=lambda kv: (kv[0] not in wants, -kv[1], kv[0])
+    )
+
+
+def _tribe_line(data: dict[str, Any]) -> str | None:
+    census = data.get("tribe_census") or {}
+    if not census:
+        return None
+    parts = [f"{census['true_type']} true {census['tribe']}s"]
+    if census.get("changelings"):
+        parts.append(f"{census['changelings']} changelings")
+    if census.get("conditional_copies"):
+        parts.append(
+            f"{census['conditional_copies']} copy effects that become "
+            f"{census['tribe']}s when they copy one"
+        )
+    return f"**Tribe:** {' + '.join(parts)}"
+
+
 def _engine_section(data: dict[str, Any]) -> str:
     """What the deck is built around — read this before judging any card."""
     if not data:
@@ -73,11 +135,24 @@ def _engine_section(data: dict[str, Any]) -> str:
     out.append(f"**{data.get('archetype', 'no dominant theme')}**")
     out.append("")
 
-    clusters = data.get("clusters") or {}
+    tribe_line = _tribe_line(data)
+    if tribe_line:
+        out.append(tribe_line)
+        out.append("")
+
+    role = data.get("commander_role") or {}
+    if role.get("roles"):
+        out.append(
+            f"**Commander role:** {' + '.join(role['roles'])} — the 99 must supply: "
+            + "; ".join(s.split(":")[0] for s in role.get("supplies") or []) + "."
+        )
+        out.append("")
+
+    clusters = _sorted_clusters(data)
     if clusters:
         wants = set(data.get("commander_wants") or [])
         parts = []
-        for name, count in list(clusters.items())[:8]:
+        for name, count in clusters[:8]:
             parts.append(f"{name} {count}{'*' if name in wants else ''}")
         out.append(" · ".join(parts))
         out.append("")
@@ -95,10 +170,12 @@ def _engine_section(data: dict[str, Any]) -> str:
 
     over = data.get("oversupplied") or []
     if over:
-        out.append(
-            "**Oversupplied:** "
-            + ", ".join(f"{e['category']} {e['count']} (want ~{e['target_high']})" for e in over[:4])
-        )
+        parts = []
+        for e in over[:4]:
+            label = f"{e['category']} {e['count']} (want ~{e['target_high']}"
+            label += ", even doubled for the commander)" if e.get("commander_core") else ")"
+            parts.append(label)
+        out.append("**Oversupplied:** " + ", ".join(parts))
         out.append("")
 
     out.append(f"_{data.get('note', '')}_")
@@ -196,13 +273,22 @@ def _curve_section(data: dict[str, Any]) -> str:
 
 def _roles_section(data: dict[str, Any]) -> str:
     out = ["## Roles", ""]
-    out.append("| Role | Count | Typical |")
-    out.append("|---|---:|---:|")
+    tag_counts = data.get("tag_counts") or {}
+    if tag_counts:
+        out.append("| Role | Tags | Oracle text | Typical |")
+        out.append("|---|---:|---:|---:|")
+    else:
+        out.append("| Role | Count | Typical |")
+        out.append("|---|---:|---:|")
     targets = data.get("targets") or {}
     for role, count in data["counts"].items():
         target = targets.get(role)
         target_text = f"{target[0]}–{target[1]}" if target else "—"
-        out.append(f"| {role.title()} | {count} | {target_text} |")
+        if tag_counts:
+            tag_text = tag_counts.get(role, "—")
+            out.append(f"| {role.title()} | {tag_text} | {count} | {target_text} |")
+        else:
+            out.append(f"| {role.title()} | {count} | {target_text} |")
     out.append("")
 
     for finding in data.get("findings", []):
@@ -210,9 +296,15 @@ def _roles_section(data: dict[str, Any]) -> str:
     if data.get("findings"):
         out.append("")
 
-    out.append(
-        "_Roles come from oracle-text matching, so treat the edges as approximate._"
-    )
+    if tag_counts:
+        out.append(
+            "_Measured two ways — human-curated tags and oracle-text matching. "
+            "Where they disagree, the tags are the better signal._"
+        )
+    else:
+        out.append(
+            "_Roles come from oracle-text matching, so treat the edges as approximate._"
+        )
     out.append("")
     return "\n".join(out)
 
@@ -224,9 +316,28 @@ def _edhrec_section(data: dict[str, Any]) -> str:
         out.append("")
         return "\n".join(out)
 
+    if data.get("basis_label"):
+        out.append(f"**Basis:** {data['basis_label']}.")
+        out.append("")
     sample = data.get("sample_size") or 0
-    if sample:
+    if sample and data.get("basis") != "theme":
         out.append(f"Compared against ~{sample:,} decks with this commander.")
+        out.append("")
+    if data.get("small_sample"):
+        out.append(
+            f"> Small sample ({sample} decks) — every number below is weak evidence."
+        )
+        out.append("")
+
+    themes = data.get("themes") or []
+    if themes:
+        parts = [f"{t['name']} ({t['count']})" for t in themes[:6]]
+        out.append(f"Build variants EDHREC tracks: {', '.join(parts)}.")
+        out.append("")
+
+    similar = data.get("similar") or []
+    if similar:
+        out.append(f"Closest established commanders: {', '.join(similar[:6])}.")
         out.append("")
 
     staples = data.get("missing_staples") or []
@@ -235,6 +346,12 @@ def _edhrec_section(data: dict[str, Any]) -> str:
         out.append("")
         for entry in staples:
             out.append(f"- {entry['name']} — in {entry['inclusion']:.0%} of decks")
+        out.append("")
+
+    mana_staples = data.get("missing_mana_staples") or []
+    if mana_staples:
+        names = ", ".join(e["name"] for e in mana_staples[:8])
+        out.append(f"_Mana-base staples missing (separate on purpose): {names}._")
         out.append("")
 
     synergy = data.get("missing_synergy") or []
@@ -351,23 +468,37 @@ def _price_section(data: dict[str, Any]) -> str:
 # --- suggestions ----------------------------------------------------------
 
 
+_GROUP_HEADINGS = (
+    (suggest_mod.GROUP_PLAN, "Strengthens the plan"),
+    (suggest_mod.GROUP_WEAKNESS, "Fixes a weakness"),
+    (suggest_mod.GROUP_META, "Meta staples (optional)"),
+)
+
+
 def render_suggestions(
     deck: Deck,
     result: dict[str, Any],
+    built: dict[str, Any] | None = None,
     *,
     budget: float | None = None,
     loose: bool = False,
     max_bracket: int | None = None,
+    offline: bool = False,
 ) -> str:
-    """Turn the analysis into concrete adds and cuts.
+    """Render the structured suggestions as markdown.
 
-    Adds are driven by what the deck lacks, so the same missing staple is a
-    stronger suggestion in a deck that is short on ramp than in one that is not.
+    Conservative by default: only ideas with a deck-internal or
+    commander-specific reason appear; popularity-only ideas hide behind
+    `--loose`, labelled as exactly that.
 
     With max_bracket set, adds that would push the deck past it (Game Changers,
     the missing half of a two-card combo, mass land denial) are pulled out into
     their own section instead of being offered as swaps.
     """
+    if built is None:
+        built = suggest_mod.build(
+            deck, result, budget=budget, loose=loose, offline=offline
+        )
     out: list[str] = []
     out.append(f"# Suggestions — {deck.name}")
     out.append("")
@@ -377,17 +508,6 @@ def render_suggestions(
     )
     out.append("")
 
-    adds = _build_adds(deck, result, budget=budget)
-    cuts = _build_cuts(deck, result, loose=loose)
-
-    raises: list[dict[str, Any]] = []
-    if max_bracket is not None:
-        kept = []
-        for entry in adds:
-            impact = entry.get("bracket_impact")
-            (raises if impact and impact > max_bracket else kept).append(entry)
-        adds = kept
-
     if budget is not None:
         out.append(f"Filtered to cards at or under ${budget:,.2f}.")
         out.append("")
@@ -395,14 +515,56 @@ def render_suggestions(
         out.append(f"Keeping the deck at bracket {max_bracket} or below.")
         out.append("")
 
+    fixes = built["mana_fixes"]
+    if fixes:
+        out.append("## Fix the mana first")
+        out.append("")
+        out.append(
+            "These cards strain the mana base, but they are part of what the deck "
+            "is built around — the fix is sources, not cuts."
+        )
+        out.append("")
+        for fix in fixes:
+            line = (
+                f"- **+{fix['delta']} {fix['color_name']} source"
+                f"{'s' if fix['delta'] > 1 else ''}** — "
+                f"{', '.join(fix['driven_by'])} want ~{fix['needed']}, deck has {fix['have']}"
+            )
+            out.append(line)
+            if fix.get("swap_candidates"):
+                out.append(
+                    f"  - lands producing no {fix['color_name']} worth revisiting: "
+                    + ", ".join(fix["swap_candidates"])
+                )
+        out.append("")
+
+    adds = augment_adds_with_bracket_impact(built["adds"], result)
+    adds, raises = split_by_bracket(adds, max_bracket)
+
     out.append("## Consider adding")
     out.append("")
-    if adds:
-        for entry in adds:
+    shown_any = False
+    for group, heading in _GROUP_HEADINGS:
+        entries = [a for a in adds if a["group"] == group]
+        if group == suggest_mod.GROUP_META and not loose:
+            continue
+        if not entries:
+            continue
+        shown_any = True
+        out.append(f"### {heading}")
+        out.append("")
+        for entry in entries:
             out.append(f"- {_format_add(entry)}")
-    else:
+        out.append("")
+    if not shown_any:
         out.append("- Nothing pressing. The deck covers its bases.")
-    out.append("")
+        out.append("")
+    if built["hidden_meta"] and not loose:
+        out.append(
+            f"_{built['hidden_meta']} popularity-only idea"
+            f"{'s' if built['hidden_meta'] > 1 else ''} hidden — `--loose` shows them._"
+        )
+        out.append("")
 
     if raises:
         out.append("## Would raise the bracket")
@@ -416,6 +578,7 @@ def render_suggestions(
             out.append(f"- {_format_add(entry)}")
         out.append("")
 
+    cuts = built["cuts"]
     out.append("## Consider cutting")
     out.append("")
     if cuts:
@@ -431,11 +594,15 @@ def render_suggestions(
             out.append("- Run with `--loose` to see weaker candidates.")
     out.append("")
 
-    if adds and cuts:
+    raised_names = {r["name"] for r in raises}
+    swaps = [s for s in built["swaps"] if s["add"] not in raised_names]
+    if swaps:
         out.append("## Paired swaps")
         out.append("")
-        for add, cut in zip(adds[:8], cuts[:8]):
-            out.append(f"- {cut['name']} → {add['name']}")
+        out.append("_Each pair does the same job — nothing is matched by position._")
+        out.append("")
+        for swap in swaps[:8]:
+            out.append(f"- {swap['cut']} → {swap['add']} ({swap['shared']})")
         out.append("")
 
     out.append("---")
@@ -500,198 +667,47 @@ def _price_of(name: str) -> float | None:
         return None
 
 
-def _build_adds(
-    deck: Deck, result: dict[str, Any], *, budget: float | None
+def augment_adds_with_bracket_impact(
+    adds: list[dict[str, Any]], result: dict[str, Any]
 ) -> list[dict[str, Any]]:
-    adds: list[dict[str, Any]] = []
-    seen: set[str] = set()
-
-    # Combos one card away are the most concrete change available.
-    for combo in (result["combos"].get("near_miss") or [])[:5]:
-        missing = combo.get("missing")
-        if not missing or missing.lower() in seen:
-            continue
-        price = _price_of(missing)
-        if budget is not None and price is not None and price > budget:
-            continue
-        seen.add(missing.lower())
-        produces = ", ".join(combo["produces"][:2])
-        impact, reason = _bracket_impact_of(missing, combo=combo)
-        adds.append(
-            {
-                "name": missing,
-                "price": price,
-                "why": f"completes a combo with {' + '.join(c for c in combo['cards'] if c != missing)} → {produces}",
-                "bracket_impact": impact,
-                "bracket_reason": reason,
-            }
-        )
-
-    # Then whatever the role analysis says the deck is short on.
-    short_roles = {
-        f["role"] for f in result["roles"].get("findings", []) if f["verdict"] == "low"
+    """Attach bracket_impact/bracket_reason to each add, without mutating the
+    originals — combo-sourced adds are matched back to their combo so mass
+    land denial and two-card combos are told apart from a bare Game Changer."""
+    combo_by_missing = {
+        c["missing"]: c
+        for c in (result.get("combos", {}).get("near_miss") or [])
+        if c.get("missing")
     }
-    edhrec = result["edhrec"]
-    candidates = (edhrec.get("missing_staples") or []) + (edhrec.get("missing_synergy") or [])
+    augmented = []
+    for entry in adds:
+        combo = combo_by_missing.get(entry["name"])
+        impact, reason = _bracket_impact_of(entry["name"], combo=combo)
+        augmented.append({**entry, "bracket_impact": impact, "bracket_reason": reason})
+    return augmented
 
-    if short_roles:
-        adds.append(
-            {
-                "name": f"More {', '.join(sorted(short_roles))}",
-                "why": "the role counts above are below the usual range — prioritise these slots",
-            }
-        )
 
-    for entry in candidates:
-        name = entry["name"]
-        if name.lower() in seen:
-            continue
-        price = _price_of(name)
-        if budget is not None and price is not None and price > budget:
-            continue
-        seen.add(name.lower())
-        if entry.get("inclusion"):
-            why = f"played in {entry['inclusion']:.0%} of decks with this commander"
-        else:
-            why = f"high synergy (+{entry.get('synergy', 0):.2f}) with this commander"
-        impact, reason = _bracket_impact_of(name)
-        adds.append(
-            {
-                "name": name,
-                "price": price,
-                "why": why,
-                "bracket_impact": impact,
-                "bracket_reason": reason,
-            }
-        )
-        if len(adds) >= 15:
-            break
+def split_by_bracket(
+    adds: list[dict[str, Any]], max_bracket: int | None
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Split bracket-augmented adds into (kept, raises) against a cap.
 
-    return adds
+    With no cap, everything is kept and nothing is raised.
+    """
+    if max_bracket is None:
+        return adds, []
+    kept: list[dict[str, Any]] = []
+    raised: list[dict[str, Any]] = []
+    for entry in adds:
+        impact = entry.get("bracket_impact")
+        (raised if impact and impact > max_bracket else kept).append(entry)
+    return kept, raised
 
 
 def _build_cuts(
     deck: Deck, result: dict[str, Any], *, loose: bool = False
 ) -> list[dict[str, Any]]:
-    """Cut candidates, each backed by deck-internal evidence.
-
-    Popularity is deliberately not evidence. The tool once proposed cutting an
-    entire aristocrats engine because those cards sat outside a truncated
-    EDHREC list, so a card's absence from other people's decks can no longer
-    justify anything on its own.
-
-    What does justify a cut, in order of how much it tells you:
-
-    1. **Castability** — the card asks for more coloured mana than the deck
-       makes. A card that is the sole reason a colour requirement is high is the
-       strongest candidate there is: cutting it relaxes the whole mana base.
-    2. **Oversupply** — the card sits in a cluster holding far more than the
-       deck needs.
-    3. **Curve** — a top-of-curve card in a deck that is already top-heavy.
-    4. **No engine participation** — it does nothing the deck is built around.
-
-    A card outside the colour identity is not a candidate but a requirement.
-    """
-    cuts: list[dict[str, Any]] = []
-    seen: set[str] = set()
-    eng = result.get("engine") or {}
-
-    def add(name: str, why: str, evidence: str, score: int) -> None:
-        key = name.lower()
-        if key in seen:
-            return
-        seen.add(key)
-        cuts.append({"name": name, "why": why, "evidence": evidence, "score": score})
-
-    # Illegal cards are not suggestions.
-    identity = set(deck.color_identity())
-    for card in deck.cards:
-        if card.is_commander:
-            continue
-        outside = set(card.color_identity) - identity
-        if outside:
-            add(
-                card.name,
-                f"illegal — {'/'.join(sorted(outside))} is outside your colour identity",
-                "colour identity",
-                1000,
-            )
-
-    protected = _combo_cards(result)
-
-    # 1. Castability.
-    for entry in (eng.get("castability_cuts") or [])[:6]:
-        if entry["name"] in protected:
-            continue
-        why = "; ".join(entry["reasons"])
-        if entry.get("sole_driver"):
-            why += " — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base"
-        add(entry["name"], why, "castability", 100 + entry.get("severity", 0))
-
-    # 2. Oversupply — name the specific cards making up the excess, cheapest
-    #    contribution first so the engine's best pieces are not the ones offered.
-    for over in (eng.get("oversupplied") or [])[:3]:
-        category = over["category"]
-        members = engine_mod.cards_in_category(deck, category)
-        members.sort(key=lambda c: (-(c.mana_value or 0), c.name))
-        for card in members[: over["excess"]]:
-            if card.is_commander or card.name in protected:
-                continue
-            add(
-                card.name,
-                f"{over['count']} cards do {category} work; a deck wants about "
-                f"{over['target_high']}",
-                f"oversupplied: {category}",
-                60,
-            )
-            break  # one representative per cluster, not a purge
-
-    # 3. Curve.
-    curve = result.get("curve") or {}
-    if curve.get("expensive_spells", 0) > 12:
-        top = sorted(
-            (c for c in deck.cards if not c.is_land and not c.is_commander),
-            key=lambda c: -(c.mana_value or 0),
-        )
-        for card in top[:2]:
-            if card.name in protected:
-                continue
-            add(
-                card.name,
-                f"{card.mana_value:.0f} mana in a deck already carrying "
-                f"{curve['expensive_spells']} spells at 5+",
-                "curve",
-                50,
-            )
-
-    # 4. Does nothing the deck is built around.
-    for name in (eng.get("orphans") or [])[:5]:
-        if name in protected:
-            continue
-        add(
-            name,
-            f"outside every cluster this deck is built on ({eng.get('archetype', 'its theme')})",
-            "no engine participation",
-            30,
-        )
-
-    # 5. Measured-low inclusion, and only ever as corroboration.
-    if loose:
-        for entry in result["edhrec"].get("off_meta") or []:
-            if entry["name"] in protected:
-                continue
-            add(entry["name"], entry["reason"], "low inclusion (weak signal)", 10)
-
-    cuts.sort(key=lambda c: -c["score"])
-    return cuts
-
-
-def _combo_cards(result: dict[str, Any]) -> set[str]:
-    """Cards that assemble a combo the deck already has — never offer these."""
-    protected: set[str] = set()
-    for combo in result.get("combos", {}).get("complete") or []:
-        protected.update(combo.get("cards") or [])
-    return protected
+    """Kept as the stable entry point; the logic lives in analysis.suggest."""
+    return suggest_mod.build_cuts(deck, result, loose=loose)
 
 
 def render_engine(result: dict[str, Any]) -> str:
@@ -708,8 +724,33 @@ def render_engine(result: dict[str, Any]) -> str:
         "your version wins, and re-analysis will leave it alone._"
     )
     out.append("")
+
+    intent_data = result.get("intent") or {}
+    if intent_data.get("archetype") or intent_data.get("win_conditions"):
+        out.append("## Declared intent\n")
+        if intent_data.get("archetype"):
+            out.append(f"**{intent_data['archetype']}**")
+        if intent_data.get("win_conditions"):
+            out.append(f"Wins by: {'; '.join(intent_data['win_conditions'])}")
+        out.append("")
+
     out.append(f"## Archetype\n\n{data.get('archetype', 'unknown')}")
     out.append("")
+
+    tribe_line = _tribe_line(data)
+    if tribe_line:
+        out.append(tribe_line)
+        out.append("")
+
+    role = data.get("commander_role") or {}
+    if role.get("roles"):
+        commander = ", ".join(data.get("commander") or []) or "The commander"
+        out.append(f"## {commander}'s role\n")
+        out.append(f"**{' + '.join(role['roles'])}** — so the 99 must supply:")
+        out.append("")
+        for supply in role.get("supplies") or []:
+            out.append(f"- {supply}")
+        out.append("")
 
     wants = data.get("commander_wants") or []
     if wants:
@@ -718,12 +759,23 @@ def render_engine(result: dict[str, Any]) -> str:
         out.append(", ".join(wants))
         out.append("")
 
-    clusters = data.get("clusters") or {}
+    clusters = _sorted_clusters(data)
     if clusters:
         out.append("## Clusters\n")
-        for name, count in clusters.items():
+        for name, count in clusters:
             marker = " *(commander wants this)*" if name in set(wants) else ""
             out.append(f"- **{name}** — {count} cards{marker}")
+        out.append("")
+
+    fixes = data.get("mana_fixes") or []
+    if fixes:
+        out.append("## Mana-base fixes before cuts\n")
+        for fix in fixes:
+            out.append(
+                f"- +{fix['delta']} {fix['color_name']} source"
+                f"{'s' if fix['delta'] > 1 else ''} — "
+                f"{', '.join(fix['driven_by'])} want ~{fix['needed']}, deck has {fix['have']}"
+            )
         out.append("")
 
     strain = data.get("castability") or []
@@ -734,6 +786,44 @@ def render_engine(result: dict[str, Any]) -> str:
             out.append(f"- {entry['name']} `{entry['mana_cost']}`{note}")
             for why in entry["reasons"]:
                 out.append(f"  - {why}")
+        out.append("")
+
+    wincons = data.get("win_conditions")
+    declared_wins = intent_data.get("win_conditions") or []
+    if wincons is not None:
+        out.append("## How it ends games\n")
+        if declared_wins:
+            out.append(f"Declared: {'; '.join(declared_wins)}")
+            out.append("")
+        combos = result.get("combos") or {}
+        for combo in combos.get("complete") or []:
+            out.append(f"- {' + '.join(combo['cards'])} → {', '.join(combo['produces'][:2])}")
+        for entry in wincons[:8]:
+            out.append(f"- {entry['name']} — {entry['why']}")
+        if not wincons and not (combos.get("complete") or []) and not declared_wins:
+            out.append(
+                "No clear closer found — the deck may win on incremental damage, "
+                "or a finisher is genuinely missing. Worth a look."
+            )
+        out.append("")
+
+    quadrants = data.get("quadrants") or {}
+    if quadrants:
+        out.append("## Quadrant coverage\n")
+        out.append(
+            "_Four game states (EDHREC quadrant theory). A near-zero row is a "
+            "plan for that state the deck does not have._\n"
+        )
+        labels = {
+            "developing": "Developing (ramp, draw)",
+            "parity": "Breaking parity (removal, sweepers)",
+            "winning": "Winning (closers, going wide)",
+            "losing": "Behind (protection, recursion)",
+        }
+        for key, label in labels.items():
+            entry = quadrants.get(key) or {}
+            parts = " + ".join(f"{c} {n}" for c, n in (entry.get("from") or {}).items())
+            out.append(f"- **{label}** — {entry.get('total', 0)} cards{f' ({parts})' if parts else ''}")
         out.append("")
 
     orphans = data.get("orphans") or []

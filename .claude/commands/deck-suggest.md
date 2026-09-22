@@ -21,6 +21,11 @@ Then talk me through the results rather than dumping them:
   my deck is trying to do, and an unusual card is often a deliberate choice
 - Anything the suggestions miss that you noticed yourself
 
+The tool already enforces `intent.md` where it exists: cards I declared sacred
+never appear as cuts, and my category targets replace the generic ones. If the
+suggestions still fight the deck's idea, that means the intent isn't captured —
+offer `/deck-intent` rather than arguing with the output.
+
 Every card you suggest must be inside the deck's colour identity. Say so if you
 spot one that isn't — that's a bug worth reporting.
 

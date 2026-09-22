@@ -70,10 +70,19 @@ class CommanderData:
     found: bool = False
     error: str = ""
     recommendations: list[Recommendation] = None  # type: ignore[assignment]
+    # How this commander's decks split into builds ("Clones", 115 decks), the
+    # commanders EDHREC considers closest, and how many decks the page covers.
+    themes: list[dict[str, Any]] = None  # type: ignore[assignment]
+    similar: list[str] = None  # type: ignore[assignment]
+    num_decks: int = 0
 
     def __post_init__(self) -> None:
         if self.recommendations is None:
             self.recommendations = []
+        if self.themes is None:
+            self.themes = []
+        if self.similar is None:
+            self.similar = []
 
     def by_name(self) -> dict[str, Recommendation]:
         """Highest-synergy entry per card; a card can appear in several lists."""
@@ -107,6 +116,29 @@ def _parse_cardlists(payload: dict[str, Any], slug: str) -> CommanderData:
     return data
 
 
+def _parse_commander_page(payload: dict[str, Any], slug: str) -> CommanderData:
+    """Everything a commander page carries beyond the flat card lists.
+
+    The same payload the tool always fetched also names the build variants
+    (`panels.taglinks`), the closest commanders (`similar`) and the page's deck
+    count — ignoring them is how the tool compared a clone-heavy build against
+    the all-builds average without saying so.
+    """
+    data = _parse_cardlists(payload, slug)
+    for link in (payload.get("panels") or {}).get("taglinks") or []:
+        if not isinstance(link, dict):
+            continue
+        name, theme_slug = link.get("value"), link.get("slug")
+        if name and theme_slug:
+            data.themes.append(
+                {"name": str(name), "slug": str(theme_slug), "count": int(link.get("count") or 0)}
+            )
+    data.similar = [str(s) for s in payload.get("similar") or [] if s]
+    card = (payload.get("container") or {}).get("json_dict", {}).get("card") or {}
+    data.num_decks = int(card.get("num_decks") or 0)
+    return data
+
+
 def commander(name_or_slug: str) -> CommanderData:
     """Fetch a commander's recommendation page.
 
@@ -122,7 +154,7 @@ def commander(name_or_slug: str) -> CommanderData:
         return CommanderData(slug=slug, found=False, error="EDHREC endpoint is gated (403)")
     except SourceError as exc:
         return CommanderData(slug=slug, found=False, error=str(exc))
-    return _parse_cardlists(payload, slug)
+    return _parse_commander_page(payload, slug)
 
 
 def commander_for(names: list[str]) -> CommanderData:
@@ -143,24 +175,36 @@ def commander_for(names: list[str]) -> CommanderData:
     return commander(names[0])
 
 
-def average_deck(name_or_slug: str) -> list[str]:
-    """EDHREC's precomputed average decklist for a commander."""
-    slug = name_or_slug if "-" in name_or_slug and " " not in name_or_slug else slugify(name_or_slug)
+def tag_page(tag_slug: str) -> CommanderData:
+    """A format-wide tag page (`pages/tags/oozes.json`) — commanders and cards
+    for a theme across all decks. The last-resort comparison population for a
+    commander EDHREC has no page for yet."""
+    slug = f"tags/{tag_slug}"
     try:
-        payload = get_json(f"{BASE}/average-decks/{slug}.json")
-    except SourceError:
-        return []
-    deck = payload.get("deck")
-    if isinstance(deck, list):
-        return [str(entry) for entry in deck]
-    parsed = _parse_cardlists(payload, slug)
-    return [r.name for r in parsed.recommendations]
+        payload = get_json(f"{BASE}/{slug}.json")
+    except NotFound:
+        return CommanderData(slug=slug, found=False, error="no tag page")
+    except Forbidden:
+        return CommanderData(slug=slug, found=False, error="EDHREC tag endpoint is gated (403)")
+    except SourceError as exc:
+        return CommanderData(slug=slug, found=False, error=str(exc))
+    return _parse_commander_page(payload, slug)
 
 
-def card(name: str) -> dict[str, Any]:
-    """Per-card EDHREC data (inclusion counts, salt score)."""
+def theme(commander_slug: str, theme_slug: str) -> CommanderData:
+    """A commander page filtered to one build variant, e.g. `…/clones.json`.
+
+    Same shape as the commander page, with `num_decks` counting only that
+    variant's decks. The endpoint is known to 403 intermittently; like
+    everything here it degrades to `found=False` rather than failing.
+    """
+    slug = f"{commander_slug}/{theme_slug}"
     try:
-        payload = get_json(f"{BASE}/cards/{slugify(name)}.json")
-    except SourceError:
-        return {}
-    return (payload.get("container") or {}).get("json_dict", {}).get("card", {}) or {}
+        payload = get_json(f"{BASE}/commanders/{slug}.json")
+    except NotFound:
+        return CommanderData(slug=slug, found=False, error="no theme page")
+    except Forbidden:
+        return CommanderData(slug=slug, found=False, error="EDHREC theme endpoint is gated (403)")
+    except SourceError as exc:
+        return CommanderData(slug=slug, found=False, error=str(exc))
+    return _parse_commander_page(payload, slug)

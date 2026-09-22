@@ -22,6 +22,7 @@ survive on a commander nobody has built yet:
 
 from __future__ import annotations
 
+import re
 from collections import Counter
 
 from .. import tags as tagmod
@@ -61,15 +62,182 @@ COMMANDER_WANTS: dict[str, tuple[str, ...]] = {
     "untap": ("untap", "ramp"),
 }
 
+# When a commander arrives sparsely tagged — new sets ship before taggers catch
+# up — its oracle text still says what it is about.
+_ORACLE_WANTS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (re.compile(r"\bdies\b|\bdie\b|\bwhen(ever)? .* is put into a graveyard", re.I), "death-trigger"),
+    (re.compile(r"\bsacrifice\b", re.I), "sacrifice"),
+    (re.compile(r"\bcreate\b.*\btokens?\b", re.I | re.S), "tokens"),
+    (re.compile(r"\bcop(y|ies)\b", re.I), "copy"),
+    (re.compile(r"\bdraws? (a|two|three|x) cards?\b", re.I), "draw"),
+    (re.compile(r"loses? \d+ life|loses? life|drain", re.I), "drain"),
+    (re.compile(r"\+1/\+1 counter", re.I), "counters"),
+)
+
+# A tribe only counts as the deck's tribe when the deck actually commits to it.
+TRIBE_MIN = 4
+
+# A cluster the commander's own text asks for gets to run deeper before it is
+# called oversupplied — for a death-trigger commander, fourteen sacrifice
+# outlets are the deck working, not bloat.
+CORE_TARGET_MULTIPLIER = 2
+
 
 def commander_wants(deck: Deck) -> list[str]:
     """Categories the commander's own text implies the deck is built around."""
     wants: set[str] = set()
     for commander in deck.commanders:
-        for category in tagmod.card_categories(commander):
+        base = set(tagmod.card_categories(commander))
+        for pattern, category in _ORACLE_WANTS:
+            if pattern.search(commander.role_text()):
+                base.add(category)
+        for category in base:
             wants.add(category)
             wants.update(COMMANDER_WANTS.get(category, ()))
+    if commander_tribe(deck):
+        wants.add("typal")
+        wants.update(COMMANDER_WANTS.get("typal", ()))
     return sorted(wants)
+
+
+# Commander design roles, after JoeyDH's framing: is the commander the setup
+# or the payoff? A force multiplier, or one of a kind? The answer says what
+# the 99 must supply — a payoff commander needs the 99 to provide the fuel and
+# the triggers; an enabler needs payoffs; a standalone threat needs protection.
+_ROLE_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (re.compile(r"whenever (another|a|one or more|you)\b.*\b(dies|die|enters|attacks?|cast|sacrifice|gain|lose|draw)", re.I | re.S), "payoff"),
+    (re.compile(r"\{t\}[^:]*:.*\b(add|create|draw|search|return)\b", re.I | re.S), "enabler"),
+    (re.compile(r"sacrifice (a|another|an) [^:]*:", re.I), "enabler"),
+    (re.compile(r"\bcop(y|ies)\b|\bdouble\b|\btwice\b|\badditional\b", re.I), "force-multiplier"),
+    (re.compile(r"creatures? you control (get|have)\s*\+", re.I), "force-multiplier"),
+    (re.compile(r"(flying|menace|trample|can't be blocked|double strike).*(deals? combat damage|whenever [^.]* attacks)", re.I | re.S), "wincon"),
+    (re.compile(r"(hexproof|ward|indestructible|protection from)", re.I), "standalone"),
+)
+
+
+def classify_commander(deck: Deck) -> dict:
+    """The commander's design role(s) and what the 99 must therefore supply."""
+    roles: list[str] = []
+    for commander in deck.commanders:
+        text = commander.role_text()
+        for pattern, role in _ROLE_PATTERNS:
+            if role not in roles and pattern.search(text):
+                roles.append(role)
+    if not roles:
+        roles = ["glue"]
+
+    wants = set(commander_wants(deck))
+    tribe = commander_tribe(deck)
+    # "worth copying" only when the commander itself copies — not when copy
+    # merely arrives through the typal expansion.
+    copies = any("copy" in tagmod.card_categories(c) for c in deck.commanders)
+    supplies: list[str] = []
+    if "payoff" in roles:
+        if "death-trigger" in wants or "sacrifice" in wants:
+            if tribe:
+                fuel = f"nontoken {tribe}s" + (" worth copying" if copies else " the trigger counts")
+            else:
+                fuel = "creatures the trigger counts"
+            supplies.append(f"fuel: {fuel}")
+            supplies.append("triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms")
+            supplies.append("conversion: drain, draw and token payoffs that turn deaths into wins")
+        else:
+            supplies.append("fuel: cards that cause what the commander rewards")
+            supplies.append("conversion: payoffs that turn the reward into wins")
+    if "enabler" in roles:
+        supplies.append("payoffs: cards that want what the commander produces")
+    if "force-multiplier" in roles and "payoff" not in roles:
+        supplies.append("things worth multiplying")
+    if "standalone" in roles or "wincon" in roles:
+        supplies.append("protection: the deck leans on the commander surviving")
+    if roles == ["glue"]:
+        supplies.append("a plan of its own — the commander supports rather than defines it")
+
+    return {"roles": roles, "supplies": supplies, "tribe": tribe}
+
+
+def commander_tribe(deck: Deck) -> str | None:
+    """The tribe the commander cares about, if the deck actually plays it.
+
+    Tried in order of how directly the source speaks: the commander's own
+    `typal-<tribe>` tags, then its type line, then creature types its text
+    names — each cross-checked against what the deck really contains.
+    """
+    census = _subtype_census(deck)
+    if not census:
+        return None
+
+    def confirmed(candidates: set[str]) -> str | None:
+        present = [(census.get(c.lower(), 0), c) for c in candidates]
+        present = [(count, name) for count, name in present if count >= TRIBE_MIN]
+        if not present:
+            return None
+        return max(present)[1]
+
+    for commander in deck.commanders:
+        found = confirmed({t.capitalize() for t in tagmod.typal_subtypes(commander)})
+        if found:
+            return found
+
+    for commander in deck.commanders:
+        found = confirmed(commander.subtypes)
+        if found:
+            return found
+
+    for commander in deck.commanders:
+        mentioned = {w.strip(",.") for w in commander.role_text().split()}
+        found = confirmed({w for w in mentioned if w.lower() in census})
+        if found:
+            return found
+    return None
+
+
+def _subtype_census(deck: Deck) -> dict[str, int]:
+    """How many nonland cards carry each subtype, changelings counted for all."""
+    census: Counter = Counter()
+    for card in deck.cards:
+        if card.is_land:
+            continue
+        for subtype in card.subtypes:
+            census[subtype.lower()] += card.quantity
+    return dict(census)
+
+
+def tribe_census(deck: Deck, tribe: str | None) -> dict:
+    """Who is in the tribe — by type line, by changeling, and conditionally.
+
+    Clones and copy effects become the tribe when they copy a member — a blue
+    clone of an Ooze *is* an Ooze — so they are counted as conditional members
+    rather than outsiders.
+    """
+    if not tribe:
+        return {}
+    key = tribe.lower()
+    true_type = changelings = conditional = 0
+    for card in deck.cards:
+        if card.is_land:
+            continue
+        if key in {s.lower() for s in card.subtypes}:
+            true_type += card.quantity
+        elif card.is_changeling:
+            changelings += card.quantity
+        elif "copy" in tagmod.card_categories(card):
+            conditional += card.quantity
+    return {
+        "tribe": tribe,
+        "true_type": true_type,
+        "changelings": changelings,
+        "conditional_copies": conditional,
+    }
+
+
+def is_tribe_member(card: CardEntry, tribe: str | None) -> bool:
+    """True membership only — clones are conditional and judged separately."""
+    if not tribe or card.is_land:
+        return False
+    if card.is_changeling:
+        return True
+    return tribe.lower() in {s.lower() for s in card.subtypes}
 
 
 def clusters(deck: Deck) -> dict[str, int]:
@@ -82,14 +250,73 @@ def clusters(deck: Deck) -> dict[str, int]:
     }
 
 
-def tag_participation(deck: Deck) -> None:
-    """Record on each card which of the deck's clusters it belongs to."""
+# The owner's own Archidekt category names are ground truth about what a card
+# is *for* in this deck. Slugified name -> engine category.
+OWNER_CATEGORY_MAP: dict[str, str] = {
+    "sac-outlet": "sacrifice",
+    "sac-outlets": "sacrifice",
+    "sacrifice": "sacrifice",
+    "sacrifice-outlets": "sacrifice",
+    "clone": "copy",
+    "clones": "copy",
+    "copy": "copy",
+    "copies": "copy",
+    "drain": "drain",
+    "aristocrats": "drain",
+    "token": "tokens",
+    "tokens": "tokens",
+    "draw": "draw",
+    "card-draw": "draw",
+    "card-advantage": "draw",
+    "ramp": "ramp",
+    "mana": "ramp",
+    "recursion": "recursion",
+    "reanimation": "recursion",
+    "removal": "removal",
+    "interaction": "removal",
+    "protection": "protection",
+    "tutor": "tutor",
+    "tutors": "tutor",
+    "sweeper": "sweeper",
+    "sweepers": "sweeper",
+    "board-wipes": "sweeper",
+    "wipes": "sweeper",
+    "finisher": "wincon",
+    "finishers": "wincon",
+    "wincon": "wincon",
+    "wincons": "wincon",
+    "win-conditions": "wincon",
+}
+
+
+def owner_categories(card: CardEntry) -> set[str]:
+    """Engine categories the owner's own Archidekt categories map onto."""
+    return {
+        OWNER_CATEGORY_MAP[slug]
+        for slug in (tagmod.slugify(c) for c in card.categories or [])
+        if slug in OWNER_CATEGORY_MAP
+    }
+
+
+def tag_participation(deck: Deck, tribe: str | None = None) -> None:
+    """Record on each card which of the deck's clusters it belongs to.
+
+    Membership comes from functional tags, from the owner's own Archidekt
+    categories, and — in a typal deck — from simply being the tribe: an Ooze in
+    the Ooze deck participates by existing, whatever its text tags say. That is
+    the rule whose absence once marked two Oozes as doing nothing.
+    """
+    if tribe is None:
+        tribe = commander_tribe(deck)
     active = set(clusters(deck)) | set(commander_wants(deck))
     for card in deck.cards:
         if card.is_land:
             card.engine_participation = []
             continue
-        card.engine_participation = sorted(tagmod.card_categories(card) & active)
+        member = tagmod.card_categories(card) | owner_categories(card)
+        if "typal" in active and is_tribe_member(card, tribe):
+            member.add("typal")
+        card.engine_participation = sorted(member & active)
 
 
 def castability(deck: Deck) -> list[dict]:
@@ -130,6 +357,7 @@ def castability(deck: Deck) -> list[dict]:
         worst_short = 0
         reasons: list[str] = []
         sole = False
+        short_colors: dict[str, dict[str, int]] = {}
 
         for color, count in pips.items():
             needed = SOURCES_FOR_PIPS.get(min(count, 3), 0)
@@ -137,6 +365,7 @@ def castability(deck: Deck) -> list[dict]:
             short = needed - have
             if short > 0:
                 worst_short = max(worst_short, short)
+                short_colors[color] = {"needed": needed, "have": have, "short": short}
                 reasons.append(
                     f"{count} {COLOR_NAMES.get(color, color)} pips wants ~{needed} "
                     f"sources, deck has {have}"
@@ -169,6 +398,7 @@ def castability(deck: Deck) -> list[dict]:
                     "sole_driver": sole,
                     "severity": severity,
                     "reasons": reasons,
+                    "short_colors": short_colors,
                 }
             )
 
@@ -176,19 +406,41 @@ def castability(deck: Deck) -> list[dict]:
     return findings
 
 
-def oversupplied(deck: Deck) -> list[dict]:
-    """Clusters holding more cards than a deck normally needs."""
+def oversupplied(
+    deck: Deck,
+    wants: set[str] | None = None,
+    overrides: dict[str, int] | None = None,
+) -> list[dict]:
+    """Clusters holding more cards than a deck normally needs.
+
+    A category the commander's own text asks for is judged against a doubled
+    bound: it is the deck's engine, and the generic target would flag the deck
+    for doing the thing it is built to do. If even the doubled bound is passed,
+    the finding says so honestly instead of pretending the engine is filler.
+
+    A declared intent overrides both: `core_categories: {ramp: 20}` means
+    Nicolas wants twenty, and twenty is the bound.
+    """
+    if wants is None:
+        wants = set(commander_wants(deck))
+    overrides = overrides or {}
     profile = tagmod.deck_profile(deck)
     out = []
     for category, (_, high) in CATEGORY_TARGETS.items():
+        core = category in wants
+        bound = high * CORE_TARGET_MULTIPLIER if core else high
+        if category in overrides:
+            bound = overrides[category]
+            core = True
         count = profile.get(category, 0)
-        if count > high:
+        if count > bound:
             out.append(
                 {
                     "category": category,
                     "count": count,
-                    "target_high": high,
-                    "excess": count - high,
+                    "target_high": bound,
+                    "excess": count - bound,
+                    "commander_core": core,
                 }
             )
     out.sort(key=lambda e: -e["excess"])
@@ -209,15 +461,118 @@ def cards_in_category(deck: Deck, category: str) -> list[CardEntry]:
 CUT_SEVERITY = 6
 
 
-def analyse(deck: Deck) -> dict:
-    """The deck's engine: what it is built around, and what strains it."""
+# Cards that end games say so in a few recognisable ways.
+_WINCON_RE = re.compile(
+    r"wins? the game|you win the game|loses the game|can't lose the game|"
+    r"deals damage equal to|combat damage to a player, .* loses",
+    re.I,
+)
+
+
+def win_condition_inventory(deck: Deck) -> list[dict]:
+    """How this deck actually ends games — or the honest news that it doesn't.
+
+    Three signals, strongest first: the card says so outright, the curated
+    tags call it a finisher effect, or Nicolas's own Archidekt category does.
+    """
+    found: list[dict] = []
+    for card in deck.cards:
+        if card.is_land:
+            continue
+        why = ""
+        if _WINCON_RE.search(card.role_text()):
+            why = "says so in its text"
+        elif "wincon" in tagmod.card_categories(card):
+            why = "finisher effect"
+        elif "wincon" in owner_categories(card):
+            why = "your own category marks it the finisher"
+        if why:
+            found.append({"name": card.name, "why": why})
+    return found
+
+
+# EDHREC Quadrant Theory: a deck is measured in four game states. Which tag
+# categories serve which state.
+_QUADRANTS = {
+    "developing": ("ramp", "draw"),
+    "parity": ("removal", "sweeper"),
+    "winning": ("wincon", "tokens"),
+    "losing": ("protection", "recursion"),
+}
+
+
+def quadrant_coverage(deck: Deck) -> dict[str, dict]:
+    """Card counts per game state, so a gap is visible before a game shows it."""
+    profile = tagmod.deck_profile(deck)
+    out: dict[str, dict] = {}
+    for quadrant, categories in _QUADRANTS.items():
+        counts = {c: profile.get(c, 0) for c in categories if profile.get(c, 0)}
+        out[quadrant] = {"total": sum(counts.values()), "from": counts}
+    return out
+
+
+def mana_fixes(deck: Deck, demoted: list[dict]) -> list[dict]:
+    """Turn castability strain on engine cards into mana-base advice.
+
+    A shortfall shared by the deck's own payoffs means the mana base is wrong,
+    not the payoffs — the answer is more sources of that colour, and the deck
+    usually contains the lands worth swapping out.
+    """
+    by_color: dict[str, dict] = {}
+    for finding in demoted:
+        for color, info in (finding.get("short_colors") or {}).items():
+            entry = by_color.setdefault(
+                color,
+                {
+                    "color": color,
+                    "color_name": COLOR_NAMES.get(color, color),
+                    "have": info["have"],
+                    "needed": info["needed"],
+                    "delta": info["short"],
+                    "driven_by": [],
+                },
+            )
+            entry["needed"] = max(entry["needed"], info["needed"])
+            entry["delta"] = max(entry["delta"], info["short"])
+            entry["driven_by"].append(finding["name"])
+
+    fixes = []
+    fetches = re.compile(r"search your library", re.I)
+    for entry in by_color.values():
+        swaps = [
+            land.name
+            for land in sorted(
+                deck.lands,
+                key=lambda l: (bool(l.produces()), len(l.produces()), l.name),
+            )
+            if entry["color"] not in land.produces()
+            and not land.is_basic_land
+            # A fetch produces nothing itself but finds the colour just fine.
+            and not fetches.search(land.oracle_text or "")
+        ]
+        entry["swap_candidates"] = swaps[:3]
+        fixes.append(entry)
+    fixes.sort(key=lambda e: -e["delta"])
+    return fixes
+
+
+def analyse(deck: Deck, intent=None) -> dict:
+    """The deck's engine: what it is built around, and what strains it.
+
+    A declared intent (`intent.md`) outranks inference wherever the two speak
+    to the same thing: the tribe, the archetype's name, and how deep a cluster
+    is allowed to run.
+    """
     tagmod.ensure_tags(deck)
-    tag_participation(deck)
+    tribe = (getattr(intent, "tribe", "") or None) or commander_tribe(deck)
+    tag_participation(deck, tribe)
 
     found = clusters(deck)
     wants = commander_wants(deck)
+    overrides: dict[str, int] = dict(getattr(intent, "core_categories", None) or {})
+    wants = sorted(set(wants) | set(overrides))
     strain = castability(deck)
-    excess = oversupplied(deck)
+    excess = oversupplied(deck, set(wants), overrides)
 
     # Name the archetype from the biggest clusters the commander cares about.
     # Every deck has a dozen incidental overlaps; the archetype is the top few.
@@ -231,16 +586,62 @@ def analyse(deck: Deck) -> dict:
         if not c.is_land and not c.is_commander and not c.engine_participation
     ]
 
+    # A hard-to-cast card that the deck is built around is a mana-base problem,
+    # not a cut. Only three kinds of strain still argue for cutting the card
+    # itself: it alone holds a colour requirement up, it wants three colours in
+    # one cost, or it is not part of the plan anyway.
+    wanted_set = set(wants)
+    core_names = {
+        c.name
+        for c in deck.cards
+        if set(c.engine_participation) & wanted_set or is_tribe_member(c, tribe)
+    }
+    cuts: list[dict] = []
+    demoted: list[dict] = []
+    for finding in strain:
+        if finding["severity"] < CUT_SEVERITY:
+            continue
+        if (
+            finding["sole_driver"]
+            or finding["distinct_colors"] >= 3
+            or finding["name"] not in core_names
+        ):
+            if finding["sole_driver"] and finding.get("short_colors"):
+                worst = max(finding["short_colors"].items(), key=lambda kv: kv[1]["short"])
+                finding["alternative"] = (
+                    f"add {worst[1]['short']} {COLOR_NAMES.get(worst[0], worst[0])} "
+                    f"source{'s' if worst[1]['short'] > 1 else ''} instead"
+                )
+            cuts.append(finding)
+        else:
+            demoted.append(finding)
+
+    archetype_parts = list(core)
+    if tribe and "typal" in archetype_parts:
+        archetype_parts[archetype_parts.index("typal")] = f"{tribe} typal"
+    inferred = " + ".join(archetype_parts) if archetype_parts else "no dominant theme"
+    declared = getattr(intent, "archetype", "") or ""
+    if declared and declared != inferred:
+        archetype = f"{declared} (inferred: {inferred})"
+    else:
+        archetype = declared or inferred
+
     return {
         "commander": [c.name for c in deck.commanders],
         "commander_wants": wants,
+        "commander_role": classify_commander(deck),
+        "tribe": tribe,
+        "tribe_census": tribe_census(deck, tribe),
         "clusters": found,
         "core": core,
-        "archetype": " + ".join(core) if core else "no dominant theme",
+        "archetype": archetype,
         "castability": strain,
-        "castability_cuts": [f for f in strain if f["severity"] >= CUT_SEVERITY],
+        "castability_cuts": cuts,
+        "mana_fixes": mana_fixes(deck, demoted),
         "oversupplied": excess,
         "orphans": orphans,
+        "win_conditions": win_condition_inventory(deck),
+        "quadrants": quadrant_coverage(deck),
         "tag_counts": dict(tagmod.tag_counts(deck).most_common(20)),
         "note": (
             "Clusters come from human-curated functional tags, not oracle-text "

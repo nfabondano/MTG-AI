@@ -149,9 +149,41 @@ class TestCastability:
 
 
 class TestOversupply:
-    def test_flags_a_cluster_holding_too_much(self, uugguu):
+    # This class used to assert the opposite: that 15 sacrifice cards were
+    # "more than a deck needs" on Uugguu. That was the bug in miniature — the
+    # commander's own text is a death trigger, so sacrifice outlets are the
+    # engine, and the generic target must not apply to them unmodified.
+
+    def test_commander_wanted_cluster_is_not_oversupplied(self, uugguu):
         over = {e["category"] for e in engine.oversupplied(uugguu)}
-        assert "sacrifice" in over, "14 sacrifice outlets is more than a deck needs"
+        assert "sacrifice" not in over, (
+            "sacrifice is what a death-trigger commander asks for; "
+            "flagging it as bloat is the Ashnod's Altar mistake"
+        )
+
+    def test_unwanted_cluster_still_flags(self, uugguu):
+        """The exemption is for the commander's engine, not a free pass."""
+        over = {e["category"] for e in engine.oversupplied(uugguu)}
+        assert "ramp" in over, "16 ramp is high and ramp is not what Uugguu asks for"
+
+    def test_even_a_wanted_cluster_has_a_ceiling(self):
+        """Doubling the bound is not removing it."""
+        cards = [
+            CardEntry(name="Boss", type_line="Legendary Creature", is_commander=True,
+                      tags=["sacrifice outlet-creature"]),
+            *[
+                CardEntry(name=f"Outlet {i}", type_line="Creature",
+                          tags=["sacrifice outlet-creature"])
+                for i in range(20)
+            ],
+        ]
+        deck = Deck(slug="t", name="T", archidekt_id=1, cards=cards)
+        over = {e["category"]: e for e in engine.oversupplied(deck)}
+        # 20 outlets exceed even the doubled bound of 16 — still flagged,
+        # and labelled as the commander's own mechanic rather than filler.
+        assert "sacrifice" in over
+        assert over["sacrifice"]["commander_core"] is True
+        assert over["sacrifice"]["target_high"] == 16
 
 
 class TestEdhrecIsNoLongerEvidence:

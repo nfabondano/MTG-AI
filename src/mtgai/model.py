@@ -141,6 +141,25 @@ class CardEntry:
         return self.name in BASIC_LANDS or "Basic" in self.type_line
 
     @property
+    def subtypes(self) -> set[str]:
+        """Subtypes of the front face — "Creature — Ooze Horror" → {"Ooze", "Horror"}.
+
+        Only the front face: a modal card is an Ooze in the deck only when the
+        creature half is the one on the battlefield.
+        """
+        front = self.type_line.split("//")[0]
+        if "—" not in front:
+            return set()
+        return {word for word in front.split("—", 1)[1].split() if word}
+
+    @property
+    def is_changeling(self) -> bool:
+        """Changelings are every creature type at once, tribe included."""
+        if any(k.strip().lower() == "changeling" for k in self.keywords or []):
+            return True
+        return any(str(t).strip().lower() == "changeling" for t in self.tags or [])
+
+    @property
     def primary_type(self) -> str:
         """The face type used for grouping, ignoring supertypes."""
         front = self.type_line.split("//")[0]
@@ -225,6 +244,9 @@ class Deck:
     updated_at: str = ""
     archidekt_bracket: int | None = None
     imported_at: str = ""
+    # The owner's own words on Archidekt — free intent signal when present.
+    description: str = ""
+    deck_tags: list[str] = field(default_factory=list)
     cards: list[CardEntry] = field(default_factory=list)
     excluded: list[dict[str, Any]] = field(default_factory=list)
 
@@ -294,6 +316,8 @@ class Deck:
             "updated_at": self.updated_at,
             "archidekt_bracket": self.archidekt_bracket,
             "imported_at": self.imported_at,
+            "description": self.description,
+            "deck_tags": self.deck_tags,
             "color_identity": self.color_identity(),
             "total_cards": self.total_cards,
             "commanders": [c.name for c in self.commanders],
@@ -314,6 +338,8 @@ class Deck:
             updated_at=data.get("updated_at", ""),
             archidekt_bracket=data.get("archidekt_bracket"),
             imported_at=data.get("imported_at", ""),
+            description=data.get("description", ""),
+            deck_tags=data.get("deck_tags", []),
             cards=[CardEntry.from_dict(c) for c in data.get("cards", [])],
             excluded=data.get("excluded", []),
         )

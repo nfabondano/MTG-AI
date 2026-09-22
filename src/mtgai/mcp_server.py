@@ -76,16 +76,39 @@ def deck_suggest(
     budget: float | None = None,
     loose: bool = False,
     max_bracket: int | None = None,
-) -> str:
-    """Generate cut and add suggestions for a deck, as markdown.
+) -> dict[str, Any]:
+    """Generate cut and add suggestions for a deck, structured and slim.
 
-    Every cut is backed by deck-internal evidence: castability, cluster
-    oversupply, curve, or doing nothing the deck is built around. budget caps
-    suggested cards at that USD price; loose also surfaces weak candidates.
-    max_bracket sets aside adds that would push the deck past that Commander
-    bracket (Game Changers, combo completers) into a separate section.
+    Adds are grouped: strengthens-plan and fixes-weakness carry deck-internal
+    reasons; meta-optional is popularity only and appears when loose=True.
+    Cuts carry deck-internal evidence (castability, oversupply, curve, no
+    engine participation), mana_fixes say when the answer is sources rather
+    than cuts, and swaps pair cards doing the same job. max_bracket sets aside
+    adds that would push the deck past that Commander bracket (Game Changers,
+    the missing half of a two-card combo, mass land denial) into `raises`
+    instead of the normal adds/swaps. The full markdown is written to the
+    deck's suggestions.md.
     """
-    return service.suggest(reference, budget=budget, loose=loose, max_bracket=max_bracket)
+    result = service.suggest(reference, budget=budget, loose=loose, max_bracket=max_bracket)
+    built = result["suggestions"]
+    slim_adds = [
+        {k: a.get(k) for k in ("name", "group", "why", "price", "bracket_impact")}
+        for a in built["adds"]
+        if loose or a["group"] != "meta-optional"
+    ][:12]
+    return {
+        "mana_fixes": built["mana_fixes"],
+        "adds": slim_adds,
+        "cuts": [
+            {k: c.get(k) for k in ("name", "why", "evidence")} for c in built["cuts"][:8]
+        ],
+        "swaps": built["swaps"][:8],
+        "hidden_meta": built["hidden_meta"],
+        "raises": [
+            {k: r.get(k) for k in ("name", "bracket_impact", "bracket_reason")}
+            for r in built.get("raises", [])
+        ][:8],
+    }
 
 
 @mcp.tool()
@@ -111,15 +134,44 @@ def deck_engine(reference: str) -> dict[str, Any]:
 
 
 @mcp.tool()
+def deck_intent(reference: str) -> dict[str, Any]:
+    """What this deck is declared to be about (intent.md), beside the inference.
+
+    Use this to run the intent interview: `inferred` holds the tool's guess
+    (archetype, tribe, commander role, what the 99 must supply) to pre-fill
+    questions; `intent` holds what Nicolas has declared, which analysis obeys.
+    """
+    return service.deck_intent_show(reference)
+
+
+@mcp.tool()
+def deck_intent_set(reference: str, assignments: dict[str, str]) -> dict[str, Any]:
+    """Write interview answers into intent.md, creating it on first use.
+
+    assignments maps field to value: archetype, tribe, win_conditions,
+    core_cards (sacred — never suggested as cuts; '+Name' adds, '-Name'
+    removes), flexible_cards, core_categories ('ramp=20, draw=15'),
+    budget_per_card, power_bracket, meta_notes, prose. Analysis and
+    suggestions obey the result immediately.
+    """
+    return service.deck_intent_set(reference, assignments)
+
+
+@mcp.tool()
 def card_lookup(name: str) -> dict[str, Any]:
     """Look up a Magic card on Scryfall by exact name."""
     return service.card_lookup(name)
 
 
 @mcp.tool()
-def edhrec_commander(commander: str, limit: int = 25) -> dict[str, Any]:
-    """EDHREC's highest-synergy cards for a commander, with inclusion rates."""
-    return service.edhrec_commander(commander, limit=limit)
+def edhrec_commander(commander: str, limit: int = 25, theme: str = "") -> dict[str, Any]:
+    """EDHREC's highest-synergy cards for a commander, with inclusion rates.
+
+    Also returns the commander's build variants (themes, with deck counts) and
+    the closest similar commanders. Pass theme (a slug from `themes`, e.g.
+    "clones") to read that variant's page instead of the all-builds average.
+    """
+    return service.edhrec_commander(commander, limit=limit, theme=theme)
 
 
 @mcp.tool()

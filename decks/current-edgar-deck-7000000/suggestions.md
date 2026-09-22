@@ -4,48 +4,47 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 ## Consider adding
 
-- **Approach of the Second Sun** ($6.83) — completes a combo with Demonic Tutor → Win the game
-- **Monk Gyatso** ($7.57) — completes a combo with Lightning Greaves → Infinite creature LTB, Infinite creature ETB
-- **Ad Nauseam** ($11.05) — completes a combo with Teferi's Protection → Infinite card draw
+### Strengthens the plan
+
+- **Approach of the Second Sun** ($7.44) — completes a combo with Demonic Tutor → Win the game
+- **Monk Gyatso** ($7.51) — completes a combo with Lightning Greaves → Infinite creature LTB, Infinite creature ETB
+- **Ad Nauseam** ($10.69) — completes a combo with Teferi's Protection → Infinite card draw
+- **Gleaming Splendor** ($53.62) — completes a combo with Smothering Tithe + Anointed Procession → Infinite card draw for any number of players, Infinite draw triggers for any number of players
 - **Serra Avatar** ($0.55) — completes a combo with Swords to Plowshares + Sanguine Bond → Near-infinite lifegain, Near-infinite lifeloss for target opponent
-- **Obliterate** ($3.52) — completes a combo with Teferi's Protection → Mass Land Denial, Destroy all lands, creatures, and artifacts your opponents control
-- **More draw, ramp** — the role counts above are below the usual range — prioritise these slots
-- **Indulgent Aristocrat** ($0.25) — played in 73% of decks with this commander
-- **Master of Dark Rites** ($3.41) — played in 61% of decks with this commander
-- **Voldaren Estate** — played in 58% of decks with this commander
-- **Charismatic Conqueror** ($23.50) — played in 57% of decks with this commander
-- **Olivia's Wrath** ($0.42) — played in 56% of decks with this commander
-- **Drana, Liberator of Malakir** ($0.80) — played in 54% of decks with this commander
-- **Clavileño, First of the Blessed** ($0.65) — played in 52% of decks with this commander
-- **Bloodthirsty Conqueror** ($34.41) — played in 50% of decks with this commander
-- **Markov Baron** ($0.35) — played in 49% of decks with this commander
+- **Indulgent Aristocrat** ($0.29) — synergy +0.62 measured vs 6635 Vampires builds of Edgar Markov
+- **Master of Dark Rites** ($2.99) — synergy +0.57 measured vs 6635 Vampires builds of Edgar Markov
+- **Charismatic Conqueror** ($23.80) — synergy +0.51 measured vs 6635 Vampires builds of Edgar Markov
+- **Drana, Liberator of Malakir** ($0.84) — synergy +0.50 measured vs 6635 Vampires builds of Edgar Markov
+- **Olivia's Wrath** ($0.41) — synergy +0.49 measured vs 6635 Vampires builds of Edgar Markov
+- **Clavileño, First of the Blessed** ($0.68) — synergy +0.48 measured vs 6635 Vampires builds of Edgar Markov
+- **Markov Baron** ($0.36) — synergy +0.45 measured vs 6635 Vampires builds of Edgar Markov
+
+### Fixes a weakness
+
+- **Ancient Tomb** ($132.95) — 6 ramp against a usual 8-12 — both counting systems agree it is short
+- **Temple of the False God** ($0.25) — 6 ramp against a usual 8-12 — both counting systems agree it is short
+- **Deadly Dispute** ($0.26) — 6 ramp against a usual 8-12 — both counting systems agree it is short
+
+_5 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **Ruinous Ultimatum** — 3 White pips wants ~23 sources, deck has 21; needs 3 different colours in one cost — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base  
+- **Ruinous Ultimatum** — 3 White pips wants ~23 sources, deck has 21; needs 3 different colours in one cost — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base (or add 2 White sources instead)  
   _(castability)_
 - **Crackling Doom** — needs 3 different colours in one cost  
   _(castability)_
-- **Butcher of Malakir** — 13 cards do removal work; a deck wants about 10  
-  _(oversupplied: removal)_
-- **Reconnaissance** — outside every cluster this deck is built on (typal + drain + tokens)  
+- **Butcher of Malakir** — 7 mana in a deck already carrying 14 spells at 5+  
+  _(curve)_
+- **Reconnaissance** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
   _(no engine participation)_
-- **Rodolf Duskbringer** — outside every cluster this deck is built on (typal + drain + tokens)  
+- **Lightning Greaves** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
   _(no engine participation)_
-- **Lightning Greaves** — outside every cluster this deck is built on (typal + drain + tokens)  
+- **Exquisite Blood** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
   _(no engine participation)_
-- **Exquisite Blood** — outside every cluster this deck is built on (typal + drain + tokens)  
+- **Teferi's Protection** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
   _(no engine participation)_
-
-## Paired swaps
-
-- Ruinous Ultimatum → Approach of the Second Sun
-- Crackling Doom → Monk Gyatso
-- Butcher of Malakir → Ad Nauseam
-- Reconnaissance → Serra Avatar
-- Rodolf Duskbringer → Obliterate
-- Lightning Greaves → More draw, ramp
-- Exquisite Blood → Indulgent Aristocrat
+- **Vampiric Tutor** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
+  _(no engine participation)_
 
 ---
 

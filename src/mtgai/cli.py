@@ -113,23 +113,27 @@ def deck_suggest(
     budget: float = typer.Option(None, "--budget", help="Ignore suggestions above this USD price."),
     offline: bool = typer.Option(False, "--offline"),
     loose: bool = typer.Option(
-        False, "--loose", help="Also show weak candidates the tool cannot ground."
+        False, "--loose", help="Also show popularity-only ideas and weak candidates."
     ),
     max_bracket: int = typer.Option(
         None,
         "--max-bracket",
         help="Set aside adds (Game Changers, combo pieces) that would push the deck past this bracket.",
     ),
+    json_out: bool = typer.Option(False, "--json", help="Emit the structured suggestions."),
 ) -> None:
     """Regenerate suggestions.md."""
     try:
-        markdown = service.suggest(
+        result = service.suggest(
             reference, budget=budget, offline=offline, loose=loose, max_bracket=max_bracket
         )
     except (SourceError, ValueError, FileNotFoundError) as exc:
         _fail(str(exc))
         return
-    console.print(markdown)
+    if json_out:
+        _emit(result["suggestions"])
+        return
+    console.print(result["markdown"])
 
 
 @deck_app.command("list")
@@ -237,6 +241,87 @@ def deck_engine(
         )
 
 
+@deck_app.command("intent")
+def deck_intent(
+    reference: str = typer.Argument(..., help="Deck slug, id or name fragment."),
+    init: bool = typer.Option(
+        False, "--init", help="Seed intent.md from inference and Archidekt metadata."
+    ),
+    force: bool = typer.Option(False, "--force", help="Allow --init to reseed an existing file."),
+    set_values: list[str] = typer.Option(
+        None,
+        "--set",
+        help="key=value edit, repeatable. Lists take 'a, b', '+Name' or '-Name'.",
+    ),
+    check: bool = typer.Option(False, "--check", help="Parse intent.md and report warnings."),
+    json_out: bool = typer.Option(False, "--json"),
+) -> None:
+    """Show or edit what this deck is declared to be about (intent.md).
+
+    Analysis and suggestions obey the declared intent: core cards are never
+    offered as cuts, core category targets replace the generic ones, and the
+    declared archetype outranks the inferred one.
+    """
+    try:
+        if init:
+            data = service.deck_intent_init(reference, force=force)
+        elif set_values:
+            assignments: dict[str, str] = {}
+            for pair in set_values:
+                key, sep, value = pair.partition("=")
+                if not sep:
+                    _fail(f"--set takes key=value, got {pair!r}")
+                    return
+                assignments[key.strip()] = value
+            data = service.deck_intent_set(reference, assignments)
+        else:
+            data = service.deck_intent_show(reference)
+    except (ValueError, FileNotFoundError) as exc:
+        _fail(str(exc))
+        return
+
+    if json_out:
+        _emit(data)
+        return
+
+    if not data["exists"]:
+        console.print("[yellow]No intent.md yet.[/yellow] The tool is guessing:")
+        inferred = data["inferred"]
+        console.print(f"  archetype {inferred['archetype']}")
+        if inferred.get("tribe"):
+            console.print(f"  tribe     {inferred['tribe']}")
+        console.print(f"  commander {', '.join(inferred['commander_role'])}")
+        for supply in inferred.get("supplies") or []:
+            console.print(f"    needs {supply}")
+        if data["archidekt"]["description"]:
+            console.print("  [dim]Archidekt description found — --init will import it.[/dim]")
+        console.print(
+            f"\nRun [bold]mtg deck intent {reference} --init[/bold] to create it, "
+            "then edit or --set."
+        )
+        return
+
+    intent_data = data["intent"]
+    console.print(f"[bold]{intent_data.get('archetype') or '(no declared archetype)'}[/bold]")
+    if intent_data.get("tribe"):
+        console.print(f"  tribe     {intent_data['tribe']}")
+    if intent_data.get("commander_role"):
+        console.print(f"  commander {', '.join(intent_data['commander_role'])}")
+    if intent_data.get("win_conditions"):
+        console.print(f"  wins by   {'; '.join(intent_data['win_conditions'])}")
+    if intent_data.get("core_cards"):
+        console.print(f"  sacred    {', '.join(intent_data['core_cards'])}")
+    if intent_data.get("core_categories"):
+        targets = ", ".join(f"{k}={v}" for k, v in intent_data["core_categories"].items())
+        console.print(f"  targets   {targets}")
+    if intent_data.get("budget_per_card") is not None:
+        console.print(f"  budget    ${intent_data['budget_per_card']:g}/card")
+    console.print(f"  [dim]{data['path']} (source: {intent_data.get('source', '?')})[/dim]")
+    if check or data.get("warnings"):
+        for warning in data.get("warnings") or []:
+            console.print(f"  [yellow]warning:[/yellow] {warning}")
+
+
 @deck_app.command("cards")
 def deck_cards(
     reference: str = typer.Argument(..., help="Deck slug, id or name fragment."),
@@ -300,16 +385,26 @@ def card(
 def edhrec_cmd(
     commander: str = typer.Argument(..., help="Commander name."),
     limit: int = typer.Option(25, "--limit"),
+    theme: str = typer.Option(
+        "", "--theme", help="Restrict to one build variant's page, e.g. 'clones'."
+    ),
     json_out: bool = typer.Option(False, "--json"),
 ) -> None:
     """Show EDHREC's top recommendations for a commander."""
-    data = service.edhrec_commander(commander, limit=limit)
+    data = service.edhrec_commander(commander, limit=limit, theme=theme)
     if json_out:
         _emit(data)
         return
     if not data["found"]:
         _fail(data.get("reason") or "no EDHREC data")
         return
+    if data.get("num_decks"):
+        console.print(f"[dim]{data['num_decks']:,} decks on this page[/dim]")
+    if data.get("themes"):
+        parts = ", ".join(f"{t['name']} ({t['count']})" for t in data["themes"][:6])
+        console.print(f"[dim]build variants: {parts} — --theme <slug> to view one[/dim]")
+    if data.get("similar"):
+        console.print(f"[dim]similar commanders: {', '.join(data['similar'][:6])}[/dim]")
     table = Table(show_header=True, header_style="bold")
     table.add_column("Card")
     table.add_column("Synergy", justify="right")

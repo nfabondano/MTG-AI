@@ -19,6 +19,7 @@ Archidekt** — Nicolas applies changes there by hand.
 |---|---|
 | `/deck-add <url>` | Import and analyse a new deck |
 | `/deck <slug>` | Load a deck's context, then ask it anything |
+| `/deck-intent <slug>` | Short interview: teach the tool what the deck is about |
 | `/deck-list` | What's tracked |
 | `/deck-suggest <slug>` | Cut/add suggestions, optionally `--budget N` |
 | `/deck-refresh <slug>` | Re-pull after editing on Archidekt |
@@ -41,6 +42,7 @@ uv run mtg deck refresh <ref>         # re-pull from Archidekt
 uv run mtg deck analyze <ref>         # regenerate analysis.md
 uv run mtg deck suggest <ref> [--budget N] [--loose] [--max-bracket N]
 uv run mtg deck engine <ref>          # what the deck is built around
+uv run mtg deck intent <ref> [--init] [--set key=value]   # declared intent
 uv run mtg card "<name>"              # Scryfall lookup
 uv run mtg edhrec "<commander>"       # EDHREC recommendations
 uv run mtg combos "<card>"            # Commander Spellbook
@@ -60,6 +62,10 @@ decks/<slug>/
   analysis.md      the generated report — read this
   engine.md        what the deck is built around; Nicolas may edit it, and
                    his version wins — never overwrite an edited one
+  intent.md        what Nicolas DECLARED the deck to be about — front matter
+                   the tool obeys (sacred cards, category targets, archetype),
+                   prose below it that is his; created by /deck-intent or
+                   `mtg deck intent --init`, never rewritten on refresh
   suggestions.md   generated cut/add candidates, each with its evidence
   notes.md         Nicolas's own notes — never overwrite this file
 ```
@@ -89,9 +95,12 @@ and one card away, an estimated Commander bracket, and price.
 
 ## Before you judge any card, read the engine
 
-`decks/<slug>/engine.md` says what the deck is built around. Read it first.
-Nicolas can edit it, and if he has, his version is authoritative — the tool
-will not overwrite it.
+`decks/<slug>/intent.md`, when it exists, is what Nicolas has *declared* the
+deck to be about — it outranks everything below, and the tool already enforces
+it (sacred cards are never offered as cuts, declared category targets replace
+the generic ones). `decks/<slug>/engine.md` says what the tool *inferred* the
+deck is built around. Read both first. Nicolas can edit either, and his
+version is authoritative — the tool will not overwrite them.
 
 These four rules exist because the tool once advised cutting an entire
 aristocrats engine, and the reasoning behind it was nonsense:

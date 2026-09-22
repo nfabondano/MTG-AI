@@ -9,6 +9,8 @@
  "updated_at": "2026-08-23T22:06:42.270983Z",
  "archidekt_bracket": null,
  "imported_at": "2026-08-23T23:55:54+00:00",
+ "description": "",
+ "deck_tags": [],
  "color_identity": [
   "U",
   "B",
@@ -68,6 +70,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "copy",
     "tokens",
     "typal"
    ],
@@ -191,6 +194,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "copy",
     "tokens",
     "typal"
    ],
@@ -246,7 +250,8 @@
     "removal-enchantment"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
@@ -293,7 +298,10 @@
     "deck requirement",
     "cycle"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "ramp",
+    "typal"
+   ],
    "set_code": "iko",
    "released_at": "2020-04-24",
    "rarity": "rare",
@@ -350,7 +358,8 @@
     "tap outlet"
    ],
    "engine_participation": [
-    "copy"
+    "copy",
+    "typal"
    ],
    "set_code": "ecl",
    "released_at": "2026-01-23",
@@ -409,7 +418,8 @@
    ],
    "engine_participation": [
     "sacrifice",
-    "tutor"
+    "tutor",
+    "typal"
    ],
    "set_code": "rna",
    "released_at": "2019-01-25",
@@ -463,6 +473,8 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "copy",
+    "tokens",
     "typal"
    ],
    "set_code": "mh2",
@@ -530,7 +542,8 @@
    ],
    "engine_participation": [
     "protection",
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "clb",
    "released_at": "2022-06-10",
@@ -591,7 +604,8 @@
    ],
    "engine_participation": [
     "copy",
-    "ramp"
+    "ramp",
+    "typal"
    ],
    "set_code": "ecl",
    "released_at": "2026-01-23",
@@ -795,6 +809,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "copy",
     "protection",
     "typal"
    ],
@@ -973,7 +988,8 @@
    ],
    "engine_participation": [
     "copy",
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "ecl",
    "released_at": "2026-01-23",
@@ -1096,7 +1112,8 @@
    "engine_participation": [
     "copy",
     "draw",
-    "recursion"
+    "recursion",
+    "typal"
    ],
    "set_code": "ecl",
    "released_at": "2026-01-23",
@@ -1619,7 +1636,8 @@
     "unexile"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "afr",
    "released_at": "2021-07-23",
@@ -2154,7 +2172,6 @@
     "removal-vehicle"
    ],
    "engine_participation": [
-    "ramp",
     "removal"
    ],
    "set_code": "soc",
@@ -2330,7 +2347,8 @@
    ],
    "engine_participation": [
     "protection",
-    "ramp"
+    "ramp",
+    "removal"
    ],
    "set_code": "2x2",
    "released_at": "2022-07-08",
@@ -2436,7 +2454,9 @@
     "flavors of vanilla",
     "hand disruption"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "typal"
+   ],
    "set_code": "fin",
    "released_at": "2025-06-13",
    "rarity": "common",
@@ -3067,7 +3087,8 @@
     "removal"
    ],
    "engine_participation": [
-    "recursion"
+    "recursion",
+    "removal"
    ],
    "set_code": "tdc",
    "released_at": "2025-04-11",

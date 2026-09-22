@@ -12,8 +12,17 @@ from typing import Any
 
 from . import analysis, deckfolder
 from .analysis import report
+from .intent import DeckIntent, apply_assignments
 from .model import Deck
 from .sources import archidekt, edhrec, scryfall, spellbook, tagger
+
+
+def _load_intent(folder: deckfolder.DeckFolder) -> DeckIntent | None:
+    """The declared intent, if intent.md exists. Parse warnings are ignored
+    here — analysis must run whatever state the file is in; `deck intent
+    --check` is where warnings surface."""
+    parsed = folder.read_intent()
+    return parsed[0] if parsed else None
 
 
 def add_deck(reference: str, *, offline: bool = False, refresh: bool = False) -> dict[str, Any]:
@@ -53,7 +62,7 @@ def analyse_deck(reference: str, *, offline: bool = False) -> dict[str, Any]:
 def _analyse_and_write(
     deck: Deck, folder: deckfolder.DeckFolder, *, offline: bool
 ) -> dict[str, Any]:
-    result = analysis.analyse(deck, offline=offline)
+    result = analysis.analyse(deck, offline=offline, intent=_load_intent(folder))
     # Roles are attached during analysis, so the deck is written afterwards to
     # capture them — that keeps deck.json self-describing for later sessions.
     folder.write_deck(deck)
@@ -70,15 +79,38 @@ def suggest(
     offline: bool = False,
     loose: bool = False,
     max_bracket: int | None = None,
-) -> str:
+) -> dict[str, Any]:
+    """Suggestions both ways: rendered markdown and the structured build.
+
+    max_bracket sets aside adds that would push the deck past that Commander
+    bracket (Game Changers, the missing half of a two-card combo, mass land
+    denial) into their own list instead of pairing them as swaps — the
+    structured `suggestions` reflect this the same way the markdown does.
+    """
     folder = deckfolder.resolve(reference)
     deck = folder.read_deck()
-    result = analysis.analyse(deck, offline=offline)
+    intent = _load_intent(folder)
+    result = analysis.analyse(deck, offline=offline, intent=intent)
+    if budget is None and intent is not None and intent.budget_per_card is not None:
+        budget = intent.budget_per_card
+    built = analysis.suggest.build(
+        deck, result, budget=budget, loose=loose, offline=offline
+    )
     markdown = report.render_suggestions(
-        deck, result, budget=budget, loose=loose, max_bracket=max_bracket
+        deck, result, built, budget=budget, loose=loose, max_bracket=max_bracket
     )
     folder.write_suggestions(markdown)
-    return markdown
+
+    adds = report.augment_adds_with_bracket_impact(built["adds"], result)
+    adds, raises = report.split_by_bracket(adds, max_bracket)
+    raised_names = {r["name"] for r in raises}
+    structured = {
+        **built,
+        "adds": adds,
+        "raises": raises,
+        "swaps": [s for s in built["swaps"] if s["add"] not in raised_names],
+    }
+    return {"markdown": markdown, "suggestions": structured}
 
 
 def list_decks() -> list[dict[str, Any]]:
@@ -100,11 +132,15 @@ def show_deck(reference: str) -> dict[str, Any]:
         "suggestions": str(folder.suggestions_path),
         "deck": str(folder.deck_path),
         "notes": str(folder.notes_path),
+        "intent": str(folder.intent_path),
     }
     summary["roles"] = analysis.roles.analyse(deck)["counts"]
-    eng = analysis.engine.analyse(deck)
+    intent = _load_intent(folder)
+    eng = analysis.engine.analyse(deck, intent)
     summary["archetype"] = eng["archetype"]
     summary["clusters"] = eng["clusters"]
+    summary["tribe"] = eng["tribe"]
+    summary["has_intent"] = intent is not None
     return summary
 
 
@@ -156,8 +192,15 @@ def card_lookup(name: str) -> dict[str, Any]:
     }
 
 
-def edhrec_commander(name: str, *, limit: int = 25) -> dict[str, Any]:
+def edhrec_commander(name: str, *, limit: int = 25, theme: str = "") -> dict[str, Any]:
     data = edhrec.commander_for([name])
+    if data.found and theme:
+        themed = edhrec.theme(data.slug, theme)
+        if themed.found:
+            themed.themes, themed.similar = data.themes, data.similar
+            data = themed
+        else:
+            return {"found": False, "commander": name, "theme": theme, "reason": themed.error}
     if not data.found:
         return {"found": False, "commander": name, "reason": data.error}
     top = sorted(data.recommendations, key=lambda r: -r.synergy)[:limit]
@@ -165,6 +208,9 @@ def edhrec_commander(name: str, *, limit: int = 25) -> dict[str, Any]:
         "found": True,
         "commander": name,
         "slug": data.slug,
+        "num_decks": data.num_decks,
+        "themes": data.themes,
+        "similar": data.similar,
         "recommendations": [r.to_dict() for r in top],
     }
 
@@ -191,6 +237,92 @@ def deck_engine(reference: str) -> dict[str, Any]:
     """What the deck is built around, and what strains it."""
     folder = deckfolder.resolve(reference)
     deck = folder.read_deck()
-    result = analysis.engine.analyse(deck)
+    result = analysis.engine.analyse(deck, _load_intent(folder))
     result["user_edited"] = folder.engine_is_user_edited()
     return result
+
+
+# --- deck intent ----------------------------------------------------------
+
+
+def _inferred_intent(deck: Deck) -> dict[str, Any]:
+    """What the tool would guess — the interview's pre-filled defaults."""
+    eng = analysis.engine.analyse(deck)
+    role = eng["commander_role"]
+    return {
+        "archetype": eng["archetype"],
+        "tribe": eng["tribe"],
+        "commander_role": role["roles"],
+        "supplies": role["supplies"],
+        "commander_wants": eng["commander_wants"],
+        "clusters": dict(list(eng["clusters"].items())[:8]),
+    }
+
+
+def deck_intent_show(reference: str) -> dict[str, Any]:
+    """The declared intent beside what the tool infers, for the interview."""
+    folder = deckfolder.resolve(reference)
+    deck = folder.read_deck()
+    parsed = folder.read_intent()
+    return {
+        "slug": folder.slug,
+        "path": str(folder.intent_path),
+        "exists": parsed is not None,
+        "intent": parsed[0].to_dict() if parsed else None,
+        "warnings": parsed[1] if parsed else [],
+        "inferred": _inferred_intent(deck),
+        "archidekt": {
+            "description": deck.description,
+            "deck_tags": deck.deck_tags,
+        },
+    }
+
+
+def deck_intent_init(reference: str, *, force: bool = False) -> dict[str, Any]:
+    """Seed intent.md from inference and the owner's Archidekt metadata.
+
+    Refuses to overwrite an existing file unless forced: once the file exists
+    it is Nicolas's, same contract as notes.md.
+    """
+    folder = deckfolder.resolve(reference)
+    deck = folder.read_deck()
+    if folder.intent_path.exists() and not force:
+        raise ValueError(
+            f"{folder.intent_path} already exists — edit it directly, use "
+            "`deck intent --set`, or pass --force to reseed"
+        )
+    inferred = _inferred_intent(deck)
+    prose_parts = []
+    if deck.description:
+        prose_parts.append(deck.description.strip())
+    prose_parts.append(
+        "_Seeded from inference — replace any of it. The front matter above is "
+        "what the tool obeys; this space is for the plan in your own words._"
+    )
+    seed = DeckIntent(
+        archetype=inferred["archetype"],
+        tribe=inferred["tribe"] or "",
+        commander_role=list(inferred["commander_role"]),
+        meta_notes=", ".join(deck.deck_tags),
+        prose="\n\n".join(prose_parts),
+        source="generated",
+        updated_at=deckfolder.now(),
+    )
+    folder.write_intent(seed)
+    return deck_intent_show(reference)
+
+
+def deck_intent_set(reference: str, assignments: dict[str, str]) -> dict[str, Any]:
+    """Apply key=value edits to intent.md, creating it from the seed if absent."""
+    folder = deckfolder.resolve(reference)
+    if not folder.intent_path.exists():
+        deck_intent_init(reference)
+    intent, parse_warnings = folder.read_intent()
+    intent, edit_warnings = apply_assignments(intent, assignments)
+    if "source" not in assignments:
+        intent.source = "interview"
+    intent.updated_at = deckfolder.now()
+    folder.write_intent(intent)
+    shown = deck_intent_show(reference)
+    shown["warnings"] = parse_warnings + edit_warnings + shown.get("warnings", [])
+    return shown

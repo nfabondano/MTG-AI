@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Any
 
 from ..model import Deck
-from . import bracket, combos, curve, edhrec_delta, engine, legality, mana, roles
+from . import bracket, combos, curve, edhrec_delta, engine, legality, mana, roles, suggest
 
 
 def price_summary(deck: Deck, *, top: int = 10) -> dict[str, Any]:
@@ -28,12 +28,57 @@ def price_summary(deck: Deck, *, top: int = 10) -> dict[str, Any]:
     }
 
 
-def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
-    """Run the full analysis. Roles are tagged first; everything else uses them."""
+# Engine tag categories that measure the same job as an oracle-text role.
+CATEGORY_TO_ROLE = {
+    "ramp": "ramp",
+    "draw": "draw",
+    "removal": "removal",
+    "sweeper": "wipe",
+    "tutor": "tutor",
+    "protection": "protection",
+    "recursion": "recursion",
+}
+
+
+def _reconcile_roles(roles_result: dict[str, Any], engine_result: dict[str, Any]) -> None:
+    """Two counting systems must not contradict each other in one report.
+
+    Oracle-text regexes and curated tags measure the same jobs; where the tags
+    say a role is adequately covered, a regex-derived "too few" finding is
+    noise, not signal — the tags are the better instrument, so it is dropped.
+    """
+    clusters = engine_result.get("clusters") or {}
+    tag_counts = {
+        role: clusters[cat] for cat, role in CATEGORY_TO_ROLE.items() if cat in clusters
+    }
+    roles_result["tag_counts"] = tag_counts
+
+    kept = []
+    for finding in roles_result.get("findings", []):
+        tag_count = tag_counts.get(finding["role"])
+        if tag_count is not None:
+            low, high = finding["target"]
+            if finding["verdict"] == "low" and tag_count >= low:
+                continue  # tags say this job is covered
+            if finding["verdict"] == "high" and tag_count <= high:
+                continue
+            finding["message"] += f" (tags count {tag_count})"
+        kept.append(finding)
+    roles_result["findings"] = kept
+
+
+def analyse(deck: Deck, *, offline: bool = False, intent=None) -> dict[str, Any]:
+    """Run the full analysis. Roles are tagged first; everything else uses them.
+
+    `intent` is the declared deck intent (`mtgai.intent.DeckIntent`) when
+    intent.md exists — it outranks inference wherever the two overlap.
+    """
     roles.tag_deck(deck)
 
-    engine_result = engine.analyse(deck)
+    engine_result = engine.analyse(deck, intent)
     curve_result = curve.analyse(deck)
+    roles_result = roles.analyse(deck)
+    _reconcile_roles(roles_result, engine_result)
     result: dict[str, Any] = {
         "deck": {
             "slug": deck.slug,
@@ -49,15 +94,17 @@ def analyse(deck: Deck, *, offline: bool = False) -> dict[str, Any]:
         "legality": legality.analyse(deck),
         "curve": curve_result,
         "mana": mana.analyse(deck, curve_result["average_mana_value"]),
-        "roles": roles.analyse(deck),
+        "roles": roles_result,
         "price": price_summary(deck),
     }
+    if intent is not None:
+        result["intent"] = intent.to_dict()
 
     if offline:
         result["edhrec"] = {"available": False, "reason": "offline mode"}
         result["combos"] = {"available": False, "complete": [], "near_miss": []}
     else:
-        result["edhrec"] = edhrec_delta.analyse(deck)
+        result["edhrec"] = edhrec_delta.analyse(deck, intent=intent)
         result["combos"] = combos.analyse(deck)
 
     result["bracket"] = bracket.analyse(deck, combos=result["combos"].get("complete") or [])
@@ -77,12 +124,24 @@ def _headline(result: dict[str, Any]) -> list[str]:
     for error in result["legality"].get("errors", []):
         lines.append(f"Illegal: {error}")
 
+    eng = result.get("engine") or {}
+    fixes = eng.get("mana_fixes") or []
+    for fix in fixes[:2]:
+        plural = "s" if fix["delta"] > 1 else ""
+        lines.append(
+            f"Fix the mana first: +{fix['delta']} {fix['color_name']} source{plural} — "
+            f"{', '.join(fix['driven_by'][:3])} want ~{fix['needed']}, deck has {fix['have']}."
+        )
+
     if result["mana"].get("land_finding"):
         lines.append(result["mana"]["land_finding"])
+    # A colour the fix line already covers does not need its generic twin.
+    fixed_colors = {f["color_name"] for f in fixes}
     for finding in result["mana"].get("findings", []):
+        if any(finding["message"].startswith(f"{c}:") for c in fixed_colors):
+            continue
         lines.append(finding["message"])
 
-    eng = result.get("engine") or {}
     for entry in (eng.get("castability") or [])[:2]:
         if entry.get("sole_driver"):
             lines.append(

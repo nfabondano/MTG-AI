@@ -6,18 +6,22 @@
 
 ## What stands out
 
+- Fix the mana first: +4 Green sources — Aeve, Progenitor Ooze, March of the World Ooze want ~23, deck has 19.
 - Blue: 18 sources for cards needing 2 U pips — around 20 is the usual target.
-- Green: 19 sources for cards needing 3 G pips — around 23 is the usual target.
-- 13 ramp — more than the usual 8-12.
-- 14 draw — more than the usual 8-12.
-- 5 removal — typical decks run 6-10.
+- 13 ramp — more than the usual 8-12. (tags count 15)
+- 14 draw — more than the usual 8-12. (tags count 16)
 - 2 combos one card away — see the combo section.
+
 
 ## What this deck does
 
-**typal + copy + sacrifice**
+**copy + Ooze typal + sacrifice**
 
-ramp 16 · draw 16 · typal 15* · copy 14* · sacrifice 14* · removal 12 · protection 9 · tutor 8
+**Tribe:** 11 true Oozes + 4 changelings + 9 copy effects that become Oozes when they copy one
+
+**Commander role:** payoff + force-multiplier — the 99 must supply: fuel; triggers; conversion.
+
+copy 17* · typal 15* · sacrifice 14* · death-trigger 8* · recursion 7* · tokens 7* · drain 5* · draw 16
 
 _\* the commander's own text asks for this._
 
@@ -28,7 +32,7 @@ _\* the commander's own text asks for this._
 - Omni-Changeling `{3}{U}{U}` — 2 Blue pips wants ~20 sources, deck has 18
 - Titan of Littjara `{4}{U}{U}` — 2 Blue pips wants ~20 sources, deck has 18
 
-**Oversupplied:** sacrifice 14 (want ~8), ramp 16 (want ~12), draw 16 (want ~12), tutor 8 (want ~4)
+**Oversupplied:** draw 16 (want ~12), tutor 8 (want ~4), ramp 15 (want ~12), removal 13 (want ~10)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -73,63 +77,61 @@ Creature 31 · Land 29 · Instant 13 · Sorcery 13 · Enchantment 8 · Artifact 
 
 ## Roles
 
-| Role | Count | Typical |
-|---|---:|---:|
-| Ramp | 13 | 8–12 |
-| Draw | 14 | 8–12 |
-| Removal | 5 | 6–10 |
-| Wipe | 2 | 2–4 |
-| Counterspell | 2 | — |
-| Protection | 2 | 2–6 |
-| Tutor | 4 | — |
-| Recursion | 3 | — |
-| Graveyard Hate | 0 | — |
+| Role | Tags | Oracle text | Typical |
+|---|---:|---:|---:|
+| Ramp | 15 | 13 | 8–12 |
+| Draw | 16 | 14 | 8–12 |
+| Removal | 13 | 5 | 6–10 |
+| Wipe | — | 2 | 2–4 |
+| Counterspell | — | 2 | — |
+| Protection | 9 | 2 | 2–6 |
+| Tutor | 8 | 4 | — |
+| Recursion | 7 | 3 | — |
+| Graveyard Hate | — | 0 | — |
 
-- 13 ramp — more than the usual 8-12.
-- 14 draw — more than the usual 8-12.
-- 5 removal — typical decks run 6-10.
+- 13 ramp — more than the usual 8-12. (tags count 15)
+- 14 draw — more than the usual 8-12. (tags count 16)
 
-_Roles come from oracle-text matching, so treat the edges as approximate._
+_Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
 
 ## Against the EDHREC meta
 
-Compared against ~2,065 decks with this commander.
+**Basis:** vs 115 Clones builds of Uugguu, the Omniplasm.
+
+Build variants EDHREC tracks: Tokens (130), Clones (115), Oozes (86), +1/+1 Counters (58), Reanimator (31), Aristocrats (25).
+
+Closest established commanders: The Mimeoplasm, Ratadrabik of Urborg, Hofri Ghostforge, Aeve, Progenitor Ooze, Myrkul, Lord of Bones, Experiment Kraj.
 
 **Staples you're missing** — most decks play these:
 
-- Mitotic Slime — in 61% of decks
-- Rejuvenating Springs — in 50% of decks
-- Ravenous Slime — in 50% of decks
-- Hinterland Harbor — in 50% of decks
-- Predator Ooze — in 49% of decks
-- Woodland Cemetery — in 49% of decks
-- Undergrowth Stadium — in 48% of decks
-- Oran-Rief Ooze — in 46% of decks
-- The Mimeoplasm — in 43% of decks
-- Opulent Palace — in 43% of decks
-- Scavenging Ooze — in 43% of decks
-- Path of Ancestry — in 42% of decks
-- Slurrk, All-Ingesting — in 42% of decks
-- Dreamroot Cascade — in 41% of decks
-- Saw in Half — in 40% of decks
+- Stunt Double — in 51% of decks
+- Naga Fleshcrafter — in 48% of decks
+- Mitotic Slime — in 47% of decks
+- Flesh Duplicate — in 46% of decks
+- Clone — in 45% of decks
+- Gigantoplasm — in 41% of decks
+- Mirrorhall Mimic — in 37% of decks
+- Vizier of Many Faces — in 36% of decks
+
+_Mana-base staples missing (separate on purpose): Rejuvenating Springs, Undergrowth Stadium, Path of Ancestry, Morphic Pool, Yavimaya Coast, Woodland Cemetery, Dreamroot Cascade, Opulent Palace._
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
-- Mitotic Slime — synergy +0.60
-- Ravenous Slime — synergy +0.49
-- Predator Ooze — synergy +0.47
-- Oran-Rief Ooze — synergy +0.45
-- Slurrk, All-Ingesting — synergy +0.41
-- The Mimeoplasm — synergy +0.41
-- Scavenging Ooze — synergy +0.40
-- Necrotic Ooze — synergy +0.38
-- Saw in Half — synergy +0.38
-- Adrix and Nev, Twincasters — synergy +0.37
-- Stunt Double — synergy +0.35
-- Consuming Blob — synergy +0.35
-- Ochre Jelly — synergy +0.34
-- Bloodline Bidding — synergy +0.33
-- Clone — synergy +0.33
+- Stunt Double — synergy +0.50
+- Mitotic Slime — synergy +0.46
+- Naga Fleshcrafter — synergy +0.46
+- Flesh Duplicate — synergy +0.45
+- Clone — synergy +0.44
+- Gigantoplasm — synergy +0.40
+- Mirrorhall Mimic — synergy +0.37
+- Vizier of Many Faces — synergy +0.35
+- Saw in Half — synergy +0.32
+- Waxen Shapethief — synergy +0.31
+- Ravenous Slime — synergy +0.30
+- Maskwood Nexus — synergy +0.30
+- Predator Ooze — synergy +0.30
+- Visage Bandit — synergy +0.30
+- Arcane Adaptation — synergy +0.30
 
 ## Combos
 

@@ -42,19 +42,34 @@ def slugify(tag: str) -> str:
 CATEGORIES: dict[str, tuple[str, ...]] = {
     "sacrifice": ("sacrifice-outlet", "free-sacrifice", "sacrifice-matters", "your-sacrifice"),
     "death-trigger": ("death-trigger", "dies-trigger", "leaves-battlefield-trigger"),
-    "copy": ("clone", "copy-creature", "copy-nonland", "copy-permanent", "copy-spell", "changeling"),
+    "copy": ("copy", "clone", "copy-creature", "copy-nonland", "copy-permanent", "copy-spell", "changeling"),
     "tokens": ("creature-tokens", "token-generator", "populate", "repeatable-creature-tokens"),
-    "drain": ("drain-life", "opponent-loses-life", "lifeloss", "group-slug", "aristocrat"),
+    "drain": ("drain-life", "opponent-loses-life", "lifeloss", "group-slug", "aristocrat", "aristocrats"),
     "recursion": ("reanimate", "recursion", "return-from-graveyard", "graveyard-fuel", "persist"),
-    "draw": ("draw-engine", "burst-draw", "repeatable-pure-draw", "card-advantage", "cantrip"),
-    "removal": ("removal-destroy", "removal-exile", "spot-removal", "removal-bounce", "removal-toughness"),
+    "draw": ("draw", "draw-engine", "burst-draw", "repeatable-pure-draw", "card-advantage", "cantrip"),
+    "removal": ("removal", "removal-destroy", "removal-exile", "spot-removal", "removal-bounce", "removal-toughness"),
     "sweeper": ("sweeper", "board-wipe", "mass-removal"),
     "ramp": ("ramp", "mana-rock", "mana-dork", "land-fetch", "treasures", "adds-multiple-mana"),
     "tutor": ("tutor",),
     "protection": ("protection", "hexproof", "indestructible", "counterspell", "ward"),
-    "typal": ("typal-", "tribal"),
+    "typal": ("typal", "tribal"),
     "counters": ("plus-one-counters", "proliferate", "gives-pp-counters"),
     "untap": ("untapper", "untap-permanent"),
+    "wincon": ("win-the-game", "alternate-win", "overrun", "extra-combat"),
+}
+
+# A tag matching both is the narrower thing: mass-removal is a sweeper, and
+# counting it as spot removal too would double-book the same card.
+_EXCLUSIVE: tuple[tuple[str, str], ...] = (("sweeper", "removal"),)
+
+# Tags that describe what a card *punishes*, not what it does. `hate-typal-human`
+# is anti-tribal tech; counting it toward the typal cluster was exactly backwards.
+ANTI_PREFIXES = ("hate-",)
+
+# `typal-<x>` slugs that name a card class rather than an actual tribe.
+_TYPAL_GENERIC = {
+    "creature", "creatures", "choose", "non-choose", "instant", "sorcery",
+    "artifact", "enchantment", "land", "planeswalker", "battle", "permanent",
 }
 
 # Tags that are about flavour, art or set structure rather than function.
@@ -84,16 +99,45 @@ def is_functional(tag: str) -> bool:
     return bool(categories_for(slug))
 
 
+def _pattern_matches(slug: str, pattern: str) -> bool:
+    """Whether a pattern's hyphen-segments appear as a run of the slug's segments.
+
+    Plain substring matching counted `trample` as ramp and `hate-typal-human`
+    as typal. Matching on segment boundaries keeps `typal` matching `typal-ooze`
+    without `ramp` matching the middle of an unrelated word.
+    """
+    return re.search(rf"(^|-){re.escape(pattern)}(-|$)", slug) is not None
+
+
 def categories_for(tag: str) -> list[str]:
     """Functional categories a tag belongs to (often none)."""
     slug = slugify(tag)
     if slug in NOISE_TAGS or any(slug.startswith(p) for p in NOISE_PREFIXES):
         return []
-    return [
+    if any(slug.startswith(p) for p in ANTI_PREFIXES):
+        return []
+    found = [
         category
         for category, patterns in CATEGORIES.items()
-        if any(p in slug for p in patterns)
+        if any(_pattern_matches(slug, p) for p in patterns)
     ]
+    for keep, drop in _EXCLUSIVE:
+        if keep in found and drop in found:
+            found.remove(drop)
+    return found
+
+
+def typal_subtypes(card: CardEntry) -> set[str]:
+    """Tribes a card's `typal-<tribe>` tags name, generics filtered out."""
+    tribes: set[str] = set()
+    for tag in card.tags or []:
+        slug = slugify(tag)
+        if not slug.startswith("typal-"):
+            continue
+        tribe = slug[len("typal-"):]
+        if tribe and tribe not in _TYPAL_GENERIC:
+            tribes.add(tribe)
+    return tribes
 
 
 def functional_tags(card: CardEntry) -> list[str]:

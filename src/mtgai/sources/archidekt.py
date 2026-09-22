@@ -146,6 +146,17 @@ def _mana_cost(oracle: dict[str, Any]) -> str:
     return " ".join(f.get("manaCost", "") for f in faces if f.get("manaCost"))
 
 
+def _deck_tags(payload: dict[str, Any]) -> list[str]:
+    """The owner's deck tags, whether Archidekt ships strings or objects."""
+    tags = []
+    for entry in payload.get("deckTags") or []:
+        if isinstance(entry, str):
+            tags.append(entry)
+        elif isinstance(entry, dict) and entry.get("name"):
+            tags.append(str(entry["name"]))
+    return tags
+
+
 def normalise(payload: dict[str, Any], slug: str, *, enrich: bool = True) -> Deck:
     """Turn a raw Archidekt payload into a slim, enriched Deck."""
     excluded_cats = _excluded_categories(payload)
@@ -161,6 +172,8 @@ def normalise(payload: dict[str, Any], slug: str, *, enrich: bool = True) -> Dec
         updated_at=payload.get("updatedAt", ""),
         archidekt_bracket=payload.get("edhBracket"),
         imported_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        description=payload.get("description") or "",
+        deck_tags=_deck_tags(payload),
     )
 
     for entry in payload.get("cards") or []:

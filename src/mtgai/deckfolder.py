@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 from .config import decks_dir
+from .intent import DeckIntent, parse_intent, render_intent
 from .model import Deck
 
 SOURCE = "source.json"
@@ -28,6 +29,7 @@ ANALYSIS = "analysis.md"
 SUGGESTIONS = "suggestions.md"
 ENGINE = "engine.md"
 NOTES = "notes.md"
+INTENT = "intent.md"
 
 NOTES_TEMPLATE = """# Notes
 
@@ -78,6 +80,10 @@ class DeckFolder:
     @property
     def notes_path(self) -> Path:
         return self.path / NOTES
+
+    @property
+    def intent_path(self) -> Path:
+        return self.path / INTENT
 
     def exists(self) -> bool:
         return self.deck_path.exists()
@@ -137,6 +143,25 @@ class DeckFolder:
             self.engine_path.exists()
             and self.ENGINE_MARKER not in self.engine_path.read_text()
         )
+
+    def read_intent(self) -> tuple[DeckIntent, list[str]] | None:
+        """The declared intent and its parse warnings, or None if never written."""
+        if not self.intent_path.exists():
+            return None
+        return parse_intent(self.intent_path.read_text())
+
+    def write_intent(self, intent: DeckIntent, *, only_if_absent: bool = False) -> bool:
+        """Write intent.md. With only_if_absent, an existing file always wins.
+
+        Analysis and refresh use only_if_absent — like notes.md, intent.md
+        belongs to Nicolas once it exists, and only the explicit intent
+        commands may rewrite it.
+        """
+        self.ensure()
+        if only_if_absent and self.intent_path.exists():
+            return False
+        self.intent_path.write_text(render_intent(intent))
+        return True
 
 
 def render_decklist(deck: Deck) -> str:
