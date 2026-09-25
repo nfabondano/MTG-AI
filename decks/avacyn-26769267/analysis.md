@@ -1,14 +1,14 @@
 # Avacyn
 
 **Commander:** Avacyn, Angel of Horror  
-**Identity:** B · **Cards:** 105 · **Format:** Commander  
+**Identity:** B · **Cards:** 102 · **Format:** Commander  
 **Source:** https://archidekt.com/decks/26769267
 
 ## What stands out
 
-- Illegal: Deck has 105 cards; Commander requires exactly 100.
-- 17 ramp — more than the usual 8-12. (tags count 24)
-- 16 draw — more than the usual 8-12. (tags count 17)
+- Illegal: Deck has 102 cards; Commander requires exactly 100.
+- 16 ramp — more than the usual 8-12. (tags count 23)
+- 14 draw — more than the usual 8-12. (tags count 15)
 - 1 protection — typical decks run 2-6.
 - 15 combos one card away — see the combo section.
 
@@ -18,17 +18,21 @@
 
 commander is the glue · target bracket 3
 
+Untouchable: Heartless Summoning, Carrion Feeder, Blood Pet, The Sibsig Ceremony, Blasphemous Edict — the tool will not suggest cutting these.
+
+Table notes: Constant dying is the plan: creatures returning every end step with Avacyn is the engine, so self-kill effects (Heartless Summoning, Sibsig Ceremony) and edicts are core. Avacyn costs 8, keep the cost reducers.
+
 ## What this deck does
 
 **sacrifice + death-trigger + drain**
 
 **Commander role:** glue — the 99 must supply: a plan of its own — the commander supports rather than defines it.
 
-sacrifice 32* · death-trigger 15* · drain 13* · recursion 9* · ramp 24 · removal 19 · draw 17 · sweeper 6
+sacrifice 31* · death-trigger 15* · drain 13* · recursion 8* · ramp 23 · removal 19 · draw 15 · sweeper 6
 
 _\* the commander's own text asks for this._
 
-**Oversupplied:** sacrifice 32 (want ~16, even doubled for the commander), ramp 24 (want ~12), removal 19 (want ~10), draw 17 (want ~12)
+**Oversupplied:** sacrifice 31 (want ~16, even doubled for the commander), ramp 23 (want ~12), removal 19 (want ~10), draw 15 (want ~12)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -36,7 +40,7 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 **This deck is not legal as built.**
 
-- Deck has 105 cards; Commander requires exactly 100.
+- Deck has 102 cards; Commander requires exactly 100.
 - Note: Not legal yet only because the set is unreleased: Avacyn, Angel of Horror (FRC releases 2026-10-02), Bloodline Recollector // Ancestral Craving (FRA releases 2026-10-02)
 
 ## Mana
@@ -45,7 +49,7 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 | Colour | Pips | Heaviest | Sources | Lands | Need |
 |---|---:|---:|---:|---:|---:|
-| Black | 94 | 3 | 45 | 26 | 23 |
+| Black | 91 | 3 | 44 | 26 | 23 |
 
 _Heaviest is the most pips of that colour any single card asks for; Need is how many sources that card wants to be castable on curve._
 
@@ -53,37 +57,37 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
 
 ## Curve
 
-**Average mana value:** 3.03 (nonland)
+**Average mana value:** 3.01 (nonland)
 
 ```
  0 |                      0
- 1 | █████████████        12
+ 1 | ████████████         11
  2 | ███████████████████  18
  3 | ████████████████████ 19
- 4 | ██████████████       13
- 5 | ███████              7
+ 4 | █████████████        12
+ 5 | ██████               6
  6 | ████                 4
 7+ | █                    1
 ```
 
-Creature 34 · Land 31 · Artifact 12 · Instant 11 · Sorcery 10 · Enchantment 6 · Planeswalker 1
+Creature 34 · Land 31 · Instant 10 · Sorcery 10 · Artifact 10 · Enchantment 6 · Planeswalker 1
 
 ## Roles
 
 | Role | Tags | Oracle text | Typical |
 |---|---:|---:|---:|
-| Ramp | 24 | 17 | 8–12 |
-| Draw | 17 | 16 | 8–12 |
+| Ramp | 23 | 16 | 8–12 |
+| Draw | 15 | 14 | 8–12 |
 | Removal | 19 | 7 | 6–10 |
 | Wipe | 6 | 2 | 2–4 |
 | Counterspell | — | 0 | — |
 | Protection | — | 1 | 2–6 |
 | Tutor | 5 | 2 | — |
-| Recursion | 9 | 3 | — |
+| Recursion | 8 | 3 | — |
 | Graveyard Hate | — | 0 | — |
 
-- 17 ramp — more than the usual 8-12. (tags count 24)
-- 16 draw — more than the usual 8-12. (tags count 17)
+- 16 ramp — more than the usual 8-12. (tags count 23)
+- 14 draw — more than the usual 8-12. (tags count 15)
 - 1 protection — typical decks run 2-6.
 
 _Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
@@ -163,7 +167,7 @@ _An estimate from what the deck can do on paper. How it actually plays, and what
 
 ## Price
 
-**Deck total:** $932.60 · 5 cards without a price
+**Deck total:** $898.48 · 5 cards without a price
 
 Most expensive:
 

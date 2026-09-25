@@ -14,9 +14,7 @@
 1 Phyrexian Altar
 1 Sol Ring
 1 Swiftfoot Boots
-1 The Darkness Crystal
 1 The Soul Stone
-1 Throne of Eldraine
 1 Accursed Marauder
 1 Ayara, First of Locthwain
 1 Blood Artist
@@ -56,7 +54,6 @@
 1 Grave Pact
 1 Heartless Summoning
 1 The Sibsig Ceremony
-1 Corrupted Conviction
 1 Culling the Weak
 1 Dark Ritual
 1 Deadly Dispute

@@ -29,10 +29,8 @@ _4 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **Throne of Eldraine** — 24 cards do ramp work; a deck wants about 12  
+- **Black Market Connections** — 23 cards do ramp work; a deck wants about 12  
   _(oversupplied: ramp)_
-- **Blasphemous Edict** — 19 cards do removal work; a deck wants about 10  
-  _(oversupplied: removal)_
 
 ---
 

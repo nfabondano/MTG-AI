@@ -6,15 +6,15 @@
  "format_name": "Commander",
  "owner": "Hugo0111",
  "url": "https://archidekt.com/decks/25564378",
- "updated_at": "2026-09-25T17:58:41.411032Z",
+ "updated_at": "2026-09-25T20:16:04.439210Z",
  "archidekt_bracket": null,
- "imported_at": "2026-09-25T19:43:59+00:00",
+ "imported_at": "2026-09-25T20:26:07+00:00",
  "description": "",
  "deck_tags": [],
  "color_identity": [
   "W"
  ],
- "total_cards": 103,
+ "total_cards": 102,
  "commanders": [
   "Seluma, Light of Aysen"
  ],
@@ -1498,75 +1498,6 @@
    ],
    "set_code": "lci",
    "released_at": "2023-11-17",
-   "rarity": "mythic",
-   "layout": "normal"
-  },
-  {
-   "name": "Akroma, Vision of Ixidor",
-   "quantity": 1,
-   "scryfall_id": "c0bdd07d-9fb9-4ee4-80db-494ee0cba58d",
-   "oracle_id": "b9be5ce9-08bb-4361-940c-9031e429ba86",
-   "mana_cost": "{5}{W}{W}",
-   "mana_value": 7.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Legendary Creature — Angel",
-   "oracle_text": "Flying, first strike, vigilance, trample\nAt the beginning of each combat, until end of turn, each other creature you control gets +1/+1 if it has flying, +1/+1 if it has first strike, and so on for double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, protection, reach, trample, vigilance, and partner.\nPartner",
-   "mana_production": {},
-   "keywords": [
-    "Flying",
-    "Trample",
-    "Vigilance",
-    "First strike",
-    "Partner"
-   ],
-   "categories": [
-    "Pump"
-   ],
-   "edhrec_rank": 5173,
-   "salt": 0.2,
-   "price_usd": 10.68,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "cycle-cmr-m-partner",
-    "evasion",
-    "keyword soup",
-    "namesake spell",
-    "pair-commander",
-    "synergy-deathtouch",
-    "synergy-double-strike",
-    "synergy-first-strike",
-    "synergy-flying",
-    "synergy-haste",
-    "synergy-hexproof",
-    "synergy-indestructible",
-    "synergy-lifelink",
-    "synergy-menace",
-    "synergy-partner",
-    "synergy-protection",
-    "synergy-reach",
-    "synergy-trample",
-    "synergy-vigilance",
-    "triggered ability",
-    "card names",
-    "cycle"
-   ],
-   "engine_participation": [
-    "typal"
-   ],
-   "set_code": "cmr",
-   "released_at": "2020-11-20",
    "rarity": "mythic",
    "layout": "normal"
   },

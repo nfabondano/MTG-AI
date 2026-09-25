@@ -6,15 +6,15 @@
  "format_name": "Commander",
  "owner": "Hugo0111",
  "url": "https://archidekt.com/decks/26769267",
- "updated_at": "2026-09-25T17:35:56.690696Z",
+ "updated_at": "2026-09-25T20:19:54.829060Z",
  "archidekt_bracket": null,
- "imported_at": "2026-09-25T19:44:14+00:00",
+ "imported_at": "2026-09-25T20:26:08+00:00",
  "description": "",
  "deck_tags": [],
  "color_identity": [
   "B"
  ],
- "total_cards": 105,
+ "total_cards": 102,
  "commanders": [
   "Avacyn, Angel of Horror"
  ],
@@ -2142,58 +2142,6 @@
    "layout": "normal"
   },
   {
-   "name": "Corrupted Conviction",
-   "quantity": 1,
-   "scryfall_id": "8046f892-3317-4ef7-9cf7-97b9060540c8",
-   "oracle_id": "b45e35df-9032-4482-89a6-c7c50c6d0a79",
-   "mana_cost": "{B}",
-   "mana_value": 1.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Instant",
-   "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Draw"
-   ],
-   "edhrec_rank": 599,
-   "salt": 0.1,
-   "price_usd": 0.35,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "draw"
-   ],
-   "tags": [
-    "additional cost",
-    "alliteration",
-    "plunder",
-    "sacrifice outlet-creature",
-    "card advantage",
-    "card names",
-    "draw",
-    "sacrifice outlet"
-   ],
-   "engine_participation": [
-    "draw",
-    "sacrifice"
-   ],
-   "set_code": "otj",
-   "released_at": "2024-04-19",
-   "rarity": "common",
-   "layout": "normal"
-  },
-  {
    "name": "Dark Ritual",
    "quantity": 1,
    "scryfall_id": "11e12a84-e7be-4afc-a230-c2e644743fa8",
@@ -3591,77 +3539,6 @@
    "layout": "normal"
   },
   {
-   "name": "Throne of Eldraine",
-   "quantity": 1,
-   "scryfall_id": "6d98bdb7-bdba-4e06-a122-9bcf131f4cc8",
-   "oracle_id": "5b9a2b81-a645-43be-8001-03817ac210ca",
-   "mana_cost": "{5}",
-   "mana_value": 5.0,
-   "colors": [],
-   "color_identity": [],
-   "type_line": "Legendary Artifact",
-   "oracle_text": "As Throne of Eldraine enters, choose a color.\n{T}: Add four mana of the chosen color. Spend this mana only to cast monocolored spells of that color.\n{3}, {T}: Draw two cards. Spend only mana of the chosen color to activate this ability.",
-   "mana_production": {
-    "W": 4,
-    "U": 4,
-    "B": 4,
-    "R": 4,
-    "G": 4
-   },
-   "keywords": [],
-   "categories": [
-    "Ramp"
-   ],
-   "edhrec_rank": 885,
-   "salt": 0.25,
-   "price_usd": 29.06,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "ramp",
-    "draw"
-   ],
-   "tags": [
-    "activated ability",
-    "adds multiple mana",
-    "commander set booster cards",
-    "draw engine",
-    "mana rock with set's mechanic",
-    "mana sink",
-    "refund",
-    "repeatable pure draw",
-    "restricted mana",
-    "shares name with a set",
-    "synergy-color-choose",
-    "synergy-monocolor",
-    "tome",
-    "utility mana rock",
-    "card advantage",
-    "card names",
-    "draw",
-    "mana producer",
-    "mana rock",
-    "pure draw",
-    "ramp",
-    "repeatable card advantage",
-    "repeatable draw",
-    "staple with set's mechanic"
-   ],
-   "engine_participation": [
-    "draw",
-    "ramp"
-   ],
-   "set_code": "plst",
-   "released_at": "2020-09-26",
-   "rarity": "rare",
-   "layout": "normal"
-  },
-  {
    "name": "Black Market",
    "quantity": 1,
    "scryfall_id": "78c80c6d-f3ae-48d3-ba6a-b9b738e1affb",
@@ -3820,69 +3697,6 @@
    "set_code": "frc",
    "released_at": "2026-10-02",
    "rarity": "uncommon",
-   "layout": "normal"
-  },
-  {
-   "name": "The Darkness Crystal",
-   "quantity": 1,
-   "scryfall_id": "0f93b6ac-54ce-45d0-8549-19307406e6e5",
-   "oracle_id": "660f370a-b25b-4ea5-b765-7abf96899c1c",
-   "mana_cost": "{2}{B}{B}",
-   "mana_value": 4.0,
-   "colors": [
-    "B"
-   ],
-   "color_identity": [
-    "B"
-   ],
-   "type_line": "Legendary Artifact",
-   "oracle_text": "Black spells you cast cost {1} less to cast.\nIf a nontoken creature an opponent controls would die, instead exile it and you gain 2 life.\n{4}{B}{B}, {T}: Put target creature card exiled with The Darkness Crystal onto the battlefield tapped under your control with two additional +1/+1 counters on it.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Ramp"
-   ],
-   "edhrec_rank": 1189,
-   "salt": 0.66,
-   "price_usd": 4.71,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "activated ability",
-    "cost reducer",
-    "cycle-fin-crystal",
-    "gives pp counters",
-    "graveyard seal",
-    "mana sink",
-    "reanimate-creature",
-    "reanimate-from-opponent",
-    "repeatable lifegain",
-    "repeatable pp counters",
-    "synergy-black",
-    "theft-creature",
-    "control changing effects",
-    "cycle",
-    "hate",
-    "hate-graveyard",
-    "lifegain",
-    "reanimate",
-    "recursion",
-    "recursion-creature",
-    "theft"
-   ],
-   "engine_participation": [
-    "ramp",
-    "recursion"
-   ],
-   "set_code": "fin",
-   "released_at": "2025-06-13",
-   "rarity": "rare",
    "layout": "normal"
   },
   {

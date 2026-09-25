@@ -87,12 +87,10 @@ _3 popularity-only ideas hidden — `--loose` shows them._
   _(oversupplied: protection)_
 - **Smothering Tithe** — 16 cards do draw work; a deck wants about 12  
   _(oversupplied: draw)_
-- **Avacyn, Angel of Hope** — 8 mana in a deck already carrying 28 spells at 5+  
+- **Avacyn, Angel of Hope** — 8 mana in a deck already carrying 27 spells at 5+  
   _(curve)_
-- **Vanquish the Horde** — 8 mana in a deck already carrying 28 spells at 5+  
+- **Vanquish the Horde** — 8 mana in a deck already carrying 27 spells at 5+  
   _(curve)_
-- **Mesmeric Orb** — outside every cluster this deck is built on (Angel typal + recursion)  
-  _(no engine participation)_
 
 ---
 

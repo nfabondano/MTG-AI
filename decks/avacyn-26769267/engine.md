@@ -23,13 +23,13 @@ death-trigger, drain, protection, recursion, sacrifice
 
 ## Clusters
 
-- **sacrifice** — 32 cards *(commander wants this)*
+- **sacrifice** — 31 cards *(commander wants this)*
 - **death-trigger** — 15 cards *(commander wants this)*
 - **drain** — 13 cards *(commander wants this)*
-- **recursion** — 9 cards *(commander wants this)*
-- **ramp** — 24 cards
+- **recursion** — 8 cards *(commander wants this)*
+- **ramp** — 23 cards
 - **removal** — 19 cards
-- **draw** — 17 cards
+- **draw** — 15 cards
 - **sweeper** — 6 cards
 - **tokens** — 6 cards
 - **tutor** — 5 cards
@@ -42,8 +42,8 @@ No clear closer found — the deck may win on incremental damage, or a finisher 
 
 _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
 
-- **Developing (ramp, draw)** — 41 cards (ramp 24 + draw 17)
+- **Developing (ramp, draw)** — 38 cards (ramp 23 + draw 15)
 - **Breaking parity (removal, sweepers)** — 25 cards (removal 19 + sweeper 6)
 - **Winning (closers, going wide)** — 6 cards (tokens 6)
-- **Behind (protection, recursion)** — 13 cards (protection 4 + recursion 9)
+- **Behind (protection, recursion)** — 12 cards (protection 4 + recursion 8)
 

@@ -19,7 +19,6 @@
 1 Sol Ring
 1 The One Ring
 1 Urza's Incubator
-1 Akroma, Vision of Ixidor
 1 Angel of Suffering
 1 Anya, Merciless Angel
 1 Archangel of Thune

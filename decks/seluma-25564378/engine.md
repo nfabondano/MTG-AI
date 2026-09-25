@@ -11,7 +11,7 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 Angel typal + recursion
 
-**Tribe:** 38 true Angels
+**Tribe:** 37 true Angels
 
 ## Seluma, Light of Aysen's role
 

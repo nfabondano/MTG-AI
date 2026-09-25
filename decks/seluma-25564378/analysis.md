@@ -1,21 +1,21 @@
 # Seluma
 
 **Commander:** Seluma, Light of Aysen  
-**Identity:** W · **Cards:** 103 · **Format:** Commander  
+**Identity:** W · **Cards:** 102 · **Format:** Commander  
 **Source:** https://archidekt.com/decks/25564378
 
 ## What stands out
 
-- Illegal: Deck has 103 cards; Commander requires exactly 100.
+- Illegal: Deck has 102 cards; Commander requires exactly 100.
 - Illegal: Colour identity violations: Angel of Suffering (B outside the commander's identity); Anya, Merciless Angel (R outside the commander's identity); Atraxa, Grand Unifier (B/G/U outside the commander's identity); Aurelia, the Law Above (R outside the commander's identity); Aurelia, the Warleader (R outside the commander's identity); Avacyn, Angel of Horror (B outside the commander's identity); Drana and Linvala (B outside the commander's identity); Errant and Giada (U outside the commander's identity); Firja, Judge of Valor (B outside the commander's identity); Forest (G outside the commander's identity); Gisela, Blade of Goldnight (R outside the commander's identity); Island (U outside the commander's identity); Liesa, Forgotten Archangel (B outside the commander's identity); Maelstrom Archangel (B/G/R/U outside the commander's identity); Mountain (R outside the commander's identity); Renegade Reaper (B outside the commander's identity); Selenia, the Cursed Heart (B outside the commander's identity); Shalai, Voice of Plenty (G outside the commander's identity); Sigarda, Font of Blessings (G outside the commander's identity); Sigarda, Host of Herons (G outside the commander's identity); Swamp (B outside the commander's identity); Tariel, Reckoner of Souls (B/R outside the commander's identity)
 - Fix the mana first: +20 Black sources — Firja, Judge of Valor, Angel of Suffering, Maelstrom Archangel want ~20, deck has 0.
 - Fix the mana first: +14 Blue sources — Maelstrom Archangel, Errant and Giada, Atraxa, Grand Unifier want ~14, deck has 0.
 - 32 lands plus 3 modal spell-lands (35 effective) against a curve suggesting about 38. Still on the low side.
 - Avacyn, Angel of Horror `{5}{B}{B}{B}` is the only card holding your colour requirement that high — 3 Black pips wants ~23 sources, deck has 0.
 - Aurelia, the Warleader `{2}{R}{R}{W}{W}` is the only card holding your colour requirement that high — 2 Red pips wants ~20 sources, deck has 0.
-- Average mana value 4.1 is high; hands can be slow to get going.
+- Average mana value 4.06 is high; hands can be slow to get going.
 - Only 17 spells at 2 mana or less — early turns may be empty.
-- 28 spells at 5+ mana is top-heavy for a 100-card deck.
+- 27 spells at 5+ mana is top-heavy for a 100-card deck.
 - 15 combos one card away — see the combo section.
 
 ## Intent (declared)
@@ -24,11 +24,15 @@
 
 tribe: Angel · commander is the wincon · target bracket 3
 
+Untouchable: Maelstrom Archangel, Entreat the Angels, Mesmeric Orb, Angel of Suffering, Serra's Emissary — the tool will not suggest cutting these.
+
+Table notes: Off-colour Angels are the point of the deck (Rulebreaker): never cut one for castability. Mesmeric Orb and Angel of Suffering feed Seluma's reanimation and make opponents stop attacking; keep both.
+
 ## What this deck does
 
 **Angel typal + recursion**
 
-**Tribe:** 38 true Angels
+**Tribe:** 37 true Angels
 
 **Commander role:** wincon — the 99 must supply: protection.
 
@@ -51,7 +55,7 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 **This deck is not legal as built.**
 
-- Deck has 103 cards; Commander requires exactly 100.
+- Deck has 102 cards; Commander requires exactly 100.
 - Colour identity violations: Angel of Suffering (B outside the commander's identity); Anya, Merciless Angel (R outside the commander's identity); Atraxa, Grand Unifier (B/G/U outside the commander's identity); Aurelia, the Law Above (R outside the commander's identity); Aurelia, the Warleader (R outside the commander's identity); Avacyn, Angel of Horror (B outside the commander's identity); Drana and Linvala (B outside the commander's identity); Errant and Giada (U outside the commander's identity); Firja, Judge of Valor (B outside the commander's identity); Forest (G outside the commander's identity); Gisela, Blade of Goldnight (R outside the commander's identity); Island (U outside the commander's identity); Liesa, Forgotten Archangel (B outside the commander's identity); Maelstrom Archangel (B/G/R/U outside the commander's identity); Mountain (R outside the commander's identity); Renegade Reaper (B outside the commander's identity); Selenia, the Cursed Heart (B outside the commander's identity); Shalai, Voice of Plenty (G outside the commander's identity); Sigarda, Font of Blessings (G outside the commander's identity); Sigarda, Host of Herons (G outside the commander's identity); Swamp (B outside the commander's identity); Tariel, Reckoner of Souls (B/R outside the commander's identity)
 - Note: Not legal yet only because the set is unreleased: Avacyn, Angel of Horror (FRC releases 2026-10-02), Lyra, Archangel of Dawn (FRA releases 2026-10-02), Ob Nixilis, the Ascended (FRC releases 2026-10-02), Selenia, the Cursed Heart (MBC releases 2026-11-09), Seluma, Light of Aysen (MBC releases 2026-11-09)
 
@@ -63,7 +67,7 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 | Colour | Pips | Heaviest | Sources | Lands | Need |
 |---|---:|---:|---:|---:|---:|
-| White | 82 | 3 | 28 | 18 | 23 |
+| White | 80 | 3 | 28 | 18 | 23 |
 
 _Heaviest is the most pips of that colour any single card asks for; Need is how many sources that card wants to be castable on curve._
 
@@ -71,7 +75,7 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
 
 ## Curve
 
-**Average mana value:** 4.1 (nonland)
+**Average mana value:** 4.06 (nonland)
 
 ```
  0 |                      0
@@ -81,14 +85,14 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
  4 | █████████████████    12
  5 | █████████████████    12
  6 | ██████               4
-7+ | █████████████████    12
+7+ | ████████████████     11
 ```
 
-Creature 40 · Land 32 · Artifact 14 · Instant 8 · Enchantment 5 · Sorcery 4
+Creature 39 · Land 32 · Artifact 14 · Instant 8 · Enchantment 5 · Sorcery 4
 
-- Average mana value 4.1 is high; hands can be slow to get going.
+- Average mana value 4.06 is high; hands can be slow to get going.
 - Only 17 spells at 2 mana or less — early turns may be empty.
-- 28 spells at 5+ mana is top-heavy for a 100-card deck.
+- 27 spells at 5+ mana is top-heavy for a 100-card deck.
 
 ## Roles
 
@@ -144,9 +148,9 @@ _Mana-base staples missing (separate on purpose): Mana Confluence, City of Brass
 - Defy Death — synergy +0.27
 - Archangel of Tithes — synergy +0.27
 - Rodolf Duskbringer — synergy +0.26
+- Akroma, Vision of Ixidor — synergy +0.25
 - Lightning Greaves — synergy +0.25
 - Angelic Arbiter — synergy +0.23
-- Emeria Shepherd — synergy +0.21
 
 ## Combos
 
@@ -184,7 +188,7 @@ _An estimate from what the deck can do on paper. How it actually plays, and what
 
 ## Price
 
-**Deck total:** $944.42 · 15 cards without a price
+**Deck total:** $933.74 · 15 cards without a price
 
 Most expensive:
 
