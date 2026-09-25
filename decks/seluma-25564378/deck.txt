@@ -1,0 +1,98 @@
+// Seluma
+// https://archidekt.com/decks/25564378
+
+// Commander
+1 Seluma, Light of Aysen
+
+// Deck
+1 Altar of Dementia
+1 Arcane Signet
+1 Chromatic Lantern
+1 Chronicle of Victory
+1 Fellwar Stone
+1 Herald's Horn
+1 Mesmeric Orb
+1 Patchwork Banner
+1 Pearl Medallion
+1 Pillar of Origins
+1 Quicksilver Amulet
+1 Sol Ring
+1 The One Ring
+1 Urza's Incubator
+1 Akroma, Vision of Ixidor
+1 Angel of Suffering
+1 Anya, Merciless Angel
+1 Archangel of Thune
+1 Atraxa, Grand Unifier
+1 Aurelia, the Law Above
+1 Aurelia, the Warleader
+1 Avacyn, Angel of Hope
+1 Avacyn, Angel of Horror
+1 Battle Angels of Tyr
+1 Bruna, the Fading Light
+1 Drana and Linvala
+1 Errant and Giada
+1 Exemplar of Light
+1 Firemane Commando
+1 Firja, Judge of Valor
+1 Giada, Font of Hope
+1 Gisela, Blade of Goldnight
+1 Gisela, the Broken Blade
+1 Herald of War
+1 Karmic Guide
+1 Liesa, Forgotten Archangel
+1 Lyra Dawnbringer
+1 Lyra, Archangel of Dawn
+1 Maelstrom Archangel
+1 Ob Nixilis, the Ascended
+1 Renegade Reaper
+1 Resplendent Angel
+1 Righteous Valkyrie
+1 Selenia, the Cursed Heart
+1 Sephara, Sky's Blade
+1 Serra's Emissary
+1 Shalai, Voice of Plenty
+1 Sigarda, Font of Blessings
+1 Sigarda, Host of Herons
+1 Starnheim Aspirant
+1 Tariel, Reckoner of Souls
+1 Witch Enchanter // Witch-Blessed Meadow
+1 Youthful Valkyrie
+1 Folk Hero
+1 Gleaming Splendor
+1 Land Tax
+1 Luminarch Ascension
+1 Smothering Tithe
+1 Akroma's Will
+1 Dawn's Truce
+1 Generous Gift
+1 Path to Exile
+1 Sejiri Shelter // Sejiri Glacier
+1 Stroke of Midnight
+1 Swords to Plowshares
+1 Teferi's Protection
+1 Cavern of Souls
+1 Eiganjo, Seat of the Empire
+1 Emeria, the Sky Ruin
+1 Exotic Orchard
+1 Fabled Passage
+1 Forest
+1 Geier Reach Sanitarium
+1 Island
+1 Minas Tirith
+2 Mountain
+1 Nykthos, Shrine to Nyx
+1 Path of Ancestry
+10 Plains
+1 Secluded Courtyard
+1 Seraph Sanctuary
+2 Swamp
+1 Three Tree City
+1 Unclaimed Territory
+1 Urborg, Tomb of Yawgmoth
+1 War Room
+1 Yavimaya, Cradle of Growth
+1 Austere Command
+1 Emeria's Call // Emeria, Shattered Skyclave
+1 Entreat the Angels
+1 Vanquish the Horde

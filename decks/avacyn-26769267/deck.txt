@@ -1,0 +1,94 @@
+// Avacyn
+// https://archidekt.com/decks/26769267
+
+// Commander
+1 Avacyn, Angel of Horror
+
+// Deck
+1 Altar of Dementia
+1 Arcane Signet
+1 Ashnod's Altar
+1 Bolas's Citadel
+1 Bontu's Monument
+1 Jet Medallion
+1 Phyrexian Altar
+1 Sol Ring
+1 Swiftfoot Boots
+1 The Darkness Crystal
+1 The Soul Stone
+1 Throne of Eldraine
+1 Accursed Marauder
+1 Ayara, First of Locthwain
+1 Blood Artist
+1 Blood Pet
+1 Bloodline Recollector // Ancestral Craving
+1 Braids, Cabal Minion
+1 Burnished Hart
+1 Carrion Feeder
+1 Crypt Ghast
+1 Demon's Disciple
+1 Disciple of Bolas
+1 Fleshbag Marauder
+1 Gray Merchant of Asphodel
+1 Grim Haruspex
+1 Kokusho, the Evening Star
+1 Massacre Wurm
+1 Merciless Executioner
+1 Morbid Opportunist
+1 Pawn of Ulamog
+1 Pitiless Plunderer
+1 Plaguecrafter
+1 Priest of Forgotten Gods
+1 Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel
+1 Sidisi, Undead Vizier
+1 Soldevi Adnate
+1 Solemn Simulacrum
+1 Tergrid, God of Fright // Tergrid's Lantern
+1 Troop of Ponies
+1 Umbral Collar Zealot
+1 Viscera Seer
+1 Warren Soultrader
+1 Yawgmoth, Thran Physician
+1 Zulaport Cutthroat
+1 Animate Dead
+1 Black Market
+1 Black Market Connections
+1 Grave Pact
+1 Heartless Summoning
+1 The Sibsig Ceremony
+1 Corrupted Conviction
+1 Culling the Weak
+1 Dark Ritual
+1 Deadly Dispute
+1 Deadly Rollick
+1 Fell the Profane // Fell Mire
+1 Flare of Malice
+1 Malakir Rebirth // Malakir Mire
+1 Plumb the Forbidden
+1 Sacrifice
+1 Village Rites
+1 Bojuka Bog
+1 Cabal Coffers
+1 Cabal Stronghold
+1 High Market
+1 Midgar, City of Mako // Reactor Raid
+1 Nykthos, Shrine to Nyx
+1 Phyrexian Tower
+1 Reliquary Tower
+1 Susur Secundi, Void Altar
+18 Swamp
+1 Takenuma, Abandoned Mire
+1 Urborg, Tomb of Yawgmoth
+1 War Room
+1 Westvale Abbey // Ormendahl, Profane Prince
+1 Liliana, Dreadhorde General
+1 Agadeem's Awakening // Agadeem, the Undercrypt
+1 Blasphemous Edict
+1 Bubbling Muck
+1 Damnation
+1 Diabolic Intent
+1 Dread Return
+1 Living Death
+1 Reanimate
+1 Toxic Deluge
+1 Victimize
