@@ -1,0 +1,111 @@
+// Stingerquill
+// https://archidekt.com/decks/26774318
+
+// Commander
+1 Ingris Stingerquill
+
+// Deck
+1 Arcane Signet
+1 Dolmen Gate
+1 Rakdos Signet
+1 Sol Ring
+1 Talisman of Indulgence
+1 The One Ring
+1 Urabrask's Forge
+1 Whip of Erebos
+1 Agate Instigator
+1 Bitterbloom Bearer
+1 Chandra's Spitfire
+1 Combat Celebrant
+1 Elegy Acolyte
+1 Enduring Courage
+1 Far Fortune, End Boss
+1 Garna, Bloodfist of Keld
+1 General Kreat, the Boltbringer
+1 Gix, Yawgmoth Praetor
+1 Goblin Rabblemaster
+1 Grim Hireling
+1 Hawkeye, Young Avenger
+1 Hellrider
+1 Howlsquad Heavy
+1 Kardur, Doomscourge
+1 Knuckles the Echidna
+1 Krenko, Tin Street Kingpin
+1 Lagomos, Hand of Hatred
+1 Legion Warboss
+1 Lord Skitter, Sewer King
+1 Loyal Apprentice
+1 Master of Barbs
+1 Mishra, Claimed by Gix
+1 Ojer Axonil, Deepest Might // Temple of Power
+1 Ornithopter
+1 Phoenix Chick
+1 Professional Face-Breaker
+1 Purphoros, God of the Forge
+1 Rev, Tithe Extractor
+1 Rograkh, Son of Rohgahh
+1 Samut, Hazoret's Champion
+1 Searslicer Goblin
+1 Siege-Gang Lieutenant
+1 Smellerbee, Rebel Fighter
+1 Solphim, Mayhem Dominus
+1 Stigma Lasher
+1 Thor, Guardian of Midgard
+1 Tomik, Izzet Sparkmage
+1 Torbran, Thane of Red Fell
+1 Wildfire Elemental
+1 Bitterblossom
+1 Black Market Connections
+1 Firebender Ascension
+1 Impact Tremors
+1 Phyrexian Arena
+1 Spiked Corridor // Torture Pit
+1 Bedevil
+1 Chaos Warp
+1 Dark Ritual
+1 Deadly Rollick
+1 Deflecting Swat
+1 Fell the Profane // Fell Mire
+1 Great Train Heist
+1 Malakir Rebirth // Malakir Mire
+1 Rakdos Charm
+1 Redirect Lightning
+1 Terminate
+1 Tibalt's Trickery
+1 Untimely Malfunction
+1 Valakut Awakening // Valakut Stoneforge
+1 Withering Torment
+1 Arena of Glory
+1 Blazemire Verge
+1 Blightstep Pathway // Searstep Pathway
+1 Blood Crypt
+1 Bloodstained Mire
+1 Bojuka Bog
+1 Command Beacon
+1 Command Tower
+1 Dragonskull Summit
+1 Graven Cairns
+1 Haunted Ridge
+1 Luxury Suite
+4 Mountain
+1 Raucous Theater
+1 Reliquary Tower
+1 Rogue's Passage
+1 Shizo, Death's Storehouse
+1 Sokenzan, Crucible of Defiance
+4 Swamp
+1 Tainted Peak
+1 Takenuma, Abandoned Mire
+1 Urborg, Tomb of Yawgmoth
+1 Agadeem's Awakening // Agadeem, the Undercrypt
+1 Blasphemous Act
+1 Bloodsoaked Insight // Sanguine Morass
+1 Demonic Tutor
+1 Faithless Looting
+1 Feed the Swarm
+1 Full Throttle
+1 Jeska's Will
+1 Night's Whisper
+1 Song of Totentanz
+1 Sundering Eruption // Volcanic Fissure
+1 Tempt with Vengeance
