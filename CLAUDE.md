@@ -140,6 +140,11 @@ The analysis produces numbers. The useful part is what you make of them.
   on the printed number, and the commander's own discount applies (Slinza's
   Beasts cost {2} less). The histogram still shows printed costs, as Archidekt
   does.
+- **Abilities can be a cost.** Under a commander that rewards creatures with no
+  abilities (Jasmine Boreal of the Seven), a card that gives your creatures an
+  ability switches the commander off for them. Examples are Asceticism's
+  hexproof and Flowering of the White Tree's ward. The tool offers these as
+  `anti-synergy` cuts.
 - **Nicolas's edits are decisions.** Cards added in the latest refresh, and
   suggested cuts he kept while cutting others, are never re-offered on soft
   evidence (oversupply, curve, no engine role). Colour identity and

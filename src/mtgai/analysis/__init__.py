@@ -46,10 +46,15 @@ def _reconcile_roles(roles_result: dict[str, Any], engine_result: dict[str, Any]
     Oracle-text regexes and curated tags measure the same jobs; where the tags
     say a role is adequately covered, a regex-derived "too few" finding is
     noise, not signal — the tags are the better instrument, so it is dropped.
+
+    Every tagged category counts, not just the clusters: a deck's two
+    sweepers are too few to be a cluster, and ignoring them is how Slinza's
+    report came to say "0 wipe" about a deck running Blasphemous Act and
+    Ezuri's Predation.
     """
-    clusters = engine_result.get("clusters") or {}
+    profile = engine_result.get("profile") or engine_result.get("clusters") or {}
     tag_counts = {
-        role: clusters[cat] for cat, role in CATEGORY_TO_ROLE.items() if cat in clusters
+        role: profile[cat] for cat, role in CATEGORY_TO_ROLE.items() if profile.get(cat)
     }
     roles_result["tag_counts"] = tag_counts
 

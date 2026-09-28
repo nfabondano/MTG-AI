@@ -123,6 +123,10 @@ _WIPE_PATTERNS = [
     r"each (?:player|opponent) sacrifices (?:two|three|four|half|all|X)\b",
     r"return all (?:creatures|permanents|nonland permanents)",
     r"each creature deals damage",
+    # Damage and shrink sweepers say "each creature" rather than "all":
+    # Blasphemous Act "deals 13 damage to each creature" read as no wipe at all.
+    r"deals? (?:\d+|x) damage to each (?:other )?creature",
+    r"creatures (?:your opponents control|you don't control) get -\d+/-\d+",
     # Overload turns a targeted spell into a one-sided wipe, which is how
     # cards like Damn and Cyclonic Rift actually get played.
     r"\boverload \{",

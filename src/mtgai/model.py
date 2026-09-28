@@ -147,6 +147,25 @@ class CardEntry:
         return _REMINDER_RE.sub("", self.role_text())
 
     @property
+    def has_no_abilities(self) -> bool:
+        """A creature with no rules text — what Jasmine Boreal of the Seven
+        and Muraganda Petroglyphs call "no abilities".
+
+        An adventurer is judged by its creature face. The deck import joins a
+        card's faces and leaves out the empty ones, so an adventure card with
+        no separator has a creature face with no text — Cheeky House-Mouse is a
+        vanilla 2/1 whatever its Adventure half says.
+        """
+        if self.is_land or "Creature" not in self.type_line.split("//")[0]:
+            return False
+        text = self.oracle_text or ""
+        if self.layout == "adventure":
+            text = text.split("\n//\n")[0] if "\n//\n" in text else ""
+        elif self.layout == "modal_dfc":
+            text = text.split("\n//\n")[0]
+        return not _REMINDER_RE.sub("", text).strip()
+
+    @property
     def is_basic_land(self) -> bool:
         return self.name in BASIC_LANDS or "Basic" in self.type_line
 

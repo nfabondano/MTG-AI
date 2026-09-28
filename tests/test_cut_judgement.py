@@ -167,7 +167,7 @@ class TestRealCost:
         # Henge and Act never qualify; Big Beast costs 5 with Slinza out, which
         # is not the top of anything.
         assert evidence_for(cuts, "curve") == ["Colossal Beast", "Primeval Bounty"]
-        assert "9 mana (7 with Slinza's discount)" in cuts["Colossal Beast"]["why"]
+        assert "9 mana (7 with Slinza's Beast discount)" in cuts["Colossal Beast"]["why"]
 
     def test_the_top_heavy_finding_counts_real_cost(self):
         henge = card("The Great Henge", "{7}{G}{G}", 9,
@@ -468,3 +468,32 @@ class TestFlexibleOutranksInference:
         result = analysis.analyse(deck, offline=True)
         result["intent"] = {"flexible_cards": ["Garruk, Curse Breaker"]}
         assert cut_names(deck, result)["Garruk, Curse Breaker"]["evidence"] == "oversupplied: draw"
+
+
+class TestStaplesAreNotOrphans:
+    """Teferi's Protection, Lightning Greaves and Vampiric Tutor were offered
+    as "doing nothing" in Edgar's deck: outside every cluster, but each doing a
+    job every deck needs. Too many of a staple is the oversupply check's call."""
+
+    def build(self) -> Deck:
+        shields = [card(f"Shield {i}", "{1}{G}", 2, "Instant", tags=["protection"])
+                   for i in range(3)]
+        # Filed under Protection in Archidekt; its tags only say "change target".
+        owned = card("Deflecting Swat", "{2}{G}", 3, "Instant", categories=["Protection"])
+        oddity = card("Oddity", "{2}{G}", 3, "Enchantment")
+        return playable(boss(), *shields, owned, oddity)
+
+    def test_a_staple_outside_the_theme_is_not_offered_as_doing_nothing(self):
+        deck = self.build()
+        result = analysis.analyse(deck, offline=True)
+        assert "Shield 0" in result["engine"]["orphans"], "still listed for information"
+        cuts = cut_names(deck, result)
+        assert not {"Shield 0", "Shield 1", "Shield 2", "Deflecting Swat"} & set(cuts)
+        assert cuts["Oddity"]["evidence"] == "no engine participation"
+
+    def test_a_token_doubler_is_a_token_card(self):
+        from mtgai import tags
+
+        procession = card("Anointed Procession", "{3}{W}", 4, "Enchantment",
+                          tags=["token doubler", "token increaser"])
+        assert "tokens" in tags.card_categories(procession)

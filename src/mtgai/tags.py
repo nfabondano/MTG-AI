@@ -43,7 +43,12 @@ CATEGORIES: dict[str, tuple[str, ...]] = {
     "sacrifice": ("sacrifice-outlet", "free-sacrifice", "sacrifice-matters", "your-sacrifice"),
     "death-trigger": ("death-trigger", "dies-trigger", "leaves-battlefield-trigger"),
     "copy": ("copy", "clone", "copy-creature", "copy-nonland", "copy-permanent", "copy-spell", "changeling"),
-    "tokens": ("creature-tokens", "token-generator", "populate", "repeatable-creature-tokens"),
+    "tokens": (
+        "creature-tokens", "token-generator", "populate", "repeatable-creature-tokens",
+        # Anointed Procession makes no token of its own, but in Edgar's deck it
+        # doubles every one — it is a token card, not an outsider.
+        "token-doubler", "token-increaser",
+    ),
     "drain": ("drain-life", "opponent-loses-life", "lifeloss", "group-slug", "aristocrat", "aristocrats"),
     "recursion": ("reanimate", "recursion", "return-from-graveyard", "graveyard-fuel", "persist"),
     "draw": ("draw", "draw-engine", "burst-draw", "repeatable-pure-draw", "card-advantage", "cantrip"),
@@ -56,6 +61,9 @@ CATEGORIES: dict[str, tuple[str, ...]] = {
     "counters": ("plus-one-counters", "proliferate", "gives-pp-counters"),
     "untap": ("untapper", "untap-permanent"),
     "wincon": ("win-the-game", "alternate-win", "overrun", "extra-combat"),
+    # Static team pumps. A deck of creatures with no abilities has nothing
+    # else to make them big, so for Jasmine these are the engine, not filler.
+    "anthem": ("anthem", "power-boost-to-all"),
 }
 
 # A tag matching both is the narrower thing: mass-removal is a sweeper, and

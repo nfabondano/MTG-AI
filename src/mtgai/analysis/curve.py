@@ -74,7 +74,7 @@ def analyse(deck: Deck) -> dict:
         reasons = []
         if discounted:
             d = next(d for d in discounts if d.applies_to(discounted[0]))
-            reasons.append(f"{d.label}'s {d.what} discount")
+            reasons.append(d.phrase)
         if heavy_self:
             reasons.append("spells that discount themselves")
         counting = " and ".join(reasons)

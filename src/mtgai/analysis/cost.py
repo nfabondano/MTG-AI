@@ -15,6 +15,9 @@ Two corrections, both read from rules text:
 - **The commander's own discount** ("Beast spells you cast cost {2} less to
   cast") applies to every card it names. The commander is the one card the
   deck can count on, and the deck is built on the assumption it is there.
+  Mana the commander makes only for certain spells pays for them the same
+  way: Jasmine Boreal of the Seven's {G}{W} is for creatures with no
+  abilities, so a 6-mana vanilla costs her deck 4.
 """
 
 from __future__ import annotations
@@ -38,6 +41,14 @@ _DISCOUNT_RE = re.compile(
     re.I,
 )
 
+# "{T}: Add {G}{W}. Spend this mana only to cast creature spells with no
+# abilities." — restricted mana, read as a discount for exactly those spells.
+_RESTRICTED_MANA_RE = re.compile(
+    r"\{T\}: Add (?P<mana>(?:\{[WUBRGC]\})+)\.\s*Spend this mana only to cast "
+    r"(?P<what>(?:[A-Za-z'-]+ )*?)spells?(?P<vanilla> with no abilities)?\.",
+    re.I,
+)
+
 _COLOR_WORDS = {"white": "W", "blue": "U", "black": "B", "red": "R", "green": "G"}
 _CARD_TYPES = {
     "artifact", "battle", "creature", "enchantment", "instant", "kindred",
@@ -52,14 +63,27 @@ class Discount:
     source: str
     what: str
     amount: int
+    # Restricted mana ("Spend this mana only to cast…") rather than a cost
+    # reduction, and whether it is only for creatures with no abilities.
+    mana: bool = False
+    no_abilities: bool = False
 
     @property
     def label(self) -> str:
         """The commander's short name — "Slinza" for "Slinza, the Spiked Stampede"."""
         return self.source.split(",")[0].strip()
 
+    @property
+    def phrase(self) -> str:
+        """How a report names it: "Slinza's Beast discount", "Jasmine…'s mana"."""
+        if self.mana:
+            return f"{self.label}'s mana"
+        return f"{self.label}'s {self.what} discount"
+
     def applies_to(self, card: CardEntry) -> bool:
         if card.is_commander or card.is_land:
+            return False
+        if self.no_abilities and not card.has_no_abilities:
             return False
         options = re.split(r",\s*|\s+(?:and|or)\s+", self.what.lower())
         return any(
@@ -88,9 +112,21 @@ def commander_discounts(deck: Deck) -> list[Discount]:
     """Unconditional cost reductions the commanders' own text grants."""
     found: list[Discount] = []
     for commander in deck.commanders:
-        for match in _DISCOUNT_RE.finditer(commander.rules_text()):
+        text = commander.rules_text()
+        for match in _DISCOUNT_RE.finditer(text):
             found.append(
                 Discount(commander.name, match.group("what"), int(match.group("amount")))
+            )
+        for match in _RESTRICTED_MANA_RE.finditer(text):
+            what = match.group("what").strip() or "creature"
+            found.append(
+                Discount(
+                    commander.name,
+                    what,
+                    len(re.findall(r"\{[WUBRGC]\}", match.group("mana"))),
+                    mana=True,
+                    no_abilities=bool(match.group("vanilla")),
+                )
             )
     return found
 

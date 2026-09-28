@@ -307,6 +307,8 @@ def build_cuts(
     1. **Castability** — the card asks for more coloured mana than the deck
        makes, and fixing the mana instead would not be better (sole drivers
        and three-colour costs; strained engine pieces become mana fixes).
+       **Anti-synergy** sits beside it: a card that switches off what the
+       commander rewards (hexproof for the whole team under Jasmine).
     2. **Oversupply** — the card sits in a cluster holding far more than the
        deck needs, and serves neither a core cluster nor the tribe.
     3. **Curve** — a top-of-curve card in a deck that is already top-heavy,
@@ -374,6 +376,14 @@ def build_cuts(
             why += f" (or {entry['alternative']})"
         add(entry["name"], why, "castability", 100 + entry.get("severity", 0))
 
+    # 1b. Anti-synergy — the card switches off what the commander rewards.
+    #     A fact about the deck, like castability, so no decision shields it;
+    #     declaring it sacred in intent.md is how to keep it.
+    for entry in eng.get("anti_synergy") or []:
+        if entry["name"] in protected:
+            continue
+        add(entry["name"], entry["why"], "anti-synergy", 90)
+
     # 2. Oversupply — name the specific cards making up the excess. The
     #    representative must not be one of the engine's own pieces: a card that
     #    also serves a core cluster, or is the tribe, is doing double duty and
@@ -432,7 +442,7 @@ def build_cuts(
             price = f"{card.mana_value:.0f} mana"
             discount = cost_mod.discount_for(card, discounts)
             if discount and real < card.mana_value:
-                price += f" ({real:.0f} with {discount.label}'s discount)"
+                price += f" ({real:.0f} with {discount.phrase})"
             add(
                 card.name,
                 f"{price} in a deck already carrying {heavy} spells at 5+",
@@ -440,9 +450,19 @@ def build_cuts(
                 50,
             )
 
-    # 4. Does nothing the deck is built around.
-    for name in (eng.get("orphans") or [])[:5]:
-        if not soft_ok(deck.find(name)):
+    # 4. Does nothing the deck is built around. A card doing a job every deck
+    #    needs — protection, removal, ramp, draw — is not "doing nothing" for
+    #    sitting outside the theme; whether there are too many of those is the
+    #    oversupply check's call. Teferi's Protection was once offered here.
+    candidates = [
+        card
+        for card in (deck.find(name) for name in eng.get("orphans") or [])
+        if card is not None
+        and not ((tagmod.card_categories(card) | engine_mod.owner_categories(card)) & _STAPLES)
+    ]
+    for card in candidates[:5]:
+        name = card.name
+        if not soft_ok(card):
             continue
         add(
             name,
@@ -471,6 +491,10 @@ CURVE_TOP = 6
 
 # Roles every deck needs (roles.TARGETS), as the tag category that measures them.
 _ROLE_CATEGORY = {"wipe": "sweeper"}
+
+# Jobs with a normal range of their own (engine.CATEGORY_TARGETS). Sacrifice is
+# left out: outside an aristocrats deck it is a theme, not a staple.
+_STAPLES = set(engine_mod.CATEGORY_TARGETS) - {"sacrifice"}
 
 
 def _flexible(result: dict[str, Any]) -> set[str]:

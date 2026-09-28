@@ -60,6 +60,9 @@ COMMANDER_WANTS: dict[str, tuple[str, ...]] = {
     "recursion": ("recursion", "sacrifice", "death-trigger"),
     "counters": ("counters",),
     "untap": ("untap", "ramp"),
+    # Creatures with no abilities have nothing but their stats, so what pumps
+    # the team is as much the engine as the vanillas themselves.
+    "vanilla": ("vanilla", "anthem"),
 }
 
 # When a commander arrives sparsely tagged — new sets ship before taggers catch
@@ -72,10 +75,17 @@ _ORACLE_WANTS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"\bdraws? (a|two|three|x) cards?\b", re.I), "draw"),
     (re.compile(r"loses? \d+ life|loses? life|drain", re.I), "drain"),
     (re.compile(r"\+1/\+1 counter", re.I), "counters"),
+    # Jasmine Boreal of the Seven: "creature spells with no abilities".
+    (re.compile(r"\bno abilities\b", re.I), "vanilla"),
 )
 
 # A tribe only counts as the deck's tribe when the deck actually commits to it.
 TRIBE_MIN = 4
+
+# When the only evidence is the commander's own creature type, the deck must
+# also be built of it. Jasmine is a Human Druid in a deck with five Humans, and
+# that made a vanilla deck read as Human typal.
+TRIBE_SHARE = 0.15
 
 # A cluster the commander's own text asks for gets to run deeper before it is
 # called oversupplied — for a death-trigger commander, fourteen sacrifice
@@ -167,9 +177,9 @@ def commander_tribe(deck: Deck) -> str | None:
     if not census:
         return None
 
-    def confirmed(candidates: set[str]) -> str | None:
+    def confirmed(candidates: set[str], minimum: float = TRIBE_MIN) -> str | None:
         present = [(census.get(c.lower(), 0), c) for c in candidates]
-        present = [(count, name) for count, name in present if count >= TRIBE_MIN]
+        present = [(count, name) for count, name in present if count >= minimum]
         if not present:
             return None
         return max(present)[1]
@@ -179,8 +189,12 @@ def commander_tribe(deck: Deck) -> str | None:
         if found:
             return found
 
+    # A creature type on the commander's type line is the weakest evidence:
+    # plenty of commanders are Humans or Elves in decks that do not care.
+    nonland = sum(c.quantity for c in deck.cards if not c.is_land)
+    share = max(TRIBE_MIN, TRIBE_SHARE * nonland)
     for commander in deck.commanders:
-        found = confirmed(commander.subtypes)
+        found = confirmed(commander.subtypes, share)
         if found:
             return found
 
@@ -252,6 +266,86 @@ def makes_tribe_tokens(card: CardEntry, tribe: str | None) -> bool:
         return False
     pattern = rf"\bcreates?\b[^.]*\b{re.escape(tribe)}\b[^.]*\btokens?\b"
     return re.search(pattern, card.rules_text(), re.I) is not None
+
+
+_NO_ABILITIES_RE = re.compile(r"\bno abilities\b", re.I)
+
+# "Create a 2/2 green Bear creature token" makes a creature with no abilities;
+# "…token with trample" or a quoted ability does not, and "its controller
+# creates" hands the token to an opponent (Beast Within, Generous Gift).
+_TOKEN_RE = re.compile(
+    r"(?P<pre>\b[\w']+\s+)?\bcreates?\b[^.]*?\bcreature tokens?\b(?P<post>[^.]*)", re.I
+)
+_TOKEN_KEYWORD_RE = re.compile(
+    r"^\s*(?:with|that has|that have)\s+(?:flying|trample|haste|vigilance|lifelink|"
+    r"deathtouch|reach|menace|first strike|double strike|hexproof|indestructible|"
+    r"ward|defender|protection|infect|toxic|\")",
+    re.I,
+)
+
+
+def makes_vanilla_tokens(card: CardEntry) -> bool:
+    """Whether the card makes creature tokens with no abilities for you.
+
+    Those tokens count for Jasmine's evasion and Muraganda Petroglyphs exactly
+    as a printed vanilla does, so their makers feed the same engine.
+    """
+    if card.is_land:
+        return False
+    for match in _TOKEN_RE.finditer(card.rules_text()):
+        if (match.group("pre") or "").strip().lower() in {"controller", "player", "opponent"}:
+            continue
+        post = match.group("post")
+        if _TOKEN_KEYWORD_RE.match(post) or "copy" in post.lower():
+            continue
+        return True
+    return False
+
+# A standing grant — "Creatures you control have hexproof", "Legendary
+# creatures you control get +2/+1 and have ward {1}". Temporary grants ("gain …
+# until end of turn") are protection spells cast when needed, and "have base
+# power and toughness" sets stats rather than adding an ability.
+_GRANT_RE = re.compile(
+    r"\b(?P<who>(?:[a-z]+ )?creatures) you control\b[^.]*?\b(?:have|has)\s+(?P<what>[^.]*)",
+    re.I,
+)
+
+
+def ability_grants(deck: Deck) -> list[dict]:
+    """Cards that permanently give your creatures an ability — anti-synergy
+    when the commander rewards creatures with *no* abilities.
+
+    Asceticism's hexproof, on a Jasmine Boreal of the Seven deck, gives every
+    creature an ability: the whole team loses Jasmine's evasion, Muraganda
+    Petroglyphs' +2/+2 and Ruxa's bonus at once. A card that only reaches
+    legendary creatures matters only when some vanillas are legendary.
+    """
+    legendary_vanilla = any(
+        c.has_no_abilities and "Legendary" in c.type_line for c in deck.cards
+    )
+    commander = ", ".join(c.name.split(",")[0] for c in deck.commanders) or "the commander"
+    found: list[dict] = []
+    for card in deck.cards:
+        if card.is_land or card.is_commander:
+            continue
+        for match in _GRANT_RE.finditer(card.rules_text()):
+            what = match.group("what").strip()
+            if "until end of turn" in match.group(0).lower() or what.lower().startswith("base "):
+                continue
+            who = match.group("who").lower()
+            if "legendary" in who and not legendary_vanilla:
+                continue
+            found.append(
+                {
+                    "name": card.name,
+                    "why": (
+                        f"gives {who} you control {what}, and a creature with an "
+                        f"ability loses what {commander} gives creatures with no abilities"
+                    ),
+                }
+            )
+            break
+    return found
 
 
 def clusters(deck: Deck) -> dict[str, int]:
@@ -333,6 +427,14 @@ def tag_participation(deck: Deck, tribe: str | None = None) -> None:
             is_tribe_member(card, tribe) or makes_tribe_tokens(card, tribe)
         ):
             member.add("typal")
+        # A creature with no abilities participates by existing, like a tribe
+        # member; a card that rewards "no abilities" is the payoff.
+        if "vanilla" in active and (
+            card.has_no_abilities
+            or _NO_ABILITIES_RE.search(card.rules_text())
+            or makes_vanilla_tokens(card)
+        ):
+            member.add("vanilla")
         card.engine_participation = sorted(member & active)
 
 
@@ -647,6 +749,12 @@ def analyse(deck: Deck, intent=None) -> dict:
     tag_participation(deck, tribe)
 
     found = clusters(deck)
+    # Vanilla has no tag of its own: its size is the participation just
+    # recorded, the way a tribe is counted from type lines rather than tags.
+    vanilla = sum(c.quantity for c in deck.cards if "vanilla" in c.engine_participation)
+    if vanilla >= CLUSTER_THRESHOLD:
+        found["vanilla"] = vanilla
+        found = dict(sorted(found.items(), key=lambda kv: -kv[1]))
     wants = commander_wants(deck)
     overrides: dict[str, int] = dict(getattr(intent, "core_categories", None) or {})
     wants = sorted(set(wants) | set(overrides))
@@ -726,6 +834,8 @@ def analyse(deck: Deck, intent=None) -> dict:
         "mana_fixes": mana_fixes(deck, demoted),
         "oversupplied": excess,
         "orphans": orphans,
+        "anti_synergy": ability_grants(deck) if "vanilla" in wanted_set else [],
+        "profile": dict(tagmod.deck_profile(deck)),
         "win_conditions": wins,
         "quadrants": quadrant_coverage(deck),
         "tag_counts": dict(tagmod.tag_counts(deck).most_common(20)),
