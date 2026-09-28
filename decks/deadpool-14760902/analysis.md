@@ -8,7 +8,6 @@
 
 - 16 ramp — more than the usual 8-12. (tags count 16)
 - 14 draw — more than the usual 8-12. (tags count 17)
-- 1 wipe — typical decks run 2-4.
 - 15 combos one card away — see the combo section.
 - Archidekt has this deck marked as bracket 2; the card pool looks more like 3.
 - Maybeboard: adding any one of Orcish Bowmasters, Vampiric Tutor, Ancient Tomb, Jeska's Will, Demonic Tutor, The One Ring makes this a bracket 3 deck.
@@ -69,24 +68,23 @@ Land 29 · Creature 23 · Instant 15 · Artifact 13 · Sorcery 12 · Enchantment
 | Ramp | 16 | 16 | 8–12 |
 | Draw | 17 | 14 | 8–12 |
 | Removal | 11 | 7 | 6–10 |
-| Wipe | — | 1 | 2–4 |
+| Wipe | 3 | 2 | 2–4 |
 | Counterspell | — | 0 | — |
 | Protection | 10 | 0 | 2–6 |
-| Tutor | — | 0 | — |
-| Recursion | — | 2 | — |
+| Tutor | 3 | 0 | — |
+| Recursion | 4 | 2 | — |
 | Graveyard Hate | — | 0 | — |
 
 - 16 ramp — more than the usual 8-12. (tags count 16)
 - 14 draw — more than the usual 8-12. (tags count 17)
-- 1 wipe — typical decks run 2-4.
 
 _Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
 
 ## Against the EDHREC meta
 
-**Basis:** vs 713 Clones builds of Deadpool, Trading Card.
+**Basis:** vs 715 Clones builds of Deadpool, Trading Card.
 
-Build variants EDHREC tracks: Clones (713), Chaos (393), Tokens (252), Group Slug (213), Reanimator (200), Combo (182).
+Build variants EDHREC tracks: Clones (715), Chaos (394), Tokens (253), Group Slug (213), Reanimator (200), Combo (182).
 
 Closest established commanders: Blim, Comedic Genius, Xantcha, Sleeper Agent, The Beamtown Bullies, Jon Irenicus, Shattered One, Zedruu the Greathearted, Greven, Predator Captain.
 
@@ -97,20 +95,20 @@ Closest established commanders: Blim, Comedic Genius, Xantcha, Sleeper Agent, Th
 - Phyrexian Arena — in 39% of decks
 - Blood Artist — in 38% of decks
 - Flameshadow Conjuring — in 38% of decks
-- Terminate — in 35% of decks
+- Terminate — in 36% of decks
 
-_Mana-base staples missing (separate on purpose): Shadowblood Ridge, Fellwar Stone, Rakdos Carnarium, Temple of Malice._
+_Mana-base staples missing (separate on purpose): Shadowblood Ridge, Fellwar Stone, Rakdos Carnarium._
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
 - Heat Shimmer — synergy +0.39
 - Flameshadow Conjuring — synergy +0.35
-- Harmless Offering — synergy +0.28
+- Harmless Offering — synergy +0.27
 - Mirror March — synergy +0.27
-- The Fire Crystal — synergy +0.27
+- The Fire Crystal — synergy +0.26
 - Devastating Onslaught — synergy +0.25
+- Dualcaster Mage — synergy +0.24
 - Flamerush Rider — synergy +0.23
-- Dualcaster Mage — synergy +0.23
 - Mirror Gallery — synergy +0.22
 - Goldlust Triad — synergy +0.22
 
@@ -134,10 +132,10 @@ _Mana-base staples missing (separate on purpose): Shadowblood Ridge, Fellwar Sto
 - Add **Toralf, God of Fury // Toralf's Hammer** — combos with Blasphemous Act → Near-infinite damage
 - Add **Forsaken Miner** — combos with Phyrexian Altar + Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel → Infinite creature LTB, Infinite creature ETB
 - Add **Kiki-Jiki, Mirror Breaker** — combos with Helm of the Host → Infinite death triggers, Infinite creature ETB
-- Add **Combat Celebrant** — combos with Rionya, Fire Dancer → Infinite combat phases, Infinite creature tokens with haste
 - Add **Fall of Cair Andros** — combos with Blasphemous Act → Infinite +1/+1 counters on a creature, Near-infinite damage to creatures
+- Add **Combat Celebrant** — combos with Rionya, Fire Dancer → Infinite combat phases, Infinite creature tokens with haste
 - Add **Port Razer** — combos with Helm of the Host → Infinite combat damage, Infinite combat phases
-- Add **Scourge of the Throne** — combos with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste
+- Add **Smaug the Impenetrable** — combos with Mayhem Devil → Infinite colored mana, Infinite artifact ETB
 
 _Checked the 25 most combo-likely cards, not all 100, and kept only combos inside your colour identity._
 

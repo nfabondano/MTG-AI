@@ -5,9 +5,7 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 ## Archetype
 
-ramp + untap + Human typal
-
-**Tribe:** 4 true Humans + 1 copy effects that become Humans when they copy one
+ramp + untap
 
 ## Raggadragga, Goreguts Boss's role
 
@@ -18,17 +16,18 @@ ramp + untap + Human typal
 
 ## What Raggadragga, Goreguts Boss asks for
 
-copy, ramp, typal, untap
+ramp, untap
 
 ## Clusters
 
 - **ramp** — 26 cards *(commander wants this)*
 - **untap** — 9 cards *(commander wants this)*
-- **typal** — 5 cards *(commander wants this)*
 - **draw** — 18 cards
+- **anthem** — 10 cards
 - **removal** — 10 cards
 - **tutor** — 9 cards
 - **counters** — 5 cards
+- **typal** — 5 cards
 
 ## How it ends games
 
@@ -37,8 +36,8 @@ copy, ramp, typal, untap
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Marwyn, the Nurturer → Infinite blinking of some creatures, Infinite creature ETB
 - Raggadragga, Goreguts Boss + Selvala, Heart of the Wilds + Fanning the Flames → Infinite colored mana, Infinite damage
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Viridian Joiner → Infinite blinking of some creatures, Infinite creature ETB
-- Raggadragga, Goreguts Boss + Selvala, Heart of the Wilds + Wurmcalling → Infinite colored mana, Infinite creature tokens
 - Raggadragga, Goreguts Boss + Heronblade Elite + Fanning the Flames → Infinite colored mana, Infinite damage
+- Raggadragga, Goreguts Boss + Selvala, Heart of the Wilds + Wurmcalling → Infinite colored mana, Infinite creature tokens
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Selvala, Heart of the Wilds → Infinite colored mana, Infinite creature ETB
 - Raggadragga, Goreguts Boss + Heronblade Elite + Wurmcalling → Infinite colored mana, Infinite creature tokens
 - Raggadragga, Goreguts Boss + Temur Sabertooth + Heronblade Elite → Infinite colored mana, Infinite creature ETB
@@ -61,11 +60,8 @@ _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that s
 
 Not automatically bad — the tags may simply not name what these do.
 
-- Craterhoof Behemoth
 - Temur Sabertooth
-- End-Raze Forerunners
 - Wurmcalling
-- Concordant Crossroads
 - Deflecting Swat
 - Heroic Intervention
 

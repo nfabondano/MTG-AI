@@ -123,6 +123,7 @@
     "power boost to all"
    ],
    "engine_participation": [
+    "anthem",
     "typal"
    ],
    "set_code": "dsc",
@@ -669,6 +670,7 @@
     "vertical-cycle"
    ],
    "engine_participation": [
+    "anthem",
     "draw"
    ],
    "set_code": "ecc",
@@ -725,6 +727,7 @@
     "hate-counterspell"
    ],
    "engine_participation": [
+    "anthem",
     "counters",
     "protection"
    ],
@@ -1316,6 +1319,7 @@
     "power boost to all"
    ],
    "engine_participation": [
+    "anthem",
     "typal"
    ],
    "set_code": "vow",
@@ -1490,6 +1494,7 @@
     "power boost to all"
    ],
    "engine_participation": [
+    "anthem",
     "typal"
    ],
    "set_code": "tdm",
@@ -1713,6 +1718,7 @@
     "card names"
    ],
    "engine_participation": [
+    "anthem",
     "typal"
    ],
    "set_code": "thb",
@@ -2465,6 +2471,7 @@
     "gives pp counters"
    ],
    "engine_participation": [
+    "anthem",
     "counters"
    ],
    "set_code": "moc",
@@ -2520,6 +2527,7 @@
     "saboteur"
    ],
    "engine_participation": [
+    "anthem",
     "counters"
    ],
    "set_code": "fic",
@@ -4721,6 +4729,7 @@
     "untapper"
    ],
    "engine_participation": [
+    "anthem",
     "draw",
     "tokens",
     "typal"
@@ -5080,7 +5089,9 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "combo_flagged": false,
-   "roles": [],
+   "roles": [
+    "wipe"
+   ],
    "tags": [
     "affinity for creatures",
     "burn creature",
@@ -5155,6 +5166,7 @@
     "typal-exclusion"
    ],
    "engine_participation": [
+    "anthem",
     "draw",
     "typal"
    ],

@@ -6,24 +6,24 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 ### Strengthens the plan
 
-- **Approach of the Second Sun** ($7.35) — completes a combo with Demonic Tutor → Win the game — **bracket 3**: completes a two-card combo
-- **Monk Gyatso** ($7.38) — completes a combo with Lightning Greaves → Infinite creature LTB, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Ad Nauseam** ($10.85) — completes a combo with Teferi's Protection → Infinite card draw — **bracket 3**: completes a two-card combo
-- **Gleaming Splendor** ($35.00) — completes a combo with Smothering Tithe + Anointed Procession → Infinite card draw for any number of players, Infinite draw triggers for any number of players — **bracket 3**: completes a two-card combo
-- **Serra Avatar** ($0.64) — completes a combo with Swords to Plowshares + Sanguine Bond → Near-infinite lifegain, Near-infinite lifeloss for target opponent — **bracket 3**: completes a two-card combo
-- **Indulgent Aristocrat** ($0.35) — synergy +0.62 measured vs 6120 Vampires builds of Edgar Markov
-- **Master of Dark Rites** ($4.11) — synergy +0.56 measured vs 6120 Vampires builds of Edgar Markov
-- **Charismatic Conqueror** ($22.57) — synergy +0.50 measured vs 6120 Vampires builds of Edgar Markov
-- **Drana, Liberator of Malakir** ($0.89) — synergy +0.49 measured vs 6120 Vampires builds of Edgar Markov
-- **Olivia's Wrath** ($0.43) — synergy +0.48 measured vs 6120 Vampires builds of Edgar Markov
-- **Clavileño, First of the Blessed** ($0.70) — synergy +0.47 measured vs 6120 Vampires builds of Edgar Markov
-- **Markov Baron** ($0.36) — synergy +0.44 measured vs 6120 Vampires builds of Edgar Markov
+- **Approach of the Second Sun** ($6.26) — completes a combo with Demonic Tutor → Win the game — **bracket 3**: completes a two-card combo
+- **Monk Gyatso** ($7.86) — completes a combo with Lightning Greaves → Infinite creature LTB, Infinite creature ETB — **bracket 3**: completes a two-card combo
+- **Ad Nauseam** ($9.64) — completes a combo with Teferi's Protection → Infinite card draw — **bracket 3**: completes a two-card combo
+- **Gleaming Splendor** ($34.43) — completes a combo with Smothering Tithe + Anointed Procession → Infinite card draw for any number of players, Infinite draw triggers for any number of players — **bracket 3**: completes a two-card combo
+- **Serra Avatar** ($0.66) — completes a combo with Swords to Plowshares + Sanguine Bond → Near-infinite lifegain, Near-infinite lifeloss for target opponent — **bracket 3**: completes a two-card combo
+- **Indulgent Aristocrat** ($0.31) — synergy +0.62 measured vs 6021 Vampires builds of Edgar Markov
+- **Master of Dark Rites** ($4.61) — synergy +0.56 measured vs 6021 Vampires builds of Edgar Markov
+- **Charismatic Conqueror** ($24.82) — synergy +0.50 measured vs 6021 Vampires builds of Edgar Markov
+- **Drana, Liberator of Malakir** ($0.97) — synergy +0.49 measured vs 6021 Vampires builds of Edgar Markov
+- **Olivia's Wrath** ($0.47) — synergy +0.48 measured vs 6021 Vampires builds of Edgar Markov
+- **Clavileño, First of the Blessed** ($0.72) — synergy +0.47 measured vs 6021 Vampires builds of Edgar Markov
+- **Markov Baron** ($0.37) — synergy +0.44 measured vs 6021 Vampires builds of Edgar Markov
 
 ### Fixes a weakness
 
-- **Ancient Tomb** ($131.49) — 6 ramp against a usual 8-12 — both counting systems agree it is short — **bracket 3**: a Game Changer
-- **Temple of the False God** ($0.32) — 6 ramp against a usual 8-12 — both counting systems agree it is short
-- **Deadly Dispute** ($0.33) — 6 ramp against a usual 8-12 — both counting systems agree it is short
+- **Ancient Tomb** ($123.06) — 6 ramp against a usual 8-12 — both counting systems agree it is short — **bracket 3**: a Game Changer
+- **Temple of the False God** ($0.28) — 6 ramp against a usual 8-12 — both counting systems agree it is short
+- **Black Market Connections** ($9.74) — 6 ramp against a usual 8-12 — both counting systems agree it is short
 
 _5 popularity-only ideas hidden — `--loose` shows them._
 
@@ -37,13 +37,7 @@ _5 popularity-only ideas hidden — `--loose` shows them._
   _(curve)_
 - **Reconnaissance** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
   _(no engine participation)_
-- **Lightning Greaves** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
-  _(no engine participation)_
 - **Exquisite Blood** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
-  _(no engine participation)_
-- **Teferi's Protection** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
-  _(no engine participation)_
-- **Vampiric Tutor** — outside every cluster this deck is built on (Vampire typal + drain + tokens)  
   _(no engine participation)_
 
 ---

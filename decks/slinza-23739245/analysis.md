@@ -9,7 +9,6 @@
 - Fix the mana first: +2 Red sources — Quartzwood Crasher want ~20, deck has 18.
 - Quartzwood Crasher `{2}{R}{R}{G}` is the only card holding your colour requirement that high — 2 Red pips wants ~20 sources, deck has 18.
 - 15 draw — more than the usual 8-12. (tags count 22)
-- 0 wipe — typical decks run 2-4.
 - Average mana value 3.91 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
 - 23 spells at 5+ mana (14 counting Slinza's Beast discount and spells that discount themselves) is top-heavy for a 100-card deck.
@@ -24,7 +23,7 @@
 
 **Commander role:** force-multiplier — the 99 must supply: things worth multiplying.
 
-removal 12* · typal 8* · counters 7* · draw 22 · ramp 15 · tokens 8 · protection 5
+removal 12* · typal 8* · counters 7* · draw 22 · ramp 15 · anthem 10 · tokens 8 · protection 5
 
 _\* the commander's own text asks for this._
 
@@ -83,15 +82,14 @@ Creature 36 · Land 30 · Instant 9 · Sorcery 8 · Enchantment 7 · Artifact 7 
 | Ramp | 15 | 12 | 8–12 |
 | Draw | 22 | 15 | 8–12 |
 | Removal | 12 | 4 | 6–10 |
-| Wipe | — | 0 | 2–4 |
+| Wipe | 2 | 1 | 2–4 |
 | Counterspell | — | 0 | — |
 | Protection | 5 | 7 | 2–6 |
-| Tutor | — | 1 | — |
-| Recursion | — | 1 | — |
+| Tutor | 4 | 1 | — |
+| Recursion | 2 | 1 | — |
 | Graveyard Hate | — | 0 | — |
 
 - 15 draw — more than the usual 8-12. (tags count 22)
-- 0 wipe — typical decks run 2-4.
 
 _Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
 

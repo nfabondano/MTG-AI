@@ -392,7 +392,9 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "combo_flagged": false,
-   "roles": [],
+   "roles": [
+    "wipe"
+   ],
    "tags": [
     "affinity for creatures",
     "burn creature",
@@ -5807,5 +5809,14 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false
   }
- ]
+ ],
+ "history": {
+  "suggested_cuts": [
+   "Cursed Mirror",
+   "Sword of Hearth and Home",
+   "Blasphemous Act",
+   "Conjurer's Closet",
+   "Golden Argosy"
+  ]
+ }
 }

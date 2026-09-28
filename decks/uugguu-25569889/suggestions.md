@@ -13,25 +13,25 @@ These cards strain the mana base, but they are part of what the deck is built ar
 
 ### Strengthens the plan
 
-- **Hullbreaker Horror** ($6.44) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
+- **Hullbreaker Horror** ($6.20) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
 - **Tidespout Tyrant** ($2.44) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
-- **Stunt Double** ($4.52) — synergy +0.53 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Naga Fleshcrafter** ($0.38) — synergy +0.50 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Clone** ($0.61) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Mitotic Slime** ($0.36) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Flesh Duplicate** ($9.21) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Gigantoplasm** ($0.72) — synergy +0.40 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Mirrorhall Mimic** ($2.46) — synergy +0.36 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Vizier of Many Faces** ($0.28) — synergy +0.34 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Visage Bandit** ($0.14) — synergy +0.32 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Arcane Adaptation** ($3.28) — synergy +0.31 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Saw in Half** ($5.91) — synergy +0.30 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Ravenous Slime** ($2.32) — synergy +0.29 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Waxen Shapethief** ($0.39) — synergy +0.29 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Stunt Double** ($4.54) — synergy +0.52 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Naga Fleshcrafter** ($0.36) — synergy +0.50 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Clone** ($0.66) — synergy +0.46 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Flesh Duplicate** ($9.28) — synergy +0.46 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Mitotic Slime** ($0.39) — synergy +0.44 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Gigantoplasm** ($0.70) — synergy +0.39 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Mirrorhall Mimic** ($2.30) — synergy +0.35 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Vizier of Many Faces** ($0.28) — synergy +0.33 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Visage Bandit** ($0.10) — synergy +0.31 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Arcane Adaptation** ($3.38) — synergy +0.31 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Saw in Half** ($5.71) — synergy +0.30 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Waxen Shapethief** ($0.35) — synergy +0.29 measured vs 169 Clones builds of Uugguu, the Omniplasm
+- **Oran-Rief Ooze** ($0.31) — synergy +0.29 measured vs 169 Clones builds of Uugguu, the Omniplasm
 
 ## Consider cutting
 
-- **Bala Ged Recovery // Bala Ged Sanctuary** — 16 cards do draw work; a deck wants about 12  
+- **Rhystic Study** — 16 cards do draw work; a deck wants about 12  
   _(oversupplied: draw)_
 - **Demonic Tutor** — 8 cards do tutor work; a deck wants about 4  
   _(oversupplied: tutor)_

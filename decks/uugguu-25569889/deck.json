@@ -5602,5 +5602,12 @@
    "layout": "normal"
   }
  ],
- "excluded": []
+ "excluded": [],
+ "history": {
+  "suggested_cuts": [
+   "Rhystic Study",
+   "Demonic Tutor",
+   "Arcane Signet"
+  ]
+ }
 }

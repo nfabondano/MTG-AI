@@ -1,0 +1,110 @@
+// jasmine
+// https://archidekt.com/decks/26885316
+
+// Commander
+1 Jasmine Boreal of the Seven
+
+// Deck
+1 Arcane Signet
+1 Lifecrafter's Bestiary
+1 Sol Ring
+1 Spear of Heliod
+1 The Great Henge
+1 The Skullspore Nexus
+1 Alpine Grizzly
+1 Avacyn's Pilgrim
+1 Beast Whisperer
+1 Blade of the Sixth Pride
+1 Cheeky House-Mouse // Squeak By
+1 Elesh Norn, Grand Cenobite
+1 Garruk's Gorehorn
+1 Gigantosaurus
+1 Isamaru, Hound of Konda
+1 Jibbirik Omnivore
+1 Kalonian Tusker
+1 Knight of New Benalia
+1 Kutzil, Malamet Exemplar
+1 Leatherback Baloth
+1 Llanowar Elves
+1 Orazca Frillback
+1 Ordinary Bear
+1 Quakestrider Ceratops
+1 Radagast of Rhosgobel
+1 Raptor Companion
+1 Ruxa, Patient Professor
+1 Savai Sabertooth
+1 Savannah Lions
+1 Shepherd of the Flock // Usher to Safety
+1 Sundial, Dawn Tyrant
+1 Swordwise Centaur
+1 Terrain Elemental
+1 Terrian, World Tyrant
+1 The Earth King
+1 Toski, Bearer of Secrets
+1 Vorstclaw
+1 Watchwolf
+1 Wilt-Leaf Liege
+1 Zopandrel, Hunger Dominus
+1 Anthem of Champions
+1 Asceticism
+1 Beastmaster Ascension
+1 Champions from Beyond
+1 Collective Blessing
+1 Colossal Majesty
+1 Dancing from Dark to Dawn
+1 Elemental Bond
+1 Felidar Retreat
+1 Flowering of the White Tree
+1 Guardian Project
+1 Mirari's Wake
+1 Muraganda Petroglyphs
+1 Tribute to the World Tree
+1 Unnatural Growth
+1 Aura Mutation
+1 Beast Within
+1 Dawn's Truce
+1 Entish Restoration
+1 Generous Gift
+1 Grand Crescendo
+1 Heroic Intervention
+1 Hunter's Insight
+1 Return of the Wildspeaker
+1 Swords to Plowshares
+1 Abandoned Air Temple
+1 Boseiju, Who Endures
+1 Bountiful Promenade
+1 Branchloft Pathway // Boulderloft Pathway
+1 Brushland
+1 Canopy Vista
+1 Castle Garenbrig
+1 Command Tower
+1 Eiganjo, Seat of the Empire
+1 Evendo, Waking Haven
+1 Exotic Orchard
+1 Fabled Passage
+4 Forest
+1 Fortified Village
+1 Gavony Township
+1 Hushwood Verge
+1 Lush Portico
+1 Minas Tirith
+1 Mosswort Bridge
+1 Overgrown Farmland
+4 Plains
+1 Sunpetal Grove
+1 Temple Garden
+1 Windbrisk Heights
+1 Windswept Heath
+1 Wooded Bastion
+1 Yavimaya, Cradle of Growth
+1 Zanarkand, Ancient Metropolis // Lasting Fayth
+1 Garruk, Primal Hunter
+1 Bala Ged Recovery // Bala Ged Sanctuary
+1 Cultivate
+1 Ezuri's Predation
+1 Farseek
+1 Nature's Lore
+1 Rampant Growth
+1 Rishkar's Expertise
+1 Shamanic Revelation
+1 Three Visits

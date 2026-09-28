@@ -24,12 +24,9 @@ These cards strain the mana base, but they are part of what the deck is built ar
 - **Aether Charge** ($0.22) — synergy +0.39 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
 - **Ravenous Baloth** ($0.29) — synergy +0.38 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
 - **Battlefront Krushok** ($0.12) — synergy +0.32 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
-
-### Fixes a weakness
-
-- **Vandalblast** ($1.55) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chandra's Ignition** ($8.59) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chain Reaction** ($0.29) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Axebane Ferox** ($0.17) — synergy +0.32 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Beast Whisperer** ($9.03) — synergy +0.30 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Woodland Bellower** ($4.78) — synergy +0.28 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
 
 _5 popularity-only ideas hidden — `--loose` shows them._
 

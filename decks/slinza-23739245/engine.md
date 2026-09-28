@@ -26,6 +26,7 @@ copy, counters, removal, typal
 - **counters** — 7 cards *(commander wants this)*
 - **draw** — 22 cards
 - **ramp** — 15 cards
+- **anthem** — 10 cards
 - **tokens** — 8 cards
 - **protection** — 5 cards
 

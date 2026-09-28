@@ -523,7 +523,9 @@
     "gives trample",
     "power boost to all"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "anthem"
+   ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
    "rarity": "mythic",
@@ -633,6 +635,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "ramp",
     "typal"
    ],
@@ -758,7 +761,7 @@
     "type change"
    ],
    "engine_participation": [
-    "typal"
+    "anthem"
    ],
    "set_code": "cmr",
    "released_at": "2020-11-20",
@@ -1499,8 +1502,7 @@
     "type errata addition"
    ],
    "engine_participation": [
-    "tutor",
-    "typal"
+    "tutor"
    ],
    "set_code": "mh2",
    "released_at": "2021-06-18",
@@ -1660,7 +1662,9 @@
     "gives trample",
     "power boost to all"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "anthem"
+   ],
    "set_code": "clb",
    "released_at": "2022-06-10",
    "rarity": "rare",
@@ -1777,6 +1781,7 @@
     "tutor-to"
    ],
    "engine_participation": [
+    "anthem",
     "tutor"
    ],
    "set_code": "cmm",
@@ -2049,7 +2054,9 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "combo_flagged": false,
-   "roles": [],
+   "roles": [
+    "wipe"
+   ],
    "tags": [
     "affinity for creatures",
     "burn creature",
@@ -2171,6 +2178,7 @@
     "toughness boost to all"
    ],
    "engine_participation": [
+    "anthem",
     "counters",
     "ramp"
    ],
@@ -2217,7 +2225,9 @@
     "symmetrical",
     "card names"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "anthem"
+   ],
    "set_code": "2x2",
    "released_at": "2022-07-08",
    "rarity": "mythic",
@@ -3225,6 +3235,7 @@
     "hate-counterspell"
    ],
    "engine_participation": [
+    "anthem",
     "counters"
    ],
    "set_code": "lcc",
@@ -4006,6 +4017,7 @@
     "saboteur"
    ],
    "engine_participation": [
+    "anthem",
     "draw"
    ],
    "set_code": "soc",
@@ -4070,7 +4082,6 @@
     "untapper"
    ],
    "engine_participation": [
-    "typal",
     "untap"
    ],
    "set_code": "clb",
@@ -4229,6 +4240,7 @@
     "typal-exclusion"
    ],
    "engine_participation": [
+    "anthem",
     "draw",
     "typal"
    ],
@@ -5038,7 +5050,6 @@
     "ramp"
    ],
    "engine_participation": [
-    "copy",
     "ramp"
    ],
    "set_code": "mh3",
@@ -5574,5 +5585,11 @@
    "layout": "normal"
   }
  ],
- "excluded": []
+ "excluded": [],
+ "history": {
+  "suggested_cuts": [
+   "Regal Force",
+   "Natural Order"
+  ]
+ }
 }

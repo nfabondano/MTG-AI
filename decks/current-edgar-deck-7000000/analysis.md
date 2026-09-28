@@ -22,7 +22,7 @@
 
 **Commander role:** payoff — the 99 must supply: fuel; triggers; conversion.
 
-typal 19* · drain 11* · tokens 7* · sacrifice 6* · death-trigger 14 · removal 13 · draw 12 · ramp 7
+typal 19* · drain 11* · anthem 8* · tokens 8* · sacrifice 6* · death-trigger 14 · removal 13 · draw 12
 
 _\* the commander's own text asks for this._
 
@@ -83,9 +83,9 @@ Land 37 · Creature 31 · Artifact 10 · Sorcery 8 · Enchantment 7 · Instant 6
 | Removal | 13 | 6 | 6–10 |
 | Wipe | 6 | 5 | 2–4 |
 | Counterspell | — | 0 | — |
-| Protection | — | 4 | 2–6 |
-| Tutor | — | 2 | — |
-| Recursion | — | 2 | — |
+| Protection | 4 | 4 | 2–6 |
+| Tutor | 3 | 2 | — |
+| Recursion | 3 | 2 | — |
 | Graveyard Hate | — | 1 | — |
 
 - 6 ramp — typical decks run 8-12. (tags count 7)
@@ -95,9 +95,9 @@ _Measured two ways — human-curated tags and oracle-text matching. Where they d
 
 ## Against the EDHREC meta
 
-**Basis:** vs 6120 Vampires builds of Edgar Markov.
+**Basis:** vs 6021 Vampires builds of Edgar Markov.
 
-Build variants EDHREC tracks: Vampires (6120), Lifegain (3270), Tokens (2134), Aggro (1578), Aristocrats (1490), +1/+1 Counters (1449).
+Build variants EDHREC tracks: Vampires (6021), Lifegain (3238), Tokens (2147), Aggro (1583), Aristocrats (1502), +1/+1 Counters (1460).
 
 Closest established commanders: Strefan, Maurer Progenitor, Olivia Voldaren, Elenda, the Dusk Rose, Olivia, Crimson Bride, Drana, Liberator of Malakir, Jirina Kudro.
 
@@ -130,13 +130,13 @@ _Mana-base staples missing (separate on purpose): Voldaren Estate, Nomad Outpost
 - Clavileño, First of the Blessed — synergy +0.47
 - Markov Baron — synergy +0.44
 - Bloodthirsty Conqueror — synergy +0.42
-- Vampire Socialite — synergy +0.40
 - Sorin, Imperious Bloodlord — synergy +0.40
+- Vampire Socialite — synergy +0.40
 - Bloodletter of Aclazotz — synergy +0.36
 - Forerunner of the Legion — synergy +0.32
-- Rakish Heir — synergy +0.31
+- Rakish Heir — synergy +0.30
 - Shared Animosity — synergy +0.29
-- Knight of the Ebon Legion — synergy +0.29
+- Knight of the Ebon Legion — synergy +0.28
 
 ## Combos
 

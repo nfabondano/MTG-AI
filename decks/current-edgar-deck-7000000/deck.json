@@ -1380,6 +1380,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "counters",
     "tokens",
     "typal"
@@ -1706,6 +1707,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "typal"
    ],
    "set_code": "dka",
@@ -2161,6 +2163,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "death-trigger",
     "tokens",
     "typal"
@@ -3276,6 +3279,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "draw",
     "typal"
    ],
@@ -3563,6 +3567,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "typal"
    ],
    "set_code": "rix",
@@ -3637,7 +3642,8 @@
     "drain",
     "draw",
     "removal",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "vow",
    "released_at": "2021-11-19",
@@ -3951,7 +3957,9 @@
     "token doubler",
     "token increaser"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "tokens"
+   ],
    "set_code": "akh",
    "released_at": "2017-04-28",
    "rarity": "rare",
@@ -4398,6 +4406,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "death-trigger",
     "draw",
     "typal"
@@ -4504,6 +4513,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "tokens",
     "typal"
    ],
@@ -4739,6 +4749,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "anthem",
     "typal"
    ],
    "set_code": "c17",
@@ -5450,5 +5461,12 @@
    "layout": "normal"
   }
  ],
- "excluded": []
+ "excluded": [],
+ "history": {
+  "suggested_cuts": [
+   "Butcher of Malakir",
+   "Reconnaissance",
+   "Exquisite Blood"
+  ]
+ }
 }

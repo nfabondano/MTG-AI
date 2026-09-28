@@ -19,13 +19,14 @@ Vampire typal + drain + tokens
 
 ## What Edgar Markov asks for
 
-copy, counters, drain, sacrifice, tokens, typal
+anthem, copy, counters, drain, sacrifice, tokens, typal
 
 ## Clusters
 
 - **typal** — 19 cards *(commander wants this)*
 - **drain** — 11 cards *(commander wants this)*
-- **tokens** — 7 cards *(commander wants this)*
+- **anthem** — 8 cards *(commander wants this)*
+- **tokens** — 8 cards *(commander wants this)*
 - **sacrifice** — 6 cards *(commander wants this)*
 - **death-trigger** — 14 cards
 - **removal** — 13 cards
@@ -51,7 +52,7 @@ _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that s
 
 - **Developing (ramp, draw)** — 19 cards (ramp 7 + draw 12)
 - **Breaking parity (removal, sweepers)** — 19 cards (removal 13 + sweeper 6)
-- **Winning (closers, going wide)** — 7 cards (tokens 7)
+- **Winning (closers, going wide)** — 8 cards (tokens 8)
 - **Behind (protection, recursion)** — 7 cards (protection 4 + recursion 3)
 
 ## Outside every cluster
@@ -63,6 +64,5 @@ Not automatically bad — the tags may simply not name what these do.
 - Exquisite Blood
 - Teferi's Protection
 - Vampiric Tutor
-- Anointed Procession
 - Demonic Tutor
 

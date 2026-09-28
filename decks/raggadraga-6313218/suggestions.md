@@ -6,26 +6,26 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 ### Strengthens the plan
 
-- **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
+- **Repercussion** ($14.81) — completes a combo with Blasphemous Act → Near-infinite damage to all players
 - **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
+- **Goblin Bombardment** ($4.30) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
 - **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **Fall of Cair Andros** ($0.39) — completes a combo with Blasphemous Act → Infinite +1/+1 counters on a creature, Near-infinite damage to creatures — **bracket 3**: completes a two-card combo
-- **Azusa, Lost but Seeking** ($13.95) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
-- **Champion of Lambholt** ($4.60) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
-- **Augur of Autumn** ($0.34) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
-- **Samut, Hazoret's Champion** ($9.96) — synergy +0.49 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
-- **Ruby, Daring Tracker** ($0.25) — synergy +0.47 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
-- **Llanowar Loamspeaker** ($0.30) — synergy +0.44 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
-- **Radha, Heir to Keld** ($0.19) — synergy +0.44 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Fall of Cair Andros** ($0.41) — completes a combo with Blasphemous Act → Infinite +1/+1 counters on a creature, Near-infinite damage to creatures — **bracket 3**: completes a two-card combo
+- **Ruby, Daring Tracker** ($0.30) — synergy +0.46 measured vs 58 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Llanowar Loamspeaker** ($0.34) — synergy +0.45 measured vs 58 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Radha, Heir to Keld** ($0.19) — synergy +0.43 measured vs 58 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Paradise Druid** ($0.23) — synergy +0.43 measured vs 58 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Rishkar, Peema Renegade** ($0.24) — synergy +0.38 measured vs 58 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Incubation Druid** ($3.04) — synergy +0.37 measured vs 58 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Ornithopter of Paradise** ($2.18) — synergy +0.36 measured vs 58 +1/+1 Counters builds of Raggadragga, Goreguts Boss
 
 ### Fixes a weakness
 
-- **Vandalblast** ($1.41) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chandra's Ignition** ($8.76) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chain Reaction** ($0.31) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Vandalblast** ($1.55) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chandra's Ignition** ($8.59) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chain Reaction** ($0.29) — 1 wipe against a usual 2-4 — both counting systems agree it is short
 
-_5 popularity-only ideas hidden — `--loose` shows them._
+_2 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
@@ -33,22 +33,6 @@ _5 popularity-only ideas hidden — `--loose` shows them._
   _(oversupplied: draw)_
 - **Natural Order** — 9 cards do tutor work; a deck wants about 4  
   _(oversupplied: tutor)_
-- **Blasphemous Act** — 9 mana in a deck already carrying 14 spells at 5+  
-  _(curve)_
-- **The Great Henge** — 9 mana in a deck already carrying 14 spells at 5+  
-  _(curve)_
-- **Craterhoof Behemoth** — outside every cluster this deck is built on (ramp + untap + Human typal)  
-  _(no engine participation)_
-- **End-Raze Forerunners** — outside every cluster this deck is built on (ramp + untap + Human typal)  
-  _(no engine participation)_
-- **Concordant Crossroads** — outside every cluster this deck is built on (ramp + untap + Human typal)  
-  _(no engine participation)_
-
-## Paired swaps
-
-_Each pair does the same job — nothing is matched by position._
-
-- Blasphemous Act → Vandalblast (sweeper)
 
 ---
 
