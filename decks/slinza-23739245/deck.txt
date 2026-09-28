@@ -13,7 +13,6 @@
 1 The Great Henge
 1 Urza's Incubator
 1 Anara, Wolvid Familiar
-1 Battlefront Krushok
 1 Birds of Paradise
 1 Bloated Contaminator
 1 Caller of the Pack
@@ -35,7 +34,6 @@
 1 Manglehorn
 1 Neyith of the Dire Hunt
 1 Nylea's Forerunner
-1 Paleoloth
 1 Quartzwood Crasher
 1 Questing Beast
 1 Radagast of Rhosgobel

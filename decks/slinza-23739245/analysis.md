@@ -1,19 +1,18 @@
 # Slinza
 
 **Commander:** Slinza, the Spiked Stampede  
-**Identity:** R/G · **Cards:** 102 · **Format:** Commander  
+**Identity:** R/G · **Cards:** 100 · **Format:** Commander  
 **Source:** https://archidekt.com/decks/23739245
 
 ## What stands out
 
-- Illegal: Deck has 102 cards; Commander requires exactly 100.
-- Red: 18 sources for cards needing 2 R pips — around 20 is the usual target.
+- Fix the mana first: +2 Red sources — Quartzwood Crasher want ~20, deck has 18.
 - Quartzwood Crasher `{2}{R}{R}{G}` is the only card holding your colour requirement that high — 2 Red pips wants ~20 sources, deck has 18.
-- 15 draw — more than the usual 8-12. (tags count 23)
+- 15 draw — more than the usual 8-12. (tags count 22)
 - 0 wipe — typical decks run 2-4.
-- Average mana value 3.96 is high; hands can be slow to get going.
+- Average mana value 3.91 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
-- 25 spells at 5+ mana is top-heavy for a 100-card deck.
+- 23 spells at 5+ mana (14 counting Slinza's Beast discount and spells that discount themselves) is top-heavy for a 100-card deck.
 - 15 combos one card away — see the combo section.
 
 
@@ -21,11 +20,11 @@
 
 **removal + Beast typal + counters**
 
-**Tribe:** 29 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
+**Tribe:** 27 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
 
 **Commander role:** force-multiplier — the 99 must supply: things worth multiplying.
 
-removal 12* · typal 8* · counters 7* · draw 23 · ramp 15 · tokens 8 · protection 5
+removal 12* · typal 8* · counters 7* · draw 22 · ramp 15 · tokens 8 · protection 5
 
 _\* the commander's own text asks for this._
 
@@ -33,15 +32,13 @@ _\* the commander's own text asks for this._
 
 - Quartzwood Crasher `{2}{R}{R}{G}` — 2 Red pips wants ~20 sources, deck has 18 — sole reason that requirement is high
 
-**Oversupplied:** draw 23 (want ~12), ramp 15 (want ~12)
+**Oversupplied:** draw 22 (want ~12), ramp 15 (want ~12)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
 ## Legality
 
-**This deck is not legal as built.**
-
-- Deck has 102 cards; Commander requires exactly 100.
+Legal: 100 cards, singleton, colour identity clean.
 
 ## Mana
 
@@ -50,7 +47,7 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 | Colour | Pips | Heaviest | Sources | Lands | Need |
 |---|---:|---:|---:|---:|---:|
 | Red | 14 | 2 | 18 | 11 | 20 |
-| Green | 88 | 3 | 32 | 20 | 23 |
+| Green | 85 | 3 | 32 | 20 | 23 |
 
 _Heaviest is the most pips of that colour any single card asks for; Need is how many sources that card wants to be castable on curve._
 
@@ -60,7 +57,7 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
 
 ## Curve
 
-**Average mana value:** 3.96 (nonland)
+**Average mana value:** 3.91 (nonland)
 
 ```
  0 |                      0
@@ -68,32 +65,32 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
  2 | █████████            11
  3 | ████████████████████ 25
  4 | ██████               8
- 5 | ██████████           12
- 6 | ███                  4
+ 5 | █████████            11
+ 6 | ██                   3
 7+ | ███████              9
 ```
 
-Creature 38 · Land 30 · Instant 9 · Sorcery 8 · Enchantment 7 · Artifact 7 · Planeswalker 3
+Creature 36 · Land 30 · Instant 9 · Sorcery 8 · Enchantment 7 · Artifact 7 · Planeswalker 3
 
-- Average mana value 3.96 is high; hands can be slow to get going.
+- Average mana value 3.91 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
-- 25 spells at 5+ mana is top-heavy for a 100-card deck.
+- 23 spells at 5+ mana (14 counting Slinza's Beast discount and spells that discount themselves) is top-heavy for a 100-card deck.
 
 ## Roles
 
 | Role | Tags | Oracle text | Typical |
 |---|---:|---:|---:|
 | Ramp | 15 | 12 | 8–12 |
-| Draw | 23 | 15 | 8–12 |
+| Draw | 22 | 15 | 8–12 |
 | Removal | 12 | 4 | 6–10 |
 | Wipe | — | 0 | 2–4 |
 | Counterspell | — | 0 | — |
 | Protection | 5 | 7 | 2–6 |
 | Tutor | — | 1 | — |
-| Recursion | — | 2 | — |
+| Recursion | — | 1 | — |
 | Graveyard Hate | — | 0 | — |
 
-- 15 draw — more than the usual 8-12. (tags count 23)
+- 15 draw — more than the usual 8-12. (tags count 22)
 - 0 wipe — typical decks run 2-4.
 
 _Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
@@ -111,6 +108,7 @@ Closest established commanders: Goreclaw, Terror of Qal Sisma, Neyith of the Dir
 - Cultivate — in 69% of decks
 - Goreclaw, Terror of Qal Sisma — in 58% of decks
 - Rampant Growth — in 56% of decks
+- Paleoloth — in 54% of decks
 - Kodama's Reach — in 53% of decks
 - Armored Scrapgorger — in 47% of decks
 - Beast Whisperer — in 46% of decks
@@ -127,11 +125,13 @@ _Mana-base staples missing (separate on purpose): Rockfall Vale, Game Trail, Gru
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
+- Paleoloth — synergy +0.52
 - Armored Scrapgorger — synergy +0.45
 - Goreclaw, Terror of Qal Sisma — synergy +0.42
 - Fangren Firstborn — synergy +0.40
 - Aether Charge — synergy +0.39
 - Ravenous Baloth — synergy +0.38
+- Battlefront Krushok — synergy +0.32
 - Axebane Ferox — synergy +0.32
 - Beast Whisperer — synergy +0.30
 - Woodland Bellower — synergy +0.28
@@ -140,8 +140,6 @@ _Mana-base staples missing (separate on purpose): Rockfall Vale, Game Trail, Gru
 - Thragtusk — synergy +0.27
 - Gnarlid Colony — synergy +0.27
 - Renegade Krasis — synergy +0.25
-- Overwhelming Stampede — synergy +0.25
-- Red XIII, Proud Warrior — synergy +0.25
 
 ## Combos
 
@@ -177,7 +175,7 @@ _An estimate from what the deck can do on paper. How it actually plays, and what
 
 ## Price
 
-**Deck total:** $700.61 · 5 cards without a price
+**Deck total:** $685.26 · 5 cards without a price
 
 Most expensive:
 

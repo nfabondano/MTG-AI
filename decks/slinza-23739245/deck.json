@@ -6,16 +6,16 @@
  "format_name": "Commander",
  "owner": "Hugo0111",
  "url": "https://archidekt.com/decks/23739245",
- "updated_at": "2026-09-28T20:26:27.582598Z",
+ "updated_at": "2026-09-28T21:32:37.711812Z",
  "archidekt_bracket": null,
- "imported_at": "2026-09-28T20:41:08+00:00",
+ "imported_at": "2026-09-28T21:58:03+00:00",
  "description": "",
  "deck_tags": [],
  "color_identity": [
   "R",
   "G"
  ],
- "total_cards": 102,
+ "total_cards": 100,
  "commanders": [
   "Slinza, the Spiked Stampede"
  ],
@@ -841,7 +841,8 @@
     "removal-vehicle"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "msc",
    "released_at": "2026-06-26",
@@ -1720,55 +1721,6 @@
    "layout": "normal"
   },
   {
-   "name": "Battlefront Krushok",
-   "quantity": 1,
-   "scryfall_id": "3f365bd0-a979-4b86-afa5-426f1813851e",
-   "oracle_id": "6a003988-f126-4309-9166-50f3fbf0f30c",
-   "mana_cost": "{4}{G}",
-   "mana_value": 5.0,
-   "colors": [
-    "G"
-   ],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Creature — Beast",
-   "oracle_text": "This creature can't be blocked by more than one creature.\nEach creature you control with a +1/+1 counter on it can't be blocked by more than one creature.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Evasion"
-   ],
-   "edhrec_rank": 15614,
-   "salt": 0.0,
-   "price_usd": 0.12,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "counter lord",
-    "gives stalking",
-    "pp counters matter",
-    "stalking",
-    "counters matter",
-    "evasion",
-    "gives evasion",
-    "green effect"
-   ],
-   "engine_participation": [
-    "typal"
-   ],
-   "set_code": "clu",
-   "released_at": "2024-02-23",
-   "rarity": "uncommon",
-   "layout": "normal"
-  },
-  {
    "name": "Neyith of the Dire Hunt",
    "quantity": 1,
    "scryfall_id": "0c1eed0f-9692-44c0-b1ad-afa691165d52",
@@ -2459,7 +2411,8 @@
    ],
    "engine_participation": [
     "counters",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "fdn",
    "released_at": "2024-11-15",
@@ -3030,7 +2983,8 @@
    ],
    "engine_participation": [
     "draw",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "c21",
    "released_at": "2021-04-23",
@@ -3105,7 +3059,8 @@
    ],
    "engine_participation": [
     "draw",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "iko",
    "released_at": "2020-04-24",
@@ -3162,7 +3117,8 @@
     "sweeper"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "dsc",
    "released_at": "2024-09-27",
@@ -4766,7 +4722,8 @@
    ],
    "engine_participation": [
     "draw",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "fra",
    "released_at": "2026-10-02",
@@ -5038,62 +4995,6 @@
    "set_code": "j25",
    "released_at": "2024-11-15",
    "rarity": "common",
-   "layout": "normal"
-  },
-  {
-   "name": "Paleoloth",
-   "quantity": 1,
-   "scryfall_id": "b83ad801-44e7-48d0-9f34-0d10536bb4dc",
-   "oracle_id": "627de3d8-ad5e-4f9b-b83c-476cc98fea9b",
-   "mana_cost": "{4}{G}{G}",
-   "mana_value": 6.0,
-   "colors": [
-    "G"
-   ],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Creature — Beast",
-   "oracle_text": "Whenever another creature you control with power 5 or greater enters, you may return target creature card from your graveyard to your hand.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Recursion"
-   ],
-   "edhrec_rank": 11734,
-   "salt": 0.0,
-   "price_usd": 15.23,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "recursion"
-   ],
-   "tags": [
-    "creaturefall",
-    "naya ferocious",
-    "regrowth-creature",
-    "repeatable card advantage",
-    "triggered ability",
-    "card advantage",
-    "power matters",
-    "power matters-individual",
-    "recursion",
-    "recursion-creature",
-    "regrowth",
-    "thingfall"
-   ],
-   "engine_participation": [
-    "draw",
-    "typal"
-   ],
-   "set_code": "con",
-   "released_at": "2009-02-06",
-   "rarity": "rare",
    "layout": "normal"
   },
   {
@@ -5447,5 +5348,24 @@
    "layout": "normal"
   }
  ],
- "excluded": []
+ "excluded": [],
+ "history": {
+  "previous_version": "2026-09-28T21:32:37.711812Z",
+  "added": [],
+  "removed": [
+   "Battlefront Krushok",
+   "Paleoloth"
+  ],
+  "kept_after_suggested_cut": {
+   "Garruk, Curse Breaker": "2026-09-28",
+   "Radagast of Rhosgobel": "2026-09-28",
+   "The Great Henge": "2026-09-28",
+   "Blasphemous Act": "2026-09-28"
+  },
+  "suggested_cuts": [
+   "Neyith of the Dire Hunt",
+   "Entish Restoration",
+   "Primeval Bounty"
+  ]
+ }
 }
