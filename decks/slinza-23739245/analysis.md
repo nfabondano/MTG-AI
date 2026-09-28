@@ -1,19 +1,19 @@
 # Slinza
 
 **Commander:** Slinza, the Spiked Stampede  
-**Identity:** R/G · **Cards:** 103 · **Format:** Commander  
+**Identity:** R/G · **Cards:** 102 · **Format:** Commander  
 **Source:** https://archidekt.com/decks/23739245
 
 ## What stands out
 
-- Illegal: Deck has 103 cards; Commander requires exactly 100.
-- Fix the mana first: +3 Red sources — Quartzwood Crasher, Collective Inferno want ~20, deck has 17.
-- 30 lands plus 5 modal spell-lands (35 effective) against a curve suggesting about 38. Still on the low side.
+- Illegal: Deck has 102 cards; Commander requires exactly 100.
+- Red: 18 sources for cards needing 2 R pips — around 20 is the usual target.
+- Quartzwood Crasher `{2}{R}{R}{G}` is the only card holding your colour requirement that high — 2 Red pips wants ~20 sources, deck has 18.
 - 15 draw — more than the usual 8-12. (tags count 23)
 - 0 wipe — typical decks run 2-4.
-- Average mana value 4.0 is high; hands can be slow to get going.
+- Average mana value 3.96 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
-- 26 spells at 5+ mana is top-heavy for a 100-card deck.
+- 25 spells at 5+ mana is top-heavy for a 100-card deck.
 - 15 combos one card away — see the combo section.
 
 
@@ -21,20 +21,19 @@
 
 **removal + Beast typal + counters**
 
-**Tribe:** 28 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
+**Tribe:** 29 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
 
 **Commander role:** force-multiplier — the 99 must supply: things worth multiplying.
 
-removal 12* · typal 9* · counters 7* · draw 23 · ramp 14 · tokens 7 · protection 5
+removal 12* · typal 8* · counters 7* · draw 23 · ramp 15 · tokens 8 · protection 5
 
 _\* the commander's own text asks for this._
 
 **Hardest to cast:**
 
-- Quartzwood Crasher `{2}{R}{R}{G}` — 2 Red pips wants ~20 sources, deck has 17
-- Collective Inferno `{3}{R}{R}` — 2 Red pips wants ~20 sources, deck has 17
+- Quartzwood Crasher `{2}{R}{R}{G}` — 2 Red pips wants ~20 sources, deck has 18 — sole reason that requirement is high
 
-**Oversupplied:** draw 23 (want ~12), ramp 14 (want ~12)
+**Oversupplied:** draw 23 (want ~12), ramp 15 (want ~12)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -42,51 +41,49 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 **This deck is not legal as built.**
 
-- Deck has 103 cards; Commander requires exactly 100.
+- Deck has 102 cards; Commander requires exactly 100.
 
 ## Mana
 
-**Lands:** 30 (+5 modal spell-lands = 35 effective) · suggested ~38
-
-> 30 lands plus 5 modal spell-lands (35 effective) against a curve suggesting about 38. Still on the low side.
+**Lands:** 30 (+5 modal spell-lands = 35 effective) · suggested ~37
 
 | Colour | Pips | Heaviest | Sources | Lands | Need |
 |---|---:|---:|---:|---:|---:|
-| Red | 17 | 2 | 17 | 11 | 20 |
-| Green | 87 | 3 | 31 | 20 | 23 |
+| Red | 14 | 2 | 18 | 11 | 20 |
+| Green | 88 | 3 | 32 | 20 | 23 |
 
 _Heaviest is the most pips of that colour any single card asks for; Need is how many sources that card wants to be castable on curve._
 
-- Red: 17 sources for cards needing 2 R pips — around 20 is the usual target.
+- Red: 18 sources for cards needing 2 R pips — around 20 is the usual target.
 
 _Sources count lands plus anything that taps for mana, restricted to the deck's colour identity._
 
 ## Curve
 
-**Average mana value:** 4.0 (nonland)
+**Average mana value:** 3.96 (nonland)
 
 ```
  0 |                      0
  1 | ██                   3
  2 | █████████            11
- 3 | ████████████████████ 24
- 4 | ████████             9
+ 3 | ████████████████████ 25
+ 4 | ██████               8
  5 | ██████████           12
- 6 | ████                 5
-7+ | ████████             9
+ 6 | ███                  4
+7+ | ███████              9
 ```
 
-Creature 37 · Land 30 · Instant 10 · Sorcery 9 · Enchantment 8 · Artifact 7 · Planeswalker 2
+Creature 38 · Land 30 · Instant 9 · Sorcery 8 · Enchantment 7 · Artifact 7 · Planeswalker 3
 
-- Average mana value 4.0 is high; hands can be slow to get going.
+- Average mana value 3.96 is high; hands can be slow to get going.
 - Only 14 spells at 2 mana or less — early turns may be empty.
-- 26 spells at 5+ mana is top-heavy for a 100-card deck.
+- 25 spells at 5+ mana is top-heavy for a 100-card deck.
 
 ## Roles
 
 | Role | Tags | Oracle text | Typical |
 |---|---:|---:|---:|
-| Ramp | 14 | 11 | 8–12 |
+| Ramp | 15 | 12 | 8–12 |
 | Draw | 23 | 15 | 8–12 |
 | Removal | 12 | 4 | 6–10 |
 | Wipe | — | 0 | 2–4 |
@@ -103,9 +100,9 @@ _Measured two ways — human-curated tags and oracle-text matching. Where they d
 
 ## Against the EDHREC meta
 
-**Basis:** vs 1114 Beasts builds of Slinza, the Spiked Stampede.
+**Basis:** vs 1115 Beasts builds of Slinza, the Spiked Stampede.
 
-Build variants EDHREC tracks: Beasts (1114), +1/+1 Counters (351), Aggro (194), Fight (132), Ramp (82), Stompy (59).
+Build variants EDHREC tracks: Beasts (1115), +1/+1 Counters (353), Aggro (194), Fight (132), Ramp (83), Stompy (59).
 
 Closest established commanders: Goreclaw, Terror of Qal Sisma, Neyith of the Dire Hunt, Surrak and Goreclaw, Gargos, Vicious Watcher, Kogla, the Titan Ape, Zilortha, Strength Incarnate.
 
@@ -118,6 +115,7 @@ Closest established commanders: Goreclaw, Terror of Qal Sisma, Neyith of the Dir
 - Armored Scrapgorger — in 47% of decks
 - Beast Whisperer — in 46% of decks
 - Goblin Anarchomancer — in 45% of decks
+- Rishkar's Expertise — in 41% of decks
 - Fangren Firstborn — in 41% of decks
 - Aether Charge — in 40% of decks
 - Farseek — in 39% of decks
@@ -154,8 +152,8 @@ No complete combos found among the cards checked.
 - Add **Repercussion** — combos with Blasphemous Act → Near-infinite damage to all players
 - Add **Staff of Domination** — combos with Selvala, Heart of the Wilds → Infinite card draw, Infinite colored mana
 - Add **Toralf, God of Fury // Toralf's Hammer** — combos with Blasphemous Act → Near-infinite damage
-- Add **Ashnod's Altar** — combos with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB
 - Add **Goblin Bombardment** — combos with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB
+- Add **Ashnod's Altar** — combos with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB
 - Add **Aggravated Assault** — combos with Selvala, Heart of the Wilds → Infinite colored mana, Infinite combat phases
 - Add **Umbral Mantle** — combos with Selvala, Heart of the Wilds → Infinite colored mana, Infinitely large creature until end of turn
 - Add **Fall of Cair Andros** — combos with Blasphemous Act → Infinite +1/+1 counters on a creature, Near-infinite damage to creatures
@@ -179,20 +177,20 @@ _An estimate from what the deck can do on paper. How it actually plays, and what
 
 ## Price
 
-**Deck total:** $709.91 · 8 cards without a price
+**Deck total:** $700.61 · 5 cards without a price
 
 Most expensive:
 
-- Deflecting Swat — $72.01
-- The Great Henge — $65.79
-- Nykthos, Shrine to Nyx — $52.83
-- Cavern of Souls — $51.05
-- Boseiju, Who Endures — $50.93
-- Three Tree City — $28.79
-- Craterhoof Behemoth — $25.86
-- Urza's Incubator — $19.54
-- Shadow in the Warp — $18.86
-- Evendo, Waking Haven — $18.85
+- Deflecting Swat — $72.40
+- The Great Henge — $63.96
+- Nykthos, Shrine to Nyx — $52.08
+- Cavern of Souls — $51.77
+- Boseiju, Who Endures — $48.97
+- Three Tree City — $30.28
+- Craterhoof Behemoth — $24.11
+- Urza's Incubator — $20.81
+- Evendo, Waking Haven — $19.16
+- Uncivil Unrest — $18.88
 
 ---
 

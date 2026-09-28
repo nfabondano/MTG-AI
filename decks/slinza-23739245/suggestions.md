@@ -4,31 +4,24 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 Keeping the deck at bracket 2 or below.
 
-## Fix the mana first
-
-These cards strain the mana base, but they are part of what the deck is built around — the fix is sources, not cuts.
-
-- **+3 Red sources** — Quartzwood Crasher, Collective Inferno want ~20, deck has 17
-  - lands producing no Red worth revisiting: Bonders' Enclave, Contested Cliffs, Kessig Wolf Run
-
 ## Consider adding
 
 ### Strengthens the plan
 
-- **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
-- **Armored Scrapgorger** ($0.30) — synergy +0.45 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Goreclaw, Terror of Qal Sisma** ($6.39) — synergy +0.42 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Fangren Firstborn** ($2.26) — synergy +0.40 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Aether Charge** ($0.22) — synergy +0.39 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Ravenous Baloth** ($0.28) — synergy +0.38 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Axebane Ferox** ($0.24) — synergy +0.32 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Beast Whisperer** ($8.74) — synergy +0.30 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
+- **Repercussion** ($14.81) — completes a combo with Blasphemous Act → Near-infinite damage to all players
+- **Armored Scrapgorger** ($0.34) — synergy +0.45 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Goreclaw, Terror of Qal Sisma** ($5.60) — synergy +0.42 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Fangren Firstborn** ($2.16) — synergy +0.40 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Aether Charge** ($0.22) — synergy +0.39 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Ravenous Baloth** ($0.29) — synergy +0.38 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Axebane Ferox** ($0.17) — synergy +0.32 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
+- **Beast Whisperer** ($9.03) — synergy +0.30 measured vs 1115 Beasts builds of Slinza, the Spiked Stampede
 
 ### Fixes a weakness
 
-- **Vandalblast** ($1.41) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chandra's Ignition** ($8.76) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chain Reaction** ($0.31) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Vandalblast** ($1.55) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chandra's Ignition** ($8.59) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chain Reaction** ($0.29) — 0 wipe against a usual 2-4 — both counting systems agree it is short
 
 _5 popularity-only ideas hidden — `--loose` shows them._
 
@@ -38,18 +31,20 @@ These came up as adds but would take the deck past bracket 2, so they are listed
 
 - **Staff of Domination** — completes a combo with Selvala, Heart of the Wilds → Infinite card draw, Infinite colored mana — **bracket 3**: completes a two-card combo
 - **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
+- **Goblin Bombardment** ($4.30) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
 - **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
 
 ## Consider cutting
 
-- **Rishkar's Expertise** — 23 cards do draw work; a deck wants about 12  
+- **Quartzwood Crasher** — 2 Red pips wants ~20 sources, deck has 18 — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base (or add 2 Red sources instead)  
+  _(castability)_
+- **Garruk, Curse Breaker** — 23 cards do draw work; a deck wants about 12  
   _(oversupplied: draw)_
-- **Radagast of Rhosgobel** — 14 cards do ramp work; a deck wants about 12  
+- **Radagast of Rhosgobel** — 15 cards do ramp work; a deck wants about 12  
   _(oversupplied: ramp)_
-- **The Great Henge** — 9 mana in a deck already carrying 26 spells at 5+  
+- **The Great Henge** — 9 mana in a deck already carrying 25 spells at 5+  
   _(curve)_
-- **Blasphemous Act** — 9 mana in a deck already carrying 26 spells at 5+  
+- **Blasphemous Act** — 9 mana in a deck already carrying 25 spells at 5+  
   _(curve)_
 
 ## Paired swaps

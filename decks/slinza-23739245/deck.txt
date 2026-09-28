@@ -31,6 +31,7 @@
 1 Krosan Warchief
 1 Llanowar Elves
 1 Loot, Exuberant Explorer
+1 Loot, the Nexus
 1 Manglehorn
 1 Neyith of the Dire Hunt
 1 Nylea's Forerunner
@@ -48,7 +49,6 @@
 1 Ulvenwald Oddity // Ulvenwald Behemoth
 1 Wirewood Savage
 1 Woodland Liege
-1 Collective Inferno
 1 Elemental Bond
 1 Garruk's Uprising
 1 Primeval Bounty
@@ -57,7 +57,6 @@
 1 Sphere Grid
 1 Uncivil Unrest
 1 Beast Within
-1 Bolt Bend
 1 Chaos Warp
 1 Deflecting Swat
 1 Entish Restoration
@@ -89,6 +88,7 @@
 1 Three Tree City
 1 Wooded Foothills
 1 Yavimaya, Cradle of Growth
+1 Garruk, Curse Breaker
 1 Garruk, Primal Hunter
 1 Vivien, Monsters' Advocate
 1 Bala Ged Recovery // Bala Ged Sanctuary
@@ -97,6 +97,5 @@
 1 Ezuri's Predation
 1 Hull Breach
 1 Nature's Lore
-1 Rishkar's Expertise
 1 Stump Stomp // Burnwillow Clearing
 1 Three Visits

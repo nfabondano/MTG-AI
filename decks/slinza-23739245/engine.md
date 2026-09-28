@@ -7,7 +7,7 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 removal + Beast typal + counters
 
-**Tribe:** 28 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
+**Tribe:** 29 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
 
 ## Slinza, the Spiked Stampede's role
 
@@ -22,23 +22,17 @@ copy, counters, removal, typal
 ## Clusters
 
 - **removal** — 12 cards *(commander wants this)*
-- **typal** — 9 cards *(commander wants this)*
+- **typal** — 8 cards *(commander wants this)*
 - **counters** — 7 cards *(commander wants this)*
 - **draw** — 23 cards
-- **ramp** — 14 cards
-- **tokens** — 7 cards
+- **ramp** — 15 cards
+- **tokens** — 8 cards
 - **protection** — 5 cards
-
-## Mana-base fixes before cuts
-
-- +3 Red sources — Quartzwood Crasher, Collective Inferno want ~20, deck has 17
 
 ## Hardest to cast
 
-- Quartzwood Crasher `{2}{R}{R}{G}`
-  - 2 Red pips wants ~20 sources, deck has 17
-- Collective Inferno `{3}{R}{R}`
-  - 2 Red pips wants ~20 sources, deck has 17
+- Quartzwood Crasher `{2}{R}{R}{G}` — **sole reason that requirement is high**
+  - 2 Red pips wants ~20 sources, deck has 18
 
 ## How it ends games
 
@@ -49,13 +43,14 @@ copy, counters, removal, typal
 - Khalni Ambush // Khalni Territory — says so in its text
 - Stump Stomp // Burnwillow Clearing — says so in its text
 - Bridgeworks Battle // Tanglespan Bridgeworks — says so in its text
+- Garruk, Curse Breaker — finisher effect
 
 ## Quadrant coverage
 
 _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
 
-- **Developing (ramp, draw)** — 37 cards (ramp 14 + draw 23)
+- **Developing (ramp, draw)** — 38 cards (ramp 15 + draw 23)
 - **Breaking parity (removal, sweepers)** — 14 cards (removal 12 + sweeper 2)
-- **Winning (closers, going wide)** — 10 cards (wincon 3 + tokens 7)
+- **Winning (closers, going wide)** — 12 cards (wincon 4 + tokens 8)
 - **Behind (protection, recursion)** — 8 cards (protection 5 + recursion 3)
 

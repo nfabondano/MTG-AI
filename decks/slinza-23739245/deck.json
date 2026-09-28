@@ -6,16 +6,16 @@
  "format_name": "Commander",
  "owner": "Hugo0111",
  "url": "https://archidekt.com/decks/23739245",
- "updated_at": "2026-09-22T15:50:53.547255Z",
+ "updated_at": "2026-09-28T20:26:27.582598Z",
  "archidekt_bracket": null,
- "imported_at": "2026-09-22T16:03:08+00:00",
+ "imported_at": "2026-09-28T20:41:08+00:00",
  "description": "",
  "deck_tags": [],
  "color_identity": [
   "R",
   "G"
  ],
- "total_cards": 103,
+ "total_cards": 102,
  "commanders": [
   "Slinza, the Spiked Stampede"
  ],
@@ -42,7 +42,7 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 11089,
+   "edhrec_rank": 11103,
    "salt": 0.53,
    "price_usd": 0.46,
    "commander_legal": true,
@@ -100,9 +100,9 @@
    "categories": [
     "Pump"
    ],
-   "edhrec_rank": 2021,
+   "edhrec_rank": 2024,
    "salt": 0.25,
-   "price_usd": 0.85,
+   "price_usd": 0.53,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -150,9 +150,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 2033,
+   "edhrec_rank": 2030,
    "salt": 0.18,
-   "price_usd": 0.68,
+   "price_usd": 0.37,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -213,9 +213,9 @@
    "categories": [
     "Landfall"
    ],
-   "edhrec_rank": 378,
+   "edhrec_rank": 382,
    "salt": 0.44,
-   "price_usd": 0.22,
+   "price_usd": 0.35,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -265,9 +265,9 @@
    "categories": [
     "Tokens"
    ],
-   "edhrec_rank": 1984,
+   "edhrec_rank": 1987,
    "salt": 0.22,
-   "price_usd": 2.61,
+   "price_usd": 2.56,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -324,9 +324,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 2274,
+   "edhrec_rank": 2265,
    "salt": 0.28,
-   "price_usd": 2.43,
+   "price_usd": 2.42,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -388,7 +388,7 @@
    ],
    "edhrec_rank": 13189,
    "salt": 0.22,
-   "price_usd": 0.35,
+   "price_usd": 0.34,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -445,7 +445,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 11969,
+   "edhrec_rank": 11976,
    "salt": 0.5,
    "price_usd": 0.26,
    "commander_legal": true,
@@ -510,9 +510,9 @@
    "categories": [
     "Burn"
    ],
-   "edhrec_rank": 11597,
+   "edhrec_rank": 11606,
    "salt": 0.24,
-   "price_usd": 3.42,
+   "price_usd": 3.25,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -570,9 +570,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 2652,
+   "edhrec_rank": 2657,
    "salt": 0.54,
-   "price_usd": 3.85,
+   "price_usd": 3.65,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -631,9 +631,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 90,
+   "edhrec_rank": 89,
    "salt": 0.32,
-   "price_usd": 0.53,
+   "price_usd": 0.52,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -698,9 +698,9 @@
    "categories": [
     "Protection"
    ],
-   "edhrec_rank": 220,
+   "edhrec_rank": 221,
    "salt": 0.41,
-   "price_usd": 5.54,
+   "price_usd": 5.01,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -753,9 +753,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 2273,
+   "edhrec_rank": 2279,
    "salt": 0.44,
-   "price_usd": 1.09,
+   "price_usd": 0.99,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -809,7 +809,7 @@
    ],
    "edhrec_rank": 25,
    "salt": 0.32,
-   "price_usd": 0.73,
+   "price_usd": 0.66,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -870,9 +870,9 @@
    "categories": [
     "Protection"
    ],
-   "edhrec_rank": 7317,
+   "edhrec_rank": 7331,
    "salt": 0.59,
-   "price_usd": 0.73,
+   "price_usd": 0.67,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -923,9 +923,9 @@
    "categories": [
     "Tokens"
    ],
-   "edhrec_rank": 4234,
+   "edhrec_rank": 4246,
    "salt": 0.32,
-   "price_usd": 0.32,
+   "price_usd": 0.34,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -972,9 +972,9 @@
    "categories": [
     "Protection"
    ],
-   "edhrec_rank": 4058,
+   "edhrec_rank": 4055,
    "salt": 0.27,
-   "price_usd": 0.77,
+   "price_usd": 0.86,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1026,9 +1026,9 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 2362,
+   "edhrec_rank": 2370,
    "salt": 0.71,
-   "price_usd": 1.11,
+   "price_usd": 1.18,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1080,9 +1080,9 @@
    "categories": [
     "Protection"
    ],
-   "edhrec_rank": 2399,
+   "edhrec_rank": 2374,
    "salt": 0.44,
-   "price_usd": 2.63,
+   "price_usd": 2.45,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1191,9 +1191,9 @@
    "categories": [
     "Evasion"
    ],
-   "edhrec_rank": 8648,
+   "edhrec_rank": 8657,
    "salt": 0.11,
-   "price_usd": 7.48,
+   "price_usd": 7.74,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1238,7 +1238,7 @@
    "categories": [
     "Protection"
    ],
-   "edhrec_rank": 10549,
+   "edhrec_rank": 10552,
    "salt": 0.13,
    "price_usd": 0.92,
    "commander_legal": true,
@@ -1292,9 +1292,9 @@
    "categories": [
     "Pump"
    ],
-   "edhrec_rank": 5861,
+   "edhrec_rank": 5860,
    "salt": 0.55,
-   "price_usd": 0.39,
+   "price_usd": 0.44,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1342,9 +1342,9 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 894,
+   "edhrec_rank": 893,
    "salt": 0.59,
-   "price_usd": 3.46,
+   "price_usd": 3.05,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1410,9 +1410,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 7680,
+   "edhrec_rank": 7695,
    "salt": 0.48,
-   "price_usd": 0.44,
+   "price_usd": 0.46,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1468,7 +1468,7 @@
    ],
    "edhrec_rank": 299,
    "salt": 1.44,
-   "price_usd": 25.86,
+   "price_usd": 24.11,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1523,7 +1523,7 @@
    ],
    "edhrec_rank": 407,
    "salt": 0.45,
-   "price_usd": 16.02,
+   "price_usd": 14.06,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1588,9 +1588,9 @@
    "categories": [
     "Proliferate"
    ],
-   "edhrec_rank": 2605,
+   "edhrec_rank": 2606,
    "salt": 0.68,
-   "price_usd": 3.43,
+   "price_usd": 3.27,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1638,7 +1638,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 9353,
+   "edhrec_rank": 9363,
    "salt": 0.27,
    "price_usd": 0.27,
    "commander_legal": true,
@@ -1694,9 +1694,9 @@
    "categories": [
     "Evasion"
    ],
-   "edhrec_rank": 9985,
+   "edhrec_rank": 10006,
    "salt": 0.31,
-   "price_usd": 0.2,
+   "price_usd": 0.21,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1741,7 +1741,7 @@
    ],
    "edhrec_rank": 15614,
    "salt": 0.0,
-   "price_usd": 0.13,
+   "price_usd": 0.12,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1791,9 +1791,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 4238,
+   "edhrec_rank": 4245,
    "salt": 0.33,
-   "price_usd": 13.6,
+   "price_usd": 14.39,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1866,7 +1866,7 @@
    ],
    "edhrec_rank": 410,
    "salt": 0.83,
-   "price_usd": 5.85,
+   "price_usd": 4.42,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1942,7 +1942,7 @@
    ],
    "edhrec_rank": 35,
    "salt": 0.31,
-   "price_usd": 9.63,
+   "price_usd": 10.39,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -1998,9 +1998,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 606,
+   "edhrec_rank": 607,
    "salt": 0.31,
-   "price_usd": 1.96,
+   "price_usd": 2.01,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2056,7 +2056,7 @@
    ],
    "edhrec_rank": 1,
    "salt": 1.46,
-   "price_usd": null,
+   "price_usd": 1.53,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2108,7 +2108,7 @@
    ],
    "edhrec_rank": 3,
    "salt": 0.24,
-   "price_usd": null,
+   "price_usd": 0.78,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2158,7 +2158,7 @@
    ],
    "edhrec_rank": 153,
    "salt": 0.21,
-   "price_usd": 5.63,
+   "price_usd": 5.93,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2215,7 +2215,7 @@
    ],
    "edhrec_rank": 227,
    "salt": 1.62,
-   "price_usd": 65.79,
+   "price_usd": 63.96,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2284,9 +2284,9 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 315,
+   "edhrec_rank": 313,
    "salt": 0.52,
-   "price_usd": 19.54,
+   "price_usd": 20.81,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2330,9 +2330,9 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 585,
+   "edhrec_rank": 584,
    "salt": 0.2,
-   "price_usd": 6.05,
+   "price_usd": 5.27,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2377,7 +2377,7 @@
    ],
    "edhrec_rank": 557,
    "salt": 0.25,
-   "price_usd": 4.37,
+   "price_usd": 5.23,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2433,7 +2433,7 @@
    ],
    "edhrec_rank": 2180,
    "salt": 0.29,
-   "price_usd": 0.35,
+   "price_usd": 0.34,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2488,9 +2488,9 @@
    "categories": [
     "Counters"
    ],
-   "edhrec_rank": 2970,
+   "edhrec_rank": 2975,
    "salt": 0.32,
-   "price_usd": 18.5,
+   "price_usd": 18.88,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2541,9 +2541,9 @@
    "categories": [
     "Counters"
    ],
-   "edhrec_rank": 1273,
+   "edhrec_rank": 1268,
    "salt": 0.46,
-   "price_usd": 6.86,
+   "price_usd": 6.61,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2596,7 +2596,7 @@
    ],
    "edhrec_rank": 30,
    "salt": 0.9,
-   "price_usd": 16.38,
+   "price_usd": 17.19,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2713,7 +2713,7 @@
    ],
    "edhrec_rank": 451,
    "salt": 0.23,
-   "price_usd": 3.25,
+   "price_usd": 3.27,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2767,9 +2767,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 278,
+   "edhrec_rank": 279,
    "salt": 0.26,
-   "price_usd": 0.34,
+   "price_usd": 0.38,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2827,9 +2827,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 1749,
+   "edhrec_rank": 1748,
    "salt": 0.24,
-   "price_usd": 0.52,
+   "price_usd": 0.51,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2882,7 +2882,7 @@
    ],
    "edhrec_rank": 74,
    "salt": 1.72,
-   "price_usd": 72.01,
+   "price_usd": 72.4,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2932,9 +2932,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 515,
+   "edhrec_rank": 514,
    "salt": 0.23,
-   "price_usd": 16.63,
+   "price_usd": 17.14,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -2994,9 +2994,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 2056,
+   "edhrec_rank": 2058,
    "salt": 0.16,
-   "price_usd": 1.95,
+   "price_usd": 1.94,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3057,9 +3057,9 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 6460,
+   "edhrec_rank": 6469,
    "salt": 0.5,
-   "price_usd": 3.18,
+   "price_usd": 3.39,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3134,9 +3134,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 1192,
+   "edhrec_rank": 1197,
    "salt": 0.39,
-   "price_usd": 2.81,
+   "price_usd": 3.19,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3170,65 +3170,6 @@
    "layout": "normal"
   },
   {
-   "name": "Rishkar's Expertise",
-   "quantity": 1,
-   "scryfall_id": "efa9d2dc-b3b8-4475-bbfc-2db457ee4ffd",
-   "oracle_id": "97407cd0-2bd2-4074-94d3-4ec3d243fa78",
-   "mana_cost": "{4}{G}{G}",
-   "mana_value": 6.0,
-   "colors": [
-    "G"
-   ],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Sorcery",
-   "oracle_text": "Draw cards equal to the greatest power among creatures you control.\nYou may cast a spell with mana value 5 or less from your hand without paying its mana cost.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Draw"
-   ],
-   "edhrec_rank": 243,
-   "salt": 0.42,
-   "price_usd": 4.98,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "draw"
-   ],
-   "tags": [
-    "burst draw",
-    "cycle-aer-expertise",
-    "expertise",
-    "free-cast-another",
-    "mana value matters",
-    "namesake spell",
-    "power matters-individual",
-    "pure draw",
-    "scales with power",
-    "card advantage",
-    "card names",
-    "cast on resolution",
-    "cost ignorer",
-    "cycle",
-    "draw",
-    "power matters"
-   ],
-   "engine_participation": [
-    "draw"
-   ],
-   "set_code": "lcc",
-   "released_at": "2023-11-17",
-   "rarity": "rare",
-   "layout": "normal"
-  },
-  {
    "name": "Three Visits",
    "quantity": 1,
    "scryfall_id": "99bf792f-963e-4509-8d3c-7db129c6a77f",
@@ -3250,7 +3191,7 @@
    ],
    "edhrec_rank": 40,
    "salt": 0.22,
-   "price_usd": 5.56,
+   "price_usd": 5.69,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3303,7 +3244,7 @@
    ],
    "edhrec_rank": 26,
    "salt": 0.24,
-   "price_usd": 3.0,
+   "price_usd": 2.14,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3358,9 +3299,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 1281,
+   "edhrec_rank": 1282,
    "salt": 0.17,
-   "price_usd": 0.39,
+   "price_usd": 0.4,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3428,9 +3369,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 672,
+   "edhrec_rank": 670,
    "salt": 0.09,
-   "price_usd": 1.76,
+   "price_usd": 1.35,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3492,9 +3433,9 @@
    "categories": [
     "Recursion"
    ],
-   "edhrec_rank": 319,
+   "edhrec_rank": 318,
    "salt": 0.2,
-   "price_usd": 7.46,
+   "price_usd": 6.13,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3547,9 +3488,9 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 2408,
+   "edhrec_rank": 2412,
    "salt": 0.13,
-   "price_usd": 0.27,
+   "price_usd": 0.33,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3606,9 +3547,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 10173,
+   "edhrec_rank": 10179,
    "salt": 0.08,
-   "price_usd": 0.78,
+   "price_usd": 0.76,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3669,9 +3610,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 403,
+   "edhrec_rank": 405,
    "salt": 0.18,
-   "price_usd": 0.4,
+   "price_usd": 0.35,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3722,9 +3663,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 195,
+   "edhrec_rank": 196,
    "salt": 0.17,
-   "price_usd": 0.36,
+   "price_usd": 0.38,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3778,9 +3719,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 720,
+   "edhrec_rank": 717,
    "salt": 0.18,
-   "price_usd": 9.82,
+   "price_usd": 9.25,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3835,7 +3776,7 @@
    ],
    "edhrec_rank": 177,
    "salt": 0.48,
-   "price_usd": 28.79,
+   "price_usd": 30.28,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3885,9 +3826,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 551,
+   "edhrec_rank": 550,
    "salt": 0.06,
-   "price_usd": 0.91,
+   "price_usd": 0.94,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3940,9 +3881,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 3319,
+   "edhrec_rank": 3324,
    "salt": 0.16,
-   "price_usd": 1.49,
+   "price_usd": 1.51,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -3991,7 +3932,7 @@
    ],
    "edhrec_rank": 77,
    "salt": 0.29,
-   "price_usd": 18.43,
+   "price_usd": 17.31,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4028,7 +3969,7 @@
     "R"
    ],
    "type_line": "Land",
-   "oracle_text": "This land enters tapped unless you control a Mountain.\n{T}: Add {R}.\n{R}, {T}, Exert this land: Add {R}{R}. If that mana is spent on a creature spell, it gains haste until end of turn. (An exerted permanent won't untap during your next untap step.)",
+   "oracle_text": "This land enters tapped unless you control a Mountain.\n{T}: Add {R}.\n{R}, {T}, Exert this land: Add {R}{R}. If any of that mana is spent on a creature spell, it gains haste until end of turn. (An exerted permanent won't untap during your next untap step.)",
    "mana_production": {
     "R": 3
    },
@@ -4040,7 +3981,7 @@
    ],
    "edhrec_rank": 372,
    "salt": 0.35,
-   "price_usd": 8.12,
+   "price_usd": 7.94,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4093,7 +4034,7 @@
    ],
    "edhrec_rank": 76,
    "salt": 0.88,
-   "price_usd": 50.93,
+   "price_usd": 48.97,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4151,7 +4092,7 @@
    ],
    "edhrec_rank": 163,
    "salt": 0.91,
-   "price_usd": 52.83,
+   "price_usd": 52.08,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4253,7 +4194,7 @@
    ],
    "edhrec_rank": 2,
    "salt": 0.38,
-   "price_usd": null,
+   "price_usd": 0.6,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4352,7 +4293,7 @@
    ],
    "edhrec_rank": 47,
    "salt": 0.23,
-   "price_usd": 18.53,
+   "price_usd": 17.47,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4412,7 +4353,7 @@
    ],
    "edhrec_rank": 111,
    "salt": 0.67,
-   "price_usd": 51.05,
+   "price_usd": 51.77,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4464,9 +4405,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 188,
+   "edhrec_rank": 187,
    "salt": 0.16,
-   "price_usd": 6.76,
+   "price_usd": 7.01,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4516,9 +4457,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 735,
+   "edhrec_rank": 732,
    "salt": 0.11,
-   "price_usd": 5.49,
+   "price_usd": 5.4,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4621,7 +4562,7 @@
    ],
    "edhrec_rank": 127,
    "salt": 0.1,
-   "price_usd": 0.39,
+   "price_usd": 0.33,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4651,65 +4592,6 @@
    "layout": "normal"
   },
   {
-   "name": "Collective Inferno",
-   "quantity": 1,
-   "scryfall_id": "1ec084cc-997d-4079-b445-8f701ec3c277",
-   "oracle_id": "649e4969-71d4-434f-85b0-205ec2c6b24f",
-   "mana_cost": "{3}{R}{R}",
-   "mana_value": 5.0,
-   "colors": [
-    "R"
-   ],
-   "color_identity": [
-    "R"
-   ],
-   "type_line": "Enchantment",
-   "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nAs this enchantment enters, choose a creature type.\nDouble all damage that sources you control of the chosen type would deal.",
-   "mana_production": {},
-   "keywords": [
-    "Convoke",
-    "Double"
-   ],
-   "categories": [
-    "Pump",
-    "Enchantment"
-   ],
-   "edhrec_rank": 3193,
-   "salt": null,
-   "price_usd": 1.97,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "convoke",
-    "cycle-ecl-typal-convoke",
-    "damage multiplier",
-    "noncreature typal",
-    "synergy-red",
-    "typal-choose",
-    "cheaper than mv",
-    "cycle",
-    "discount-self",
-    "synergy-color-share",
-    "tap fuel-creature",
-    "tap outlet",
-    "typal",
-    "typal-creature"
-   ],
-   "engine_participation": [
-    "typal"
-   ],
-   "set_code": "ecl",
-   "released_at": "2026-01-23",
-   "rarity": "rare",
-   "layout": "normal"
-  },
-  {
    "name": "Radagast of Rhosgobel",
    "quantity": 1,
    "scryfall_id": "5741bbad-a6e4-45e0-b827-73f48c9975bf",
@@ -4730,9 +4612,9 @@
     "Ramp",
     "Creature"
    ],
-   "edhrec_rank": 5695,
+   "edhrec_rank": 5387,
    "salt": null,
-   "price_usd": 2.68,
+   "price_usd": 1.94,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4758,6 +4640,140 @@
    "layout": "normal"
   },
   {
+   "name": "Loot, the Nexus",
+   "quantity": 1,
+   "scryfall_id": "3cfa4fc6-4d90-4576-a83f-6496c7f21104",
+   "oracle_id": "a99ce9db-9b7d-45a0-bee7-0875fc62ca48",
+   "mana_cost": "{2}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Legendary Creature — Beast Noble",
+   "oracle_text": "{T}: Choose a color. Add one mana of that color for each different power among creatures you control.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp",
+    "Creature"
+   ],
+   "edhrec_rank": 29579,
+   "salt": null,
+   "price_usd": 0.31,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "mana dork",
+    "power matters-individual",
+    "mana producer",
+    "power matters",
+    "ramp"
+   ],
+   "engine_participation": [
+    "ramp",
+    "typal"
+   ],
+   "set_code": "fra",
+   "released_at": "2026-10-02",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Garruk, Curse Breaker",
+   "quantity": 1,
+   "scryfall_id": "90ca5812-ceb5-46bd-b049-aed7ff10e6af",
+   "oracle_id": "184d4672-05a9-4182-8b3f-3561fb33ed62",
+   "mana_cost": "{3}{G}{G}",
+   "mana_value": 5.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Legendary Planeswalker — Garruk",
+   "oracle_text": "Whenever a creature you control with power 4 or greater enters, draw a card.\n+2: Untap up to two target lands.\n−3: Create a 4/4 green Beast creature token with trample.\n−4: Until your next turn, whenever one or more creatures attack one of your opponents, those creatures get +2/+2 and gain trample until end of turn.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw",
+    "Planeswalker"
+   ],
+   "edhrec_rank": 21690,
+   "salt": null,
+   "price_usd": 5.33,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "activated ability",
+    "attack trigger",
+    "attacking opponents matters",
+    "creaturefall",
+    "cycle-fra-lorwyn-five",
+    "delayed trigger",
+    "draw engine",
+    "ferocious",
+    "overrun",
+    "passive ability",
+    "refund",
+    "repeatable creature tokens",
+    "repeatable crime",
+    "repeatable pure draw",
+    "toughness boost to all",
+    "untapper-land",
+    "attacking matters",
+    "card advantage",
+    "cycle",
+    "draw",
+    "gives trample",
+    "power boost to all",
+    "power matters",
+    "power matters-individual",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "repeatable token generator",
+    "thingfall",
+    "triggered ability",
+    "untapper"
+   ],
+   "engine_participation": [
+    "draw",
+    "tokens"
+   ],
+   "set_code": "fra",
+   "released_at": "2026-10-02",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
    "name": "Slinza, the Spiked Stampede",
    "quantity": 1,
    "scryfall_id": "9c442742-902c-49ae-813e-38a21ff8a78f",
@@ -4780,9 +4796,9 @@
    "categories": [
     "Commander"
    ],
-   "edhrec_rank": 11659,
+   "edhrec_rank": 11662,
    "salt": 0.26,
-   "price_usd": 0.41,
+   "price_usd": 0.4,
    "commander_legal": true,
    "is_commander": true,
    "is_game_changer": false,
@@ -4855,9 +4871,9 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 1117,
+   "edhrec_rank": 1115,
    "salt": 0.18,
-   "price_usd": 4.66,
+   "price_usd": 4.33,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -4927,7 +4943,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 13912,
+   "edhrec_rank": 13909,
    "salt": 0.27,
    "price_usd": 0.32,
    "commander_legal": true,
@@ -4994,7 +5010,7 @@
    ],
    "edhrec_rank": 58,
    "salt": 0.2,
-   "price_usd": 0.31,
+   "price_usd": 0.35,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -5044,9 +5060,9 @@
    "categories": [
     "Recursion"
    ],
-   "edhrec_rank": 11728,
+   "edhrec_rank": 11734,
    "salt": 0.0,
-   "price_usd": 10.28,
+   "price_usd": 15.23,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -5102,9 +5118,9 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 3517,
+   "edhrec_rank": 3528,
    "salt": 0.53,
-   "price_usd": 18.86,
+   "price_usd": 17.7,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -5134,56 +5150,6 @@
    "layout": "normal"
   },
   {
-   "name": "Bolt Bend",
-   "quantity": 1,
-   "scryfall_id": "771b9f25-76f8-4da9-b3ab-ee51f4ad32d9",
-   "oracle_id": "c20a96f7-aa5a-4c15-b8b1-806685c99b27",
-   "mana_cost": "{3}{R}",
-   "mana_value": 4.0,
-   "colors": [
-    "R"
-   ],
-   "color_identity": [
-    "R"
-   ],
-   "type_line": "Instant",
-   "oracle_text": "This spell costs {3} less to cast if you control a creature with power 4 or greater.\nChange the target of target spell or ability with a single target.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Protection"
-   ],
-   "edhrec_rank": 533,
-   "salt": 0.42,
-   "price_usd": 4.92,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "alliteration",
-    "change target",
-    "discount-self",
-    "ferocious",
-    "single target instant/sorcery",
-    "card names",
-    "cheaper than mv",
-    "power matters",
-    "power matters-individual"
-   ],
-   "engine_participation": [
-    "protection"
-   ],
-   "set_code": "tle",
-   "released_at": "2025-11-21",
-   "rarity": "uncommon",
-   "layout": "normal"
-  },
-  {
    "name": "Blasphemous Act",
    "quantity": 1,
    "scryfall_id": "7d4b1d44-126e-4987-9a9f-f0f9627a09cb",
@@ -5205,7 +5171,7 @@
    ],
    "edhrec_rank": 22,
    "salt": 0.62,
-   "price_usd": 0.99,
+   "price_usd": 0.95,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -5260,7 +5226,7 @@
    ],
    "edhrec_rank": 178,
    "salt": 0.27,
-   "price_usd": 2.75,
+   "price_usd": 2.71,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -5320,7 +5286,7 @@
    ],
    "edhrec_rank": 87,
    "salt": 0.1,
-   "price_usd": 0.32,
+   "price_usd": 0.3,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
@@ -5372,9 +5338,9 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 938,
+   "edhrec_rank": 936,
    "salt": 0.58,
-   "price_usd": 18.85,
+   "price_usd": 19.16,
    "commander_legal": true,
    "is_commander": false,
    "is_game_changer": false,
