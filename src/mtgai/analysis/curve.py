@@ -5,6 +5,10 @@ from __future__ import annotations
 from collections import Counter
 
 from ..model import Deck
+from .cost import commander_discounts, effective_mana_value, self_discounting
+
+# More spells than this at 5+ mana makes a 100-card deck top-heavy.
+TOP_HEAVY = 12
 
 
 def analyse(deck: Deck) -> dict:
@@ -34,6 +38,24 @@ def analyse(deck: Deck) -> dict:
     cheap = sum(histogram.get(i, 0) for i in (0, 1, 2))
     expensive = sum(count for mv, count in histogram.items() if mv >= 5)
 
+    # The histogram shows printed costs, as Archidekt does; whether the deck is
+    # top-heavy is judged on what its spells actually cost here.
+    discounts = commander_discounts(deck)
+    spells = [c for c in deck.cards if not c.is_land]
+    self_discounters = [c for c in spells if self_discounting(c)]
+    # Which corrections actually move a card out of the 5+ bracket.
+    discounted = [
+        c for c in spells
+        if c.mana_value >= 5 and not self_discounting(c)
+        and effective_mana_value(c, discounts) < 5
+    ]
+    heavy_self = [c for c in self_discounters if c.mana_value >= 5]
+    effective = sum(
+        c.quantity
+        for c in spells
+        if not self_discounting(c) and effective_mana_value(c, discounts) >= 5
+    )
+
     findings = []
     if average > 3.6:
         findings.append(
@@ -43,10 +65,29 @@ def analyse(deck: Deck) -> dict:
         findings.append(
             f"Only {cheap} spells at 2 mana or less — early turns may be empty."
         )
-    if expensive > 12:
-        findings.append(
-            f"{expensive} spells at 5+ mana is top-heavy for a 100-card deck."
-        )
+    if effective == expensive:
+        if expensive > TOP_HEAVY:
+            findings.append(
+                f"{expensive} spells at 5+ mana is top-heavy for a 100-card deck."
+            )
+    else:
+        reasons = []
+        if discounted:
+            d = next(d for d in discounts if d.applies_to(discounted[0]))
+            reasons.append(f"{d.label}'s {d.what} discount")
+        if heavy_self:
+            reasons.append("spells that discount themselves")
+        counting = " and ".join(reasons)
+        if effective > TOP_HEAVY:
+            findings.append(
+                f"{expensive} spells at 5+ mana ({effective} counting {counting}) "
+                "is top-heavy for a 100-card deck."
+            )
+        elif expensive > TOP_HEAVY:
+            findings.append(
+                f"{expensive} spells at 5+ mana, but only {effective} counting "
+                f"{counting} — lighter than it looks."
+            )
 
     return {
         "histogram": {str(mv): histogram.get(mv, 0) for mv in range(8)},
@@ -54,6 +95,11 @@ def analyse(deck: Deck) -> dict:
         "nonland_count": nonland_count,
         "cheap_spells": cheap,
         "expensive_spells": expensive,
+        "effective_expensive": effective,
+        "discounts": [
+            {"source": d.source, "what": d.what, "amount": d.amount} for d in discounts
+        ],
+        "self_discounting": [c.name for c in self_discounters],
         "types": dict(types.most_common()),
         "findings": findings,
     }

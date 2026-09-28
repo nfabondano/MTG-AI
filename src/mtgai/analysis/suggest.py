@@ -17,10 +17,14 @@ from __future__ import annotations
 
 from typing import Any
 
+from .. import history as history_mod
 from .. import tags as tagmod
-from ..model import Deck
+from ..model import CardEntry, Deck
 from ..sources import scryfall, tagger
+from . import cost as cost_mod
+from . import curve as curve_mod
 from . import engine as engine_mod
+from . import roles as roles_mod
 
 GROUP_PLAN = "strengthens-plan"
 GROUP_WEAKNESS = "fixes-weakness"
@@ -58,6 +62,7 @@ def build(
         "mana_fixes": eng.get("mana_fixes") or [],
         "adds": adds,
         "cuts": cuts,
+        "decided": decided(deck, result, cuts),
         "swaps": pair_swaps(deck, adds, cuts),
         "hidden_meta": sum(1 for a in adds if a["group"] == GROUP_META and not loose),
     }
@@ -304,11 +309,15 @@ def build_cuts(
        and three-colour costs; strained engine pieces become mana fixes).
     2. **Oversupply** — the card sits in a cluster holding far more than the
        deck needs, and serves neither a core cluster nor the tribe.
-    3. **Curve** — a top-of-curve card in a deck that is already top-heavy.
+    3. **Curve** — a top-of-curve card in a deck that is already top-heavy,
+       judged on what it costs here rather than what is printed on it.
     4. **No engine participation** — it does nothing the deck is built around.
 
     A card outside the colour identity is not a candidate but a requirement,
     and a card declared sacred in intent.md is refused everywhere else.
+
+    Evidence 2-4 (and weak signals) is judgement, and judgement yields to what
+    the deck already says about a card — see `_soft_protection`.
     """
     cuts: list[dict[str, Any]] = []
     seen: set[str] = set()
@@ -318,10 +327,7 @@ def build_cuts(
         name.split("//")[0].strip().lower()
         for name in intent_data.get("core_cards") or []
     }
-    flexible = {
-        name.split("//")[0].strip().lower()
-        for name in intent_data.get("flexible_cards") or []
-    }
+    flexible = _flexible(result)
 
     def add(name: str, why: str, evidence: str, score: int) -> None:
         key = name.split("//")[0].strip().lower()
@@ -349,6 +355,13 @@ def build_cuts(
             )
 
     protected = _combo_cards(result)
+    shielded = _soft_protection(deck, result)
+
+    def soft_ok(card: CardEntry | None) -> bool:
+        """Whether soft evidence may offer this card at all."""
+        if card is None or card.is_commander or card.name in protected:
+            return False
+        return history_mod.key(card.name) not in shielded
 
     # 1. Castability.
     for entry in (eng.get("castability_cuts") or [])[:6]:
@@ -378,7 +391,7 @@ def build_cuts(
             )
         )
         for card in members:
-            if card.is_commander or card.name in protected:
+            if not soft_ok(card):
                 continue
             if set(card.engine_participation) & core:
                 continue
@@ -393,27 +406,43 @@ def build_cuts(
             )
             break  # one representative per cluster, not a purge
 
-    # 3. Curve.
+    # 3. Curve — at what cards cost here. A spell that discounts itself has no
+    #    fixed cost to judge, and the commander's discount is the deck's
+    #    normal state: The Great Henge was once offered as "9 mana".
     curve = result.get("curve") or {}
-    if curve.get("expensive_spells", 0) > 12:
+    heavy = curve.get("effective_expensive", curve.get("expensive_spells", 0))
+    if heavy > curve_mod.TOP_HEAVY:
+        discounts = cost_mod.commander_discounts(deck)
+        # Ties keep deck order, as the printed-cost ranking always did.
         top = sorted(
-            (c for c in deck.cards if not c.is_land and not c.is_commander),
-            key=lambda c: -(c.mana_value or 0),
+            (
+                c
+                for c in deck.cards
+                if not c.is_land and soft_ok(c) and not cost_mod.self_discounting(c)
+            ),
+            key=lambda c: (
+                -cost_mod.effective_mana_value(c, discounts),
+                -(c.mana_value or 0),
+            ),
         )
         for card in top[:2]:
-            if card.name in protected:
-                continue
+            real = cost_mod.effective_mana_value(card, discounts)
+            if real < CURVE_TOP:
+                break
+            price = f"{card.mana_value:.0f} mana"
+            discount = cost_mod.discount_for(card, discounts)
+            if discount and real < card.mana_value:
+                price += f" ({real:.0f} with {discount.label}'s discount)"
             add(
                 card.name,
-                f"{card.mana_value:.0f} mana in a deck already carrying "
-                f"{curve['expensive_spells']} spells at 5+",
+                f"{price} in a deck already carrying {heavy} spells at 5+",
                 "curve",
                 50,
             )
 
     # 4. Does nothing the deck is built around.
     for name in (eng.get("orphans") or [])[:5]:
-        if name in protected:
+        if not soft_ok(deck.find(name)):
             continue
         add(
             name,
@@ -425,12 +454,90 @@ def build_cuts(
     # 5. Measured-low inclusion, and only ever as corroboration.
     if loose:
         for entry in (result.get("edhrec") or {}).get("off_meta") or []:
+            card = deck.find(entry["name"])
+            if card is not None and not soft_ok(card):
+                continue
             if entry["name"] in protected:
                 continue
             add(entry["name"], entry["reason"], "low inclusion (weak signal)", 10)
 
     cuts.sort(key=lambda c: -c["score"])
     return cuts
+
+
+# The curve step offers only what really sits at the top: in a deck judged on
+# its 5+ spells, a 5-drop is the middle of that bracket, not its peak.
+CURVE_TOP = 6
+
+# Roles every deck needs (roles.TARGETS), as the tag category that measures them.
+_ROLE_CATEGORY = {"wipe": "sweeper"}
+
+
+def _flexible(result: dict[str, Any]) -> set[str]:
+    """Cards intent.md marks as fair game — offered first, never shielded."""
+    intent_data = result.get("intent") or {}
+    return {
+        name.split("//")[0].strip().lower()
+        for name in intent_data.get("flexible_cards") or []
+    }
+
+
+def _soft_protection(deck: Deck, result: dict[str, Any]) -> dict[str, str]:
+    """Cards that soft evidence must not offer, keyed by front face, with why.
+
+    Each is a case where the report already says the card matters, so offering
+    it on a crowded cluster or a high curve would contradict the report:
+
+    - it is how the deck wins (engine.md lists it under "How it ends games")
+    - cutting it would leave a role every deck needs below its usual minimum
+      (Slinza's two sweepers, against a minimum of two)
+    - it is a modal spell-land, counted among the lands the analysis already
+      judged — cutting it for being redundant draw cuts a land
+    - Nicolas added it in the latest change, or kept it after the tool last
+      suggested cutting it (`mtgai.history`)
+
+    A card intent.md lists under `flexible_cards` is never shielded: what
+    Nicolas declares outranks what the tool infers.
+    """
+    shielded: dict[str, str] = {}
+    eng = result.get("engine") or {}
+    for entry in eng.get("win_conditions") or []:
+        shielded[history_mod.key(entry["name"])] = "how the deck wins"
+
+    profile = tagmod.deck_profile(deck)
+    thin = {
+        _ROLE_CATEGORY.get(role, role)
+        for role, (low, _) in roles_mod.TARGETS.items()
+        if profile.get(_ROLE_CATEGORY.get(role, role), 0) <= low
+    }
+    for card in deck.cards:
+        if card.is_land:
+            continue
+        if card.is_modal_land:
+            shielded.setdefault(history_mod.key(card.name), "counts as a land")
+        held = tagmod.card_categories(card) & thin
+        if held:
+            shielded.setdefault(
+                history_mod.key(card.name),
+                f"one of too few {'/'.join(sorted(held))} cards",
+            )
+
+    for name_key, why in history_mod.deliberate(deck).items():
+        shielded.setdefault(name_key, why)
+    for name_key in _flexible(result):
+        shielded.pop(name_key, None)
+    return shielded
+
+
+def decided(deck: Deck, result: dict[str, Any], cuts: list[dict[str, Any]]) -> list[dict[str, str]]:
+    """Nicolas's recent decisions that suggestions are leaving alone, for display."""
+    offered = {history_mod.key(c["name"]) for c in cuts}
+    chosen = history_mod.deliberate(deck, _flexible(result))
+    return [
+        {"name": card.name, "why": chosen[history_mod.key(card.name)]}
+        for card in deck.cards
+        if history_mod.key(card.name) in chosen and history_mod.key(card.name) not in offered
+    ]
 
 
 def _combo_cards(result: dict[str, Any]) -> set[str]:

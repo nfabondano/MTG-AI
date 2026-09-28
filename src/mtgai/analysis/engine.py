@@ -27,7 +27,7 @@ from collections import Counter
 
 from .. import tags as tagmod
 from ..model import COLOR_NAMES, COLORS, CardEntry, Deck
-from .mana import SOURCES_FOR_PIPS, _sources_by_color
+from .mana import SOURCES_FOR_PIPS, _pips_by_color, _sources_by_color
 
 # A cluster needs this many cards before it counts as part of the plan rather
 # than incidental overlap.
@@ -240,6 +240,20 @@ def is_tribe_member(card: CardEntry, tribe: str | None) -> bool:
     return tribe.lower() in {s.lower() for s in card.subtypes}
 
 
+def makes_tribe_tokens(card: CardEntry, tribe: str | None) -> bool:
+    """Whether the card's text creates tokens of the tribe.
+
+    Those tokens *are* the tribe once they arrive — Garruk, Primal Hunter's
+    3/3 Beasts get Slinza's counter and trigger its fight — so a card that
+    makes them feeds the tribe the way a changeling does, whatever type is
+    printed on the card itself.
+    """
+    if not tribe or card.is_land:
+        return False
+    pattern = rf"\bcreates?\b[^.]*\b{re.escape(tribe)}\b[^.]*\btokens?\b"
+    return re.search(pattern, card.rules_text(), re.I) is not None
+
+
 def clusters(deck: Deck) -> dict[str, int]:
     """Functional categories the deck invests in, with their card counts."""
     profile = tagmod.deck_profile(deck)
@@ -304,7 +318,8 @@ def tag_participation(deck: Deck, tribe: str | None = None) -> None:
     Membership comes from functional tags, from the owner's own Archidekt
     categories, and — in a typal deck — from simply being the tribe: an Ooze in
     the Ooze deck participates by existing, whatever its text tags say. That is
-    the rule whose absence once marked two Oozes as doing nothing.
+    the rule whose absence once marked two Oozes as doing nothing. Making the
+    tribe counts too: a card that creates tokens of it feeds the same engine.
     """
     if tribe is None:
         tribe = commander_tribe(deck)
@@ -314,7 +329,9 @@ def tag_participation(deck: Deck, tribe: str | None = None) -> None:
             card.engine_participation = []
             continue
         member = tagmod.card_categories(card) | owner_categories(card)
-        if "typal" in active and is_tribe_member(card, tribe):
+        if "typal" in active and (
+            is_tribe_member(card, tribe) or makes_tribe_tokens(card, tribe)
+        ):
             member.add("typal")
         card.engine_participation = sorted(member & active)
 
@@ -461,10 +478,14 @@ def cards_in_category(deck: Deck, category: str) -> list[CardEntry]:
 CUT_SEVERITY = 6
 
 
-# Cards that end games say so in a few recognisable ways.
+# Cards that end games say so in a few recognisable ways. Damage only counts
+# when it goes to a player: "deals damage equal to its power to target
+# creature" is a bite spell, and the fight reminder text says the same words.
 _WINCON_RE = re.compile(
     r"wins? the game|you win the game|loses the game|can't lose the game|"
-    r"deals damage equal to|combat damage to a player, .* loses",
+    r"deals damage equal to [^.]*\bto (?:each opponent|each player|target player|"
+    r"target opponent|any target|that player)|"
+    r"combat damage to a player, .* loses",
     re.I,
 )
 
@@ -480,7 +501,7 @@ def win_condition_inventory(deck: Deck) -> list[dict]:
         if card.is_land:
             continue
         why = ""
-        if _WINCON_RE.search(card.role_text()):
+        if _WINCON_RE.search(card.rules_text()):
             why = "says so in its text"
         elif "wincon" in tagmod.card_categories(card):
             why = "finisher effect"
@@ -511,12 +532,68 @@ def quadrant_coverage(deck: Deck) -> dict[str, dict]:
     return out
 
 
+BASIC_FOR_COLOR = {"W": "Plains", "U": "Island", "B": "Swamp", "R": "Mountain", "G": "Forest"}
+
+
+def basic_swap(deck: Deck, short: dict[str, int]) -> list[dict] | None:
+    """Basics another colour can spare to cover a shortfall — or None.
+
+    A shortfall only argues for a cut when fixing it costs something. When
+    another colour runs more sources than its own heaviest card needs, and
+    some of that surplus is basic lands, trading them for basics of the short
+    colour fixes the requirement and weakens nothing. That is Slinza's red: two
+    sources short for Quartzwood Crasher, with nine green sources to spare and
+    seven Forests in the deck. Ayara's black had no such donor — every colour
+    in that deck was short — which is why she was still the right cut.
+
+    `short` maps each short colour to how many sources it lacks.
+    """
+    identity = set(deck.color_identity())
+    _, sources = _sources_by_color(deck)
+    _, heaviest = _pips_by_color(deck)
+    spare: dict[str, int] = {}
+    for color in identity:
+        need = SOURCES_FOR_PIPS.get(min(heaviest.get(color, 0), 3), 0)
+        basics = sum(
+            c.quantity for c in deck.lands if c.is_basic_land and c.produces() == {color}
+        )
+        spare[color] = min(sources.get(color, 0) - need, basics)
+
+    swaps: list[dict] = []
+    given: dict[str, int] = {}
+    for color, count in short.items():
+        donors = sorted(
+            (c for c in identity if c != color and c not in short and spare[c] >= count),
+            key=lambda c: -spare[c],
+        )
+        if not donors:
+            return None
+        donor = donors[0]
+        spare[donor] -= count
+        given[donor] = given.get(donor, 0) + count
+        need = SOURCES_FOR_PIPS.get(min(heaviest.get(donor, 0), 3), 0)
+        swaps.append(
+            {
+                "color": color,
+                "count": count,
+                "remove": BASIC_FOR_COLOR[donor],
+                "add": BASIC_FOR_COLOR[color],
+                "donor": donor,
+                "donor_name": COLOR_NAMES.get(donor, donor),
+                "donor_left": sources.get(donor, 0) - given[donor],
+                "donor_needed": need,
+            }
+        )
+    return swaps
+
+
 def mana_fixes(deck: Deck, demoted: list[dict]) -> list[dict]:
     """Turn castability strain on engine cards into mana-base advice.
 
     A shortfall shared by the deck's own payoffs means the mana base is wrong,
     not the payoffs — the answer is more sources of that colour, and the deck
-    usually contains the lands worth swapping out.
+    usually contains the lands worth swapping out. When another colour has
+    basics to spare, that swap is named first: it costs nothing.
     """
     by_color: dict[str, dict] = {}
     for finding in demoted:
@@ -551,6 +628,8 @@ def mana_fixes(deck: Deck, demoted: list[dict]) -> list[dict]:
             and not fetches.search(land.oracle_text or "")
         ]
         entry["swap_candidates"] = swaps[:3]
+        free = basic_swap(deck, {entry["color"]: entry["delta"]})
+        entry["basic_swap"] = free[0] if free else None
         fixes.append(entry)
     fixes.sort(key=lambda e: -e["delta"])
     return fixes
@@ -588,24 +667,31 @@ def analyse(deck: Deck, intent=None) -> dict:
 
     # A hard-to-cast card that the deck is built around is a mana-base problem,
     # not a cut. Only three kinds of strain still argue for cutting the card
-    # itself: it alone holds a colour requirement up, it wants three colours in
-    # one cost, or it is not part of the plan anyway.
+    # itself: it wants three colours in one cost, it is not part of the plan
+    # anyway, or it alone holds a colour requirement up and fixing the mana
+    # would cost something. How the deck wins is part of the plan.
+    wins = win_condition_inventory(deck)
     wanted_set = set(wants)
     core_names = {
         c.name
         for c in deck.cards
         if set(c.engine_participation) & wanted_set or is_tribe_member(c, tribe)
-    }
+    } | {w["name"] for w in wins}
     cuts: list[dict] = []
     demoted: list[dict] = []
     for finding in strain:
         if finding["severity"] < CUT_SEVERITY:
             continue
-        if (
-            finding["sole_driver"]
-            or finding["distinct_colors"] >= 3
-            or finding["name"] not in core_names
-        ):
+        if finding["distinct_colors"] >= 3 or finding["name"] not in core_names:
+            cut = True
+        elif finding["sole_driver"]:
+            # Cutting the one card that holds a requirement up relaxes the whole
+            # mana base — unless basics another colour can spare fix it free.
+            short = {c: info["short"] for c, info in finding["short_colors"].items()}
+            cut = basic_swap(deck, short) is None
+        else:
+            cut = False
+        if cut:
             if finding["sole_driver"] and finding.get("short_colors"):
                 worst = max(finding["short_colors"].items(), key=lambda kv: kv[1]["short"])
                 finding["alternative"] = (
@@ -640,7 +726,7 @@ def analyse(deck: Deck, intent=None) -> dict:
         "mana_fixes": mana_fixes(deck, demoted),
         "oversupplied": excess,
         "orphans": orphans,
-        "win_conditions": win_condition_inventory(deck),
+        "win_conditions": wins,
         "quadrants": quadrant_coverage(deck),
         "tag_counts": dict(tagmod.tag_counts(deck).most_common(20)),
         "note": (

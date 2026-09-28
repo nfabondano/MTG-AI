@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from . import analysis, deckfolder
+from . import analysis, deckfolder, history
 from .analysis import report
 from .intent import DeckIntent, apply_assignments
 from .model import Deck
@@ -34,6 +34,16 @@ def add_deck(reference: str, *, offline: bool = False, refresh: bool = False) ->
     deck = archidekt.normalise(payload, slug, enrich=not offline)
 
     folder = deckfolder.folder_for(slug)
+    # A re-import is where Nicolas's edits become visible: what he added, and
+    # which of the last suggested cuts he chose to keep.
+    prior = folder if folder.exists() else deckfolder.find_by_id(deck_id)
+    previous = _read_previous(prior)
+    deck.history = history.derive(
+        previous,
+        deck,
+        history.previous_suggested_cuts(previous, prior.read_suggestions() if prior else None),
+        today=deckfolder.now()[:10],
+    )
     folder.write_source(payload)
     result = _analyse_and_write(deck, folder, offline=offline)
 
@@ -43,6 +53,16 @@ def add_deck(reference: str, *, offline: bool = False, refresh: bool = False) ->
         "deck": deckfolder.summarise(deck),
         "analysis": result,
     }
+
+
+def _read_previous(folder: deckfolder.DeckFolder | None) -> Deck | None:
+    """The stored deck a re-import replaces — None when there is none to read."""
+    if folder is None:
+        return None
+    try:
+        return folder.read_deck()
+    except (OSError, ValueError, KeyError):
+        return None
 
 
 def refresh_deck(reference: str, *, offline: bool = False) -> dict[str, Any]:
@@ -63,11 +83,13 @@ def _analyse_and_write(
     deck: Deck, folder: deckfolder.DeckFolder, *, offline: bool
 ) -> dict[str, Any]:
     result = analysis.analyse(deck, offline=offline, intent=_load_intent(folder))
+    built = analysis.suggest.build(deck, result, offline=offline)
+    history.record_cuts(deck, built["cuts"])
     # Roles are attached during analysis, so the deck is written afterwards to
     # capture them — that keeps deck.json self-describing for later sessions.
     folder.write_deck(deck)
     folder.write_analysis(report.render_analysis(result))
-    folder.write_suggestions(report.render_suggestions(deck, result))
+    folder.write_suggestions(report.render_suggestions(deck, result, built, offline=offline))
     folder.write_engine(report.render_engine(result))
     return result
 
@@ -100,6 +122,9 @@ def suggest(
         deck, result, built, budget=budget, loose=loose, max_bracket=max_bracket
     )
     folder.write_suggestions(markdown)
+    # The next refresh compares against what was offered here.
+    if history.record_cuts(deck, built["cuts"]):
+        folder.write_deck(deck)
 
     adds = report.augment_adds_with_bracket_impact(built["adds"], result)
     adds, raises = report.split_by_bracket(adds, max_bracket)

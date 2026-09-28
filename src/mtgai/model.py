@@ -32,6 +32,7 @@ ARCHIDEKT_COLOR_MAP = {
 }
 
 _SYMBOL_RE = re.compile(r"\{([^}]+)\}")
+_REMINDER_RE = re.compile(r"\([^)]*\)")
 
 BASIC_LANDS = {
     "Plains",
@@ -135,6 +136,15 @@ class CardEntry:
         if self.layout == "modal_dfc":
             return (self.oracle_text or "").split("\n//\n")[0]
         return self.oracle_text or ""
+
+    def rules_text(self) -> str:
+        """`role_text()` without reminder text.
+
+        Reminder text explains a keyword rather than adding to the card: the
+        fight reminder "(Each deals damage equal to its power to the other.)"
+        once made three removal spells read as ways to win the game.
+        """
+        return _REMINDER_RE.sub("", self.role_text())
 
     @property
     def is_basic_land(self) -> bool:
@@ -249,6 +259,10 @@ class Deck:
     deck_tags: list[str] = field(default_factory=list)
     cards: list[CardEntry] = field(default_factory=list)
     excluded: list[dict[str, Any]] = field(default_factory=list)
+    # What the last refresh changed and which suggested cuts were kept —
+    # Nicolas's decisions, which suggestions must not argue with.
+    # See `mtgai.history`.
+    history: dict[str, Any] = field(default_factory=dict)
 
     @property
     def is_commander(self) -> bool:
@@ -323,6 +337,7 @@ class Deck:
             "commanders": [c.name for c in self.commanders],
             "cards": [c.to_dict() for c in self.cards],
             "excluded": self.excluded,
+            "history": self.history,
         }
 
     @classmethod
@@ -342,4 +357,5 @@ class Deck:
             deck_tags=data.get("deck_tags", []),
             cards=[CardEntry.from_dict(c) for c in data.get("cards", [])],
             excluded=data.get("excluded", []),
+            history=data.get("history") or {},
         )

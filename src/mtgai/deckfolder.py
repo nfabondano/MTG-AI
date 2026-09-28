@@ -121,6 +121,11 @@ class DeckFolder:
         self.ensure()
         self.suggestions_path.write_text(markdown)
 
+    def read_suggestions(self) -> str | None:
+        if not self.suggestions_path.exists():
+            return None
+        return self.suggestions_path.read_text()
+
     # The generated marker's absence means a person has edited this file.
     ENGINE_MARKER = "<!-- generated -->"
 
@@ -216,6 +221,21 @@ def resolve(reference: str) -> DeckFolder:
         names = ", ".join(m.slug for m in matches)
         raise ValueError(f"{reference!r} matches several decks: {names}")
     raise FileNotFoundError(f"no deck matching {reference!r}")
+
+
+def find_by_id(archidekt_id: int) -> DeckFolder | None:
+    """The folder already tracking this Archidekt deck, whatever it is named.
+
+    Renaming a deck on Archidekt changes its slug, so the id is what ties a
+    re-import to the deck it came from.
+    """
+    for folder in all_folders():
+        try:
+            if folder.read_deck().archidekt_id == archidekt_id:
+                return folder
+        except (OSError, ValueError, KeyError):
+            continue
+    return None
 
 
 def all_folders() -> list[DeckFolder]:

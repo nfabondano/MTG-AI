@@ -57,7 +57,9 @@ uv run mtg cache refresh              # local Scryfall cache
 ```
 decks/<slug>/
   source.json      raw Archidekt payload — never read this into context
-  deck.json        normalised + enriched list; grep it, don't read it whole
+  deck.json        normalised + enriched list; grep it, don't read it whole.
+                   Its `history` records what the last refresh added and cut,
+                   and which suggested cuts Nicolas kept
   deck.txt         plain list, pasteable back into Archidekt
   analysis.md      the generated report — read this
   engine.md        what the deck is built around; Nicolas may edit it, and
@@ -133,6 +135,15 @@ The analysis produces numbers. The useful part is what you make of them.
   isn't, that's a bug in this tool, not advice. Say so.
 - **The bracket estimate is a conversation starter.** What a deck actually does
   at a table is not something a card list fully determines.
+- **A card costs what it costs here.** Curve judgements use real cost. Spells
+  that discount themselves (The Great Henge, Blasphemous Act) are never judged
+  on the printed number, and the commander's own discount applies (Slinza's
+  Beasts cost {2} less). The histogram still shows printed costs, as Archidekt
+  does.
+- **Nicolas's edits are decisions.** Cards added in the latest refresh, and
+  suggested cuts he kept while cutting others, are never re-offered on soft
+  evidence (oversupply, curve, no engine role). Colour identity and
+  castability still apply, and `flexible_cards` in intent.md reopens a card.
 - Prefer a short verbal summary over pasting report sections back. The reports
   are on disk.
 
