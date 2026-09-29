@@ -25,3 +25,10 @@ Sugerencias de la herramienta que no seguimos:
 - **Radagast of Rhosgobel** — ya decidido quedárselo; su flash deja hacer pelear a Slinza en los turnos de los demás.
 
 Hecho en Archidekt el mismo día: salieron Battlefront Krushok y Paleoloth, y el mazo quedó en 100 cartas.
+
+## 2026-09-29 — Feedback de Nicolas sobre esos cortes
+
+- **Battlefront Krushok** — cortada. En vez de Nylea's Forerunner salió Paleoloth.
+- **Woodland Liege** se queda: aunque el robo no sea opcional, roba por cada Bestia que entra, tokens incluidos. Muy buena.
+- **Garruk's Horde** se queda: da ese extra, y con los descuentos puedes encadenar criaturas desde arriba de la biblioteca.
+- **Nylea's Forerunner** se queda: la mayoría de las criaturas no tiene trample, y como Bestia aprovecha muy bien los descuentos.
