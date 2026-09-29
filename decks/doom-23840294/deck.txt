@@ -1,0 +1,118 @@
+// Doom
+// https://archidekt.com/decks/23840294
+
+// Commander
+1 Doctor Doom, King of Latveria
+
+// Deck
+1 Arcane Signet
+1 Crucible of Worlds
+1 Currency Converter
+1 Doom's Time Platform
+1 Loki's Scepter
+1 Monument to Endurance
+1 Rocket-Powered Goblin Glider
+1 Sol Ring
+1 Talisman of Creativity
+1 Talisman of Dominance
+1 Talisman of Indulgence
+1 The Soul Stone
+1 Archfiend of Ifnir
+1 Baron Strucker, HYDRA Overlord
+1 Bone Miser
+1 Chameleon, Master of Disguise
+1 Containment Construct
+1 Doctor Doom
+1 Doctor Doom, Unrivaled
+1 Doctor Octopus, Master Planner
+1 Green Goblin, Nemesis
+1 Green Goblin, Revenant
+1 Iron Monger, Sadistic Tycoon
+1 Kang, Temporal Tyrant
+1 Leader, Super-Genius
+1 Loki, the Deceiver
+1 M.O.D.O.K.
+1 Marchesa, the Black Rose
+1 Moonstone, Harsh Mistress
+1 Norman Osborn // Green Goblin
+1 Puppet Master, String Puller
+1 Roaming Throne
+1 Surly Badgersaur
+1 Taskmaster, Mercenary Mimic
+1 The Squadron Sinister
+1 Tombstone, Career Criminal
+1 Typhoid Mary, Fractured
+1 Ultron, Unlimited
+1 Archnemesis
+1 Black Market Connections
+1 Cool but Rude
+1 Doom Reigns Supreme
+1 Glorious Purpose
+1 Tectonic Reformation
+1 Thunderbolts Conspiracy
+1 An Offer You Can't Refuse
+1 Bedevil
+1 Big Score
+1 Chaos Warp
+1 Counterspell
+1 Dark Ritual
+1 Frantic Search
+1 Lethal Scheme
+1 Withering Torment
+1 Barren Moor
+1 Canyon Slough
+1 Choked Estuary
+1 Coastal Peak
+1 Command Tower
+1 Crumbling Necropolis
+1 Dragonskull Summit
+1 Drowned Catacomb
+1 Exotic Orchard
+1 Fetid Pools
+1 Foreboding Ruins
+1 Forgotten Cave
+1 Frostboil Snarl
+1 Geier Reach Sanitarium
+4 Island
+1 Lonely Sandbar
+1 Luxury Suite
+5 Mountain
+1 Path of Ancestry
+1 Scorched Geyser
+1 Secluded Courtyard
+1 Smoldering Marsh
+1 Sulfur Falls
+1 Sunken Hollow
+6 Swamp
+1 Villainous Hideout
+1 Behold the Sinister Six!
+1 Blasphemous Act
+1 Doomsday
+1 Faithless Looting
+1 Reanimate
+1 Toxic Deluge
+1 Vandalblast
+1 Windfall
+
+// Maybeboard (not counted in the deck)
+1 Ultimate Green Goblin
+1 Extract Power
+1 Swiftfoot Boots
+1 Age of Ultron
+1 Living Laser
+1 Titania, Proud Pummeler
+1 Kang Prime
+1 Red Ghost, Intangible Genius
+1 Kindred Dominance
+1 Spark Double
+1 Titan of Littjara
+1 Propaganda
+1 Night's Whisper
+1 Prowler, Clawed Thief
+1 Patchwork Banner
+1 Madame Hydra
+1 Kang Dynasty
+1 Terminate
+1 Relic of Sauron
+1 Nightscape Familiar
+1 Captain Howler, Sea Scourge

@@ -3,9 +3,13 @@
 
 _Inferred from functional card tags. **Edit this file if it's wrong** — your version wins, and re-analysis will leave it alone._
 
+## Declared intent
+
+**vanilla + ramp + anthem**
+
 ## Archetype
 
-vanilla + ramp + anthem
+vanilla + ramp + anthem (inferred: vanilla + draw + ramp)
 
 ## Jasmine Boreal of the Seven's role
 
@@ -15,14 +19,14 @@ vanilla + ramp + anthem
 
 ## What Jasmine Boreal of the Seven asks for
 
-anthem, ramp, vanilla
+anthem, draw, ramp, vanilla
 
 ## Clusters
 
 - **vanilla** — 34 cards *(commander wants this)*
+- **draw** — 17 cards *(commander wants this)*
 - **ramp** — 14 cards *(commander wants this)*
 - **anthem** — 13 cards *(commander wants this)*
-- **draw** — 17 cards
 - **removal** — 7 cards
 - **tutor** — 7 cards
 

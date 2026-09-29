@@ -8,17 +8,17 @@ Keeping the deck at bracket 2 or below.
 
 ### Strengthens the plan
 
-- **Primordial Wurm** ($0.07) — synergy +0.57 measured vs all builds of this commander
-- **Ancient Brontodon** ($0.17) — synergy +0.56 measured vs all builds of this commander
-- **Devilthorn Fox** ($0.20) — synergy +0.48 measured vs all builds of this commander
-- **Sandwurm Convergence** ($0.35) — synergy +0.42 measured vs all builds of this commander
-- **Quilled Slagwurm** ($0.14) — synergy +0.42 measured vs all builds of this commander
-- **Elite Vanguard** ($0.22) — synergy +0.39 measured vs all builds of this commander
-- **Fang-Druid Summoner** ($0.21) — synergy +0.35 measured vs all builds of this commander
-- **Oreskos Swiftclaw** ($0.22) — synergy +0.34 measured vs all builds of this commander
-- **Gaea's Anthem** ($0.34) — synergy +0.33 measured vs all builds of this commander
-- **Lifecrafter's Bestiary** ($0.35) — synergy +0.31 measured vs all builds of this commander
-- **Ordinary Bear** ($0.19) — synergy +0.28 measured vs all builds of this commander
+- **Ancient Brontodon** ($0.17) — synergy +0.54 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Primordial Wurm** ($0.07) — synergy +0.54 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Devilthorn Fox** ($0.20) — synergy +0.45 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Fang-Druid Summoner** ($0.21) — synergy +0.43 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Sandwurm Convergence** ($0.35) — synergy +0.40 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Quilled Slagwurm** ($0.14) — synergy +0.36 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Oreskos Swiftclaw** ($0.22) — synergy +0.35 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Elite Vanguard** ($0.22) — synergy +0.32 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Ordinary Bear** ($0.21) — synergy +0.27 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Lifecrafter's Bestiary** ($0.35) — synergy +0.27 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
+- **Indomitable Ancients** ($0.36) — synergy +0.27 measured vs 293 Vanilla builds of Jasmine Boreal of the Seven
 
 _3 popularity-only ideas hidden — `--loose` shows them._
 
@@ -26,15 +26,15 @@ _3 popularity-only ideas hidden — `--loose` shows them._
 
 These came up as adds but would take the deck past bracket 2, so they are listed rather than recommended.
 
-- **Jumbo Cactuar** ($3.68) — completes a combo with Swords to Plowshares → Near-infinite lifegain — **bracket 3**: completes a two-card combo
+- **Jumbo Cactuar** ($3.97) — completes a combo with Swords to Plowshares → Near-infinite lifegain — **bracket 3**: completes a two-card combo
 - **Aerie Ouphes** ($0.21) — completes a combo with Tribute to the World Tree → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Life and Limb** ($0.79) — completes a combo with Yavimaya, Cradle of Growth + Elesh Norn, Grand Cenobite → Destroy all lands opponents control, Destroy all lands that enter the battlefield under an opponent's control — **bracket 4**: completes a mass-land-denial combo
+- **Life and Limb** ($0.81) — completes a combo with Yavimaya, Cradle of Growth + Elesh Norn, Grand Cenobite → Destroy all lands opponents control, Destroy all lands that enter the battlefield under an opponent's control — **bracket 4**: completes a mass-land-denial combo
 - **Living Lands** — completes a combo with Yavimaya, Cradle of Growth + Elesh Norn, Grand Cenobite → Destroy all lands opponents control, Destroy all lands that enter the battlefield under an opponent's control — **bracket 4**: completes a mass-land-denial combo
 
 ## Consider cutting
 
-- **Shamanic Revelation** — 17 cards do draw work; a deck wants about 12  
-  _(oversupplied: draw)_
+- No confident cuts. Nothing in the deck fails on castability, sits in an oversupplied cluster, or falls outside what the deck is built around.
+- Run with `--loose` to see weaker candidates.
 
 _Your call, so not offered again on soft evidence: Zopandrel, Hunger Dominus · Collective Blessing · Rishkar's Expertise (kept after an earlier suggested cut). To reopen one: `mtg deck intent jasmine-26885316 --set flexible_cards=+Name`._
 

@@ -11,18 +11,23 @@
 - 18 spells at 5+ mana, but only 12 counting Jasmine Boreal of the Seven's mana and spells that discount themselves — lighter than it looks.
 - 4 combos one card away — see the combo section.
 
-
-## What this deck does
+## Intent (declared)
 
 **vanilla + ramp + anthem**
 
+commander is the enabler
+
+## What this deck does
+
+**vanilla + ramp + anthem (inferred: vanilla + draw + ramp)**
+
 **Commander role:** enabler — the 99 must supply: payoffs.
 
-vanilla 34* · ramp 14* · anthem 13* · draw 17 · removal 7 · tutor 7
+vanilla 34* · draw 17* · ramp 14* · anthem 13* · removal 7 · tutor 7
 
 _\* the commander's own text asks for this._
 
-**Oversupplied:** draw 17 (want ~12), tutor 7 (want ~4)
+**Oversupplied:** tutor 7 (want ~4)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -84,7 +89,7 @@ _Measured two ways — human-curated tags and oracle-text matching. Where they d
 
 ## Against the EDHREC meta
 
-Compared against ~7,234 decks with this commander.
+**Basis:** vs 293 Vanilla builds of Jasmine Boreal of the Seven.
 
 Build variants EDHREC tracks: Vanilla (293), Power (219), Aggro (164), Tokens (98), Unblockable (79), Anthems (70).
 
@@ -92,39 +97,36 @@ Closest established commanders: Ruxa, Patient Professor, Cadira, Caller of the S
 
 **Staples you're missing** — most decks play these:
 
-- Path to Exile — in 62% of decks
-- Primordial Wurm — in 59% of decks
-- Ancient Brontodon — in 58% of decks
-- Devilthorn Fox — in 49% of decks
-- Kodama's Reach — in 47% of decks
-- Sandwurm Convergence — in 45% of decks
-- Quilled Slagwurm — in 43% of decks
-- Elite Vanguard — in 40% of decks
-- Lifecrafter's Bestiary — in 36% of decks
-- Fang-Druid Summoner — in 36% of decks
-- Harmonize — in 36% of decks
-- Oreskos Swiftclaw — in 35% of decks
-- Gaea's Anthem — in 35% of decks
+- Path to Exile — in 56% of decks
+- Ancient Brontodon — in 56% of decks
+- Primordial Wurm — in 55% of decks
+- Devilthorn Fox — in 46% of decks
+- Fang-Druid Summoner — in 44% of decks
+- Sandwurm Convergence — in 43% of decks
+- Quilled Slagwurm — in 38% of decks
+- Kodama's Reach — in 37% of decks
+- Oreskos Swiftclaw — in 36% of decks
+- Harmonize — in 35% of decks
 
-_Mana-base staples missing (separate on purpose): Selesnya Sanctuary, Sungrass Prairie, Selesnya Signet._
+_Mana-base staples missing (separate on purpose): Selesnya Sanctuary, Temple of Plenty._
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
-- Primordial Wurm — synergy +0.57
-- Ancient Brontodon — synergy +0.56
-- Devilthorn Fox — synergy +0.48
-- Sandwurm Convergence — synergy +0.42
-- Quilled Slagwurm — synergy +0.42
-- Elite Vanguard — synergy +0.39
-- Fang-Druid Summoner — synergy +0.35
-- Oreskos Swiftclaw — synergy +0.34
-- Gaea's Anthem — synergy +0.33
-- Lifecrafter's Bestiary — synergy +0.31
-- Ordinary Bear — synergy +0.28
-- Expedition Envoy — synergy +0.28
-- Glorious Anthem — synergy +0.27
-- Grizzled Leotau — synergy +0.26
-- Maja, Bretagard Protector — synergy +0.25
+- Ancient Brontodon — synergy +0.54
+- Primordial Wurm — synergy +0.54
+- Devilthorn Fox — synergy +0.45
+- Fang-Druid Summoner — synergy +0.43
+- Sandwurm Convergence — synergy +0.40
+- Quilled Slagwurm — synergy +0.36
+- Oreskos Swiftclaw — synergy +0.35
+- Elite Vanguard — synergy +0.32
+- Ordinary Bear — synergy +0.27
+- Lifecrafter's Bestiary — synergy +0.27
+- Indomitable Ancients — synergy +0.27
+- Expedition Envoy — synergy +0.26
+- Grizzled Leotau — synergy +0.24
+- Gaea's Anthem — synergy +0.24
+- Prowling Caracal — synergy +0.24
 
 ## Combos
 
