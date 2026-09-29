@@ -17,8 +17,8 @@ Keeping the deck at bracket 2 or below.
 - **Fang-Druid Summoner** ($0.21) — synergy +0.35 measured vs all builds of this commander
 - **Oreskos Swiftclaw** ($0.22) — synergy +0.34 measured vs all builds of this commander
 - **Gaea's Anthem** ($0.34) — synergy +0.33 measured vs all builds of this commander
-- **Expedition Envoy** ($0.08) — synergy +0.28 measured vs all builds of this commander
-- **Glorious Anthem** ($0.38) — synergy +0.27 measured vs all builds of this commander
+- **Lifecrafter's Bestiary** ($0.35) — synergy +0.31 measured vs all builds of this commander
+- **Ordinary Bear** ($0.19) — synergy +0.28 measured vs all builds of this commander
 
 _3 popularity-only ideas hidden — `--loose` shows them._
 
@@ -33,16 +33,10 @@ These came up as adds but would take the deck past bracket 2, so they are listed
 
 ## Consider cutting
 
-- **Flowering of the White Tree** — gives legendary creatures you control ward {1}, and a creature with an ability loses what Jasmine Boreal of the Seven gives creatures with no abilities  
-  _(anti-synergy)_
-- **Asceticism** — gives creatures you control hexproof, and a creature with an ability loses what Jasmine Boreal of the Seven gives creatures with no abilities  
-  _(anti-synergy)_
-- **Rishkar's Expertise** — 18 cards do draw work; a deck wants about 12  
+- **Shamanic Revelation** — 17 cards do draw work; a deck wants about 12  
   _(oversupplied: draw)_
-- **Zopandrel, Hunger Dominus** — 7 mana in a deck already carrying 13 spells at 5+  
-  _(curve)_
-- **Collective Blessing** — 6 mana in a deck already carrying 13 spells at 5+  
-  _(curve)_
+
+_Your call, so not offered again on soft evidence: Zopandrel, Hunger Dominus · Collective Blessing · Rishkar's Expertise (kept after an earlier suggested cut). To reopen one: `mtg deck intent jasmine-26885316 --set flexible_cards=+Name`._
 
 ---
 

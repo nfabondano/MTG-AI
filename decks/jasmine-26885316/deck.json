@@ -6,16 +6,16 @@
  "format_name": "Commander",
  "owner": "Hugo0111",
  "url": "https://archidekt.com/decks/26885316",
- "updated_at": "2026-09-28T22:24:42.553133Z",
+ "updated_at": "2026-09-29T00:44:35.516024Z",
  "archidekt_bracket": null,
- "imported_at": "2026-09-28T23:06:19+00:00",
+ "imported_at": "2026-09-29T00:45:56+00:00",
  "description": "",
  "deck_tags": [],
  "color_identity": [
   "W",
   "G"
  ],
- "total_cards": 110,
+ "total_cards": 103,
  "commanders": [
   "Jasmine Boreal of the Seven"
  ],
@@ -40,7 +40,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 13939,
+   "edhrec_rank": 13932,
    "salt": 0.18,
    "price_usd": 0.2,
    "commander_legal": true,
@@ -83,7 +83,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 7251,
+   "edhrec_rank": 7262,
    "salt": 0.44,
    "price_usd": 2.33,
    "commander_legal": true,
@@ -109,54 +109,6 @@
    "layout": "normal"
   },
   {
-   "name": "Radagast of Rhosgobel",
-   "quantity": 1,
-   "scryfall_id": "5741bbad-a6e4-45e0-b827-73f48c9975bf",
-   "oracle_id": "84d648c7-655e-4590-a3e0-366a8a4a4cb3",
-   "mana_cost": "{2}{G}{G}",
-   "mana_value": 4.0,
-   "colors": [
-    "G"
-   ],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Legendary Creature — Wizard Avatar",
-   "oracle_text": "The first creature spell you cast each turn costs {2} less to cast and can be cast as though it had flash.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Ramp",
-    "Creature"
-   ],
-   "edhrec_rank": 5387,
-   "salt": null,
-   "price_usd": 1.94,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "alliteration",
-    "cost-reducer-creature",
-    "gives flash",
-    "ramp",
-    "card names",
-    "cost reducer"
-   ],
-   "engine_participation": [
-    "ramp"
-   ],
-   "set_code": "hob",
-   "released_at": "2026-08-14",
-   "rarity": "rare",
-   "layout": "normal"
-  },
-  {
    "name": "Leatherback Baloth",
    "quantity": 1,
    "scryfall_id": "55f97b4c-42c7-4986-a150-0b8de11f0537",
@@ -176,7 +128,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 11182,
+   "edhrec_rank": 11184,
    "salt": 0.0,
    "price_usd": 0.3,
    "commander_legal": true,
@@ -194,50 +146,6 @@
    "set_code": "wwk",
    "released_at": "2010-02-05",
    "rarity": "uncommon",
-   "layout": "normal"
-  },
-  {
-   "name": "Ordinary Bear",
-   "quantity": 1,
-   "scryfall_id": "0feb9817-56e1-465a-851c-b2fe202aa8ae",
-   "oracle_id": "89a2fab8-b074-42aa-a871-d9c5de2d0895",
-   "mana_cost": "{3}{G}",
-   "mana_value": 4.0,
-   "colors": [
-    "G"
-   ],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Creature — Bear",
-   "oracle_text": "",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Creature"
-   ],
-   "edhrec_rank": 15222,
-   "salt": null,
-   "price_usd": 0.19,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "cycle-hob-bear-vertical",
-    "cycle",
-    "vertical-cycle"
-   ],
-   "engine_participation": [
-    "vanilla"
-   ],
-   "set_code": "hob",
-   "released_at": "2026-08-14",
-   "rarity": "common",
    "layout": "normal"
   },
   {
@@ -260,7 +168,7 @@
    "categories": [
     "Finisher"
    ],
-   "edhrec_rank": 4451,
+   "edhrec_rank": 4433,
    "salt": 0.29,
    "price_usd": 3.62,
    "commander_legal": true,
@@ -300,7 +208,7 @@
    "categories": [
     "Finisher"
    ],
-   "edhrec_rank": 5172,
+   "edhrec_rank": 5164,
    "salt": 0.23,
    "price_usd": 0.26,
    "commander_legal": true,
@@ -344,7 +252,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 12991,
+   "edhrec_rank": 13002,
    "salt": 0.0,
    "price_usd": 0.22,
    "commander_legal": true,
@@ -388,7 +296,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 8420,
+   "edhrec_rank": 8424,
    "salt": 0.67,
    "price_usd": 0.19,
    "commander_legal": true,
@@ -428,7 +336,7 @@
    "categories": [
     "Finisher"
    ],
-   "edhrec_rank": 7851,
+   "edhrec_rank": 7821,
    "salt": 0.05,
    "price_usd": 0.35,
    "commander_legal": true,
@@ -474,7 +382,7 @@
    "categories": [
     "Anthem"
    ],
-   "edhrec_rank": 6010,
+   "edhrec_rank": 6011,
    "salt": 0.29,
    "price_usd": 4.84,
    "commander_legal": true,
@@ -539,7 +447,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 11640,
+   "edhrec_rank": 11643,
    "salt": 0.35,
    "price_usd": 0.21,
    "commander_legal": true,
@@ -586,7 +494,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 11960,
+   "edhrec_rank": 11963,
    "salt": 0.15,
    "price_usd": 0.25,
    "commander_legal": true,
@@ -626,7 +534,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 12480,
+   "edhrec_rank": 12495,
    "salt": 0.14,
    "price_usd": 0.24,
    "commander_legal": true,
@@ -666,7 +574,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 10707,
+   "edhrec_rank": 10712,
    "salt": 0.06,
    "price_usd": 0.14,
    "commander_legal": true,
@@ -714,7 +622,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 385,
+   "edhrec_rank": 387,
    "salt": 0.47,
    "price_usd": 8.06,
    "commander_legal": true,
@@ -773,7 +681,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 13372,
+   "edhrec_rank": 13374,
    "salt": 0.25,
    "price_usd": 0.13,
    "commander_legal": true,
@@ -813,7 +721,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 15704,
+   "edhrec_rank": 15713,
    "salt": 0.0,
    "price_usd": 0.12,
    "commander_legal": true,
@@ -853,7 +761,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 13431,
+   "edhrec_rank": 13433,
    "salt": 0.06,
    "price_usd": 0.33,
    "commander_legal": true,
@@ -893,7 +801,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 17479,
+   "edhrec_rank": 17491,
    "salt": 0.2,
    "price_usd": 0.24,
    "commander_legal": true,
@@ -936,7 +844,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 214,
+   "edhrec_rank": 213,
    "salt": 0.4,
    "price_usd": 9.03,
    "commander_legal": true,
@@ -989,7 +897,7 @@
    "categories": [
     "Bounce"
    ],
-   "edhrec_rank": 12486,
+   "edhrec_rank": 12502,
    "salt": 0.26,
    "price_usd": 0.16,
    "commander_legal": true,
@@ -1085,7 +993,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 16407,
+   "edhrec_rank": 16430,
    "salt": 0.0,
    "price_usd": 0.09,
    "commander_legal": true,
@@ -1128,7 +1036,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 14373,
+   "edhrec_rank": 14390,
    "salt": 0.0,
    "price_usd": 0.1,
    "commander_legal": true,
@@ -1288,7 +1196,7 @@
    "categories": [
     "Evasion"
    ],
-   "edhrec_rank": 10565,
+   "edhrec_rank": 10571,
    "salt": 0.0,
    "price_usd": 0.31,
    "commander_legal": true,
@@ -1399,7 +1307,7 @@
    "categories": [
     "Anthem"
    ],
-   "edhrec_rank": 862,
+   "edhrec_rank": 859,
    "salt": 1.74,
    "price_usd": 20.87,
    "commander_legal": true,
@@ -1459,7 +1367,7 @@
    "categories": [
     "Creature"
    ],
-   "edhrec_rank": 20830,
+   "edhrec_rank": 20857,
    "salt": 0.22,
    "price_usd": 0.18,
    "commander_legal": true,
@@ -1502,7 +1410,7 @@
    "categories": [
     "Pump"
    ],
-   "edhrec_rank": 1187,
+   "edhrec_rank": 1189,
    "salt": 0.74,
    "price_usd": 13.29,
    "commander_legal": true,
@@ -1534,8 +1442,7 @@
     "scales with power"
    ],
    "engine_participation": [
-    "anthem",
-    "protection"
+    "anthem"
    ],
    "set_code": "one",
    "released_at": "2023-02-10",
@@ -1567,7 +1474,7 @@
    "categories": [
     "Commander"
    ],
-   "edhrec_rank": 11716,
+   "edhrec_rank": 11722,
    "salt": 0.07,
    "price_usd": 0.33,
    "commander_legal": true,
@@ -1622,7 +1529,7 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 2663,
+   "edhrec_rank": 2646,
    "salt": null,
    "price_usd": 2.18,
    "commander_legal": true,
@@ -1720,65 +1627,6 @@
    "set_code": "rvr",
    "released_at": "2024-01-12",
    "rarity": "mythic",
-   "layout": "normal"
-  },
-  {
-   "name": "Wilt-Leaf Liege",
-   "quantity": 1,
-   "scryfall_id": "4d383bbf-6bb1-4c2c-899b-65d8df9d0889",
-   "oracle_id": "2441696b-a9ba-4813-ba2e-e71f85281d05",
-   "mana_cost": "{1}{G/W}{G/W}{G/W}",
-   "mana_value": 4.0,
-   "colors": [
-    "W",
-    "G"
-   ],
-   "color_identity": [
-    "W",
-    "G"
-   ],
-   "type_line": "Creature — Knight Elf",
-   "oracle_text": "({G/W} can be paid with either {G} or {W}.)\nOther green creatures you control get +1/+1.\nOther white creatures you control get +1/+1.\nIf a spell or ability an opponent controls causes you to discard this card, put it onto the battlefield instead of putting it into your graveyard.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Anthem"
-   ],
-   "edhrec_rank": 11868,
-   "salt": 0.0,
-   "price_usd": 0.17,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "alliteration",
-    "anthem",
-    "cycle-mm2-r-two-color",
-    "cycle-shm-liege",
-    "hate-discard",
-    "power boost to all",
-    "sneak-self",
-    "synergy-green",
-    "synergy-white",
-    "toughness boost to all",
-    "unique mana cost",
-    "card names",
-    "cost ignorer",
-    "cycle",
-    "hate",
-    "sneak"
-   ],
-   "engine_participation": [
-    "anthem"
-   ],
-   "set_code": "fdn",
-   "released_at": "2024-11-15",
-   "rarity": "rare",
    "layout": "normal"
   },
   {
@@ -1886,66 +1734,6 @@
    "layout": "normal"
   },
   {
-   "name": "Lifecrafter's Bestiary",
-   "quantity": 1,
-   "scryfall_id": "cfb90c0c-50e7-4602-a64b-eeba9ec32e17",
-   "oracle_id": "5f2a3797-28aa-4c7a-ba2b-fd243a1747fd",
-   "mana_cost": "{3}",
-   "mana_value": 3.0,
-   "colors": [],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Artifact",
-   "oracle_text": "At the beginning of your upkeep, scry 1.\nWhenever you cast a creature spell, you may pay {G}. If you do, draw a card.",
-   "mana_production": {},
-   "keywords": [
-    "Scry"
-   ],
-   "categories": [
-    "Draw"
-   ],
-   "edhrec_rank": 1420,
-   "salt": 0.17,
-   "price_usd": 0.35,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "draw"
-   ],
-   "tags": [
-    "cast trigger-you",
-    "draw engine",
-    "repeatable pure draw",
-    "repeatable scry",
-    "bottom deck manipulation",
-    "card advantage",
-    "cast trigger",
-    "draw",
-    "library manipulation",
-    "peek",
-    "peek-library",
-    "pure draw",
-    "repeatable card advantage",
-    "repeatable draw",
-    "scry",
-    "top deck manipulation",
-    "triggered ability"
-   ],
-   "engine_participation": [
-    "draw"
-   ],
-   "set_code": "mkc",
-   "released_at": "2024-02-09",
-   "rarity": "rare",
-   "layout": "normal"
-  },
-  {
    "name": "Spear of Heliod",
    "quantity": 1,
    "scryfall_id": "34ef01da-d311-4d4f-9f7b-328e7bb17db4",
@@ -1965,7 +1753,7 @@
    "categories": [
     "Anthem"
    ],
-   "edhrec_rank": 5346,
+   "edhrec_rank": 5354,
    "salt": 0.24,
    "price_usd": 1.1,
    "commander_legal": true,
@@ -2259,7 +2047,7 @@
    "categories": [
     "Anthem"
    ],
-   "edhrec_rank": 9410,
+   "edhrec_rank": 9416,
    "salt": 0.0,
    "price_usd": 0.73,
    "commander_legal": true,
@@ -2308,7 +2096,7 @@
    "categories": [
     "Anthem"
    ],
-   "edhrec_rank": 6314,
+   "edhrec_rank": 6305,
    "salt": 0.14,
    "price_usd": 0.33,
    "commander_legal": true,
@@ -2354,7 +2142,7 @@
    "categories": [
     "Anthem"
    ],
-   "edhrec_rank": 565,
+   "edhrec_rank": 567,
    "salt": 0.56,
    "price_usd": 6.54,
    "commander_legal": true,
@@ -2415,7 +2203,7 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 705,
+   "edhrec_rank": 706,
    "salt": 0.66,
    "price_usd": 7.45,
    "commander_legal": true,
@@ -2468,7 +2256,7 @@
    "categories": [
     "Anthem"
    ],
-   "edhrec_rank": 8144,
+   "edhrec_rank": 8149,
    "salt": 0.15,
    "price_usd": 0.39,
    "commander_legal": true,
@@ -2512,7 +2300,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 611,
+   "edhrec_rank": 612,
    "salt": 0.42,
    "price_usd": 14.49,
    "commander_legal": true,
@@ -2570,7 +2358,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 1357,
+   "edhrec_rank": 1358,
    "salt": 0.15,
    "price_usd": 1.17,
    "commander_legal": true,
@@ -2603,56 +2391,6 @@
    "set_code": "clu",
    "released_at": "2024-02-23",
    "rarity": "uncommon",
-   "layout": "normal"
-  },
-  {
-   "name": "Flowering of the White Tree",
-   "quantity": 1,
-   "scryfall_id": "2203b2cd-48e5-471a-85fe-dc81012e5d61",
-   "oracle_id": "3cda958a-f777-433d-850e-a6c8f581db4e",
-   "mana_cost": "{W}{W}",
-   "mana_value": 2.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Legendary Enchantment",
-   "oracle_text": "Legendary creatures you control get +2/+1 and have ward {1}.\nNonlegendary creatures you control get +1/+1.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Anthem"
-   ],
-   "edhrec_rank": 805,
-   "salt": 0.42,
-   "price_usd": 9.54,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "anthem",
-    "gives ward",
-    "keyword anthem",
-    "power boost to all",
-    "protects-all",
-    "synergy-legendary",
-    "toughness boost to all",
-    "protection"
-   ],
-   "engine_participation": [
-    "anthem",
-    "protection"
-   ],
-   "set_code": "ltr",
-   "released_at": "2023-06-23",
-   "rarity": "rare",
    "layout": "normal"
   },
   {
@@ -2713,61 +2451,6 @@
    "layout": "normal"
   },
   {
-   "name": "Asceticism",
-   "quantity": 1,
-   "scryfall_id": "bde335c5-0e87-43c9-bef6-423e4d1caf35",
-   "oracle_id": "9396546c-d067-4ce3-9c3d-b62cca970b4f",
-   "mana_cost": "{3}{G}{G}",
-   "mana_value": 5.0,
-   "colors": [
-    "G"
-   ],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Enchantment",
-   "oracle_text": "Creatures you control have hexproof.\n{1}{G}: Regenerate target creature. (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
-   "mana_production": {},
-   "keywords": [
-    "Heal",
-    "Regenerate"
-   ],
-   "categories": [
-    "Protection"
-   ],
-   "edhrec_rank": 1329,
-   "salt": 0.61,
-   "price_usd": 7.41,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [],
-   "tags": [
-    "activated ability",
-    "gives hexproof",
-    "keyword anthem",
-    "protects-all",
-    "protects-creature",
-    "regenerates other",
-    "repeatable crime",
-    "single english word name",
-    "card names",
-    "protection"
-   ],
-   "engine_participation": [
-    "anthem",
-    "protection"
-   ],
-   "set_code": "ltc",
-   "released_at": "2023-06-23",
-   "rarity": "rare",
-   "layout": "normal"
-  },
-  {
    "name": "Champions from Beyond",
    "quantity": 1,
    "scryfall_id": "d1031ce5-063f-4c38-a6a9-abc15d254dfc",
@@ -2791,7 +2474,7 @@
    "categories": [
     "Tokens"
    ],
-   "edhrec_rank": 3724,
+   "edhrec_rank": 3704,
    "salt": 0.18,
    "price_usd": 2.17,
    "commander_legal": true,
@@ -2861,7 +2544,7 @@
    "categories": [
     "Removal"
    ],
-   "edhrec_rank": 2748,
+   "edhrec_rank": 2750,
    "salt": 0.21,
    "price_usd": 2.04,
    "commander_legal": true,
@@ -2918,7 +2601,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 1058,
+   "edhrec_rank": 1059,
    "salt": 0.21,
    "price_usd": 0.57,
    "commander_legal": true,
@@ -2977,7 +2660,7 @@
     "Pump",
     "Enchantment"
    ],
-   "edhrec_rank": 7544,
+   "edhrec_rank": 7381,
    "salt": null,
    "price_usd": 6.16,
    "commander_legal": true,
@@ -3066,67 +2749,6 @@
    "set_code": "msc",
    "released_at": "2026-06-26",
    "rarity": "common",
-   "layout": "normal"
-  },
-  {
-   "name": "Beast Within",
-   "quantity": 1,
-   "scryfall_id": "400b43aa-c1d2-4435-b863-061f43889422",
-   "oracle_id": "7735eeba-693b-47e2-bd51-414379cf1016",
-   "mana_cost": "{2}{G}",
-   "mana_value": 3.0,
-   "colors": [
-    "G"
-   ],
-   "color_identity": [
-    "G"
-   ],
-   "type_line": "Instant",
-   "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Removal"
-   ],
-   "edhrec_rank": 25,
-   "salt": 0.32,
-   "price_usd": 0.66,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "removal"
-   ],
-   "tags": [
-    "color break",
-    "donate token",
-    "removal-destroy",
-    "removal-permanent",
-    "single target instant/sorcery",
-    "spot removal",
-    "swap removal",
-    "removal",
-    "removal-artifact",
-    "removal-aura",
-    "removal-battle",
-    "removal-creature",
-    "removal-enchantment",
-    "removal-equipment",
-    "removal-land",
-    "removal-planeswalker",
-    "removal-spacecraft",
-    "removal-vehicle"
-   ],
-   "engine_participation": [
-    "removal"
-   ],
-   "set_code": "msc",
-   "released_at": "2026-06-26",
-   "rarity": "uncommon",
    "layout": "normal"
   },
   {
@@ -3254,7 +2876,7 @@
    "categories": [
     "Protection"
    ],
-   "edhrec_rank": 355,
+   "edhrec_rank": 356,
    "salt": 0.43,
    "price_usd": 9.64,
    "commander_legal": true,
@@ -3283,8 +2905,7 @@
     "protection"
    ],
    "engine_participation": [
-    "draw",
-    "protection"
+    "draw"
    ],
    "set_code": "blb",
    "released_at": "2024-08-02",
@@ -3394,75 +3015,10 @@
     "protection",
     "protects-creature"
    ],
-   "engine_participation": [
-    "protection"
-   ],
+   "engine_participation": [],
    "set_code": "cmm",
    "released_at": "2023-08-04",
    "rarity": "rare",
-   "layout": "normal"
-  },
-  {
-   "name": "Generous Gift",
-   "quantity": 1,
-   "scryfall_id": "c3f9b454-97e9-4c77-b37a-e974221ae385",
-   "oracle_id": "fae37e28-e137-4177-b973-fa8b4dd8f409",
-   "mana_cost": "{2}{W}",
-   "mana_value": 3.0,
-   "colors": [
-    "W"
-   ],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Instant",
-   "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Elephant creature token.",
-   "mana_production": {},
-   "keywords": [],
-   "categories": [
-    "Removal"
-   ],
-   "edhrec_rank": 61,
-   "salt": 0.32,
-   "price_usd": 0.83,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "removal"
-   ],
-   "tags": [
-    "alliteration",
-    "donate token",
-    "out of color token",
-    "removal-destroy",
-    "removal-permanent",
-    "single target instant/sorcery",
-    "spot removal",
-    "swap removal",
-    "card names",
-    "removal",
-    "removal-artifact",
-    "removal-aura",
-    "removal-battle",
-    "removal-creature",
-    "removal-enchantment",
-    "removal-equipment",
-    "removal-land",
-    "removal-planeswalker",
-    "removal-spacecraft",
-    "removal-vehicle"
-   ],
-   "engine_participation": [
-    "removal"
-   ],
-   "set_code": "msc",
-   "released_at": "2026-06-26",
-   "rarity": "uncommon",
    "layout": "normal"
   },
   {
@@ -3485,7 +3041,7 @@
    "categories": [
     "Ramp"
    ],
-   "edhrec_rank": 451,
+   "edhrec_rank": 452,
    "salt": 0.23,
    "price_usd": 3.27,
    "commander_legal": true,
@@ -3542,7 +3098,7 @@
    "categories": [
     "Protection"
    ],
-   "edhrec_rank": 1355,
+   "edhrec_rank": 1346,
    "salt": 0.37,
    "price_usd": 3.2,
    "commander_legal": true,
@@ -3565,7 +3121,6 @@
     "protection"
    ],
    "engine_participation": [
-    "protection",
     "vanilla"
    ],
    "set_code": "frc",
@@ -3929,7 +3484,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 368,
+   "edhrec_rank": 367,
    "salt": 0.24,
    "price_usd": 1.51,
    "commander_legal": true,
@@ -3981,7 +3536,7 @@
    "categories": [
     "Draw"
    ],
-   "edhrec_rank": 2058,
+   "edhrec_rank": 2059,
    "salt": 0.16,
    "price_usd": 1.94,
    "commander_legal": true,
@@ -4098,7 +3653,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 717,
+   "edhrec_rank": 718,
    "salt": 0.18,
    "price_usd": 9.25,
    "commander_legal": true,
@@ -4156,7 +3711,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 1004,
+   "edhrec_rank": 1001,
    "salt": 0.13,
    "price_usd": 6.24,
    "commander_legal": true,
@@ -4322,7 +3877,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 77,
+   "edhrec_rank": 78,
    "salt": 0.29,
    "price_usd": 17.31,
    "commander_legal": true,
@@ -4369,7 +3924,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 1186,
+   "edhrec_rank": 1181,
    "salt": null,
    "price_usd": 6.36,
    "commander_legal": true,
@@ -4467,64 +4022,6 @@
    "layout": "normal"
   },
   {
-   "name": "Minas Tirith",
-   "quantity": 1,
-   "scryfall_id": "b38b6760-616f-4b11-8ce7-ac1223c7fd53",
-   "oracle_id": "7b0d7e62-0287-454a-8702-b0bfa7b41245",
-   "mana_cost": "",
-   "mana_value": 0.0,
-   "colors": [],
-   "color_identity": [
-    "W"
-   ],
-   "type_line": "Legendary Land",
-   "oracle_text": "Minas Tirith enters tapped unless you control a legendary creature.\n{T}: Add {W}.\n{1}{W}, {T}: Draw a card. Activate only if you attacked with two or more creatures this turn.",
-   "mana_production": {
-    "W": 1
-   },
-   "keywords": [],
-   "categories": [
-    "Land"
-   ],
-   "edhrec_rank": 413,
-   "salt": 0.11,
-   "price_usd": 6.38,
-   "commander_legal": true,
-   "is_commander": false,
-   "is_game_changer": false,
-   "is_tutor": false,
-   "is_extra_turns": false,
-   "is_mass_land_denial": false,
-   "combo_flagged": false,
-   "roles": [
-    "land"
-   ],
-   "tags": [
-    "activated ability",
-    "attacking matters",
-    "cycle-ltr-legendary-land",
-    "draw engine",
-    "mana sink",
-    "repeatable pure draw",
-    "synergy-legendary",
-    "utility land",
-    "card advantage",
-    "conditional tapland",
-    "cycle",
-    "cycle-land",
-    "cycle-mono-land",
-    "draw",
-    "pure draw",
-    "repeatable card advantage",
-    "repeatable draw"
-   ],
-   "engine_participation": [],
-   "set_code": "ltr",
-   "released_at": "2023-06-23",
-   "rarity": "rare",
-   "layout": "normal"
-  },
-  {
    "name": "Evendo, Waking Haven",
    "quantity": 1,
    "scryfall_id": "2fa09104-acbe-4410-b101-2fe6ac28efde",
@@ -4546,7 +4043,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 936,
+   "edhrec_rank": 930,
    "salt": 0.58,
    "price_usd": 19.16,
    "commander_legal": true,
@@ -4966,7 +4463,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 678,
+   "edhrec_rank": 674,
    "salt": 0.15,
    "price_usd": 7.83,
    "commander_legal": true,
@@ -5069,7 +4566,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 44,
+   "edhrec_rank": 45,
    "salt": 0.21,
    "price_usd": 12.68,
    "commander_legal": true,
@@ -5128,7 +4625,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 1166,
+   "edhrec_rank": 1167,
    "salt": 0.13,
    "price_usd": 3.49,
    "commander_legal": true,
@@ -5283,7 +4780,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 734,
+   "edhrec_rank": 733,
    "salt": 0.18,
    "price_usd": 6.46,
    "commander_legal": true,
@@ -5388,7 +4885,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 46,
+   "edhrec_rank": 44,
    "salt": 0.1,
    "price_usd": 0.71,
    "commander_legal": true,
@@ -5503,7 +5000,7 @@
    "categories": [
     "Land"
    ],
-   "edhrec_rank": 3866,
+   "edhrec_rank": 3865,
    "salt": 0.25,
    "price_usd": 0.65,
    "commander_legal": true,
@@ -5537,14 +5034,152 @@
    "released_at": "2025-06-13",
    "rarity": "rare",
    "layout": "adventure"
+  },
+  {
+   "name": "Generous Gift",
+   "quantity": 1,
+   "scryfall_id": "c3f9b454-97e9-4c77-b37a-e974221ae385",
+   "oracle_id": "fae37e28-e137-4177-b973-fa8b4dd8f409",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Elephant creature token.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 62,
+   "salt": 0.32,
+   "price_usd": 0.83,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "alliteration",
+    "donate token",
+    "out of color token",
+    "removal-destroy",
+    "removal-permanent",
+    "single target instant/sorcery",
+    "spot removal",
+    "swap removal",
+    "card names",
+    "removal",
+    "removal-artifact",
+    "removal-aura",
+    "removal-battle",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-equipment",
+    "removal-land",
+    "removal-planeswalker",
+    "removal-spacecraft",
+    "removal-vehicle"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
+   "set_code": "msc",
+   "released_at": "2026-06-26",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Beast Within",
+   "quantity": 1,
+   "scryfall_id": "400b43aa-c1d2-4435-b863-061f43889422",
+   "oracle_id": "7735eeba-693b-47e2-bd51-414379cf1016",
+   "mana_cost": "{2}{G}",
+   "mana_value": 3.0,
+   "colors": [
+    "G"
+   ],
+   "color_identity": [
+    "G"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 25,
+   "salt": 0.32,
+   "price_usd": 0.66,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "color break",
+    "donate token",
+    "removal-destroy",
+    "removal-permanent",
+    "single target instant/sorcery",
+    "spot removal",
+    "swap removal",
+    "removal",
+    "removal-artifact",
+    "removal-aura",
+    "removal-battle",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-equipment",
+    "removal-land",
+    "removal-planeswalker",
+    "removal-spacecraft",
+    "removal-vehicle"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
+   "set_code": "msc",
+   "released_at": "2026-06-26",
+   "rarity": "uncommon",
+   "layout": "normal"
   }
  ],
  "excluded": [],
  "history": {
+  "previous_version": "2026-09-28T22:24:42.553133Z",
+  "added": [],
+  "removed": [
+   "Asceticism",
+   "Flowering of the White Tree",
+   "Lifecrafter's Bestiary",
+   "Minas Tirith",
+   "Ordinary Bear",
+   "Radagast of Rhosgobel",
+   "Wilt-Leaf Liege"
+  ],
+  "kept_after_suggested_cut": {
+   "Rishkar's Expertise": "2026-09-29",
+   "Zopandrel, Hunger Dominus": "2026-09-29",
+   "Collective Blessing": "2026-09-29"
+  },
   "suggested_cuts": [
-   "Rishkar's Expertise",
-   "Zopandrel, Hunger Dominus",
-   "Collective Blessing"
+   "Shamanic Revelation"
   ]
  }
 }

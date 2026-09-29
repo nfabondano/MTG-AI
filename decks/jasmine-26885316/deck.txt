@@ -6,7 +6,6 @@
 
 // Deck
 1 Arcane Signet
-1 Lifecrafter's Bestiary
 1 Sol Ring
 1 Spear of Heliod
 1 The Great Henge
@@ -27,9 +26,7 @@
 1 Leatherback Baloth
 1 Llanowar Elves
 1 Orazca Frillback
-1 Ordinary Bear
 1 Quakestrider Ceratops
-1 Radagast of Rhosgobel
 1 Raptor Companion
 1 Ruxa, Patient Professor
 1 Savai Sabertooth
@@ -43,10 +40,8 @@
 1 Toski, Bearer of Secrets
 1 Vorstclaw
 1 Watchwolf
-1 Wilt-Leaf Liege
 1 Zopandrel, Hunger Dominus
 1 Anthem of Champions
-1 Asceticism
 1 Beastmaster Ascension
 1 Champions from Beyond
 1 Collective Blessing
@@ -54,7 +49,6 @@
 1 Dancing from Dark to Dawn
 1 Elemental Bond
 1 Felidar Retreat
-1 Flowering of the White Tree
 1 Guardian Project
 1 Mirari's Wake
 1 Muraganda Petroglyphs
@@ -87,7 +81,6 @@
 1 Gavony Township
 1 Hushwood Verge
 1 Lush Portico
-1 Minas Tirith
 1 Mosswort Bridge
 1 Overgrown Farmland
 4 Plains

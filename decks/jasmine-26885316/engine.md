@@ -5,7 +5,7 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 ## Archetype
 
-vanilla + anthem + ramp
+vanilla + ramp + anthem
 
 ## Jasmine Boreal of the Seven's role
 
@@ -19,13 +19,12 @@ anthem, ramp, vanilla
 
 ## Clusters
 
-- **vanilla** — 35 cards *(commander wants this)*
-- **anthem** — 16 cards *(commander wants this)*
-- **ramp** — 15 cards *(commander wants this)*
-- **draw** — 18 cards
+- **vanilla** — 34 cards *(commander wants this)*
+- **ramp** — 14 cards *(commander wants this)*
+- **anthem** — 13 cards *(commander wants this)*
+- **draw** — 17 cards
 - **removal** — 7 cards
 - **tutor** — 7 cards
-- **protection** — 6 cards
 
 ## How it ends games
 
@@ -37,8 +36,14 @@ anthem, ramp, vanilla
 
 _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
 
-- **Developing (ramp, draw)** — 33 cards (ramp 15 + draw 18)
+- **Developing (ramp, draw)** — 31 cards (ramp 14 + draw 17)
 - **Breaking parity (removal, sweepers)** — 9 cards (removal 7 + sweeper 2)
 - **Winning (closers, going wide)** — 4 cards (tokens 4)
-- **Behind (protection, recursion)** — 8 cards (protection 6 + recursion 2)
+- **Behind (protection, recursion)** — 6 cards (protection 4 + recursion 2)
+
+## Outside every cluster
+
+Not automatically bad — the tags may simply not name what these do.
+
+- Heroic Intervention
 

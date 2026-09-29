@@ -27,3 +27,18 @@ De reserva:
 - **Elemental Bond** — hace el mismo trabajo que Tribute to the World Tree y Guardian Project. Ojo: con tu criterio de Woodland Liege en Slinza (robar por cada criatura que entra, tokens incluidos) seguramente te la quieras quedar; en ese caso la reserva es **Isamaru** (2/2 por 1, mismo motivo que Savannah Lions).
 
 La herramienta coincide en Asceticism, Flowering y Zopandrel. También propone Rishkar's Expertise y Collective Blessing, que dejaríamos: Rishkar's roba 10+ con Gigantosaurus y Blessing es el mejor anthem.
+
+## 2026-09-29 — Feedback de Nicolas y los últimos 3 (el mazo quedó en 103)
+
+- **Zopandrel** se queda: duplica fuerza y resistencia sin dar habilidades, así que no apaga a Jasmine.
+- **La rampa y el robo** no se cortan: son muy necesarios en este mazo.
+- En Archidekt salieron Asceticism, Flowering of the White Tree, Lifecrafter's Bestiary, Ordinary Bear, Radagast, Wilt-Leaf Liege y Minas Tirith.
+
+Los últimos 3:
+1. **Savannah Lions** — 2/1 por 1, el cuerpo más débil.
+2. **Isamaru, Hound of Konda** — 2/2 por 1, el siguiente más débil.
+3. **Spear of Heliod** — +1/+1 por 3 es el anthem más flojo; ya sacaste Wilt-Leaf Liege, y quedan Anthem of Champions, Muraganda, Ruxa, Collective Blessing, Beastmaster Ascension, Elesh Norn, Mirari's Wake y los duplicadores.
+
+2 extras:
+- **Generous Gift** — el Elefante 3/3 que le da al rival no tiene habilidades y puede bloquear a tus vanillas; Beast Within hace el mismo trabajo, con una basta.
+- **Uno de los cuatro 3/1 por 2** (Knight of New Benalia, Blade of the Sixth Pride, Raptor Companion, Savai Sabertooth) — son intercambiables.

@@ -1,28 +1,28 @@
 # jasmine
 
 **Commander:** Jasmine Boreal of the Seven  
-**Identity:** W/G · **Cards:** 110 · **Format:** Commander  
+**Identity:** W/G · **Cards:** 103 · **Format:** Commander  
 **Source:** https://archidekt.com/decks/26885316
 
 ## What stands out
 
-- Illegal: Deck has 110 cards; Commander requires exactly 100.
-- 16 draw — more than the usual 8-12. (tags count 18)
-- 19 spells at 5+ mana (13 counting Jasmine Boreal of the Seven's mana and spells that discount themselves) is top-heavy for a 100-card deck.
+- Illegal: Deck has 103 cards; Commander requires exactly 100.
+- 15 draw — more than the usual 8-12. (tags count 17)
+- 18 spells at 5+ mana, but only 12 counting Jasmine Boreal of the Seven's mana and spells that discount themselves — lighter than it looks.
 - 4 combos one card away — see the combo section.
 
 
 ## What this deck does
 
-**vanilla + anthem + ramp**
+**vanilla + ramp + anthem**
 
 **Commander role:** enabler — the 99 must supply: payoffs.
 
-vanilla 35* · anthem 16* · ramp 15* · draw 18 · removal 7 · tutor 7 · protection 6
+vanilla 34* · ramp 14* · anthem 13* · draw 17 · removal 7 · tutor 7
 
 _\* the commander's own text asks for this._
 
-**Oversupplied:** draw 18 (want ~12), tutor 7 (want ~4)
+**Oversupplied:** draw 17 (want ~12), tutor 7 (want ~4)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -30,16 +30,16 @@ _Clusters come from human-curated functional tags, not oracle-text guessing. A c
 
 **This deck is not legal as built.**
 
-- Deck has 110 cards; Commander requires exactly 100.
+- Deck has 103 cards; Commander requires exactly 100.
 
 ## Mana
 
-**Lands:** 34 (+1 modal spell-lands = 35 effective) · suggested ~36
+**Lands:** 33 (+1 modal spell-lands = 34 effective) · suggested ~36
 
 | Colour | Pips | Heaviest | Sources | Lands | Need |
 |---|---:|---:|---:|---:|---:|
-| White | 35 | 3 | 25 | 21 | 23 |
-| Green | 90 | 5 | 29 | 23 | 23 |
+| White | 30 | 2 | 24 | 20 | 20 |
+| Green | 82 | 5 | 29 | 23 | 23 |
 
 _Heaviest is the most pips of that colour any single card asks for; Need is how many sources that card wants to be castable on curve._
 
@@ -47,38 +47,38 @@ _Sources count lands plus anything that taps for mana, restricted to the deck's 
 
 ## Curve
 
-**Average mana value:** 3.38 (nonland)
+**Average mana value:** 3.36 (nonland)
 
 ```
  0 |                      0
  1 | ██████               7
- 2 | ████████████████████ 23
- 3 | ███████████████      17
- 4 | █████████            10
- 5 | █████████            10
- 6 | ███                  4
-7+ | ████                 5
+ 2 | ████████████████████ 22
+ 3 | ███████████████      16
+ 4 | ██████               7
+ 5 | ████████             9
+ 6 | ████                 4
+7+ | █████                5
 ```
 
-Creature 35 · Land 34 · Enchantment 15 · Instant 10 · Sorcery 9 · Artifact 6 · Planeswalker 1
+Land 33 · Creature 32 · Enchantment 13 · Instant 10 · Sorcery 9 · Artifact 5 · Planeswalker 1
 
-- 19 spells at 5+ mana (13 counting Jasmine Boreal of the Seven's mana and spells that discount themselves) is top-heavy for a 100-card deck.
+- 18 spells at 5+ mana, but only 12 counting Jasmine Boreal of the Seven's mana and spells that discount themselves — lighter than it looks.
 
 ## Roles
 
 | Role | Tags | Oracle text | Typical |
 |---|---:|---:|---:|
-| Ramp | 15 | 12 | 8–12 |
-| Draw | 18 | 16 | 8–12 |
+| Ramp | 14 | 12 | 8–12 |
+| Draw | 17 | 15 | 8–12 |
 | Removal | 7 | 5 | 6–10 |
 | Wipe | 2 | 1 | 2–4 |
 | Counterspell | — | 0 | — |
-| Protection | 6 | 4 | 2–6 |
+| Protection | 4 | 4 | 2–6 |
 | Tutor | 7 | 0 | — |
 | Recursion | 2 | 2 | — |
 | Graveyard Hate | — | 0 | — |
 
-- 16 draw — more than the usual 8-12. (tags count 18)
+- 15 draw — more than the usual 8-12. (tags count 17)
 
 _Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
 
@@ -100,6 +100,7 @@ Closest established commanders: Ruxa, Patient Professor, Cadira, Caller of the S
 - Sandwurm Convergence — in 45% of decks
 - Quilled Slagwurm — in 43% of decks
 - Elite Vanguard — in 40% of decks
+- Lifecrafter's Bestiary — in 36% of decks
 - Fang-Druid Summoner — in 36% of decks
 - Harmonize — in 36% of decks
 - Oreskos Swiftclaw — in 35% of decks
@@ -118,12 +119,12 @@ _Mana-base staples missing (separate on purpose): Selesnya Sanctuary, Sungrass P
 - Fang-Druid Summoner — synergy +0.35
 - Oreskos Swiftclaw — synergy +0.34
 - Gaea's Anthem — synergy +0.33
+- Lifecrafter's Bestiary — synergy +0.31
+- Ordinary Bear — synergy +0.28
 - Expedition Envoy — synergy +0.28
 - Glorious Anthem — synergy +0.27
 - Grizzled Leotau — synergy +0.26
 - Maja, Bretagard Protector — synergy +0.25
-- Indomitable Ancients — synergy +0.25
-- Prowling Caracal — synergy +0.24
 
 ## Combos
 
@@ -148,7 +149,7 @@ _An estimate from what the deck can do on paper. How it actually plays, and what
 
 ## Price
 
-**Deck total:** $485.64 · 4 cards without a price
+**Deck total:** $459.66 · 4 cards without a price
 
 Most expensive:
 

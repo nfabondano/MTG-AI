@@ -2,12 +2,12 @@
  "id": 26885316,
  "name": "jasmine",
  "createdAt": "2026-09-28T21:42:12.332892Z",
- "updatedAt": "2026-09-28T22:24:42.553133Z",
+ "updatedAt": "2026-09-29T00:44:35.516024Z",
  "deckFormat": 3,
  "edhBracket": null,
  "game": null,
  "description": "",
- "viewCount": 11,
+ "viewCount": 14,
  "featured": "https://card-images.archidekt.com/art/front/c/1/c1f5bcc4-3ec7-42ae-8e4b-80a9b9135ff0.webp",
  "customFeatured": "",
  "hasPrimer": false,
@@ -212,7 +212,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 13939,
+     "edhrecRank": 13932,
      "faces": [],
      "layout": "normal",
      "uid": "9ca808c5-9338-4199-a45b-df1a1a20625e",
@@ -381,7 +381,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 7251,
+     "edhrecRank": 7262,
      "faces": [],
      "layout": "normal",
      "uid": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
@@ -496,181 +496,6 @@
    }
   },
   {
-   "id": 3521465691,
-   "categories": [
-    "Ramp",
-    "Creature"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:43:14.172380Z",
-   "updatedAt": "2026-09-28T22:10:41.364634Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 154237,
-    "artist": "Anna Podedworna",
-    "tcgProductId": 709568,
-    "ckFoilId": 331049,
-    "ckNormalId": 331024,
-    "cmEd": null,
-    "scgSku": "SGL-MTG-HOB-136-ENN",
-    "scgFoilSku": "SGL-MTG-HOB-136-ENF",
-    "cardTraderSku": "401333",
-    "collectorNumber": "136",
-    "multiverseid": 0,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 154210,
-    "uid": "5741bbad-a6e4-45e0-b827-73f48c9975bf",
-    "displayName": null,
-    "releasedAt": "2026-08-14",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "hob",
-     "editionname": "The Hobbit",
-     "editiondate": "2026-08-14",
-     "editiontype": "expansion",
-     "mtgoCode": "hob"
-    },
-    "flavor": "\"Perhaps you have heard of my good cousin Radagast who lives near the southern borders of Mirkwood?\" Gandalf asked.\n\"Yes,\" said Beorn, \"not a bad fellow as Wizards go, I believe.\"",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1785496313",
-    "oracleCard": {
-     "id": 52825,
-     "cmc": 4,
-     "colorIdentity": [
-      "Green"
-     ],
-     "colors": [
-      "Green"
-     ],
-     "edhrecRank": 5387,
-     "faces": [],
-     "layout": "normal",
-     "uid": "84d648c7-655e-4590-a3e0-366a8a4a4cb3",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "legal",
-      "penny": "not_legal",
-      "pioneer": "legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "legal",
-      "future": "legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal",
-      "tlr": "not_legal"
-     },
-     "manaCost": "{2}{G}{G}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Radagast of Rhosgobel",
-     "power": "2",
-     "salt": null,
-     "subTypes": [
-      "Wizard",
-      "Avatar"
-     ],
-     "superTypes": [
-      "Legendary"
-     ],
-     "keywords": [],
-     "oTags": [
-      "alliteration",
-      "cost-reducer-creature",
-      "gives flash",
-      "ramp"
-     ],
-     "inheritedTags": [
-      "card names",
-      "cost reducer"
-     ],
-     "text": "The first creature spell you cast each turn costs {2} less to cast and can be cast as though it had flash.",
-     "tokens": [],
-     "toughness": "5",
-     "types": [
-      "Creature"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": null,
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 2.49,
-     "ckfoil": 3.99,
-     "ckMinimum": 2.49,
-     "cm": 2.96,
-     "cmfoil": 3.83,
-     "cmMinimum": 2.96,
-     "mtgo": 0.01,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.01,
-     "tcg": 1.99,
-     "tcgfoil": 2.98,
-     "tcgMinimum": 1.99,
-     "scg": 3.99,
-     "scgfoil": 3.99,
-     "scgMinimum": 3.99,
-     "mp": 1.66,
-     "mpfoil": 2.7,
-     "mpMinimum": 1.66,
-     "tcgLand": 0.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 0.0,
-     "cardTrader": 3.02,
-     "cardTraderFoil": 3.64,
-     "cardTraderMinimum": 3.02,
-     "cs": 2.23,
-     "csfoil": 3.03,
-     "csMinimum": 2.23
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3521466970,
    "categories": [
     "Creature"
@@ -727,7 +552,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 11182,
+     "edhrecRank": 11184,
      "faces": [],
      "layout": "normal",
      "uid": "0ee14128-3bec-4b65-8ee4-619337d4ed45",
@@ -834,174 +659,6 @@
    }
   },
   {
-   "id": 3521465440,
-   "categories": [
-    "Creature"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:43:07.957888Z",
-   "updatedAt": "2026-09-28T21:43:07.957911Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 154214,
-    "artist": "Andrea Piparo",
-    "tcgProductId": 708816,
-    "ckFoilId": 330927,
-    "ckNormalId": 330911,
-    "cmEd": null,
-    "scgSku": "SGL-MTG-HOB-133-ENN",
-    "scgFoilSku": "SGL-MTG-HOB-133-ENF",
-    "cardTraderSku": "401330",
-    "collectorNumber": "133",
-    "multiverseid": 0,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 154204,
-    "uid": "0feb9817-56e1-465a-851c-b2fe202aa8ae",
-    "displayName": null,
-    "releasedAt": "2026-08-14",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "hob",
-     "editionname": "The Hobbit",
-     "editiondate": "2026-08-14",
-     "editiontype": "expansion",
-     "mtgoCode": "hob"
-    },
-    "flavor": "\"I should say there were little bears, large bears, ordinary bears, and gigantic big bears, all dancing outside from dark to nearly dawn.\"\n—Gandalf",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1785323277",
-    "oracleCard": {
-     "id": 52805,
-     "cmc": 4,
-     "colorIdentity": [
-      "Green"
-     ],
-     "colors": [
-      "Green"
-     ],
-     "edhrecRank": 15222,
-     "faces": [],
-     "layout": "normal",
-     "uid": "89a2fab8-b074-42aa-a871-d9c5de2d0895",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "legal",
-      "penny": "legal",
-      "pioneer": "legal",
-      "duel": "legal",
-      "pauper": "legal",
-      "standard": "legal",
-      "future": "legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal",
-      "tlr": "not_legal"
-     },
-     "manaCost": "{3}{G}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Ordinary Bear",
-     "power": "4",
-     "salt": null,
-     "subTypes": [
-      "Bear"
-     ],
-     "superTypes": [],
-     "keywords": [],
-     "oTags": [
-      "cycle-hob-bear-vertical"
-     ],
-     "inheritedTags": [
-      "cycle",
-      "vertical-cycle"
-     ],
-     "text": "",
-     "tokens": [],
-     "toughness": "5",
-     "types": [
-      "Creature"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": null,
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 0.35,
-     "ckfoil": 0.49,
-     "ckMinimum": 0.35,
-     "cm": 0.02,
-     "cmfoil": 0.05,
-     "cmMinimum": 0.02,
-     "mtgo": 0.01,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.01,
-     "tcg": 0.19,
-     "tcgfoil": 0.3,
-     "tcgMinimum": 0.19,
-     "scg": 0.29,
-     "scgfoil": 0.39,
-     "scgMinimum": 0.29,
-     "mp": 0.15,
-     "mpfoil": 0.15,
-     "mpMinimum": 0.15,
-     "tcgLand": 0.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 0.0,
-     "cardTrader": 0.11,
-     "cardTraderFoil": 0.11,
-     "cardTraderMinimum": 0.11,
-     "cs": 0.22,
-     "csfoil": 0.26,
-     "csMinimum": 0.22
-    },
-    "rarity": "common",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3521465910,
    "categories": [
     "Finisher"
@@ -1058,7 +715,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 4451,
+     "edhrecRank": 4433,
      "faces": [],
      "layout": "normal",
      "uid": "e666bae7-dd51-4921-8b89-7e8d423caba0",
@@ -1221,7 +878,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 5172,
+     "edhrecRank": 5164,
      "faces": [],
      "layout": "normal",
      "uid": "e56629ba-82d4-470f-9a6b-40c29d835af2",
@@ -1388,7 +1045,7 @@
       "White",
       "Green"
      ],
-     "edhrecRank": 12991,
+     "edhrecRank": 13002,
      "faces": [],
      "layout": "normal",
      "uid": "a35c2e20-eb90-4132-b65f-be1fcb569819",
@@ -1556,7 +1213,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 8420,
+     "edhrecRank": 8424,
      "faces": [],
      "layout": "normal",
      "uid": "86e3c86c-d50e-4aa9-b080-f68b6afee87c",
@@ -1719,7 +1376,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 7851,
+     "edhrecRank": 7821,
      "faces": [],
      "layout": "normal",
      "uid": "856245a6-c697-4f03-90be-77d8eb2d274e",
@@ -1891,7 +1548,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 6010,
+     "edhrecRank": 6011,
      "faces": [],
      "layout": "normal",
      "uid": "d760f2f0-6653-47c4-bd7b-aab2f398ddf2",
@@ -2079,7 +1736,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 11640,
+     "edhrecRank": 11643,
      "faces": [],
      "layout": "normal",
      "uid": "c8384392-1914-4423-9f49-92f5643d15dc",
@@ -2250,7 +1907,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 11960,
+     "edhrecRank": 11963,
      "faces": [],
      "layout": "normal",
      "uid": "df7f697e-6886-4897-a024-61ae225c1b34",
@@ -2413,7 +2070,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 12480,
+     "edhrecRank": 12495,
      "faces": [],
      "layout": "normal",
      "uid": "aa944cbe-fdba-4001-97d5-c722fe744dcc",
@@ -2577,7 +2234,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 10707,
+     "edhrecRank": 10712,
      "faces": [],
      "layout": "normal",
      "uid": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
@@ -2746,7 +2403,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 385,
+     "edhrecRank": 387,
      "faces": [],
      "layout": "normal",
      "uid": "a8e707ec-ce77-4bc5-8c76-5ea3e81e8c7f",
@@ -2929,7 +2586,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 13372,
+     "edhrecRank": 13374,
      "faces": [],
      "layout": "normal",
      "uid": "3a9b9fe0-1846-41fc-b7c3-ed9abef27a6a",
@@ -3092,7 +2749,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 15704,
+     "edhrecRank": 15713,
      "faces": [],
      "layout": "normal",
      "uid": "20e65887-c68c-4dc0-b74b-9ce093f40b06",
@@ -3254,7 +2911,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 13431,
+     "edhrecRank": 13433,
      "faces": [],
      "layout": "normal",
      "uid": "2da32ec3-f42f-4edc-b5b3-e5f39fcf370c",
@@ -3417,7 +3074,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 17479,
+     "edhrecRank": 17491,
      "faces": [],
      "layout": "normal",
      "uid": "24f2cf61-22db-4e34-898f-6baa2957d3ae",
@@ -3583,7 +3240,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 214,
+     "edhrecRank": 213,
      "faces": [],
      "layout": "normal",
      "uid": "5da7eea8-bb9e-47ce-a554-8a1ee058bd7a",
@@ -3759,7 +3416,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 12486,
+     "edhrecRank": 12502,
      "faces": [
       {
        "colors": [],
@@ -4141,7 +3798,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 16407,
+     "edhrecRank": 16430,
      "faces": [],
      "layout": "normal",
      "uid": "b7894010-fdba-498e-97de-22bd70332439",
@@ -4309,7 +3966,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 14373,
+     "edhrecRank": 14390,
      "faces": [],
      "layout": "normal",
      "uid": "5c2e0762-4994-4c34-b33f-909c2b3f0f43",
@@ -4839,7 +4496,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 10565,
+     "edhrecRank": 10571,
      "faces": [
       {
        "colors": [],
@@ -5229,7 +4886,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 862,
+     "edhrecRank": 859,
      "faces": [],
      "layout": "normal",
      "uid": "958d71ff-c9f7-46f0-96ca-79e7f4d65a16",
@@ -5415,7 +5072,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 20830,
+     "edhrecRank": 20857,
      "faces": [],
      "layout": "normal",
      "uid": "75f28e54-17ce-49f9-85b2-9f9a04e1d86f",
@@ -5579,7 +5236,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 1187,
+     "edhrecRank": 1189,
      "faces": [],
      "layout": "normal",
      "uid": "b168e4e6-f572-4d9f-b98f-95b2611354cb",
@@ -5770,7 +5427,7 @@
       "White",
       "Green"
      ],
-     "edhrecRank": 11716,
+     "edhrecRank": 11722,
      "faces": [],
      "layout": "normal",
      "uid": "138201c0-556d-4c76-b383-90fc9dad0fe0",
@@ -5949,7 +5606,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 2663,
+     "edhrecRank": 2646,
      "faces": [],
      "layout": "normal",
      "uid": "d5770b0f-4493-42e9-a2d7-0e74a28da4ba",
@@ -6257,189 +5914,6 @@
      "csMinimum": 12.05
     },
     "rarity": "mythic",
-    "globalCategories": []
-   }
-  },
-  {
-   "id": 3521486764,
-   "categories": [
-    "Anthem"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:49:21.228941Z",
-   "updatedAt": "2026-09-28T21:49:21.228965Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 139394,
-    "artist": "Jason Chan",
-    "tcgProductId": 591073,
-    "ckFoilId": 0,
-    "ckNormalId": 305726,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-FDN-668-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "307495",
-    "collectorNumber": "668",
-    "multiverseid": 680807,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 134672,
-    "uid": "4d383bbf-6bb1-4c2c-899b-65d8df9d0889",
-    "displayName": null,
-    "releasedAt": "2024-11-15",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "fdn",
-     "editionname": "Foundations",
-     "editiondate": "2024-11-15",
-     "editiontype": "core",
-     "mtgoCode": "fdn"
-    },
-    "flavor": "",
-    "games": [],
-    "options": [
-     "Normal"
-    ],
-    "scryfallImageHash": "1783908908",
-    "oracleCard": {
-     "id": 18870,
-     "cmc": 4,
-     "colorIdentity": [
-      "White",
-      "Green"
-     ],
-     "colors": [
-      "White",
-      "Green"
-     ],
-     "edhrecRank": 11868,
-     "faces": [],
-     "layout": "normal",
-     "uid": "2441696b-a9ba-4813-ba2e-e71f85281d05",
-     "legalities": {
-      "alchemy": "legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "legal",
-      "penny": "legal",
-      "pioneer": "legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "legal",
-      "future": "legal",
-      "predh": "legal",
-      "timeless": "legal",
-      "canlander": "legal",
-      "tlr": "not_legal"
-     },
-     "manaCost": "{1}{G/W}{G/W}{G/W}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Wilt-Leaf Liege",
-     "power": "4",
-     "salt": 0.0,
-     "subTypes": [
-      "Knight",
-      "Elf"
-     ],
-     "superTypes": [],
-     "keywords": [],
-     "oTags": [
-      "alliteration",
-      "anthem",
-      "cycle-mm2-r-two-color",
-      "cycle-shm-liege",
-      "hate-discard",
-      "power boost to all",
-      "sneak-self",
-      "synergy-green",
-      "synergy-white",
-      "toughness boost to all",
-      "unique mana cost"
-     ],
-     "inheritedTags": [
-      "card names",
-      "cost ignorer",
-      "cycle",
-      "hate",
-      "sneak"
-     ],
-     "text": "({G/W} can be paid with either {G} or {W}.)\nOther green creatures you control get +1/+1.\nOther white creatures you control get +1/+1.\nIf a spell or ability an opponent controls causes you to discard this card, put it onto the battlefield instead of putting it into your graveyard.",
-     "tokens": [],
-     "toughness": "4",
-     "types": [
-      "Creature"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Anthem",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 0.59,
-     "ckfoil": 0.0,
-     "ckMinimum": 0.49,
-     "cm": 0.18,
-     "cmfoil": 0.0,
-     "cmMinimum": 0.1,
-     "mtgo": 0.02,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 0.17,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 0.17,
-     "scg": 0.49,
-     "scgfoil": 0.0,
-     "scgMinimum": 0.49,
-     "mp": 0.15,
-     "mpfoil": 0.0,
-     "mpMinimum": 0.15,
-     "tcgLand": 11.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 11.0,
-     "cardTrader": 0.11,
-     "cardTraderFoil": 0.0,
-     "cardTraderMinimum": 0.11,
-     "cs": 0.21,
-     "csfoil": 0.0,
-     "csMinimum": 0.21
-    },
-    "rarity": "rare",
     "globalCategories": []
    }
   },
@@ -6780,185 +6254,6 @@
    }
   },
   {
-   "id": 3521490991,
-   "categories": [
-    "Draw"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:50:40.863646Z",
-   "updatedAt": "2026-09-28T21:50:40.863681Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 128844,
-    "artist": "Izzy",
-    "tcgProductId": 535865,
-    "ckFoilId": 0,
-    "ckNormalId": 290697,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-MKC-231-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "275632",
-    "collectorNumber": "231",
-    "multiverseid": 650325,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 122610,
-    "uid": "cfb90c0c-50e7-4602-a64b-eeba9ec32e17",
-    "displayName": null,
-    "releasedAt": "2024-02-09",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "mkc",
-     "editionname": "Murders at Karlov Manor Commander",
-     "editiondate": "2024-02-09",
-     "editiontype": "commander",
-     "mtgoCode": null
-    },
-    "flavor": "\"Inspiration is found by looking outward.\"\n—Oviya Pashiri, sage lifecrafter",
-    "games": [],
-    "options": [
-     "Normal"
-    ],
-    "scryfallImageHash": "1783912973",
-    "oracleCard": {
-     "id": 9429,
-     "cmc": 3,
-     "colorIdentity": [
-      "Green"
-     ],
-     "colors": [],
-     "edhrecRank": 1420,
-     "faces": [],
-     "layout": "normal",
-     "uid": "5f2a3797-28aa-4c7a-ba2b-fd243a1747fd",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "legal",
-      "pioneer": "legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal",
-      "tlr": "legal"
-     },
-     "manaCost": "{3}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Lifecrafter's Bestiary",
-     "power": "",
-     "salt": 0.17,
-     "subTypes": [],
-     "superTypes": [],
-     "keywords": [
-      "Scry"
-     ],
-     "oTags": [
-      "cast trigger-you",
-      "draw engine",
-      "repeatable pure draw",
-      "repeatable scry"
-     ],
-     "inheritedTags": [
-      "bottom deck manipulation",
-      "card advantage",
-      "cast trigger",
-      "draw",
-      "library manipulation",
-      "peek",
-      "peek-library",
-      "pure draw",
-      "repeatable card advantage",
-      "repeatable draw",
-      "scry",
-      "top deck manipulation",
-      "triggered ability"
-     ],
-     "text": "At the beginning of your upkeep, scry 1.\nWhenever you cast a creature spell, you may pay {G}. If you do, draw a card.",
-     "tokens": [],
-     "toughness": "",
-     "types": [
-      "Artifact"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Draw",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 0.99,
-     "ckfoil": 0.0,
-     "ckMinimum": 0.99,
-     "cm": 0.4,
-     "cmfoil": 0.3,
-     "cmMinimum": 0.02,
-     "mtgo": 0.03,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 0.35,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 0.34,
-     "scg": 0.75,
-     "scgfoil": 0.0,
-     "scgMinimum": 0.75,
-     "mp": 0.3,
-     "mpfoil": 0.0,
-     "mpMinimum": 0.26,
-     "tcgLand": 18.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 17.0,
-     "cardTrader": 0.47,
-     "cardTraderFoil": 0.0,
-     "cardTraderMinimum": 0.45,
-     "cs": 0.33,
-     "csfoil": 0.0,
-     "csMinimum": 0.33
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3521491190,
    "categories": [
     "Anthem"
@@ -7015,7 +6310,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 5346,
+     "edhrecRank": 5354,
      "faces": [],
      "layout": "normal",
      "uid": "fd66aa66-75a2-41b6-8d57-dc4b9c221ccb",
@@ -7916,7 +7211,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 9410,
+     "edhrecRank": 9416,
      "faces": [],
      "layout": "normal",
      "uid": "e6eff050-f1f6-49ce-a92e-1d1e13e51084",
@@ -8085,7 +7380,7 @@
       "White",
       "Green"
      ],
-     "edhrecRank": 6314,
+     "edhrecRank": 6305,
      "faces": [],
      "layout": "normal",
      "uid": "f1d8e9a6-1903-4be5-8609-1009a463f393",
@@ -8252,7 +7547,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 565,
+     "edhrecRank": 567,
      "faces": [],
      "layout": "normal",
      "uid": "11b5308d-5bc0-4782-875f-a28be36e665d",
@@ -8428,7 +7723,7 @@
       "White",
       "Green"
      ],
-     "edhrecRank": 705,
+     "edhrecRank": 706,
      "faces": [],
      "layout": "normal",
      "uid": "852657c0-18a4-4b28-b9ae-7728acdb5044",
@@ -8602,7 +7897,7 @@
       "White",
       "Green"
      ],
-     "edhrecRank": 8144,
+     "edhrecRank": 8149,
      "faces": [],
      "layout": "normal",
      "uid": "7f7049e8-49ed-46da-89f7-1e40aefb3b0c",
@@ -8767,7 +8062,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 611,
+     "edhrecRank": 612,
      "faces": [],
      "layout": "normal",
      "uid": "72deedab-7c17-4505-aeca-4bc8596d80a5",
@@ -8946,7 +8241,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 1357,
+     "edhrecRank": 1358,
      "faces": [],
      "layout": "normal",
      "uid": "cac95494-0db0-4bec-8665-998431a6f76b",
@@ -9061,179 +8356,6 @@
      "csMinimum": 1.09
     },
     "rarity": "uncommon",
-    "globalCategories": []
-   }
-  },
-  {
-   "id": 3521498864,
-   "categories": [
-    "Anthem"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:52:50.211009Z",
-   "updatedAt": "2026-09-28T21:52:50.211043Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 120664,
-    "artist": "Erikas Perl",
-    "tcgProductId": 499188,
-    "ckFoilId": 278892,
-    "ckNormalId": 278237,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-LTR-015-ENN",
-    "scgFoilSku": "SGL-MTG-LTR-015-ENF",
-    "cardTraderSku": "249244",
-    "collectorNumber": "15",
-    "multiverseid": 616845,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 111940,
-    "uid": "2203b2cd-48e5-471a-85fe-dc81012e5d61",
-    "displayName": null,
-    "releasedAt": "2023-06-23",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "ltr",
-     "editionname": "The Lord of the Rings: Tales of Middle-earth",
-     "editiondate": "2023-06-23",
-     "editiontype": "draft_innovation",
-     "mtgoCode": "ltr"
-    },
-    "flavor": "Aragorn planted the new tree in the court by the fountain, and swiftly and gladly it began to grow.",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1783916332",
-    "oracleCard": {
-     "id": 33980,
-     "cmc": 2,
-     "colorIdentity": [
-      "White"
-     ],
-     "colors": [
-      "White"
-     ],
-     "edhrecRank": 805,
-     "faces": [],
-     "layout": "normal",
-     "uid": "3cda958a-f777-433d-850e-a6c8f581db4e",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal",
-      "tlr": "legal"
-     },
-     "manaCost": "{W}{W}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Flowering of the White Tree",
-     "power": "",
-     "salt": 0.42,
-     "subTypes": [],
-     "superTypes": [
-      "Legendary"
-     ],
-     "keywords": [],
-     "oTags": [
-      "anthem",
-      "gives ward",
-      "keyword anthem",
-      "power boost to all",
-      "protects-all",
-      "synergy-legendary",
-      "toughness boost to all"
-     ],
-     "inheritedTags": [
-      "protection"
-     ],
-     "text": "Legendary creatures you control get +2/+1 and have ward {1}.\nNonlegendary creatures you control get +1/+1.",
-     "tokens": [],
-     "toughness": "",
-     "types": [
-      "Enchantment"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Anthem",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 13.99,
-     "ckfoil": 15.99,
-     "ckMinimum": 13.99,
-     "cm": 6.21,
-     "cmfoil": 6.63,
-     "cmMinimum": 6.0,
-     "mtgo": 0.02,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 9.72,
-     "tcgfoil": 11.88,
-     "tcgMinimum": 9.72,
-     "scg": 12.99,
-     "scgfoil": 14.99,
-     "scgMinimum": 11.99,
-     "mp": 8.28,
-     "mpfoil": 10.78,
-     "mpMinimum": 8.28,
-     "tcgLand": 309.0,
-     "tcgLandFoil": 308.0,
-     "tcgLandMinimum": 278.0,
-     "cardTrader": 8.1,
-     "cardTraderFoil": 14.79,
-     "cardTraderMinimum": 8.1,
-     "cs": 10.95,
-     "csfoil": 11.05,
-     "csMinimum": 10.95
-    },
-    "rarity": "rare",
     "globalCategories": []
    }
   },
@@ -9417,181 +8539,6 @@
    }
   },
   {
-   "id": 3521506639,
-   "categories": [
-    "Protection"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:55:16.011311Z",
-   "updatedAt": "2026-09-28T21:55:16.011334Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 121138,
-    "artist": "Torgeir Fjereide",
-    "tcgProductId": 499776,
-    "ckFoilId": 0,
-    "ckNormalId": 278599,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-LTC-233-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "250161",
-    "collectorNumber": "233",
-    "multiverseid": 621343,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 112820,
-    "uid": "bde335c5-0e87-43c9-bef6-423e4d1caf35",
-    "displayName": null,
-    "releasedAt": "2023-06-23",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "ltc",
-     "editionname": "Tales of Middle-earth Commander",
-     "editiondate": "2023-06-23",
-     "editiontype": "commander",
-     "mtgoCode": "ltc"
-    },
-    "flavor": "\"Radagast has much lore of herbs and beasts, and birds are especially his friends.\"\n—Gandalf",
-    "games": [],
-    "options": [
-     "Normal"
-    ],
-    "scryfallImageHash": "1783915927",
-    "oracleCard": {
-     "id": 852,
-     "cmc": 5,
-     "colorIdentity": [
-      "Green"
-     ],
-     "colors": [
-      "Green"
-     ],
-     "edhrecRank": 1329,
-     "faces": [],
-     "layout": "normal",
-     "uid": "9396546c-d067-4ce3-9c3d-b62cca970b4f",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "not_legal",
-      "competitivebrawl": "not_legal",
-      "premodern": "not_legal",
-      "historic": "not_legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "not_legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "legal",
-      "timeless": "not_legal",
-      "canlander": "legal",
-      "tlr": "not_legal"
-     },
-     "manaCost": "{3}{G}{G}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Asceticism",
-     "power": "",
-     "salt": 0.61,
-     "subTypes": [],
-     "superTypes": [],
-     "keywords": [
-      "Heal",
-      "Regenerate"
-     ],
-     "oTags": [
-      "activated ability",
-      "gives hexproof",
-      "keyword anthem",
-      "protects-all",
-      "protects-creature",
-      "regenerates other",
-      "repeatable crime",
-      "single english word name"
-     ],
-     "inheritedTags": [
-      "card names",
-      "protection"
-     ],
-     "text": "Creatures you control have hexproof.\n{1}{G}: Regenerate target creature. (The next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
-     "tokens": [],
-     "toughness": "",
-     "types": [
-      "Enchantment"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Protection",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 9.49,
-     "ckfoil": 0.0,
-     "ckMinimum": 9.49,
-     "cm": 5.17,
-     "cmfoil": 4.5,
-     "cmMinimum": 4.5,
-     "mtgo": 0.24,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 6.88,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 6.88,
-     "scg": 7.99,
-     "scgfoil": 0.0,
-     "scgMinimum": 7.65,
-     "mp": 5.72,
-     "mpfoil": 0.0,
-     "mpMinimum": 5.72,
-     "tcgLand": 128.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 128.0,
-     "cardTrader": 5.1,
-     "cardTraderFoil": 0.0,
-     "cardTraderMinimum": 5.1,
-     "cs": 6.6,
-     "csfoil": 0.0,
-     "csMinimum": 6.6
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3521508063,
    "categories": [
     "Tokens"
@@ -9648,7 +8595,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 3724,
+     "edhrecRank": 3704,
      "faces": [],
      "layout": "normal",
      "uid": "57e4a1c0-4218-4a07-88e7-d6083884c2b6",
@@ -9841,7 +8788,7 @@
       "White",
       "Green"
      ],
-     "edhrecRank": 2748,
+     "edhrecRank": 2750,
      "faces": [],
      "layout": "normal",
      "uid": "19bb51dd-2b93-45f0-927d-bbafddadd0a3",
@@ -10019,7 +8966,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 1058,
+     "edhrecRank": 1059,
      "faces": [],
      "layout": "normal",
      "uid": "cf8a0782-f545-445e-abac-d9063dad696b",
@@ -10196,7 +9143,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 7544,
+     "edhrecRank": 7381,
      "faces": [],
      "layout": "normal",
      "uid": "5ba482e9-fbb0-4d9f-a3a9-414892bcdfed",
@@ -10492,189 +9439,6 @@
      "csMinimum": 0.33
     },
     "rarity": "common",
-    "globalCategories": []
-   }
-  },
-  {
-   "id": 3521511553,
-   "categories": [
-    "Removal"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:56:48.576424Z",
-   "updatedAt": "2026-09-28T21:56:48.576454Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 153362,
-    "artist": "Thomas Chamberlain-Keen",
-    "tcgProductId": 698192,
-    "ckFoilId": 0,
-    "ckNormalId": 0,
-    "cmEd": null,
-    "scgSku": "SGL-MTG-MSC-169-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "393907",
-    "collectorNumber": "169",
-    "multiverseid": 0,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 150807,
-    "uid": "400b43aa-c1d2-4435-b863-061f43889422",
-    "displayName": null,
-    "releasedAt": "2026-06-26",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "msc",
-     "editionname": "Marvel Super Heroes Commander",
-     "editiondate": "2026-06-26",
-     "editiontype": "commander",
-     "mtgoCode": null
-    },
-    "flavor": "Raw vibranium is hazardous to any who touch it, causing irreversible mutations.",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1783903232",
-    "oracleCard": {
-     "id": 1367,
-     "cmc": 3,
-     "colorIdentity": [
-      "Green"
-     ],
-     "colors": [
-      "Green"
-     ],
-     "edhrecRank": 25,
-     "faces": [],
-     "layout": "normal",
-     "uid": "7735eeba-693b-47e2-bd51-414379cf1016",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "not_legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "legal",
-      "timeless": "legal",
-      "canlander": "legal",
-      "tlr": "legal"
-     },
-     "manaCost": "{2}{G}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Beast Within",
-     "power": "",
-     "salt": 0.32,
-     "subTypes": [],
-     "superTypes": [],
-     "keywords": [],
-     "oTags": [
-      "color break",
-      "donate token",
-      "removal-destroy",
-      "removal-permanent",
-      "single target instant/sorcery",
-      "spot removal",
-      "swap removal"
-     ],
-     "inheritedTags": [
-      "removal",
-      "removal-artifact",
-      "removal-aura",
-      "removal-battle",
-      "removal-creature",
-      "removal-enchantment",
-      "removal-equipment",
-      "removal-land",
-      "removal-planeswalker",
-      "removal-spacecraft",
-      "removal-vehicle"
-     ],
-     "text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
-     "tokens": [
-      "20903"
-     ],
-     "toughness": "",
-     "types": [
-      "Instant"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Removal",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 1.79,
-     "ckfoil": 2.49,
-     "ckMinimum": 1.29,
-     "cm": 0.92,
-     "cmfoil": 0.0,
-     "cmMinimum": 0.2,
-     "mtgo": 0.02,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 0.66,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 0.5,
-     "scg": 1.25,
-     "scgfoil": 0.0,
-     "scgMinimum": 1.05,
-     "mp": 0.62,
-     "mpfoil": 1.18,
-     "mpMinimum": 0.51,
-     "tcgLand": 0.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 21.0,
-     "cardTrader": 1.01,
-     "cardTraderFoil": 1.05,
-     "cardTraderMinimum": 0.82,
-     "cs": 0.59,
-     "csfoil": 2.54,
-     "csMinimum": 0.59
-    },
-    "rarity": "uncommon",
     "globalCategories": []
    }
   },
@@ -11075,7 +9839,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 355,
+     "edhrecRank": 356,
      "faces": [],
      "layout": "normal",
      "uid": "37c06f89-db36-4937-9404-2b07cd22e1a6",
@@ -11545,191 +10309,6 @@
    }
   },
   {
-   "id": 3521512435,
-   "categories": [
-    "Removal"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T21:57:03.544206Z",
-   "updatedAt": "2026-09-28T21:57:03.544227Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 153379,
-    "artist": "David Álvarez",
-    "tcgProductId": 698177,
-    "ckFoilId": 0,
-    "ckNormalId": 0,
-    "cmEd": null,
-    "scgSku": "SGL-MTG-MSC-133-ENN",
-    "scgFoilSku": null,
-    "cardTraderSku": "393871",
-    "collectorNumber": "133",
-    "multiverseid": 0,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 150735,
-    "uid": "c3f9b454-97e9-4c77-b37a-e974221ae385",
-    "displayName": null,
-    "releasedAt": "2026-06-26",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "msc",
-     "editionname": "Marvel Super Heroes Commander",
-     "editiondate": "2026-06-26",
-     "editiontype": "commander",
-     "mtgoCode": null
-    },
-    "flavor": "\"What am I supposed to do with this?\"\n—Everett K. Ross, State Department liaison",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1783903247",
-    "oracleCard": {
-     "id": 19771,
-     "cmc": 3,
-     "colorIdentity": [
-      "White"
-     ],
-     "colors": [
-      "White"
-     ],
-     "edhrecRank": 61,
-     "faces": [],
-     "layout": "normal",
-     "uid": "fae37e28-e137-4177-b973-fa8b4dd8f409",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "not_legal",
-      "competitivebrawl": "not_legal",
-      "premodern": "not_legal",
-      "historic": "not_legal",
-      "commander": "legal",
-      "paupercommander": "legal",
-      "gladiator": "not_legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "not_legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "not_legal",
-      "canlander": "legal",
-      "tlr": "legal"
-     },
-     "manaCost": "{2}{W}",
-     "manaProduction": {
-      "W": null,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Generous Gift",
-     "power": "",
-     "salt": 0.32,
-     "subTypes": [],
-     "superTypes": [],
-     "keywords": [],
-     "oTags": [
-      "alliteration",
-      "donate token",
-      "out of color token",
-      "removal-destroy",
-      "removal-permanent",
-      "single target instant/sorcery",
-      "spot removal",
-      "swap removal"
-     ],
-     "inheritedTags": [
-      "card names",
-      "removal",
-      "removal-artifact",
-      "removal-aura",
-      "removal-battle",
-      "removal-creature",
-      "removal-enchantment",
-      "removal-equipment",
-      "removal-land",
-      "removal-planeswalker",
-      "removal-spacecraft",
-      "removal-vehicle"
-     ],
-     "text": "Destroy target permanent. Its controller creates a 3/3 green Elephant creature token.",
-     "tokens": [
-      "4842"
-     ],
-     "toughness": "",
-     "types": [
-      "Instant"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": "Removal",
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 1.99,
-     "ckfoil": 2.49,
-     "ckMinimum": 1.99,
-     "cm": 0.85,
-     "cmfoil": 0.0,
-     "cmMinimum": 0.4,
-     "mtgo": 0.02,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 0.86,
-     "tcgfoil": 0.0,
-     "tcgMinimum": 0.86,
-     "scg": 1.49,
-     "scgfoil": 0.0,
-     "scgMinimum": 1.49,
-     "mp": 0.77,
-     "mpfoil": 1.03,
-     "mpMinimum": 0.77,
-     "tcgLand": 0.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 32.0,
-     "cardTrader": 1.25,
-     "cardTraderFoil": 1.43,
-     "cardTraderMinimum": 0.85,
-     "cs": 0.73,
-     "csfoil": 1.69,
-     "csMinimum": 0.73
-    },
-    "rarity": "uncommon",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3521514310,
    "categories": [
     "Ramp"
@@ -11786,7 +10365,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 451,
+     "edhrecRank": 452,
      "faces": [],
      "layout": "normal",
      "uid": "736017e2-bc33-49e8-812d-1639443fdb51",
@@ -11963,7 +10542,7 @@
      "colors": [
       "White"
      ],
-     "edhrecRank": 1355,
+     "edhrecRank": 1346,
      "faces": [],
      "layout": "normal",
      "uid": "dc600c06-8239-409e-b53d-20f813a3f5e7",
@@ -13219,7 +11798,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 368,
+     "edhrecRank": 367,
      "faces": [],
      "layout": "normal",
      "uid": "d1d171de-1c6d-4fb9-817a-9c689c709f3d",
@@ -13392,7 +11971,7 @@
      "colors": [
       "Green"
      ],
-     "edhrecRank": 2058,
+     "edhrecRank": 2059,
      "faces": [],
      "layout": "normal",
      "uid": "298a7e1a-b254-442e-bc1d-2a3e5296d849",
@@ -13757,7 +12336,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 717,
+     "edhrecRank": 718,
      "faces": [],
      "layout": "normal",
      "uid": "de75e5dd-8a52-406c-b55c-96d686885500",
@@ -13934,7 +12513,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 1004,
+     "edhrecRank": 1001,
      "faces": [],
      "layout": "normal",
      "uid": "8a44e4e7-dfa2-427b-bbff-11c398fa60bb",
@@ -14458,7 +13037,7 @@
      "cmc": 0,
      "colorIdentity": [],
      "colors": [],
-     "edhrecRank": 77,
+     "edhrecRank": 78,
      "faces": [],
      "layout": "normal",
      "uid": "8dd5f5af-d2d8-4356-8617-8381081b930c",
@@ -14627,7 +13206,7 @@
       "White"
      ],
      "colors": [],
-     "edhrecRank": 1186,
+     "edhrecRank": 1181,
      "faces": [],
      "layout": "normal",
      "uid": "9575d7ce-f26d-4b90-87a3-6329e9799572",
@@ -14932,186 +13511,6 @@
    }
   },
   {
-   "id": 3521542131,
-   "categories": [
-    "Land"
-   ],
-   "companion": false,
-   "flippedDefault": false,
-   "label": ",#656565",
-   "modifier": "Normal",
-   "quantity": 1,
-   "customCmc": null,
-   "removedCategories": null,
-   "createdAt": "2026-09-28T22:06:29.780079Z",
-   "updatedAt": "2026-09-28T22:06:29.780113Z",
-   "deletedAt": null,
-   "notes": null,
-   "card": {
-    "id": 120574,
-    "artist": "Arthur Yuan",
-    "tcgProductId": 498350,
-    "ckFoilId": 278803,
-    "ckNormalId": 277943,
-    "cmEd": "",
-    "scgSku": "SGL-MTG-LTR-256-ENN",
-    "scgFoilSku": "SGL-MTG-LTR-256-ENF",
-    "cardTraderSku": "248575",
-    "collectorNumber": "256",
-    "multiverseid": 617086,
-    "mtgoFoilId": 0,
-    "mtgoNormalId": 112422,
-    "uid": "b38b6760-616f-4b11-8ce7-ac1223c7fd53",
-    "displayName": null,
-    "releasedAt": "2023-06-23",
-    "contentWarning": false,
-    "edition": {
-     "editioncode": "ltr",
-     "editionname": "The Lord of the Rings: Tales of Middle-earth",
-     "editiondate": "2023-06-23",
-     "editiontype": "draft_innovation",
-     "mtgoCode": "ltr"
-    },
-    "flavor": "\"I would see the White Tree in flower again in the courts of the kings, and Minas Tirith in peace.\"\n—Faramir",
-    "games": [],
-    "options": [
-     "Normal",
-     "Foil"
-    ],
-    "scryfallImageHash": "1783916236",
-    "oracleCard": {
-     "id": 33884,
-     "cmc": 0,
-     "colorIdentity": [
-      "White"
-     ],
-     "colors": [],
-     "edhrecRank": 413,
-     "faces": [],
-     "layout": "normal",
-     "uid": "7b0d7e62-0287-454a-8702-b0bfa7b41245",
-     "legalities": {
-      "alchemy": "not_legal",
-      "legacy": "legal",
-      "oldschool": "not_legal",
-      "modern": "legal",
-      "vintage": "legal",
-      "oathbreaker": "legal",
-      "1v1": "legal",
-      "historicbrawl": "legal",
-      "competitivebrawl": "legal",
-      "premodern": "not_legal",
-      "historic": "legal",
-      "commander": "legal",
-      "paupercommander": "not_legal",
-      "gladiator": "legal",
-      "explorer": null,
-      "brawl": "not_legal",
-      "penny": "legal",
-      "pioneer": "not_legal",
-      "duel": "legal",
-      "pauper": "not_legal",
-      "standard": "not_legal",
-      "future": "not_legal",
-      "predh": "not_legal",
-      "timeless": "legal",
-      "canlander": "legal",
-      "tlr": "legal"
-     },
-     "manaCost": "",
-     "manaProduction": {
-      "W": 1,
-      "U": null,
-      "B": null,
-      "R": null,
-      "G": null,
-      "C": null
-     },
-     "name": "Minas Tirith",
-     "power": "",
-     "salt": 0.11,
-     "subTypes": [],
-     "superTypes": [
-      "Legendary"
-     ],
-     "keywords": [],
-     "oTags": [
-      "activated ability",
-      "attacking matters",
-      "cycle-ltr-legendary-land",
-      "draw engine",
-      "mana sink",
-      "repeatable pure draw",
-      "synergy-legendary",
-      "utility land"
-     ],
-     "inheritedTags": [
-      "card advantage",
-      "conditional tapland",
-      "cycle",
-      "cycle-land",
-      "cycle-mono-land",
-      "draw",
-      "pure draw",
-      "repeatable card advantage",
-      "repeatable draw"
-     ],
-     "text": "Minas Tirith enters tapped unless you control a legendary creature.\n{T}: Add {W}.\n{1}{W}, {T}: Draw a card. Activate only if you attacked with two or more creatures this turn.",
-     "tokens": [],
-     "toughness": "",
-     "types": [
-      "Land"
-     ],
-     "loyalty": null,
-     "canlanderPoints": null,
-     "isPDHCommander": false,
-     "defaultCategory": null,
-     "gameChanger": false,
-     "extraTurns": false,
-     "tutor": false,
-     "massLandDenial": false,
-     "twoCardComboSingelton": false,
-     "twoCardComboIds": [],
-     "atomicCombos": [],
-     "potentialCombos": [],
-     "lang": "en"
-    },
-    "owned": 0,
-    "pinnedStatus": 0,
-    "prices": {
-     "ck": 9.49,
-     "ckfoil": 9.99,
-     "ckMinimum": 9.49,
-     "cm": 5.08,
-     "cmfoil": 6.9,
-     "cmMinimum": 5.08,
-     "mtgo": 0.02,
-     "mtgofoil": 0.0,
-     "mtgoMinimum": 0.02,
-     "tcg": 6.45,
-     "tcgfoil": 7.57,
-     "tcgMinimum": 6.45,
-     "scg": 8.99,
-     "scgfoil": 9.99,
-     "scgMinimum": 8.99,
-     "mp": 4.82,
-     "mpfoil": 6.86,
-     "mpMinimum": 4.82,
-     "tcgLand": 211.0,
-     "tcgLandFoil": 0.0,
-     "tcgLandMinimum": 170.0,
-     "cardTrader": 7.66,
-     "cardTraderFoil": 7.12,
-     "cardTraderMinimum": 7.12,
-     "cs": 5.79,
-     "csfoil": 7.04,
-     "csMinimum": 5.79
-    },
-    "rarity": "rare",
-    "globalCategories": []
-   }
-  },
-  {
    "id": 3521542958,
    "categories": [
     "Land"
@@ -15166,7 +13565,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 936,
+     "edhrecRank": 930,
      "faces": [],
      "layout": "normal",
      "uid": "83161d59-2520-4741-9328-e2a4a8b5d5bc",
@@ -15322,7 +13721,7 @@
     "collectorNumber": "22",
     "multiverseid": 0,
     "mtgoFoilId": 0,
-    "mtgoNormalId": 0,
+    "mtgoNormalId": 156440,
     "uid": "1ac6cb62-45da-4e9a-84c6-09e6eacf0664",
     "displayName": null,
     "releasedAt": "2026-10-02",
@@ -16167,7 +14566,7 @@
     "collectorNumber": "185",
     "multiverseid": 0,
     "mtgoFoilId": 0,
-    "mtgoNormalId": 0,
+    "mtgoNormalId": 156076,
     "uid": "178e61e4-472f-42cd-9d3b-4880c2acc527",
     "displayName": null,
     "releasedAt": "2026-10-02",
@@ -16537,7 +14936,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 678,
+     "edhrecRank": 674,
      "faces": [],
      "layout": "normal",
      "uid": "cce328b9-6100-417e-9ddf-808bbe3e3bc5",
@@ -16880,7 +15279,7 @@
      "cmc": 0,
      "colorIdentity": [],
      "colors": [],
-     "edhrecRank": 44,
+     "edhrecRank": 45,
      "faces": [],
      "layout": "normal",
      "uid": "29737a60-3ebd-40d9-b935-c4f54b90d45d",
@@ -17058,7 +15457,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 1166,
+     "edhrecRank": 1167,
      "faces": [
       {
        "colors": [],
@@ -17603,7 +16002,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 734,
+     "edhrecRank": 733,
      "faces": [],
      "layout": "normal",
      "uid": "d51831b1-7394-456e-a1de-6787a59f5932",
@@ -17958,7 +16357,7 @@
      "cmc": 0,
      "colorIdentity": [],
      "colors": [],
-     "edhrecRank": 46,
+     "edhrecRank": 44,
      "faces": [],
      "layout": "normal",
      "uid": "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
@@ -18315,7 +16714,7 @@
       "Green"
      ],
      "colors": [],
-     "edhrecRank": 3866,
+     "edhrecRank": 3865,
      "faces": [
       {
        "colors": [],
@@ -18472,6 +16871,374 @@
      "csMinimum": 0.56
     },
     "rarity": "rare",
+    "globalCategories": []
+   }
+  },
+  {
+   "id": 3522048356,
+   "categories": [
+    "Removal"
+   ],
+   "companion": false,
+   "flippedDefault": false,
+   "label": ",#656565",
+   "modifier": "Normal",
+   "quantity": 1,
+   "customCmc": null,
+   "removedCategories": null,
+   "createdAt": "2026-09-29T00:44:35.498811Z",
+   "updatedAt": "2026-09-29T00:44:35.498849Z",
+   "deletedAt": null,
+   "notes": null,
+   "card": {
+    "id": 153379,
+    "artist": "David Álvarez",
+    "tcgProductId": 698177,
+    "ckFoilId": 0,
+    "ckNormalId": 0,
+    "cmEd": null,
+    "scgSku": "SGL-MTG-MSC-133-ENN",
+    "scgFoilSku": null,
+    "cardTraderSku": "393871",
+    "collectorNumber": "133",
+    "multiverseid": 0,
+    "mtgoFoilId": 0,
+    "mtgoNormalId": 150735,
+    "uid": "c3f9b454-97e9-4c77-b37a-e974221ae385",
+    "displayName": null,
+    "releasedAt": "2026-06-26",
+    "contentWarning": false,
+    "edition": {
+     "editioncode": "msc",
+     "editionname": "Marvel Super Heroes Commander",
+     "editiondate": "2026-06-26",
+     "editiontype": "commander",
+     "mtgoCode": null
+    },
+    "flavor": "\"What am I supposed to do with this?\"\n—Everett K. Ross, State Department liaison",
+    "games": [],
+    "options": [
+     "Normal",
+     "Foil"
+    ],
+    "scryfallImageHash": "1783903247",
+    "oracleCard": {
+     "id": 19771,
+     "cmc": 3,
+     "colorIdentity": [
+      "White"
+     ],
+     "colors": [
+      "White"
+     ],
+     "edhrecRank": 62,
+     "faces": [],
+     "layout": "normal",
+     "uid": "fae37e28-e137-4177-b973-fa8b4dd8f409",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "not_legal",
+      "competitivebrawl": "not_legal",
+      "premodern": "not_legal",
+      "historic": "not_legal",
+      "commander": "legal",
+      "paupercommander": "legal",
+      "gladiator": "not_legal",
+      "explorer": null,
+      "brawl": "not_legal",
+      "penny": "not_legal",
+      "pioneer": "not_legal",
+      "duel": "legal",
+      "pauper": "legal",
+      "standard": "not_legal",
+      "future": "not_legal",
+      "predh": "not_legal",
+      "timeless": "not_legal",
+      "canlander": "legal",
+      "tlr": "legal"
+     },
+     "manaCost": "{2}{W}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Generous Gift",
+     "power": "",
+     "salt": 0.32,
+     "subTypes": [],
+     "superTypes": [],
+     "keywords": [],
+     "oTags": [
+      "alliteration",
+      "donate token",
+      "out of color token",
+      "removal-destroy",
+      "removal-permanent",
+      "single target instant/sorcery",
+      "spot removal",
+      "swap removal"
+     ],
+     "inheritedTags": [
+      "card names",
+      "removal",
+      "removal-artifact",
+      "removal-aura",
+      "removal-battle",
+      "removal-creature",
+      "removal-enchantment",
+      "removal-equipment",
+      "removal-land",
+      "removal-planeswalker",
+      "removal-spacecraft",
+      "removal-vehicle"
+     ],
+     "text": "Destroy target permanent. Its controller creates a 3/3 green Elephant creature token.",
+     "tokens": [
+      "4842"
+     ],
+     "toughness": "",
+     "types": [
+      "Instant"
+     ],
+     "loyalty": null,
+     "canlanderPoints": null,
+     "isPDHCommander": false,
+     "defaultCategory": "Removal",
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false,
+     "twoCardComboSingelton": false,
+     "twoCardComboIds": [],
+     "atomicCombos": [],
+     "potentialCombos": [],
+     "lang": "en"
+    },
+    "owned": 0,
+    "pinnedStatus": 0,
+    "prices": {
+     "ck": 1.99,
+     "ckfoil": 2.49,
+     "ckMinimum": 1.99,
+     "cm": 0.85,
+     "cmfoil": 0.0,
+     "cmMinimum": 0.4,
+     "mtgo": 0.02,
+     "mtgofoil": 0.0,
+     "mtgoMinimum": 0.02,
+     "tcg": 0.86,
+     "tcgfoil": 0.0,
+     "tcgMinimum": 0.86,
+     "scg": 1.49,
+     "scgfoil": 0.0,
+     "scgMinimum": 1.49,
+     "mp": 0.77,
+     "mpfoil": 1.03,
+     "mpMinimum": 0.77,
+     "tcgLand": 0.0,
+     "tcgLandFoil": 0.0,
+     "tcgLandMinimum": 32.0,
+     "cardTrader": 1.25,
+     "cardTraderFoil": 1.43,
+     "cardTraderMinimum": 0.85,
+     "cs": 0.73,
+     "csfoil": 1.69,
+     "csMinimum": 0.73
+    },
+    "rarity": "uncommon",
+    "globalCategories": []
+   }
+  },
+  {
+   "id": 3522048228,
+   "categories": [
+    "Removal"
+   ],
+   "companion": false,
+   "flippedDefault": false,
+   "label": ",#656565",
+   "modifier": "Normal",
+   "quantity": 1,
+   "customCmc": null,
+   "removedCategories": null,
+   "createdAt": "2026-09-29T00:44:34.378077Z",
+   "updatedAt": "2026-09-29T00:44:34.378098Z",
+   "deletedAt": null,
+   "notes": null,
+   "card": {
+    "id": 153362,
+    "artist": "Thomas Chamberlain-Keen",
+    "tcgProductId": 698192,
+    "ckFoilId": 0,
+    "ckNormalId": 0,
+    "cmEd": null,
+    "scgSku": "SGL-MTG-MSC-169-ENN",
+    "scgFoilSku": null,
+    "cardTraderSku": "393907",
+    "collectorNumber": "169",
+    "multiverseid": 0,
+    "mtgoFoilId": 0,
+    "mtgoNormalId": 150807,
+    "uid": "400b43aa-c1d2-4435-b863-061f43889422",
+    "displayName": null,
+    "releasedAt": "2026-06-26",
+    "contentWarning": false,
+    "edition": {
+     "editioncode": "msc",
+     "editionname": "Marvel Super Heroes Commander",
+     "editiondate": "2026-06-26",
+     "editiontype": "commander",
+     "mtgoCode": null
+    },
+    "flavor": "Raw vibranium is hazardous to any who touch it, causing irreversible mutations.",
+    "games": [],
+    "options": [
+     "Normal",
+     "Foil"
+    ],
+    "scryfallImageHash": "1783903232",
+    "oracleCard": {
+     "id": 1367,
+     "cmc": 3,
+     "colorIdentity": [
+      "Green"
+     ],
+     "colors": [
+      "Green"
+     ],
+     "edhrecRank": 25,
+     "faces": [],
+     "layout": "normal",
+     "uid": "7735eeba-693b-47e2-bd51-414379cf1016",
+     "legalities": {
+      "alchemy": "not_legal",
+      "legacy": "legal",
+      "oldschool": "not_legal",
+      "modern": "legal",
+      "vintage": "legal",
+      "oathbreaker": "legal",
+      "1v1": "legal",
+      "historicbrawl": "legal",
+      "competitivebrawl": "legal",
+      "premodern": "not_legal",
+      "historic": "legal",
+      "commander": "legal",
+      "paupercommander": "not_legal",
+      "gladiator": "legal",
+      "explorer": null,
+      "brawl": "not_legal",
+      "penny": "not_legal",
+      "pioneer": "not_legal",
+      "duel": "legal",
+      "pauper": "not_legal",
+      "standard": "not_legal",
+      "future": "not_legal",
+      "predh": "legal",
+      "timeless": "legal",
+      "canlander": "legal",
+      "tlr": "legal"
+     },
+     "manaCost": "{2}{G}",
+     "manaProduction": {
+      "W": null,
+      "U": null,
+      "B": null,
+      "R": null,
+      "G": null,
+      "C": null
+     },
+     "name": "Beast Within",
+     "power": "",
+     "salt": 0.32,
+     "subTypes": [],
+     "superTypes": [],
+     "keywords": [],
+     "oTags": [
+      "color break",
+      "donate token",
+      "removal-destroy",
+      "removal-permanent",
+      "single target instant/sorcery",
+      "spot removal",
+      "swap removal"
+     ],
+     "inheritedTags": [
+      "removal",
+      "removal-artifact",
+      "removal-aura",
+      "removal-battle",
+      "removal-creature",
+      "removal-enchantment",
+      "removal-equipment",
+      "removal-land",
+      "removal-planeswalker",
+      "removal-spacecraft",
+      "removal-vehicle"
+     ],
+     "text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
+     "tokens": [
+      "20903"
+     ],
+     "toughness": "",
+     "types": [
+      "Instant"
+     ],
+     "loyalty": null,
+     "canlanderPoints": null,
+     "isPDHCommander": false,
+     "defaultCategory": "Removal",
+     "gameChanger": false,
+     "extraTurns": false,
+     "tutor": false,
+     "massLandDenial": false,
+     "twoCardComboSingelton": false,
+     "twoCardComboIds": [],
+     "atomicCombos": [],
+     "potentialCombos": [],
+     "lang": "en"
+    },
+    "owned": 0,
+    "pinnedStatus": 0,
+    "prices": {
+     "ck": 1.79,
+     "ckfoil": 2.49,
+     "ckMinimum": 1.29,
+     "cm": 0.92,
+     "cmfoil": 0.0,
+     "cmMinimum": 0.2,
+     "mtgo": 0.02,
+     "mtgofoil": 0.0,
+     "mtgoMinimum": 0.02,
+     "tcg": 0.66,
+     "tcgfoil": 0.0,
+     "tcgMinimum": 0.5,
+     "scg": 1.25,
+     "scgfoil": 0.0,
+     "scgMinimum": 1.05,
+     "mp": 0.62,
+     "mpfoil": 1.18,
+     "mpMinimum": 0.51,
+     "tcgLand": 0.0,
+     "tcgLandFoil": 0.0,
+     "tcgLandMinimum": 21.0,
+     "cardTrader": 1.01,
+     "cardTraderFoil": 1.05,
+     "cardTraderMinimum": 0.82,
+     "cs": 0.59,
+     "csfoil": 2.54,
+     "csMinimum": 0.59
+    },
+    "rarity": "uncommon",
     "globalCategories": []
    }
   }
