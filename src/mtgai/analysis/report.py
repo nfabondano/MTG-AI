@@ -142,9 +142,10 @@ def _engine_section(data: dict[str, Any]) -> str:
 
     role = data.get("commander_role") or {}
     if role.get("roles"):
+        labels = dict.fromkeys(s.split(":")[0] for s in role.get("supplies") or [])
         out.append(
             f"**Commander role:** {' + '.join(role['roles'])} — the 99 must supply: "
-            + "; ".join(s.split(":")[0] for s in role.get("supplies") or []) + "."
+            + "; ".join(labels) + "."
         )
         out.append("")
 

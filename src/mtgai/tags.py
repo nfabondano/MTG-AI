@@ -43,7 +43,10 @@ CATEGORIES: dict[str, tuple[str, ...]] = {
     "sacrifice": ("sacrifice-outlet", "free-sacrifice", "sacrifice-matters", "your-sacrifice"),
     "death-trigger": ("death-trigger", "dies-trigger", "leaves-battlefield-trigger"),
     "copy": ("copy", "clone", "copy-creature", "copy-nonland", "copy-permanent", "copy-spell", "changeling"),
-    "tokens": ("creature-tokens", "token-generator", "populate", "repeatable-creature-tokens"),
+    # Creature tokens: fodder, bodies, going wide. The generic
+    # `repeatable-token-generator` parent is left out because it also covers
+    # Treasure makers, which turned Cloud's treasures into a sacrifice theme.
+    "tokens": ("creature-tokens", "populate", "token-doubler", "token-increaser"),
     "drain": ("drain-life", "opponent-loses-life", "lifeloss", "group-slug", "aristocrat", "aristocrats"),
     "recursion": ("reanimate", "recursion", "return-from-graveyard", "graveyard-fuel", "persist"),
     "draw": ("draw", "draw-engine", "burst-draw", "repeatable-pure-draw", "card-advantage", "cantrip"),

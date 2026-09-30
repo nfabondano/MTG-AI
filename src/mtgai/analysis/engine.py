@@ -60,6 +60,13 @@ COMMANDER_WANTS: dict[str, tuple[str, ...]] = {
     "recursion": ("recursion", "sacrifice", "death-trigger"),
     "counters": ("counters",),
     "untap": ("untap", "ramp"),
+    # Niv-Mizzet, Ghost Counsel draws off every lifegain event: the 99 is
+    # lifegain triggers and the payoffs that turn life into damage.
+    "lifegain": ("lifegain", "drain"),
+    # Cloud, Ex-SOLDIER: Equipment, whatever makes a body big enough to matter,
+    # and protection for the creature wearing it all.
+    "equipment": ("equipment", "pump", "protection"),
+    "aura": ("aura", "pump", "protection"),
 }
 
 # When a commander arrives sparsely tagged — new sets ship before taggers catch
@@ -67,11 +74,18 @@ COMMANDER_WANTS: dict[str, tuple[str, ...]] = {
 _ORACLE_WANTS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"\bdies\b|\bdie\b|\bwhen(ever)? .* is put into a graveyard", re.I), "death-trigger"),
     (re.compile(r"\bsacrifice\b", re.I), "sacrifice"),
-    (re.compile(r"\bcreate\b.*\btokens?\b", re.I | re.S), "tokens"),
+    # Creature tokens only — "create two Treasure tokens" is ramp, not a
+    # tokens deck (it made Cloud want sacrifice outlets).
+    (re.compile(r"\bcreate\b[^.]*\bcreature tokens?\b", re.I), "tokens"),
     (re.compile(r"\bcop(y|ies)\b", re.I), "copy"),
     (re.compile(r"\bdraws? (a|two|three|x) cards?\b", re.I), "draw"),
     (re.compile(r"loses? \d+ life|loses? life|drain", re.I), "drain"),
     (re.compile(r"\+1/\+1 counter", re.I), "counters"),
+    # Not bare "lifelink": plenty of commanders have it without caring about
+    # life gained.
+    (re.compile(r"whenever you gain life|life you(?:'ve)? gained", re.I), "lifegain"),
+    (re.compile(r"\bequip(?:ped)?\b|\bequipment\b", re.I), "equipment"),
+    (re.compile(r"\bauras?\b", re.I), "aura"),
 )
 
 # A tribe only counts as the deck's tribe when the deck actually commits to it.
@@ -83,17 +97,29 @@ TRIBE_MIN = 4
 CORE_TARGET_MULTIPLIER = 2
 
 
-def commander_wants(deck: Deck) -> list[str]:
-    """Categories the commander's own text implies the deck is built around."""
-    wants: set[str] = set()
+def commander_base_wants(deck: Deck) -> set[str]:
+    """What the commander's own tags and text are about, before expansion.
+
+    The expansion in COMMANDER_WANTS is for "what else does such a deck
+    value"; this is "what does the commander itself do". The difference
+    matters: Niv-Mizzet drains, and drain expands to sacrifice, but Niv asks
+    for lifegain triggers, not for sacrifice outlets.
+    """
+    base: set[str] = set()
     for commander in deck.commanders:
-        base = set(tagmod.card_categories(commander))
+        base |= tagmod.card_categories(commander)
         for pattern, category in _ORACLE_WANTS:
             if pattern.search(commander.role_text()):
                 base.add(category)
-        for category in base:
-            wants.add(category)
-            wants.update(COMMANDER_WANTS.get(category, ()))
+    return base
+
+
+def commander_wants(deck: Deck) -> list[str]:
+    """Categories the commander's own text implies the deck is built around."""
+    wants: set[str] = set()
+    for category in commander_base_wants(deck):
+        wants.add(category)
+        wants.update(COMMANDER_WANTS.get(category, ()))
     if commander_tribe(deck):
         wants.add("typal")
         wants.update(COMMANDER_WANTS.get("typal", ()))
@@ -105,7 +131,8 @@ def commander_wants(deck: Deck) -> list[str]:
 # the 99 must supply — a payoff commander needs the 99 to provide the fuel and
 # the triggers; an enabler needs payoffs; a standalone threat needs protection.
 _ROLE_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
-    (re.compile(r"whenever (another|a|one or more|you)\b.*\b(dies|die|enters|attacks?|cast|sacrifice|gain|lose|draw)", re.I | re.S), "payoff"),
+    # `~` stands in for the commander's own name ("Whenever Cloud attacks").
+    (re.compile(r"whenever (?:(?:another|a|one or more|you|this creature)\b|~).*\b(dies|die|enters|attacks?|cast|sacrifice|gain|lose|draw)", re.I | re.S), "payoff"),
     (re.compile(r"\{t\}[^:]*:.*\b(add|create|draw|search|return)\b", re.I | re.S), "enabler"),
     (re.compile(r"sacrifice (a|another|an) [^:]*:", re.I), "enabler"),
     (re.compile(r"\bcop(y|ies)\b|\bdouble\b|\btwice\b|\badditional\b", re.I), "force-multiplier"),
@@ -115,25 +142,48 @@ _ROLE_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
 )
 
 
+_REMINDER_RE = re.compile(r"\([^)]*\)")
+
+
+def _commander_text(commander: CardEntry) -> str:
+    """Rules text with reminder text removed and the card's name as `~`.
+
+    Reminder text describes a keyword, not the design: Felisa's "Mentor
+    (Whenever this creature attacks…)" is not what makes her a payoff. And a
+    commander refers to itself by name — "Whenever Cloud attacks" — which the
+    role patterns read as `~`.
+    """
+    text = _REMINDER_RE.sub("", commander.role_text())
+    full = commander.name.split("//")[0].strip()
+    for name in {full, full.split(",")[0].strip()}:
+        if len(name) >= 3:
+            text = re.sub(re.escape(name), "~", text, flags=re.I)
+    return text
+
+
 def classify_commander(deck: Deck) -> dict:
     """The commander's design role(s) and what the 99 must therefore supply."""
     roles: list[str] = []
     for commander in deck.commanders:
-        text = commander.role_text()
+        text = _commander_text(commander)
         for pattern, role in _ROLE_PATTERNS:
             if role not in roles and pattern.search(text):
                 roles.append(role)
     if not roles:
         roles = ["glue"]
 
-    wants = set(commander_wants(deck))
+    # What the commander itself asks for picks the wording, not the expansion:
+    # drain expands to sacrifice, but a lifegain commander wants no outlets.
+    base = commander_base_wants(deck)
     tribe = commander_tribe(deck)
     # "worth copying" only when the commander itself copies — not when copy
     # merely arrives through the typal expansion.
     copies = any("copy" in tagmod.card_categories(c) for c in deck.commanders)
     supplies: list[str] = []
     if "payoff" in roles:
-        if "death-trigger" in wants or "sacrifice" in wants:
+        themed = False
+        if "death-trigger" in base or "sacrifice" in base:
+            themed = True
             if tribe:
                 fuel = f"nontoken {tribe}s" + (" worth copying" if copies else " the trigger counts")
             else:
@@ -141,7 +191,19 @@ def classify_commander(deck: Deck) -> dict:
             supplies.append(f"fuel: {fuel}")
             supplies.append("triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms")
             supplies.append("conversion: drain, draw and token payoffs that turn deaths into wins")
-        else:
+        if "counters" in base:
+            themed = True
+            supplies.append("counters: ways to put +1/+1 counters on your creatures, since the commander counts them")
+        if "lifegain" in base:
+            themed = True
+            supplies.append("fuel: repeatable lifegain — many small triggers beat one big one")
+            supplies.append("conversion: payoffs that turn life gained into cards, damage or counters")
+        if "equipment" in base or "aura" in base:
+            themed = True
+            gear = "Equipment" if "equipment" in base else "Auras"
+            supplies.append(f"fuel: {gear} worth carrying, and cheap ways to cast and attach them")
+            supplies.append("bodies: creatures to carry them, so one removal spell does not end the plan")
+        if not themed:
             supplies.append("fuel: cards that cause what the commander rewards")
             supplies.append("conversion: payoffs that turn the reward into wins")
     if "enabler" in roles:
@@ -159,9 +221,13 @@ def classify_commander(deck: Deck) -> dict:
 def commander_tribe(deck: Deck) -> str | None:
     """The tribe the commander cares about, if the deck actually plays it.
 
-    Tried in order of how directly the source speaks: the commander's own
-    `typal-<tribe>` tags, then its type line, then creature types its text
+    Only two sources count, in order of how directly they speak: the
+    commander's own `typal-<tribe>` tags, then creature types its rules text
     names — each cross-checked against what the deck really contains.
+
+    The commander's *own* creature type is not evidence. It made Cloud a
+    Human deck and Felisa a Vampire deck, which put "nontoken Humans" in the
+    report and exempted every Human from cuts.
     """
     census = _subtype_census(deck)
     if not census:
@@ -180,12 +246,8 @@ def commander_tribe(deck: Deck) -> str | None:
             return found
 
     for commander in deck.commanders:
-        found = confirmed(commander.subtypes)
-        if found:
-            return found
-
-    for commander in deck.commanders:
-        mentioned = {w.strip(",.") for w in commander.role_text().split()}
+        text = _REMINDER_RE.sub("", commander.role_text())
+        mentioned = {w.strip(",.") for w in text.split()}
         found = confirmed({w for w in mentioned if w.lower() in census})
         if found:
             return found
@@ -193,10 +255,18 @@ def commander_tribe(deck: Deck) -> str | None:
 
 
 def _subtype_census(deck: Deck) -> dict[str, int]:
-    """How many nonland cards carry each subtype, changelings counted for all."""
+    """How many creature cards carry each creature type.
+
+    Only creature (and kindred) front faces count. Counting every subtype
+    turned "Equipment" into Cloud's tribe, because his text names it and the
+    deck is full of artifacts with that subtype.
+    """
     census: Counter = Counter()
     for card in deck.cards:
         if card.is_land:
+            continue
+        front = card.type_line.split("//")[0].split("—")[0]
+        if not any(t in front for t in ("Creature", "Kindred", "Tribal")):
             continue
         for subtype in card.subtypes:
             census[subtype.lower()] += card.quantity
@@ -290,6 +360,20 @@ OWNER_CATEGORY_MAP: dict[str, str] = {
     "wincon": "wincon",
     "wincons": "wincon",
     "win-conditions": "wincon",
+    "lifegain": "lifegain",
+    "life-gain": "lifegain",
+    "lifelink": "lifegain",
+    "pump": "pump",
+    "voltron": "pump",
+    "equipment": "equipment",
+    "equipments": "equipment",
+    "aura": "aura",
+    "auras": "aura",
+    "counters": "counters",
+    "1-1-counters": "counters",  # "+1/+1 Counters", slugified
+    "proliferate": "counters",
+    "untap": "untap",
+    "burn": "drain",
 }
 
 
