@@ -1,0 +1,5947 @@
+{
+ "slug": "felisa-6313712",
+ "name": "Felisa",
+ "archidekt_id": 6313712,
+ "deck_format": 3,
+ "format_name": "Commander",
+ "owner": "Hugo0111",
+ "url": "https://archidekt.com/decks/6313712",
+ "updated_at": "2026-09-30T14:51:03.424177Z",
+ "archidekt_bracket": null,
+ "imported_at": "2026-09-30T17:14:46+00:00",
+ "description": "{\"ops\":[]}",
+ "deck_tags": [],
+ "color_identity": [
+  "W",
+  "B"
+ ],
+ "total_cards": 106,
+ "commanders": [
+  "Felisa, Fang of Silverquill"
+ ],
+ "cards": [
+  {
+   "name": "Carmen, Cruel Skymarcher",
+   "quantity": 1,
+   "scryfall_id": "c0e07f8a-5290-47c4-a93d-0c3a14afebd3",
+   "oracle_id": "84c24e62-26bd-4ca4-b6b9-d31e2065f13b",
+   "mana_cost": "{3}{W}{B}",
+   "mana_value": 5.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Vampire Soldier",
+   "oracle_text": "Flying\nWhenever a player sacrifices a permanent, put a +1/+1 counter on Carmen and you gain 1 life.\nWhenever Carmen attacks, return up to one target permanent card with mana value less than or equal to Carmen's power from your graveyard to the battlefield.",
+   "mana_production": {},
+   "keywords": [
+    "Flying"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 2837,
+   "salt": 0.32,
+   "price_usd": 6.36,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [
+    "recursion"
+   ],
+   "tags": [
+    "alliteration",
+    "attack trigger",
+    "attacking matters-self",
+    "cycle-lcc-alt-commander",
+    "evasion",
+    "gains pp counters",
+    "hate-removal-sacrifice",
+    "land ramp",
+    "opponent sacrifice matters",
+    "power matters-self",
+    "reanimate-permanent",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "scales with power",
+    "your sacrifice matters",
+    "alt-commander",
+    "card names",
+    "cycle",
+    "hate",
+    "lifegain",
+    "power matters",
+    "ramp",
+    "reanimate",
+    "recursion",
+    "recursion-permanent",
+    "sacrifice matters",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "ramp",
+    "recursion",
+    "sacrifice",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Elenda, the Dusk Rose",
+   "quantity": 1,
+   "scryfall_id": "e18feca3-1b1b-4456-8873-25a24849a917",
+   "oracle_id": "ce35f262-b93f-4409-8b33-26a7ed7abac8",
+   "mana_cost": "{2}{W}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Knight Vampire",
+   "oracle_text": "Lifelink\nWhenever another creature dies, put a +1/+1 counter on Elenda.\nWhen Elenda dies, create X 1/1 white Vampire creature tokens with lifelink, where X is Elenda's power.",
+   "mana_production": {},
+   "keywords": [
+    "Lifelink"
+   ],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 1268,
+   "salt": 0.28,
+   "price_usd": 6.09,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "gains pp counters",
+    "power matters-self",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "scales with power",
+    "splits on death",
+    "death trigger",
+    "death trigger-self",
+    "leaves body behind",
+    "lifegain",
+    "power matters",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "tokens",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Yahenni, Undying Partisan",
+   "quantity": 1,
+   "scryfall_id": "2b77cd68-fbdd-4bca-a68c-299425588a61",
+   "oracle_id": "fdba89eb-1cf5-46e6-9d09-1adb9bc40fcd",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Vampire Aetherborn",
+   "oracle_text": "Haste\nWhenever a creature an opponent controls dies, put a +1/+1 counter on Yahenni.\nSacrifice another creature: Yahenni gains indestructible until end of turn.",
+   "mana_production": {},
+   "keywords": [
+    "Haste"
+   ],
+   "categories": [
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 1033,
+   "salt": 0.24,
+   "price_usd": 0.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "protection"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-aer-legend",
+    "death trigger opponent",
+    "free sacrifice outlet",
+    "gains indestructible",
+    "gains pp counters",
+    "repeatable pp counters",
+    "sacrifice outlet-creature",
+    "unique type line",
+    "cycle",
+    "death trigger",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "protection",
+    "sacrifice",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Mikaeus, the Lunarch",
+   "quantity": 1,
+   "scryfall_id": "fb885d30-c6e5-494a-bc01-3d5085b8e262",
+   "oracle_id": "82f3faa8-39fa-450b-843f-d60a4c36d8f7",
+   "mana_cost": "{X}{W}",
+   "mana_value": 1.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Creature — Human Cleric",
+   "oracle_text": "Mikaeus enters with X +1/+1 counters on it.\n{T}: Put a +1/+1 counter on Mikaeus.\n{T}, Remove a +1/+1 counter from Mikaeus: Put a +1/+1 counter on each other creature you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 1978,
+   "salt": 0.24,
+   "price_usd": 0.87,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "counter fuel-pp",
+    "gains pp counters",
+    "gives pp counters to all",
+    "repeatable pp counters",
+    "counter fuel",
+    "counters matter",
+    "gives pp counters",
+    "power boost to all",
+    "pp counters matter",
+    "remove counters",
+    "remove counters-you",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters"
+   ],
+   "set_code": "moc",
+   "released_at": "2023-04-21",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Teysa Karlov",
+   "quantity": 1,
+   "scryfall_id": "cd14f1ce-7fcd-485c-b7ca-01c5b45fdc01",
+   "oracle_id": "644eeefd-e684-4ca8-8aef-a892ca130c07",
+   "mana_cost": "{2}{W}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Advisor",
+   "oracle_text": "If a creature dying causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.\nCreature tokens you control have vigilance and lifelink.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 1321,
+   "salt": 0.53,
+   "price_usd": 2.65,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "cycle-cmm-r-two-color-legend",
+    "cycle-rna-guild-champion",
+    "death trigger",
+    "gives lifelink",
+    "gives vigilance",
+    "keyword anthem",
+    "repeatable lifegain",
+    "synergy-token-creature",
+    "trigger doubler",
+    "cycle",
+    "cycle-block-grn-guild-champion",
+    "lifegain",
+    "synergy-token",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "tokens"
+   ],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Mondrak, Glory Dominus",
+   "quantity": 1,
+   "scryfall_id": "8296a455-21d5-498e-9029-2bdf0da855a8",
+   "oracle_id": "fe83087d-c6c1-40be-9295-baaa1c6b2db1",
+   "mana_cost": "{2}{W}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Creature — Horror Phyrexian",
+   "oracle_text": "If one or more tokens would be created under your control, twice that many of those tokens are created instead.\n{1}{W/P}{W/P}, Sacrifice two other artifacts and/or creatures: Put an indestructible counter on Mondrak. ({W/P} can be paid with either {W} or 2 life.)",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 429,
+   "salt": 1.07,
+   "price_usd": 44.15,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "cycle-one-dominus",
+    "gains indestructible",
+    "indestructible counter",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet-artifact",
+    "sacrifice outlet-creature",
+    "synergy-artifact",
+    "synergy-token",
+    "token doubler",
+    "cycle",
+    "keyword counter",
+    "life payment",
+    "phyrexian mana",
+    "phyrexian mana ability",
+    "sacrifice outlet",
+    "token increaser"
+   ],
+   "engine_participation": [
+    "protection",
+    "sacrifice",
+    "tokens"
+   ],
+   "set_code": "one",
+   "released_at": "2023-02-10",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Luminous Broodmoth",
+   "quantity": 1,
+   "scryfall_id": "bb65df55-d6a6-4a57-a903-e5eb17637982",
+   "oracle_id": "28c7c816-07e7-42fb-923c-bf149ba28b38",
+   "mana_cost": "{2}{W}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Insect",
+   "oracle_text": "Flying\nWhenever a creature you control without flying dies, return it to the battlefield under its owner's control with a flying counter on it.",
+   "mana_production": {},
+   "keywords": [
+    "Flying"
+   ],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 1165,
+   "salt": 0.58,
+   "price_usd": 1.79,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "cheat death",
+    "death trigger",
+    "evasion",
+    "flying counter",
+    "gives flying",
+    "protects-all",
+    "protects-creature",
+    "synergy-no-flying",
+    "virtual legendary",
+    "card names",
+    "gives evasion",
+    "keyword counter",
+    "protection",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "protection",
+    "recursion"
+   ],
+   "set_code": "iko",
+   "released_at": "2020-04-24",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Rosie Cotton of South Lane",
+   "quantity": 1,
+   "scryfall_id": "75338f49-1f02-4333-87e4-5779ef14e688",
+   "oracle_id": "168d5711-4459-440f-8de4-aabffd47c44d",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Creature — Peasant Halfling",
+   "oracle_text": "When Rosie Cotton enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")\nWhenever you create a token, put a +1/+1 counter on target creature you control other than Rosie Cotton.",
+   "mana_production": {},
+   "keywords": [
+    "Food"
+   ],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 1260,
+   "salt": 0.33,
+   "price_usd": 0.45,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "gives pp counters",
+    "repeatable pp counters",
+    "tokenfall",
+    "triggered ability",
+    "synergy-token",
+    "thingfall"
+   ],
+   "engine_participation": [
+    "counters",
+    "tokens"
+   ],
+   "set_code": "ltr",
+   "released_at": "2023-06-23",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Cruel Celebrant",
+   "quantity": 1,
+   "scryfall_id": "b3f8be99-a398-4664-beb6-3e98d6e62a32",
+   "oracle_id": "3ee78cfc-0e9e-4737-a7e2-b42f94228040",
+   "mana_cost": "{W}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Whenever this creature or another creature or planeswalker you control dies, each opponent loses 1 life and you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Drain"
+   ],
+   "edhrec_rank": 964,
+   "salt": 0.32,
+   "price_usd": 2.67,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "blood artist ability",
+    "cycle-war-draft-signpost",
+    "group slug",
+    "opponent loses life",
+    "synergy-planeswalker",
+    "card names",
+    "cycle",
+    "death trigger",
+    "draft signpost",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "repeatable lifegain",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Zulaport Cutthroat",
+   "quantity": 1,
+   "scryfall_id": "52ef00c1-613a-4cbd-8972-77c41f649431",
+   "oracle_id": "76b003e0-15af-4f22-bdf2-1ade5430964a",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Human Rogue Ally",
+   "oracle_text": "Whenever this creature or another creature you control dies, each opponent loses 1 life and you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Drain"
+   ],
+   "edhrec_rank": 236,
+   "salt": 0.51,
+   "price_usd": 1.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "blood artist ability",
+    "group slug",
+    "opponent loses life",
+    "death trigger",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "repeatable lifegain",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain"
+   ],
+   "set_code": "clb",
+   "released_at": "2022-06-10",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Scholar of New Horizons",
+   "quantity": 1,
+   "scryfall_id": "e83e50d0-7851-4608-8cfd-63c54d1a7544",
+   "oracle_id": "3c7ea603-c985-4107-806b-a467b5fcca36",
+   "mana_cost": "{1}{W}",
+   "mana_value": 2.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Human Scout",
+   "oracle_text": "This creature enters with a +1/+1 counter on it.\n{T}, Remove a counter from a permanent you control: Search your library for a Plains card and reveal it. If an opponent controls more lands than you, you may put that card onto the battlefield tapped. If you don't put the card onto the battlefield, put it into your hand. Then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 2650,
+   "salt": 0.2,
+   "price_usd": 1.2,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "catch up",
+    "counter fuel-any",
+    "counter fuel-other",
+    "gains pp counters",
+    "land ramp",
+    "opponent land count matters",
+    "tutor-land-plains",
+    "tutor-land-to-battlefield",
+    "tutor-to-hand",
+    "counter fuel",
+    "counters matter",
+    "ramp",
+    "remove counters",
+    "remove counters-you",
+    "tutor",
+    "tutor-land",
+    "tutor-to",
+    "tutor-to-battlefield"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
+   "set_code": "brc",
+   "released_at": "2022-11-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Bloodtracker",
+   "quantity": 1,
+   "scryfall_id": "d654462f-5346-454f-9905-41218cf6b29e",
+   "oracle_id": "fcf9ced2-867d-4bc5-b7b6-6153ed2cac97",
+   "mana_cost": "{3}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Wizard Vampire",
+   "oracle_text": "Flying\n{B}, Pay 2 life: Put a +1/+1 counter on this creature.\nWhen this creature leaves the battlefield, draw a card for each +1/+1 counter on it.",
+   "mana_production": {},
+   "keywords": [
+    "Flying"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 6426,
+   "salt": 0.08,
+   "price_usd": 0.25,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "activated ability",
+    "burst draw",
+    "evasion",
+    "gains pp counters",
+    "leaves trigger-self",
+    "life payment",
+    "pp counters matter",
+    "pure draw",
+    "repeatable pp counters",
+    "card advantage",
+    "counters matter",
+    "draw",
+    "leaves battlefield trigger",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "draw",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Pitiless Plunderer",
+   "quantity": 1,
+   "scryfall_id": "5b5cd187-857a-44dd-8595-a52857a0b753",
+   "oracle_id": "a784481f-eccb-4112-bb38-04a659319660",
+   "mana_cost": "{3}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Human Pirate",
+   "oracle_text": "Whenever another creature you control dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 225,
+   "salt": 0.71,
+   "price_usd": 4.72,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "alliteration",
+    "death trigger",
+    "ramp",
+    "repeatable treasures",
+    "card names",
+    "repeatable artifact tokens",
+    "repeatable noncreature tokens",
+    "repeatable token generator",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "ramp",
+    "tokens"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Arcane Signet",
+   "quantity": 1,
+   "scryfall_id": "fc6c69a0-ac24-4486-8893-a6303d08fc6e",
+   "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+   "mana_cost": "{2}",
+   "mana_value": 2.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 3,
+   "salt": 0.24,
+   "price_usd": 0.63,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "commander identity matters",
+    "mana rock with set's mechanic",
+    "mini refund",
+    "synergy-commander",
+    "commander matters",
+    "mana producer",
+    "mana rock",
+    "ramp",
+    "refund",
+    "staple with set's mechanic"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Sol Ring",
+   "quantity": 1,
+   "scryfall_id": "2d47121d-8b90-4d28-9ffa-0a640b9dd611",
+   "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+   "mana_cost": "{1}",
+   "mana_value": 1.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "{T}: Add {C}{C}.",
+   "mana_production": {
+    "C": 2
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 1,
+   "salt": 1.46,
+   "price_usd": 1.54,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "full refund",
+    "mana rock",
+    "mana producer",
+    "ramp",
+    "refund"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Orzhov Signet",
+   "quantity": 1,
+   "scryfall_id": "0f0d3c9c-7b3d-4dd1-bf0a-41652e2e1f94",
+   "oracle_id": "de3dcb5d-775a-479f-99f5-d1883ed9b1b5",
+   "mana_cost": "{2}",
+   "mana_value": 2.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Artifact",
+   "oracle_text": "{1}, {T}: Add {W}{B}.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 188,
+   "salt": 0.12,
+   "price_usd": 0.38,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-rav-signet",
+    "mana rock",
+    "refund",
+    "cycle",
+    "mana filter",
+    "mana producer",
+    "ramp"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Anguished Unmaking",
+   "quantity": 1,
+   "scryfall_id": "16de91dc-5d82-43ec-84ad-67bae644795a",
+   "oracle_id": "ad09b3c3-c8e7-481c-8c45-e7f234935117",
+   "mana_cost": "{1}{W}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Exile target nonland permanent. You lose 3 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 156,
+   "salt": 0.23,
+   "price_usd": 1.61,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "cycle-soi-r-two-color",
+    "life payment",
+    "removal-exile",
+    "removal-nonland",
+    "single target instant/sorcery",
+    "spot removal",
+    "cycle",
+    "removal",
+    "removal-artifact",
+    "removal-aura",
+    "removal-battle",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-equipment",
+    "removal-planeswalker",
+    "removal-spacecraft",
+    "removal-vehicle"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Teferi's Protection",
+   "quantity": 1,
+   "scryfall_id": "483fa1cb-1e35-44f2-a143-98c0f107f5ca",
+   "oracle_id": "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Until your next turn, your life total can't change and you gain protection from everything. All permanents you control phase out. (While they're phased out, they're treated as though they don't exist. They phase in before you untap during your untap step.)\nExile Teferi's Protection.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 109,
+   "salt": 2.13,
+   "price_usd": 48.58,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "protection"
+   ],
+   "tags": [
+    "damage prevention-you",
+    "exile on resolution",
+    "fog-selective",
+    "gives player protection",
+    "namesake spell",
+    "phasing",
+    "protects-all",
+    "protects-artifact",
+    "protects-creature",
+    "protects-enchantment",
+    "protects-land",
+    "protects-planeswalker",
+    "card names",
+    "damage prevention",
+    "exile-self",
+    "fog",
+    "gives player ability",
+    "protection"
+   ],
+   "engine_participation": [
+    "protection"
+   ],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Swords to Plowshares",
+   "quantity": 1,
+   "scryfall_id": "7cdee412-3519-4626-80ca-e3e431a604f0",
+   "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+   "mana_cost": "{W}",
+   "mana_value": 1.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 11,
+   "salt": 0.45,
+   "price_usd": 1.02,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "drawback",
+    "lifegain",
+    "opponent lifegain",
+    "removal-creature",
+    "removal-exile",
+    "single target instant/sorcery",
+    "spot removal",
+    "removal"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Cathars' Crusade",
+   "quantity": 1,
+   "scryfall_id": "fbb70e7b-2a68-436e-96a4-32a88fb87da0",
+   "oracle_id": "cc65ac73-5bef-4ecb-ad8e-39199084c027",
+   "mana_cost": "{3}{W}{W}",
+   "mana_value": 5.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Whenever a creature you control enters, put a +1/+1 counter on each creature you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 557,
+   "salt": 1.17,
+   "price_usd": 10.2,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "creaturefall",
+    "gives pp counters to all",
+    "quadratic",
+    "repeatable pp counters",
+    "triggered ability",
+    "card names",
+    "gives pp counters",
+    "power boost to all",
+    "thingfall",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters"
+   ],
+   "set_code": "jmp",
+   "released_at": "2020-07-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Smothering Tithe",
+   "quantity": 1,
+   "scryfall_id": "861b5889-0183-4bee-afeb-a4b2aa700a8e",
+   "oracle_id": "153376c9-dffd-458c-8ce3-a4c8269bc4e9",
+   "mana_cost": "{3}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Whenever an opponent draws a card, that player may pay {2}. If the player doesn't, you create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 65,
+   "salt": 2.58,
+   "price_usd": 57.41,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "draw hate",
+    "meme",
+    "ramp",
+    "repeatable treasures",
+    "rhystic",
+    "triggered ability",
+    "hate",
+    "repeatable artifact tokens",
+    "repeatable noncreature tokens",
+    "repeatable token generator",
+    "tax"
+   ],
+   "engine_participation": [
+    "draw",
+    "ramp",
+    "tokens"
+   ],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Generous Gift",
+   "quantity": 1,
+   "scryfall_id": "fc70e127-ffc8-45ed-9ca3-7f9f926ac4d5",
+   "oracle_id": "fae37e28-e137-4177-b973-fa8b4dd8f409",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Elephant creature token.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 62,
+   "salt": 0.32,
+   "price_usd": 0.83,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "alliteration",
+    "donate token",
+    "out of color token",
+    "removal-destroy",
+    "removal-permanent",
+    "single target instant/sorcery",
+    "spot removal",
+    "swap removal",
+    "card names",
+    "removal",
+    "removal-artifact",
+    "removal-aura",
+    "removal-battle",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-equipment",
+    "removal-land",
+    "removal-planeswalker",
+    "removal-spacecraft",
+    "removal-vehicle"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Malakir Rebirth // Malakir Mire",
+   "quantity": 1,
+   "scryfall_id": "609d3ecf-f88d-4268-a8d3-4bf2bcf5df60",
+   "oracle_id": "a731e87b-8d99-4b64-8ee3-8e540d652366",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Choose target creature. You lose 2 life. Until end of turn, that creature gains \"When this creature dies, return it to the battlefield tapped under its owner's control.\"\n//\nThis land enters tapped.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 238,
+   "salt": 0.21,
+   "price_usd": 13.92,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cheaper than mv",
+    "cheat death",
+    "death trigger",
+    "life payment",
+    "protects-creature",
+    "single target instant/sorcery",
+    "tapland",
+    "utility land",
+    "card names",
+    "protection",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "protection"
+   ],
+   "set_code": "znr",
+   "released_at": "2020-09-25",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Demonic Tutor",
+   "quantity": 1,
+   "scryfall_id": "a24b4cb6-cebb-428b-8654-74347a6a8d63",
+   "oracle_id": "82004860-e589-4e38-8d61-8c0210e4ea39",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Search your library for a card, put that card into your hand, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tutor"
+   ],
+   "edhrec_rank": 63,
+   "salt": 1.58,
+   "price_usd": 67.17,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": true,
+   "is_tutor": true,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "tutor"
+   ],
+   "tags": [
+    "tutor-card",
+    "tutor-to-hand",
+    "black effect",
+    "tutor",
+    "tutor-to"
+   ],
+   "engine_participation": [],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Village Rites",
+   "quantity": 1,
+   "scryfall_id": "2841339b-faef-407d-9838-d03fe80e6294",
+   "oracle_id": "365548fb-5acc-4a8a-b20b-26d28b7d029f",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 202,
+   "salt": 0.09,
+   "price_usd": 1.06,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "additional cost",
+    "plunder",
+    "sacrifice outlet-creature",
+    "card advantage",
+    "draw",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "draw",
+    "sacrifice"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Kabira Takedown // Kabira Plateau",
+   "quantity": 1,
+   "scryfall_id": "366e9845-019d-47cc-adb8-8fbbaad35b6d",
+   "oracle_id": "0bb73c07-0220-4ba9-8d85-3c357c223833",
+   "mana_cost": "{1}{W}",
+   "mana_value": 2.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Kabira Takedown deals damage equal to the number of creatures you control to target creature or planeswalker.\n//\nThis land enters tapped.\n{T}: Add {W}.",
+   "mana_production": {
+    "W": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 2612,
+   "salt": 0.08,
+   "price_usd": 0.32,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "burn planeswalker",
+    "cheaper than mv",
+    "outnumber",
+    "single target instant/sorcery",
+    "spot removal",
+    "tapland",
+    "utility land",
+    "burn",
+    "burn creature",
+    "creature count matters",
+    "removal",
+    "removal-burn",
+    "removal-creature",
+    "removal-planeswalker"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
+   "set_code": "znr",
+   "released_at": "2020-09-25",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Feast of the Victorious Dead",
+   "quantity": 1,
+   "scryfall_id": "8a90d613-a327-4dc7-b0c1-0003fe0171ef",
+   "oracle_id": "7e4e1d13-db1a-48e5-9b5f-f3e71d10c23e",
+   "mana_cost": "{W}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "At the beginning of your end step, if one or more creatures died this turn, you gain that much life and distribute that many +1/+1 counters among any number of creatures you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 7158,
+   "salt": 0.36,
+   "price_usd": 0.28,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "gives pp counters",
+    "intervening if clause",
+    "morbid",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "unnoted tracked information",
+    "lifegain",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "counters"
+   ],
+   "set_code": "mat",
+   "released_at": "2023-05-12",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Westvale Abbey // Ormendahl, Profane Prince",
+   "quantity": 1,
+   "scryfall_id": "c1f53d7a-9dad-46e8-b686-cd1362867445",
+   "oracle_id": "04eeb9ad-5c59-411b-8809-db8349838588",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{5}, {T}, Pay 1 life: Create a 1/1 white and black Human Cleric creature token.\n{5}, {T}, Sacrifice five creatures: Transform this land, then untap it.\n//\nFlying, lifelink, indestructible, haste",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [
+    "Flying",
+    "Haste",
+    "Lifelink",
+    "Indestructible",
+    "Transform"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 1496,
+   "salt": 0.13,
+   "price_usd": 3.4,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "creatureland",
+    "evasion",
+    "life payment",
+    "mana sink",
+    "out of color token",
+    "repeatable creature tokens",
+    "repeatable lifegain",
+    "sacrifice outlet-creature",
+    "animate",
+    "animate self",
+    "card names",
+    "lifegain",
+    "repeatable token generator",
+    "sacrifice outlet",
+    "type change",
+    "utility land"
+   ],
+   "engine_participation": [],
+   "set_code": "soi",
+   "released_at": "2016-04-08",
+   "rarity": "rare",
+   "layout": "transform"
+  },
+  {
+   "name": "Urborg, Tomb of Yawgmoth",
+   "quantity": 1,
+   "scryfall_id": "9e1a9e38-6ffc-490f-b0be-23ba4e8204c6",
+   "oracle_id": "db6174d7-211d-4817-b8e4-8384594c83f9",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Legendary Land",
+   "oracle_text": "Each land is a Swamp in addition to its other land types.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 75,
+   "salt": 0.49,
+   "price_usd": 55.42,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "chromatic lantern",
+    "land conversion",
+    "namesake spell",
+    "symmetrical",
+    "universal type change",
+    "utility land",
+    "card names",
+    "type change"
+   ],
+   "engine_participation": [],
+   "set_code": "tsr",
+   "released_at": "2021-03-19",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Caves of Koilos",
+   "quantity": 1,
+   "scryfall_id": "99264beb-2149-4cd4-9880-f0dc5c570c1b",
+   "oracle_id": "33de01e9-ce5a-42d4-afcb-343cd54a6d80",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. This land deals 1 damage to you.",
+   "mana_production": {
+    "W": 1,
+    "B": 1,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 125,
+   "salt": 0.12,
+   "price_usd": 0.57,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "burn-you",
+    "cycle-apc-painland",
+    "mana ability with extra effect",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-painland",
+    "dual land",
+    "life payment",
+    "painland"
+   ],
+   "engine_participation": [],
+   "set_code": "dmu",
+   "released_at": "2022-09-09",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Opal Palace",
+   "quantity": 1,
+   "scryfall_id": "e64ed120-1e33-4e31-8f16-ba56497c3c84",
+   "oracle_id": "aa6723a2-75da-49f5-a1ba-cbfa82c55301",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color in your commander's color identity. If you spend this mana to cast your commander, it enters with a number of additional +1/+1 counters on it equal to the number of times it's been cast from the command zone this game.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 680,
+   "salt": 0.13,
+   "price_usd": 0.3,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "buff mana",
+    "commander identity matters",
+    "filterland",
+    "gives pp counters",
+    "recasting commander matters",
+    "repeatable pp counters",
+    "synergy-commander",
+    "utility land",
+    "commander matters",
+    "mana filter"
+   ],
+   "engine_participation": [],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Godless Shrine",
+   "quantity": 1,
+   "scryfall_id": "ced4c824-2dfc-42ae-84e6-09f8e3f51b5b",
+   "oracle_id": "73864fcc-1bde-4bc0-831e-2b93e546e417",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land — Plains Swamp",
+   "oracle_text": "({T}: Add {W} or {B}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 60,
+   "salt": 0.13,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-rav-shockland",
+    "nonbasic-basic-land-type",
+    "conditional tapland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "life payment",
+    "shockland"
+   ],
+   "engine_participation": [],
+   "set_code": "rna",
+   "released_at": "2019-01-25",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Command Tower",
+   "quantity": 1,
+   "scryfall_id": "d477d733-2360-4f1d-9ecd-cdedc2e8a7ae",
+   "oracle_id": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 2,
+   "salt": 0.38,
+   "price_usd": 0.55,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "commander identity matters",
+    "rainbow land",
+    "synergy-color-share",
+    "synergy-commander",
+    "tutored by name",
+    "virtual legendary",
+    "card names",
+    "commander matters"
+   ],
+   "engine_participation": [],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Carrion Feeder",
+   "quantity": 1,
+   "scryfall_id": "0a19da90-880e-4eca-8cf7-6d7baf090d53",
+   "oracle_id": "a1cc5e37-b09a-4b7f-afd5-77c1c35aa425",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Zombie",
+   "oracle_text": "This creature can't block.\nSacrifice a creature: Put a +1/+1 counter on this creature.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 613,
+   "salt": 0.32,
+   "price_usd": 4.87,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "drawback",
+    "free sacrifice outlet",
+    "gains pp counters",
+    "repeatable pp counters",
+    "sacrifice outlet-creature",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "sacrifice"
+   ],
+   "set_code": "mh1",
+   "released_at": "2019-06-14",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Yawgmoth, Thran Physician",
+   "quantity": 1,
+   "scryfall_id": "8690cbcc-f8fd-41f7-9e28-e61c12b04014",
+   "oracle_id": "a1e232c0-dc38-47be-a5a0-f68bc1d86a29",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Cleric",
+   "oracle_text": "Protection from Humans\nPay 1 life, Sacrifice another creature: Put a -1/-1 counter on up to one target creature and draw a card.\n{B}{B}, Discard a card: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+   "mana_production": {},
+   "keywords": [
+    "Protection",
+    "Proliferate"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 834,
+   "salt": 1.15,
+   "price_usd": 28.89,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-mh1-monocolor-legend",
+    "discard outlet",
+    "draw engine",
+    "fun ruling",
+    "gives mm counters",
+    "hate-typal-human",
+    "life for cards",
+    "noncreature typal",
+    "removal-toughness",
+    "repeatable crime",
+    "repeatable plunder",
+    "repeatable removal",
+    "repeatable-proliferate",
+    "sacrifice outlet-creature",
+    "spot removal",
+    "unique evasion",
+    "unique protection",
+    "black effect",
+    "card advantage",
+    "cycle",
+    "draw",
+    "evasion",
+    "hate",
+    "hate-typal",
+    "life payment",
+    "plunder",
+    "removal",
+    "removal-creature",
+    "repeatable card advantage",
+    "repeatable draw",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "counters",
+    "draw",
+    "protection",
+    "removal",
+    "sacrifice",
+    "typal"
+   ],
+   "set_code": "mh1",
+   "released_at": "2019-06-14",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Basri's Lieutenant",
+   "quantity": 1,
+   "scryfall_id": "74b1eae0-1bf8-4922-a9e3-45c01ece9005",
+   "oracle_id": "57d0c688-6206-4c83-9fcb-27fd29e2a9ed",
+   "mana_cost": "{3}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Human Knight",
+   "oracle_text": "Vigilance, protection from multicolored\nWhen this creature enters, put a +1/+1 counter on target creature you control.\nWhenever this creature or another creature you control dies, if it had a +1/+1 counter on it, create a 2/2 white Knight creature token with vigilance.",
+   "mana_production": {},
+   "keywords": [
+    "Vigilance",
+    "Protection"
+   ],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 8300,
+   "salt": 0.31,
+   "price_usd": 0.35,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "cycle-m21-basri-vertical",
+    "evasion",
+    "gives pp counters",
+    "hate-multicolor",
+    "intervening if clause",
+    "leaves body behind",
+    "namesake spell",
+    "pp counters matter",
+    "repeatable creature tokens",
+    "card names",
+    "counters matter",
+    "cycle",
+    "death trigger",
+    "death trigger-self",
+    "hate",
+    "hate-color",
+    "repeatable token generator",
+    "triggered ability",
+    "vertical-cycle"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "tokens"
+   ],
+   "set_code": "m21",
+   "released_at": "2020-07-03",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Viscera Seer",
+   "quantity": 1,
+   "scryfall_id": "486fd8a2-dd97-4082-84ef-4795c7e559a0",
+   "oracle_id": "f82a4e85-526d-4456-b700-7760043a31be",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Wizard Vampire",
+   "oracle_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+   "mana_production": {},
+   "keywords": [
+    "Scry"
+   ],
+   "categories": [
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 257,
+   "salt": 0.4,
+   "price_usd": 0.46,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "free sacrifice outlet",
+    "martyr",
+    "repeatable scry",
+    "sacrifice outlet-creature",
+    "bottom deck manipulation",
+    "library manipulation",
+    "peek",
+    "peek-library",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet",
+    "sacrifice self",
+    "scry",
+    "top deck manipulation"
+   ],
+   "engine_participation": [
+    "sacrifice",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Elas il-Kor, Sadistic Pilgrim",
+   "quantity": 1,
+   "scryfall_id": "1c3f0ffe-cf51-4c30-8cd5-9e3c7e92c019",
+   "oracle_id": "a4d33e21-d3fe-4d5b-903c-b75e859d6f7f",
+   "mana_cost": "{W}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Cleric Kor Phyrexian",
+   "oracle_text": "Deathtouch\nWhenever another creature you control enters, you gain 1 life.\nWhenever another creature you control dies, each opponent loses 1 life.",
+   "mana_production": {},
+   "keywords": [
+    "Deathtouch"
+   ],
+   "categories": [
+    "Drain"
+   ],
+   "edhrec_rank": 615,
+   "salt": 0.43,
+   "price_usd": 3.11,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "blood artist ability",
+    "cycle-dmu-mn-signpost",
+    "group slug",
+    "opponent loses life",
+    "soul warden ability",
+    "unique type line",
+    "creaturefall",
+    "cycle",
+    "cycle-dmu-draft-signpost",
+    "death trigger",
+    "draft signpost",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "repeatable lifegain",
+    "thingfall",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain"
+   ],
+   "set_code": "dmu",
+   "released_at": "2022-09-09",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Blood Artist",
+   "quantity": 1,
+   "scryfall_id": "b7f1c316-cf2f-4bbf-89a1-79c8043bdd96",
+   "oracle_id": "310f141c-7f37-4729-aed6-dd9c09db448d",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Vampire",
+   "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Drain"
+   ],
+   "edhrec_rank": 141,
+   "salt": 0.56,
+   "price_usd": 3.92,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "blood artist ability",
+    "inscryption achievement",
+    "opponent loses life",
+    "repeatable crime",
+    "card names",
+    "death trigger",
+    "drain life",
+    "inverted effects",
+    "lifegain",
+    "repeatable lifegain",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "The Ozolith",
+   "quantity": 1,
+   "scryfall_id": "9341ed06-53db-4604-b60a-3ea9129afbc2",
+   "oracle_id": "1946ded1-5f53-409f-b0a6-5433bb0357d2",
+   "mana_cost": "{1}",
+   "mana_value": 1.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Legendary Artifact",
+   "oracle_text": "Whenever a creature you control leaves the battlefield, if it had counters on it, put those counters on The Ozolith.\nAt the beginning of combat on your turn, if The Ozolith has counters on it, you may move all counters from The Ozolith onto target creature.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 303,
+   "salt": 0.86,
+   "price_usd": 61.21,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "counter preservation",
+    "fun ruling",
+    "intervening if clause",
+    "leaves battlefield trigger",
+    "move counters",
+    "repeatable crime",
+    "counters matter",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger"
+   ],
+   "set_code": "iko",
+   "released_at": "2020-04-24",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Skullclamp",
+   "quantity": 1,
+   "scryfall_id": "a36fd6d8-66a2-49d1-b9f3-b400ebc03674",
+   "oracle_id": "65986c1b-8e51-4604-b685-d82fa7d1263a",
+   "mana_cost": "{1}",
+   "mana_value": 1.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact — Equipment",
+   "oracle_text": "Equipped creature gets +1/-1.\nWhenever equipped creature dies, draw two cards.\nEquip {1}",
+   "mana_production": {},
+   "keywords": [
+    "Equip"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 41,
+   "salt": 0.83,
+   "price_usd": 4.94,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "activated ability",
+    "death trigger",
+    "draw engine",
+    "flowstone",
+    "repeatable pure draw",
+    "card advantage",
+    "draw",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "draw"
+   ],
+   "set_code": "moc",
+   "released_at": "2023-04-21",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Ashnod's Altar",
+   "quantity": 1,
+   "scryfall_id": "3c0f7157-a375-499c-92c7-d47d2e95dbad",
+   "oracle_id": "4d18bcba-a346-445e-a182-6cc30b7e066d",
+   "mana_cost": "{3}",
+   "mana_value": 3.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "Sacrifice a creature: Add {C}{C}.",
+   "mana_production": {
+    "C": 2
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 134,
+   "salt": 1.12,
+   "price_usd": 15.88,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "alliteration",
+    "free sacrifice outlet",
+    "mana rock",
+    "namesake spell",
+    "refund",
+    "sacrifice outlet-creature",
+    "virtual legendary",
+    "card names",
+    "mana producer",
+    "ramp",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "ramp",
+    "sacrifice"
+   ],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Blade of the Bloodchief",
+   "quantity": 1,
+   "scryfall_id": "34e7bebf-1844-476c-a947-978393908fa2",
+   "oracle_id": "8985e545-07c3-45f9-9058-fe3c1f50de04",
+   "mana_cost": "{1}",
+   "mana_value": 1.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact — Equipment",
+   "oracle_text": "Whenever a creature dies, put a +1/+1 counter on equipped creature. If equipped creature is a Vampire, put two +1/+1 counters on it instead.\nEquip {1}",
+   "mana_production": {},
+   "keywords": [
+    "Equip"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 2460,
+   "salt": 0.2,
+   "price_usd": 7.38,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "death trigger",
+    "gives pp counters",
+    "repeatable pp counters",
+    "self-replacement effect",
+    "typal-vampire",
+    "card names",
+    "triggered ability",
+    "typal",
+    "typal-creature"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Phyrexian Altar",
+   "quantity": 1,
+   "scryfall_id": "95d9f93c-50a8-41a9-be98-d1900bf1c12f",
+   "oracle_id": "8d02b297-97c4-4379-9862-0a462400f66f",
+   "mana_cost": "{3}",
+   "mana_value": 3.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Artifact",
+   "oracle_text": "Sacrifice a creature: Add one mana of any color.",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 310,
+   "salt": 1.26,
+   "price_usd": 58.11,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "free sacrifice outlet",
+    "mana rock",
+    "sacrifice outlet-creature",
+    "mana producer",
+    "ramp",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "ramp",
+    "sacrifice"
+   ],
+   "set_code": "2x2",
+   "released_at": "2022-07-08",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Talisman of Hierarchy",
+   "quantity": 1,
+   "scryfall_id": "16d49e21-dbe6-41da-b4b0-fd587e3326a5",
+   "oracle_id": "b693c3de-2eaf-4850-b405-e79d00adefda",
+   "mana_cost": "{2}",
+   "mana_value": 2.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Artifact",
+   "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. This artifact deals 1 damage to you.",
+   "mana_production": {
+    "W": 1,
+    "B": 1,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 135,
+   "salt": 0.27,
+   "price_usd": 0.48,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "burn-you",
+    "cycle-mh1-talisman",
+    "mana ability with extra effect",
+    "mana rock",
+    "refund",
+    "cycle",
+    "cycle-talisman",
+    "mana producer",
+    "ramp"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Felidar Retreat",
+   "quantity": 1,
+   "scryfall_id": "c91c11ef-e036-4c54-98b7-83b7b25e7c1b",
+   "oracle_id": "16629f59-bae8-4c19-bf50-443eb0ed6856",
+   "mana_cost": "{3}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Create a 2/2 white Cat Beast creature token.\n• Put a +1/+1 counter on each creature you control. Those creatures gain vigilance until end of turn.",
+   "mana_production": {},
+   "keywords": [
+    "Landfall"
+   ],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 516,
+   "salt": 0.38,
+   "price_usd": 1.05,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "gives pp counters to all",
+    "gives vigilance",
+    "landfall",
+    "modal",
+    "repeatable creature tokens",
+    "repeatable pp counters",
+    "triggered ability",
+    "gives pp counters",
+    "lands matter",
+    "power boost to all",
+    "repeatable token generator",
+    "thingfall",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters",
+    "tokens"
+   ],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Resourceful Defense",
+   "quantity": 1,
+   "scryfall_id": "91f4dfc0-7478-4e47-89b4-685b72197ef0",
+   "oracle_id": "83e78565-e61f-4bbc-b834-f47941f7e3ec",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Whenever a permanent you control leaves the battlefield, if it had counters on it, put those counters on target permanent you control.\n{4}{W}: Move any number of counters from target permanent you control onto a second target permanent you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 1582,
+   "salt": 0.25,
+   "price_usd": 0.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "counter preservation",
+    "counter preservation-self",
+    "intervening if clause",
+    "leaves battlefield trigger",
+    "mana sink",
+    "move counters",
+    "multiple targets",
+    "counters matter",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger"
+   ],
+   "set_code": "ncc",
+   "released_at": "2022-04-29",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Sejiri Shelter // Sejiri Glacier",
+   "quantity": 1,
+   "scryfall_id": "f25d56f9-aa54-4657-9ac9-e93fbba3e715",
+   "oracle_id": "d54e4e37-042b-44a5-918d-757308545d4d",
+   "mana_cost": "{1}{W}",
+   "mana_value": 2.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Target creature you control gains protection from the color of your choice until end of turn.\n//\nThis land enters tapped.\n{T}: Add {W}.",
+   "mana_production": {
+    "W": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 959,
+   "salt": 0.34,
+   "price_usd": 2.51,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "protection"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cheaper than mv",
+    "combat trick",
+    "gives protection",
+    "hate-color-choose",
+    "protects-creature",
+    "single target instant/sorcery",
+    "tapland",
+    "utility land",
+    "card names",
+    "gives evasion",
+    "hate",
+    "hate-color",
+    "protection"
+   ],
+   "engine_participation": [
+    "protection"
+   ],
+   "set_code": "znr",
+   "released_at": "2020-09-25",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Diabolic Intent",
+   "quantity": 1,
+   "scryfall_id": "d72ab698-de67-4ca8-8e42-b05346bf52fa",
+   "oracle_id": "038519b9-bca8-4b27-b5ac-2409595469d0",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a card, put that card into your hand, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tutor"
+   ],
+   "edhrec_rank": 273,
+   "salt": 0.74,
+   "price_usd": 17.1,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": true,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "tutor"
+   ],
+   "tags": [
+    "additional cost",
+    "sacrifice outlet-creature",
+    "tutor-card",
+    "tutor-to-hand",
+    "black effect",
+    "sacrifice outlet",
+    "tutor",
+    "tutor-to"
+   ],
+   "engine_participation": [
+    "sacrifice"
+   ],
+   "set_code": "bro",
+   "released_at": "2022-11-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "High Market",
+   "quantity": 1,
+   "scryfall_id": "9d56844f-ee3b-4161-85d2-18b872a9b465",
+   "oracle_id": "86fb3749-37d6-48a6-8524-71e996850307",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice a creature: You gain 1 life.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 424,
+   "salt": 0.14,
+   "price_usd": 0.52,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "repeatable lifegain",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet-creature",
+    "utility land",
+    "lifegain",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [],
+   "set_code": "afc",
+   "released_at": "2021-07-23",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Bojuka Bog",
+   "quantity": 1,
+   "scryfall_id": "0c7d4fbe-fa7a-4b34-b339-197f08409cbf",
+   "oracle_id": "04b7362d-0490-4cb0-b5d7-2a7732f659ce",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped.\nWhen this land enters, exile target player's graveyard.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 24,
+   "salt": 0.45,
+   "price_usd": 1.58,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cycle-wwk-utilityland",
+    "sweeper-graveyard",
+    "triggered ability",
+    "utility land",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "hate",
+    "hate-graveyard",
+    "tapland"
+   ],
+   "engine_participation": [],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Karn's Bastion",
+   "quantity": 1,
+   "scryfall_id": "9134181a-55a0-4c92-b3db-0e21df6719c9",
+   "oracle_id": "9fb8cd81-403a-4988-8f1c-b8eccf8abd9c",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{4}, {T}: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [
+    "Proliferate"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 206,
+   "salt": 0.23,
+   "price_usd": 2.15,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "mana sink",
+    "namesake spell",
+    "repeatable-proliferate",
+    "utility land",
+    "card names"
+   ],
+   "engine_participation": [],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Command Beacon",
+   "quantity": 1,
+   "scryfall_id": "0bec6181-e214-4833-8c2f-8a10d59b2879",
+   "oracle_id": "7e8c2a18-e404-40ff-a9e0-ec3eeb6d576e",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice this land: Put your commander into your hand from the command zone.",
+   "mana_production": {
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 183,
+   "salt": 0.2,
+   "price_usd": 9.75,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "commander tax evasion",
+    "sacrifice self",
+    "synergy-commander",
+    "utility land",
+    "virtual legendary",
+    "card names",
+    "commander matters"
+   ],
+   "engine_participation": [],
+   "set_code": "cmr",
+   "released_at": "2020-11-20",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Phyrexian Tower",
+   "quantity": 1,
+   "scryfall_id": "05b2cc68-1d20-421f-9800-af0996071554",
+   "oracle_id": "1861e642-21d5-4232-89f3-b5557f2946c1",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice a creature: Add {B}{B}.",
+   "mana_production": {
+    "B": 2,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 194,
+   "salt": 0.41,
+   "price_usd": 30.68,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "adds multiple mana",
+    "cycle-usg-legendary-land",
+    "ramp",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet-creature",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [],
+   "set_code": "jmp",
+   "released_at": "2020-07-17",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Isolated Chapel",
+   "quantity": 1,
+   "scryfall_id": "c688891e-0a25-4630-acfc-c3a0bed2b2f2",
+   "oracle_id": "7e5d9efe-48a9-434b-bb09-056e0e09cc9a",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped unless you control a Plains or a Swamp.\n{T}: Add {W} or {B}.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 92,
+   "salt": 0.17,
+   "price_usd": 0.6,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-isd-checkland",
+    "synergy-plains",
+    "synergy-swamp",
+    "conditional tapland",
+    "cycle",
+    "cycle-checkland",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Tainted Field",
+   "quantity": 1,
+   "scryfall_id": "299b3b1d-4c31-4701-870e-15ee1ef85cd2",
+   "oracle_id": "439de49b-1091-4688-9ffb-80a025df31c2",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. Activate only if you control a Swamp.",
+   "mana_production": {
+    "W": 1,
+    "B": 1,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 449,
+   "salt": 0.01,
+   "price_usd": 0.39,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-tor-tainted-land",
+    "synergy-swamp",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Marsh Flats",
+   "quantity": 1,
+   "scryfall_id": "9db3ba6d-eb7f-4f5b-9a3b-c6239c3baa42",
+   "oracle_id": "dab520d0-20b4-4273-ba6b-eb07f85ea433",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Land",
+   "oracle_text": "{T}, Pay 1 life, Sacrifice this land: Search your library for a Plains or Swamp card, put it onto the battlefield, then shuffle.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 51,
+   "salt": 0.33,
+   "price_usd": 32.72,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-zen-fetchland",
+    "life payment",
+    "tutor-land-plains",
+    "tutor-land-swamp",
+    "cycle",
+    "cycle-fetchland",
+    "cycle-land",
+    "cycle-nonmana-land",
+    "fetchland",
+    "sacrifice self",
+    "tutor",
+    "tutor-land",
+    "tutor-land-to-battlefield",
+    "tutor-to",
+    "tutor-to-battlefield"
+   ],
+   "engine_participation": [],
+   "set_code": "mh2",
+   "released_at": "2021-06-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Shattered Sanctum",
+   "quantity": 1,
+   "scryfall_id": "ad44c9aa-eb8f-4200-8dfe-2af728d80083",
+   "oracle_id": "c854ecb0-cc60-4c48-a9aa-7f2348a7a8c6",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped unless you control two or more other lands.\n{T}: Add {W} or {B}.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 266,
+   "salt": 0.06,
+   "price_usd": 1.8,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cycle-vow-slowland",
+    "card names",
+    "conditional tapland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-slowland",
+    "dual land",
+    "lands matter"
+   ],
+   "engine_participation": [],
+   "set_code": "vow",
+   "released_at": "2021-11-19",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Vault of Champions",
+   "quantity": 1,
+   "scryfall_id": "cafd7db6-b04e-4fa2-bccd-981211132a93",
+   "oracle_id": "ebc5ac83-08d4-4d6b-b840-0c4ba71a38ab",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped unless you have two or more opponents.\n{T}: Add {W} or {B}.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 170,
+   "salt": 0.21,
+   "price_usd": 16.64,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-cmr-bond-land",
+    "conditional tapland",
+    "cycle",
+    "cycle-bondland",
+    "cycle-dual-land",
+    "cycle-land",
+    "dual land",
+    "multiplayer"
+   ],
+   "engine_participation": [],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Swamp",
+   "quantity": 3,
+   "scryfall_id": "184a196e-8604-49d2-a66a-6f7c0eafd5de",
+   "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Basic Land — Swamp",
+   "oracle_text": "({T}: Add {B}.)",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": null,
+   "salt": 0.33,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-lea-basic-land",
+    "eponymous",
+    "single english word name",
+    "unique type line",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land"
+   ],
+   "engine_participation": [],
+   "set_code": "m20",
+   "released_at": "2019-07-12",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Black Market Connections",
+   "quantity": 1,
+   "scryfall_id": "9bac8176-d0db-4397-820d-acbdd3264377",
+   "oracle_id": "d2664f28-49e1-46f8-a863-b217e961a57c",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "At the beginning of your first main phase, choose one or more —\n• Sell Contraband — Create a Treasure token. You lose 1 life.\n• Buy Information — Draw a card. You lose 2 life.\n• Hire a Mercenary — Create a 3/2 colorless Shapeshifter creature token with changeling. You lose 3 life. (It is every creature type.)",
+   "mana_production": {},
+   "keywords": [
+    "Treasure",
+    "Hire a Mercenary",
+    "Sell Contraband",
+    "Buy Information"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 130,
+   "salt": 0.56,
+   "price_usd": 9.97,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp",
+    "draw"
+   ],
+   "tags": [
+    "deal with the devil",
+    "draw engine",
+    "life for cards",
+    "modal",
+    "ramp",
+    "repeatable creature tokens",
+    "repeatable pure draw",
+    "repeatable treasures",
+    "triggered ability",
+    "black effect",
+    "card advantage",
+    "draw",
+    "drawback",
+    "life payment",
+    "pure draw",
+    "repeatable artifact tokens",
+    "repeatable card advantage",
+    "repeatable draw",
+    "repeatable noncreature tokens",
+    "repeatable token generator"
+   ],
+   "engine_participation": [
+    "draw",
+    "ramp",
+    "tokens"
+   ],
+   "set_code": "acr",
+   "released_at": "2024-07-05",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Reluctant Role Model",
+   "quantity": 1,
+   "scryfall_id": "4dde86d6-34a0-4b3b-a46a-d9941501d08c",
+   "oracle_id": "8d24c12a-a300-4199-b2a9-3d5ead8df617",
+   "mana_cost": "{1}{W}",
+   "mana_value": 2.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Human Survivor",
+   "oracle_text": "Survival — At the beginning of your second main phase, if this creature is tapped, put a flying, lifelink, or +1/+1 counter on it.\nWhenever this creature or another creature you control dies, if it had counters on it, put those counters on up to one target creature.",
+   "mana_production": {},
+   "keywords": [
+    "Lifelink",
+    "Survival"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 4604,
+   "salt": 0.27,
+   "price_usd": 0.39,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "bear with set's mechanic",
+    "counter preservation",
+    "counter preservation-self",
+    "death trigger-self",
+    "flying counter",
+    "gains flying",
+    "gains lifelink",
+    "gains pp counters",
+    "intervening if clause",
+    "lifelink counter",
+    "move counters",
+    "repeatable crime",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "tapped matters-self",
+    "card names",
+    "counters matter",
+    "death trigger",
+    "evasion",
+    "keyword counter",
+    "lifegain",
+    "staple with set's mechanic",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger"
+   ],
+   "set_code": "dsk",
+   "released_at": "2024-09-27",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Spymaster's Vault",
+   "quantity": 1,
+   "scryfall_id": "3d5fbb30-abfc-4e79-8ce5-bbb04a241c9f",
+   "oracle_id": "69ddca4b-5cc0-45f3-b2e6-a047c8d601be",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped unless you control a Swamp.\n{T}: Add {B}.\n{B}, {T}: Target creature you control connives X, where X is the number of creatures that died this turn. (Draw X cards, then discard X cards. Put a +1/+1 counter on that creature for each nonland card discarded this way.)",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [
+    "Connive"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 1144,
+   "salt": 0.14,
+   "price_usd": 1.9,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-mh3-r-mono-land",
+    "discarded type matters",
+    "gives pp counters",
+    "morbid",
+    "repeatable loot",
+    "repeatable pp counters",
+    "synergy-swamp",
+    "unnoted tracked information",
+    "utility land",
+    "blue effect",
+    "card advantage",
+    "conditional tapland",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "discard outlet",
+    "draw",
+    "loot",
+    "repeatable card advantage",
+    "repeatable draw"
+   ],
+   "engine_participation": [],
+   "set_code": "mh3",
+   "released_at": "2024-06-14",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Nine-Lives Familiar",
+   "quantity": 1,
+   "scryfall_id": "988c23f6-59fe-49f9-a9ce-9881dccb7033",
+   "oracle_id": "5049da27-f38b-4fe6-a387-51510bd1f44e",
+   "mana_cost": "{1}{B}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Cat",
+   "oracle_text": "This creature enters with eight revival counters on it if you cast it.\nWhen this creature dies, if it had a revival counter on it, return it to the battlefield with one fewer revival counter on it at the beginning of the next end step.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 2409,
+   "salt": 0.31,
+   "price_usd": 1.72,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "aesthetic counter",
+    "cheat death-self",
+    "death trigger-self",
+    "delayed trigger",
+    "intervening if clause",
+    "unique counter",
+    "cheat death",
+    "death trigger",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "recursion"
+   ],
+   "set_code": "fdn",
+   "released_at": "2024-11-15",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Elspeth, Storm Slayer",
+   "quantity": 1,
+   "scryfall_id": "73a065e3-b530-4e62-ab3c-4f6f908184ec",
+   "oracle_id": "f78af825-023a-42e9-8374-5c52303a1417",
+   "mana_cost": "{3}{W}{W}",
+   "mana_value": 5.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Planeswalker — Elspeth",
+   "oracle_text": "If one or more tokens would be created under your control, twice that many of those tokens are created instead.\n+1: Create a 1/1 white Soldier creature token.\n0: Put a +1/+1 counter on each creature you control. Those creatures gain flying until your next turn.\n−3: Destroy target creature an opponent controls with mana value 3 or greater.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 693,
+   "salt": 0.87,
+   "price_usd": 44.15,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "gives flying",
+    "gives pp counters to all",
+    "hate-high-mv",
+    "passive ability",
+    "removal-creature",
+    "removal-destroy",
+    "repeatable creature tokens",
+    "repeatable crime",
+    "repeatable pp counters",
+    "repeatable removal",
+    "spot removal",
+    "token doubler",
+    "card names",
+    "gives evasion",
+    "gives pp counters",
+    "hate",
+    "power boost to all",
+    "removal",
+    "repeatable token generator",
+    "token increaser",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters",
+    "removal",
+    "tokens"
+   ],
+   "set_code": "tdm",
+   "released_at": "2025-04-11",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Bone Devourer",
+   "quantity": 1,
+   "scryfall_id": "5acb9bd4-ed86-400e-9f5d-4c26351242f2",
+   "oracle_id": "0ee41ef9-0b39-4d00-a68e-7914839a7175",
+   "mana_cost": "{3}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Dragon",
+   "oracle_text": "Flash\nFlying\nThis creature enters with a number of +1/+1 counters on it equal to the number of creatures that died this turn.\nWhen this creature dies, you draw X cards and you lose X life, where X is the number of +1/+1 counters on it.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Flash"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 10308,
+   "salt": 0.12,
+   "price_usd": 0.33,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "burst draw",
+    "death trigger-self",
+    "evasion",
+    "gains pp counters",
+    "life for cards",
+    "morbid",
+    "pp counters matter",
+    "pure draw",
+    "unnoted tracked information",
+    "black effect",
+    "card advantage",
+    "counters matter",
+    "death trigger",
+    "draw",
+    "life payment",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "draw"
+   ],
+   "set_code": "tdc",
+   "released_at": "2025-04-11",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Susur Secundi, Void Altar",
+   "quantity": 1,
+   "scryfall_id": "aefb8c0d-2bc6-4bec-851e-0137b4abfb22",
+   "oracle_id": "50d6cadc-07e4-479e-90f4-e3a20f769bab",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Land — Planet",
+   "oracle_text": "This land enters tapped.\n{T}: Add {B}.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\n12+ | {1}{B}, {T}, Pay 2 life, Sacrifice a creature: Draw cards equal to the sacrificed creature's power. Activate only as a sorcery.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [
+    "Station"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 1823,
+   "salt": 0.19,
+   "price_usd": 5.42,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "burst draw",
+    "cycle-eoe-planet",
+    "draw engine",
+    "life for cards",
+    "mana sink",
+    "repeatable plunder",
+    "sacrifice outlet-creature",
+    "scales with power",
+    "tap fuel-power",
+    "tapland with set's mechanic",
+    "utility land",
+    "virtual legendary",
+    "black effect",
+    "card advantage",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "draw",
+    "life payment",
+    "plunder",
+    "power matters",
+    "repeatable card advantage",
+    "repeatable draw",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet",
+    "staple with set's mechanic",
+    "tap fuel-creature",
+    "tap outlet",
+    "tapland"
+   ],
+   "engine_participation": [],
+   "set_code": "eoe",
+   "released_at": "2025-08-01",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Abandoned Air Temple",
+   "quantity": 1,
+   "scryfall_id": "9c0433f9-8f1e-4a19-a83f-a41925f1b1a9",
+   "oracle_id": "9575d7ce-f26d-4b90-87a3-6329e9799572",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Land",
+   "oracle_text": "This land enters tapped unless you control a basic land.\n{T}: Add {W}.\n{3}{W}, {T}: Put a +1/+1 counter on each creature you control.",
+   "mana_production": {
+    "W": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 1176,
+   "salt": null,
+   "price_usd": 5.87,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-tla-utility-land",
+    "gives pp counters to all",
+    "mana sink",
+    "repeatable pp counters",
+    "synergy-basic",
+    "conditional tapland",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "gives pp counters",
+    "power boost to all",
+    "toughness boost to all",
+    "utility land"
+   ],
+   "engine_participation": [],
+   "set_code": "tla",
+   "released_at": "2025-11-21",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Plains",
+   "quantity": 3,
+   "scryfall_id": "36da00e3-3ef6-4ad5-a53d-e71cfdafc1e6",
+   "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Basic Land — Plains",
+   "oracle_text": "({T}: Add {W}.)",
+   "mana_production": {
+    "W": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": null,
+   "salt": 0.31,
+   "price_usd": null,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-lea-basic-land",
+    "eponymous",
+    "single english word name",
+    "unique type line",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land"
+   ],
+   "engine_participation": [],
+   "set_code": "ppp1",
+   "released_at": "2019-07-12",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Fetid Heath",
+   "quantity": 1,
+   "scryfall_id": "a6316d65-819c-42de-965e-8f2181f27a7f",
+   "oracle_id": "42bf259d-4bb9-49c3-b4ec-223dca62f4d6",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {C}.\n{W/B}, {T}: Add {W}{W}, {W}{B}, or {B}{B}.",
+   "mana_production": {
+    "W": 3,
+    "B": 3,
+    "C": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 336,
+   "salt": 0.09,
+   "price_usd": 0.57,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-eve-filterland",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-hybrid-filterland",
+    "cycle-land",
+    "dual land",
+    "filterland",
+    "mana filter"
+   ],
+   "engine_participation": [],
+   "set_code": "moc",
+   "released_at": "2023-04-21",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Anointed Procession",
+   "quantity": 1,
+   "scryfall_id": "9a52c265-6920-4929-ba0a-70da08df01f1",
+   "oracle_id": "7246d45b-2185-4cdd-981b-5419b7d52bce",
+   "mana_cost": "{3}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Tokens"
+   ],
+   "edhrec_rank": 364,
+   "salt": 0.96,
+   "price_usd": 62.47,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [],
+   "tags": [
+    "synergy-token",
+    "token doubler",
+    "token increaser"
+   ],
+   "engine_participation": [
+    "tokens"
+   ],
+   "set_code": "akh",
+   "released_at": "2017-04-28",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Esper Sentinel",
+   "quantity": 1,
+   "scryfall_id": "f3537373-ef54-4578-9d05-6216420ee349",
+   "oracle_id": "5def9f38-0a0b-4e8d-9f9d-29dcb46520b4",
+   "mana_cost": "{W}",
+   "mana_value": 1.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature Artifact — Human Soldier",
+   "oracle_text": "Whenever an opponent casts their first noncreature spell each turn, draw a card unless that player pays {X}, where X is this creature's power.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 79,
+   "salt": 1.67,
+   "price_usd": 60.83,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "cast tax",
+    "cast trigger-other",
+    "draw engine",
+    "hate-noncreature",
+    "hatebear",
+    "power matters-self",
+    "repeatable pure draw",
+    "rhystic",
+    "scales with power",
+    "card advantage",
+    "cast trigger",
+    "draw",
+    "hate",
+    "power matters",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "tax",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "draw"
+   ],
+   "set_code": "mh2",
+   "released_at": "2021-06-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Agadeem's Awakening // Agadeem, the Undercrypt",
+   "quantity": 1,
+   "scryfall_id": "67f4c93b-080c-4196-b095-6a120a221988",
+   "oracle_id": "562d71b9-1646-474e-9293-55da6947a758",
+   "mana_cost": "{X}{B}{B}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Return from your graveyard to the battlefield any number of target creature cards that each have a different mana value X or less.\n//\nAs this land enters, you may pay 3 life. If you don't, it enters tapped.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 961,
+   "salt": 0.43,
+   "price_usd": 28.7,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "recursion"
+   ],
+   "tags": [
+    "activated ability",
+    "alliteration",
+    "cheaper than mv",
+    "cycle-znr-boltland",
+    "mana value matters",
+    "mass reanimation",
+    "multiple targets",
+    "reanimate-creature",
+    "single target instant/sorcery",
+    "utility land",
+    "virtual legendary",
+    "boltland",
+    "card names",
+    "conditional tapland",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "life payment",
+    "reanimate",
+    "recursion",
+    "recursion-creature"
+   ],
+   "engine_participation": [
+    "recursion"
+   ],
+   "set_code": "znr",
+   "released_at": "2020-09-25",
+   "rarity": "mythic",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Madame Null, Power Broker",
+   "quantity": 1,
+   "scryfall_id": "4e712d5c-d6fe-40bb-b8e5-5f50c6ea8d4f",
+   "oracle_id": "73413bd5-8c40-4d45-8f05-c20c39ee4017",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Demon Advisor",
+   "oracle_text": "Deathtouch\nWhenever another creature you control enters, you may pay life equal to its power. If you do, put that many +1/+1 counters on it.",
+   "mana_production": {},
+   "keywords": [
+    "Deathtouch"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 9942,
+   "salt": null,
+   "price_usd": 0.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "creaturefall",
+    "fun ruling",
+    "gives pp counters",
+    "life payment",
+    "power doubler",
+    "repeatable pp counters",
+    "triggered ability",
+    "power matters",
+    "scales with power",
+    "thingfall"
+   ],
+   "engine_participation": [
+    "counters"
+   ],
+   "set_code": "tmt",
+   "released_at": "2026-03-06",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Super Shredder",
+   "quantity": 1,
+   "scryfall_id": "37a497b8-e908-4ddc-996e-a8470df72afb",
+   "oracle_id": "b7ee76bf-d15a-489e-8f05-414788f8f649",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Mutant Ninja",
+   "oracle_text": "Menace\nWhenever another permanent leaves the battlefield, put a +1/+1 counter on Super Shredder.",
+   "mana_production": {},
+   "keywords": [
+    "Menace"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 5209,
+   "salt": null,
+   "price_usd": 17.31,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "evasion",
+    "gains pp counters",
+    "leaves battlefield trigger",
+    "lose trigger",
+    "repeatable pp counters",
+    "unique type line",
+    "card names",
+    "multiplayer",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger"
+   ],
+   "set_code": "tmt",
+   "released_at": "2026-03-06",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Sandbender Scavengers",
+   "quantity": 1,
+   "scryfall_id": "9bfe0f7c-6dac-41d4-a013-109445158a5e",
+   "oracle_id": "0feacc7c-b93e-4322-bc8b-b3c19006128e",
+   "mana_cost": "{W}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Creature — Human Rogue",
+   "oracle_text": "Whenever you sacrifice another permanent, put a +1/+1 counter on this creature.\nWhen this creature dies, you may exile it. When you do, return target creature card with mana value less than or equal to this creature's power from your graveyard to the battlefield.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 17111,
+   "salt": null,
+   "price_usd": 0.23,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "recursion"
+   ],
+   "tags": [
+    "cycle-tla-r-two-color",
+    "death trigger-self",
+    "gains pp counters",
+    "graveyard fuel-self",
+    "hate-removal-sacrifice",
+    "power matters-self",
+    "reanimate-creature",
+    "reflexive trigger",
+    "repeatable pp counters",
+    "scales with power",
+    "your sacrifice matters",
+    "cycle",
+    "death trigger",
+    "exile-self",
+    "hate",
+    "power matters",
+    "reanimate",
+    "recursion",
+    "recursion-creature",
+    "sacrifice matters",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "recursion",
+    "sacrifice"
+   ],
+   "set_code": "tla",
+   "released_at": "2025-11-21",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Tarrian's Soulcleaver",
+   "quantity": 1,
+   "scryfall_id": "99413817-1218-4947-b12f-9a952b095a89",
+   "oracle_id": "2ffb38ec-5852-4e91-85a5-cfccd1f23556",
+   "mana_cost": "{1}",
+   "mana_value": 1.0,
+   "colors": [],
+   "color_identity": [],
+   "type_line": "Legendary Artifact — Equipment",
+   "oracle_text": "Equipped creature has vigilance.\nWhenever another artifact or creature is put into a graveyard from the battlefield, put a +1/+1 counter on equipped creature.\nEquip {2}",
+   "mana_production": {},
+   "keywords": [
+    "Equip"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 1180,
+   "salt": 0.24,
+   "price_usd": 4.09,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "death trigger",
+    "gives pp counters",
+    "gives vigilance",
+    "hate-artifact",
+    "morbid",
+    "namesake spell",
+    "repeatable pp counters",
+    "synergy-artifact",
+    "card names",
+    "hate",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger"
+   ],
+   "set_code": "lci",
+   "released_at": "2023-11-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Bartolomé del Presidio",
+   "quantity": 1,
+   "scryfall_id": "690ccdc7-6c43-4902-9d11-2f07b7a36b11",
+   "oracle_id": "f47e4c56-0a0b-422d-bf3d-7a20ee289f15",
+   "mana_cost": "{W}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Knight Vampire",
+   "oracle_text": "Sacrifice another creature or artifact: Put a +1/+1 counter on Bartolomé del Presidio.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 1786,
+   "salt": 0.18,
+   "price_usd": 0.29,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "cycle-lci-draft-signpost",
+    "free sacrifice outlet",
+    "gains pp counters",
+    "repeatable pp counters",
+    "sacrifice outlet-artifact",
+    "sacrifice outlet-creature",
+    "draft signpost",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "sacrifice",
+    "typal"
+   ],
+   "set_code": "lci",
+   "released_at": "2023-11-17",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Syr Vondam, Sunstar Exemplar",
+   "quantity": 1,
+   "scryfall_id": "49554198-549b-4066-86ce-77a03fda0a2f",
+   "oracle_id": "9e597063-c077-4236-a9e4-b0721b24677f",
+   "mana_cost": "{W}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Knight",
+   "oracle_text": "Vigilance, menace\nWhenever another creature you control dies or is put into exile, put a +1/+1 counter on Syr Vondam and you gain 1 life.\nWhen Syr Vondam dies or is put into exile while its power is 4 or greater, destroy up to one target nonland permanent.",
+   "mana_production": {},
+   "keywords": [
+    "Vigilance",
+    "Menace"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 4550,
+   "salt": 0.19,
+   "price_usd": 0.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "cycle-eoe-legend-after",
+    "cycle-eoe-r-two-color",
+    "death trigger-self",
+    "evasion",
+    "gains pp counters",
+    "power matters-self",
+    "removal-destroy",
+    "removal-nonland",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "spot removal",
+    "synergy-exiling",
+    "card names",
+    "cycle",
+    "death trigger",
+    "lifegain",
+    "power matters",
+    "removal",
+    "removal-artifact",
+    "removal-aura",
+    "removal-battle",
+    "removal-creature",
+    "removal-enchantment",
+    "removal-equipment",
+    "removal-planeswalker",
+    "removal-spacecraft",
+    "removal-vehicle",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "removal"
+   ],
+   "set_code": "eoe",
+   "released_at": "2025-08-01",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Elenda's Hierophant",
+   "quantity": 1,
+   "scryfall_id": "d12f728a-1bbb-4bee-96d4-d721292997ba",
+   "oracle_id": "cb99c675-adc5-4dad-8be8-524f5f921213",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Vampire Cleric",
+   "oracle_text": "Flying\nWhenever you gain life, put a +1/+1 counter on this creature.\nWhen this creature dies, create X 1/1 white Vampire creature tokens with lifelink, where X is its power.",
+   "mana_production": {},
+   "keywords": [
+    "Flying"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 1860,
+   "salt": 0.25,
+   "price_usd": 4.77,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "evasion",
+    "gains pp counters",
+    "lifegain",
+    "namesake spell",
+    "power matters-self",
+    "pridemate",
+    "repeatable pp counters",
+    "scales with power",
+    "splits on death",
+    "card names",
+    "death trigger",
+    "death trigger-self",
+    "leaves body behind",
+    "lifegain matters",
+    "power matters",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "typal"
+   ],
+   "set_code": "lcc",
+   "released_at": "2023-11-17",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Battle of Hoover Dam",
+   "quantity": 1,
+   "scryfall_id": "59c0f13a-4e83-4e0b-a790-1f78b5ee6a64",
+   "oracle_id": "91596da5-5b1a-430c-a878-7757ae366b6b",
+   "mana_cost": "{3}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "As this enchantment enters, choose NCR or Legion.\n• NCR — At the beginning of your end step, return target creature card with mana value 3 or less from your graveyard to the battlefield with a finality counter on it.\n• Legion — Whenever a creature you control dies, put two +1/+1 counters on target creature you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 8639,
+   "salt": 0.32,
+   "price_usd": 0.32,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "recursion"
+   ],
+   "tags": [
+    "death trigger",
+    "gives pp counters",
+    "low mana value matters",
+    "reanimate-creature",
+    "repeatable pp counters",
+    "siege (modal)",
+    "mana value matters",
+    "modal",
+    "named choice",
+    "reanimate",
+    "recursion",
+    "recursion-creature",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "recursion"
+   ],
+   "set_code": "pip",
+   "released_at": "2024-03-08",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Fain, the Broker",
+   "quantity": 1,
+   "scryfall_id": "7f1ff9e5-3d69-43a9-965c-2d87951cfd2b",
+   "oracle_id": "31b990e3-9bad-4b0a-a9d5-f5b9ed2ad0b0",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Warlock",
+   "oracle_text": "{T}, Sacrifice a creature: Put two +1/+1 counters on target creature.\n{T}, Remove a counter from a creature you control: Create a Treasure token.\n{T}, Sacrifice an artifact: Create a 2/1 white and black Inkling creature token with flying.\n{3}{B}: Untap Fain.",
+   "mana_production": {},
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 3341,
+   "salt": 0.11,
+   "price_usd": 2.87,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "bottomless mana sink",
+    "counter fuel-any",
+    "counter fuel-other",
+    "cycle-c21-mono-legend",
+    "evasion",
+    "gives pp counters",
+    "mana dork",
+    "martyr",
+    "out of color token",
+    "repeatable creature tokens",
+    "repeatable crime",
+    "repeatable pp counters",
+    "repeatable sacrifice outlet",
+    "repeatable treasures",
+    "sacrifice outlet-artifact",
+    "sacrifice outlet-creature",
+    "synergy-artifact",
+    "trading post like",
+    "untaps self",
+    "counter fuel",
+    "counters matter",
+    "cycle",
+    "mana producer",
+    "mana sink",
+    "ramp",
+    "remove counters",
+    "remove counters-you",
+    "repeatable artifact tokens",
+    "repeatable noncreature tokens",
+    "repeatable token generator",
+    "sacrifice outlet",
+    "sacrifice self",
+    "untapper"
+   ],
+   "engine_participation": [
+    "counters",
+    "ramp",
+    "sacrifice",
+    "tokens"
+   ],
+   "set_code": "otc",
+   "released_at": "2024-04-19",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Sephiroth, Fabled SOLDIER // Sephiroth, One-Winged Angel",
+   "quantity": 1,
+   "scryfall_id": "f150d6e9-3da6-4655-9c63-dd34525d08a1",
+   "oracle_id": "70113003-be5e-406a-9aec-cb480468c36d",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Creature — Human Soldier Avatar",
+   "oracle_text": "Whenever Sephiroth enters or attacks, you may sacrifice another creature. If you do, draw a card.\nWhenever another creature dies, target opponent loses 1 life and you gain 1 life. If this is the fourth time this ability has resolved this turn, transform Sephiroth.\n//\nFlying\nSuper Nova — As this creature transforms into Sephiroth, One-Winged Angel, you get an emblem with \"Whenever a creature dies, target opponent loses 1 life and you gain 1 life.\"\nWhenever Sephiroth attacks, you may sacrifice any number of other creatures. If you do, draw that many cards.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Transform",
+    "Super Nova"
+   ],
+   "categories": [
+    "Draw",
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 1256,
+   "salt": 1.43,
+   "price_usd": 28.91,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "alliteration",
+    "attacking matters-self",
+    "blood artist ability",
+    "draw engine",
+    "evasion",
+    "opponent loses life",
+    "repeatable crime",
+    "repeatable plunder",
+    "sacrifice outlet-creature",
+    "times resolved matters",
+    "titan trigger",
+    "unique type line",
+    "attack trigger",
+    "card advantage",
+    "card names",
+    "death trigger",
+    "drain life",
+    "draw",
+    "inverted effects",
+    "lifegain",
+    "plunder",
+    "repeatable card advantage",
+    "repeatable draw",
+    "repeatable lifegain",
+    "repeatable sacrifice outlet",
+    "sacrifice outlet",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "death-trigger",
+    "drain",
+    "draw",
+    "sacrifice"
+   ],
+   "set_code": "fin",
+   "released_at": "2025-06-13",
+   "rarity": "mythic",
+   "layout": "transform"
+  },
+  {
+   "name": "Guiding Hydra",
+   "quantity": 1,
+   "scryfall_id": "a53eb840-039d-4c45-b701-d58cb26b1a6c",
+   "oracle_id": "24f1445c-16c9-45c0-be56-0266e6c78cdb",
+   "mana_cost": "{X}{W}",
+   "mana_value": 1.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Horror Hydra",
+   "oracle_text": "This creature enters with X +1/+1 counters on it.\nAt the beginning of combat on your turn, you may remove a +1/+1 counter from this creature. If you do, put a +1/+1 counter on each other creature you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Counters",
+    "Creature"
+   ],
+   "edhrec_rank": 25752,
+   "salt": null,
+   "price_usd": 0.64,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "counter fuel-pp",
+    "gains pp counters",
+    "gives pp counters to all",
+    "repeatable pp counters",
+    "triggered ability",
+    "unique type line",
+    "counter fuel",
+    "counters matter",
+    "gives pp counters",
+    "power boost to all",
+    "pp counters matter",
+    "remove counters",
+    "remove counters-you",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters"
+   ],
+   "set_code": "fra",
+   "released_at": "2026-10-02",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Belladonna Took",
+   "quantity": 1,
+   "scryfall_id": "88f0c189-c9ed-4ea3-ae62-3d8ac6c7fecf",
+   "oracle_id": "011da9c5-aa8a-4fa0-b1f2-62b9f3760476",
+   "mana_cost": "{1}{W}",
+   "mana_value": 2.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Creature — Citizen Halfling",
+   "oracle_text": "Whenever a token you control enters, you gain 1 life if this is the first time this ability has resolved this turn. If it's the second time, draw a card. If it's the third time, put a +1/+1 counter on each creature you control.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Draw",
+    "Creature"
+   ],
+   "edhrec_rank": 4924,
+   "salt": null,
+   "price_usd": 2.92,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "draw engine",
+    "gives pp counters to all",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "repeatable pure draw",
+    "times resolved matters",
+    "tokenfall",
+    "triggered ability",
+    "card advantage",
+    "draw",
+    "gives pp counters",
+    "lifegain",
+    "power boost to all",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw",
+    "synergy-token",
+    "thingfall",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters",
+    "draw"
+   ],
+   "set_code": "hob",
+   "released_at": "2026-08-14",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Dusk Legion Duelist",
+   "quantity": 1,
+   "scryfall_id": "7305a8d3-5403-4483-92af-863dc91c6084",
+   "oracle_id": "30367a59-a812-41d4-a451-80d9071dd4a4",
+   "mana_cost": "{1}{W}",
+   "mana_value": 2.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Vampire Soldier",
+   "oracle_text": "Vigilance\nWhenever one or more +1/+1 counters are put on this creature, draw a card. This ability triggers only once each turn.",
+   "mana_production": {},
+   "keywords": [
+    "Vigilance"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 2740,
+   "salt": 0.19,
+   "price_usd": 2.06,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "draw"
+   ],
+   "tags": [
+    "alliteration",
+    "draw engine",
+    "pp counters matter",
+    "repeatable pure draw",
+    "triggered ability",
+    "card advantage",
+    "card names",
+    "counters matter",
+    "draw",
+    "pure draw",
+    "repeatable card advantage",
+    "repeatable draw"
+   ],
+   "engine_participation": [
+    "draw",
+    "typal"
+   ],
+   "set_code": "mom",
+   "released_at": "2023-04-21",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Lae'zel, Vlaakith's Champion",
+   "quantity": 1,
+   "scryfall_id": "1a93f587-ab72-42da-88c4-31af1c9cdf1b",
+   "oracle_id": "c066f921-e349-45d1-8ec3-0955d10bbf19",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Creature — Warrior Gith",
+   "oracle_text": "If you would put one or more counters on a creature or planeswalker you control or on yourself, put that many plus one of each of those kinds of counters on that permanent or player instead.\nChoose a Background (You can have a Background as a second commander.)",
+   "mana_production": {},
+   "keywords": [
+    "Choose a background"
+   ],
+   "categories": [
+    "Counters"
+   ],
+   "edhrec_rank": 1470,
+   "salt": 0.27,
+   "price_usd": 3.33,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "counter increaser",
+    "cycle-clb-r-mono-legend",
+    "dnd character",
+    "energy increaser",
+    "namesake spell",
+    "pair-commander",
+    "synergy-planeswalker",
+    "card names",
+    "cycle",
+    "dnd"
+   ],
+   "engine_participation": [],
+   "set_code": "clb",
+   "released_at": "2022-06-10",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Fell the Profane // Fell Mire",
+   "quantity": 1,
+   "scryfall_id": "a3cb782d-c459-468d-9779-9b5669abc337",
+   "oracle_id": "053a69d8-2b5e-4f14-8b02-ca405891dc4a",
+   "mana_cost": "{2}{B}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Destroy target creature or planeswalker.\n//\nAs this land enters, you may pay 3 life. If you don't, it enters tapped.\n{T}: Add {B}.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 200,
+   "salt": 0.18,
+   "price_usd": 5.2,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "activated ability",
+    "cheaper than mv",
+    "cycle-mh3-mdfc-mono-land",
+    "removal-creature",
+    "removal-destroy",
+    "removal-planeswalker",
+    "single target instant/sorcery",
+    "spot removal",
+    "utility land",
+    "boltland",
+    "conditional tapland",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "life payment",
+    "removal"
+   ],
+   "engine_participation": [
+    "removal"
+   ],
+   "set_code": "mh3",
+   "released_at": "2024-06-14",
+   "rarity": "uncommon",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Selfless Squire",
+   "quantity": 1,
+   "scryfall_id": "8b8f4489-3d07-4e57-9b94-afa52fa984f8",
+   "oracle_id": "7d079c78-b2a9-444f-ab54-c61c041baa6d",
+   "mana_cost": "{3}{W}",
+   "mana_value": 4.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Human Soldier",
+   "oracle_text": "Flash\nWhen this creature enters, prevent all damage that would be dealt to you this turn.\nWhenever damage that would be dealt to you is prevented, put that many +1/+1 counters on this creature.",
+   "mana_production": {},
+   "keywords": [
+    "Flash"
+   ],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 2500,
+   "salt": 0.3,
+   "price_usd": 0.38,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [
+    "protection"
+   ],
+   "tags": [
+    "aikido",
+    "alliteration",
+    "combat trick",
+    "damage prevention-you",
+    "fog-selective",
+    "gains pp counters",
+    "repeatable pp counters",
+    "synergy-damage-prevention",
+    "triggered ability",
+    "card names",
+    "damage prevention",
+    "fog"
+   ],
+   "engine_participation": [
+    "protection"
+   ],
+   "set_code": "mkc",
+   "released_at": "2024-02-09",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Shaile, Dean of Radiance // Embrose, Dean of Shadow",
+   "quantity": 1,
+   "scryfall_id": "938cee8f-ac2c-49a5-9ff7-1367d0edfabe",
+   "oracle_id": "b0907441-30fe-436a-b29c-585b57eabfc3",
+   "mana_cost": "{1}{W} {2}{B}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Cleric Bird",
+   "oracle_text": "Flying, vigilance\n{T}: Put a +1/+1 counter on each creature that entered the battlefield under your control this turn.\n//\n{T}: Put a +1/+1 counter on another target creature, then Embrose deals 2 damage to that creature.\nWhenever a creature you control with a +1/+1 counter on it dies, draw a card.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Vigilance"
+   ],
+   "categories": [
+    "Counters",
+    "Draw"
+   ],
+   "edhrec_rank": 11685,
+   "salt": 0.0,
+   "price_usd": 0.32,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "burn creature",
+    "cycle-stx-dean",
+    "death trigger",
+    "draw engine",
+    "evasion",
+    "gives pp counters",
+    "more expensive than mv",
+    "pinger",
+    "pp counters matter",
+    "repeatable crime",
+    "repeatable pp counters",
+    "repeatable pure draw",
+    "repeatable removal",
+    "spot removal",
+    "burn",
+    "card advantage",
+    "counters matter",
+    "cycle",
+    "draw",
+    "pure draw",
+    "removal",
+    "removal-burn",
+    "removal-creature",
+    "repeatable card advantage",
+    "repeatable draw",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "draw",
+    "removal"
+   ],
+   "set_code": "stx",
+   "released_at": "2021-04-23",
+   "rarity": "rare",
+   "layout": "modal_dfc"
+  },
+  {
+   "name": "Valkyrie's Call",
+   "quantity": 1,
+   "scryfall_id": "0e1f1ff2-fa8f-4d38-b631-2d6e08e614c8",
+   "oracle_id": "27400927-9aba-4fb3-90c4-490d01969e60",
+   "mana_cost": "{3}{W}{W}",
+   "mana_value": 5.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "Whenever a nontoken, non-Angel creature you control dies, return that card to the battlefield under its owner's control with a +1/+1 counter on it. It has flying and is an Angel in addition to its other types.",
+   "mana_production": {},
+   "keywords": [],
+   "categories": [
+    "Recursion"
+   ],
+   "edhrec_rank": 5135,
+   "salt": 0.38,
+   "price_usd": 0.99,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "cheat death",
+    "death trigger",
+    "gives flying",
+    "gives pp counters",
+    "protects-all",
+    "protects-creature",
+    "repeatable pp counters",
+    "type change",
+    "gives evasion",
+    "protection",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "protection",
+    "recursion"
+   ],
+   "set_code": "fdn",
+   "released_at": "2024-11-15",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Warren Soultrader",
+   "quantity": 1,
+   "scryfall_id": "b334e4c6-d316-4141-8889-f95afcc04701",
+   "oracle_id": "ace86e56-efde-4eb7-8815-71456a4c3abe",
+   "mana_cost": "{2}{B}",
+   "mana_value": 3.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Creature — Wizard Goblin Zombie",
+   "oracle_text": "Pay 1 life, Sacrifice another creature: Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Sac Outlet"
+   ],
+   "edhrec_rank": 415,
+   "salt": 0.77,
+   "price_usd": 18.77,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "activated ability",
+    "life payment",
+    "mana dork",
+    "repeatable sacrifice outlet",
+    "repeatable treasures",
+    "sacrifice outlet-creature",
+    "unique type line",
+    "mana producer",
+    "ramp",
+    "repeatable artifact tokens",
+    "repeatable noncreature tokens",
+    "repeatable token generator",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "ramp",
+    "sacrifice",
+    "tokens"
+   ],
+   "set_code": "mh3",
+   "released_at": "2024-06-14",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Together Forever",
+   "quantity": 1,
+   "scryfall_id": "1b19f82a-9724-41b1-934d-a8ec1493587b",
+   "oracle_id": "36b19ec0-d581-4213-bfae-1d7808a2f60d",
+   "mana_cost": "{W}{W}",
+   "mana_value": 2.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Enchantment",
+   "oracle_text": "When this enchantment enters, support 2. (Put a +1/+1 counter on each of up to two target creatures.)\n{1}: Choose target creature with a counter on it. When that creature dies this turn, return that card to its owner's hand.",
+   "mana_production": {},
+   "keywords": [
+    "Support"
+   ],
+   "categories": [
+    "Protection"
+   ],
+   "edhrec_rank": 2386,
+   "salt": 0.16,
+   "price_usd": 0.29,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "cheat death",
+    "counters matter",
+    "death trigger",
+    "delayed trigger",
+    "mana sink",
+    "multiple targets",
+    "protects-creature",
+    "repeatable crime",
+    "rhyming name",
+    "support",
+    "card names",
+    "gives pp counters",
+    "protection",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "protection"
+   ],
+   "set_code": "tmc",
+   "released_at": "2026-03-06",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Dark Ritual",
+   "quantity": 1,
+   "scryfall_id": "11e12a84-e7be-4afc-a230-c2e644743fa8",
+   "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+   "mana_cost": "{B}",
+   "mana_value": 1.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "Add {B}{B}{B}.",
+   "mana_production": {
+    "B": 3
+   },
+   "keywords": [],
+   "categories": [
+    "Ramp"
+   ],
+   "edhrec_rank": 33,
+   "salt": 0.67,
+   "price_usd": 7.18,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp"
+   ],
+   "tags": [
+    "adds multiple mana",
+    "color break",
+    "cycle-lea-boon",
+    "interrupt",
+    "mana source (type)",
+    "ritual",
+    "cycle",
+    "deprecated card types",
+    "ramp"
+   ],
+   "engine_participation": [
+    "ramp"
+   ],
+   "set_code": "msc",
+   "released_at": "2026-06-26",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Deadly Dispute",
+   "quantity": 1,
+   "scryfall_id": "d86fa72c-25c1-43ef-9cb0-fe76f7568ed3",
+   "oracle_id": "457af74a-02b3-4659-846d-63e482667f34",
+   "mana_cost": "{1}{B}",
+   "mana_value": 2.0,
+   "colors": [
+    "B"
+   ],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Instant",
+   "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nDraw two cards and create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mana_production": {
+    "W": 1,
+    "U": 1,
+    "B": 1,
+    "R": 1,
+    "G": 1
+   },
+   "keywords": [
+    "Treasure"
+   ],
+   "categories": [
+    "Draw"
+   ],
+   "edhrec_rank": 131,
+   "salt": 0.16,
+   "price_usd": 0.3,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "ramp",
+    "draw"
+   ],
+   "tags": [
+    "additional cost",
+    "alliteration",
+    "plunder",
+    "ramp",
+    "refund",
+    "sacrifice outlet-artifact",
+    "sacrifice outlet-creature",
+    "synergy-artifact",
+    "card advantage",
+    "card names",
+    "draw",
+    "sacrifice outlet"
+   ],
+   "engine_participation": [
+    "draw",
+    "ramp",
+    "sacrifice"
+   ],
+   "set_code": "msc",
+   "released_at": "2026-06-26",
+   "rarity": "common",
+   "layout": "normal"
+  },
+  {
+   "name": "Requisition Raid",
+   "quantity": 1,
+   "scryfall_id": "154e9ba9-0d0e-4b0e-acf2-f66a993cf3a2",
+   "oracle_id": "09669283-eb14-46a2-b37a-51d7a52da891",
+   "mana_cost": "{W}",
+   "mana_value": 1.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Sorcery",
+   "oracle_text": "Spree (Choose one or more additional costs.)\n+ {1} — Destroy target artifact.\n+ {1} — Destroy target enchantment.\n+ {1} — Put a +1/+1 counter on each creature target player controls.",
+   "mana_production": {},
+   "keywords": [
+    "Spree"
+   ],
+   "categories": [
+    "Removal"
+   ],
+   "edhrec_rank": 1221,
+   "salt": 0.24,
+   "price_usd": 0.34,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "removal"
+   ],
+   "tags": [
+    "additional cost",
+    "alliteration",
+    "gives pp counters to all",
+    "modal",
+    "more expensive than mv",
+    "multi removal",
+    "multiple targets",
+    "naturalize with set mechanic",
+    "removal-destroy",
+    "single target instant/sorcery",
+    "spot removal",
+    "card names",
+    "disenchant/naturalize",
+    "gives pp counters",
+    "power boost to all",
+    "removal",
+    "removal-artifact",
+    "removal-enchantment",
+    "staple with set's mechanic",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters",
+    "removal"
+   ],
+   "set_code": "otj",
+   "released_at": "2024-04-19",
+   "rarity": "uncommon",
+   "layout": "normal"
+  },
+  {
+   "name": "Archangel of Thune",
+   "quantity": 1,
+   "scryfall_id": "15c34447-b0f4-4fcc-b557-23c92850b31b",
+   "oracle_id": "4f2d4538-dc1d-4c09-964b-b0d7c240fb7d",
+   "mana_cost": "{3}{W}{W}",
+   "mana_value": 5.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Creature — Angel",
+   "oracle_text": "Flying\nLifelink (Damage dealt by this creature also causes you to gain that much life.)\nWhenever you gain life, put a +1/+1 counter on each creature you control.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Lifelink"
+   ],
+   "categories": [
+    "Counters",
+    "Lifegain"
+   ],
+   "edhrec_rank": 1343,
+   "salt": 0.59,
+   "price_usd": 48.09,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [],
+   "tags": [
+    "cycle-m14-iconic-creature",
+    "evasion",
+    "gains pp counters",
+    "gives pp counters to all",
+    "pridemate",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "triggered ability",
+    "cycle",
+    "gives pp counters",
+    "lifegain",
+    "lifegain matters",
+    "power boost to all",
+    "toughness boost to all"
+   ],
+   "engine_participation": [
+    "counters"
+   ],
+   "set_code": "2xm",
+   "released_at": "2020-08-07",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Bleachbone Verge",
+   "quantity": 1,
+   "scryfall_id": "52dcdabd-a186-45fe-9fee-6c0f1afeaf16",
+   "oracle_id": "2b8144a0-08d2-4c28-9fd7-5d90f90105e4",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Land",
+   "oracle_text": "{T}: Add {B}.\n{T}: Add {W}. Activate only if you control a Plains or a Swamp.",
+   "mana_production": {
+    "W": 1,
+    "B": 1
+   },
+   "keywords": [],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 791,
+   "salt": 0.12,
+   "price_usd": 10.9,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activated ability",
+    "cycle-dft-verge",
+    "synergy-plains",
+    "synergy-swamp",
+    "cycle",
+    "cycle-dual-land",
+    "cycle-land",
+    "cycle-verge",
+    "dual land"
+   ],
+   "engine_participation": [],
+   "set_code": "dft",
+   "released_at": "2025-02-14",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Eiganjo, Seat of the Empire",
+   "quantity": 1,
+   "scryfall_id": "c375a022-5b57-496d-a802-e4ea8376e9e4",
+   "oracle_id": "7edb3d15-4f70-4ebe-8c5e-caf6a225076d",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {W}.\nChannel — {2}{W}, Discard this card: It deals 4 damage to target attacking or blocking creature. This ability costs {1} less to activate for each legendary creature you control.",
+   "mana_production": {
+    "W": 1
+   },
+   "keywords": [
+    "Channel"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 378,
+   "salt": 0.21,
+   "price_usd": 5.6,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activate from hand",
+    "alliteration",
+    "burn creature",
+    "cycle-neo-legendary-land",
+    "hate-attacker",
+    "hate-blocker",
+    "spot removal",
+    "synergy-legendary",
+    "utility land",
+    "activated ability",
+    "burn",
+    "card names",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "hate",
+    "removal",
+    "removal-burn",
+    "removal-creature"
+   ],
+   "engine_participation": [],
+   "set_code": "neo",
+   "released_at": "2022-02-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Takenuma, Abandoned Mire",
+   "quantity": 1,
+   "scryfall_id": "499037cc-a577-41cb-8ca2-5e117945634f",
+   "oracle_id": "ac2dd694-d2f1-4025-8400-12332bdc882a",
+   "mana_cost": "",
+   "mana_value": 0.0,
+   "colors": [],
+   "color_identity": [
+    "B"
+   ],
+   "type_line": "Legendary Land",
+   "oracle_text": "{T}: Add {B}.\nChannel — {3}{B}, Discard this card: Mill three cards, then return a creature or planeswalker card from your graveyard to your hand. This ability costs {1} less to activate for each legendary creature you control.",
+   "mana_production": {
+    "B": 1
+   },
+   "keywords": [
+    "Channel",
+    "Mill"
+   ],
+   "categories": [
+    "Land"
+   ],
+   "edhrec_rank": 244,
+   "salt": 0.22,
+   "price_usd": 10.78,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [
+    "land"
+   ],
+   "tags": [
+    "activate from hand",
+    "cycle-neo-legendary-land",
+    "mill-self",
+    "regrowth-creature",
+    "regrowth-planeswalker",
+    "synergy-legendary",
+    "utility land",
+    "activated ability",
+    "card advantage",
+    "cycle",
+    "cycle-land",
+    "cycle-mono-land",
+    "mill",
+    "recursion",
+    "recursion-creature",
+    "recursion-planeswalker",
+    "regrowth"
+   ],
+   "engine_participation": [],
+   "set_code": "neo",
+   "released_at": "2022-02-18",
+   "rarity": "rare",
+   "layout": "normal"
+  },
+  {
+   "name": "Heliod, Sun-Crowned",
+   "quantity": 1,
+   "scryfall_id": "3245ff74-1f9c-4518-a23f-1579f338f232",
+   "oracle_id": "63e596a2-9126-4af6-8782-c38687d664ad",
+   "mana_cost": "{2}{W}",
+   "mana_value": 3.0,
+   "colors": [
+    "W"
+   ],
+   "color_identity": [
+    "W"
+   ],
+   "type_line": "Legendary Creature Enchantment — God",
+   "oracle_text": "Indestructible\nAs long as your devotion to white is less than five, Heliod isn't a creature.\nWhenever you gain life, put a +1/+1 counter on target creature or enchantment you control.\n{1}{W}: Another target creature gains lifelink until end of turn.",
+   "mana_production": {},
+   "keywords": [
+    "Indestructible"
+   ],
+   "categories": [
+    "Counters",
+    "Lifegain"
+   ],
+   "edhrec_rank": 1028,
+   "salt": 0.9,
+   "price_usd": 22.2,
+   "commander_legal": true,
+   "is_commander": false,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": true,
+   "roles": [],
+   "tags": [
+    "activated ability",
+    "cycle-cmm-m-mono-legend",
+    "cycle-thb-monocolor-god",
+    "deanimate self",
+    "drawback",
+    "gives lifelink",
+    "gives pp counters",
+    "mana sink",
+    "pridemate",
+    "repeatable crime",
+    "repeatable lifegain",
+    "repeatable pp counters",
+    "synergy-enchantment",
+    "synergy-white",
+    "triggered ability",
+    "cycle",
+    "lifegain",
+    "lifegain matters",
+    "type change"
+   ],
+   "engine_participation": [
+    "counters"
+   ],
+   "set_code": "cmm",
+   "released_at": "2023-08-04",
+   "rarity": "mythic",
+   "layout": "normal"
+  },
+  {
+   "name": "Felisa, Fang of Silverquill",
+   "quantity": 1,
+   "scryfall_id": "229dec6e-7997-4954-bff7-c79dd4339211",
+   "oracle_id": "39144f72-789e-457a-a7e7-862f90c34e15",
+   "mana_cost": "{2}{W}{B}",
+   "mana_value": 4.0,
+   "colors": [
+    "W",
+    "B"
+   ],
+   "color_identity": [
+    "W",
+    "B"
+   ],
+   "type_line": "Legendary Creature — Wizard Vampire",
+   "oracle_text": "Flying\nMentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhenever a nontoken creature you control dies, if it had counters on it, create X tapped 2/1 white and black Inkling creature tokens with flying, where X is the number of counters it had on it.",
+   "mana_production": {},
+   "keywords": [
+    "Flying",
+    "Mentor"
+   ],
+   "categories": [
+    "Commander"
+   ],
+   "edhrec_rank": 4710,
+   "salt": 0.16,
+   "price_usd": 1.72,
+   "commander_legal": true,
+   "is_commander": true,
+   "is_game_changer": false,
+   "is_tutor": false,
+   "is_extra_turns": false,
+   "is_mass_land_denial": false,
+   "combo_flagged": false,
+   "roles": [],
+   "tags": [
+    "alliteration",
+    "attacking matters",
+    "attacking matters-self",
+    "counters matter",
+    "cycle-c21-alt-commander",
+    "death trigger",
+    "evasion",
+    "gives pp counters",
+    "intervening if clause",
+    "power matters-self",
+    "repeatable creature tokens",
+    "repeatable pp counters",
+    "alt-commander",
+    "card names",
+    "cycle",
+    "power matters",
+    "repeatable token generator",
+    "triggered ability"
+   ],
+   "engine_participation": [
+    "counters",
+    "death-trigger",
+    "tokens",
+    "typal"
+   ],
+   "set_code": "c21",
+   "released_at": "2021-04-23",
+   "rarity": "mythic",
+   "layout": "normal"
+  }
+ ],
+ "excluded": []
+}

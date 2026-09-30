@@ -6,11 +6,11 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 ## Declared intent
 
 **lifegain combo**
-Wins by: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-Priest/Starscape Cleric/Vizkopa Guildmage + Exquisite Blood or Bloodthirsty Conqueror; Aetherflux Reservoir + Exquisite Blood or Bloodthirsty Conqueror; Niv-Mizzet + Sheoldred infinite draw into Doctor Doom or Psychosis Crawler; Beacon of Immortality + Sanguine Bond/Vito/Enduring Tenacity
+Wins by: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-Priest/Starscape Cleric + Exquisite Blood or Bloodthirsty Conqueror; Aetherflux Reservoir + Exquisite Blood or Bloodthirsty Conqueror; Niv-Mizzet + Sheoldred infinite draw into Doctor Doom or Psychosis Crawler; Beacon of Immortality + Sanguine Bond/Vito/Enduring Tenacity
 
 ## Archetype
 
-lifegain combo (inferred: drain + draw + tokens)
+lifegain combo (inferred: drain + draw)
 
 ## Niv-Mizzet, Ghost Counsel's role
 
@@ -26,18 +26,15 @@ drain, draw, sacrifice, tokens
 
 ## Clusters
 
-- **drain** — 21 cards *(commander wants this)*
-- **draw** — 17 cards *(commander wants this)*
-- **tokens** — 8 cards *(commander wants this)*
-- **ramp** — 16 cards
-- **removal** — 15 cards
-- **protection** — 9 cards
-- **recursion** — 7 cards
-- **tutor** — 6 cards
+- **drain** — 18 cards *(commander wants this)*
+- **draw** — 12 cards *(commander wants this)*
+- **ramp** — 13 cards
+- **removal** — 11 cards
+- **protection** — 7 cards
 
 ## How it ends games
 
-Declared: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-Priest/Starscape Cleric/Vizkopa Guildmage + Exquisite Blood or Bloodthirsty Conqueror; Aetherflux Reservoir + Exquisite Blood or Bloodthirsty Conqueror; Niv-Mizzet + Sheoldred infinite draw into Doctor Doom or Psychosis Crawler; Beacon of Immortality + Sanguine Bond/Vito/Enduring Tenacity
+Declared: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-Priest/Starscape Cleric + Exquisite Blood or Bloodthirsty Conqueror; Aetherflux Reservoir + Exquisite Blood or Bloodthirsty Conqueror; Niv-Mizzet + Sheoldred infinite draw into Doctor Doom or Psychosis Crawler; Beacon of Immortality + Sanguine Bond/Vito/Enduring Tenacity
 
 - Sanguine Bond + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
 - Vito, Thorn of the Dusk Rose + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
@@ -54,33 +51,34 @@ Declared: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-
 - Vito, Thorn of the Dusk Rose + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent
 - Beacon of Immortality + Sanguine Bond → Target opponent loses the game
 - Enduring Tenacity + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent
-- Sorin of House Markov // Sorin, Ravenous Neonate — says so in its text
-- Approach of the Second Sun — says so in its text
 - Doctor Doom, Unrivaled — says so in its text
 - Exsanguinate — your own category marks it the finisher
+- Approach of the Second Sun — says so in its text
+- Sorin of House Markov // Sorin, Ravenous Neonate — says so in its text
 
 ## Quadrant coverage
 
 _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
 
-- **Developing (ramp, draw)** — 33 cards (ramp 16 + draw 17)
-- **Breaking parity (removal, sweepers)** — 18 cards (removal 15 + sweeper 3)
-- **Winning (closers, going wide)** — 10 cards (wincon 2 + tokens 8)
-- **Behind (protection, recursion)** — 16 cards (protection 9 + recursion 7)
+- **Developing (ramp, draw)** — 25 cards (ramp 13 + draw 12)
+- **Breaking parity (removal, sweepers)** — 12 cards (removal 11 + sweeper 1)
+- **Winning (closers, going wide)** — 6 cards (wincon 2 + tokens 4)
+- **Behind (protection, recursion)** — 11 cards (protection 7 + recursion 4)
 
 ## Outside every cluster
 
 Not automatically bad — the tags may simply not name what these do.
 
-- Soul's Attendant
-- Soul Warden
-- Children of Korlis
-- Authority of the Consuls
-- Serra Ascendant
 - Bloodthirsty Conqueror
+- Soul Warden
+- Soul's Attendant
+- Authority of the Consuls
+- Children of Korlis
+- Demonic Tutor
+- Vampiric Tutor
+- Serra Ascendant
 - Rhox Faithmender
-- Auriok Champion
-- Exquisite Blood
 - Approach of the Second Sun
-- Glasswing Grace // Age-Graced Chapel
+- Beacon of Immortality
+- Agadeem's Awakening // Agadeem, the Undercrypt
 
