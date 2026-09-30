@@ -1,0 +1,120 @@
+// Niv-Mizzet
+// https://archidekt.com/decks/26909132
+
+// Commander
+1 Niv-Mizzet, Ghost Counsel
+
+// Deck
+1 Aetherflux Reservoir
+1 Alhammarret's Archive
+1 Arcane Signet
+1 Archaeomancer's Map
+1 Bolas's Citadel
+1 Fellwar Stone
+1 Lightning Greaves
+1 Orzhov Signet
+1 Pristine Talisman
+1 Sol Ring
+1 Swiftfoot Boots
+1 Talisman of Hierarchy
+1 The Darkness Crystal
+1 The Wind Crystal
+1 Thought Vessel
+1 Whip of Erebos
+1 Auriok Champion
+1 Bloodthirsty Conqueror
+1 Children of Korlis
+1 Creeping Bloodsucker
+1 Crypt Ghast
+1 Doctor Doom, Unrivaled
+1 Elas il-Kor, Sadistic Pilgrim
+1 Enduring Tenacity
+1 Esper Sentinel
+1 Exemplar of Light
+1 Haliya, Guided by Light
+1 Kambal, Profiteering Mayor
+1 Karlov of the Ghost Council
+1 Liliana the Faultless
+1 Lotho, Corrupt Shirriff
+1 Marauding Blight-Priest
+1 Mother of Runes
+1 Ob Nixilis, the Ascended
+1 Psychosis Crawler
+1 Rhox Faithmender
+1 Scheming Silvertongue // Sign in Blood
+1 Serra Ascendant
+1 Sheoldred, the Apocalypse
+1 Skirge Familiar
+1 Sorin of House Markov // Sorin, Ravenous Neonate
+1 Soul Warden
+1 Soul's Attendant
+1 Starscape Cleric
+1 Suture Priest
+1 Vito, Thorn of the Dusk Rose
+1 Vizkopa Guildmage
+1 Witch Enchanter // Witch-Blessed Meadow
+1 Animate Dead
+1 Authority of the Consuls
+1 Black Market Connections
+1 Blind Obedience
+1 Cleric Class
+1 Exquisite Blood
+1 Glasswing Grace // Age-Graced Chapel
+1 Gleaming Splendor
+1 Land Tax
+1 Sanguine Bond
+1 Smothering Tithe
+1 Words of Worship
+1 Anguished Unmaking
+1 Beacon of Immortality
+1 Dark Ritual
+1 Dawn's Truce
+1 Deadly Rollick
+1 Fell the Profane // Fell Mire
+1 Flawless Maneuver
+1 Generous Gift
+1 Heliod's Intervention
+1 Imp's Mischief
+1 Malakir Rebirth // Malakir Mire
+1 Path to Exile
+1 Restoration Magic
+1 Swords to Plowshares
+1 Teferi's Protection
+1 Vampiric Tutor
+1 Bleachbone Verge
+1 Bojuka Bog
+1 Brightclimb Pathway // Grimclimb Pathway
+1 Cabal Coffers
+1 Caves of Koilos
+1 City of Brass
+1 Command Beacon
+1 Command Tower
+1 Eiganjo, Seat of the Empire
+1 Fetid Heath
+1 Godless Shrine
+1 Isolated Chapel
+1 Mana Confluence
+1 Marsh Flats
+4 Plains
+1 Radiant Fountain
+1 Reliquary Tower
+1 Shadowy Backstreet
+1 Shattered Sanctum
+2 Swamp
+1 Tainted Field
+1 Takenuma, Abandoned Mire
+1 Urborg, Tomb of Yawgmoth
+1 Vault of Champions
+1 Vault of the Archangel
+1 Ajani, Strength of the Pride
+1 Agadeem's Awakening // Agadeem, the Undercrypt
+1 Approach of the Second Sun
+1 Debt to the Deathless
+1 Demonic Tutor
+1 Exsanguinate
+1 Feed the Swarm
+1 Grim Tutor
+1 Night's Whisper
+1 Reanimate
+1 Sign in Blood
+1 Toxic Deluge
