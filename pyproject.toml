@@ -29,6 +29,9 @@ packages = ["src/mtgai"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+markers = [
+    "allow_network: the test stubs HTTP itself, so the no-network guard steps aside",
+]
 
 [dependency-groups]
 dev = [

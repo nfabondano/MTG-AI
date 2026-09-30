@@ -1,0 +1,25 @@
+{
+ "count": 2,
+ "next": null,
+ "previous": null,
+ "results": [
+  {
+   "id": 26941717,
+   "name": "Niv-Mizzet",
+   "updatedAt": "2026-09-30T13:48:24.305120Z",
+   "size": 100,
+   "owner": {
+    "username": "Hugo0111"
+   }
+  },
+  {
+   "id": 10078100,
+   "name": "Niv-Mizzet (Nico)",
+   "updatedAt": "2024-11-13T23:45:16.729660Z",
+   "size": 100,
+   "owner": {
+    "username": "Hugo0111"
+   }
+  }
+ ]
+}

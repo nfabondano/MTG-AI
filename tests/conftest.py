@@ -31,6 +31,51 @@ def maybeboard_payload() -> dict:
     return load_fixture("archidekt_maybeboard.json")
 
 
+# The three decks whose reports kept giving advice that had to be ignored.
+# Real payloads, trimmed by scripts/trim_fixture.py to the fields the
+# normaliser reads — the oTags and flags are exactly what Archidekt ships.
+REAL_DECKS = {
+    "niv": ("archidekt_niv_26941717.json", "niv-mizzet-fixture"),
+    "felisa": ("archidekt_felisa_6313712.json", "felisa-fixture"),
+    "equipments": ("archidekt_equipments_14435331.json", "equipments-fixture"),
+}
+
+
+def real_deck(key: str):
+    """A freshly normalised copy of one of the real regression decks."""
+    from mtgai.sources import archidekt
+
+    fixture, slug = REAL_DECKS[key]
+    return archidekt.normalise(load_fixture(fixture), slug, enrich=False)
+
+
+@pytest.fixture
+def niv():
+    """Niv-Mizzet, Ghost Counsel — lifegain into cards, drain combos."""
+    return real_deck("niv")
+
+
+@pytest.fixture
+def felisa():
+    """Felisa, Fang of Silverquill — counters and aristocrats, 106 cards."""
+    return real_deck("felisa")
+
+
+@pytest.fixture
+def equipments():
+    """Cloud, Ex-SOLDIER — equipment, 103 cards, declared bracket 2."""
+    return real_deck("equipments")
+
+
+@pytest.fixture
+def spellbook_fmc():
+    """Recorded Commander Spellbook find-my-combos responses, by deck key."""
+    return {
+        "felisa": load_fixture("spellbook_fmc_felisa.json"),
+        "niv": load_fixture("spellbook_fmc_niv.json"),
+    }
+
+
 @pytest.fixture(autouse=True)
 def isolated_paths(tmp_path, monkeypatch):
     """Keep tests away from the real decks/ folder and ~/.cache/mtgai."""
