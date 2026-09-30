@@ -8,22 +8,22 @@ Keeping the deck at bracket 2 or below.
 
 103 cards: cut 3. Keeping bracket 2 or below (Archidekt).
 
-1. **Clever Concealment** — 14 cards do protection work and a deck wants about 12; 4 of them feed nothing in the core (equipment, draw, protection)  
-   _(oversupplied: protection; played in 63% of decks with this commander — a weak signal)_
-2. **Heroic Intervention** — 13 cards do protection work and a deck wants about 12; 3 of them feed nothing in the core (equipment, draw, protection)  
-   _(oversupplied: protection; played in 49% of decks with this commander — a weak signal)_
-3. **Argentum Armor** — of the core (equipment, draw, protection) it only feeds equipment, which 46 cards already do  
+1. **Argentum Armor** — of the core (equipment, draw, protection) it only feeds equipment, which 46 cards already do  
    _(judgement call: least-connected engine piece; the least played of the 24 alike with this commander (9%) — a weak signal)_
+2. **Bitterthorn, Nissa's Animus** — of the core (equipment, draw, protection) it only feeds equipment, which 45 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 23 alike with this commander (10%) — a weak signal)_
+3. **Sunforger** — of the core (equipment, draw, protection) it only feeds equipment, which 44 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 22 alike with this commander (18%) — a weak signal)_
 
 **Extra candidates** — if you would rather keep one of the above:
 
-- **Bitterthorn, Nissa's Animus** — of the core (equipment, draw, protection) it only feeds equipment, which 45 cards already do
-- **Sunforger** — of the core (equipment, draw, protection) it only feeds equipment, which 44 cards already do
 - **Umezawa's Jitte** — of the core (equipment, draw, protection) it only feeds equipment, which 43 cards already do
+- **Helm of the Host** — of the core (equipment, draw, protection) it only feeds equipment, which 42 cards already do
+- **Bureau Headmaster** — of the core (equipment, draw, protection) it only feeds equipment, which 41 cards already do
 
 After the cuts: 100 cards · bracket 2 (Core).
 
-> From cut 3 on, nothing stronger is left: those picks are the least-connected cards — a judgement call, swap freely.
+> From cut 1 on, nothing stronger is left: those picks are the least-connected cards — a judgement call, swap freely.
 
 ## Consider adding
 
@@ -54,9 +54,8 @@ These came up as adds but would take the deck past bracket 2, so they are listed
 
 ## Consider cutting
 
-- **Clever Concealment** — 14 cards do protection work, 4 of them feeding nothing in the core; a deck wants about 12  
-  _(oversupplied: protection; played in 63% of decks with this commander — a weak signal)_
-  - or instead: Heroic Intervention, Boros Charm
+- No confident cuts. Nothing in the deck fails on castability, sits in an oversupplied cluster, or falls outside what the deck is built around.
+- Run with `--loose` to see weaker candidates.
 
 ---
 

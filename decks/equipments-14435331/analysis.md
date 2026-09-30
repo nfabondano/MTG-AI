@@ -26,7 +26,7 @@ _\* the commander's own text asks for this._
 
 - Tifa, Martial Artist `{1}{R}{G}{W}` — needs 3 different colours in one cost — sources look sufficient
 
-**Oversupplied:** protection 14 (want ~12, even doubled for the commander; 4 feed nothing in the core), tutor 7 (want ~4; every one also feeds the core — nothing to trim)
+**Oversupplied:** tutor 7 (want ~4; every one also feeds the core — nothing to trim), protection 14 (want ~12, even doubled for the commander; 4 feed nothing in the core — nothing to trim, the rest are engine pieces)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 

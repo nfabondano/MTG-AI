@@ -31,12 +31,12 @@ These came up as adds but would take the deck past bracket 2, so they are listed
 
 ## Consider cutting
 
-- **Phyrexian Altar** — 16 cards do ramp work, 9 of them feeding nothing in the core; a deck wants about 12  
-  _(oversupplied: ramp; played in 10% of decks with this commander — a weak signal)_
-  - or instead: Cursed Mirror, Loki's Scepter, Sword of Hearth and Home
+- **Cursed Mirror** — 16 cards do ramp work, 9 of them feeding nothing in the core; a deck wants about 12  
+  _(oversupplied: ramp; played in 66% of decks with this commander — a weak signal)_
+  - or instead: Loki's Scepter, Sword of Hearth and Home, Rakdos Signet
 - **Chaos Warp** — 11 cards do removal work; a deck wants about 10  
   _(oversupplied: removal; played in 60% of decks with this commander — a weak signal)_
-  - or instead: Toxic Deluge, Mayhem Devil, Blasphemous Act
+  - or instead: Toxic Deluge, Blasphemous Act, Saw in Half
 
 ---
 
