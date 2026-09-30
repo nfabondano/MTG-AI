@@ -22,6 +22,7 @@ from __future__ import annotations
 import re
 import unicodedata
 from collections import Counter
+from functools import lru_cache
 
 from .model import CardEntry, Deck
 from .sources import tagger
@@ -180,6 +181,7 @@ def is_functional(tag: str) -> bool:
     return bool(categories_for(slug))
 
 
+@lru_cache(maxsize=None)
 def _pattern_matches(slug: str, pattern: str) -> bool:
     """Whether a pattern's hyphen-segments appear as a run of the slug's segments.
 
@@ -192,9 +194,15 @@ def _pattern_matches(slug: str, pattern: str) -> bool:
 
 def categories_for(tag: str) -> list[str]:
     """Functional categories a tag belongs to (often none)."""
-    slug = slugify(tag)
+    return list(_categories_for_slug(slugify(tag)))
+
+
+# The tables are module constants, so a tag's categories never change within
+# a run — and a deck asks the same few hundred tags thousands of times.
+@lru_cache(maxsize=None)
+def _categories_for_slug(slug: str) -> tuple[str, ...]:
     if _is_noise(slug) or _is_anti(slug):
-        return []
+        return ()
     found = [
         category
         for category, patterns in CATEGORIES.items()
@@ -204,7 +212,7 @@ def categories_for(tag: str) -> list[str]:
     for keep, drop in _EXCLUSIVE:
         if keep in found and drop in found:
             found.remove(drop)
-    return found
+    return tuple(found)
 
 
 def typal_subtypes(card: CardEntry) -> set[str]:

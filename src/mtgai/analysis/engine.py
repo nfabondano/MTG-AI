@@ -104,12 +104,27 @@ _FREE_WITH_COMMANDER = re.compile(
     re.I,
 )
 
+# Spells that discount themselves by the board — Blasphemous Act, Excalibur,
+# Ghalta, delve and convoke. The printed mana value is their cost on an empty
+# board; in the decks that run them they cost a few mana, so they are costed
+# as three-drops. Reading the printed 9 or 12 made them "the most expensive
+# card" in every ranking.
+_SELF_DISCOUNT = re.compile(
+    r"this spell costs \{[\dX]+\} less to cast,? (?:for each|where)|"
+    r"\b(?:affinity for|convoke|improvise|delve)\b",
+    re.I,
+)
+SELF_DISCOUNT_COST = 3.0
+
 # Tags of cards that multiply what the deck already does. They are the reason
 # the cluster works, so they are the last members of a cluster to go.
 _MULTIPLIER_TAGS = frozenset(
     {
         "counter-increaser", "counter-doubler", "token-doubler", "token-increaser",
         "trigger-doubler", "life-doubler", "lifegain-increaser", "power-doubler",
+        # March of the World Ooze makes every creature an Ooze: in a typal
+        # deck that multiplies the tribe.
+        "universal-type-change",
     }
 )
 
@@ -332,6 +347,26 @@ def is_tribe_member(card: CardEntry, tribe: str | None) -> bool:
     return tribe.lower() in {s.lower() for s in card.subtypes}
 
 
+def _tribe_word(tribe: str) -> re.Pattern[str]:
+    stem = re.escape(tribe)
+    plural = re.escape(tribe[:-1] + "ves") if tribe.lower().endswith("f") else f"{stem}(?:e?s)?"
+    return re.compile(rf"\b(?:{stem}|{plural})\b", re.I)
+
+
+def serves_tribe(card: CardEntry, tribe: str | None) -> bool:
+    """A member of the tribe, or a card whose rules text names it.
+
+    March of the World Ooze is an enchantment, but "creatures you control are
+    Oozes" is typal work in the Ooze deck. Reading only type lines made it
+    look like the least-connected piece in the deck.
+    """
+    if is_tribe_member(card, tribe):
+        return True
+    if not tribe or card.is_land:
+        return False
+    return _tribe_word(tribe).search(_REMINDER_RE.sub("", card.role_text())) is not None
+
+
 def clusters(deck: Deck) -> dict[str, int]:
     """Functional categories the deck invests in, with their card counts.
 
@@ -435,7 +470,7 @@ def tag_participation(deck: Deck, tribe: str | None = None) -> None:
             card.engine_participation = []
             continue
         member = membership(card)
-        if "typal" in active and is_tribe_member(card, tribe):
+        if "typal" in active and serves_tribe(card, tribe):
             member.add("typal")
         card.engine_participation = sorted(member & active)
 
@@ -471,7 +506,7 @@ def _orphans(deck: Deck, tribe: str | None, wincon_names: set[str]) -> tuple[lis
         if not card.tags:
             no_data.append(card.name)
             continue
-        if membership(card) or card.is_changeling or is_tribe_member(card, tribe):
+        if membership(card) or card.is_changeling or serves_tribe(card, tribe):
             continue
         owner_jobs = {tagmod.slugify(c) for c in card.categories or []} - _TYPE_CATEGORY_SLUGS
         if owner_jobs or card.name in wincon_names:
@@ -587,10 +622,15 @@ def castability(deck: Deck) -> list[dict]:
 
 
 def effective_cost(card: CardEntry) -> float:
-    """What the card really costs to cast: free-with-commander spells cost 0."""
-    if _FREE_WITH_COMMANDER.search(card.role_text()):
+    """What the card really costs to cast: free-with-commander spells cost 0,
+    spells that discount themselves by the board cost at most three."""
+    text = card.role_text()
+    if _FREE_WITH_COMMANDER.search(text):
         return 0.0
-    return float(card.mana_value or 0)
+    cost = float(card.mana_value or 0)
+    if _SELF_DISCOUNT.search(text):
+        return min(cost, SELF_DISCOUNT_COST)
+    return cost
 
 
 def core_clusters(found: dict[str, int], wants) -> list[str]:
@@ -618,7 +658,7 @@ def is_dedicated(card: CardEntry, category: str, core, tribe: str | None) -> boo
         return False
     if membership(card) & (set(core) - {category}):
         return False
-    return not is_tribe_member(card, tribe)
+    return not serves_tribe(card, tribe)
 
 
 def _name_key(name: str) -> str:
@@ -869,7 +909,7 @@ def analyse(deck: Deck, intent=None) -> dict:
     core_names = {
         c.name
         for c in deck.cards
-        if set(c.engine_participation) & wanted_set or is_tribe_member(c, tribe)
+        if set(c.engine_participation) & wanted_set or serves_tribe(c, tribe)
     }
     cuts: list[dict] = []
     demoted: list[dict] = []

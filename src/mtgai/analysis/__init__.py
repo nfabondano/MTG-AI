@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import Any
 
 from ..model import Deck
-from . import bracket, combos, curve, edhrec_delta, engine, legality, mana, roles, suggest
+from . import bracket, combos, curve, edhrec_delta, engine, legality, mana, roles, suggest, trim
 
 
 def price_summary(deck: Deck, *, top: int = 10) -> dict[str, Any]:

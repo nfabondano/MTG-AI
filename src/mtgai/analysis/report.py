@@ -502,6 +502,66 @@ _GROUP_HEADINGS = (
 )
 
 
+def render_trim(plan: dict[str, Any], *, heading: str = "##") -> str:
+    """The "which ones go" answer: numbered cuts, then extras, then the after."""
+    out = [f"{heading} To reach {plan['target']}", ""]
+    need = plan["need"]
+    cuts = plan.get("cuts") or []
+    if not cuts:
+        for note in plan.get("notes") or [f"Nothing to cut: {plan['total']} cards."]:
+            out.append(note)
+        out.append("")
+        return "\n".join(out)
+
+    line = f"{plan['total']} cards: cut {max(need, len(cuts))}."
+    if plan.get("max_bracket"):
+        source = plan.get("bracket_source") or ""
+        line += f" Keeping bracket {plan['max_bracket']} or below" + (
+            f" ({source})." if source else "."
+        )
+    out.append(line)
+    out.append("")
+    for i, pick in enumerate(cuts, 1):
+        out.append(f"{i}. **{pick['name']}** — {pick['reason']}  ")
+        evidence = pick["evidence"]
+        if pick.get("weak_signal"):
+            evidence += f"; {pick['weak_signal']} — a weak signal"
+        out.append(f"   _({evidence})_")
+    out.append("")
+
+    extras = plan.get("extras") or []
+    if extras:
+        out.append("**Extra candidates** — if you would rather keep one of the above:")
+        out.append("")
+        for pick in extras:
+            out.append(f"- **{pick['name']}** — {pick['reason']}")
+        out.append("")
+
+    after = plan.get("after") or {}
+    if after:
+        out.append(
+            f"After the cuts: {after['total']} cards · bracket {after['bracket']} "
+            f"({after['bracket_name']})."
+        )
+        out.append("")
+
+    protected = plan.get("protected") or {}
+    if protected:
+        names = list(protected)
+        shown = ", ".join(names[:8]) + (f" and {len(names) - 8} more" if len(names) > 8 else "")
+        out.append(
+            f"_Never offered: {shown} — combo pieces, declared untouchables and named "
+            "win conditions._"
+        )
+        out.append("")
+
+    land_note = (plan.get("lands") or {}).get("note")
+    for note in (plan.get("notes") or []) + ([land_note] if land_note else []):
+        out.append(f"> {note}")
+        out.append("")
+    return "\n".join(out)
+
+
 def render_suggestions(
     deck: Deck,
     result: dict[str, Any],
@@ -511,6 +571,7 @@ def render_suggestions(
     loose: bool = False,
     max_bracket: int | None = None,
     offline: bool = False,
+    trim: dict[str, Any] | None = None,
 ) -> str:
     """Render the structured suggestions as markdown.
 
@@ -541,6 +602,10 @@ def render_suggestions(
     if max_bracket is not None:
         out.append(f"Keeping the deck at bracket {max_bracket} or below.")
         out.append("")
+
+    # Over the size limit, which cards go is the first question to answer.
+    if trim and (trim.get("cuts") or trim.get("need")):
+        out.append(render_trim(trim))
 
     fixes = built["mana_fixes"]
     if fixes:

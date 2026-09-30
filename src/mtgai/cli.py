@@ -136,6 +136,32 @@ def deck_suggest(
     console.print(result["markdown"])
 
 
+@deck_app.command("trim")
+def deck_trim(
+    reference: str = typer.Argument(..., help="Deck slug, id or name fragment."),
+    to: int = typer.Option(100, "--to", help="Target deck size."),
+    extra: int = typer.Option(3, "--extra", help="Spare candidates beyond the cuts needed."),
+    max_bracket: int = typer.Option(
+        None, "--max-bracket",
+        help="Bracket to stay at or below (default: intent.md, then Archidekt).",
+    ),
+    offline: bool = typer.Option(False, "--offline"),
+    json_out: bool = typer.Option(False, "--json"),
+) -> None:
+    """Which cards to cut to reach the target size, with spares to choose from."""
+    try:
+        plan = service.trim_deck(
+            reference, target=to, extra=extra, max_bracket=max_bracket, offline=offline
+        )
+    except (SourceError, ValueError, FileNotFoundError) as exc:
+        _fail(str(exc))
+        return
+    if json_out:
+        _emit({k: v for k, v in plan.items() if k != "markdown"})
+        return
+    console.print(plan["markdown"])
+
+
 @deck_app.command("list")
 def deck_list(json_out: bool = typer.Option(False, "--json")) -> None:
     """List every tracked deck."""

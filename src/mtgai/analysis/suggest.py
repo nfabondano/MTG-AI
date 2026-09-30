@@ -412,9 +412,23 @@ def build_cuts(
     # 3. Curve.
     curve = result.get("curve") or {}
     if curve.get("expensive_spells", 0) > 12:
+        wincons = {w["name"] for w in eng.get("win_conditions") or []}
+
+        def multiplies(card) -> bool:
+            return bool({tagmod.slugify(t) for t in card.tags or []} & engine_mod._MULTIPLIER_TAGS)
+
+        # The same cards trail here as in every other ranking: what
+        # multiplies the deck's mechanic, Game Changers and spell-lands. A
+        # way to win is never "top of the curve".
         top = sorted(
-            (c for c in deck.cards if not c.is_land and not c.is_commander),
-            key=lambda c: (-engine_mod.effective_cost(c), c.name),
+            (
+                c for c in deck.cards
+                if not c.is_land and not c.is_commander and c.name not in wincons
+            ),
+            key=lambda c: (
+                multiplies(c), c.is_game_changer, c.is_modal_land,
+                -engine_mod.effective_cost(c), c.name,
+            ),
         )
         for card in top[:2]:
             if card.name in protected:

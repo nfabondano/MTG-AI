@@ -74,11 +74,46 @@ def _analyse_and_write(
     budget = intent.budget_per_card if intent is not None else None
     folder.write_suggestions(
         report.render_suggestions(
-            deck, result, budget=budget, max_bracket=max_bracket, offline=offline
+            deck, result, budget=budget, max_bracket=max_bracket, offline=offline,
+            trim=_trim_if_oversized(deck, result),
         )
     )
     folder.write_engine(report.render_engine(result))
     return result
+
+
+def _trim_if_oversized(deck: Deck, result: dict[str, Any]) -> dict[str, Any] | None:
+    """A deck over 100 gets its "which ones go" answer in suggestions.md."""
+    if deck.total_cards <= analysis.trim.DECK_SIZE:
+        return None
+    return analysis.trim.plan_trim(deck, result)
+
+
+def trim_deck(
+    reference: str,
+    *,
+    target: int = 100,
+    extra: int = 3,
+    max_bracket: int | None = None,
+    offline: bool = False,
+) -> dict[str, Any]:
+    """Which cards to cut to reach `target`, plus `extra` spares to choose from.
+
+    Every pick carries its reason and evidence; the plan also says what the
+    deck looks like afterwards (size, bracket, category counts). Nothing is
+    written: the list is an answer, not a file.
+    """
+    folder = deckfolder.resolve(reference)
+    deck = folder.read_deck()
+    intent = _load_intent(folder)
+    result = analysis.analyse(deck, offline=offline, intent=intent)
+    plan = analysis.trim.plan_trim(
+        deck, result, target=target, extra=extra, max_bracket=max_bracket
+    )
+    plan["slug"] = folder.slug
+    plan["deck"] = deck.name
+    plan["markdown"] = report.render_trim(plan, heading="#")
+    return plan
 
 
 def suggest(
@@ -109,7 +144,7 @@ def suggest(
     )
     markdown = report.render_suggestions(
         deck, result, built, budget=budget, loose=loose, max_bracket=max_bracket,
-        offline=offline,
+        offline=offline, trim=_trim_if_oversized(deck, result),
     )
     folder.write_suggestions(markdown)
 
