@@ -363,10 +363,13 @@ def build_cuts(
     # Never offer the card that would take a support job below its minimum —
     # one of two sweepers is not spare removal, and not "top of the curve".
     profile = tagmod.deck_profile(deck)
+    wants = eng.get("commander_wants") or []
+    overrides = dict(intent_data.get("core_categories") or {})
 
     def below_floor(card, skip: str | None = None) -> bool:
         return any(
-            profile.get(category, 0) - 1 < engine_mod.CATEGORY_TARGETS[category][0]
+            profile.get(category, 0) - 1
+            < engine_mod.category_bounds(category, wants, overrides)[0]
             for category in tagmod.card_categories(card)
             if category in engine_mod.CATEGORY_TARGETS and category != skip
         )

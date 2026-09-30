@@ -135,6 +135,28 @@ _MULTIPLIER_TAGS = frozenset(
 CORE_TARGET_MULTIPLIER = 2
 
 
+def category_bounds(
+    category: str, wants, overrides: dict[str, int] | None = None
+) -> tuple[int, int]:
+    """(floor, bound) for a category in this deck.
+
+    When the commander asks for the job, its range starts where the generic
+    one ends: the bound doubles, and the floor rises to the generic ceiling.
+    A Voltron commander that wants protection is not "covered" by the
+    generic two protection spells — that floor offered Clever Concealment
+    and Heroic Intervention from Cloud's deck as spares. (Doubling the floor
+    instead asked Cloud for sixteen ramp cards.) A declared target in
+    intent.md replaces the bound, and the floor never exceeds it.
+    """
+    low, high = CATEGORY_TARGETS[category]
+    if overrides and category in overrides:
+        bound = overrides[category]
+        return min(low, bound), bound
+    if category in set(wants):
+        return high, high * CORE_TARGET_MULTIPLIER
+    return low, high
+
+
 def commander_base_wants(deck: Deck) -> set[str]:
     """What the commander's own tags and text are about, before expansion.
 
@@ -757,14 +779,9 @@ def oversupplied(
     overrides = overrides or {}
     profile = tagmod.deck_profile(deck)
     out = []
-    for category, (low, high) in CATEGORY_TARGETS.items():
-        is_core = category in wants
-        bound = high * CORE_TARGET_MULTIPLIER if is_core else high
-        floor = low
-        if category in overrides:
-            bound = overrides[category]
-            floor = min(low, bound)
-            is_core = True
+    for category in CATEGORY_TARGETS:
+        is_core = category in wants or category in overrides
+        floor, bound = category_bounds(category, wants, overrides)
         count = profile.get(category, 0)
         if count <= bound:
             continue

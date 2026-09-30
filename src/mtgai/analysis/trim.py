@@ -134,13 +134,8 @@ class _State:
         )
         self.dedicated: dict[str, set[str]] = {}
         self.bounds: dict[str, tuple[int, int]] = {}
-        for category, (low, high) in engine_mod.CATEGORY_TARGETS.items():
-            bound = high * engine_mod.CORE_TARGET_MULTIPLIER if category in wants else high
-            floor = low
-            if category in overrides:
-                bound = overrides[category]
-                floor = min(low, bound)
-            self.bounds[category] = (floor, bound)
+        for category in engine_mod.CATEGORY_TARGETS:
+            self.bounds[category] = engine_mod.category_bounds(category, wants, overrides)
             self.dedicated[category] = {
                 c.name
                 for c in engine_mod.cards_in_category(deck, category)

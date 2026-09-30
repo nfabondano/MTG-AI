@@ -171,13 +171,27 @@ class TestEquipmentsAtBracketTwo:
         assert all(p["tier"] != "orphan" for p in plan["cuts"] + plan["extras"])
         assert "Tifa, Martial Artist" not in _picked(plan)
 
-    def test_protection_surplus_is_trimmed_from_dedicated_cards(self, equipments, result):
-        plan = trim.plan_trim(equipments, result)
-        spare = [p for p in plan["cuts"] if p["tier"] == "oversupply"]
-        assert spare and all(p["category"] == "protection" for p in spare)
-        for pick in spare:
-            card = equipments.find(pick["name"])
-            assert "equipment" not in engine.membership(card)
+    def test_a_voltron_deck_keeps_its_protection_spells(self, equipments, result):
+        """Cloud asks for protection, so its minimum scales with its target:
+        four protection spells are under the floor, not a surplus. The generic
+        floor of two offered Clever Concealment and Heroic Intervention as
+        spares — the same cut Nicolas was told by hand to ignore."""
+        spells = {"Clever Concealment", "Heroic Intervention", "Boros Charm", "Flawless Maneuver"}
+        protection = next(
+            e for e in result["engine"]["oversupplied"] if e["category"] == "protection"
+        )
+        assert protection["target_low"] == 6 and protection["cuttable"] == 0
+        plan = trim.plan_trim(equipments, result, extra=6)
+        assert not set(_picked(plan)) & spells
+
+    def test_wanted_ramp_is_not_held_to_a_doubled_floor(self, equipments):
+        from mtgai.analysis import engine as engine_mod
+
+        wants = ["ramp", "protection"]
+        assert engine_mod.category_bounds("ramp", wants) == (12, 24)
+        assert engine_mod.category_bounds("protection", wants) == (6, 12)
+        assert engine_mod.category_bounds("removal", wants) == (6, 10)
+        assert engine_mod.category_bounds("ramp", wants, {"ramp": 10}) == (8, 10)
 
     def test_self_discounting_spells_are_not_the_most_expensive(self, equipments):
         assert engine.effective_cost(equipments.find("Excalibur, Sword of Eden")) <= 3
