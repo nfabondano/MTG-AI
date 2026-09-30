@@ -104,7 +104,7 @@ _DRAW_PATTERNS = [
 _REMOVAL_PATTERNS = [
     r"destroy target",
     r"exile target (?:creature|permanent|artifact|enchantment|planeswalker|nonland)",
-    r"target creature gets -\d+/-\d+",
+    r"target creature gets -(?:\d+|X)/-(?:\d+|X)",
     r"deals? \d+ damage to target (?:creature|permanent|planeswalker|any target)",
     r"target (?:player|opponent) sacrifices",
     r"return target (?:creature|permanent|nonland permanent) to (?:its owner's|their owner's) hand",
@@ -118,7 +118,9 @@ _WIPE_PATTERNS = [
     r"destroy all",
     r"exile all",
     r"destroy each",
-    r"all creatures get -\d+/-\d+",
+    # "-X/-X" too: Toxic Deluge was the deck's only wipe and read as none.
+    r"(?:all|each) creatures? gets? -(?:\d+|X)/-(?:\d+|X)",
+    r"creatures your opponents control get -(?:\d+|X)/-(?:\d+|X)",
     # Only a mass sacrifice counts: two or more, half, or the rest of the board.
     r"each (?:player|opponent) sacrifices (?:two|three|four|half|all|X)\b",
     r"return all (?:creatures|permanents|nonland permanents)",

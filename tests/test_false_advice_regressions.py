@@ -181,6 +181,36 @@ class TestFreeSpellsAreNotExpensive:
         assert [c.name for c in ranked] == ["Alpha", "Beta"]
 
 
+class TestRoleCountsAreHonest:
+    def test_minus_x_wipes_are_wipes(self):
+        from mtgai.analysis import roles
+
+        deluge = CardEntry(
+            name="Toxic Deluge", type_line="Sorcery",
+            oracle_text="As an additional cost to cast this spell, pay X life.\n"
+            "All creatures get -X/-X until end of turn.",
+        )
+        one_sided = CardEntry(
+            name="Crippling Fear", type_line="Sorcery",
+            oracle_text="Choose a creature type. Creatures your opponents control get -3/-3 "
+            "until end of turn.",
+        )
+        assert roles.classify(deluge) == ["wipe"]
+        assert "wipe" in roles.classify(one_sided)
+
+    def test_niv_is_not_told_it_has_no_wipes(self, niv):
+        """Toxic Deluge is in the deck; the report said "0 wipe"."""
+        result = analysis.analyse(niv, offline=True)
+        assert result["roles"]["counts"]["wipe"] >= 1
+        assert result["roles"]["tag_counts"]["wipe"] >= 1
+        assert not any(f["message"].startswith("0 wipe") for f in result["roles"]["findings"])
+
+    def test_draw_is_not_padded_by_punishers(self, niv):
+        """Smothering Tithe punishes draws and Dawn's Truce gifts one."""
+        for name in ("Smothering Tithe", "Dawn's Truce"):
+            assert "draw" not in tags.card_categories(niv.find(name)), name
+
+
 class TestReminderTextIsNotDesign:
     def test_mentor_reminder_does_not_make_a_payoff(self):
         card = CardEntry(

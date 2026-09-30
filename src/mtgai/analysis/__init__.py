@@ -46,11 +46,13 @@ def _reconcile_roles(roles_result: dict[str, Any], engine_result: dict[str, Any]
     Oracle-text regexes and curated tags measure the same jobs; where the tags
     say a role is adequately covered, a regex-derived "too few" finding is
     noise, not signal — the tags are the better instrument, so it is dropped.
+
+    The full category profile is used, not only the clusters: two sweepers
+    never form a cluster, and reading them as "no tag data" left a wrong
+    "0 wipes" standing.
     """
-    clusters = engine_result.get("clusters") or {}
-    tag_counts = {
-        role: clusters[cat] for cat, role in CATEGORY_TO_ROLE.items() if cat in clusters
-    }
+    profile = engine_result.get("profile") or engine_result.get("clusters") or {}
+    tag_counts = {role: profile.get(cat, 0) for cat, role in CATEGORY_TO_ROLE.items()}
     roles_result["tag_counts"] = tag_counts
 
     kept = []
