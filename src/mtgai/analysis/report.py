@@ -174,8 +174,14 @@ def _engine_section(data: dict[str, Any]) -> str:
         parts = []
         for e in over[:4]:
             label = f"{e['category']} {e['count']} (want ~{e['target_high']}"
-            label += ", even doubled for the commander)" if e.get("commander_core") else ")"
-            parts.append(label)
+            if e.get("commander_core"):
+                label += ", even doubled for the commander"
+            dedicated = e.get("dedicated")
+            if dedicated is not None and dedicated != e["count"]:
+                label += f"; {dedicated} do nothing else"
+            if e.get("cuttable") == 0:
+                label += " — nothing to trim, the rest are engine pieces"
+            parts.append(label + ")")
         out.append("**Oversupplied:** " + ", ".join(parts))
         out.append("")
 
@@ -585,7 +591,12 @@ def render_suggestions(
     if cuts:
         for entry in cuts:
             out.append(f"- **{entry['name']}** — {entry['why']}  ")
-            out.append(f"  _({entry['evidence']})_")
+            evidence = entry["evidence"]
+            if entry.get("weak_signal"):
+                evidence += f"; {entry['weak_signal']} — a weak signal"
+            out.append(f"  _({evidence})_")
+            if entry.get("alternatives"):
+                out.append(f"  - or instead: {', '.join(entry['alternatives'])}")
     else:
         out.append(
             "- No confident cuts. Nothing in the deck fails on castability, sits in "
@@ -834,6 +845,17 @@ def render_engine(result: dict[str, Any]) -> str:
             "Not automatically bad — the tags may simply not name what these do.\n"
         )
         for name in orphans[:12]:
+            out.append(f"- {name}")
+        out.append("")
+
+    no_data = data.get("no_data") or []
+    if no_data:
+        out.append("## No data to judge\n")
+        out.append(
+            "These carry no functional tags (often brand-new cards), so the tool "
+            "says nothing about them rather than guess. Judge them yourself.\n"
+        )
+        for name in no_data[:12]:
             out.append(f"- {name}")
         out.append("")
 

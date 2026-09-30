@@ -91,6 +91,28 @@ _ORACLE_WANTS: tuple[tuple[re.Pattern[str], str], ...] = (
 # A tribe only counts as the deck's tribe when the deck actually commits to it.
 TRIBE_MIN = 4
 
+# Below this many sources in one of its colours, a three-colour cost is a real
+# strain — the same bar a two-pip cost has to clear.
+THREE_COLOUR_SOURCES = SOURCES_FOR_PIPS[2]
+
+# "If you control a commander, you may cast this spell without paying its mana
+# cost" — Deadly Rollick, Flawless Maneuver. Their mana value says 3 or 4;
+# with the commander out they cost nothing, so they are the last thing to cut
+# for being expensive.
+_FREE_WITH_COMMANDER = re.compile(
+    r"if you control a commander,? you may cast (?:this spell|it) without paying its mana cost",
+    re.I,
+)
+
+# Tags of cards that multiply what the deck already does. They are the reason
+# the cluster works, so they are the last members of a cluster to go.
+_MULTIPLIER_TAGS = frozenset(
+    {
+        "counter-increaser", "counter-doubler", "token-doubler", "token-increaser",
+        "trigger-doubler", "life-doubler", "lifegain-increaser", "power-doubler",
+    }
+)
+
 # A cluster the commander's own text asks for gets to run deeper before it is
 # called oversupplied — for a death-trigger commander, fourteen sacrifice
 # outlets are the deck working, not bloat.
@@ -418,6 +440,46 @@ def tag_participation(deck: Deck, tribe: str | None = None) -> None:
         card.engine_participation = sorted(member & active)
 
 
+# Archidekt's default categories name a card type, not a job.
+_TYPE_CATEGORY_SLUGS = frozenset(
+    {
+        "creature", "creatures", "instant", "instants", "sorcery", "sorceries",
+        "artifact", "artifacts", "enchantment", "enchantments", "planeswalker",
+        "planeswalkers", "land", "lands", "battle", "battles", "commander",
+        "maybeboard", "sideboard", "kindred", "tribal", "other",
+    }
+)
+
+
+def _orphans(deck: Deck, tribe: str | None, wincon_names: set[str]) -> tuple[list[str], list[str]]:
+    """Cards that do nothing the tool can name, and cards it knows nothing about.
+
+    An orphan is a tagged card with no category at all — not an engine piece,
+    not support (ramp, removal, a tutor…), not a member of the tribe, not
+    filed by the owner under any job, and not a way to win. Anything with a
+    job is not an orphan just because its job did not form a cluster: that
+    rule offered Demonic Tutor and Lae'zel as cuts.
+
+    A card with no tags at all is not an orphan either; there is no data to
+    judge it on, and saying so beats guessing.
+    """
+    orphans: list[str] = []
+    no_data: list[str] = []
+    for card in deck.cards:
+        if card.is_land or card.is_commander or card.engine_participation:
+            continue
+        if not card.tags:
+            no_data.append(card.name)
+            continue
+        if membership(card) or card.is_changeling or is_tribe_member(card, tribe):
+            continue
+        owner_jobs = {tagmod.slugify(c) for c in card.categories or []} - _TYPE_CATEGORY_SLUGS
+        if owner_jobs or card.name in wincon_names:
+            continue
+        orphans.append(card.name)
+    return orphans, no_data
+
+
 def castability(deck: Deck) -> list[dict]:
     """Cards that ask for more coloured mana than the deck reliably produces.
 
@@ -475,17 +537,35 @@ def castability(deck: Deck) -> list[dict]:
                     sole = True
 
         distinct = len([c for c in pips if c in identity])
-        if distinct >= 3:
-            reasons.append(f"needs {distinct} different colours in one cost")
+        # Three colours in one cost only strain a mana base that is thin in
+        # one of them. Tifa's {1}{R}{G}{W} in a deck with 26/24/22 sources is
+        # hard to cast in name only; The Mimeoplasm with 19 blue sources is not.
+        weak = {
+            c: sources.get(c, 0)
+            for c in pips
+            if c in identity and sources.get(c, 0) < THREE_COLOUR_SOURCES
+        }
+        three_colour_strain = distinct >= 3 and bool(weak)
+        if three_colour_strain:
+            thin = ", ".join(
+                f"{COLOR_NAMES.get(c, c)} {n}" for c, n in sorted(weak.items())
+            )
+            reasons.append(
+                f"needs {distinct} different colours in one cost, with thin sources ({thin})"
+            )
+        elif distinct >= 3:
+            reasons.append(
+                f"needs {distinct} different colours in one cost — sources look sufficient"
+            )
 
         if reasons:
             # Being the sole reason a colour requirement is high matters most:
             # cutting that card relaxes the whole mana base. A three-colour cost
-            # outranks being one source short of a two-pip card.
+            # on thin sources outranks being one source short of a two-pip card.
             severity = worst_short * 2
             if sole:
                 severity += 10
-            if distinct >= 3:
+            if three_colour_strain:
                 severity += 6
 
             findings.append(
@@ -494,6 +574,7 @@ def castability(deck: Deck) -> list[dict]:
                     "mana_cost": card.mana_cost,
                     "shortfall": worst_short,
                     "distinct_colors": distinct,
+                    "three_colour_strain": three_colour_strain,
                     "sole_driver": sole,
                     "severity": severity,
                     "reasons": reasons,
@@ -505,10 +586,86 @@ def castability(deck: Deck) -> list[dict]:
     return findings
 
 
+def effective_cost(card: CardEntry) -> float:
+    """What the card really costs to cast: free-with-commander spells cost 0."""
+    if _FREE_WITH_COMMANDER.search(card.role_text()):
+        return 0.0
+    return float(card.mana_value or 0)
+
+
+def core_clusters(found: dict[str, int], wants) -> list[str]:
+    """The deck's engine: the three biggest clusters the commander asks for.
+
+    Falls back to the three biggest clusters when the commander asks for none
+    of them. `found` is already ordered by (count, name), so ties are stable.
+    """
+    wants = set(wants)
+    wanted = [c for c in found if c in wants]
+    return wanted[:3] or list(found)[:3]
+
+
+def is_dedicated(card: CardEntry, category: str, core, tribe: str | None) -> bool:
+    """Whether a card is in a category *only* for that category's sake.
+
+    A card that also serves the deck's engine is doing double duty: Luminous
+    Broodmoth is tagged protection, but in Felisa it is a death-trigger engine
+    piece, and counting it as spare protection is how Teferi's Protection got
+    offered as a cut.
+    """
+    if card.is_commander or card.is_land:
+        return False
+    if category not in tagmod.card_categories(card):
+        return False
+    if membership(card) & (set(core) - {category}):
+        return False
+    return not is_tribe_member(card, tribe)
+
+
+def _name_key(name: str) -> str:
+    return name.split("//")[0].strip().lower()
+
+
+def rank_cut_candidates(
+    cards: list[CardEntry],
+    *,
+    flexible=frozenset(),
+    inclusion: dict[str, float] | None = None,
+) -> list[CardEntry]:
+    """Order cut candidates, most cuttable first.
+
+    Declared flexible cards lead. Game Changers, spell-lands and cards that
+    multiply the deck's own mechanic trail. Among the rest the most expensive
+    to cast goes first — by *effective* cost, so a spell that is free with the
+    commander out is the last to go — then the most single-purpose. Measured
+    EDHREC inclusion only breaks what is still tied; a card EDHREC has no data
+    on sorts as if widely played, because absence is not evidence.
+    """
+    inclusion = inclusion or {}
+
+    def key(card: CardEntry):
+        name = _name_key(card.name)
+        slugs = {tagmod.slugify(t) for t in card.tags or []}
+        return (
+            name not in flexible,
+            card.is_game_changer,
+            card.is_modal_land,
+            bool(slugs & _MULTIPLIER_TAGS),
+            -effective_cost(card),
+            len(membership(card)),
+            inclusion.get(name, 1.0),
+            name,
+        )
+
+    return sorted(cards, key=key)
+
+
 def oversupplied(
     deck: Deck,
     wants: set[str] | None = None,
     overrides: dict[str, int] | None = None,
+    *,
+    core: list[str] | None = None,
+    tribe: str | None = None,
 ) -> list[dict]:
     """Clusters holding more cards than a deck normally needs.
 
@@ -519,30 +676,54 @@ def oversupplied(
 
     A declared intent overrides both: `core_categories: {ramp: 20}` means
     Nicolas wants twenty, and twenty is the bound.
+
+    The count is every card in the category, but what can actually be cut is
+    only the *dedicated* members — cards serving no other part of the engine —
+    and only down to the category's minimum:
+    `cuttable = min(count − bound, dedicated − floor)`. Felisa's nine
+    protection cards are two dedicated ones plus seven engine pieces that
+    also protect, so there is nothing to trim.
     """
     if wants is None:
         wants = set(commander_wants(deck))
+    if tribe is None:
+        tribe = commander_tribe(deck)
+    if core is None:
+        core = core_clusters(clusters(deck), wants)
     overrides = overrides or {}
     profile = tagmod.deck_profile(deck)
     out = []
-    for category, (_, high) in CATEGORY_TARGETS.items():
-        core = category in wants
-        bound = high * CORE_TARGET_MULTIPLIER if core else high
+    for category, (low, high) in CATEGORY_TARGETS.items():
+        is_core = category in wants
+        bound = high * CORE_TARGET_MULTIPLIER if is_core else high
+        floor = low
         if category in overrides:
             bound = overrides[category]
-            core = True
+            floor = min(low, bound)
+            is_core = True
         count = profile.get(category, 0)
-        if count > bound:
-            out.append(
-                {
-                    "category": category,
-                    "count": count,
-                    "target_high": bound,
-                    "excess": count - bound,
-                    "commander_core": core,
-                }
-            )
-    out.sort(key=lambda e: -e["excess"])
+        if count <= bound:
+            continue
+        dedicated = sorted(
+            (c for c in cards_in_category(deck, category) if is_dedicated(c, category, core, tribe)),
+            key=lambda c: c.name,
+        )
+        dedicated_count = sum(c.quantity for c in dedicated)
+        out.append(
+            {
+                "category": category,
+                "count": count,
+                "target_low": floor,
+                "target_high": bound,
+                "excess": count - bound,
+                "commander_core": is_core,
+                "dedicated": dedicated_count,
+                "shared": count - dedicated_count,
+                "members_dedicated": [c.name for c in dedicated],
+                "cuttable": max(0, min(count - bound, dedicated_count - floor)),
+            }
+        )
+    out.sort(key=lambda e: (-e["cuttable"], -e["excess"], e["category"]))
     return out
 
 
@@ -671,24 +852,19 @@ def analyse(deck: Deck, intent=None) -> dict:
     overrides: dict[str, int] = dict(getattr(intent, "core_categories", None) or {})
     wants = sorted(set(wants) | set(overrides))
     strain = castability(deck)
-    excess = oversupplied(deck, set(wants), overrides)
 
     # Name the archetype from the biggest clusters the commander cares about.
     # Every deck has a dozen incidental overlaps; the archetype is the top few.
-    wanted = [(c, n) for c, n in found.items() if c in wants]
-    wanted.sort(key=lambda t: -t[1])
-    core = [c for c, _ in wanted[:3]] or list(found)[:3]
+    core = core_clusters(found, wants)
+    excess = oversupplied(deck, set(wants), overrides, core=core, tribe=tribe)
 
-    orphans = [
-        c.name
-        for c in deck.cards
-        if not c.is_land and not c.is_commander and not c.engine_participation
-    ]
+    wincons = win_condition_inventory(deck)
+    orphans, no_data = _orphans(deck, tribe, {w["name"] for w in wincons})
 
     # A hard-to-cast card that the deck is built around is a mana-base problem,
     # not a cut. Only three kinds of strain still argue for cutting the card
     # itself: it alone holds a colour requirement up, it wants three colours in
-    # one cost, or it is not part of the plan anyway.
+    # one cost from a thin mana base, or it is not part of the plan anyway.
     wanted_set = set(wants)
     core_names = {
         c.name
@@ -702,7 +878,7 @@ def analyse(deck: Deck, intent=None) -> dict:
             continue
         if (
             finding["sole_driver"]
-            or finding["distinct_colors"] >= 3
+            or finding.get("three_colour_strain")
             or finding["name"] not in core_names
         ):
             if finding["sole_driver"] and finding.get("short_colors"):
@@ -744,7 +920,10 @@ def analyse(deck: Deck, intent=None) -> dict:
         "mana_fixes": mana_fixes(deck, demoted),
         "oversupplied": excess,
         "orphans": orphans,
-        "win_conditions": win_condition_inventory(deck),
+        # Cards with no tags at all: the tool cannot judge them, so they are
+        # listed as such and never offered as cuts.
+        "no_data": no_data,
+        "win_conditions": wincons,
         "quadrants": quadrant_coverage(deck),
         "tag_counts": dict(tagmod.tag_counts(deck).most_common(20)),
         "note": (

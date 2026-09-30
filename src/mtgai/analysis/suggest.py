@@ -199,8 +199,13 @@ def build_adds(
         seen.add(key)
         adds.append(entry)
 
-    # Combos one card away are the most concrete change available.
-    for combo in (result.get("combos", {}).get("near_miss") or [])[:5]:
+    # Combos one card away are the most concrete change available — unless
+    # Spellbook marks the combo as using a banned card.
+    near_misses = [
+        c for c in result.get("combos", {}).get("near_miss") or []
+        if c.get("bracket_tag") != "B"
+    ]
+    for combo in near_misses[:5]:
         missing = combo.get("missing")
         if not missing:
             continue
@@ -323,16 +328,17 @@ def build_cuts(
         for name in intent_data.get("flexible_cards") or []
     }
 
-    def add(name: str, why: str, evidence: str, score: int) -> None:
+    def add(name: str, why: str, evidence: str, score: int, **extra: Any) -> bool:
         key = name.split("//")[0].strip().lower()
         if key in seen:
-            return
+            return False
         # Declared untouchable. Colour-identity violations are the one
         # exception: an illegal card is a fact, not a suggestion.
         if key in sacred and evidence != "colour identity":
-            return
+            return False
         seen.add(key)
-        cuts.append({"name": name, "why": why, "evidence": evidence, "score": score})
+        cuts.append({"name": name, "why": why, "evidence": evidence, "score": score, **extra})
+        return True
 
     # Illegal cards are not suggestions.
     identity = set(deck.color_identity())
@@ -361,44 +367,54 @@ def build_cuts(
             why += f" (or {entry['alternative']})"
         add(entry["name"], why, "castability", 100 + entry.get("severity", 0))
 
-    # 2. Oversupply — name the specific cards making up the excess. The
-    #    representative must not be one of the engine's own pieces: a card that
-    #    also serves a core cluster, or is the tribe, is doing double duty and
-    #    offering it would repeat the Ashnod's Altar mistake.
-    core = set(eng.get("core") or [])
-    tribe = eng.get("tribe")
-    for over in (eng.get("oversupplied") or [])[:3]:
+    # 2. Oversupply — name the specific cards making up the excess. Only the
+    #    cluster's *dedicated* members are candidates (engine_mod.oversupplied
+    #    works them out): a card that also serves a core cluster, or is the
+    #    tribe, is doing double duty, and offering it would repeat the Ashnod's
+    #    Altar mistake. A cluster whose excess is all engine pieces has nothing
+    #    to trim and is skipped.
+    inclusion = (result.get("edhrec") or {}).get("inclusion") or {}
+    shown = 0
+    for over in eng.get("oversupplied") or []:
+        if shown >= 3:
+            break
+        if over.get("cuttable", 1) <= 0:
+            continue
         category = over["category"]
-        members = engine_mod.cards_in_category(deck, category)
-        members.sort(
-            key=lambda c: (
-                c.name.split("//")[0].strip().lower() not in flexible,
-                -(c.mana_value or 0),
-                c.name,
-            )
+        members = [deck.find(n) for n in over.get("members_dedicated") or []]
+        candidates = [
+            c for c in members
+            if c is not None and c.name not in protected
+            and c.name.split("//")[0].strip().lower() not in seen
+            and c.name.split("//")[0].strip().lower() not in sacred
+        ]
+        ranked = engine_mod.rank_cut_candidates(
+            candidates, flexible=flexible, inclusion=inclusion
         )
-        for card in members:
-            if card.is_commander or card.name in protected:
-                continue
-            if set(card.engine_participation) & core:
-                continue
-            if engine_mod.is_tribe_member(card, tribe):
-                continue
-            add(
-                card.name,
-                f"{over['count']} cards do {category} work; a deck wants about "
-                f"{over['target_high']}",
-                f"oversupplied: {category}",
-                60,
-            )
-            break  # one representative per cluster, not a purge
+        if not ranked:
+            continue
+        first = ranked[0]
+        dedicated = over.get("dedicated", over["count"])
+        why = (
+            f"{over['count']} cards do {category} work"
+            + (f", {dedicated} of them nothing else" if dedicated != over["count"] else "")
+            + f"; a deck wants about {over['target_high']}"
+        )
+        extra: dict[str, Any] = {"alternatives": [c.name for c in ranked[1:4]]}
+        rate = inclusion.get(first.name.split("//")[0].strip().lower())
+        if rate is not None:
+            # Popularity orders candidates the deck already put forward; it is
+            # recorded as such and never becomes the reason.
+            extra["weak_signal"] = f"played in {rate:.0%} of decks with this commander"
+        if add(first.name, why, f"oversupplied: {category}", 60, **extra):
+            shown += 1
 
     # 3. Curve.
     curve = result.get("curve") or {}
     if curve.get("expensive_spells", 0) > 12:
         top = sorted(
             (c for c in deck.cards if not c.is_land and not c.is_commander),
-            key=lambda c: -(c.mana_value or 0),
+            key=lambda c: (-engine_mod.effective_cost(c), c.name),
         )
         for card in top[:2]:
             if card.name in protected:

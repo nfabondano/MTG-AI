@@ -178,6 +178,9 @@ def analyse(deck: Deck, *, limit: int = 15, intent=None) -> dict:
     # Species Specialist — as "unusual inclusions". Only a *measured* inclusion
     # rate counts, and only when EDHREC actually returned data for the card.
     off_meta = []
+    # Measured inclusion per card, for ordering candidates the deck's own
+    # evidence already put on the table. Never a reason by itself.
+    inclusion: dict[str, float] = {}
     covered = 0
     for card in deck.cards:
         if card.is_commander or card.is_basic_land:
@@ -191,6 +194,7 @@ def analyse(deck: Deck, *, limit: int = 15, intent=None) -> dict:
         if rec is None:
             continue
         covered += 1
+        inclusion[key] = round(rec.inclusion, 4)
         if rec.inclusion < OFF_META_INCLUSION:
             off_meta.append(
                 {
@@ -208,6 +212,7 @@ def analyse(deck: Deck, *, limit: int = 15, intent=None) -> dict:
     coverage = covered / spells if spells else 0.0
     if coverage < 0.25:
         off_meta = []
+        inclusion = {}
 
     sample_size = data.num_decks or max(
         (r.potential_decks for r in data.recommendations), default=0
@@ -229,6 +234,7 @@ def analyse(deck: Deck, *, limit: int = 15, intent=None) -> dict:
         "missing_mana_staples": missing_mana_staples[:limit],
         "missing_synergy": missing_synergy[:limit],
         "off_meta": off_meta[:limit],
+        "inclusion": inclusion,
         "covered_cards": covered,
         "coverage": round(coverage, 3),
     }
