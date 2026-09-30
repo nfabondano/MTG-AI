@@ -390,19 +390,28 @@ def _combo_section(data: dict[str, Any]) -> str:
         out.append("")
         return "\n".join(out)
 
+    from .bracket import COMBO_TAG_NAMES
+
     complete = data.get("complete") or []
     near = data.get("near_miss") or []
+    needs = data.get("needs_template") or []
+
+    def rating(combo: dict[str, Any]) -> str:
+        tag = COMBO_TAG_NAMES.get(combo.get("bracket_tag") or "")
+        return f" _({tag})_" if tag else ""
 
     if complete:
         out.append("**Already in the deck:**")
         out.append("")
-        for combo in complete:
+        for combo in complete[:15]:
             cards = " + ".join(combo["cards"])
             produces = ", ".join(combo["produces"][:3])
-            out.append(f"- {cards} → {produces}")
+            out.append(f"- {cards} → {produces}{rating(combo)}")
+        if len(complete) > 15:
+            out.append(f"- …and {len(complete) - 15} more")
         out.append("")
     else:
-        out.append("No complete combos found among the cards checked.")
+        out.append("No complete combos found.")
         out.append("")
 
     if near:
@@ -411,7 +420,18 @@ def _combo_section(data: dict[str, Any]) -> str:
         for combo in near:
             have = " + ".join(c for c in combo["cards"] if c != combo["missing"])
             produces = ", ".join(combo["produces"][:2])
-            out.append(f"- Add **{combo['missing']}** — combos with {have} → {produces}")
+            out.append(
+                f"- Add **{combo['missing']}** — combos with {have} → {produces}{rating(combo)}"
+            )
+        out.append("")
+
+    if needs:
+        out.append("**Needs one generic piece:**")
+        out.append("")
+        for combo in needs[:5]:
+            cards = " + ".join(combo["cards"])
+            produces = ", ".join(combo["produces"][:2])
+            out.append(f"- {cards} + any {combo['missing_template']} → {produces}")
         out.append("")
 
     if data.get("note"):

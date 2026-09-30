@@ -104,26 +104,26 @@ class TestComboIdentityFilter:
             ],
         )
 
+    @staticmethod
+    def _serve(monkeypatch, found):
+        monkeypatch.setattr(spellbook, "find_my_combos", lambda *a, **k: found)
+
     def test_off_identity_combos_are_dropped(self, monkeypatch):
         blue = spellbook.Combo(id="1", cards=["Sol Ring", "Hullbreaker Horror"], identity="U")
         mardu = spellbook.Combo(id="2", cards=["Sol Ring", "Ad Nauseam"], identity="B")
-
-        monkeypatch.setattr(
-            spellbook,
-            "find_in_deck",
-            lambda *a, **k: {"complete": [], "near_miss": [blue, mardu]},
-        )
+        blue.missing, mardu.missing = "Hullbreaker Horror", "Ad Nauseam"
+        self._serve(monkeypatch, {"complete": [], "near_miss": [blue, mardu]})
         result = combos_analysis.analyse(self._deck())
         names = {c["id"] for c in result["near_miss"]}
         assert names == {"2"}, "a blue combo must not be suggested to a Mardu deck"
 
-    def test_colourless_combos_are_kept(self, monkeypatch):
-        colourless = spellbook.Combo(id="3", cards=["Sol Ring", "Basalt Monolith"], identity="")
-        monkeypatch.setattr(
-            spellbook,
-            "find_in_deck",
-            lambda *a, **k: {"complete": [colourless], "near_miss": []},
+    @pytest.mark.parametrize("identity", ["", "C"])
+    def test_colourless_combos_are_kept(self, monkeypatch, identity):
+        """Spellbook writes colourless as "C"; that used to fail every deck."""
+        colourless = spellbook.Combo(
+            id="3", cards=["Sol Ring", "Basalt Monolith"], identity=identity
         )
+        self._serve(monkeypatch, {"complete": [colourless], "near_miss": []})
         result = combos_analysis.analyse(self._deck())
         assert len(result["complete"]) == 1
 
@@ -131,6 +131,7 @@ class TestComboIdentityFilter:
         def boom(*a, **k):
             raise SourceError("spellbook down")
 
+        monkeypatch.setattr(spellbook, "find_my_combos", boom)
         monkeypatch.setattr(spellbook, "find_in_deck", boom)
         result = combos_analysis.analyse(self._deck())
         assert result["available"] is False
