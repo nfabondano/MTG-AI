@@ -193,7 +193,8 @@ class TestFelisaCombos:
         found = combos.analyse(felisa)
         result = bracket.analyse(felisa, combos=found["complete"])
         assert result["combos"] == []
-        assert not any("two-card combo" in r and "not counted" not in r for r in result["reasons"])
+        assert not any("two-card combo" in r and "in the deck:" in r for r in result["reasons"])
+        assert any("three or more pieces" in r for r in result["reasons"])
         # Three Game Changers still make it bracket 3 — for the right reason.
         assert result["estimate"] == 3
         assert any("3 Game Changers" in r for r in result["reasons"])
