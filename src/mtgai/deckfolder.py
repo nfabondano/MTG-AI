@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
 import unicodedata
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -227,6 +228,89 @@ def all_folders() -> list[DeckFolder]:
         for p in sorted(root.iterdir())
         if p.is_dir() and (p / DECK).exists()
     ]
+
+
+def find_by_id(deck_id: int) -> DeckFolder | None:
+    """The folder already tracking an Archidekt id, whatever its name now."""
+    for folder in all_folders():
+        if folder.slug == str(deck_id) or folder.slug.endswith(f"-{deck_id}"):
+            return folder
+    return None
+
+
+# Rebuilt from Archidekt on every import, so they never need carrying over.
+_GENERATED = frozenset({SOURCE, DECK, DECKLIST, ANALYSIS, SUGGESTIONS})
+
+
+def _is_template(text: str) -> bool:
+    return not text.strip() or text.strip() == NOTES_TEMPLATE.strip()
+
+
+def carry_over(old: DeckFolder, new: DeckFolder) -> dict[str, list[str]]:
+    """Move what belongs to Nicolas from a deck's old folder into its new one.
+
+    A deck that is renamed on Archidekt, or rebuilt under a new link, gets a
+    new folder; without this its notes, its declared intent and a corrected
+    engine.md stayed behind in a folder nothing reads any more.
+
+    Generated files stay behind — they are rebuilt. Nothing already in the
+    new folder is overwritten: notes are appended under a heading (the empty
+    template is neither carried nor kept in the way), and when both folders
+    hold a different intent.md, a different hand-edited engine.md or any
+    other file of the same name, both are kept and the clash is reported as a
+    conflict, which also keeps the old folder from being removed.
+    """
+    new.ensure()
+    outcome: dict[str, list[str]] = {"copied": [], "appended": [], "skipped": [], "conflicts": []}
+    for path in sorted(old.path.iterdir()):
+        name = path.name
+        target = new.path / name
+        if name in _GENERATED:
+            continue
+        if name == NOTES:
+            text = path.read_text()
+            current = target.read_text() if target.exists() else ""
+            if _is_template(text) or text.strip() in current:
+                outcome["skipped"].append(name)
+            elif _is_template(current):
+                target.write_text(text)
+                outcome["copied"].append(name)
+            else:
+                with target.open("a") as handle:
+                    handle.write(f"\n\n## Carried over from {old.slug}\n\n{text.strip()}\n")
+                outcome["appended"].append(name)
+            continue
+        if name == ENGINE and old.ENGINE_MARKER in path.read_text():
+            continue  # generated, and regenerated in the new folder
+        if path.is_dir():
+            if target.exists():
+                outcome["conflicts"].append(name)
+            else:
+                shutil.copytree(path, target)
+                outcome["copied"].append(name)
+            continue
+        replaceable = (
+            name == ENGINE and target.exists() and new.ENGINE_MARKER in target.read_text()
+        )
+        if not target.exists() or replaceable:
+            shutil.copy2(path, target)
+            outcome["copied"].append(name)
+        elif target.read_bytes() == path.read_bytes():
+            outcome["skipped"].append(name)
+        else:
+            outcome["conflicts"].append(name)
+    return outcome
+
+
+def remove(folder: DeckFolder) -> None:
+    """Delete a deck folder — only ever a deck folder directly inside decks/."""
+    root = decks_dir().resolve()
+    path = folder.path.resolve()
+    if path.parent != root or not path.is_dir() or not (
+        (path / DECK).exists() or (path / SOURCE).exists()
+    ):
+        raise ValueError(f"refusing to remove {path}: not a deck folder inside {root}")
+    shutil.rmtree(path)
 
 
 def summarise(deck: Deck) -> dict[str, Any]:

@@ -77,6 +77,51 @@ def fetch_raw(deck_id: int, *, use_cache: bool = True) -> dict[str, Any]:
     return get_json(f"{API}/{deck_id}/", use_cache=use_cache)
 
 
+SEARCH_API = "https://archidekt.com/api/decks/v3/"
+MAX_SEARCH_PAGES = 3
+
+
+def search_owner_decks(owner: str, name: str = "") -> list[dict[str, Any]]:
+    """An owner's public decks, narrowed to a name when one is given.
+
+    This is how a deck that moved is found again: Hugo rebuilt Niv-Mizzet
+    under a new link and the old one started answering 404. Archidekt matches
+    `ownerUsername` loosely, so only the exact owner is kept. An exact name
+    match comes first, then the most recently updated. Never cached — the
+    question is asked precisely because something just changed.
+    """
+    params: dict[str, Any] = {"ownerUsername": owner}
+    if name:
+        params["name"] = name
+    data = get_json(SEARCH_API, params=params, use_cache=False)
+    found = list(data.get("results") or [])
+    pages = 1
+    while data.get("next") and pages < MAX_SEARCH_PAGES:
+        data = get_json(data["next"], use_cache=False)
+        found.extend(data.get("results") or [])
+        pages += 1
+
+    wanted = owner.strip().lower()
+    decks = [
+        {
+            "id": int(entry["id"]),
+            "name": entry.get("name") or "",
+            "owner": (entry.get("owner") or {}).get("username", ""),
+            "updated_at": entry.get("updatedAt") or "",
+            "size": entry.get("size"),
+            "url": f"https://archidekt.com/decks/{entry['id']}",
+        }
+        for entry in found
+        if entry.get("id")
+        and str((entry.get("owner") or {}).get("username") or "").strip().lower() == wanted
+    ]
+    decks.sort(key=lambda d: d["updated_at"], reverse=True)
+    exact = name.strip().lower()
+    if exact:
+        decks.sort(key=lambda d: d["name"].strip().lower() != exact)
+    return decks
+
+
 def _colors_from_archidekt(values: list[str] | None) -> list[str]:
     """Archidekt spells colours out ('Green'); Scryfall uses letters ('G')."""
     if not values:

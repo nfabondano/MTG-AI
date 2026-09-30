@@ -12,6 +12,7 @@ from typing import Any
 
 from . import analysis, deckfolder
 from .analysis import report
+from .http import NotFound, SourceError
 from .intent import DeckIntent, apply_assignments
 from .model import Deck
 from .sources import archidekt, edhrec, scryfall, spellbook, tagger
@@ -26,30 +27,181 @@ def _load_intent(folder: deckfolder.DeckFolder) -> DeckIntent | None:
 
 
 def add_deck(reference: str, *, offline: bool = False, refresh: bool = False) -> dict[str, Any]:
-    """Import an Archidekt deck, then analyse it."""
+    """Import an Archidekt deck, then analyse it.
+
+    A deck already tracked under an older name is the same deck: its folder
+    is carried over into the new one rather than left behind as a duplicate.
+    """
     deck_id = archidekt.parse_deck_id(reference)
     payload = archidekt.fetch_raw(deck_id, use_cache=not refresh)
+    return _import_payload(payload, deck_id, offline=offline, previous=deckfolder.find_by_id(deck_id))
 
+
+def _import_payload(
+    payload: dict[str, Any],
+    deck_id: int,
+    *,
+    offline: bool,
+    previous: deckfolder.DeckFolder | None = None,
+) -> dict[str, Any]:
+    """Write, carry over, analyse, then retire the old folder — in that order.
+
+    The carry-over runs before the analysis so that intent.md already speaks
+    for the deck in its new folder. The old folder goes only after
+    everything else succeeded, and never when a file clashed.
+    """
     slug = deckfolder.slugify(payload.get("name") or "", deck_id)
     deck = archidekt.normalise(payload, slug, enrich=not offline)
 
     folder = deckfolder.folder_for(slug)
     folder.write_source(payload)
+    moved: dict[str, Any] | None = None
+    if previous is not None and previous.slug != slug and previous.path.exists():
+        moved = {"from": previous.slug, **deckfolder.carry_over(previous, folder)}
     result = _analyse_and_write(deck, folder, offline=offline)
+    if moved is not None:
+        moved["removed"] = not moved["conflicts"]
+        if moved["removed"]:
+            deckfolder.remove(previous)
 
-    return {
+    out: dict[str, Any] = {
         "slug": slug,
         "path": str(folder.path),
         "deck": deckfolder.summarise(deck),
         "analysis": result,
     }
+    if moved is not None:
+        out["moved"] = moved
+    return out
 
 
-def refresh_deck(reference: str, *, offline: bool = False) -> dict[str, Any]:
-    """Re-pull a tracked deck from Archidekt and re-analyse it."""
+class DeckMoved(NotFound):
+    """A tracked deck's Archidekt link is gone (404).
+
+    Carries what a caller needs to fix it without guessing: the folder, the
+    dead id, and the owner's decks that could be its new home, best first.
+    Nothing has been changed when this is raised.
+    """
+
+    def __init__(self, folder: deckfolder.DeckFolder, deck: Deck, candidates: list[dict[str, Any]]):
+        self.slug = folder.slug
+        self.old_id = deck.archidekt_id
+        self.name = deck.name
+        self.owner = deck.owner
+        self.candidates = candidates
+        self.best = _best_candidate(candidates, deck.name)
+        commands = []
+        if self.best is not None:
+            commands.append(f"mtg deck refresh {self.slug} --follow")
+        commands.append(f"mtg deck relink {self.slug} <new id or url>")
+        self.commands = commands
+
+        lines = [f"Archidekt deck {self.old_id} ({self.name}) is gone — it answers 404."]
+        if candidates:
+            shown = "; ".join(
+                f"{c['id']} “{c['name']}” (updated {c['updated_at'][:10]})" for c in candidates[:5]
+            )
+            lines.append(f"{self.owner}'s decks that could be it: {shown}.")
+        elif self.owner:
+            lines.append(
+                f"{self.owner} has no public deck by that name; "
+                f"`mtg deck find {self.owner}` lists the rest."
+            )
+        lines.append("Fix it with: " + " or ".join(f"`{c}`" for c in commands) + ".")
+        super().__init__(" ".join(lines), status=404, url=f"{archidekt.API}/{self.old_id}/")
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "status": "moved",
+            "slug": self.slug,
+            "old_id": self.old_id,
+            "name": self.name,
+            "owner": self.owner,
+            "candidates": self.candidates,
+            "best": self.best,
+            "next": self.commands,
+            "message": str(self),
+        }
+
+
+def _best_candidate(candidates: list[dict[str, Any]], name: str) -> dict[str, Any] | None:
+    """The one candidate safe to follow without asking: the only deck with
+    exactly the old name, or the only deck the search found at all."""
+    exact = [c for c in candidates if c["name"].strip().lower() == name.strip().lower()]
+    if len(exact) == 1:
+        return exact[0]
+    if not exact and len(candidates) == 1:
+        return candidates[0]
+    return None
+
+
+def _moved_candidates(deck: Deck) -> list[dict[str, Any]]:
+    """The owner's decks that could be this one's new home: by the deck's
+    name, then by its commander's name. The dead id itself is never one."""
+    if not deck.owner:
+        return []
+    queries = [deck.name]
+    if deck.commanders:
+        queries.append(deck.commanders[0].name.split("//")[0].split(",")[0].strip())
+    try:
+        for query in queries:
+            found = [
+                c for c in archidekt.search_owner_decks(deck.owner, query)
+                if c["id"] != deck.archidekt_id
+            ]
+            if found:
+                return found
+    except SourceError:
+        return []
+    return []
+
+
+def refresh_deck(reference: str, *, offline: bool = False, follow: bool = False) -> dict[str, Any]:
+    """Re-pull a tracked deck from Archidekt and re-analyse it.
+
+    A renamed deck moves to its new folder with its notes and intent. A deck
+    whose link is gone raises DeckMoved with the owner's likely new decks —
+    or, with `follow`, relinks to the one candidate that is safe to follow.
+    """
     folder = deckfolder.resolve(reference)
     existing = folder.read_deck()
-    return add_deck(str(existing.archidekt_id), offline=offline, refresh=True)
+    try:
+        payload = archidekt.fetch_raw(existing.archidekt_id, use_cache=False)
+    except NotFound:
+        candidates = _moved_candidates(existing)
+        best = _best_candidate(candidates, existing.name)
+        if not (follow and best is not None):
+            raise DeckMoved(folder, existing, candidates) from None
+        payload = archidekt.fetch_raw(best["id"], use_cache=False)
+        result = _import_payload(payload, best["id"], offline=offline, previous=folder)
+        result["relinked"] = {"from": existing.archidekt_id, "to": best["id"], "followed": True}
+        return result
+    return _import_payload(payload, existing.archidekt_id, offline=offline, previous=folder)
+
+
+def relink_deck(reference: str, new_reference: str, *, offline: bool = False) -> dict[str, Any]:
+    """Point a tracked deck at a new Archidekt link, keeping what is Nicolas's.
+
+    For a deck rebuilt under a new id: notes.md, intent.md and a hand-edited
+    engine.md move to the new folder, and the old folder is removed unless
+    something clashed.
+    """
+    folder = deckfolder.resolve(reference)
+    existing = folder.read_deck()
+    new_id = archidekt.parse_deck_id(new_reference)
+    payload = archidekt.fetch_raw(new_id, use_cache=False)
+    result = _import_payload(payload, new_id, offline=offline, previous=folder)
+    result["relinked"] = {"from": existing.archidekt_id, "to": new_id, "followed": False}
+    return result
+
+
+def find_decks(owner: str, name: str = "") -> list[dict[str, Any]]:
+    """An Archidekt user's public decks, marking the ones already tracked here."""
+    decks = archidekt.search_owner_decks(owner, name)
+    for entry in decks:
+        tracked = deckfolder.find_by_id(entry["id"])
+        entry["tracked_as"] = tracked.slug if tracked else None
+    return decks
 
 
 def analyse_deck(reference: str, *, offline: bool = False) -> dict[str, Any]:

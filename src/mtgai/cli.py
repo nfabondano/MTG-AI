@@ -63,6 +63,7 @@ def deck_add(
     console.print(f"  commander {', '.join(summary['commanders']) or '—'}")
     console.print(f"  cards     {summary['total_cards']} ({summary['lands']} lands)")
     console.print(f"  folder    {result['path']}")
+    _print_moved(result)
     console.print()
     _print_headline(result["analysis"])
 
@@ -70,21 +71,98 @@ def deck_add(
 @deck_app.command("refresh")
 def deck_refresh(
     reference: str = typer.Argument(..., help="Deck slug, id or name fragment."),
+    follow: bool = typer.Option(
+        False, "--follow",
+        help="If the link is gone, follow it to the owner's deck with the same name.",
+    ),
     offline: bool = typer.Option(False, "--offline"),
     json_out: bool = typer.Option(False, "--json"),
 ) -> None:
     """Re-pull a deck from Archidekt and re-analyse it."""
     try:
-        result = service.refresh_deck(reference, offline=offline)
+        result = service.refresh_deck(reference, offline=offline, follow=follow)
+    except service.DeckMoved as exc:
+        if json_out:
+            _emit(exc.to_dict())
+            raise typer.Exit(code=1)
+        _fail(str(exc))
+        return
     except (SourceError, ValueError, FileNotFoundError) as exc:
         _fail(str(exc))
         return
 
     if json_out:
-        _emit({"slug": result["slug"], "deck": result["deck"]})
+        _emit({k: result[k] for k in ("slug", "deck", "moved", "relinked") if k in result})
         return
     console.print(f"[bold green]Refreshed[/bold green] {result['deck']['name']}")
+    _print_moved(result)
     _print_headline(result["analysis"])
+
+
+@deck_app.command("relink")
+def deck_relink(
+    reference: str = typer.Argument(..., help="The tracked deck: slug, id or name fragment."),
+    new_deck: str = typer.Argument(..., help="Its new Archidekt URL or id."),
+    offline: bool = typer.Option(False, "--offline"),
+    json_out: bool = typer.Option(False, "--json"),
+) -> None:
+    """Point a tracked deck at a new Archidekt link, keeping notes and intent."""
+    try:
+        result = service.relink_deck(reference, new_deck, offline=offline)
+    except (SourceError, ValueError, FileNotFoundError) as exc:
+        _fail(str(exc))
+        return
+    if json_out:
+        _emit({k: result[k] for k in ("slug", "deck", "moved", "relinked") if k in result})
+        return
+    console.print(
+        f"[bold green]Relinked[/bold green] {result['deck']['name']} → {result['deck']['url']}"
+    )
+    _print_moved(result)
+    _print_headline(result["analysis"])
+
+
+@deck_app.command("find")
+def deck_find(
+    owner: str = typer.Argument(..., help="Archidekt username."),
+    name: str = typer.Argument("", help="Deck name, or part of it."),
+    json_out: bool = typer.Option(False, "--json"),
+) -> None:
+    """List an Archidekt user's public decks — how a moved deck is found again."""
+    try:
+        decks = service.find_decks(owner, name)
+    except (SourceError, ValueError) as exc:
+        _fail(str(exc))
+        return
+    if json_out:
+        _emit(decks)
+        return
+    if not decks:
+        console.print(f"No public decks for {owner}" + (f" named {name!r}." if name else "."))
+        return
+    table = Table("id", "name", "updated", "cards", "tracked as")
+    for entry in decks:
+        table.add_row(
+            str(entry["id"]), entry["name"], entry["updated_at"][:10],
+            str(entry.get("size") or ""), entry.get("tracked_as") or "",
+        )
+    console.print(table)
+
+
+def _print_moved(result: dict[str, Any]) -> None:
+    moved = result.get("moved")
+    if not moved:
+        return
+    carried = moved["copied"] + moved["appended"]
+    console.print(
+        f"  moved from {moved['from']}"
+        + (f" — carried {', '.join(carried)}" if carried else "")
+    )
+    if moved["conflicts"]:
+        console.print(
+            f"  [yellow]kept the old folder:[/yellow] {', '.join(moved['conflicts'])} "
+            "differ between the two — merge by hand, then delete the old one"
+        )
 
 
 @deck_app.command("analyze")
