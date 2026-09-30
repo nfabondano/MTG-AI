@@ -41,6 +41,23 @@ COMBO_TAG_NAMES = {
 }
 
 
+def target_for(deck: Deck, intent=None, explicit: int | None = None) -> tuple[int | None, str]:
+    """The bracket the deck is meant to sit at, and who said so.
+
+    An explicit request wins, then what Nicolas declared in intent.md, then the
+    bracket set on Archidekt. Suggestions and trimming respect it by default,
+    so re-running an analysis no longer forgets a cap `suggest` was given.
+    """
+    if explicit:
+        return int(explicit), "requested"
+    declared = getattr(intent, "power_bracket", None)
+    if declared:
+        return int(declared), "intent.md"
+    if deck.archidekt_bracket:
+        return int(deck.archidekt_bracket), "Archidekt"
+    return None, ""
+
+
 def combo_raises_bracket(combo: dict) -> bool:
     return (combo.get("bracket_tag") or "") not in CASUAL_COMBO_TAGS
 

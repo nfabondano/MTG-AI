@@ -241,11 +241,15 @@ def is_tribe_member(card: CardEntry, tribe: str | None) -> bool:
 
 
 def clusters(deck: Deck) -> dict[str, int]:
-    """Functional categories the deck invests in, with their card counts."""
+    """Functional categories the deck invests in, with their card counts.
+
+    Ordered by size, then name, so a tie never depends on dictionary order —
+    the top clusters name the archetype.
+    """
     profile = tagmod.deck_profile(deck)
     return {
         category: count
-        for category, count in profile.most_common()
+        for category, count in sorted(profile.items(), key=lambda kv: (-kv[1], kv[0]))
         if count >= CLUSTER_THRESHOLD
     }
 
@@ -298,6 +302,17 @@ def owner_categories(card: CardEntry) -> set[str]:
     }
 
 
+def membership(card: CardEntry) -> set[str]:
+    """Every category a card belongs to: what its tags and type say it does,
+    plus what the owner filed it under.
+
+    Used for participation and for deciding what a card is *for*. Counts stay
+    tag-based on purpose: owner categories are coarse, and folding them into
+    counts would inflate every support cluster and manufacture oversupply.
+    """
+    return tagmod.card_categories(card) | owner_categories(card)
+
+
 def tag_participation(deck: Deck, tribe: str | None = None) -> None:
     """Record on each card which of the deck's clusters it belongs to.
 
@@ -313,7 +328,7 @@ def tag_participation(deck: Deck, tribe: str | None = None) -> None:
         if card.is_land:
             card.engine_participation = []
             continue
-        member = tagmod.card_categories(card) | owner_categories(card)
+        member = membership(card)
         if "typal" in active and is_tribe_member(card, tribe):
             member.add("typal")
         card.engine_participation = sorted(member & active)
@@ -633,6 +648,11 @@ def analyse(deck: Deck, intent=None) -> dict:
         "tribe": tribe,
         "tribe_census": tribe_census(deck, tribe),
         "clusters": found,
+        # Every category's count, not only the clusters: role reconciliation
+        # needs "2 sweepers" as much as "30 death triggers".
+        "profile": dict(
+            sorted(tagmod.deck_profile(deck).items(), key=lambda kv: (-kv[1], kv[0]))
+        ),
         "core": core,
         "archetype": archetype,
         "castability": strain,

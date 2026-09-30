@@ -62,12 +62,21 @@ def analyse_deck(reference: str, *, offline: bool = False) -> dict[str, Any]:
 def _analyse_and_write(
     deck: Deck, folder: deckfolder.DeckFolder, *, offline: bool
 ) -> dict[str, Any]:
-    result = analysis.analyse(deck, offline=offline, intent=_load_intent(folder))
+    intent = _load_intent(folder)
+    result = analysis.analyse(deck, offline=offline, intent=intent)
     # Roles are attached during analysis, so the deck is written afterwards to
     # capture them — that keeps deck.json self-describing for later sessions.
     folder.write_deck(deck)
     folder.write_analysis(report.render_analysis(result))
-    folder.write_suggestions(report.render_suggestions(deck, result))
+    # The same defaults `suggest` applies: re-analysing must not drop the
+    # declared bracket cap or budget, and offline must stay offline.
+    max_bracket, _ = analysis.bracket.target_for(deck, intent)
+    budget = intent.budget_per_card if intent is not None else None
+    folder.write_suggestions(
+        report.render_suggestions(
+            deck, result, budget=budget, max_bracket=max_bracket, offline=offline
+        )
+    )
     folder.write_engine(report.render_engine(result))
     return result
 
@@ -93,11 +102,14 @@ def suggest(
     result = analysis.analyse(deck, offline=offline, intent=intent)
     if budget is None and intent is not None and intent.budget_per_card is not None:
         budget = intent.budget_per_card
+    if max_bracket is None:
+        max_bracket, _ = analysis.bracket.target_for(deck, intent)
     built = analysis.suggest.build(
         deck, result, budget=budget, loose=loose, offline=offline
     )
     markdown = report.render_suggestions(
-        deck, result, built, budget=budget, loose=loose, max_bracket=max_bracket
+        deck, result, built, budget=budget, loose=loose, max_bracket=max_bracket,
+        offline=offline,
     )
     folder.write_suggestions(markdown)
 
