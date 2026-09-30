@@ -123,6 +123,7 @@
     "power boost to all"
    ],
    "engine_participation": [
+    "pump",
     "typal"
    ],
    "set_code": "dsc",
@@ -539,6 +540,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "typal"
    ],
    "set_code": "clu",
@@ -841,7 +843,8 @@
     "removal-vehicle"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "msc",
    "released_at": "2026-06-26",
@@ -942,6 +945,7 @@
     "repeatable token generator"
    ],
    "engine_participation": [
+    "counters",
     "tokens",
     "typal"
    ],
@@ -1315,6 +1319,7 @@
     "power boost to all"
    ],
    "engine_participation": [
+    "pump",
     "typal"
    ],
    "set_code": "vow",
@@ -1489,6 +1494,7 @@
     "power boost to all"
    ],
    "engine_participation": [
+    "pump",
     "typal"
    ],
    "set_code": "tdm",
@@ -1761,6 +1767,7 @@
     "green effect"
    ],
    "engine_participation": [
+    "counters",
     "typal"
    ],
    "set_code": "clu",
@@ -1831,7 +1838,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "pump"
    ],
    "set_code": "jmp",
    "released_at": "2020-07-17",
@@ -2459,7 +2467,8 @@
    ],
    "engine_participation": [
     "counters",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "fdn",
    "released_at": "2024-11-15",
@@ -2795,6 +2804,7 @@
     "protection"
    ],
    "engine_participation": [
+    "counters",
     "draw",
     "protection"
    ],
@@ -3030,7 +3040,8 @@
    ],
    "engine_participation": [
     "draw",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "c21",
    "released_at": "2021-04-23",
@@ -3105,7 +3116,8 @@
    ],
    "engine_participation": [
     "draw",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "iko",
    "released_at": "2020-04-24",
@@ -3162,7 +3174,8 @@
     "sweeper"
    ],
    "engine_participation": [
-    "removal"
+    "removal",
+    "typal"
    ],
    "set_code": "dsc",
    "released_at": "2024-09-27",
@@ -4702,6 +4715,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "pump",
     "typal"
    ],
    "set_code": "ecl",
@@ -5289,6 +5303,7 @@
    ],
    "engine_participation": [
     "draw",
+    "pump",
     "typal"
    ],
    "set_code": "ecc",

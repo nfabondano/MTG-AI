@@ -21,13 +21,14 @@ death-trigger, drain, draw, sacrifice, tokens
 
 - **draw** — 17 cards *(commander wants this)*
 - **death-trigger** — 15 cards *(commander wants this)*
-- **tokens** — 12 cards *(commander wants this)*
+- **tokens** — 10 cards *(commander wants this)*
 - **sacrifice** — 7 cards *(commander wants this)*
 - **drain** — 6 cards *(commander wants this)*
 - **copy** — 18 cards
 - **ramp** — 16 cards
 - **removal** — 11 cards
 - **protection** — 10 cards
+- **counters** — 5 cards
 
 ## How it ends games
 
@@ -43,16 +44,6 @@ _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that s
 
 - **Developing (ramp, draw)** — 33 cards (ramp 16 + draw 17)
 - **Breaking parity (removal, sweepers)** — 14 cards (removal 11 + sweeper 3)
-- **Winning (closers, going wide)** — 12 cards (tokens 12)
+- **Winning (closers, going wide)** — 10 cards (tokens 10)
 - **Behind (protection, recursion)** — 14 cards (protection 10 + recursion 4)
-
-## Outside every cluster
-
-Not automatically bad — the tags may simply not name what these do.
-
-- Animate Dead
-- Conjurer's Closet
-- Reanimate
-- Alexios, Deimos of Kosmos
-- Golden Argosy
 

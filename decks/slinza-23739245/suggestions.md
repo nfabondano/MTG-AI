@@ -2,7 +2,24 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
-Keeping the deck at bracket 2 or below.
+## To reach 100
+
+103 cards: cut 3.
+
+1. **Radagast of Rhosgobel** — 14 cards do ramp work and a deck wants about 12; 11 of them feed nothing in the core (removal, counters, typal)  
+   _(oversupplied: ramp; played in 11% of decks with this commander — a weak signal)_
+2. **Three Visits** — 13 cards do ramp work and a deck wants about 12; 10 of them feed nothing in the core (removal, counters, typal)  
+   _(oversupplied: ramp; played in 46% of decks with this commander — a weak signal)_
+3. **Shadow in the Warp** — support only, and ramp has room to spare: 12 cards do ramp work, against a minimum of 8  
+   _(spare ramp; the least played of the 2 alike with this commander (11%) — a weak signal)_
+
+**Extra candidates** — if you would rather keep one of the above:
+
+- **Emerald Medallion** — support only, and ramp has room to spare: 12 cards do ramp work, against a minimum of 8
+- **Deflecting Swat** — support only, and protection has room to spare: 5 cards do protection work, against a minimum of 2
+- **Bolt Bend** — support only, and protection has room to spare: 5 cards do protection work, against a minimum of 2
+
+After the cuts: 100 cards · bracket 1 (Exhibition).
 
 ## Fix the mana first
 
@@ -15,48 +32,33 @@ These cards strain the mana base, but they are part of what the deck is built ar
 
 ### Strengthens the plan
 
-- **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
-- **Armored Scrapgorger** ($0.30) — synergy +0.45 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Goreclaw, Terror of Qal Sisma** ($6.39) — synergy +0.42 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Fangren Firstborn** ($2.26) — synergy +0.40 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Aether Charge** ($0.22) — synergy +0.39 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Ravenous Baloth** ($0.28) — synergy +0.38 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Axebane Ferox** ($0.24) — synergy +0.32 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-- **Beast Whisperer** ($8.74) — synergy +0.30 measured vs 1114 Beasts builds of Slinza, the Spiked Stampede
-
-### Fixes a weakness
-
-- **Vandalblast** ($1.41) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chandra's Ignition** ($8.76) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chain Reaction** ($0.31) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Repercussion** ($15.17) — completes a combo with Blasphemous Act → Near-infinite damage to all players
+- **Staff of Domination** — completes a combo with Selvala, Heart of the Wilds → Infinite card draw, Infinite colored mana — **bracket 3**: completes a two-card combo
+- **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
+- **Aggravated Assault** ($36.08) — completes a combo with Selvala, Heart of the Wilds → Infinite colored mana, Infinite combat phases — **bracket 3**: completes a two-card combo
+- **Umbral Mantle** ($12.15) — completes a combo with Selvala, Heart of the Wilds → Infinite colored mana, Infinitely large creature until end of turn — **bracket 3**: completes a two-card combo
+- **Armored Scrapgorger** ($0.33) — synergy +0.45 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Goreclaw, Terror of Qal Sisma** ($5.30) — synergy +0.42 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Fangren Firstborn** ($2.19) — synergy +0.40 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Aether Charge** ($0.21) — synergy +0.39 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Ravenous Baloth** ($0.29) — synergy +0.38 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Axebane Ferox** ($0.17) — synergy +0.32 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Beast Whisperer** ($9.03) — synergy +0.30 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Woodland Bellower** ($4.78) — synergy +0.28 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Arboreal Grazer** ($0.29) — synergy +0.28 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
+- **Giant Cindermaw** ($0.13) — synergy +0.27 measured vs 1117 Beasts builds of Slinza, the Spiked Stampede
 
 _5 popularity-only ideas hidden — `--loose` shows them._
 
-## Would raise the bracket
-
-These came up as adds but would take the deck past bracket 2, so they are listed rather than recommended.
-
-- **Staff of Domination** — completes a combo with Selvala, Heart of the Wilds → Infinite card draw, Infinite colored mana — **bracket 3**: completes a two-card combo
-- **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
-- **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-
 ## Consider cutting
 
-- **Rishkar's Expertise** — 23 cards do draw work; a deck wants about 12  
-  _(oversupplied: draw)_
-- **Radagast of Rhosgobel** — 14 cards do ramp work; a deck wants about 12  
-  _(oversupplied: ramp)_
-- **The Great Henge** — 9 mana in a deck already carrying 26 spells at 5+  
+- **Radagast of Rhosgobel** — 14 cards do ramp work, 11 of them feeding nothing in the core; a deck wants about 12  
+  _(oversupplied: ramp; played in 11% of decks with this commander — a weak signal)_
+  - or instead: Selvala, Heart of the Wilds, Three Visits, Nature's Lore
+- **Rishkar's Expertise** — 6 mana in a deck already carrying 26 spells at 5+  
   _(curve)_
-- **Blasphemous Act** — 9 mana in a deck already carrying 26 spells at 5+  
+- **Caller of the Pack** — 7 mana in a deck already carrying 26 spells at 5+  
   _(curve)_
-
-## Paired swaps
-
-_Each pair does the same job — nothing is matched by position._
-
-- Blasphemous Act → Vandalblast (sweeper)
 
 ---
 

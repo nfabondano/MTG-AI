@@ -61,7 +61,9 @@
     "triggered ability",
     "lifegain"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "fdn",
    "released_at": "2024-11-15",
    "rarity": "mythic",
@@ -122,7 +124,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "dmu",
    "released_at": "2022-09-09",
@@ -176,6 +179,7 @@
     "lifegain"
    ],
    "engine_participation": [
+    "lifegain",
     "ramp"
    ],
    "set_code": "fin",
@@ -235,7 +239,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "rvr",
    "released_at": "2024-01-12",
@@ -297,9 +302,7 @@
     "tax"
    ],
    "engine_participation": [
-    "draw",
-    "ramp",
-    "tokens"
+    "ramp"
    ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
@@ -486,7 +489,9 @@
     "type errata",
     "type errata addition"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "mm3",
    "released_at": "2017-03-17",
    "rarity": "common",
@@ -533,7 +538,9 @@
     "tax",
     "thingfall"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "roe",
    "released_at": "2010-04-23",
    "rarity": "common",
@@ -583,7 +590,9 @@
     "tax",
     "thingfall"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "fdn",
    "released_at": "2024-11-15",
    "rarity": "rare",
@@ -638,7 +647,8 @@
     "type change"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "dsk",
    "released_at": "2024-09-27",
@@ -689,7 +699,8 @@
     "lifegain matters"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "m21",
    "released_at": "2020-07-03",
@@ -851,7 +862,9 @@
     "life loss matters",
     "sacrifice self"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "tsr",
    "released_at": "2021-03-19",
    "rarity": "common",
@@ -1058,6 +1071,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "lifegain",
     "removal"
    ],
    "set_code": "kld",
@@ -1113,7 +1127,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "2x2",
    "released_at": "2022-07-08",
@@ -1170,7 +1185,7 @@
    ],
    "engine_participation": [
     "drain",
-    "draw"
+    "lifegain"
    ],
    "set_code": "dmu",
    "released_at": "2022-09-09",
@@ -1221,8 +1236,7 @@
     "type errata addition"
    ],
    "engine_participation": [
-    "drain",
-    "draw"
+    "drain"
    ],
    "set_code": "mkc",
    "released_at": "2024-02-09",
@@ -1273,7 +1287,9 @@
     "evasion",
     "lifegain"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "ima",
    "released_at": "2017-11-17",
    "rarity": "rare",
@@ -1400,8 +1416,7 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "ramp",
-    "tokens"
+    "ramp"
    ],
    "set_code": "ltr",
    "released_at": "2023-06-23",
@@ -1465,7 +1480,8 @@
     "repeatable draw"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "lifegain"
    ],
    "set_code": "msc",
    "released_at": "2026-06-26",
@@ -1528,7 +1544,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "blb",
    "released_at": "2024-08-02",
@@ -1629,7 +1646,8 @@
     "multiplayer"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "fdn",
    "released_at": "2024-11-15",
@@ -1675,7 +1693,8 @@
     "lifegain matters"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "c21",
    "released_at": "2021-04-23",
@@ -1728,7 +1747,8 @@
     "multiplayer"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "dsc",
    "released_at": "2024-09-27",
@@ -1786,6 +1806,7 @@
     "thingfall"
    ],
    "engine_participation": [
+    "lifegain",
     "protection"
    ],
    "set_code": "fra",
@@ -1846,6 +1867,7 @@
    ],
    "engine_participation": [
     "drain",
+    "lifegain",
     "ramp"
    ],
    "set_code": "rvr",
@@ -1892,7 +1914,8 @@
     "lifegain matters"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "fdn",
    "released_at": "2024-11-15",
@@ -1937,7 +1960,9 @@
     "repeatable lifegain",
     "lifegain"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "tdc",
    "released_at": "2025-04-11",
    "rarity": "rare",
@@ -2039,7 +2064,9 @@
     "card names",
     "tuck"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "akh",
    "released_at": "2017-04-28",
    "rarity": "rare",
@@ -2090,7 +2117,8 @@
     "multiplayer"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "j25",
    "released_at": "2024-11-15",
@@ -2245,8 +2273,8 @@
    ],
    "engine_participation": [
     "drain",
-    "removal",
-    "tokens"
+    "lifegain",
+    "removal"
    ],
    "set_code": "mh3",
    "released_at": "2024-06-14",
@@ -2359,6 +2387,7 @@
     "refund"
    ],
    "engine_participation": [
+    "lifegain",
     "ramp"
    ],
    "set_code": "c21",
@@ -2425,6 +2454,7 @@
     "remove counters-you"
    ],
    "engine_participation": [
+    "lifegain",
     "removal"
    ],
    "set_code": "rvr",
@@ -2495,7 +2525,8 @@
     "unexile"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "lifegain"
    ],
    "set_code": "eoe",
    "released_at": "2025-08-01",
@@ -2546,7 +2577,9 @@
     "recursion-self",
     "restock"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "10e",
    "released_at": "2007-07-13",
    "rarity": "rare",
@@ -2846,7 +2879,6 @@
     "protection"
    ],
    "engine_participation": [
-    "draw",
     "protection"
    ],
    "set_code": "blb",
@@ -2963,7 +2995,8 @@
    ],
    "engine_participation": [
     "drain",
-    "draw"
+    "draw",
+    "lifegain"
    ],
    "set_code": "frc",
    "released_at": "2026-10-02",
@@ -3076,6 +3109,7 @@
     "removal-enchantment"
    ],
    "engine_participation": [
+    "lifegain",
     "removal"
    ],
    "set_code": "otc",
@@ -3272,7 +3306,8 @@
     "card names"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "lifegain"
    ],
    "set_code": "c21",
    "released_at": "2021-04-23",
@@ -3309,7 +3344,9 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "combo_flagged": false,
-   "roles": [],
+   "roles": [
+    "wipe"
+   ],
    "tags": [
     "additional cost",
     "life payment",
@@ -3444,7 +3481,8 @@
     "multiplayer"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "plst",
    "released_at": "2020-09-26",
@@ -3694,7 +3732,9 @@
     "triggered ability",
     "lifegain"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
    "rarity": "rare",
@@ -3792,7 +3832,7 @@
     "lifegain"
    ],
    "engine_participation": [
-    "draw"
+    "lifegain"
    ],
    "set_code": "ons",
    "released_at": "2002-10-07",
@@ -3904,7 +3944,9 @@
     "recursion",
     "recursion-creature"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "afr",
    "released_at": "2021-07-23",
    "rarity": "uncommon",
@@ -4072,6 +4114,7 @@
     "theft"
    ],
    "engine_participation": [
+    "lifegain",
     "ramp"
    ],
    "set_code": "fin",

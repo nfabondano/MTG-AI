@@ -87,10 +87,11 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
+    "lifegain",
     "ramp",
     "recursion",
-    "sacrifice",
-    "typal"
+    "sacrifice"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -147,9 +148,10 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
-    "tokens",
-    "typal"
+    "lifegain",
+    "tokens"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -208,10 +210,10 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
     "protection",
-    "sacrifice",
-    "typal"
+    "sacrifice"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -265,7 +267,8 @@
     "toughness boost to all"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "pump"
    ],
    "set_code": "moc",
    "released_at": "2023-04-21",
@@ -323,6 +326,7 @@
    ],
    "engine_participation": [
     "death-trigger",
+    "lifegain",
     "tokens"
    ],
    "set_code": "cmm",
@@ -552,7 +556,7 @@
    "engine_participation": [
     "death-trigger",
     "drain",
-    "typal"
+    "lifegain"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -603,7 +607,8 @@
    ],
    "engine_participation": [
     "death-trigger",
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "clb",
    "released_at": "2022-06-10",
@@ -663,6 +668,7 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
+    "counters",
     "ramp"
    ],
    "set_code": "brc",
@@ -722,9 +728,9 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
-    "draw",
-    "typal"
+    "draw"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -785,8 +791,7 @@
    ],
    "engine_participation": [
     "death-trigger",
-    "ramp",
-    "tokens"
+    "ramp"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -1169,7 +1174,8 @@
     "toughness boost to all"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "pump"
    ],
    "set_code": "jmp",
    "released_at": "2020-07-17",
@@ -1231,9 +1237,7 @@
     "tax"
    ],
    "engine_participation": [
-    "draw",
-    "ramp",
-    "tokens"
+    "ramp"
    ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
@@ -1558,7 +1562,8 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "lifegain"
    ],
    "set_code": "mat",
    "released_at": "2023-05-12",
@@ -1936,6 +1941,7 @@
     "sacrifice outlet"
    ],
    "engine_participation": [
+    "counters",
     "sacrifice"
    ],
    "set_code": "mh1",
@@ -2021,8 +2027,7 @@
     "draw",
     "protection",
     "removal",
-    "sacrifice",
-    "typal"
+    "sacrifice"
    ],
    "set_code": "mh1",
    "released_at": "2019-06-14",
@@ -2144,8 +2149,7 @@
     "top deck manipulation"
    ],
    "engine_participation": [
-    "sacrifice",
-    "typal"
+    "sacrifice"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -2208,7 +2212,8 @@
    ],
    "engine_participation": [
     "death-trigger",
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "dmu",
    "released_at": "2022-09-09",
@@ -2262,7 +2267,7 @@
    "engine_participation": [
     "death-trigger",
     "drain",
-    "typal"
+    "lifegain"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -2307,6 +2312,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger"
    ],
    "set_code": "iko",
@@ -2467,8 +2473,7 @@
    ],
    "engine_participation": [
     "counters",
-    "death-trigger",
-    "typal"
+    "death-trigger"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -2635,6 +2640,7 @@
    ],
    "engine_participation": [
     "counters",
+    "pump",
     "tokens"
    ],
    "set_code": "cmm",
@@ -2686,6 +2692,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger"
    ],
    "set_code": "ncc",
@@ -3495,7 +3502,9 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "death-trigger"
+    "counters",
+    "death-trigger",
+    "lifegain"
    ],
    "set_code": "dsk",
    "released_at": "2024-09-27",
@@ -3677,6 +3686,7 @@
    ],
    "engine_participation": [
     "counters",
+    "pump",
     "removal",
     "tokens"
    ],
@@ -3740,6 +3750,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
     "draw"
    ],
@@ -4199,7 +4210,8 @@
     "thingfall"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "pump"
    ],
    "set_code": "tmt",
    "released_at": "2026-03-06",
@@ -4252,6 +4264,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger"
    ],
    "set_code": "tmt",
@@ -4318,6 +4331,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
     "recursion",
     "sacrifice"
@@ -4425,8 +4439,8 @@
     "sacrifice outlet"
    ],
    "engine_participation": [
-    "sacrifice",
-    "typal"
+    "counters",
+    "sacrifice"
    ],
    "set_code": "lci",
    "released_at": "2023-11-17",
@@ -4501,7 +4515,9 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
+    "lifegain",
     "removal"
    ],
    "set_code": "eoe",
@@ -4561,8 +4577,9 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
-    "typal"
+    "lifegain"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -4780,6 +4797,7 @@
     "death-trigger",
     "drain",
     "draw",
+    "lifegain",
     "sacrifice"
    ],
    "set_code": "fin",
@@ -4836,7 +4854,8 @@
     "toughness boost to all"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "pump"
    ],
    "set_code": "fra",
    "released_at": "2026-10-02",
@@ -4900,7 +4919,9 @@
    ],
    "engine_participation": [
     "counters",
-    "draw"
+    "draw",
+    "lifegain",
+    "pump"
    ],
    "set_code": "hob",
    "released_at": "2026-08-14",
@@ -4957,8 +4978,8 @@
     "repeatable draw"
    ],
    "engine_participation": [
-    "draw",
-    "typal"
+    "counters",
+    "draw"
    ],
    "set_code": "mom",
    "released_at": "2023-04-21",
@@ -5010,7 +5031,9 @@
     "cycle",
     "dnd"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "counters"
+   ],
    "set_code": "clb",
    "released_at": "2022-06-10",
    "rarity": "rare",
@@ -5127,6 +5150,7 @@
     "fog"
    ],
    "engine_participation": [
+    "counters",
     "protection"
    ],
    "set_code": "mkc",
@@ -5324,8 +5348,7 @@
    ],
    "engine_participation": [
     "ramp",
-    "sacrifice",
-    "tokens"
+    "sacrifice"
    ],
    "set_code": "mh3",
    "released_at": "2024-06-14",
@@ -5571,6 +5594,7 @@
    ],
    "engine_participation": [
     "counters",
+    "pump",
     "removal"
    ],
    "set_code": "otj",
@@ -5630,7 +5654,9 @@
     "toughness boost to all"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "lifegain",
+    "pump"
    ],
    "set_code": "2xm",
    "released_at": "2020-08-07",
@@ -5868,7 +5894,8 @@
     "type change"
    ],
    "engine_participation": [
-    "counters"
+    "counters",
+    "lifegain"
    ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
@@ -5934,8 +5961,7 @@
    "engine_participation": [
     "counters",
     "death-trigger",
-    "tokens",
-    "typal"
+    "tokens"
    ],
    "set_code": "c21",
    "released_at": "2021-04-23",

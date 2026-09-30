@@ -1580,6 +1580,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
     "protection"
    ],
@@ -2881,8 +2882,7 @@
    ],
    "engine_participation": [
     "death-trigger",
-    "ramp",
-    "tokens"
+    "ramp"
    ],
    "set_code": "lcc",
    "released_at": "2023-11-17",
@@ -2955,8 +2955,7 @@
    "engine_participation": [
     "draw",
     "ramp",
-    "sacrifice",
-    "tokens"
+    "sacrifice"
    ],
    "set_code": "snc",
    "released_at": "2022-04-29",
@@ -4030,7 +4029,9 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "combo_flagged": false,
-   "roles": [],
+   "roles": [
+    "wipe"
+   ],
    "tags": [
     "additional cost",
     "life payment",
@@ -4271,6 +4272,7 @@
     "ward"
    ],
    "engine_participation": [
+    "counters",
     "draw",
     "protection"
    ],
@@ -4383,7 +4385,9 @@
     "drawback",
     "multiplayer"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "counters"
+   ],
    "set_code": "acr",
    "released_at": "2024-07-05",
    "rarity": "uncommon",
@@ -4788,6 +4792,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger"
    ],
    "set_code": "otj",
@@ -5073,6 +5078,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
     "protection"
    ],

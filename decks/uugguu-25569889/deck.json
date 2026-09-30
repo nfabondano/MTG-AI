@@ -131,6 +131,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "counters",
     "tokens",
     "typal"
    ],
@@ -425,7 +426,6 @@
    ],
    "engine_participation": [
     "sacrifice",
-    "tutor",
     "typal"
    ],
    "set_code": "rna",
@@ -482,6 +482,7 @@
    ],
    "engine_participation": [
     "copy",
+    "counters",
     "tokens",
     "typal"
    ],
@@ -1071,6 +1072,7 @@
    ],
    "engine_participation": [
     "copy",
+    "counters",
     "draw"
    ],
    "set_code": "mh3",
@@ -1261,8 +1263,7 @@
    ],
    "engine_participation": [
     "ramp",
-    "sacrifice",
-    "tokens"
+    "sacrifice"
    ],
    "set_code": "mh3",
    "released_at": "2024-06-14",
@@ -1542,6 +1543,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "counters",
     "draw",
     "protection",
     "removal",
@@ -1901,6 +1903,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
     "protection"
    ],
@@ -2652,8 +2655,7 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "ramp"
    ],
    "set_code": "msc",
    "released_at": "2026-06-26",
@@ -2707,8 +2709,7 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "ramp"
    ],
    "set_code": "msc",
    "released_at": "2026-06-26",
@@ -2810,9 +2811,7 @@
     "tutor",
     "tutor-to"
    ],
-   "engine_participation": [
-    "tutor"
-   ],
+   "engine_participation": [],
    "set_code": "cmm",
    "released_at": "2023-08-04",
    "rarity": "mythic",
@@ -2973,8 +2972,7 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "ramp"
    ],
    "set_code": "msc",
    "released_at": "2026-06-26",
@@ -3088,8 +3086,7 @@
    ],
    "engine_participation": [
     "ramp",
-    "sacrifice",
-    "tutor"
+    "sacrifice"
    ],
    "set_code": "mh3",
    "released_at": "2024-06-14",
@@ -3311,8 +3308,7 @@
     "tutor-to"
    ],
    "engine_participation": [
-    "sacrifice",
-    "tutor"
+    "sacrifice"
    ],
    "set_code": "bro",
    "released_at": "2022-11-18",
@@ -3407,7 +3403,9 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "combo_flagged": false,
-   "roles": [],
+   "roles": [
+    "wipe"
+   ],
    "tags": [
     "alliteration",
     "blood artist ability",
@@ -3768,7 +3766,8 @@
     "type change"
    ],
    "engine_participation": [
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "dft",
    "released_at": "2025-02-14",
@@ -3830,8 +3829,7 @@
     "tutor-to"
    ],
    "engine_participation": [
-    "sacrifice",
-    "tutor"
+    "sacrifice"
    ],
    "set_code": "nph",
    "released_at": "2011-05-13",
@@ -3905,6 +3903,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "counters",
     "ramp",
     "tokens",
     "typal"

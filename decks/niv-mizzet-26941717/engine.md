@@ -10,24 +10,24 @@ Wins by: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-P
 
 ## Archetype
 
-lifegain combo (inferred: drain + draw)
+lifegain combo (inferred: lifegain + drain + draw)
 
 ## Niv-Mizzet, Ghost Counsel's role
 
 **payoff** — so the 99 must supply:
 
-- fuel: creatures the trigger counts
-- triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms
-- conversion: drain, draw and token payoffs that turn deaths into wins
+- fuel: repeatable lifegain — many small triggers beat one big one
+- conversion: payoffs that turn life gained into cards, damage or counters
 
 ## What Niv-Mizzet, Ghost Counsel asks for
 
-drain, draw, sacrifice, tokens
+drain, draw, lifegain, sacrifice, tokens
 
 ## Clusters
 
+- **lifegain** — 38 cards *(commander wants this)*
 - **drain** — 18 cards *(commander wants this)*
-- **draw** — 12 cards *(commander wants this)*
+- **draw** — 6 cards *(commander wants this)*
 - **ramp** — 13 cards
 - **removal** — 11 cards
 - **protection** — 7 cards
@@ -51,6 +51,9 @@ Declared: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-
 - Vito, Thorn of the Dusk Rose + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent
 - Beacon of Immortality + Sanguine Bond → Target opponent loses the game
 - Enduring Tenacity + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent
+- Approach of the Second Sun + Demonic Tutor → Win the game
+- Approach of the Second Sun + Vampiric Tutor → Win the game
+- Niv-Mizzet, Ghost Counsel + Sheoldred, the Apocalypse → Infinite card draw, Infinite draw triggers
 - Doctor Doom, Unrivaled — says so in its text
 - Exsanguinate — your own category marks it the finisher
 - Approach of the Second Sun — says so in its text
@@ -60,25 +63,8 @@ Declared: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-
 
 _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
 
-- **Developing (ramp, draw)** — 25 cards (ramp 13 + draw 12)
+- **Developing (ramp, draw)** — 19 cards (ramp 13 + draw 6)
 - **Breaking parity (removal, sweepers)** — 12 cards (removal 11 + sweeper 1)
-- **Winning (closers, going wide)** — 6 cards (wincon 2 + tokens 4)
+- **Winning (closers, going wide)** — 3 cards (wincon 2 + tokens 1)
 - **Behind (protection, recursion)** — 11 cards (protection 7 + recursion 4)
-
-## Outside every cluster
-
-Not automatically bad — the tags may simply not name what these do.
-
-- Bloodthirsty Conqueror
-- Soul Warden
-- Soul's Attendant
-- Authority of the Consuls
-- Children of Korlis
-- Demonic Tutor
-- Vampiric Tutor
-- Serra Ascendant
-- Rhox Faithmender
-- Approach of the Second Sun
-- Beacon of Immortality
-- Agadeem's Awakening // Agadeem, the Undercrypt
 

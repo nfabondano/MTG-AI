@@ -13,30 +13,30 @@ These cards strain the mana base, but they are part of what the deck is built ar
 
 ### Strengthens the plan
 
-- **Hullbreaker Horror** ($6.44) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
-- **Tidespout Tyrant** ($2.44) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
-- **Stunt Double** ($4.52) — synergy +0.53 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Naga Fleshcrafter** ($0.38) — synergy +0.50 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Clone** ($0.61) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Mitotic Slime** ($0.36) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Flesh Duplicate** ($9.21) — synergy +0.45 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Gigantoplasm** ($0.72) — synergy +0.40 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Mirrorhall Mimic** ($2.46) — synergy +0.36 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Vizier of Many Faces** ($0.28) — synergy +0.34 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Visage Bandit** ($0.14) — synergy +0.32 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Arcane Adaptation** ($3.28) — synergy +0.31 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Saw in Half** ($5.91) — synergy +0.30 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Ravenous Slime** ($2.32) — synergy +0.29 measured vs 166 Clones builds of Uugguu, the Omniplasm
-- **Waxen Shapethief** ($0.39) — synergy +0.29 measured vs 166 Clones builds of Uugguu, the Omniplasm
+- **Gravecrawler** ($1.41) — completes a combo with Phyrexian Altar → Infinite death triggers, Infinite creature ETB
+- **Tidespout Tyrant** ($2.52) — completes a combo with Sol Ring → Infinite colorless mana, Infinite storm count — **bracket 3**: completes a two-card combo
+- **Eternal Witness** ($2.20) — completes a combo with Living Death + Phyrexian Altar → Infinite blinking, Infinite colored mana
+- **Liliana, Untouched by Death** ($1.79) — completes a combo with Phyrexian Altar → Infinite death triggers, Infinite creature ETB
+- **Chatterfang, Squirrel General** — completes a combo with Warren Soultrader + Cauldron of Essence → Infinite artifact ETB, Infinite artifact LTB
+- **Stunt Double** ($4.50) — synergy +0.53 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Naga Fleshcrafter** ($0.36) — synergy +0.50 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Flesh Duplicate** ($9.34) — synergy +0.46 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Clone** ($0.66) — synergy +0.45 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Mitotic Slime** ($0.39) — synergy +0.44 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Gigantoplasm** ($0.70) — synergy +0.40 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Mirrorhall Mimic** ($2.32) — synergy +0.35 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Vizier of Many Faces** ($0.31) — synergy +0.33 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Arcane Adaptation** ($3.20) — synergy +0.31 measured vs 170 Clones builds of Uugguu, the Omniplasm
+- **Saw in Half** ($5.75) — synergy +0.31 measured vs 170 Clones builds of Uugguu, the Omniplasm
 
 ## Consider cutting
 
-- **Bala Ged Recovery // Bala Ged Sanctuary** — 16 cards do draw work; a deck wants about 12  
-  _(oversupplied: draw)_
-- **Demonic Tutor** — 8 cards do tutor work; a deck wants about 4  
-  _(oversupplied: tutor)_
-- **Arcane Signet** — 15 cards do ramp work; a deck wants about 12  
-  _(oversupplied: ramp)_
+- **Heroic Intervention** — 9 cards do protection work, 6 of them feeding nothing in the core; a deck wants about 6  
+  _(oversupplied: protection; played in 36% of decks with this commander — a weak signal)_
+  - or instead: Mana Drain, Not Dead After All, Feign Death
+- **Living Death** — 13 cards do removal work, 7 of them feeding nothing in the core; a deck wants about 10  
+  _(oversupplied: removal)_
+  - or instead: Beast Within, Assassin's Trophy, The Meathook Massacre
 
 ---
 

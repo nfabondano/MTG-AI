@@ -6,7 +6,7 @@
 
 ## What stands out
 
-- 0 wipe — typical decks run 2-4.
+- 1 wipe — typical decks run 2-4. (tags count 1)
 - 15 combos one card away — see the combo section.
 
 ## Intent (declared)
@@ -19,15 +19,15 @@ Wins by: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-P
 
 ## What this deck does
 
-**lifegain combo (inferred: drain + draw)**
+**lifegain combo (inferred: lifegain + drain + draw)**
 
-**Commander role:** payoff — the 99 must supply: fuel; triggers; conversion.
+**Commander role:** payoff — the 99 must supply: fuel; conversion.
 
-drain 18* · draw 12* · ramp 13 · removal 11 · protection 7
+lifegain 38* · drain 18* · draw 6* · ramp 13 · removal 11 · protection 7
 
 _\* the commander's own text asks for this._
 
-**Oversupplied:** ramp 13 (want ~12), removal 11 (want ~10), protection 7 (want ~6)
+**Oversupplied:** protection 7 (want ~6; 6 feed nothing in the core), ramp 13 (want ~12; 10 feed nothing in the core), removal 11 (want ~10; 7 feed nothing in the core)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -70,16 +70,16 @@ Land 30 · Creature 27 · Artifact 14 · Instant 14 · Enchantment 9 · Sorcery 
 | Role | Tags | Oracle text | Typical |
 |---|---:|---:|---:|
 | Ramp | 13 | 12 | 8–12 |
-| Draw | 12 | 10 | 8–12 |
+| Draw | 6 | 10 | 8–12 |
 | Removal | 11 | 7 | 6–10 |
-| Wipe | — | 0 | 2–4 |
+| Wipe | 1 | 1 | 2–4 |
 | Counterspell | — | 0 | — |
 | Protection | 7 | 6 | 2–6 |
-| Tutor | — | 2 | — |
-| Recursion | — | 2 | — |
+| Tutor | 2 | 2 | — |
+| Recursion | 4 | 2 | — |
 | Graveyard Hate | — | 0 | — |
 
-- 0 wipe — typical decks run 2-4.
+- 1 wipe — typical decks run 2-4. (tags count 1)
 
 _Measured two ways — human-curated tags and oracle-text matching. Where they disagree, the tags are the better signal._
 
@@ -116,48 +116,50 @@ _Mana-base staples missing (separate on purpose): Brightclimb Pathway._
 
 **Already in the deck:**
 
-- Sanguine Bond + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Vito, Thorn of the Dusk Rose + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Vito, Thorn of the Dusk Rose + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Sanguine Bond + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Exquisite Blood + Enduring Tenacity → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Enduring Tenacity + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Marauding Blight-Priest + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Aetherflux Reservoir + Exquisite Blood → Infinite damage, Infinite lifegain triggers
-- Marauding Blight-Priest + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Aetherflux Reservoir + Bloodthirsty Conqueror → Infinite damage, Infinite lifegain triggers
-- Exquisite Blood + Starscape Cleric → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Starscape Cleric + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain
-- Vito, Thorn of the Dusk Rose + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent
-- Beacon of Immortality + Sanguine Bond → Target opponent loses the game
-- Enduring Tenacity + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent
+- Sanguine Bond + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Vito, Thorn of the Dusk Rose + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Vito, Thorn of the Dusk Rose + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Sanguine Bond + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Exquisite Blood + Enduring Tenacity → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Enduring Tenacity + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Marauding Blight-Priest + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Aetherflux Reservoir + Exquisite Blood → Infinite damage, Infinite lifegain triggers _(spicy)_
+- Marauding Blight-Priest + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Aetherflux Reservoir + Bloodthirsty Conqueror → Infinite damage, Infinite lifegain triggers _(spicy)_
+- Exquisite Blood + Starscape Cleric → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Starscape Cleric + Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss, Infinite lifegain _(spicy)_
+- Vito, Thorn of the Dusk Rose + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent _(ruthless)_
+- Beacon of Immortality + Sanguine Bond → Target opponent loses the game _(spicy)_
+- Enduring Tenacity + Beacon of Immortality → Near-infinite lifegain, Near-infinite lifeloss for target opponent _(ruthless)_
+- …and 3 more
 
 **One card away:**
 
-- Add **Sensei's Divining Top** — combos with Aetherflux Reservoir + Bolas's Citadel → Infinite card draw, Infinite draw triggers
-- Add **Reprieve** — combos with Approach of the Second Sun → Win the game
-- Add **Cliffhaven Vampire** — combos with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
-- Add **Vizkopa Guildmage** — combos with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
-- Add **Defiant Bloodlord** — combos with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
-- Add **Peer into the Abyss** — combos with Alhammarret's Archive → Infinite card draw, Infinite draw triggers
-- Add **Cliffhaven Vampire** — combos with Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss
-- Add **Scroll Rack** — combos with Approach of the Second Sun → Win the game
-- Add **Revival // Revenge** — combos with Enduring Tenacity → Near-infinite lifegain, Near-infinite lifeloss for up to two target opponents
-- Add **Walking Ballista** — combos with Cleric Class → Infinite damage, Infinite lifegain
-- Add **Monk Gyatso** — combos with Lightning Greaves → Infinite creature LTB, Infinite creature ETB
-- Add **Defiant Bloodlord** — combos with Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss
-- Add **Epicure of Blood** — combos with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
-- Add **Vizkopa Guildmage** — combos with Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss
-- Add **Vizkopa Guildmage** — combos with Beacon of Immortality → Near-infinite lifeloss
+- Add **Sensei's Divining Top** — combos with Aetherflux Reservoir + Bolas's Citadel → Infinite card draw, Infinite draw triggers _(powerful)_
+- Add **Peer into the Abyss** — combos with Sheoldred, the Apocalypse → Near-infinite card draw for target opponent, Near-infinite draw triggers for target opponent _(oddball)_
+- Add **Peer into the Abyss** — combos with Psychosis Crawler → Near-infinite lifeloss, Near-infinite card draw _(powerful)_
+- Add **Sensei's Divining Top** — combos with Bolas's Citadel + Sheoldred, the Apocalypse → Infinite card draw, Infinite draw triggers _(spicy)_
+- Add **Reprieve** — combos with Approach of the Second Sun → Win the game _(core)_
+- Add **Blood Tribute** — combos with Vito, Thorn of the Dusk Rose → Target opponent loses the game, Infinite lifeloss for target opponent _(ruthless)_
+- Add **Cliffhaven Vampire** — combos with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss _(spicy)_
+- Add **Revival // Revenge** — combos with Vito, Thorn of the Dusk Rose → Near-infinite lifegain, Near-infinite lifeloss for up to two target opponents _(ruthless)_
+- Add **Revival // Revenge** — combos with Sanguine Bond → Near-infinite lifegain, Near-infinite lifeloss for up to two target opponents _(powerful)_
+- Add **Vizkopa Guildmage** — combos with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss _(spicy)_
+- Add **Defiant Bloodlord** — combos with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss _(spicy)_
+- Add **Peer into the Abyss** — combos with Alhammarret's Archive → Infinite card draw, Infinite draw triggers _(oddball)_
+- Add **Karn, the Great Creator** — combos with Aetherflux Reservoir → Infinite damage, Infinite lifegain triggers _(spicy)_
+- Add **Cliffhaven Vampire** — combos with Bloodthirsty Conqueror → Infinite lifegain triggers, Infinite lifeloss _(spicy)_
+- Add **Scroll Rack** — combos with Approach of the Second Sun → Win the game _(exhibition)_
 
-_Checked the 25 most combo-likely cards, not all 100, and kept only combos inside your colour identity._
+_Every catalogued combo for the full list, from Commander Spellbook — only those inside your colour identity._
 
 ## Bracket
 
 **Estimate: 4 — Optimized**
 
 - 6 Game Changers (bracket 3 allows up to 3)
-- 15 two-card combos in the deck: Sanguine Bond + Exquisite Blood (spicy); Vito, Thorn of the Dusk Rose + Exquisite Blood (spicy); Vito, Thorn of the Dusk Rose + Bloodthirsty Conqueror (spicy); Sanguine Bond + Bloodthirsty Conqueror (spicy); Exquisite Blood + Enduring Tenacity (spicy); Enduring Tenacity + Bloodthirsty Conqueror (spicy); Marauding Blight-Priest + Exquisite Blood (spicy); Aetherflux Reservoir + Exquisite Blood (spicy); Marauding Blight-Priest + Bloodthirsty Conqueror (spicy); Aetherflux Reservoir + Bloodthirsty Conqueror (spicy); Exquisite Blood + Starscape Cleric (spicy); Starscape Cleric + Bloodthirsty Conqueror (spicy); Vito, Thorn of the Dusk Rose + Beacon of Immortality (ruthless); Beacon of Immortality + Sanguine Bond (spicy); Enduring Tenacity + Beacon of Immortality (ruthless)
+- 18 two-card combos in the deck: Sanguine Bond + Exquisite Blood (spicy); Vito, Thorn of the Dusk Rose + Exquisite Blood (spicy); Vito, Thorn of the Dusk Rose + Bloodthirsty Conqueror (spicy); Sanguine Bond + Bloodthirsty Conqueror (spicy); Exquisite Blood + Enduring Tenacity (spicy); Enduring Tenacity + Bloodthirsty Conqueror (spicy); Marauding Blight-Priest + Exquisite Blood (spicy); Aetherflux Reservoir + Exquisite Blood (spicy); Marauding Blight-Priest + Bloodthirsty Conqueror (spicy); Aetherflux Reservoir + Bloodthirsty Conqueror (spicy); Exquisite Blood + Starscape Cleric (spicy); Starscape Cleric + Bloodthirsty Conqueror (spicy); Vito, Thorn of the Dusk Rose + Beacon of Immortality (ruthless); Beacon of Immortality + Sanguine Bond (spicy); Enduring Tenacity + Beacon of Immortality (ruthless); Approach of the Second Sun + Demonic Tutor (powerful); Approach of the Second Sun + Vampiric Tutor (powerful); Niv-Mizzet, Ghost Counsel + Sheoldred, the Apocalypse (ruthless)
+- 2 tutors — not a bracket criterion since WotC's October 2025 update; the efficient ones are Game Changers
 
 Game Changers: Smothering Tithe, Bolas's Citadel, Teferi's Protection, Demonic Tutor, Vampiric Tutor, Ancient Tomb
 

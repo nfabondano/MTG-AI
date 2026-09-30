@@ -5,67 +5,49 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 ## Archetype
 
-death-trigger + counters + sacrifice
-
-**Tribe:** 11 true Vampires
+counters + death-trigger + sacrifice
 
 ## Felisa, Fang of Silverquill's role
 
-**payoff + wincon** — so the 99 must supply:
+**payoff** — so the 99 must supply:
 
-- fuel: nontoken Vampires the trigger counts
+- fuel: creatures the trigger counts
 - triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms
 - conversion: drain, draw and token payoffs that turn deaths into wins
-- protection: the deck leans on the commander surviving
+- counters: ways to put +1/+1 counters on your creatures, since the commander counts them
 
 ## What Felisa, Fang of Silverquill asks for
 
-copy, counters, death-trigger, drain, recursion, sacrifice, tokens, typal
+counters, death-trigger, drain, recursion, sacrifice, tokens
 
 ## Clusters
 
+- **counters** — 40 cards *(commander wants this)*
 - **death-trigger** — 30 cards *(commander wants this)*
-- **counters** — 22 cards *(commander wants this)*
 - **sacrifice** — 16 cards *(commander wants this)*
-- **tokens** — 9 cards *(commander wants this)*
+- **tokens** — 8 cards *(commander wants this)*
 - **drain** — 5 cards *(commander wants this)*
+- **lifegain** — 15 cards
 - **ramp** — 15 cards
-- **draw** — 13 cards
+- **draw** — 12 cards
 - **removal** — 10 cards
 - **protection** — 9 cards
+- **pump** — 9 cards
 
 ## How it ends games
 
-- Ashnod's Altar + Cathars' Crusade → Infinite creature ETB, Infinite creature LTB
-- Luminous Broodmoth + Phyrexian Altar → Infinite creature LTB, Infinite creature ETB
-- Viscera Seer + Cathars' Crusade → Infinite +1/+1 counters on most creatures you control, Infinite creature ETB
-- Cathars' Crusade + Phyrexian Altar → Infinite +1/+1 counters on most creatures you control, Infinite creature ETB
-- Cathars' Crusade + Yahenni, Undying Partisan → Infinite +1/+1 counters on most creatures you control, Infinite creature ETB
-- Cathars' Crusade + Bartolomé del Presidio → Infinite +1/+1 counters on most creatures you control, Infinite creature ETB
-- Cathars' Crusade + Carrion Feeder → Infinite +1/+1 counters on most creatures you control, Infinite creature ETB
-- Ashnod's Altar + Resourceful Defense → Infinite colorless mana, Infinite creature ETB
-- Bartolomé del Presidio + Resourceful Defense → Infinite +1/+1 counters on a creature, Infinite creature ETB
-- Ashnod's Altar + Reluctant Role Model → Infinite colorless mana, Infinite creature ETB
-- Bartolomé del Presidio + Reluctant Role Model → Infinite +1/+1 counters on a creature, Infinite creature ETB
-- Viscera Seer + Resourceful Defense → Infinite creature ETB, Infinite creature LTB
-- Carrion Feeder + Resourceful Defense → Infinite +1/+1 counters on a creature, Infinite creature ETB
-- Carrion Feeder + Reluctant Role Model → Infinite +1/+1 counters on a creature, Infinite creature ETB
-- Yahenni, Undying Partisan + Resourceful Defense → Infinite creature ETB, Infinite creature LTB
+- Basri's Lieutenant + Cathars' Crusade + Ashnod's Altar → Infinite colorless mana, Infinite death triggers
+- Basri's Lieutenant + Cathars' Crusade + Phyrexian Altar → Infinite colored mana, Infinite death triggers
+- Basri's Lieutenant + Cathars' Crusade + Carrion Feeder → Infinite death triggers, Infinite creature ETB
+- Basri's Lieutenant + Cathars' Crusade + Viscera Seer → Infinite death triggers, Infinite creature ETB
 - Kabira Takedown // Kabira Plateau — says so in its text
 
 ## Quadrant coverage
 
 _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
 
-- **Developing (ramp, draw)** — 28 cards (ramp 15 + draw 13)
+- **Developing (ramp, draw)** — 27 cards (ramp 15 + draw 12)
 - **Breaking parity (removal, sweepers)** — 10 cards (removal 10)
-- **Winning (closers, going wide)** — 9 cards (tokens 9)
+- **Winning (closers, going wide)** — 8 cards (tokens 8)
 - **Behind (protection, recursion)** — 13 cards (protection 9 + recursion 4)
-
-## Outside every cluster
-
-Not automatically bad — the tags may simply not name what these do.
-
-- Demonic Tutor
-- Lae'zel, Vlaakith's Champion
 

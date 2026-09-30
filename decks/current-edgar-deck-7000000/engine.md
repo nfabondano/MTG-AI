@@ -5,7 +5,7 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 ## Archetype
 
-Vampire typal + drain + tokens
+Vampire typal + drain + counters
 
 **Tribe:** 31 true Vampires
 
@@ -13,23 +13,24 @@ Vampire typal + drain + tokens
 
 **payoff** — so the 99 must supply:
 
-- fuel: nontoken Vampires the trigger counts
-- triggers: sacrifice outlets and asymmetric wipes, so deaths happen on your terms
-- conversion: drain, draw and token payoffs that turn deaths into wins
+- counters: ways to put +1/+1 counters on your creatures, since the commander counts them
 
 ## What Edgar Markov asks for
 
-copy, counters, drain, sacrifice, tokens, typal
+copy, counters, drain, pump, sacrifice, tokens, typal
 
 ## Clusters
 
 - **typal** — 19 cards *(commander wants this)*
 - **drain** — 11 cards *(commander wants this)*
+- **counters** — 7 cards *(commander wants this)*
+- **pump** — 7 cards *(commander wants this)*
 - **tokens** — 7 cards *(commander wants this)*
 - **sacrifice** — 6 cards *(commander wants this)*
+- **lifegain** — 20 cards
 - **death-trigger** — 14 cards
 - **removal** — 13 cards
-- **draw** — 12 cards
+- **draw** — 11 cards
 - **ramp** — 7 cards
 - **sweeper** — 6 cards
 
@@ -37,32 +38,22 @@ copy, counters, drain, sacrifice, tokens, typal
 
 - Ruinous Ultimatum `{R}{R}{W}{W}{W}{B}{B}` — **sole reason that requirement is high**
   - 3 White pips wants ~23 sources, deck has 21
-  - needs 3 different colours in one cost
+  - needs 3 different colours in one cost — sources look sufficient
 - Crackling Doom `{R}{W}{B}`
-  - needs 3 different colours in one cost
+  - needs 3 different colours in one cost — sources look sufficient
 
 ## How it ends games
 
+- Sanguine Bond + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
+- Vito, Thorn of the Dusk Rose + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
 - Edgar Markov + Oathsworn Vampire + Phyrexian Altar → Infinite creature ETB, Infinite creature LTB
 
 ## Quadrant coverage
 
 _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that state the deck does not have._
 
-- **Developing (ramp, draw)** — 19 cards (ramp 7 + draw 12)
+- **Developing (ramp, draw)** — 18 cards (ramp 7 + draw 11)
 - **Breaking parity (removal, sweepers)** — 19 cards (removal 13 + sweeper 6)
 - **Winning (closers, going wide)** — 7 cards (tokens 7)
 - **Behind (protection, recursion)** — 7 cards (protection 4 + recursion 3)
-
-## Outside every cluster
-
-Not automatically bad — the tags may simply not name what these do.
-
-- Reconnaissance
-- Lightning Greaves
-- Exquisite Blood
-- Teferi's Protection
-- Vampiric Tutor
-- Anointed Procession
-- Demonic Tutor
 

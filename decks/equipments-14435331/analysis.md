@@ -9,27 +9,24 @@
 - Illegal: Deck has 103 cards; Commander requires exactly 100.
 - 7 protection — more than the usual 2-6. (tags count 14)
 - 15 combos one card away — see the combo section.
-- Archidekt has this deck marked as bracket 2; the card pool looks more like 4.
 - Maybeboard: adding any one of Enlightened Tutor, Teferi's Protection, Smothering Tithe makes this a bracket 3 deck.
 
 
 ## What this deck does
 
-**draw + ramp + tokens**
+**equipment + draw + protection**
 
-**Tribe:** 17 true Humans + 1 copy effects that become Humans when they copy one
+**Commander role:** payoff — the 99 must supply: fuel; bodies.
 
-**Commander role:** glue — the 99 must supply: a plan of its own — the commander supports rather than defines it.
-
-draw 15* · ramp 14* · tokens 5* · protection 14 · tutor 12 · removal 9 · recursion 5 · untap 5
+equipment 46* · draw 15* · protection 14* · ramp 14* · pump 8* · removal 9 · aura 8 · tutor 7
 
 _\* the commander's own text asks for this._
 
 **Hardest to cast:**
 
-- Tifa, Martial Artist `{1}{R}{G}{W}` — needs 3 different colours in one cost
+- Tifa, Martial Artist `{1}{R}{G}{W}` — needs 3 different colours in one cost — sources look sufficient
 
-**Oversupplied:** tutor 12 (want ~4), protection 14 (want ~6)
+**Oversupplied:** protection 14 (want ~12, even doubled for the commander; 4 feed nothing in the core), tutor 7 (want ~4; every one also feeds the core — nothing to trim)
 
 _Clusters come from human-curated functional tags, not oracle-text guessing. A card outside every cluster is not automatically bad — it may be doing something the tags do not name._
 
@@ -77,10 +74,10 @@ Land 33 · Artifact 26 · Creature 24 · Instant 10 · Sorcery 7 · Enchantment 
 | Ramp | 14 | 10 | 8–12 |
 | Draw | 15 | 11 | 8–12 |
 | Removal | 9 | 5 | 6–10 |
-| Wipe | — | 2 | 2–4 |
+| Wipe | 2 | 2 | 2–4 |
 | Counterspell | — | 0 | — |
 | Protection | 14 | 7 | 2–6 |
-| Tutor | 12 | 7 | — |
+| Tutor | 7 | 7 | — |
 | Recursion | 5 | 4 | — |
 | Graveyard Hate | — | 0 | — |
 
@@ -90,7 +87,7 @@ _Measured two ways — human-curated tags and oracle-text matching. Where they d
 
 ## Against the EDHREC meta
 
-**Basis:** vs 111 Tokens builds of Cloud, Ex-SOLDIER.
+**Basis:** vs 1775 Voltron builds of Cloud, Ex-SOLDIER.
 
 Build variants EDHREC tracks: Equipment (3061), Voltron (1768), Artifacts (646), Modified Creatures (597), Aggro (580), Extra Combats (393).
 
@@ -98,69 +95,72 @@ Closest established commanders: Akiri, Fearless Voyager, Wyleth, Soul of Steel, 
 
 **Staples you're missing** — most decks play these:
 
-- Cultivate — in 51% of decks
-- Lightning Greaves — in 50% of decks
-- Dispatch — in 49% of decks
-- Ultimate Magic: Holy — in 42% of decks
-- Rampant Growth — in 41% of decks
-- Path to Exile — in 41% of decks
-- Behemoth Sledge — in 38% of decks
-- Swiftfoot Boots — in 37% of decks
-- Nettlecyst — in 36% of decks
-- Kaldra Compleat — in 36% of decks
+- Lightning Greaves — in 61% of decks
+- Cultivate — in 60% of decks
+- Dispatch — in 54% of decks
+- Trailblazer's Boots — in 53% of decks
+- Vandalblast — in 52% of decks
+- Rampant Growth — in 50% of decks
+- Danitha Capashen, Paragon — in 50% of decks
+- Behemoth Sledge — in 50% of decks
+- Ultimate Magic: Holy — in 49% of decks
+- Path to Exile — in 45% of decks
+- Swiftfoot Boots — in 43% of decks
+- Hero's Blade — in 43% of decks
+- Chaos Warp — in 43% of decks
+- Vincent, Vengeful Atoner — in 42% of decks
+- Bastion Protector — in 41% of decks
 
-_Mana-base staples missing (separate on purpose): Battlefield Forge, Brushland, Rugged Prairie, Canopy Vista, Cinder Glade, Fire-Lit Thicket, Sungrass Prairie, Mossfire Valley._
+_Mana-base staples missing (separate on purpose): Battlefield Forge, Brushland, Canopy Vista, Cinder Glade, Rugged Prairie, Fire-Lit Thicket, Slayers' Stronghold, Fortified Village._
 
 **High-synergy cards you're missing** — unusually good with this commander:
 
-- Dispatch — synergy +0.41
-- Ultimate Magic: Holy — synergy +0.36
-- Kaldra Compleat — synergy +0.34
-- Nettlecyst — synergy +0.34
-- Machinist's Arsenal — synergy +0.32
-- Behemoth Sledge — synergy +0.31
-- Dancer's Chakrams — synergy +0.31
-- Samurai's Katana — synergy +0.29
-- Hero's Blade — synergy +0.29
-- Gilgamesh, Master-at-Arms — synergy +0.28
-- Vanquish the Horde — synergy +0.27
-- Bladehold War-Whip — synergy +0.26
-- Glimmer Lens — synergy +0.26
-- Danitha Capashen, Paragon — synergy +0.25
-- Unfinished Business — synergy +0.25
+- Trailblazer's Boots — synergy +0.47
+- Dispatch — synergy +0.47
+- Danitha Capashen, Paragon — synergy +0.45
+- Behemoth Sledge — synergy +0.43
+- Ultimate Magic: Holy — synergy +0.42
+- Vandalblast — synergy +0.42
+- Hero's Blade — synergy +0.38
+- Bastion Protector — synergy +0.36
+- Vincent, Vengeful Atoner — synergy +0.36
+- Blackblade Reforged — synergy +0.35
+- Unfinished Business — synergy +0.35
+- Lightning Greaves — synergy +0.34
+- Vanquish the Horde — synergy +0.32
+- Yuffie, Materia Hunter — synergy +0.31
+- Gilgamesh, Master-at-Arms — synergy +0.30
 
 ## Combos
 
-No complete combos found among the cards checked.
+No complete combos found.
 
 **One card away:**
 
-- Add **Aggravated Assault** — combos with The Reaver Cleaver → Infinite artifact ETB, Infinite artifact LTB
-- Add **Aurelia, the Warleader** — combos with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste
-- Add **Combat Celebrant** — combos with Helm of the Host → Infinite combat phases, Infinite creature ETB
-- Add **Godo, Bandit Warlord** — combos with Helm of the Host → Infinite combat phases, Infinite death triggers
-- Add **Kiki-Jiki, Mirror Breaker** — combos with Helm of the Host → Infinite death triggers, Infinite creature ETB
-- Add **Boros Reckoner** — combos with Boros Charm → Infinite lifegain, Infinite lifegain triggers
-- Add **Jumbo Cactuar** — combos with Swords to Plowshares → Near-infinite lifegain
-- Add **Port Razer** — combos with Helm of the Host → Infinite combat damage, Infinite combat phases
-- Add **Scourge of the Throne** — combos with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste
-- Add **Hellkite Charger** — combos with The Reaver Cleaver → Infinite artifact ETB, Infinite artifact LTB
-- Add **Akki Battle Squad** — combos with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste
-- Add **Fear of Missing Out** — combos with Helm of the Host → Infinite draw triggers, Infinite rummaging
-- Add **Apex Altisaur** — combos with Darksteel Plate → Infinite damage to most creatures
-- Add **Breath of Fury** — combos with Helm of the Host → Infinite combat damage, Infinite combat phases
-- Add **Crackdown Construct** — combos with Puresteel Paladin → Infinitely large creature until end of turn
+- Add **Aggravated Assault** — combos with The Reaver Cleaver → Infinite artifact ETB, Infinite artifact LTB _(spicy)_
+- Add **Aggravated Assault** — combos with Sword of Feast and Famine → Infinite combat phases _(spicy)_
+- Add **Aurelia, the Warleader** — combos with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste _(spicy)_
+- Add **Combat Celebrant** — combos with Helm of the Host → Infinite combat phases, Infinite creature ETB _(spicy)_
+- Add **Godo, Bandit Warlord** — combos with Helm of the Host → Infinite combat phases, Infinite death triggers _(spicy)_
+- Add **Kiki-Jiki, Mirror Breaker** — combos with Helm of the Host → Infinite death triggers, Infinite creature ETB _(spicy)_
+- Add **Boros Reckoner** — combos with Boros Charm → Infinite lifegain, Infinite lifegain triggers _(spicy)_
+- Add **Jumbo Cactuar** — combos with Swords to Plowshares → Near-infinite lifegain _(ruthless)_
+- Add **Port Razer** — combos with Helm of the Host → Infinite combat damage, Infinite combat phases _(spicy)_
+- Add **Scourge of the Throne** — combos with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste _(spicy)_
+- Add **Hellkite Charger** — combos with The Reaver Cleaver → Infinite artifact ETB, Infinite artifact LTB _(oddball)_
+- Add **Akki Battle Squad** — combos with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste _(spicy)_
+- Add **Hellkite Charger** — combos with Sword of Feast and Famine → Infinite combat damage, Infinite combat phases _(spicy)_
+- Add **Fear of Missing Out** — combos with Helm of the Host → Infinite draw triggers, Infinite rummaging _(ruthless)_
+- Add **Apex Altisaur** — combos with Darksteel Plate → Infinite damage to most creatures _(exhibition)_
 
-_Checked the 25 most combo-likely cards, not all 100, and kept only combos inside your colour identity._
+_Every catalogued combo for the full list, from Commander Spellbook — only those inside your colour identity._
 
 ## Bracket
 
-**Estimate: 4 — Optimized**
+**Estimate: 2 — Core**
 
 - no Game Changers
-- 8 tutors — consistent enough to find combos reliably
-
-> Archidekt has this deck marked as bracket 2; the card pool looks more like 4.
+- 7 tutors — not a bracket criterion since WotC's October 2025 update; the efficient ones are Game Changers
 
 **Maybeboard watch:**
 

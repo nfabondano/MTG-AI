@@ -2,55 +2,41 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
+Keeping the deck at bracket 2 or below.
+
 ## Consider adding
 
 ### Strengthens the plan
 
-- **Gravecrawler** ($1.43) — completes a combo with Phyrexian Altar → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Dualcaster Mage** ($4.61) — completes a combo with Twinflame → Infinite creature LTB, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Mikaeus, the Unhallowed** ($22.41) — completes a combo with Phyrexian Altar → Infinite colored mana, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Reassembling Skeleton** ($0.29) — completes a combo with Pitiless Plunderer + Phyrexian Altar → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
-- **Heat Shimmer** ($6.90) — synergy +0.39 measured vs 713 Clones builds of Deadpool, Trading Card
-- **Flameshadow Conjuring** ($3.87) — synergy +0.35 measured vs 713 Clones builds of Deadpool, Trading Card
-- **Harmless Offering** ($0.18) — synergy +0.28 measured vs 713 Clones builds of Deadpool, Trading Card
-- **Mirror March** ($2.33) — synergy +0.27 measured vs 713 Clones builds of Deadpool, Trading Card
-- **The Fire Crystal** ($6.09) — synergy +0.27 measured vs 713 Clones builds of Deadpool, Trading Card
-- **Devastating Onslaught** ($2.72) — synergy +0.25 measured vs 713 Clones builds of Deadpool, Trading Card
-- **Flamerush Rider** ($0.23) — synergy +0.23 measured vs 713 Clones builds of Deadpool, Trading Card
-
-### Fixes a weakness
-
-- **Chandra's Ignition** ($8.76) — 1 wipe against a usual 2-4 — both counting systems agree it is short
-- **Massacre Wurm** ($1.70) — 1 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chain Reaction** ($0.31) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+- **Gravecrawler** ($1.41) — completes a combo with Phyrexian Altar → Infinite death triggers, Infinite creature ETB
+- **Reassembling Skeleton** ($0.31) — completes a combo with Pitiless Plunderer + Phyrexian Altar → Infinite death triggers, Infinite creature ETB
+- **Repercussion** ($15.17) — completes a combo with Blasphemous Act → Near-infinite damage to all players
+- **Heat Shimmer** ($7.22) — synergy +0.39 measured vs 718 Clones builds of Deadpool, Trading Card
+- **Flameshadow Conjuring** ($3.79) — synergy +0.35 measured vs 718 Clones builds of Deadpool, Trading Card
+- **Harmless Offering** ($0.23) — synergy +0.27 measured vs 718 Clones builds of Deadpool, Trading Card
+- **Mirror March** ($2.22) — synergy +0.27 measured vs 718 Clones builds of Deadpool, Trading Card
+- **The Fire Crystal** ($5.53) — synergy +0.26 measured vs 718 Clones builds of Deadpool, Trading Card
+- **Devastating Onslaught** ($3.62) — synergy +0.25 measured vs 718 Clones builds of Deadpool, Trading Card
+- **Flamerush Rider** ($0.24) — synergy +0.23 measured vs 718 Clones builds of Deadpool, Trading Card
+- **Goldlust Triad** ($6.29) — synergy +0.22 measured vs 718 Clones builds of Deadpool, Trading Card
+- **Mirror Gallery** ($11.50) — synergy +0.22 measured vs 718 Clones builds of Deadpool, Trading Card
 
 _4 popularity-only ideas hidden — `--loose` shows them._
 
+## Would raise the bracket
+
+These came up as adds but would take the deck past bracket 2, so they are listed rather than recommended.
+
+- **Dualcaster Mage** ($4.30) — completes a combo with Twinflame → Infinite creature LTB, Infinite creature ETB — **bracket 3**: completes a two-card combo
+
 ## Consider cutting
 
-- **Cursed Mirror** — 16 cards do ramp work; a deck wants about 12  
-  _(oversupplied: ramp)_
-- **Sword of Hearth and Home** — 10 cards do protection work; a deck wants about 6  
-  _(oversupplied: protection)_
-- **Blasphemous Act** — 11 cards do removal work; a deck wants about 10  
-  _(oversupplied: removal)_
-- **Animate Dead** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
-  _(no engine participation)_
-- **Conjurer's Closet** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
-  _(no engine participation)_
-- **Reanimate** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
-  _(no engine participation)_
-- **Alexios, Deimos of Kosmos** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
-  _(no engine participation)_
-- **Golden Argosy** — outside every cluster this deck is built on (draw + death-trigger + tokens)  
-  _(no engine participation)_
-
-## Paired swaps
-
-_Each pair does the same job — nothing is matched by position._
-
-- Blasphemous Act → Chandra's Ignition (sweeper)
+- **Phyrexian Altar** — 16 cards do ramp work, 9 of them feeding nothing in the core; a deck wants about 12  
+  _(oversupplied: ramp; played in 10% of decks with this commander — a weak signal)_
+  - or instead: Cursed Mirror, Loki's Scepter, Sword of Hearth and Home
+- **Chaos Warp** — 11 cards do removal work; a deck wants about 10  
+  _(oversupplied: removal; played in 60% of decks with this commander — a weak signal)_
+  - or instead: Toxic Deluge, Mayhem Devil, Blasphemous Act
 
 ---
 

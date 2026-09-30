@@ -4,20 +4,42 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 
 Keeping the deck at bracket 2 or below.
 
+## To reach 100
+
+103 cards: cut 3. Keeping bracket 2 or below (Archidekt).
+
+1. **Clever Concealment** — 14 cards do protection work and a deck wants about 12; 4 of them feed nothing in the core (equipment, draw, protection)  
+   _(oversupplied: protection; played in 63% of decks with this commander — a weak signal)_
+2. **Heroic Intervention** — 13 cards do protection work and a deck wants about 12; 3 of them feed nothing in the core (equipment, draw, protection)  
+   _(oversupplied: protection; played in 49% of decks with this commander — a weak signal)_
+3. **Argentum Armor** — of the core (equipment, draw, protection) it only feeds equipment, which 46 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 24 alike with this commander (9%) — a weak signal)_
+
+**Extra candidates** — if you would rather keep one of the above:
+
+- **Bitterthorn, Nissa's Animus** — of the core (equipment, draw, protection) it only feeds equipment, which 45 cards already do
+- **Sunforger** — of the core (equipment, draw, protection) it only feeds equipment, which 44 cards already do
+- **Umezawa's Jitte** — of the core (equipment, draw, protection) it only feeds equipment, which 43 cards already do
+
+After the cuts: 100 cards · bracket 2 (Core).
+
+> From cut 3 on, nothing stronger is left: those picks are the least-connected cards — a judgement call, swap freely.
+
 ## Consider adding
 
 ### Strengthens the plan
 
-- **Dispatch** ($0.39) — synergy +0.41 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Ultimate Magic: Holy** ($0.35) — synergy +0.36 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Kaldra Compleat** — synergy +0.34 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Nettlecyst** ($4.33) — synergy +0.34 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Machinist's Arsenal** — synergy +0.32 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Behemoth Sledge** ($0.29) — synergy +0.31 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Dancer's Chakrams** — synergy +0.31 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Samurai's Katana** ($0.27) — synergy +0.29 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Hero's Blade** ($0.27) — synergy +0.29 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
-- **Gilgamesh, Master-at-Arms** ($0.92) — synergy +0.28 measured vs 111 Tokens builds of Cloud, Ex-SOLDIER
+- **Trailblazer's Boots** ($3.53) — synergy +0.47 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Dispatch** ($0.39) — synergy +0.47 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Danitha Capashen, Paragon** ($0.90) — synergy +0.45 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Behemoth Sledge** ($0.29) — synergy +0.43 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Ultimate Magic: Holy** ($0.35) — synergy +0.42 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Vandalblast** ($1.56) — synergy +0.42 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Hero's Blade** ($0.27) — synergy +0.38 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Bastion Protector** ($0.35) — synergy +0.36 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Vincent, Vengeful Atoner** ($0.29) — synergy +0.36 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Blackblade Reforged** — synergy +0.35 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
+- **Unfinished Business** ($0.25) — synergy +0.35 measured vs 1775 Voltron builds of Cloud, Ex-SOLDIER
 
 _5 popularity-only ideas hidden — `--loose` shows them._
 
@@ -29,26 +51,12 @@ These came up as adds but would take the deck past bracket 2, so they are listed
 - **Aurelia, the Warleader** ($5.17) — completes a combo with Helm of the Host → Infinite combat phases, Infinite creature tokens with haste — **bracket 3**: completes a two-card combo
 - **Combat Celebrant** ($2.95) — completes a combo with Helm of the Host → Infinite combat phases, Infinite creature ETB — **bracket 3**: completes a two-card combo
 - **Godo, Bandit Warlord** — completes a combo with Helm of the Host → Infinite combat phases, Infinite death triggers — **bracket 3**: completes a two-card combo
-- **Kiki-Jiki, Mirror Breaker** ($17.14) — completes a combo with Helm of the Host → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
 
 ## Consider cutting
 
-- **Tifa, Martial Artist** — needs 3 different colours in one cost  
-  _(castability)_
-- **Sunforger** — 12 cards do tutor work; a deck wants about 4  
-  _(oversupplied: tutor)_
-- **Clever Concealment** — 14 cards do protection work; a deck wants about 6  
-  _(oversupplied: protection)_
-- **Colossus Hammer** — outside every cluster this deck is built on (draw + ramp + tokens)  
-  _(no engine participation)_
-- **Excalibur, Sword of Eden** — outside every cluster this deck is built on (draw + ramp + tokens)  
-  _(no engine participation)_
-- **Legion Leadership // Legion Stronghold** — outside every cluster this deck is built on (draw + ramp + tokens)  
-  _(no engine participation)_
-- **Aettir and Priwen** — outside every cluster this deck is built on (draw + ramp + tokens)  
-  _(no engine participation)_
-- **Conformer Shuriken** — outside every cluster this deck is built on (draw + ramp + tokens)  
-  _(no engine participation)_
+- **Clever Concealment** — 14 cards do protection work, 4 of them feeding nothing in the core; a deck wants about 12  
+  _(oversupplied: protection; played in 63% of decks with this commander — a weak signal)_
+  - or instead: Heroic Intervention, Boros Charm
 
 ---
 

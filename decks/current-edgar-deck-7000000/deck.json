@@ -77,6 +77,7 @@
    ],
    "engine_participation": [
     "drain",
+    "lifegain",
     "typal"
    ],
    "set_code": "voc",
@@ -138,6 +139,7 @@
    "engine_participation": [
     "drain",
     "draw",
+    "lifegain",
     "typal"
    ],
    "set_code": "plst",
@@ -353,6 +355,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "lifegain",
     "typal"
    ],
    "set_code": "j22",
@@ -616,6 +619,7 @@
    "engine_participation": [
     "death-trigger",
     "drain",
+    "lifegain",
     "typal"
    ],
    "set_code": "voc",
@@ -719,7 +723,9 @@
     "triggered ability",
     "lifegain"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "lifegain"
+   ],
    "set_code": "sld",
    "released_at": "2019-12-02",
    "rarity": "rare",
@@ -923,6 +929,7 @@
     "recursion-self"
    ],
    "engine_participation": [
+    "lifegain",
     "typal"
    ],
    "set_code": "rix",
@@ -985,9 +992,7 @@
     "tax"
    ],
    "engine_participation": [
-    "draw",
-    "ramp",
-    "tokens"
+    "ramp"
    ],
    "set_code": "p22",
    "released_at": "2022-01-01",
@@ -1256,7 +1261,9 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
+    "lifegain",
     "typal"
    ],
    "set_code": "2x2",
@@ -1381,6 +1388,7 @@
    ],
    "engine_participation": [
     "counters",
+    "pump",
     "tokens",
     "typal"
    ],
@@ -1596,6 +1604,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "lifegain",
     "tokens",
     "typal"
    ],
@@ -1706,6 +1715,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "pump",
     "typal"
    ],
    "set_code": "dka",
@@ -2162,6 +2172,8 @@
    ],
    "engine_participation": [
     "death-trigger",
+    "lifegain",
+    "pump",
     "tokens",
     "typal"
    ],
@@ -2377,7 +2389,8 @@
     "lifegain matters"
    ],
    "engine_participation": [
-    "drain"
+    "drain",
+    "lifegain"
    ],
    "set_code": "c21",
    "released_at": "2021-04-23",
@@ -2491,6 +2504,7 @@
    ],
    "engine_participation": [
     "drain",
+    "lifegain",
     "typal"
    ],
    "set_code": "voc",
@@ -2705,7 +2719,9 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
+    "lifegain",
     "sacrifice",
     "tokens",
     "typal"
@@ -3277,6 +3293,7 @@
    ],
    "engine_participation": [
     "draw",
+    "pump",
     "typal"
    ],
    "set_code": "xln",
@@ -3563,6 +3580,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "pump",
     "typal"
    ],
    "set_code": "rix",
@@ -3636,8 +3654,10 @@
    "engine_participation": [
     "drain",
     "draw",
+    "lifegain",
     "removal",
-    "tokens"
+    "tokens",
+    "typal"
    ],
    "set_code": "vow",
    "released_at": "2021-11-19",
@@ -3744,6 +3764,7 @@
    "engine_participation": [
     "death-trigger",
     "drain",
+    "lifegain",
     "typal"
    ],
    "set_code": "2x2",
@@ -3804,6 +3825,7 @@
    "engine_participation": [
     "death-trigger",
     "drain",
+    "lifegain",
     "typal"
    ],
    "set_code": "war",
@@ -3856,6 +3878,7 @@
    ],
    "engine_participation": [
     "drain",
+    "lifegain",
     "typal"
    ],
    "set_code": "m21",
@@ -3951,7 +3974,9 @@
     "token doubler",
     "token increaser"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "tokens"
+   ],
    "set_code": "akh",
    "released_at": "2017-04-28",
    "rarity": "rare",
@@ -4400,6 +4425,7 @@
    "engine_participation": [
     "death-trigger",
     "draw",
+    "lifegain",
     "typal"
    ],
    "set_code": "voc",
@@ -4504,6 +4530,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "pump",
     "tokens",
     "typal"
    ],
@@ -4564,6 +4591,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "death-trigger",
     "sacrifice",
     "typal"
@@ -4739,6 +4767,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "pump",
     "typal"
    ],
    "set_code": "c17",
@@ -4829,7 +4858,9 @@
    "is_extra_turns": false,
    "is_mass_land_denial": false,
    "combo_flagged": false,
-   "roles": [],
+   "roles": [
+    "wipe"
+   ],
    "tags": [
     "alliteration",
     "blood artist ability",
@@ -4852,6 +4883,7 @@
    "engine_participation": [
     "death-trigger",
     "drain",
+    "lifegain",
     "removal",
     "sweeper"
    ],
@@ -5348,6 +5380,7 @@
     "lifegain"
    ],
    "engine_participation": [
+    "lifegain",
     "typal"
    ],
    "set_code": "voc",
@@ -5442,6 +5475,7 @@
     "lifegain"
    ],
    "engine_participation": [
+    "lifegain",
     "typal"
    ],
    "set_code": "m20",

@@ -5,15 +5,15 @@ _Inferred from functional card tags. **Edit this file if it's wrong** — your v
 
 ## Archetype
 
-removal + Beast typal + counters
+removal + counters + Beast typal
 
 **Tribe:** 28 true Beasts + 1 changelings + 1 copy effects that become Beasts when they copy one
 
 ## Slinza, the Spiked Stampede's role
 
-**force-multiplier** — so the 99 must supply:
+**payoff + force-multiplier** — so the 99 must supply:
 
-- things worth multiplying
+- counters: ways to put +1/+1 counters on your creatures, since the commander counts them
 
 ## What Slinza, the Spiked Stampede asks for
 
@@ -22,12 +22,13 @@ copy, counters, removal, typal
 ## Clusters
 
 - **removal** — 12 cards *(commander wants this)*
+- **counters** — 11 cards *(commander wants this)*
 - **typal** — 9 cards *(commander wants this)*
-- **counters** — 7 cards *(commander wants this)*
 - **draw** — 23 cards
 - **ramp** — 14 cards
 - **tokens** — 7 cards
 - **protection** — 5 cards
+- **pump** — 5 cards
 
 ## Mana-base fixes before cuts
 

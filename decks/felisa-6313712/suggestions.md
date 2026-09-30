@@ -2,22 +2,51 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
+## To reach 100
+
+106 cards: cut 6.
+
+1. **Belladonna Took** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 40 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 12 alike with this commander (5%) — a weak signal)_
+2. **Guiding Hydra** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 39 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 11 alike with this commander (12%) — a weak signal)_
+3. **Scholar of New Horizons** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 38 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 10 alike with this commander (24%) — a weak signal)_
+4. **Feast of the Victorious Dead** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 37 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 9 alike with this commander (33%) — a weak signal)_
+5. **Rosie Cotton of South Lane** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 36 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 8 alike with this commander (33%) — a weak signal)_
+6. **Dusk Legion Duelist** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 35 cards already do  
+   _(judgement call: least-connected engine piece; the least played of the 7 alike with this commander (40%) — a weak signal)_
+
+**Extra candidates** — if you would rather keep one of the above:
+
+- **Felidar Retreat** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 34 cards already do
+- **Selfless Squire** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 33 cards already do
+- **Requisition Raid** — of the core (counters, death-trigger, sacrifice) it only feeds counters, which 32 cards already do
+
+After the cuts: 100 cards · bracket 3 (Upgraded).
+
+_Never offered: Ashnod's Altar, Basri's Lieutenant, Carrion Feeder, Cathars' Crusade, Phyrexian Altar, Viscera Seer — combo pieces, declared untouchables and named win conditions._
+
+> From cut 1 on, nothing stronger is left: those picks are the least-connected cards — a judgement call, swap freely.
+
 ## Consider adding
 
 ### Strengthens the plan
 
-- **Gravecrawler** ($1.41) — completes a combo with Phyrexian Altar → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
+- **Gravecrawler** ($1.41) — completes a combo with Phyrexian Altar → Infinite death triggers, Infinite creature ETB
+- **Reassembling Skeleton** ($0.31) — completes a combo with Pitiless Plunderer + Ashnod's Altar → Infinite colorless mana, Infinite death triggers
 - **Walking Ballista** ($10.71) — completes a combo with Heliod, Sun-Crowned → Infinite damage, Infinite lifegain — **bracket 3**: completes a two-card combo
-- **Mikaeus, the Unhallowed** ($22.05) — completes a combo with Phyrexian Altar → Infinite colored mana, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Reassembling Skeleton** ($0.31) — completes a combo with Pitiless Plunderer + Phyrexian Altar → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Forsaken Miner** ($2.31) — completes a combo with Phyrexian Altar + Blood Artist → Infinite death triggers, Infinite creature ETB — **bracket 3**: completes a two-card combo
-- **Bloodthirsty Conqueror** ($36.00) — only 11 real Vampires feed the commander's trigger — the engine wants more bodies of the tribe
-- **Bloodletter of Aclazotz** ($37.35) — only 11 real Vampires feed the commander's trigger — the engine wants more bodies of the tribe
-- **Bloodghast** ($0.90) — only 11 real Vampires feed the commander's trigger — the engine wants more bodies of the tribe
 - **Breena, the Demagogue** ($0.85) — synergy +0.53 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
 - **Inkshield** ($4.80) — synergy +0.43 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
 - **Shadrix Silverquill** ($0.32) — synergy +0.42 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
 - **Luminarch Aspirant** ($0.44) — synergy +0.42 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
+- **Drana, Liberator of Malakir** ($0.95) — synergy +0.38 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
+- **Aron, Benalia's Ruin** — synergy +0.35 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
+- **Duty Beyond Death** ($0.33) — synergy +0.32 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
+- **Sunscorch Regent** ($0.39) — synergy +0.31 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
+- **Necropolis Regent** ($0.59) — synergy +0.29 measured vs 404 +1/+1 Counters builds of Felisa, Fang of Silverquill
 
 ### Fixes a weakness
 
@@ -25,18 +54,12 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 - **Kindred Dominance** ($5.05) — 0 wipe against a usual 2-4 — both counting systems agree it is short
 - **Elspeth, Sun's Champion** ($1.44) — 0 wipe against a usual 2-4 — both counting systems agree it is short
 
-_5 popularity-only ideas hidden — `--loose` shows them._
+_2 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **Smothering Tithe** — 15 cards do ramp work; a deck wants about 12  
-  _(oversupplied: ramp)_
-- **Teferi's Protection** — 9 cards do protection work; a deck wants about 6  
-  _(oversupplied: protection)_
-- **Demonic Tutor** — outside every cluster this deck is built on (death-trigger + counters + sacrifice)  
-  _(no engine participation)_
-- **Lae'zel, Vlaakith's Champion** — outside every cluster this deck is built on (death-trigger + counters + sacrifice)  
-  _(no engine participation)_
+- No confident cuts. Nothing in the deck fails on castability, sits in an oversupplied cluster, or falls outside what the deck is built around.
+- Run with `--loose` to see weaker candidates.
 
 ---
 

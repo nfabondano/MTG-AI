@@ -65,6 +65,8 @@
     "untapper"
    ],
    "engine_participation": [
+    "equipment",
+    "pump",
     "untap"
    ],
    "set_code": "fin",
@@ -135,6 +137,7 @@
    ],
    "engine_participation": [
     "draw",
+    "equipment",
     "protection"
    ],
    "set_code": "cmm",
@@ -374,6 +377,7 @@
    ],
    "engine_participation": [
     "protection",
+    "pump",
     "removal"
    ],
    "set_code": "fdn",
@@ -476,8 +480,8 @@
     "synergy-artifact"
    ],
    "engine_participation": [
-    "ramp",
-    "typal"
+    "equipment",
+    "ramp"
    ],
    "set_code": "acr",
    "released_at": "2024-07-05",
@@ -541,9 +545,9 @@
    ],
    "engine_participation": [
     "draw",
+    "equipment",
     "ramp",
-    "recursion",
-    "typal"
+    "recursion"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -710,9 +714,9 @@
     "cost-reducer-activated-ability"
    ],
    "engine_participation": [
+    "equipment",
     "protection",
-    "ramp",
-    "typal"
+    "ramp"
    ],
    "set_code": "fin",
    "released_at": "2025-06-13",
@@ -844,6 +848,8 @@
     "tax"
    ],
    "engine_participation": [
+    "aura",
+    "equipment",
     "protection",
     "ramp"
    ],
@@ -891,7 +897,10 @@
     "hate",
     "hate-flying"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "equipment",
+    "pump"
+   ],
    "set_code": "sld",
    "released_at": "2019-12-02",
    "rarity": "uncommon",
@@ -1178,8 +1187,7 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "draw",
-    "typal"
+    "draw"
    ],
    "set_code": "mh2",
    "released_at": "2021-06-18",
@@ -1227,7 +1235,10 @@
     "synergy-legendary",
     "synergy-saga"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "equipment",
+    "pump"
+   ],
    "set_code": "acr",
    "released_at": "2024-07-05",
    "rarity": "rare",
@@ -1325,8 +1336,7 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "ramp"
    ],
    "set_code": "fca",
    "released_at": "2025-06-13",
@@ -1392,6 +1402,7 @@
     "tutor-to"
    ],
    "engine_participation": [
+    "equipment",
     "removal",
     "tutor"
    ],
@@ -1451,8 +1462,7 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "copy",
-    "typal"
+    "equipment"
    ],
    "set_code": "fin",
    "released_at": "2025-06-13",
@@ -1610,6 +1620,7 @@
     "recursion"
    ],
    "engine_participation": [
+    "equipment",
     "recursion"
    ],
    "set_code": "sld",
@@ -1741,8 +1752,11 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "aura",
     "draw",
+    "equipment",
     "protection",
+    "pump",
     "recursion"
    ],
    "set_code": "khm",
@@ -1793,6 +1807,7 @@
     "quick equip"
    ],
    "engine_participation": [
+    "equipment",
     "protection"
    ],
    "set_code": "cmm",
@@ -1902,6 +1917,8 @@
     "untapper"
    ],
    "engine_participation": [
+    "equipment",
+    "pump",
     "untap"
    ],
    "set_code": "onc",
@@ -2151,8 +2168,10 @@
     "unexile"
    ],
    "engine_participation": [
-    "tutor",
-    "typal"
+    "aura",
+    "equipment",
+    "pump",
+    "tutor"
    ],
    "set_code": "woe",
    "released_at": "2023-09-08",
@@ -2284,7 +2303,9 @@
     "scales with power",
     "tapland"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "pump"
+   ],
    "set_code": "mh3",
    "released_at": "2024-06-14",
    "rarity": "uncommon",
@@ -2447,8 +2468,7 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "ramp"
    ],
    "set_code": "mkc",
    "released_at": "2024-02-09",
@@ -2498,6 +2518,8 @@
     "tutor-to"
    ],
    "engine_participation": [
+    "aura",
+    "equipment",
     "tutor"
    ],
    "set_code": "soi",
@@ -2670,7 +2692,7 @@
    ],
    "engine_participation": [
     "draw",
-    "typal"
+    "equipment"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -2867,6 +2889,7 @@
     "lifegain"
    ],
    "engine_participation": [
+    "equipment",
     "protection"
    ],
    "set_code": "ltc",
@@ -2916,6 +2939,8 @@
     "quick attach"
    ],
    "engine_participation": [
+    "aura",
+    "equipment",
     "ramp"
    ],
    "set_code": "sld",
@@ -3182,7 +3207,9 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "draw"
+    "aura",
+    "draw",
+    "equipment"
    ],
    "set_code": "fca",
    "released_at": "2025-06-13",
@@ -3282,6 +3309,7 @@
     "tutor-to"
    ],
    "engine_participation": [
+    "equipment",
     "tutor"
    ],
    "set_code": "cmm",
@@ -3390,6 +3418,7 @@
     "tutor-to"
    ],
    "engine_participation": [
+    "equipment",
     "tutor"
    ],
    "set_code": "spg",
@@ -3453,6 +3482,7 @@
     "tutor"
    ],
    "engine_participation": [
+    "equipment",
     "tutor"
    ],
    "set_code": "cmr",
@@ -3573,6 +3603,7 @@
     "untapper"
    ],
    "engine_participation": [
+    "equipment",
     "protection",
     "ramp",
     "untap"
@@ -3631,8 +3662,8 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "equipment",
+    "ramp"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -3806,6 +3837,7 @@
    ],
    "engine_participation": [
     "draw",
+    "equipment",
     "ramp"
    ],
    "set_code": "dft",
@@ -3864,8 +3896,8 @@
     "scales with damage dealt"
    ],
    "engine_participation": [
-    "ramp",
-    "tokens"
+    "equipment",
+    "ramp"
    ],
    "set_code": "dmc",
    "released_at": "2022-09-09",
@@ -3918,8 +3950,7 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "ramp"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -3982,7 +4013,6 @@
     "untapper"
    ],
    "engine_participation": [
-    "typal",
     "untap"
    ],
    "set_code": "fic",
@@ -4042,6 +4072,7 @@
     "remove counters-you"
    ],
    "engine_participation": [
+    "equipment",
     "removal"
    ],
    "set_code": "sld",
@@ -4155,8 +4186,7 @@
     "repeatable token generator"
    ],
    "engine_participation": [
-    "copy",
-    "tokens"
+    "equipment"
    ],
    "set_code": "dom",
    "released_at": "2018-04-27",
@@ -4220,6 +4250,8 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "equipment",
+    "pump",
     "removal"
    ],
    "set_code": "afc",
@@ -4267,6 +4299,7 @@
     "white effect"
    ],
    "engine_participation": [
+    "equipment",
     "protection"
    ],
    "set_code": "fic",
@@ -4312,6 +4345,7 @@
     "protection"
    ],
    "engine_participation": [
+    "equipment",
     "protection"
    ],
    "set_code": "sld",
@@ -4471,7 +4505,10 @@
     "lifegain matters",
     "shapechange"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "equipment",
+    "pump"
+   ],
    "set_code": "fin",
    "released_at": "2025-06-13",
    "rarity": "mythic",
@@ -4537,8 +4574,7 @@
    ],
    "engine_participation": [
     "draw",
-    "ramp",
-    "typal"
+    "ramp"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -4596,8 +4632,7 @@
     "synergy-target"
    ],
    "engine_participation": [
-    "draw",
-    "typal"
+    "draw"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -4662,7 +4697,9 @@
     "synergy-equipment"
    ],
    "engine_participation": [
+    "aura",
     "draw",
+    "equipment",
     "recursion"
    ],
    "set_code": "fic",
@@ -4714,7 +4751,10 @@
     "tapper",
     "triggered ability"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "equipment",
+    "pump"
+   ],
    "set_code": "fic",
    "released_at": "2025-06-13",
    "rarity": "rare",
@@ -4760,7 +4800,10 @@
     "hate-low-power",
     "power matters"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "equipment",
+    "pump"
+   ],
    "set_code": "fic",
    "released_at": "2025-06-13",
    "rarity": "rare",
@@ -4811,6 +4854,8 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "equipment",
+    "pump",
     "removal"
    ],
    "set_code": "fin",
@@ -4870,7 +4915,8 @@
     "saboteur"
    ],
    "engine_participation": [
-    "draw"
+    "draw",
+    "equipment"
    ],
    "set_code": "fin",
    "released_at": "2025-06-13",
@@ -4923,8 +4969,8 @@
     "tutor-to"
    ],
    "engine_participation": [
-    "tutor",
-    "typal"
+    "equipment",
+    "tutor"
    ],
    "set_code": "fin",
    "released_at": "2025-06-13",
@@ -4993,9 +5039,10 @@
     "triggered ability"
    ],
    "engine_participation": [
-    "recursion",
-    "sacrifice",
-    "typal"
+    "aura",
+    "equipment",
+    "pump",
+    "recursion"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -5074,9 +5121,8 @@
    ],
    "engine_participation": [
     "draw",
-    "ramp",
-    "tokens",
-    "typal"
+    "equipment",
+    "ramp"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -5120,6 +5166,7 @@
     "protection"
    ],
    "engine_participation": [
+    "equipment",
     "protection"
    ],
    "set_code": "fic",
@@ -5178,8 +5225,8 @@
     "sacrifice self"
    ],
    "engine_participation": [
-    "protection",
-    "typal"
+    "equipment",
+    "protection"
    ],
    "set_code": "fin",
    "released_at": "2025-06-13",
@@ -5291,8 +5338,7 @@
     "typal-creature"
    ],
    "engine_participation": [
-    "tokens",
-    "typal"
+    "equipment"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -5345,9 +5391,7 @@
     "triggered ability",
     "lifegain"
    ],
-   "engine_participation": [
-    "typal"
-   ],
+   "engine_participation": [],
    "set_code": "fin",
    "released_at": "2025-06-13",
    "rarity": "mythic",
@@ -5391,7 +5435,10 @@
     "synergy-equipment",
     "card names"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "equipment",
+    "pump"
+   ],
    "set_code": "hoc",
    "released_at": "2026-08-14",
    "rarity": "rare",
@@ -5462,10 +5509,7 @@
    ],
    "engine_participation": [
     "draw",
-    "ramp",
-    "sacrifice",
-    "tokens",
-    "typal"
+    "ramp"
    ],
    "set_code": "fic",
    "released_at": "2025-06-13",
@@ -5526,8 +5570,8 @@
     "tutor-to-battlefield"
    ],
    "engine_participation": [
-    "ramp",
-    "tutor"
+    "equipment",
+    "ramp"
    ],
    "set_code": "moc",
    "released_at": "2023-04-21",

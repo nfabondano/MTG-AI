@@ -28,13 +28,13 @@ copy, death-trigger, drain, recursion, sacrifice, tokens, typal
 - **sacrifice** — 14 cards *(commander wants this)*
 - **death-trigger** — 8 cards *(commander wants this)*
 - **recursion** — 7 cards *(commander wants this)*
-- **tokens** — 7 cards *(commander wants this)*
+- **tokens** — 6 cards *(commander wants this)*
 - **drain** — 5 cards *(commander wants this)*
 - **draw** — 16 cards
 - **ramp** — 15 cards
 - **removal** — 13 cards
 - **protection** — 9 cards
-- **tutor** — 8 cards
+- **counters** — 6 cards
 
 ## Mana-base fixes before cuts
 
@@ -65,6 +65,6 @@ _Four game states (EDHREC quadrant theory). A near-zero row is a plan for that s
 
 - **Developing (ramp, draw)** — 31 cards (ramp 15 + draw 16)
 - **Breaking parity (removal, sweepers)** — 17 cards (removal 13 + sweeper 4)
-- **Winning (closers, going wide)** — 7 cards (tokens 7)
+- **Winning (closers, going wide)** — 6 cards (tokens 6)
 - **Behind (protection, recursion)** — 16 cards (protection 9 + recursion 7)
 

@@ -523,7 +523,9 @@
     "gives trample",
     "power boost to all"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "pump"
+   ],
    "set_code": "cmm",
    "released_at": "2023-08-04",
    "rarity": "mythic",
@@ -633,6 +635,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "pump",
     "ramp",
     "typal"
    ],
@@ -758,7 +761,7 @@
     "type change"
    ],
    "engine_participation": [
-    "typal"
+    "pump"
    ],
    "set_code": "cmr",
    "released_at": "2020-11-20",
@@ -1150,6 +1153,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "counters",
     "ramp",
     "typal"
    ],
@@ -1217,6 +1221,7 @@
     "typal-creature"
    ],
    "engine_participation": [
+    "counters",
     "ramp",
     "typal"
    ],
@@ -1443,6 +1448,7 @@
     "ramp"
    ],
    "engine_participation": [
+    "counters",
     "ramp"
    ],
    "set_code": "mom",
@@ -1499,8 +1505,7 @@
     "type errata addition"
    ],
    "engine_participation": [
-    "tutor",
-    "typal"
+    "tutor"
    ],
    "set_code": "mh2",
    "released_at": "2021-06-18",
@@ -1660,7 +1665,9 @@
     "gives trample",
     "power boost to all"
    ],
-   "engine_participation": [],
+   "engine_participation": [
+    "pump"
+   ],
    "set_code": "clb",
    "released_at": "2022-06-10",
    "rarity": "rare",
@@ -1777,6 +1784,7 @@
     "tutor-to"
    ],
    "engine_participation": [
+    "pump",
     "tutor"
    ],
    "set_code": "cmm",
@@ -2172,6 +2180,7 @@
    ],
    "engine_participation": [
     "counters",
+    "pump",
     "ramp"
    ],
    "set_code": "m20",
@@ -4070,7 +4079,7 @@
     "untapper"
    ],
    "engine_participation": [
-    "typal",
+    "pump",
     "untap"
    ],
    "set_code": "clb",
@@ -4230,6 +4239,7 @@
    ],
    "engine_participation": [
     "draw",
+    "pump",
     "typal"
    ],
    "set_code": "ecc",
@@ -5038,7 +5048,6 @@
     "ramp"
    ],
    "engine_participation": [
-    "copy",
     "ramp"
    ],
    "set_code": "mh3",
@@ -5338,6 +5347,7 @@
     "triggered ability"
    ],
    "engine_participation": [
+    "counters",
     "ramp"
    ],
    "set_code": "sos",

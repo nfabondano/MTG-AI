@@ -2,15 +2,15 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
+Keeping the deck at bracket 4 or below.
+
 ## Consider adding
 
 ### Strengthens the plan
 
-- **Sensei's Divining Top** ($40.85) — completes a combo with Aetherflux Reservoir + Bolas's Citadel → Infinite card draw, Infinite draw triggers — **bracket 3**: completes a two-card combo
+- **Sensei's Divining Top** ($40.85) — completes a combo with Aetherflux Reservoir + Bolas's Citadel → Infinite card draw, Infinite draw triggers
+- **Peer into the Abyss** ($3.60) — completes a combo with Sheoldred, the Apocalypse → Near-infinite card draw for target opponent, Near-infinite draw triggers for target opponent — **bracket 3**: completes a two-card combo
 - **Reprieve** ($1.41) — completes a combo with Approach of the Second Sun → Win the game
-- **Cliffhaven Vampire** ($0.64) — completes a combo with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss — **bracket 3**: completes a two-card combo
-- **Vizkopa Guildmage** ($0.56) — completes a combo with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss — **bracket 3**: completes a two-card combo
-- **Defiant Bloodlord** ($0.34) — completes a combo with Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss — **bracket 3**: completes a two-card combo
 - **Suture Priest** ($4.27) — synergy +0.31 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
 - **Reanimate** ($9.76) — synergy +0.26 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
 - **Archivist of Oghma** ($6.28) — synergy +0.24 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
@@ -18,31 +18,28 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
 - **Restoration Magic** ($1.55) — synergy +0.23 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
 - **Auriok Champion** ($9.76) — synergy +0.22 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
 - **Ajani Resolute** ($9.76) — synergy +0.22 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
+- **Enlightened Confidant** ($7.37) — synergy +0.22 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
+- **Gleaming Splendor** ($30.31) — synergy +0.21 measured vs 199 Lifegain builds of Niv-Mizzet, Ghost Counsel
 
 ### Fixes a weakness
 
-- **Massacre Wurm** ($1.91) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Kindred Dominance** ($5.05) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Elspeth, Sun's Champion** ($1.44) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Massacre Wurm** ($1.91) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+- **Kindred Dominance** ($5.05) — 1 wipe against a usual 2-4 — both counting systems agree it is short
+- **Elspeth, Sun's Champion** ($1.44) — 1 wipe against a usual 2-4 — both counting systems agree it is short
 
 _1 popularity-only idea hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **Skirge Familiar** — 13 cards do ramp work; a deck wants about 12  
-  _(oversupplied: ramp)_
-- **Deadly Rollick** — 11 cards do removal work; a deck wants about 10  
-  _(oversupplied: removal)_
-- **Flawless Maneuver** — 7 cards do protection work; a deck wants about 6  
-  _(oversupplied: protection)_
-- **Soul Warden** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw))  
-  _(no engine participation)_
-- **Soul's Attendant** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw))  
-  _(no engine participation)_
-- **Authority of the Consuls** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw))  
-  _(no engine participation)_
-- **Children of Korlis** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw))  
-  _(no engine participation)_
+- **Dawn's Truce** — 7 cards do protection work, 6 of them feeding nothing in the core; a deck wants about 6  
+  _(oversupplied: protection; played in 18% of decks with this commander — a weak signal)_
+  - or instead: Swiftfoot Boots, Lightning Greaves
+- **Skirge Familiar** — 13 cards do ramp work, 10 of them feeding nothing in the core; a deck wants about 12  
+  _(oversupplied: ramp; played in 12% of decks with this commander — a weak signal)_
+  - or instead: Fellwar Stone, Lotho, Corrupt Shirriff, Thought Vessel
+- **Generous Gift** — 11 cards do removal work, 7 of them feeding nothing in the core; a deck wants about 10  
+  _(oversupplied: removal; played in 22% of decks with this commander — a weak signal)_
+  - or instead: Anguished Unmaking, Swords to Plowshares
 
 ---
 

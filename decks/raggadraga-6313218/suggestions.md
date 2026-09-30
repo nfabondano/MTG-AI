@@ -2,53 +2,62 @@
 
 Nothing here is applied automatically. Copy what you agree with into Archidekt by hand.
 
+## To reach 100
+
+102 cards: cut 2.
+
+1. **Regal Force** — 18 cards do draw work and a deck wants about 12; 12 of them feed nothing in the core (ramp, untap, pump)  
+   _(oversupplied: draw; played in 24% of decks with this commander — a weak signal)_
+2. **Ohran Frostfang** — 17 cards do draw work and a deck wants about 12; 11 of them feed nothing in the core (ramp, untap, pump)  
+   _(oversupplied: draw; played in 20% of decks with this commander — a weak signal)_
+
+**Extra candidates** — if you would rather keep one of the above:
+
+- **Shamanic Revelation** — 16 cards do draw work and a deck wants about 12; 10 of them feed nothing in the core (ramp, untap, pump)
+- **Freyalise, Llanowar's Fury** — 26 cards do ramp work and a deck wants about 24; 24 of them feed nothing in the core (ramp, untap, pump)
+- **Toski, Bearer of Secrets** — 14 cards do draw work and a deck wants about 12; 9 of them feed nothing in the core (ramp, untap, pump)
+
+After the cuts: 100 cards · bracket 4 (Optimized).
+
+_Never offered: Aggravated Assault, Ashaya, Soul of the Wild, Circle of Dreams Druid, Concordant Crossroads, Cradle Clearcutter, Elvish Archdruid, Fanatic of Rhonas, Fanning the Flames and 17 more — combo pieces, declared untouchables and named win conditions._
+
 ## Consider adding
 
 ### Strengthens the plan
 
-- **Repercussion** ($14.65) — completes a combo with Blasphemous Act → Near-infinite damage to all players
-- **Toralf, God of Fury // Toralf's Hammer** — completes a combo with Blasphemous Act → Near-infinite damage — **bracket 3**: completes a two-card combo
-- **Ashnod's Altar** — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **Goblin Bombardment** ($3.60) — completes a combo with Rhythm of the Wild → Infinite creature ETB, Infinite creature LTB — **bracket 3**: completes a two-card combo
-- **Fall of Cair Andros** ($0.39) — completes a combo with Blasphemous Act → Infinite +1/+1 counters on a creature, Near-infinite damage to creatures — **bracket 3**: completes a two-card combo
-- **Azusa, Lost but Seeking** ($13.95) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
-- **Champion of Lambholt** ($4.60) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
-- **Augur of Autumn** ($0.34) — only 4 real Humans feed the commander's trigger — the engine wants more bodies of the tribe
-- **Samut, Hazoret's Champion** ($9.96) — synergy +0.49 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
-- **Ruby, Daring Tracker** ($0.25) — synergy +0.47 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
-- **Llanowar Loamspeaker** ($0.30) — synergy +0.44 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
-- **Radha, Heir to Keld** ($0.19) — synergy +0.44 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **The Reaver Cleaver** ($36.26) — completes a combo with Aggravated Assault → Infinite artifact ETB, Infinite artifact LTB — **bracket 3**: completes a two-card combo
+- **Repercussion** ($15.17) — completes a combo with Blasphemous Act → Near-infinite damage to all players
+- **Sword of Feast and Famine** ($42.00) — completes a combo with Aggravated Assault → Infinite combat phases — **bracket 3**: completes a two-card combo
+- **Ancient Copper Dragon** ($132.57) — completes a combo with Aggravated Assault → Near-infinite colored mana, Near-infinite combat damage — **bracket 4**: completes a two-card combo Spellbook rates ruthless
+- **Old Gnawbone** ($48.83) — completes a combo with Aggravated Assault → Infinite artifact ETB, Infinite artifact LTB — **bracket 3**: completes a two-card combo
+- **Samut, Hazoret's Champion** ($4.34) — synergy +0.47 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Ruby, Daring Tracker** ($0.29) — synergy +0.45 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Llanowar Loamspeaker** ($0.34) — synergy +0.44 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Radha, Heir to Keld** ($0.17) — synergy +0.42 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Paradise Druid** ($0.23) — synergy +0.42 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Incubation Druid** ($3.04) — synergy +0.38 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
+- **Rishkar, Peema Renegade** ($0.24) — synergy +0.38 measured vs 59 +1/+1 Counters builds of Raggadragga, Goreguts Boss
 
 ### Fixes a weakness
 
-- **Vandalblast** ($1.41) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Vandalblast** ($1.56) — 0 wipe against a usual 2-4 — both counting systems agree it is short
 - **Chandra's Ignition** ($8.76) — 0 wipe against a usual 2-4 — both counting systems agree it is short
-- **Chain Reaction** ($0.31) — 0 wipe against a usual 2-4 — both counting systems agree it is short
+- **Chain Reaction** ($0.27) — 0 wipe against a usual 2-4 — both counting systems agree it is short
 
-_5 popularity-only ideas hidden — `--loose` shows them._
+_3 popularity-only ideas hidden — `--loose` shows them._
 
 ## Consider cutting
 
-- **Regal Force** — 18 cards do draw work; a deck wants about 12  
-  _(oversupplied: draw)_
-- **Natural Order** — 9 cards do tutor work; a deck wants about 4  
-  _(oversupplied: tutor)_
-- **Blasphemous Act** — 9 mana in a deck already carrying 14 spells at 5+  
+- **Regal Force** — 18 cards do draw work, 12 of them feeding nothing in the core; a deck wants about 12  
+  _(oversupplied: draw; played in 24% of decks with this commander — a weak signal)_
+  - or instead: Ohran Frostfang, Shamanic Revelation, Toski, Bearer of Secrets
+- **Freyalise, Llanowar's Fury** — 26 cards do ramp work, 24 of them feeding nothing in the core; a deck wants about 24  
+  _(oversupplied: ramp; played in 29% of decks with this commander — a weak signal)_
+  - or instead: Genesis Wave, The Great Henge, Badgermole Cub
+- **Ohran Frostfang** — 5 mana in a deck already carrying 14 spells at 5+  
   _(curve)_
-- **The Great Henge** — 9 mana in a deck already carrying 14 spells at 5+  
+- **Shamanic Revelation** — 5 mana in a deck already carrying 14 spells at 5+  
   _(curve)_
-- **Craterhoof Behemoth** — outside every cluster this deck is built on (ramp + untap + Human typal)  
-  _(no engine participation)_
-- **End-Raze Forerunners** — outside every cluster this deck is built on (ramp + untap + Human typal)  
-  _(no engine participation)_
-- **Concordant Crossroads** — outside every cluster this deck is built on (ramp + untap + Human typal)  
-  _(no engine participation)_
-
-## Paired swaps
-
-_Each pair does the same job — nothing is matched by position._
-
-- Blasphemous Act → Vandalblast (sweeper)
 
 ---
 
