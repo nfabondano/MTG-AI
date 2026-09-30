@@ -13,10 +13,17 @@
 - 8 protection — more than the usual 2-6. (tags count 9)
 - 15 combos one card away — see the combo section.
 
+## Intent (declared)
+
+**lifegain combo**
+
+commander is the payoff · target bracket 4
+
+Wins by: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-Priest/Starscape Cleric/Vizkopa Guildmage + Exquisite Blood or Bloodthirsty Conqueror; Aetherflux Reservoir + Exquisite Blood or Bloodthirsty Conqueror; Niv-Mizzet + Sheoldred infinite draw into Doctor Doom or Psychosis Crawler; Beacon of Immortality + Sanguine Bond/Vito/Enduring Tenacity
 
 ## What this deck does
 
-**drain + draw + tokens**
+**lifegain combo (inferred: drain + draw + tokens)**
 
 **Commander role:** payoff — the 99 must supply: fuel; triggers; conversion.
 

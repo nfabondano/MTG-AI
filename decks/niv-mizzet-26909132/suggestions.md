@@ -33,15 +33,15 @@ Nothing here is applied automatically. Copy what you agree with into Archidekt b
   _(oversupplied: ramp)_
 - **Flawless Maneuver** — 9 cards do protection work; a deck wants about 6  
   _(oversupplied: protection)_
-- **Soul's Attendant** — outside every cluster this deck is built on (drain + draw + tokens)  
+- **Soul's Attendant** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw + tokens))  
   _(no engine participation)_
-- **Soul Warden** — outside every cluster this deck is built on (drain + draw + tokens)  
+- **Soul Warden** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw + tokens))  
   _(no engine participation)_
-- **Children of Korlis** — outside every cluster this deck is built on (drain + draw + tokens)  
+- **Children of Korlis** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw + tokens))  
   _(no engine participation)_
-- **Authority of the Consuls** — outside every cluster this deck is built on (drain + draw + tokens)  
+- **Authority of the Consuls** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw + tokens))  
   _(no engine participation)_
-- **Serra Ascendant** — outside every cluster this deck is built on (drain + draw + tokens)  
+- **Serra Ascendant** — outside every cluster this deck is built on (lifegain combo (inferred: drain + draw + tokens))  
   _(no engine participation)_
 
 ---

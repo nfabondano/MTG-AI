@@ -3,9 +3,14 @@
 
 _Inferred from functional card tags. **Edit this file if it's wrong** — your version wins, and re-analysis will leave it alone._
 
+## Declared intent
+
+**lifegain combo**
+Wins by: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-Priest/Starscape Cleric/Vizkopa Guildmage + Exquisite Blood or Bloodthirsty Conqueror; Aetherflux Reservoir + Exquisite Blood or Bloodthirsty Conqueror; Niv-Mizzet + Sheoldred infinite draw into Doctor Doom or Psychosis Crawler; Beacon of Immortality + Sanguine Bond/Vito/Enduring Tenacity
+
 ## Archetype
 
-drain + draw + tokens
+lifegain combo (inferred: drain + draw + tokens)
 
 ## Niv-Mizzet, Ghost Counsel's role
 
@@ -31,6 +36,8 @@ drain, draw, sacrifice, tokens
 - **tutor** — 6 cards
 
 ## How it ends games
+
+Declared: Infinite drain: Sanguine Bond/Vito/Enduring Tenacity/Marauding Blight-Priest/Starscape Cleric/Vizkopa Guildmage + Exquisite Blood or Bloodthirsty Conqueror; Aetherflux Reservoir + Exquisite Blood or Bloodthirsty Conqueror; Niv-Mizzet + Sheoldred infinite draw into Doctor Doom or Psychosis Crawler; Beacon of Immortality + Sanguine Bond/Vito/Enduring Tenacity
 
 - Sanguine Bond + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
 - Vito, Thorn of the Dusk Rose + Exquisite Blood → Infinite lifegain triggers, Infinite lifeloss
