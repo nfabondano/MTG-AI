@@ -241,3 +241,60 @@ class TestReminderTextIsNotDesign:
         )
         deck = Deck(slug="t", name="T", archidekt_id=1, cards=[card])
         assert "payoff" not in engine.classify_commander(deck)["roles"]
+
+
+class TestFreeSpellsAreNotAlternatives:
+    """After the representative stopped being Flawless Maneuver, it came back
+    as "or instead: …, Flawless Maneuver" — the same advice, one line down."""
+
+    def test_not_offered_as_an_alternative_either(self, niv, equipments):
+        for deck in (niv, equipments):
+            cuts = suggest.build_cuts(deck, analysis.analyse(deck, offline=True))
+            for cut in cuts:
+                offered = [cut["name"], *(cut.get("alternatives") or [])]
+                assert not {"Flawless Maneuver", "Deadly Rollick"} & set(offered), cut
+
+
+class TestTutorsInAComboDeck:
+    """Nine tutors are a surplus for a deck that wins on board, not for one
+    assembling combos — Raggadraga was told to cut Chord of Calling."""
+
+    def test_complete_combos_keep_the_tutors(self):
+        from mtgai.analysis import _tutors_find_combos
+
+        engine_result = {"oversupplied": [
+            {"category": "tutor", "count": 9, "cuttable": 5},
+            {"category": "draw", "count": 18, "cuttable": 4},
+        ]}
+        _tutors_find_combos(engine_result, {"complete": [{"cards": ["A", "B"]}]})
+        tutor, draw = engine_result["oversupplied"]
+        assert tutor["cuttable"] == 0 and "finds the pieces" in tutor["note"]
+        assert draw["cuttable"] == 4
+
+    def test_without_combos_the_surplus_stands(self):
+        from mtgai.analysis import _tutors_find_combos
+
+        engine_result = {"oversupplied": [{"category": "tutor", "count": 9, "cuttable": 5}]}
+        _tutors_find_combos(engine_result, {"complete": []})
+        assert engine_result["oversupplied"][0]["cuttable"] == 5
+
+
+class TestCurveCutsSpareTheEngine:
+    def test_curve_cuts_are_top_end_and_engine_free_first(self, equipments):
+        """The curve tier used to take the two priciest cards, engine or not."""
+        result = analysis.analyse(equipments, offline=True)
+        result["curve"]["expensive_spells"] = 20  # force the top-heavy branch
+        cuts = [c for c in suggest.build_cuts(equipments, result) if c["evidence"] == "curve"]
+        core = set(result["engine"]["core"])
+        assert 0 < len(cuts) <= 2
+        for cut in cuts:
+            assert engine.effective_cost(equipments.find(cut["name"])) >= 5
+        engine_free = {
+            c.name for c in equipments.cards
+            if not c.is_land and not c.is_commander and engine.effective_cost(c) >= 5
+            and not set(c.engine_participation) & core and not engine.last_resort(c)
+        }
+        # Austere Command is the only card outside the equipment engine at the
+        # top of the curve — and one of the deck's two sweepers, so it stays.
+        assert engine_free == {"Austere Command"}
+        assert "Austere Command" not in {c["name"] for c in cuts}

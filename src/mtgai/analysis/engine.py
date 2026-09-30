@@ -94,6 +94,7 @@ TRIBE_MIN = 4
 # Below this many sources in one of its colours, a three-colour cost is a real
 # strain — the same bar a two-pip cost has to clear.
 THREE_COLOUR_SOURCES = SOURCES_FOR_PIPS[2]
+SOURCES_SUFFICE = " — sources look sufficient"
 
 # "If you control a commander, you may cast this spell without paying its mana
 # cost" — Deadly Rollick, Flawless Maneuver. Their mana value says 3 or 4;
@@ -589,9 +590,7 @@ def castability(deck: Deck) -> list[dict]:
                 f"needs {distinct} different colours in one cost, with thin sources ({thin})"
             )
         elif distinct >= 3:
-            reasons.append(
-                f"needs {distinct} different colours in one cost — sources look sufficient"
-            )
+            reasons.append(f"needs {distinct} different colours in one cost{SOURCES_SUFFICE}")
 
         if reasons:
             # Being the sole reason a colour requirement is high matters most:
@@ -621,6 +620,13 @@ def castability(deck: Deck) -> list[dict]:
     return findings
 
 
+def cut_reasons(finding: dict) -> list[str]:
+    """A castability finding's reasons that argue for a cut — without the
+    informational "sources look sufficient" line, which belongs in a list of
+    hard-to-cast cards but reads as a contradiction inside a cut reason."""
+    return [r for r in finding.get("reasons") or [] if not r.endswith(SOURCES_SUFFICE)]
+
+
 def effective_cost(card: CardEntry) -> float:
     """What the card really costs to cast: free-with-commander spells cost 0,
     spells that discount themselves by the board cost at most three."""
@@ -631,6 +637,24 @@ def effective_cost(card: CardEntry) -> float:
     if _SELF_DISCOUNT.search(text):
         return min(cost, SELF_DISCOUNT_COST)
     return cost
+
+
+def free_with_commander(card: CardEntry) -> bool:
+    """Deadly Rollick, Flawless Maneuver: no mana at all with the commander out."""
+    return bool(_FREE_WITH_COMMANDER.search(card.role_text()))
+
+
+def last_resort(card: CardEntry) -> bool:
+    """Cards every ranking puts last, and no list offers as a ready
+    alternative: Game Changers, spell-lands, what multiplies the deck's own
+    mechanic, and spells that are free with the commander out."""
+    slugs = {tagmod.slugify(t) for t in card.tags or []}
+    return (
+        card.is_game_changer
+        or card.is_modal_land
+        or bool(slugs & _MULTIPLIER_TAGS)
+        or free_with_commander(card)
+    )
 
 
 def core_clusters(found: dict[str, int], wants) -> list[str]:

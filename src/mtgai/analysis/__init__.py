@@ -69,6 +69,25 @@ def _reconcile_roles(roles_result: dict[str, Any], engine_result: dict[str, Any]
     roles_result["findings"] = kept
 
 
+def _tutors_find_combos(engine_result: dict[str, Any], combos_result: dict[str, Any]) -> None:
+    """A deck that assembles combos keeps its tutors: they find the pieces.
+
+    The generic "about four tutors" is a norm for decks that win on board.
+    Raggadraga runs nine tutors and a dozen combos; calling that a surplus
+    offered Chord of Calling and Imperial Recruiter as cuts.
+    """
+    complete = combos_result.get("complete") or []
+    if not complete:
+        return
+    for entry in engine_result.get("oversupplied") or []:
+        if entry["category"] == "tutor" and entry.get("cuttable"):
+            entry["cuttable"] = 0
+            entry["note"] = (
+                f"{len(complete)} combo{'s' if len(complete) > 1 else ''} in the deck, "
+                "and tutors are how it finds the pieces"
+            )
+
+
 def analyse(deck: Deck, *, offline: bool = False, intent=None) -> dict[str, Any]:
     """Run the full analysis. Roles are tagged first; everything else uses them.
 
@@ -108,6 +127,8 @@ def analyse(deck: Deck, *, offline: bool = False, intent=None) -> dict[str, Any]
     else:
         result["edhrec"] = edhrec_delta.analyse(deck, intent=intent)
         result["combos"] = combos.analyse(deck)
+
+    _tutors_find_combos(engine_result, result["combos"])
 
     target, target_source = bracket.target_for(deck, intent)
     result["bracket"] = bracket.analyse(

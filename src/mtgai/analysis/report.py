@@ -177,10 +177,14 @@ def _engine_section(data: dict[str, Any]) -> str:
             if e.get("commander_core"):
                 label += ", even doubled for the commander"
             dedicated = e.get("dedicated")
-            if dedicated is not None and dedicated != e["count"]:
-                label += f"; {dedicated} do nothing else"
-            if e.get("cuttable") == 0:
-                label += " — nothing to trim, the rest are engine pieces"
+            if dedicated == 0:
+                label += "; every one also feeds the core"
+            elif dedicated is not None and dedicated != e["count"]:
+                label += f"; {dedicated} feed nothing in the core"
+            if e.get("note"):
+                label += f" — {e['note']}"
+            elif e.get("cuttable") == 0:
+                label += " — nothing to trim" + (", the rest are engine pieces" if dedicated else "")
             parts.append(label + ")")
         out.append("**Oversupplied:** " + ", ".join(parts))
         out.append("")

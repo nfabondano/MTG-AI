@@ -347,7 +347,10 @@ def analysis_summary(result: dict[str, Any]) -> dict[str, Any]:
             "tribe": eng.get("tribe"),
             "clusters": dict(list((eng.get("clusters") or {}).items())[:8]),
             "oversupplied": [
-                {k: entry.get(k) for k in ("category", "count", "target_high", "dedicated", "cuttable")}
+                {
+                    k: entry.get(k)
+                    for k in ("category", "count", "target_high", "dedicated", "cuttable", "note")
+                }
                 for entry in eng.get("oversupplied") or []
             ],
             "castability_cuts": [

@@ -22,6 +22,10 @@ from ..model import Deck
 from ..sources import scryfall, tagger
 from . import engine as engine_mod
 
+# What counts as the top of the curve: the same 5+ line as curve.py's
+# "top-heavy" finding.
+CURVE_TOP = 5
+
 GROUP_PLAN = "strengthens-plan"
 GROUP_WEAKNESS = "fixes-weakness"
 GROUP_META = "meta-optional"
@@ -356,11 +360,22 @@ def build_cuts(
 
     protected = _combo_cards(result)
 
+    # Never offer the card that would take a support job below its minimum —
+    # one of two sweepers is not spare removal, and not "top of the curve".
+    profile = tagmod.deck_profile(deck)
+
+    def below_floor(card, skip: str | None = None) -> bool:
+        return any(
+            profile.get(category, 0) - 1 < engine_mod.CATEGORY_TARGETS[category][0]
+            for category in tagmod.card_categories(card)
+            if category in engine_mod.CATEGORY_TARGETS and category != skip
+        )
+
     # 1. Castability.
     for entry in (eng.get("castability_cuts") or [])[:6]:
         if entry["name"] in protected:
             continue
-        why = "; ".join(entry["reasons"])
+        why = "; ".join(engine_mod.cut_reasons(entry))
         if entry.get("sole_driver"):
             why += " — and nothing else in the deck asks this much of that colour, so cutting it relaxes the whole mana base"
         if entry.get("alternative"):
@@ -387,20 +402,31 @@ def build_cuts(
             if c is not None and c.name not in protected
             and c.name.split("//")[0].strip().lower() not in seen
             and c.name.split("//")[0].strip().lower() not in sacred
+            and not below_floor(c, skip=category)
         ]
-        ranked = engine_mod.rank_cut_candidates(
-            candidates, flexible=flexible, inclusion=inclusion
-        )
+        # A spell that is free with the commander out is never the one to
+        # cut from a surplus: it costs the deck nothing to keep.
+        ranked = [
+            c for c in engine_mod.rank_cut_candidates(
+                candidates, flexible=flexible, inclusion=inclusion
+            )
+            if not engine_mod.free_with_commander(c)
+        ]
         if not ranked:
             continue
         first = ranked[0]
         dedicated = over.get("dedicated", over["count"])
         why = (
             f"{over['count']} cards do {category} work"
-            + (f", {dedicated} of them nothing else" if dedicated != over["count"] else "")
+            + (
+                f", {dedicated} of them feeding nothing in the core"
+                if dedicated != over["count"] else ""
+            )
             + f"; a deck wants about {over['target_high']}"
         )
-        extra: dict[str, Any] = {"alternatives": [c.name for c in ranked[1:4]]}
+        extra: dict[str, Any] = {
+            "alternatives": [c.name for c in ranked[1:] if not engine_mod.last_resort(c)][:3]
+        }
         rate = inclusion.get(first.name.split("//")[0].strip().lower())
         if rate is not None:
             # Popularity orders candidates the deck already put forward; it is
@@ -413,33 +439,41 @@ def build_cuts(
     curve = result.get("curve") or {}
     if curve.get("expensive_spells", 0) > 12:
         wincons = {w["name"] for w in eng.get("win_conditions") or []}
+        core = set(eng.get("core") or [])
 
-        def multiplies(card) -> bool:
-            return bool({tagmod.slugify(t) for t in card.tags or []} & engine_mod._MULTIPLIER_TAGS)
-
-        # The same cards trail here as in every other ranking: what
-        # multiplies the deck's mechanic, Game Changers and spell-lands. A
-        # way to win is never "top of the curve".
+        # The same cards trail here as in every other ranking: Game
+        # Changers, spell-lands, what multiplies the deck's mechanic, free
+        # spells. Among the rest, what feeds fewer of the core clusters goes
+        # before what feeds more — a 7-drop Vampire in the Vampire deck is
+        # the last expensive card to go, not the first. A way to win is
+        # never "top of the curve".
         top = sorted(
             (
                 c for c in deck.cards
                 if not c.is_land and not c.is_commander and c.name not in wincons
+                and engine_mod.effective_cost(c) >= CURVE_TOP and not below_floor(c)
             ),
             key=lambda c: (
-                multiplies(c), c.is_game_changer, c.is_modal_land,
-                -engine_mod.effective_cost(c), c.name,
+                engine_mod.last_resort(c),
+                len(set(c.engine_participation) & core),
+                -engine_mod.effective_cost(c),
+                c.name,
             ),
         )
-        for card in top[:2]:
+        offered = 0
+        for card in top:
+            if offered >= 2:
+                break
             if card.name in protected:
                 continue
-            add(
+            if add(
                 card.name,
                 f"{card.mana_value:.0f} mana in a deck already carrying "
                 f"{curve['expensive_spells']} spells at 5+",
                 "curve",
                 50,
-            )
+            ):
+                offered += 1
 
     # 4. Does nothing the deck is built around.
     for name in (eng.get("orphans") or [])[:5]:

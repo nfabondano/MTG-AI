@@ -267,7 +267,12 @@ def plan_trim(
     castability_cuts = sorted(
         eng.get("castability_cuts") or [], key=lambda f: (-f["severity"], f["name"])
     )
-    over_order = [e["category"] for e in eng.get("oversupplied") or []]
+    # Live cuttable only shrinks as cuts are taken, so a category the
+    # analysis already found nothing to trim in (or protected, as tutors in a
+    # combo deck) never needs looking at.
+    over_order = [
+        e["category"] for e in eng.get("oversupplied") or [] if e.get("cuttable", 1) > 0
+    ]
     wincons = {w["name"] for w in eng.get("win_conditions") or []}
     orphans = list(eng.get("orphans") or [])
 
@@ -297,7 +302,7 @@ def plan_trim(
         for finding in castability_cuts:
             card = state.by_name.get(finding["name"])
             if card and free(card):
-                why = "; ".join(r for r in finding["reasons"] if "look sufficient" not in r)
+                why = "; ".join(engine_mod.cut_reasons(finding))
                 if finding.get("sole_driver"):
                     why += " — nothing else asks this much of that colour"
                 return TrimPick(card.name, "castability", why, "castability")
@@ -312,7 +317,11 @@ def plan_trim(
         )
         for category in live:
             members = [state.by_name[n] for n in sorted(state.dedicated[category])]
-            candidates = rank([c for c in members if free(c) and not at_floor(c, skip=category)])
+            candidates = rank([
+                c for c in members
+                if free(c) and not at_floor(c, skip=category)
+                and not engine_mod.free_with_commander(c)
+            ])
             if not candidates:
                 continue
             card = candidates[0]
