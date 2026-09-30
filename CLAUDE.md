@@ -11,7 +11,8 @@ Archidekt** — Nicolas applies changes there by hand.
 2. That creates `decks/<slug>/` with the list and a full analysis
 3. Ask questions about it → `/deck <slug>`
 4. Get concrete swaps → `/deck-suggest <slug>`
-5. Nicolas edits the deck on Archidekt, then `/deck-refresh <slug>` re-syncs
+5. Over 100 cards? → `/deck-trim <slug>`: numbered cuts plus spares
+6. Nicolas edits the deck on Archidekt, then `/deck-refresh <slug>` re-syncs
 
 ## Slash commands
 
@@ -22,7 +23,8 @@ Archidekt** — Nicolas applies changes there by hand.
 | `/deck-intent <slug>` | Short interview: teach the tool what the deck is about |
 | `/deck-list` | What's tracked |
 | `/deck-suggest <slug>` | Cut/add suggestions, optionally `--budget N` |
-| `/deck-refresh <slug>` | Re-pull after editing on Archidekt |
+| `/deck-trim <slug>` | "Leave it at 100": which cards go, plus spares |
+| `/deck-refresh <slug>` | Re-pull after editing on Archidekt (follows moved decks) |
 | `/deck-compare <a> <b>` | Compare two decks |
 
 ## The CLI is the engine
@@ -38,9 +40,12 @@ uv run mtg deck add <url|id>          # import + analyse
 uv run mtg deck list
 uv run mtg deck show <ref>            # slim summary
 uv run mtg deck cards <ref> --role ramp   # filter by role or --type
-uv run mtg deck refresh <ref>         # re-pull from Archidekt
+uv run mtg deck refresh <ref> [--follow]   # re-pull; --follow a moved deck
+uv run mtg deck relink <ref> <url|id> # point a deck at its new Archidekt link
+uv run mtg deck find <owner> [name]   # an Archidekt user's public decks
 uv run mtg deck analyze <ref>         # regenerate analysis.md
 uv run mtg deck suggest <ref> [--budget N] [--loose] [--max-bracket N]
+uv run mtg deck trim <ref> [--to 100] [--extra 3] [--max-bracket N]
 uv run mtg deck engine <ref>          # what the deck is built around
 uv run mtg deck intent <ref> [--init] [--set key=value]   # declared intent
 uv run mtg card "<name>"              # Scryfall lookup
@@ -91,7 +96,31 @@ never rewrite it.
 Legality (100 cards, singleton, colour identity), mana (pip demand vs. sources
 per colour, land count vs. curve), curve, role counts (ramp/draw/removal/wipes/
 tutors/protection) against normal EDH ranges, EDHREC comparison, combos present
-and one card away, an estimated Commander bracket, and price.
+and one card away (Commander Spellbook's find-my-combos, with each combo's
+real size and bracket tag), an estimated Commander bracket, and price.
+
+Brackets follow the October 2025 WotC update: tutors no longer set a bracket.
+Game Changers (none at 2, up to 3 at 3), two-card infinite combos, mass land
+denial and chained extra turns do. A three-card combo is not a two-card combo.
+
+## Cutting to size
+
+`mtg deck trim` answers "it has to be 100 — which ones go, and a few spares".
+Picks come strongest reason first: illegal, required by the bracket, declared
+flexible in intent.md, castability, oversupply of *dedicated* cards, curve,
+no job at all — and only then judgement calls. A judgement call is the least
+connected card left when nothing stronger remains; the tool labels it as such,
+and so should you. Commanders, lands, sacred cards, combo pieces and cards
+named in intent.md's win conditions are never offered. A deck over 100 also
+gets this section at the top of `suggestions.md`.
+
+## Decks that move
+
+A rename on Archidekt, or a rebuild under a new link, is followed rather than
+duplicated: `deck refresh` on a dead link lists the owner's candidate decks,
+`--follow` relinks when one is unambiguous, `deck relink` does it by hand.
+`notes.md`, `intent.md` and a hand-edited `engine.md` move with the deck; if
+both folders hold different copies, both are kept and the old folder stays.
 
 ## Before you judge any card, read the engine
 
@@ -159,6 +188,10 @@ caches every request; keep it that way.
 - `src/mtgai/service.py` holds the operations. The CLI and MCP server both call
   it — add new capability there, not in one front end.
 - `uv run pytest` runs offline against recorded fixtures in `tests/fixtures/`.
+  The decks that once produced advice Nicolas had to throw away (Niv-Mizzet,
+  Felisa, Equipments, Uugguu) are fixtures, trimmed with
+  `scripts/trim_fixture.py`; `tests/test_false_advice_regressions.py` pins
+  each mistake. A fix to cut logic must keep those green.
 - Functional tags come from Archidekt's `oTags` (free, in the payload) and the
   Scryfall Tagger bulk file (`mtg cache refresh`), which also supplies the tag
   hierarchy — `sacrifice-outlet` has 12 cards directly but 1,540 once children

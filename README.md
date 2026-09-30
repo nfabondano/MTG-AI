@@ -26,9 +26,12 @@ plain-text list you can paste back into Archidekt, and generated analysis.
 | `mtg deck add <url-or-id>` | Fetch, normalise, enrich and analyse a deck |
 | `mtg deck list` | Show every tracked deck |
 | `mtg deck show <slug>` | Slim summary of one deck |
-| `mtg deck refresh <slug>` | Re-pull from Archidekt and re-analyse |
+| `mtg deck refresh <slug> [--follow]` | Re-pull from Archidekt and re-analyse; `--follow` a deck whose link moved |
+| `mtg deck relink <slug> <url-or-id>` | Point a tracked deck at its new Archidekt link, keeping notes and intent |
+| `mtg deck find <owner> [name]` | List an Archidekt user's public decks |
 | `mtg deck analyze <slug>` | Regenerate `analysis.md` |
 | `mtg deck suggest <slug>` | Regenerate `suggestions.md` |
+| `mtg deck trim <slug> [--to 100] [--extra 3]` | Which cards to cut to reach 100, plus spares, each with its reason |
 | `mtg card <name>` | Look up a card |
 | `mtg edhrec <commander>` | EDHREC summary for a commander |
 | `mtg cache refresh` | Refresh the local Scryfall card cache |
@@ -44,9 +47,13 @@ Every command accepts `--json` for machine-readable output.
   each compared against normal EDH ranges
 - **EDHREC** — staples and high-synergy cards you're missing, plus off-meta
   inclusions worth a second look
-- **Combos** — combos the deck completes, and combos it is one card away from
-- **Bracket** — an estimated Commander bracket from Game Changers, tutors, fast
-  mana, extra turns and mass land denial
+- **Combos** — combos the deck completes, and combos it is one card away from,
+  from Commander Spellbook's find-my-combos, with each combo's real size
+- **Bracket** — an estimated Commander bracket under the October 2025 rules:
+  Game Changers, two-card infinite combos, extra turns and mass land denial
+  (tutors are listed, but no longer set the bracket)
+- **Cuts to size** — `deck trim` ranks what goes by the strength of its reason,
+  and never offers the commander, lands, combo pieces or declared win conditions
 - **Price** — deck total and the most expensive cards
 
 ## Using it from your phone
