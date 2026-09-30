@@ -53,10 +53,47 @@ CATEGORIES: dict[str, tuple[str, ...]] = {
     "tutor": ("tutor",),
     "protection": ("protection", "hexproof", "indestructible", "counterspell", "ward"),
     "typal": ("typal", "tribal"),
-    "counters": ("plus-one-counters", "proliferate", "gives-pp-counters"),
+    # `pp-counters` matches as a segment run, so it covers gains-, gives- and
+    # repeatable-pp-counters and pp-counters-matter. The bare `counters-matter`
+    # is left out: Archidekt ships it as the parent of energy, charge and
+    # -1/-1 counter tags, which are other decks entirely.
+    "counters": (
+        "plus-one-counters", "proliferate", "pp-counters", "counter-increaser",
+        "counter-doubler", "move-counters",
+    ),
     "untap": ("untapper", "untap-permanent"),
     "wincon": ("win-the-game", "alternate-win", "overrun", "extra-combat"),
+    # A Niv-Mizzet, Ghost Counsel deck is built on many small lifegain
+    # triggers. Without this category Soul Warden and friends read as doing
+    # nothing and were offered as cuts.
+    "lifegain": (
+        "lifegain", "repeatable-lifegain", "lifegain-matters", "gives-lifelink",
+        "gains-lifelink", "lifegain-increaser", "lifegain-to-damage",
+        "lifelink-counter", "synergy-lifelink",
+    ),
+    # Most Equipment carry no equipment tag at all — the type line says it —
+    # so card_categories() adds this category from the type as well.
+    "equipment": (
+        "synergy-equipment", "quick-equip", "quick-attach", "auto-equip",
+        "cost-reducer-equip-ability", "cost-reducer-equipment",
+        "tutor-artifact-equipment", "alternate-equip-cost", "vanilla-equipment",
+        "french-vanilla-equipment", "copy-equipment", "reanimate-equipment",
+        "regrowth-equipment", "pseudo-equipment", "equipless-equipment",
+    ),
+    "aura": (
+        "synergy-aura", "tutor-enchantment-aura", "vanilla-aura",
+        "french-vanilla-aura", "reanimate-aura", "regrowth-aura", "copy-aura",
+    ),
+    # Making one creature big, or all of them. `power-matters` is deliberately
+    # absent: it covers ~1,600 cards that merely care about power.
+    "pump": ("power-boost-to-all", "anthem", "enlarge", "power-doubler", "gives-double-strike"),
 }
+
+# Categories every deck needs whatever it is built around. A card in one of
+# these has a job even when no cluster of its kind forms.
+SUPPORT = frozenset(
+    {"ramp", "draw", "removal", "sweeper", "protection", "tutor", "recursion", "wincon"}
+)
 
 # A tag matching both is the narrower thing: mass-removal is a sweeper, and
 # counting it as spot removal too would double-book the same card.
@@ -64,7 +101,35 @@ _EXCLUSIVE: tuple[tuple[str, str], ...] = (("sweeper", "removal"),)
 
 # Tags that describe what a card *punishes*, not what it does. `hate-typal-human`
 # is anti-tribal tech; counting it toward the typal cluster was exactly backwards.
-ANTI_PREFIXES = ("hate-",)
+# Matched on any segment: `draw-hate` (Smothering Tithe) punishes drawing, it
+# does not draw.
+ANTI_SEGMENTS = ("hate",)
+
+# Tags that match a category's pattern but mean something else. `force-draw`
+# makes someone else draw (the gift on Dawn's Truce); `sweeper-graveyard`
+# exiles graveyards; `removal-equipment` destroys Equipment.
+_TAG_EXCLUDE: dict[str, tuple[str, ...]] = {
+    "draw": ("force-draw", "draw-matters"),
+    "sweeper": ("sweeper-graveyard", "counterspell-sweeper"),
+    "counters": ("counter-fuel", "remove-counters", "mm-counters"),
+    "equipment": ("removal-equipment", "theft-equipment"),
+    "aura": ("removal-aura", "theft-aura"),
+    "pump": ("keyword-anthem", "prowess-anthem"),
+}
+
+# Archidekt ships a card's parent tags alongside the specific ones, so a
+# child that means "not really this" has to cancel what the bare parent would
+# grant — card by card. Swords to Plowshares carries `lifegain` *and*
+# `opponent-lifegain`; Farseek carries `tutor` *and* `tutor-land`. Each entry
+# is category -> (parent tags, cancelling children).
+_PARENT_CANCELLED_BY: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
+    "lifegain": (("lifegain",), ("opponent-lifegain",)),
+    "tutor": (
+        ("tutor", "tutor-to", "tutor-to-hand", "tutor-to-battlefield", "tutor-to-top",
+         "tutor-to-graveyard"),
+        ("tutor-land",),
+    ),
+}
 
 # `typal-<x>` slugs that name a card class rather than an actual tribe.
 _TYPAL_GENERIC = {
@@ -73,7 +138,10 @@ _TYPAL_GENERIC = {
 }
 
 # Tags that are about flavour, art or set structure rather than function.
+# Most `synergy-*` tags are colour-pie trivia ("synergy-white"), but a few name
+# exactly what an engine runs on, so those are let through.
 NOISE_PREFIXES = ("cycle-", "synergy-")
+_KEEP_SYNERGY = frozenset({"synergy-equipment", "synergy-aura", "synergy-lifelink"})
 NOISE_TAGS = {
     "alliteration",
     "single-english-word-name",
@@ -91,10 +159,20 @@ NOISE_TAGS = {
 }
 
 
+def _is_noise(slug: str) -> bool:
+    if slug in _KEEP_SYNERGY:
+        return False
+    return slug in NOISE_TAGS or any(slug.startswith(p) for p in NOISE_PREFIXES)
+
+
+def _is_anti(slug: str) -> bool:
+    return any(segment in ANTI_SEGMENTS for segment in slug.split("-"))
+
+
 def is_functional(tag: str) -> bool:
     """Whether a tag says something about what the card does."""
     slug = slugify(tag)
-    if slug in NOISE_TAGS or any(slug.startswith(p) for p in NOISE_PREFIXES):
+    if _is_noise(slug):
         return False
     return bool(categories_for(slug))
 
@@ -112,14 +190,13 @@ def _pattern_matches(slug: str, pattern: str) -> bool:
 def categories_for(tag: str) -> list[str]:
     """Functional categories a tag belongs to (often none)."""
     slug = slugify(tag)
-    if slug in NOISE_TAGS or any(slug.startswith(p) for p in NOISE_PREFIXES):
-        return []
-    if any(slug.startswith(p) for p in ANTI_PREFIXES):
+    if _is_noise(slug) or _is_anti(slug):
         return []
     found = [
         category
         for category, patterns in CATEGORIES.items()
         if any(_pattern_matches(slug, p) for p in patterns)
+        and not any(_pattern_matches(slug, x) for x in _TAG_EXCLUDE.get(category, ()))
     ]
     for keep, drop in _EXCLUSIVE:
         if keep in found and drop in found:
@@ -146,10 +223,44 @@ def functional_tags(card: CardEntry) -> list[str]:
 
 
 def card_categories(card: CardEntry) -> set[str]:
-    """Functional categories this card belongs to."""
+    """Functional categories this card belongs to: its tags, then its type.
+
+    Two card-level corrections run on top of the per-tag mapping. A child tag
+    that means "not really this" cancels what its bare parent alone would
+    grant (a land tutor is ramp, not a tutor). And the type line fills in what
+    tags leave unsaid: an Equipment is equipment even when Tagger never says so.
+    """
+    slugs = {slugify(t) for t in card.tags or []}
+    by_tag = {slug: categories_for(slug) for slug in slugs}
+    found: set[str] = {c for cats in by_tag.values() for c in cats}
+
+    for category, (parents, cancellers) in _PARENT_CANCELLED_BY.items():
+        if category not in found:
+            continue
+        cancelled = {s for s in slugs if any(_pattern_matches(s, c) for c in cancellers)}
+        if not cancelled:
+            continue
+        # Keep the category only if a tag other than the bare parents and the
+        # cancelling children still grants it on its own.
+        if not any(
+            category in cats and slug not in parents and slug not in cancelled
+            for slug, cats in by_tag.items()
+        ):
+            found.discard(category)
+
+    found |= _type_categories(card, found)
+    return found
+
+
+def _type_categories(card: CardEntry, from_tags: set[str]) -> set[str]:
+    """Categories the front face's type line implies."""
+    subtypes = card.subtypes
     found: set[str] = set()
-    for tag in card.tags or []:
-        found.update(categories_for(tag))
+    if "Equipment" in subtypes:
+        found.add("equipment")
+    # An Aura used as removal (Pacifism) is removal, not a voltron piece.
+    if "Aura" in subtypes and "removal" not in from_tags:
+        found.add("aura")
     return found
 
 
