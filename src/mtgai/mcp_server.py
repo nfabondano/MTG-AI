@@ -20,30 +20,96 @@ from mcp.server.mcpserver import MCPServer
 
 from . import service
 
-mcp = MCPServer(
-    "mtg-ai",
-    instructions=(
-        "Analyse Magic: The Gathering Commander decks imported from Archidekt. "
-        "Deck folders live in decks/ and are committed, so decks stay available "
-        "across sessions and devices."
-    ),
-)
+INSTRUCTIONS = """\
+Analyse Magic: The Gathering Commander decks imported from Archidekt. Deck
+folders live in decks/<slug>/ and are committed, so they persist across
+sessions and devices. Nothing is ever written back to Archidekt: Nicolas makes
+the changes there by hand.
+
+Workflow: deck_add(url) -> deck_show / deck_analyze -> deck_engine and
+deck_intent BEFORE judging any card -> deck_suggest for swaps, deck_trim for
+"get it to 100" (numbered cuts plus spares, each with its reason) ->
+Nicolas edits on Archidekt -> deck_refresh. A deck whose link died comes back
+as status "moved" with the owner's candidate decks: deck_refresh(follow=True)
+or deck_relink fixes it, carrying notes.md and intent.md across.
+
+Judgement rules the tools already follow, and you must too:
+- intent.md outranks inference; its sacred cards are never cuts.
+- Never recommend a cut on popularity alone; absence from an EDHREC list is
+  not evidence. Popularity only breaks ties and is labelled a weak signal.
+- A pick labelled "judgement call" is exactly that: say so, do not dress it
+  up as a finding.
+- Copy effects take the copied card's characteristics.
+- Every suggested card must be inside the deck's colour identity.
+- Brackets follow the October 2025 Commander rules: tutors no longer set the
+  bracket; Game Changers, two-card combos, mass land denial and chained
+  extra turns do.
+If these tools are unavailable, `uv run mtg ...` does the same work.
+"""
+
+mcp = MCPServer("mtg-ai", instructions=INSTRUCTIONS)
 
 
-@mcp.tool()
-def deck_add(reference: str) -> dict[str, Any]:
-    """Import an Archidekt deck (URL or id), analyse it, and file it in decks/.
-
-    Returns a summary plus the headline findings. The full report is written to
-    the deck's folder as analysis.md.
-    """
-    result = service.add_deck(reference)
-    return {
+def _imported(result: dict[str, Any]) -> dict[str, Any]:
+    """The slim answer for anything that (re)imports a deck."""
+    out = {
+        "status": "ok",
         "slug": result["slug"],
         "path": result["path"],
         "deck": result["deck"],
         "headline": result["analysis"]["headline"],
     }
+    for key in ("moved", "relinked"):
+        if key in result:
+            out[key] = result[key]
+    return out
+
+
+@mcp.tool()
+def deck_add(reference: str, offline: bool = False) -> dict[str, Any]:
+    """Import an Archidekt deck (URL or id), analyse it, and file it in decks/.
+
+    Returns a summary plus the headline findings; the full report is written
+    to the deck's folder as analysis.md. Re-adding a deck that was renamed on
+    Archidekt moves its folder, notes and intent to the new name.
+    """
+    return _imported(service.add_deck(reference, offline=offline))
+
+
+@mcp.tool()
+def deck_refresh(reference: str, follow: bool = False, offline: bool = False) -> dict[str, Any]:
+    """Re-pull a tracked deck from Archidekt after Nicolas edited it.
+
+    If the deck's link is gone (404), returns status "moved" with the owner's
+    decks that could be its new home, best first — nothing is changed. With
+    follow=True it relinks by itself when exactly one candidate is safe (the
+    only deck with the old name), carrying notes.md and intent.md across.
+    """
+    try:
+        return _imported(service.refresh_deck(reference, offline=offline, follow=follow))
+    except service.DeckMoved as moved:
+        return moved.to_dict()
+
+
+@mcp.tool()
+def deck_relink(reference: str, new_deck: str, offline: bool = False) -> dict[str, Any]:
+    """Point a tracked deck at its new Archidekt link (URL or id).
+
+    For a deck rebuilt under a new id: notes.md, intent.md and a hand-edited
+    engine.md move to the new folder; the old folder is removed unless the
+    two folders hold different copies of a file, which are then both kept.
+    """
+    return _imported(service.relink_deck(reference, new_deck, offline=offline))
+
+
+@mcp.tool()
+def deck_find(owner: str, name: str = "") -> list[dict[str, Any]]:
+    """An Archidekt user's public decks, optionally narrowed by name.
+
+    Exact name first, then most recently updated; `tracked_as` names the
+    local folder when the deck is already imported.
+    """
+    return service.find_decks(owner, name)
 
 
 @mcp.tool()
@@ -62,12 +128,16 @@ def deck_show(reference: str) -> dict[str, Any]:
 
 
 @mcp.tool()
-def deck_analyze(reference: str, offline: bool = False) -> dict[str, Any]:
-    """Re-run the full analysis on a stored deck and rewrite analysis.md.
+def deck_analyze(reference: str, offline: bool = False, full: bool = False) -> dict[str, Any]:
+    """Re-run the analysis on a stored deck and rewrite its reports.
 
-    Set offline=True to skip EDHREC, combos and prices.
+    Returns the slim summary by default — headline, engine, over- and
+    under-supplied jobs, bracket with its reasons, combos really present.
+    full=True returns the entire result (large). offline=True skips EDHREC,
+    combos and prices.
     """
-    return service.analyse_deck(reference, offline=offline)
+    result = service.analyse_deck(reference, offline=offline)
+    return result if full else service.analysis_summary(result)
 
 
 @mcp.tool()
@@ -76,6 +146,7 @@ def deck_suggest(
     budget: float | None = None,
     loose: bool = False,
     max_bracket: int | None = None,
+    offline: bool = False,
 ) -> dict[str, Any]:
     """Generate cut and add suggestions for a deck, structured and slim.
 
@@ -83,24 +154,27 @@ def deck_suggest(
     reasons; meta-optional is popularity only and appears when loose=True.
     Cuts carry deck-internal evidence (castability, oversupply, curve, no
     engine participation), mana_fixes say when the answer is sources rather
-    than cuts, and swaps pair cards doing the same job. max_bracket sets aside
-    adds that would push the deck past that Commander bracket (Game Changers,
-    the missing half of a two-card combo, mass land denial) into `raises`
-    instead of the normal adds/swaps. The full markdown is written to the
-    deck's suggestions.md.
+    than cuts, and swaps pair cards doing the same job. max_bracket defaults
+    to the deck's target (intent.md, then Archidekt); adds that would push the
+    deck past it go to `raises`. A deck over 100 also gets its `trim` plan.
+    The full markdown is written to the deck's suggestions.md.
     """
-    result = service.suggest(reference, budget=budget, loose=loose, max_bracket=max_bracket)
+    result = service.suggest(
+        reference, budget=budget, loose=loose, max_bracket=max_bracket, offline=offline
+    )
     built = result["suggestions"]
     slim_adds = [
         {k: a.get(k) for k in ("name", "group", "why", "price", "bracket_impact")}
         for a in built["adds"]
         if loose or a["group"] != "meta-optional"
     ][:12]
-    return {
+    out = {
+        "max_bracket": result.get("max_bracket"),
         "mana_fixes": built["mana_fixes"],
         "adds": slim_adds,
         "cuts": [
-            {k: c.get(k) for k in ("name", "why", "evidence")} for c in built["cuts"][:8]
+            {k: c.get(k) for k in ("name", "why", "evidence", "alternatives", "weak_signal")}
+            for c in built["cuts"][:8]
         ],
         "swaps": built["swaps"][:8],
         "hidden_meta": built["hidden_meta"],
@@ -109,6 +183,52 @@ def deck_suggest(
             for r in built.get("raises", [])
         ][:8],
     }
+    if result.get("trim"):
+        out["trim"] = _slim_trim(result["trim"])
+    return out
+
+
+def _slim_trim(plan: dict[str, Any]) -> dict[str, Any]:
+    keep = ("name", "tier", "reason", "evidence", "weak_signal", "mandatory")
+    after = plan.get("after") or {}
+    return {
+        "total": plan["total"],
+        "target": plan["target"],
+        "need": plan["need"],
+        "max_bracket": plan.get("max_bracket"),
+        "bracket_source": plan.get("bracket_source"),
+        "cuts": [{k: p.get(k) for k in keep} for p in plan.get("cuts") or []],
+        "extras": [{k: p.get(k) for k in keep} for p in plan.get("extras") or []],
+        "required_for_bracket": plan.get("required_for_bracket") or [],
+        "protected": plan.get("protected") or {},
+        "after": {k: after.get(k) for k in ("total", "bracket", "bracket_name")},
+        "notes": plan.get("notes") or [],
+        "land_note": (plan.get("lands") or {}).get("note"),
+    }
+
+
+@mcp.tool()
+def deck_trim(
+    reference: str,
+    target: int = 100,
+    extra: int = 3,
+    max_bracket: int | None = None,
+    offline: bool = False,
+) -> dict[str, Any]:
+    """Which cards to cut to reach `target` cards, plus `extra` spares.
+
+    The answer to "it has to be 100 — which ones go, and a few in reserve".
+    Picks come strongest reason first: illegal, required by the bracket,
+    declared flexible, castability, oversupply, curve, no job, then
+    judgement calls (labelled as such). Commander, lands, sacred cards, combo
+    pieces and cards named in the declared win conditions are never offered.
+    `after` is the deck as it would stand: size and recalculated bracket.
+    Nothing is written.
+    """
+    plan = service.trim_deck(
+        reference, target=target, extra=extra, max_bracket=max_bracket, offline=offline
+    )
+    return {"slug": plan["slug"], "deck": plan["deck"], **_slim_trim(plan)}
 
 
 @mcp.tool()

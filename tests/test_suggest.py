@@ -202,7 +202,9 @@ class TestServiceRoundTrip:
 
         service.add_deck("25569889", offline=True)
         out = service.suggest("uugguu", offline=True)
-        assert set(out) == {"markdown", "suggestions"}
+        assert {"markdown", "suggestions"} <= set(out)
+        # 104 cards: the "which ones go" plan comes with it.
+        assert out["trim"]["need"] == 4
         assert "## Consider cutting" in out["markdown"]
         built = out["suggestions"]
         assert {"mana_fixes", "adds", "cuts", "swaps", "hidden_meta"} <= set(built)

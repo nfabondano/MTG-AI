@@ -234,11 +234,13 @@ def _analyse_and_write(
     return result
 
 
-def _trim_if_oversized(deck: Deck, result: dict[str, Any]) -> dict[str, Any] | None:
+def _trim_if_oversized(
+    deck: Deck, result: dict[str, Any], *, max_bracket: int | None = None
+) -> dict[str, Any] | None:
     """A deck over 100 gets its "which ones go" answer in suggestions.md."""
     if deck.total_cards <= analysis.trim.DECK_SIZE:
         return None
-    return analysis.trim.plan_trim(deck, result)
+    return analysis.trim.plan_trim(deck, result, max_bracket=max_bracket)
 
 
 def trim_deck(
@@ -289,14 +291,16 @@ def suggest(
     result = analysis.analyse(deck, offline=offline, intent=intent)
     if budget is None and intent is not None and intent.budget_per_card is not None:
         budget = intent.budget_per_card
+    requested = max_bracket
     if max_bracket is None:
         max_bracket, _ = analysis.bracket.target_for(deck, intent)
     built = analysis.suggest.build(
         deck, result, budget=budget, loose=loose, offline=offline
     )
+    trim = _trim_if_oversized(deck, result, max_bracket=requested)
     markdown = report.render_suggestions(
         deck, result, built, budget=budget, loose=loose, max_bracket=max_bracket,
-        offline=offline, trim=_trim_if_oversized(deck, result),
+        offline=offline, trim=trim,
     )
     folder.write_suggestions(markdown)
 
@@ -309,7 +313,77 @@ def suggest(
         "raises": raises,
         "swaps": [s for s in built["swaps"] if s["add"] not in raised_names],
     }
-    return {"markdown": markdown, "suggestions": structured}
+    return {
+        "markdown": markdown,
+        "suggestions": structured,
+        "max_bracket": max_bracket,
+        "trim": trim,
+    }
+
+
+def analysis_summary(result: dict[str, Any]) -> dict[str, Any]:
+    """The slim view of a full analysis: what a session needs to talk about
+    the deck, at a few kilobytes instead of the whole result.
+
+    The full report is on disk as analysis.md; this is the part worth having
+    in context — the headline, what the engine is, what is over or under,
+    the bracket and why, and the combos that are really there.
+    """
+    eng = result.get("engine") or {}
+    bracket = result.get("bracket") or {}
+    combos = result.get("combos") or {}
+    mana = result.get("mana") or {}
+    role = eng.get("commander_role") or {}
+    return {
+        "deck": result.get("deck"),
+        "headline": result.get("headline") or [],
+        "intent": result.get("intent"),
+        "engine": {
+            "archetype": eng.get("archetype"),
+            "commander_wants": eng.get("commander_wants"),
+            "commander_role": role.get("roles"),
+            "the_99_supplies": role.get("supplies"),
+            "core": eng.get("core"),
+            "tribe": eng.get("tribe"),
+            "clusters": dict(list((eng.get("clusters") or {}).items())[:8]),
+            "oversupplied": [
+                {k: entry.get(k) for k in ("category", "count", "target_high", "dedicated", "cuttable")}
+                for entry in eng.get("oversupplied") or []
+            ],
+            "castability_cuts": [
+                {"name": f["name"], "reasons": f.get("reasons")}
+                for f in eng.get("castability_cuts") or []
+            ],
+            "mana_fixes": eng.get("mana_fixes") or [],
+            "orphans": eng.get("orphans") or [],
+            "no_data": eng.get("no_data") or [],
+            "win_conditions": [w["name"] for w in eng.get("win_conditions") or []],
+        },
+        "roles": (result.get("roles") or {}).get("counts"),
+        "bracket": {
+            k: bracket.get(k)
+            for k in ("estimate", "name", "target", "target_source", "mismatch", "reasons",
+                      "game_changers")
+        },
+        "mana": {
+            k: mana.get(k)
+            for k in ("land_count", "effective_lands", "recommended_lands", "land_finding")
+        },
+        "combos": {
+            "available": combos.get("available", False),
+            "method": combos.get("method"),
+            "complete": [
+                {k: c.get(k) for k in ("cards", "size", "bracket_tag")}
+                for c in (combos.get("complete") or [])[:15]
+            ],
+            "complete_count": len(combos.get("complete") or []),
+            "near_miss_count": len(combos.get("near_miss") or []),
+        },
+        "price_usd": (result.get("price") or {}).get("total_usd"),
+        "files": "decks/{slug}/analysis.md holds the full report".format(
+            slug=(result.get("deck") or {}).get("slug", "<slug>")
+        ),
+    }
 
 
 def list_decks() -> list[dict[str, Any]]:
