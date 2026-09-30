@@ -181,6 +181,24 @@ class TestFreeSpellsAreNotExpensive:
         assert [c.name for c in ranked] == ["Alpha", "Beta"]
 
 
+class TestFelisaCombos:
+    """The report listed fifteen "two-card combos"; Spellbook finds four, all
+    three-card, and none of them moves the bracket."""
+
+    def test_no_two_card_combo_reason(self, monkeypatch, felisa, spellbook_fmc):
+        from mtgai.analysis import bracket, combos
+        from mtgai.sources import spellbook
+
+        monkeypatch.setattr(spellbook, "post_json", lambda url, body, **k: spellbook_fmc["felisa"])
+        found = combos.analyse(felisa)
+        result = bracket.analyse(felisa, combos=found["complete"])
+        assert result["combos"] == []
+        assert not any("two-card combo" in r and "not counted" not in r for r in result["reasons"])
+        # Three Game Changers still make it bracket 3 — for the right reason.
+        assert result["estimate"] == 3
+        assert any("3 Game Changers" in r for r in result["reasons"])
+
+
 class TestRoleCountsAreHonest:
     def test_minus_x_wipes_are_wipes(self):
         from mtgai.analysis import roles

@@ -314,11 +314,95 @@ class TestComboBracket:
 
     def test_rated_or_unrated_combos_raise_to_three(self):
         cards = [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
-        for tag in ("R", "S", "P", "O", ""):
+        for tag in ("S", "P", "O", ""):
             combo = {"cards": ["A", "B"], "bracket_tag": tag}
             result = bracket.analyse(make_deck(cards), combos=[combo])
             assert result["estimate"] == 3, tag
             assert result["combos"] == [["A", "B"]]
+
+    def test_ruthless_combos_are_bracket_four(self):
+        cards = [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
+        combo = {"cards": ["A", "B"], "bracket_tag": "R"}
+        assert bracket.analyse(make_deck(cards), combos=[combo])["estimate"] == 4
+
+    def test_exhibition_combos_do_not_raise(self):
+        """Spellbook's E tag used to display as "unrated" and count as a combo."""
+        cards = [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
+        combo = {"cards": ["A", "B"], "bracket_tag": "E"}
+        result = bracket.analyse(make_deck(cards), combos=[combo])
+        assert result["estimate"] == 2
+        assert result["combos"] == []
+
+    def test_three_card_combos_are_not_two_card_combos(self):
+        """Felisa's Basri's Lieutenant + Cathars' Crusade + outlet was counted
+        as a "two-card combo"; the criteria restrict two-card combos only."""
+        cards = [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
+        combo = {"cards": ["A", "B", "C"], "bracket_tag": "S", "size": 3}
+        result = bracket.analyse(make_deck(cards), combos=[combo])
+        assert result["estimate"] == 2
+        assert any("three or more pieces" in r for r in result["reasons"])
+
+    def test_a_generic_piece_makes_it_three(self):
+        combo = {"cards": ["A", "B"], "requires": ["Persist Creature"], "bracket_tag": "S"}
+        assert bracket.combo_size(combo) == 3
+        assert not bracket.combo_raises_bracket(combo)
+
+    def test_mass_land_denial_combos_are_four_at_any_size(self):
+        combo = {"cards": ["A", "B", "C"], "produces": ["Mass Land Denial"], "size": 3}
+        assert bracket.combo_floor(combo) == 4
+
+
+class TestTutorsNoLongerSetTheBracket:
+    """WotC removed tutor restrictions on October 21, 2025. The tool pushed an
+    Equipment deck with no Game Changers or combos to bracket 4 for eight
+    narrow Equipment tutors."""
+
+    def _tutors(self, n):
+        return [
+            CardEntry(name=f"Tutor {i}", type_line="Sorcery",
+                      oracle_text="Search your library for a card, put it into your hand.")
+            for i in range(n)
+        ] + [CardEntry(name="Wrath", type_line="Sorcery", oracle_text="Destroy all creatures.")]
+
+    def test_eight_tutors_stay_in_bracket_two(self):
+        result = bracket.analyse(make_deck(self._tutors(8)))
+        assert result["estimate"] == 2
+        assert len(result["tutors"]) == 8
+        assert any("October 2025" in r for r in result["reasons"])
+
+    def test_the_equipment_deck_is_bracket_two(self, equipments):
+        from mtgai import analysis
+
+        result = analysis.analyse(equipments, offline=True)
+        assert result["bracket"]["estimate"] == 2
+        assert result["bracket"]["mismatch"] is None, "Archidekt says 2 and so does the tool"
+
+
+class TestBracketTargets:
+    def test_intent_target_drives_the_mismatch(self):
+        from mtgai.intent import DeckIntent
+
+        cards = [CardEntry(name="Tithe", type_line="Enchantment", is_game_changer=True)]
+        d = make_deck(cards)
+        target, source = bracket.target_for(d, DeckIntent(power_bracket=2))
+        result = bracket.analyse(d, target=target, target_source=source)
+        assert result["mismatch"].startswith("intent.md declares bracket 2")
+
+    def test_target_precedence(self):
+        from mtgai.intent import DeckIntent
+
+        d = make_deck([], archidekt_bracket=3)
+        assert bracket.target_for(d) == (3, "Archidekt")
+        assert bracket.target_for(d, DeckIntent(power_bracket=2)) == (2, "intent.md")
+        assert bracket.target_for(d, DeckIntent(power_bracket=2), explicit=4) == (4, "requested")
+
+    def test_a_fourth_game_changer_is_bracket_four(self, monkeypatch):
+        from mtgai.analysis import report
+        from mtgai.sources import scryfall
+
+        monkeypatch.setattr(scryfall, "is_game_changer", lambda name: True)
+        assert report._bracket_impact_of("X", gc_count=0)[0] == 3
+        assert report._bracket_impact_of("X", gc_count=3)[0] == 4
 
 
 class TestComboProbeOrder:

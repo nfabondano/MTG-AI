@@ -1,10 +1,15 @@
 """Estimate a deck's Commander bracket.
 
 The bracket system sorts decks by what they are capable of, not by how much
-they cost. The published criteria that a tool can actually measure are: how many
+they cost. The published criteria a tool can actually measure are how many
 Game Changers the deck plays, whether it runs mass land denial, whether it
-chains extra turns, how heavily it tutors, and whether it assembles two-card
-infinite combos.
+chains extra turns, and whether it assembles two-card infinite combos.
+
+Tutors are not among them any more. WotC's October 21, 2025 update removed
+tutor restrictions from every bracket and left the most efficient tutors to
+the Game Changers list. The tool used to push a deck to bracket 4 for eight
+tutors — narrow Equipment tutors included — which is how an Equipment deck
+with no Game Changers and no combos read as "Optimized".
 
 This produces an estimate to argue with, not a verdict. The last mile — how the
 deck actually plays, and what the table expects — is a conversation, and the
@@ -26,18 +31,31 @@ BRACKET_NAMES = {
 # Bracket 3 tolerates a few Game Changers; past this the deck is bracket 4.
 GAME_CHANGER_LIMIT_B3 = 3
 
-# Commander Spellbook rates every combo. "Casual" and "Precon Appropriate" are
-# its judgement that a combo belongs at a bracket-2 table — usually because it
-# is a big finite finisher rather than a true infinite — so those do not move
-# the estimate. Everything else is a two-card combo in the bracket sense.
-CASUAL_COMBO_TAGS = {"C", "PA"}
+# Commander Spellbook rates every combo with a bracket tag. Exhibition and
+# Core (and the retired "Precon Appropriate") are its judgement that a combo
+# belongs at a low-bracket table — usually a big finite finisher rather than a
+# true infinite. Oddball, Powerful and Spicy put a deck at bracket 3 at least;
+# Ruthless (fast, efficient, game-ending) at bracket 4. Banned means the combo
+# uses a banned card, which legality reports.
+COMBO_TAG_FLOOR: dict[str, int | None] = {
+    "E": None,
+    "C": None,
+    "PA": None,
+    "O": 3,
+    "P": 3,
+    "S": 3,
+    "R": 4,
+    "B": None,
+}
 COMBO_TAG_NAMES = {
-    "C": "casual",
+    "E": "exhibition",
+    "C": "core",
     "PA": "precon-appropriate",
     "O": "oddball",
     "P": "powerful",
     "S": "spicy",
     "R": "ruthless",
+    "B": "uses a banned card",
 }
 
 
@@ -58,8 +76,34 @@ def target_for(deck: Deck, intent=None, explicit: int | None = None) -> tuple[in
     return None, ""
 
 
+def combo_size(combo: dict) -> int:
+    """Pieces in a combo, commander and generic pieces included."""
+    return int(
+        combo.get("size")
+        or len(combo.get("cards") or []) + len(combo.get("requires") or [])
+    )
+
+
+def combo_floor(combo: dict) -> int | None:
+    """The lowest bracket a deck can claim while it holds this combo.
+
+    Mass land denial is bracket 4 whatever its size. Otherwise only a
+    two-card combo moves the bracket — that is what the criteria restrict —
+    and by how much is Spellbook's rating. An unrated two-card combo is read
+    as bracket 3, never as safe.
+    """
+    if any("mass land denial" in p.lower() for p in combo.get("produces") or []):
+        return 4
+    if combo_size(combo) != 2:
+        return None
+    tag = combo.get("bracket_tag") or ""
+    if tag in COMBO_TAG_FLOOR:
+        return COMBO_TAG_FLOOR[tag]
+    return 3
+
+
 def combo_raises_bracket(combo: dict) -> bool:
-    return (combo.get("bracket_tag") or "") not in CASUAL_COMBO_TAGS
+    return combo_floor(combo) is not None
 
 
 def _describe_combo(combo: dict) -> str:
@@ -67,16 +111,29 @@ def _describe_combo(combo: dict) -> str:
     return f"{' + '.join(combo.get('cards') or [])} ({tag})"
 
 
-def analyse(deck: Deck, combos: list[dict] | None = None) -> dict:
+def analyse(
+    deck: Deck,
+    combos: list[dict] | None = None,
+    *,
+    target: int | None = None,
+    target_source: str = "",
+) -> dict:
     combos = combos or []
     raising = [c for c in combos if combo_raises_bracket(c)]
-    casual = [c for c in combos if not combo_raises_bracket(c)]
+    two_card = [c for c in combos if combo_size(c) == 2]
+    casual = [c for c in two_card if not combo_raises_bracket(c)]
+    larger = [c for c in combos if combo_size(c) > 2 and not combo_raises_bracket(c)]
     combo_count = len(raising)
 
     game_changers = [c.name for c in deck.cards if c.is_game_changer]
     extra_turns = [c.name for c in deck.cards if c.is_extra_turns]
     land_denial = [c.name for c in deck.cards if c.is_mass_land_denial]
-    tutors = [c.name for c in deck.cards if "tutor" in (c.roles or []) or c.is_tutor]
+    # Informational only since October 2025. Lands that search (Axgard
+    # Armory) are left out; they are utility lands, not tutors.
+    tutors = [
+        c.name for c in deck.cards
+        if not c.is_land and ("tutor" in (c.roles or []) or c.is_tutor)
+    ]
 
     gc_count = len(game_changers)
     reasons: list[str] = []
@@ -105,32 +162,45 @@ def analyse(deck: Deck, combos: list[dict] | None = None) -> dict:
         reasons.append(f"{len(extra_turns)} extra-turn effects — chaining territory")
 
     if combo_count:
-        bracket = max(bracket, 3)
+        floor = max(combo_floor(c) or 3 for c in raising)
+        bracket = max(bracket, floor)
         reasons.append(
             f"{combo_count} two-card combo{'s' if combo_count > 1 else ''} in the deck: "
             + "; ".join(_describe_combo(c) for c in raising)
         )
     if casual:
         reasons.append(
-            "combos Spellbook rates as fine at a casual table, not counted: "
+            "two-card combos Spellbook rates as fine at a casual table, not counted: "
             + "; ".join(_describe_combo(c) for c in casual)
         )
+    if larger:
+        reasons.append(
+            f"{len(larger)} combo{'s' if len(larger) > 1 else ''} of three or more pieces "
+            "— the brackets restrict two-card combos only"
+        )
 
-    if len(tutors) >= 8:
-        bracket = max(bracket, 4)
-        reasons.append(f"{len(tutors)} tutors — consistent enough to find combos reliably")
+    if tutors:
+        reasons.append(
+            f"{len(tutors)} tutor{'s' if len(tutors) > 1 else ''} — not a bracket "
+            "criterion since WotC's October 2025 update; the efficient ones are "
+            "Game Changers"
+        )
 
     # Bracket 1 is a deliberately gentle deck; a low-power list with no
     # interaction to speak of only qualifies if it also does none of the above.
-    if bracket == 2 and not tutors and not combo_count and len(game_changers) == 0:
+    if bracket == 2 and not combo_count and len(game_changers) == 0:
         wipes = sum(c.quantity for c in deck.cards if "wipe" in (c.roles or []))
         if wipes == 0:
             bracket = 1
-            reasons.append("no tutors, combos or board wipes")
+            reasons.append("no Game Changers, combos or board wipes")
 
     declared = deck.archidekt_bracket
     mismatch = None
-    if declared and declared != bracket:
+    if target and target_source == "intent.md" and target != bracket:
+        mismatch = (
+            f"intent.md declares bracket {target}; the card pool looks more like {bracket}."
+        )
+    elif declared and declared != bracket:
         mismatch = (
             f"Archidekt has this deck marked as bracket {declared}; "
             f"the card pool looks more like {bracket}."
@@ -140,6 +210,8 @@ def analyse(deck: Deck, combos: list[dict] | None = None) -> dict:
         "estimate": bracket,
         "name": BRACKET_NAMES[bracket],
         "declared": declared,
+        "target": target,
+        "target_source": target_source,
         "mismatch": mismatch,
         "reasons": reasons,
         "game_changers": game_changers,

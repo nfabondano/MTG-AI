@@ -653,31 +653,39 @@ def _format_add(entry: dict[str, Any]) -> str:
     return line
 
 
-def _bracket_impact_of(name: str, *, combo: dict[str, Any] | None = None) -> tuple[int | None, str]:
+def _bracket_impact_of(
+    name: str, *, combo: dict[str, Any] | None = None, gc_count: int = 0
+) -> tuple[int | None, str]:
     """The lowest bracket a deck can claim once it adds this card.
 
     Two things are measurable here: whether the card is a Game Changer (from
     the Scryfall cache; unknown when the cache is absent, and unknown is never
-    read as "safe"), and whether it completes a two-card combo — bracket 3 by
-    definition, or 4 if the combo is mass land denial, unless Spellbook rates
-    the combo casual. Extra turns are left alone: one is legal in bracket 2,
-    and this tool cannot see chaining.
+    read as "safe") — a fourth one is bracket 4, not 3 — and whether it
+    completes a combo that moves the bracket: mass land denial is 4, and a
+    two-card combo takes the floor Spellbook's rating gives it. Extra turns
+    are left alone: one is legal in bracket 2, and this tool cannot see
+    chaining.
     """
     from ..sources import scryfall
     from . import bracket as bracket_mod
 
     if combo is not None:
+        floor = bracket_mod.combo_floor(combo)
+        if floor is None:
+            return None, ""
         if any("mass land denial" in p.lower() for p in combo.get("produces") or []):
             return 4, "completes a mass-land-denial combo"
-        if bracket_mod.combo_raises_bracket(combo):
-            return 3, "completes a two-card combo"
-        return None, ""
+        if floor >= 4:
+            return floor, "completes a two-card combo Spellbook rates ruthless"
+        return floor, "completes a two-card combo"
 
     try:
         changer = scryfall.is_game_changer(name)
     except Exception:
         changer = None
     if changer:
+        if gc_count >= bracket_mod.GAME_CHANGER_LIMIT_B3:
+            return 4, f"a Game Changer beyond the {bracket_mod.GAME_CHANGER_LIMIT_B3} bracket 3 allows"
         return 3, "a Game Changer"
     return None, ""
 
@@ -710,10 +718,11 @@ def augment_adds_with_bracket_impact(
         for c in (result.get("combos", {}).get("near_miss") or [])
         if c.get("missing")
     }
+    gc_count = len((result.get("bracket") or {}).get("game_changers") or [])
     augmented = []
     for entry in adds:
         combo = combo_by_missing.get(entry["name"])
-        impact, reason = _bracket_impact_of(entry["name"], combo=combo)
+        impact, reason = _bracket_impact_of(entry["name"], combo=combo, gc_count=gc_count)
         augmented.append({**entry, "bracket_impact": impact, "bracket_reason": reason})
     return augmented
 

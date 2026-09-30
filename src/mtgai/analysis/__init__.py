@@ -109,7 +109,13 @@ def analyse(deck: Deck, *, offline: bool = False, intent=None) -> dict[str, Any]
         result["edhrec"] = edhrec_delta.analyse(deck, intent=intent)
         result["combos"] = combos.analyse(deck)
 
-    result["bracket"] = bracket.analyse(deck, combos=result["combos"].get("complete") or [])
+    target, target_source = bracket.target_for(deck, intent)
+    result["bracket"] = bracket.analyse(
+        deck,
+        combos=result["combos"].get("complete") or [],
+        target=target,
+        target_source=target_source,
+    )
 
     result["headline"] = _headline(result)
     return result
