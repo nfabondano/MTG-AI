@@ -1,0 +1,107 @@
+// Obeka
+// https://archidekt.com/decks/6320352
+
+// Commander
+1 Obeka, Brute Chronologist
+
+// Deck
+1 Arcane Signet
+1 Fellwar Stone
+1 Isochron Scepter
+1 Lightning Greaves
+1 Mimic Vat
+1 Sol Ring
+1 Sundial of the Infinite
+1 Swiftfoot Boots
+1 Talisman of Creativity
+1 Talisman of Dominance
+1 Talisman of Indulgence
+1 The One Ring
+1 Whip of Erebos
+1 Agent of Treachery
+1 Ancient Brass Dragon
+1 Ancient Copper Dragon
+1 Ancient Silver Dragon
+1 Apprentice Necromancer
+1 Araumi of the Dead Tide
+1 Archon of Cruelty
+1 Burning-Rune Demon
+1 Combustible Gearhulk
+1 Feldon of the Third Path
+1 Hellkite Courser
+1 Identity Thief
+1 Ilharg, the Raze-Boar
+1 Jaxis, the Troublemaker
+1 Kiki-Jiki, Mirror Breaker
+1 Massacre Wurm
+1 Mulldrifter
+1 Nightscape Familiar
+1 Orthion, Hero of Lavabrink
+1 Pinnacle Monk // Mystic Peak
+1 Puppeteer Clique
+1 Redoubled Stormsinger
+1 Saheeli, the Sun's Brilliance
+1 Sedris, the Traitor King
+1 Starwinder
+1 Tannuk, Steadfast Second
+1 Terror of the Peaks
+1 Zara, Renegade Recruiter
+1 Zell Dincht
+1 Black Market Connections
+1 Fable of the Mirror-Breaker // Reflection of Kiki-Jiki
+1 Flameshadow Conjuring
+1 Meek Attack
+1 Mystic Remora
+1 Sneak Attack
+1 Chaos Warp
+1 Cyclonic Rift
+1 Deadly Rollick
+1 Deflecting Swat
+1 Entomb
+1 Final Fortune
+1 Frantic Search
+1 Glorious End
+1 Malakir Rebirth // Malakir Mire
+1 Mana Drain
+1 Sink into Stupor // Soporific Springs
+1 Valakut Awakening // Valakut Stoneforge
+1 Arena of Glory
+1 Blood Crypt
+1 Bloodstained Mire
+1 Bojuka Bog
+1 Command Beacon
+1 Command Tower
+1 Dimir Aqueduct
+1 Exotic Orchard
+2 Island
+1 Izzet Boilerworks
+1 Lotus Field
+1 Luxury Suite
+1 Minamo, School at Water's Edge
+1 Morphic Pool
+3 Mountain
+1 Otawara, Soaring City
+1 Polluted Delta
+1 Rakdos Carnarium
+1 Scalding Tarn
+1 Steam Vents
+2 Swamp
+1 Takenuma, Abandoned Mire
+1 Training Center
+1 Urborg, Tomb of Yawgmoth
+1 Watery Grave
+1 Xander's Lounge
+1 Saheeli Rai
+1 Alchemist's Gambit
+1 Come Back Wrong
+1 Demonic Tutor
+1 Face Yourself
+1 Faithless Looting
+1 Foggy Swamp Visions
+1 Grim Tutor
+1 Ideas Unbound
+1 Last Chance
+1 Random Encounter
+1 Toxic Deluge
+1 Warrior's Oath
+1 Windfall
